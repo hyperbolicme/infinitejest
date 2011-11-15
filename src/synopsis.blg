@@ -1,0 +1,70 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.6)
+The top-level auxiliary file: synopsis.aux
+The style file: alpha.bst
+Database file #1: ../lib/cop-variants__thesis.bib
+Warning--empty journal in adp80
+Warning--empty journal in as95
+Warning--empty journal in bl62
+Warning--empty journal in bs03
+Warning--empty journal in ckl96
+Warning--empty journal in cy91
+Warning--empty journal in df99
+Warning--empty journal in dgnw06
+Warning--empty journal in f98
+Warning--empty journal in h01a
+Warning--empty journal in h01b
+Warning--empty journal in hgxx
+Warning--empty journal in jkckv04
+Warning--empty journal in jlm97
+Warning--empty journal in kou77
+Warning--empty journal in l10
+Warning--empty journal in mm96
+Warning--empty journal in mpt97
+Warning--empty journal in co97
+Warning--empty journal in r08
+Warning--empty journal in th99
+Warning--empty journal in tm03
+Warning--empty journal in tz03
+Warning--empty journal in v85
+You've used 66 entries,
+            2543 wiz_defined-function locations,
+            872 strings with 10477 characters,
+and the built_in function-call counts, 23767 in all, are:
+= -- 2391
+> -- 1097
+< -- 36
++ -- 377
+- -- 354
+* -- 1607
+:= -- 4014
+add.period$ -- 204
+call.type$ -- 66
+change.case$ -- 392
+chr.to.int$ -- 59
+cite$ -- 90
+duplicate$ -- 979
+empty$ -- 1665
+format.name$ -- 446
+if$ -- 4739
+int.to.chr$ -- 8
+int.to.str$ -- 0
+missing$ -- 64
+newline$ -- 336
+num.names$ -- 198
+pop$ -- 364
+preamble$ -- 1
+purify$ -- 461
+quote$ -- 0
+skip$ -- 828
+stack$ -- 0
+substring$ -- 1167
+swap$ -- 97
+text.length$ -- 36
+text.prefix$ -- 28
+top$ -- 0
+type$ -- 516
+warning$ -- 24
+while$ -- 226
+width$ -- 74
+write$ -- 823
+(There were 24 warnings)

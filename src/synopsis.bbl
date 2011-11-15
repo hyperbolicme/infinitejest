@@ -1,0 +1,359 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{DFH{\etalchar{+}}06}
+
+\bibitem[ABH98]{abh98}
+J.~E. Atkins, E.~G. Boman, and B.~Hendrickson.
+\newblock A spectral algorithm for seriation and the consecutive ones problem.
+\newblock {\em SICOMP: SIAM Journal on Computing}, 28, 1998.
+
+\bibitem[adp80]{adp80}
+a, d, and p.
+\newblock Tbd.
+\newblock 1980.
+
+\bibitem[as95]{as95}
+as.
+\newblock Tbd.
+\newblock 1995.
+
+\bibitem[bl62]{bl62}
+booth and lueker.
+\newblock Tbd.
+\newblock 1962.
+
+\bibitem[BL76]{bl76}
+Kellogg~S. Booth and George~S. Lueker.
+\newblock Testing for the consecutive ones property, interval graphs, and graph
+  planarity using {$PQ$}-tree algorithms.
+\newblock {\em Journal of Computer and System Sciences}, 13(3):335--379,
+  December 1976.
+
+\bibitem[BLS99]{bls99}
+Andreas Brandst\"{a}dt, Van~Bang Le, and Jeremy~P. Spinrad.
+\newblock {\em Graph classes: a survey}.
+\newblock Society for Industrial and Applied Mathematics, Philadelphia, PA,
+  USA, 1999.
+
+\bibitem[Boo75]{b75-phd}
+Kellogg~S. Booth.
+\newblock {\em PQ-tree algorithms}.
+\newblock PhD thesis, Univ. California, Berkeley, 1975.
+
+\bibitem[BP92]{bp93}
+J.~R.~S. Blair and B.~Peyton.
+\newblock An introduction to chordal graphs and clique trees.
+\newblock Technical report, Oak Ridge National Laboratory, Oak Ridge, Tennessee
+  37831, 1992.
+
+\bibitem[bs03]{bs03}
+b and s.
+\newblock Tbd.
+\newblock 2003.
+
+\bibitem[BTV09]{btv09}
+Chris Bourke, Raghunath Tewari, and N.~V. Vinodchandran.
+\newblock Directed planar reachability is in unambiguous log-space.
+\newblock {\em ACM Trans. Comput. Theory}, 1:4:1--4:17, February 2009.
+
+\bibitem[ckl96]{ckl96}
+c, k, and l.
+\newblock Tbd.
+\newblock 1996.
+
+\bibitem[cy91a]{cy91}
+c and y.
+\newblock Tbd.
+\newblock 1991.
+
+\bibitem[CY91b]{ly91}
+Lin Chen and Yaacov Yesha.
+\newblock Parallel recognition of the consecutive ones property with
+  applications.
+\newblock {\em J. Algorithms}, 12(3):375--392, 1991.
+
+\bibitem[df99]{df99}
+d and f.
+\newblock Tbd.
+\newblock 1999.
+
+\bibitem[DFH{\etalchar{+}}06]{dfh06}
+Dujmovic, Fellows, Hallett, Kitching, Liotta, McCartin, Nishimura, Ragde,
+  Rosamond, Suderman, Whitesides, and Wood.
+\newblock A fixed-parameter approach to 2-layer planarization.
+\newblock {\em ALGRTHMICA: Algorithmica}, 45, 2006.
+
+\bibitem[DGN07]{dgn07}
+Michael Dom, Jiong Guo, and Rolf Niedermeier.
+\newblock Approximability and parameterized complexity of consecutive ones
+  submatrix problems.
+\newblock In {\em Theory and Applications of Models of Computation, 4th
+  International Conference, {TAMC} 2007, Shanghai, China, May 22-25, 2007,
+  Proceedings}, volume 4484 of {\em Lecture Notes in Computer Science}, pages
+  680--691. Springer, 2007.
+
+\bibitem[dgnw06]{dgnw06}
+d, g, n, and w.
+\newblock Tbd.
+\newblock 2006.
+
+\bibitem[Dom08]{d08phd}
+Michael Dom.
+\newblock {\em Recognition, Generation, and Application of Binary Matrices with
+  the Consecutive-Ones Property}.
+\newblock PhD thesis, In\-sti\-tut f{\"u}r In\-for\-ma\-tik,
+  Fried\-rich-Schil\-ler-Uni\-ver\-si\-t{\"a}t Je\-na, Germany, 2008.
+\newblock Published by Cuvillier, 2009.
+
+\bibitem[Fei98]{f98}
+Fei.
+\newblock Tbd.
+\newblock 1998.
+
+\bibitem[Fer05a]{f05a}
+H.~Fernau.
+\newblock {\em Parameterized Algorithmics: {A} Graph-Theoretic Approach}.
+\newblock Habi\-li\-ta\-tions\-schrift, Universit{\"a}t T{\"u}bingen, Germany,
+  2005.
+
+\bibitem[Fer05b]{f05b}
+H.~Fernau.
+\newblock Two-layer planarization: improving on parameterized algorithmics.
+\newblock In {\em SOFSEM}, volume 3381 of {\em LNCS}, pages 137--146. Springer,
+  2005.
+
+\bibitem[Fer08]{f08}
+Henning Fernau.
+\newblock Parameterized algorithmics for linear arrangement problems.
+\newblock {\em Discrete Appl. Math.}, 156:3166--3177, October 2008.
+
+\bibitem[FG65]{fg65}
+D.~R. Fulkerson and O.~A. Gross.
+\newblock Incidence matrices and interval graphs.
+\newblock {\em Pac.~J. Math.}, 15:835--855, 1965.
+
+\bibitem[Gav78]{gav78}
+Fanica Gavril.
+\newblock A recognition algorithm for the intersection graphs of paths in
+  trees.
+\newblock {\em Discrete Mathematics}, 23(3):211 -- 227, 1978.
+
+\bibitem[GH64]{gh64}
+P.~C. Gilmore and A.~J. Hoffman.
+\newblock A characterization of comparability graphs and of interval graphs.
+\newblock {\em Can.~J. Math.}, 16:539--548, 1964.
+
+\bibitem[GJ79]{gj79}
+M.~R. Garey and D.~S. Johnson.
+\newblock {\em Computers and Intractability}.
+\newblock Freeman, San Francisco, 1979.
+
+\bibitem[Gol04]{mcg04}
+Martin~Charles Golumbic.
+\newblock {\em Algorithmic graph theory and perfect graphs}, volume~57 of {\em
+  Annals of Discrete Mathematics}.
+\newblock Elsevier Science B.V., 2004.
+\newblock Second Edition.
+
+\bibitem[h01a]{h01a}
+h.
+\newblock Tbd.
+\newblock 2001.
+
+\bibitem[h01b]{h01b}
+h.
+\newblock Tbd.
+\newblock 2001.
+
+\bibitem[HG02]{hg02}
+Hajiaghayi and Ganjali.
+\newblock A note on the consecutive ones submatrix problem.
+\newblock {\em IPL: Information Processing Letters}, 83, 2002.
+
+\bibitem[hgXX]{hgxx}
+h and g.
+\newblock Tbd.
+\newblock XXXX.
+
+\bibitem[HL06]{hl06}
+Dorit~S. Hochbaum and Asaf Levin.
+\newblock Cyclical scheduling and multi-shift scheduling: Complexity and
+  approximation algorithms.
+\newblock {\em Discrete Optimization}, 3(4):327--340, 2006.
+
+\bibitem[Hsu01]{wlh01}
+Wen-Lian Hsu.
+\newblock {PC}-trees vs. {PQ}-trees.
+\newblock {\em Lecture Notes in Computer Science}, 2108:207--217, 2001.
+
+\bibitem[Hsu02]{wlh02}
+Wen-Lian Hsu.
+\newblock A simple test for the consecutive ones property.
+\newblock {\em J. Algorithms}, 43(1):1--16, 2002.
+
+\bibitem[HT02]{ht02}
+Hochbaum and Tucker.
+\newblock Minimax problems with bitonic matrices.
+\newblock {\em NETWORKS: Networks: An International Journal}, 40, 2002.
+
+\bibitem[jkc{\etalchar{+}}04]{jkckv04}
+j, k, c, k, and v.
+\newblock Tbd: the vldb paper.
+\newblock 2004.
+
+\bibitem[JLL76]{jll76}
+Neil~D. Jones, Y.~Edmund Lien, and William~T. Laaser.
+\newblock New problems complete for nondeterministic log space.
+\newblock {\em MST: Mathematical Systems Theory}, 10, 1976.
+
+\bibitem[jlm97]{jlm97}
+j, l, and m.
+\newblock Tbd.
+\newblock 1997.
+
+\bibitem[KKLV10]{kklv10}
+Johannes K{\"o}bler, Sebastian Kuhnert, Bastian Laubner, and Oleg Verbitsky.
+\newblock Interval graphs: Canonical representation in logspace.
+\newblock {\em Electronic Colloquium on Computational Complexity (ECCC)},
+  17:43, 2010.
+
+\bibitem[KM02]{km02}
+P.~S. Kumar and C.~E.~Veni Madhavan.
+\newblock Clique tree generalization and new subclasses of chordal graphs.
+\newblock {\em Discrete Applied Mathematics}, 117:109--131, 2002.
+
+\bibitem[kou77a]{kou77}
+kou.
+\newblock Tbd.
+\newblock 1977.
+
+\bibitem[Kou77b]{k77}
+Lawrence~T. Kou.
+\newblock Polynomial complete consecutive information retrieval problems.
+\newblock {\em SIAM Journal on Computing}, 6(1):67--75, March 1977.
+
+\bibitem[Lau10a]{l10}
+Laubner.
+\newblock Tbd.
+\newblock 2010.
+
+\bibitem[Lau10b]{lau10}
+Bastian Laubner.
+\newblock Capturing polynomial time on interval graphs.
+\newblock In {\em LICS}, pages 199--208. IEEE Computer Society, 2010.
+
+\bibitem[Lin92]{sl92}
+Steven Lindell.
+\newblock A logspace algorithm for tree canonization (extended abstract).
+\newblock In {\em STOC}, pages 400--404. ACM, 1992.
+
+\bibitem[McC04]{mcc04}
+Ross~M. McConnell.
+\newblock A certifying algorithm for the consecutive-ones property.
+\newblock In {\em SODA: ACM-SIAM Symposium on Discrete Algorithms (A Conference
+  on Theoretical and Experimental Analysis of Discrete Algorithms)}, 2004.
+
+\bibitem[mm96a]{mm96}
+m and m.
+\newblock Tbd.
+\newblock 1996.
+
+\bibitem[MM96b]{mm09}
+J.~Meidanis and Erasmo~G. Munuera.
+\newblock A theory for the consecutive ones property.
+\newblock In {\em Proceedings of WSP'96 - Third South American Workshop on
+  String Processing}, pages 194--202, 1996.
+
+\bibitem[mpt97]{mpt97}
+m, p, and t.
+\newblock Tbd.
+\newblock 1997.
+
+\bibitem[NS09]{nsnrs09}
+N.~S. Narayanaswamy and R.~Subashini.
+\newblock A new characterization of matrices with the consecutive ones
+  property.
+\newblock {\em Discrete Applied Mathematics}, 157(18):3721--3727, 2009.
+
+\bibitem[Osw97]{co97}
+Christof Oswald.
+\newblock Tbd.
+\newblock 1997.
+
+\bibitem[PPY94]{apy92}
+Barry~W. Peyton, Alex Pothen, and Xiaoqing Yuan.
+\newblock A clique tree algorithm for partitioning a chordal graph into
+  transitive subgraphs.
+\newblock Technical report, Old Dominion University, Norfolk, VA, USA, 1994.
+
+\bibitem[Rei84]{rei84}
+John~H. Reif.
+\newblock Symmetric complementation.
+\newblock {\em JACM: Journal of the ACM}, 31(2):401--421, 1984.
+
+\bibitem[Rei08a]{r08}
+Reingold.
+\newblock Tbd.
+\newblock 2008.
+
+\bibitem[Rei08b]{rei08}
+Omer Reingold.
+\newblock Undirected connectivity in log-space.
+\newblock {\em J. ACM}, 55(4), 2008.
+
+\bibitem[Ren70]{plr70}
+Peter~L. Renz.
+\newblock Intersection representations of graphs by arcs.
+\newblock {\em Pacific J. Math.}, 34(2):501--510, 1970.
+
+\bibitem[Rob51]{wsr51}
+W.~S. Robinson.
+\newblock A method for chronologically ordering archaeological deposits.
+\newblock {\em American Antiquity}, 16(4):293--301, 1951.
+
+\bibitem[Sch93]{aas93}
+Alejandro~A. Schaffer.
+\newblock A faster algorithm to recognize undirected path graphs.
+\newblock {\em Discrete Applied Mathematics}, 43:261--295, 1993.
+
+\bibitem[SW05]{sw05}
+M.~Suderman and S.~Whitesides.
+\newblock Experiments with the fixed-parameter approach for two-layer
+  planarization.
+\newblock {\em jgaa}, 9(1):149--163, 2005.
+
+\bibitem[th99]{th99}
+t and h.
+\newblock Tbd.
+\newblock 1999.
+
+\bibitem[tm03]{tm03}
+t and m.
+\newblock Tbd.
+\newblock 2003.
+
+\bibitem[Tuc72]{at72}
+Alan Tucker.
+\newblock A structure theorem for the consecutive 1's property.
+\newblock {\em J. Comb.~Theory Series B}, 12:153--162, 1972.
+
+\bibitem[tz03]{tz03}
+t and z.
+\newblock Tbd.
+\newblock 2003.
+
+\bibitem[TZ07]{tz07}
+J.~Tan and L.~Zhang.
+\newblock The consecutive ones submatrix problem for sparse matrices.
+\newblock {\em Algorithmica}, 48(3):287--299, 2007.
+
+\bibitem[Vel85]{v85}
+Veldhorst.
+\newblock Tbd.
+\newblock 85.
+
+\bibitem[YC95]{yc95}
+Yu and Chen.
+\newblock Efficient parallel algorithms for doubly convex-bipartite graphs.
+\newblock {\em TCS: Theoretical Computer Science}, 147:249--265, 1995.
+
+\end{thebibliography}

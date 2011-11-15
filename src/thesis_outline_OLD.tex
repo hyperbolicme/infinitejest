@@ -1,0 +1,59 @@
+\documentstyle[epsfig,algorithm,algorithmic,graphicx,graphics]{MS}
+
+% \usepackage{fullpage} \usepackage{graphicx} \usepackage{epsfig}
+% \usepackage{graphics} \usepackage{setspace} \usepackage{fancyhdr}
+% \usepackage{algorithmic} \usepackage{algorithm} \date{}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary} \newtheorem{fact}{Fact}
+% \newenvironment{proof}[1][Proof]{\begin{trivlist}
+%   \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{proof}{Proof:}{$\Box$}
+\newtheorem{definition}{Definition}[section]
+%%%%
+
+%%%%
+
+\begin{document}
+
+\pagenumbering{roman}
+
+
+\input{frontpage.tex} \input{certificate.tex} \input{dedication.tex}
+\input{ack.tex} \input{abstract.tex}
+
+\tableofcontents
+\listoffigures
+
+\chapter{Intro}
+description, org of paper
+\section{to area}
+\section{to problem}
+\section{to your thesis}
+\section{thesis outline}
+
+
+   
+\chapter{Survey of COP and related problems}
+\pagenumbering{arabic}
+
+\section{characterization of COP - (tucker, mcconnell, prime submatrix)}
+\section{Recognition of COP}
+\subsection{poly algorithms (pq tree, pqr, icpia)}
+\subsection{tuckers submatrices, Dom's algo to find them}
+\subsection{mc connells certificate}
+\section{algorithms to make a matrix into one with COP (min/max-cos-r/c) (dom)}
+\section{brief analysis of hard problems with input having COP (chap 5, 6 in dom)}
+\section{complexity - poly, logspace}
+
+\chapter{Research}
+\section{old and new cop tree results}
+
+
+
+
+\end{document}
+
+

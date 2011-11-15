@@ -1,0 +1,133 @@
+\begin{thebibliography}{21}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{{\tt #1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Atkins {\em et~al.\/}(1998)Atkins, Boman, and Hendrickson}]{abh98}
+{\bf Atkins, J.~E.}, {\bf E.~G. Boman}, and {\bf B.~Hendrickson} (1998).
+\newblock A spectral algorithm for seriation and the consecutive ones problem.
+\newblock {\em SICOMP: SIAM Journal on Computing\/}, {\bf 28}.
+
+\bibitem[{Blair and Peyton(1992)}]{bp93}
+{\bf Blair, J. R.~S.} and {\bf B.~Peyton} (1992).
+\newblock An introduction to chordal graphs and clique trees.
+\newblock Technical report, Oak Ridge National Laboratory, Oak Ridge, Tennessee
+  37831.
+
+\bibitem[{Booth and Lueker(1976)}]{bl76}
+{\bf Booth, K.~S.} and {\bf G.~S. Lueker} (1976).
+\newblock Testing for the consecutive ones property, interval graphs, and graph
+  planarity using {$PQ$}-tree algorithms.
+\newblock {\em Journal of Computer and System Sciences\/}, {\bf 13}(3),
+  335--379.
+
+\bibitem[{Brandst\"{a}dt {\em et~al.\/}(1999)Brandst\"{a}dt, Le, and
+  Spinrad}]{bls99}
+{\bf Brandst\"{a}dt, A.}, {\bf V.~B. Le}, and {\bf J.~P. Spinrad}, {\em Graph
+  classes: a survey\/}.
+\newblock Society for Industrial and Applied Mathematics, Philadelphia, PA,
+  USA, 1999.
+\newblock ISBN 0-89871-432-X.
+
+\bibitem[{Dom(2008)}]{d08phd}
+{\bf Dom, M.} (2008).
+\newblock {\em Recognition, Generation, and Application of Binary Matrices with
+  the Consecutive-Ones Property\/}.
+\newblock Ph.D. thesis, In\-sti\-tut f{\"u}r In\-for\-ma\-tik,
+  Fried\-rich-Schil\-ler-Uni\-ver\-si\-t{\"a}t Je\-na, Germany.
+\newblock Published by Cuvillier, 2009.
+
+\bibitem[{Gavril(1978)}]{gav78}
+{\bf Gavril, F.} (1978).
+\newblock A recognition algorithm for the intersection graphs of paths in
+  trees.
+\newblock {\em Discrete Mathematics\/}, {\bf 23}(3), 211 -- 227.
+
+\bibitem[{Golumbic(2004)}]{mcg04}
+{\bf Golumbic, M.~C.}, {\em Algorithmic graph theory and perfect graphs\/},
+  volume~57 of {\em Annals of Discrete Mathematics\/}.
+\newblock Elsevier Science B.V., 2004.
+\newblock Second Edition.
+
+\bibitem[{Hochbaum and Tucker(2002)}]{ht02}
+{\bf Hochbaum} and {\bf Tucker} (2002).
+\newblock Minimax problems with bitonic matrices.
+\newblock {\em NETWORKS: Networks: An International Journal\/}, {\bf 40}.
+
+\bibitem[{Hochbaum and Levin(2006)}]{hl06}
+{\bf Hochbaum, D.~S.} and {\bf A.~Levin} (2006).
+\newblock Cyclical scheduling and multi-shift scheduling: Complexity and
+  approximation algorithms.
+\newblock {\em Discrete Optimization\/}, {\bf 3}(4), 327--340.
+
+\bibitem[{Hsu(2001)}]{wlh01}
+{\bf Hsu, W.-L.} (2001).
+\newblock {PC}-trees vs. {PQ}-trees.
+\newblock {\em Lecture Notes in Computer Science\/}, {\bf 2108}, 207--217.
+\newblock ISSN 0302-9743.
+
+\bibitem[{Hsu(2002)}]{wlh02}
+{\bf Hsu, W.-L.} (2002).
+\newblock A simple test for the consecutive ones property.
+\newblock {\em J. Algorithms\/}, {\bf 43}(1), 1--16.
+
+\bibitem[{K{\"o}bler {\em et~al.\/}(2010)K{\"o}bler, Kuhnert, Laubner, and
+  Verbitsky}]{kklv10}
+{\bf K{\"o}bler, J.}, {\bf S.~Kuhnert}, {\bf B.~Laubner}, and {\bf
+  O.~Verbitsky} (2010).
+\newblock Interval graphs: Canonical representation in logspace.
+\newblock {\em Electronic Colloquium on Computational Complexity (ECCC)\/},
+  {\bf 17}, 43.
+
+\bibitem[{Kou(1977)}]{k77}
+{\bf Kou, L.~T.} (1977).
+\newblock Polynomial complete consecutive information retrieval problems.
+\newblock {\em SIAM Journal on Computing\/}, {\bf 6}(1), 67--75.
+
+\bibitem[{Kumar and Madhavan(2002)}]{km02}
+{\bf Kumar, P.~S.} and {\bf C.~E.~V. Madhavan} (2002).
+\newblock Clique tree generalization and new subclasses of chordal graphs.
+\newblock {\em Discrete Applied Mathematics\/}, {\bf 117}, 109--131.
+
+\bibitem[{McConnell(2004)}]{mcc04}
+{\bf McConnell, R.~M.}, A certifying algorithm for the consecutive-ones
+  property.
+\newblock {\em In\/} {\em SODA: ACM-SIAM Symposium on Discrete Algorithms (A
+  Conference on Theoretical and Experimental Analysis of Discrete
+  Algorithms)\/}. 2004.
+
+\bibitem[{Meidanis and Munuera(1996)}]{mm09}
+{\bf Meidanis, J.} and {\bf E.~G. Munuera}, A theory for the consecutive ones
+  property.
+\newblock {\em In\/} {\em Proceedings of WSP'96 - Third South American Workshop
+  on String Processing\/}. 1996.
+
+\bibitem[{Narayanaswamy and Subashini(2009)}]{nsnrs09}
+{\bf Narayanaswamy, N.~S.} and {\bf R.~Subashini} (2009).
+\newblock A new characterization of matrices with the consecutive ones
+  property.
+\newblock {\em Discrete Applied Mathematics\/}, {\bf 157}(18), 3721--3727.
+
+\bibitem[{Peyton {\em et~al.\/}(1994)Peyton, Pothen, and Yuan}]{apy92}
+{\bf Peyton, B.~W.}, {\bf A.~Pothen}, and {\bf X.~Yuan} (1994).
+\newblock A clique tree algorithm for partitioning a chordal graph into
+  transitive subgraphs.
+\newblock Technical report, Old Dominion University, Norfolk, VA, USA.
+
+\bibitem[{Renz(1970)}]{plr70}
+{\bf Renz, P.~L.} (1970).
+\newblock Intersection representations of graphs by arcs.
+\newblock {\em Pacific J. Math.\/}, {\bf 34}(2), 501--510.
+
+\bibitem[{Schaffer(1993)}]{aas93}
+{\bf Schaffer, A.~A.} (1993).
+\newblock A faster algorithm to recognize undirected path graphs.
+\newblock {\em Discrete Applied Mathematics\/}, {\bf 43}, 261--295.
+
+\bibitem[{Tucker(1972)}]{at72}
+{\bf Tucker, A.} (1972).
+\newblock A structure theorem for the consecutive 1's property.
+\newblock {\em J. Comb.~Theory Series B\/}, {\bf 12}, 153--162.
+
+\end{thebibliography}

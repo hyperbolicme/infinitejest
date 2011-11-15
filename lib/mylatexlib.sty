@@ -1,0 +1,196 @@
+%%
+%% Author: anju s
+%% 
+%% All declarations required in common for my papers/thesis etc.
+%%
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mylatexlib} [2011/10/21]
+
+\usepackage{epsfig}            % Graphics related. exactly what?
+\usepackage{graphicx}          % For MetaPost
+\usepackage{ifpdf}             
+\usepackage{epstopdf}          % Graphics related. exactly what?
+% \usepackage[hypertex]
+%             {hyperref}         % Hyperlinks for references.
+\usepackage{hyperref}          % Hyperlinks
+
+                             %%% Psuedo code related %
+\usepackage{algorithm}         % For formatting algorithms with
+                               %  captions etc.
+\usepackage{algorithmic}       % Further formatting of algorithms. 
+\usepackage{enumerate}         % For more options in
+                               %  enumeration/itemization.
+                             %%% Math symbols / formatting related %
+\usepackage{amsmath}           % Easier math formulae, align,
+                               %  subequations \ldots .
+\usepackage{latexsym}          % Symbols - exactly what?
+\usepackage{amssymb}           % Symbols - exactly what?
+\usepackage{amsfonts}          % Symbols - exactly what?
+\usepackage{txfonts}           % Has certain special chars like
+                               %  \textreferencemark 
+%\usepackage{pifont}
+\usepackage{textcomp}          % Has certain special chars like
+                               %  \textreferencemark
+\usepackage[finalnew]
+         {../lib/trackchanges} % For tracking changes.
+                               % :Package options:
+                               % [finalold]
+                               %   Ignore all of the edits. 
+                               %   The document will look as if
+                               %   the edits had not been added. 
+                               % [finalnew]
+                               %   Accept all of the edits. 
+                               %   Notes will not be shown in the
+                               %   final output. 
+                               % [footnotes]
+                               %   Added text will be shown
+                               %   inline. Removed text and notes
+                               %   will be shown as footnotes.  
+                               %   This is the default option.
+                               % [margins]
+                               %   Added text will be shown
+                               %   inline. Removed text and notes
+                               %   will be shown in the
+                               %   margin. Margin notes will be
+                               %   aligned with the edits when
+                               %   possible. 
+                               % [inline]
+                               %   All changes and notes will be
+                               %   shown inline.
+
+\addeditor{n}                  % tracking editor 1
+\addeditor{a}                  % tracking editor 2
+
+\DeclareMathAlphabet{\mathpzc} % Loading certain calligraphy fonts
+                      {OT1}{pzc}{m}{it}
+\DeclareMathAlphabet{\mathcalligra}
+                      {T1}{calligra}{m}{n}
+\ifpdf                         % For MetaPost 
+\DeclareGraphicsRule{*}{mps}{*}{} 
+\fi 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% String defs
+\def\cA{{\cal A}}
+\def\cB{{\cal B}}
+\def\cC{{\cal C}}
+\def\cD{{\cal D}}
+\def\cE{{\cal E}}
+\def\cF{{\cal F}}
+\def\cG{{\cal G}}
+\def\cH{{\cal H}}
+\def\cI{{\cal I}}
+\def\cJ{{\cal J}}
+\def\cK{{\cal K}}
+\def\cL{{\cal L}}
+\def\cM{{\cal M}}
+\def\cN{{\cal N}}
+\def\cO{{\cal O}}
+\def\cP{{\cal P}}
+\def\cQ{{\cal Q}}
+\def\cR{{\cal R}}
+\def\cS{{\cal S}}
+\def\cT{{\cal T}}
+\def\cU{{\cal U}}
+\def\cV{{\cal V}}
+\def\cW{{\cal W}}
+\def\cX{{\cal X}}
+\def\cY{{\cal Y}}
+\def\cZ{{\cal Z}}
+\def\hA{{\hat A}}
+\def\hB{{\hat B}}
+\def\hC{{\hat C}}
+\def\hD{{\hat D}}
+\def\hE{{\hat E}}
+\def\hF{{\hat F}}
+\def\hG{{\hat G}}
+\def\hH{{\hat H}}
+\def\hI{{\hat I}}
+\def\hJ{{\hat J}}
+\def\hK{{\hat K}}
+\def\hL{{\hat L}}
+\def\hP{{\hat P}}
+\def\hQ{{\hat Q}}
+\def\hR{{\hat R}}
+\def\hS{{\hat S}}
+\def\hT{{\hat T}}
+\def\hX{{\hat X}}
+\def\hY{{\hat Y}}
+\def\hZ{{\hat Z}}
+\def\eps{\epsilon}
+\def\C{{\mathcal C}}
+\def\F{{\mathcal F}}
+\def\A{{\mathcal A}}
+\def\H{{\mathcal H}}
+\def\bI{\mathbb I}
+\def\bO{\mathbb O}
+\def\cl{\mathpzc{l}}
+\def\cg{\mathpzc{g}}
+\def\ccT{\mathpzc{T}}
+
+
+\def \mythesistitle {Generalization of Consecutive Ones Property of
+  Binary Matrices} 
+\def \myname {Anju Srinivasan}
+\def \mydegree {Master of Science {\em by Research}}
+\def \mysubmissionmonth {November 2011}
+\def \mydept {Computer Science}
+\def \myadvisor {N.\;S.\;Narayanaswamy}
+\def \mysubmissiondate {25 October 2011}
+\def\overlap{\between}
+\def\icppl{\maltese} 
+\def\xbullet{\textreferencemark} %\textreferencemark
+\def\lndisplay{1}
+\def\marginal{{super-marginal }}
+\def\icpplpr{Property}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Other defs
+\def\commentboxsize   {7cm} 
+\def\prelimspace      {2mm}         %% DELETE?
+\def\xnoindent        {\noindent}   %% DELETE
+\def\topshrink        {0mm}         %% DELETE
+\def\assign           {\leftarrow}
+\def\iff              {if and only if }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New/renew commands
+\renewcommand                  % Format of comments in package 
+  {\algorithmiccomment}[1]{    %  {algorithmic}
+    \vspace{0.5mm} \hfill
+    {\small
+      \begin{tabular}{|r}
+        \parbox[right]{\commentboxsize}{ 
+          \space \tt{ #1 }}\\
+      \end{tabular}}}
+\newcommand{\seq}[1]{\left\langle #1 \right\rangle}
+\newcommand{\set}[1]{\left\{ #1\right\}}
+\newcommand{\funct}[1]{(\left #1\right)}
+\newcommand{\Eqr}[1]{Eq.~(\ref{#1})}
+
+% \newenvironment{denselist}{
+%   \begin{list}{(\arabic{enumi})}{\usecounter{enumi}
+%       \setlength{\topsep}{0pt} \setlength{\partopsep}{0pt}
+%       \setlength{\itemsep}{0pt} }}{\end{list}}
+% \newenvironment{denseitemize}{
+%   \begin{list}{$\bullet$}{ \setlength{\topsep}{0pt}
+%       \setlength{\partopsep}{0pt} \setlength{\itemsep}{0pt}
+%     }}{\end{list}}
+% \newenvironment{subdenselist}{
+%   \begin{list}{(\arabic{enumi}.\arabic{enumii})}{ \usecounter{enumii}
+%       \setlength{\topsep}{0pt} \setlength{\partopsep}{0pt}
+%       \setlength{\itemsep}{0pt} }}{\end{list}}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newenvironment{proof}[1][Proof]{\begin{trivlist}
+ \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{observation}{Observation}
+\newcommand{\qed}{\hfill \mbox{\raggedright \rule{.07in}{.1in}}}

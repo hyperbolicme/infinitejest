@@ -1,0 +1,20 @@
+\contentsline {chapter}{LIST OF TABLES}{iii}{section*.2}
+\contentsline {chapter}{LIST OF FIGURES}{iii}{section*.3}
+\contentsline {chapter}{NOTATION}{iv}{section*.3}
+\contentsline {section}{\numberline {1}to area}{2}{section.1}
+\contentsline {section}{\numberline {2}to problem}{2}{section.2}
+\contentsline {section}{\numberline {3}to your thesis}{2}{section.3}
+\contentsline {section}{\numberline {4}Organization of document}{2}{section.4}
+\contentsline {section}{\numberline {5}Characterization of COP}{2}{section.5}
+\contentsline {section}{\numberline {6}Recognition of COP}{2}{section.6}
+\contentsline {subsection}{\numberline {6.1}\tnote [a]{Polynomial time algorithms}}{2}{changenumber.2.2}
+\contentsline {subsection}{\numberline {6.2}\tnote [a]{Tucker's submatrices, Dom's algo to find them}}{3}{changenumber.2.4}
+\contentsline {subsection}{\numberline {6.3}\tnote [a]{McConnell's certificate}}{3}{changenumber.2.5}
+\contentsline {section}{\numberline {7}Alteration to matrices to get COP}{3}{section.7}
+\contentsline {section}{\numberline {8}brief analysis of hard problems with input having COP (chap 5, 6 in dom)}{3}{section.8}
+\contentsline {section}{\numberline {9}Complexity of certain COP variations}{3}{section.9}
+\contentsline {section}{\numberline {10}Introduction}{3}{section.10}
+\contentsline {section}{\numberline {11}Preliminaries}{6}{section.11}
+\contentsline {section}{\numberline {12}Characterization of Feasible Tree Path Labeling}{8}{section.12}
+\contentsline {subsection}{\numberline {12.1}ICPPL when given tree is a path}{15}{subsection.12.1}
+\contentsline {section}{\numberline {13}Testing for feasible path assignments to $k$-subdivided star}{15}{section.13}
