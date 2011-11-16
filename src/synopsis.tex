@@ -1,4 +1,5 @@
-\documentclass[MS]{iitmdiss} 
+\documentclass[MS,]{iitmdiss} 
+\usepackage[usenames,dvipsnames]{color}   
 
 \usepackage{times} 
 \usepackage{t1enc}
@@ -30,6 +31,167 @@
 \pagenumbering{arabic}
 \setcounter{page}{0}
 %\newpage
+
+
+\chapter{Introduction}
+\label{chap:intro}
+
+give some basic gyan about the problem itself? or screw it move to
+section directly
+
+\section{Illustration of the problem}
+\label{sec:problem}
+
+\def \LLL {{\em ``{\bf L}aughing with Kafka''}} %{Consider the {\bf
+                                %L}obster} 
+\def \GGG {{\em ``{\bf G}irl with Curious Hair''}} % {``{\bf G}od Bless You,
+                                % Mr. Franzen''} 
+\def \BBB {{\em ``{\bf B}rief Interviews with Hideous Men''}} %{{\bf B}room
+                                %of the System} 
+\def \TTT {{\em ``{\bf T}his is Water''}} %{``{\bf T}ennis, Trigonometry,
+                                %Tornadoes: A Midwestern  Boyhood''}
+                                %%{{\bf T}he Pale King} 
+
+\def \Pa {{\em {\bf Pa}tricia}} 
+\def \Pi {{\em {\bf Pi}gpen}} %{{\em {\bf Ma}rcie}}
+\def \Sn {{\em {\bf Sn}oopy}}
+\def \Wo {{\em {\bf Wo}odstock}}
+\def \Vi {{\em {\bf Vi}olet}} 
+\def \Li {{\em {\bf Li}nus}} 
+\def \Ch {{\em {\bf Ch}arlie}}
+\def \Sa {{\em {\bf Sa}lly}}
+\def \Fr {{\em {\bf Fr}anklin}}  %{{\em {\bf Re}run}} 
+\def \Sc {{\em {\bf Sc}hr{\"o}eder}} 
+\def \Lu {{\em {\bf Lu}cy}}
+
+\def \residenceblock {{\em Infinite Loop}}
+
+A group of students, \Pa, \Pi, \Sn, \Wo, \Vi, \Li, \Ch, \Sa, \Fr,
+  \Sc\ and \Lu\ enroll at the
+% {\bf Wo}odstock, {\bf Vi}olet, {\bf Li}nus, {\bf Ch}arlie, {\bf
+%   Sa}lly, {\bf Re}run, {\bf Sc}hr{\"o}eder} and {\em {\bf Lu}cy}
+% enroll at the
+{\em Wallace Studies Institute} for a liberal arts programme.  As part
+of their semester thesis, they pick a body of work to study and form
+the namesake study groups, {\LLL}, {\GGG}, {\BBB} and {\TTT}. A student
+will be in at least one study group and may be in more than one. For
+instance, as will be seen later, {\Fr} studies both {\LLL} and {\TTT}
+while \Wo\ studies only \BBB.
+
+Let $U$ and $\cF$ represent the set of students and the set of study
+groups respectively and the integers $n$ and $m$ denote the total
+number students and study groups respectively. In relation to this
+example, these are defined as follows. Also given below is the study group
+allocation to students. \tnote{use tables}
+\tnote{use other font for elements of sets}
+\begin{enumerate}[]
+\item {$U = \{$Pa,$\; $Pi,$\; $Sn,$\; $Wo,$\; $Vi,$\; $Li,$\; $Ch,$\;
+    $Sa,$\; $Fr,$\; $Sc,$\; $Lu$\}$}
+\item $\cF = \{L, G, B, T\}$
+ % \item ${R = \{g, h, i, j, k\}}$
+  % \item ${B = \{a, b, e, g\}}$
+  % \item ${O = \{c, b, d\}}$
+  % \item ${G = \{e, f , g, i\}}$
+\item $L = \{$ Ch,$\; $ Sa,$\; $ Fr,$\; $ Sc,$\; $ Lu $\}$
+\item $G = \{$ Pa,$\; $ Pi,$\; $ Vi,$\; $ Ch $\}$
+\item $B = \{$ Su,$\; $ Pi,$\; $ Wo $\}$
+\item $T = \{$ Vi,$\; $ Li,$\; $ Ch,$\; $ Fr $\}$
+\item $n = |U| = 11$, $m = |\cF| = 4$
+\end{enumerate}
+
+% The administration faces a small challenge with their
+% accommodation. 
+The campus has a residential area {\residenceblock} that has $n$
+single occupancy apartments reserved for the study groups'
+accommodation.  All these apartments are located such that the streets
+connecting them do {\em not} form loops. Fig~\ref{fig:streetmap} shows
+the street map for {\residenceblock}. It may be noted that as a graph, it
+classifies as a tree.
+
+
+A natural question would be to find how the students should be
+allocated apartments such that each study group has the {\em least
+  distance to travel} for a discussion? More specifically, we are
+interested in enforcing additional conditions, namely, that all the
+students in a study group must be next to each other; in other words,
+for one student to reach another fellow study group member's apartment
+(for all study groups the student is part of), she must not have to
+pass the apartment of any student who is not in that study group. To
+further elucidate, the apartments of students of any study group must
+be arranged in an exclusive unfragmented path on the street
+map. Exclusivity here means that the path must not have apartments
+from other study groups (unless that apartment is also part of {\em
+  this} study group).
+
+An intuitive approach to this problem would be to first find the paths
+that each study group decides to inhabit and then refine the
+allocation to individual students. One possible allocation of
+exclusive routes to study groups is illustrated in
+Fig~\ref{fig:streetmap+path}.
+
+\begin{figure}[h]
+  % \centering
+  (a) \includegraphics[scale=0.3]{../img/a1.pdf}\label{fig:streetmap}
+  (b) \includegraphics[scale=0.3]{../img/a2.pdf}\label{fig:streetmap+path}
+  \caption{(a) {\residenceblock} street map (b) Street map with study
+    group routes allocated. Routes are color coded as follows: red for
+    \textcolor{red}{\em \LLL} group, blue for \textcolor{blue}{\em
+      \GGG} group, orange for \textcolor{YellowOrange}{\em \BBB} group,
+    green for \textcolor{green}{\em \TTT} group}
+\end{figure}
+
+
+\section{Motivation and background}
+\label{sec:motivation}
+
+\chapter{Summary of results}
+\label{chap:results}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %\chapter{\MakeUppercase{Introduction}}
 \chapter{INTRODUCTION}
