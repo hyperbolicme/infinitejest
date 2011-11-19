@@ -36,8 +36,8 @@
 \chapter{Introduction}
 \label{chap:intro}
 
-give some basic gyan about the problem itself? or screw it move to
-section directly
+\tnote{give some basic gyan about the problem itself? or screw it move to
+section directly}
 
 \section{Illustration of the problem}
 \label{sec:problem}
@@ -66,12 +66,14 @@ section directly
 
 \def \residenceblock {{\em Infinite Loop}}
 
+\def \WSI {{\em Wallace Studies Institute}}
+
 A group of students, \Pa, \Pi, \Sn, \Wo, \Vi, \Li, \Ch, \Sa, \Fr,
   \Sc\ and \Lu\ enroll at the
 % {\bf Wo}odstock, {\bf Vi}olet, {\bf Li}nus, {\bf Ch}arlie, {\bf
 %   Sa}lly, {\bf Re}run, {\bf Sc}hr{\"o}eder} and {\em {\bf Lu}cy}
 % enroll at the
-{\em Wallace Studies Institute} for a liberal arts programme.  As part
+{\WSI} for a liberal arts programme.  As part
 of their semester thesis, they pick a body of work to study and form
 the namesake study groups, {\LLL}, {\GGG}, {\BBB} and {\TTT}. A student
 will be in at least one study group and may be in more than one. For
@@ -125,135 +127,159 @@ from other study groups (unless that apartment is also part of {\em
 
 An intuitive approach to this problem would be to first find the paths
 that each study group decides to inhabit and then refine the
-allocation to individual students. One possible allocation of
-exclusive routes to study groups is illustrated in
-Fig~\ref{fig:streetmap+path}.
+allocation to individual students. A feasible allocation of exclusive
+routes to study groups is illustrated in Fig~\ref{fig:streetmappath}
+and the students' allocation of apartments that obey's this route
+allocation is shown in Fig~\ref{fig:streetmappathpeople}. How this is
+algorithmically computed is the focus of this thesis.
 
 \begin{figure}[h]
-  % \centering
-  (a) \includegraphics[scale=0.3]{../img/a1.pdf}\label{fig:streetmap}
-  (b) \includegraphics[scale=0.3]{../img/a2.pdf}\label{fig:streetmap+path}
-  \caption{(a) {\residenceblock} street map (b) Street map with study
-    group routes allocated. Routes are color coded as follows: red for
-    \textcolor{red}{\em \LLL} group, blue for \textcolor{blue}{\em
-      \GGG} group, orange for \textcolor{YellowOrange}{\em \BBB} group,
-    green for \textcolor{green}{\em \TTT} group}
+  \centering
+  \includegraphics[scale=0.3]{../img/1_infinite_loop.png}
+  \caption{{\residenceblock} street map}
+  \label{fig:streetmap}
 \end{figure}
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.5]{../img/2_infinite_loop.png}
+  \caption{{\residenceblock} street map with study group routes
+    allocated. Routes are color coded as follows: red for
+    \textcolor{red}{\bf L} group, blue for \textcolor{blue}{\bf G}
+    group, orange for \textcolor{YellowOrange}{\bf B} group, green for
+    \textcolor{green}{\bf T} group}
+  \label{fig:streetmappath}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.5]{../img/3_infinite_loop.png}
+  \caption{Individual allocation of apartments to students in
+    {\residenceblock} that meets the requirements stated before.}
+  \label{fig:streetmappathpeople}
+\end{figure}
+
+
+If all the apartments are on the same street or if they are all lined
+up on a single path, the street map becomes a tree that is just a
+path. Then the problem becomes what is called an {\em interval
+  assignment problem}. The idea of interval assignment may not be
+obvious here; hence to see this, consider a different problem in
+{\WSI} where the classes for these study groups courses need to be
+scheduled during a day (or a week or any time period). Each study
+group has a bunch of courses associated with it some of which may be
+shared by two or more study groups. It is mandatory that a student who
+is a member of a study group takes all the courses associated with
+that group. There are slots during the day for classes to be held and
+the problem is to allocate class slots to courses such that all the
+classes of a study group are consecutive. It is debatable if this will
+not hamper the attention span and memory retention rate of the students but
+that is, regrettably, out of the scope of this thesis. The parallels between this
+class allocation problem and the accommodation problem can be seen as
+follows. The set $U$ here, are the courses offered (say Course 101 ``Post
+modernism in Wallace's work'', Course 102 ``A study on fragmented prose
+method'' and so on). The collection $\cF$ is the set of study groups but the
+study groups are filled by course IDs and not students like in the
+earlier example. For instance, Course 101 is mandatory for all study
+groups {\bf L, G, B, T} and Course 102 is mandatory for only the {\bf B}
+group) and so on. The sequence of class slots for the day (or week or
+any time period) is analogous to the street map in the accommodation
+problem. It is quite obvious now why this version of the problem
+(where the ``target graph'' is a path and not any tree) is called an
+interval assignment problem. 
+
+\tnote{TBD: BEGIN REVIEW FROM BELOW}
+
+The interval assignment problem to a set system is equivalent to the
+consecutive ones problem (COP) in binary matrices\cite{wlh02,
+  nsnrs09}.  The COP problem is to rearrange rows (columns) of a
+binary matrix in such a way that every column (row) has its $1$s occur
+consecutively. If this is possible the matrix is said to have the COP.
+Consecutive ones property (COP) of binary matrices is a well
+researched combinatorial problem and has several positive results on
+tests for it and computing the COP permutation (i.e. the class slot
+allocation to course IDs in the above illustration) which will be
+surveyed later in this document. Hence we are interested in extensions
+of COP, more specifically, the extension of interval assignment
+problem to tree path assignment problem (which is illustrated by the
+study group accommodation problem). 
+
+
+\tnote[a]{THESIS: UNCOMMENT} \tnote{include the rest of the sections as
+  the organization of the doc}
+% The necessary preliminaries with definitions etc. are presented in
+% Section~\ref{sec:prelims}. 
+% Section~\ref{sec:feasible} documents the
+% characterization of a feasible path labeling and finally,
+% Section~\ref{sec:ksubdivstar} describes a polynomial time algorithm to
+% find the tree path labeling of a given set system from a given
+% $k$-subdivided tree.
+
+Section~\ref{sec:motivation} gives a brief survey of COP and relatives.
+Chapter~\ref{chap:results} presents a summary of our results on the
+tree path labeling problem.
 
 \section{Motivation and background}
 \label{sec:motivation}
 
-\chapter{Summary of results}
-\label{chap:results}
+As descirbed earlier, a matrix with COP is one whose rows (columns)
+can be rearranged so that the 1s in every column (row) are in
+consecutive rows (columns).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%\chapter{\MakeUppercase{Introduction}}
-\chapter{INTRODUCTION}
-Consecutive ones property (COP) of binary matrices is a widely studied
-combinatorial problem. The problem is to rearrange rows (columns) of a
-binary matrix in such a way that every column (row) has its $1$s occur
-consecutively. If this is possible the matrix is said to have the COP.
 \begin{figure}[h]
   \centering
+  \includegraphics[scale=0.4]{../img/0_cop_nocop.png}
   
-  \caption{(i) matrix with COP (ii) without COP}
+  \caption{{\em Example for the COP:} The matrix on the left has the
+    COP because by permuting its columns (labeled with $c_1$-$c_4$)
+    one can obtain the matrix shown in the middle where the 1s in each
+    row appear consecutively. The matrix on the right, in contrast,
+    does not have the COP \cite{at72,d08phd}.}
   \label{fig:cop-matrix}
 \end{figure}
 
-This problem has several practical applications in diverse fields
-including scheduling \cite{hl06}, information retrieval \cite{k77} and
-computational biology \cite{abh98}.  Further, it is a tool in graph
-theory \cite{mcg04} for interval graph recognition, characterization
-of Hamiltonian graphs, and in integer linear programming
-\cite{ht02,hl06}.  
+COP in binary matrices has several practical applications in diverse
+fields including scheduling \cite{hl06}, information retrieval
+\cite{k77} and computational biology \cite{abh98}.  Further, it is a
+tool in graph theory \cite{mcg04} for interval graph recognition,
+characterization of Hamiltonian graphs, planarity testing \cite{bl76}
+and in integer linear programming \cite{ht02,hl06}.
 
-\tnote[a]{define ``COP permutation''}
 
-\section{Background}
-Different aspects of COP were studied as part of this thesis. They are
-described in the following subsections.
-
-\subsection{Consecutive Ones Testing}
 The obvious first questions after being introduced to the consecutive
 ones property of binary matrices are if COP can be detected
 efficiently in a binary matrix and if so, can the COP permutation of
 the matrix also be computed efficiently?  Recognition of COP in a
 binary matrix is polynomial time solvable and the first such algorithm
 was given by \cite{fg65}.  Since then several algorithms have been
-invented; PQ trees \cite{bl76}, variations of PQ trees
-\cite{mm09,wlh01,wlh02,mcc04}, ICPIA \cite{nsnrs09} are some of them.
+invented; PQ trees \cite{bl76} gave the first linear time
+algorithm. Variations of PQ trees \cite{mm96,wlh01,wlh02,mcc04} and
+ICPIA \cite{nsnrs09} further improve either the time complexity and/or
+the complexity of implementation.
 
-\cite{bl76} showed for the first time that COP testing (COT) is indeed
-polynomial time solvable by describing the construction of a data
-structure called PQ trees. This paper draws on the close relationship
-of COP matrices to interval graphs. A PQ tree of a matrix is one that
-stores all row (column) permutations of the matrix that give the COP
-orders (there could be multiple) of the matrix. This is constructed using an elaborate procedure in the linear
-time algorithm described in \cite{bl76}.\tnote[a]{verify if it is
-  linear}. Since this result, several improvements have been made to
-the procedural complexity of the algorithm itself and also derivative
-data structures that are easier to construct. PQR trees is one such
-data structure \cite{mm96}, \cite{mpt97}\tnote{also, mpt97 $==$
-  elaborate version of mm96}.  \cite{tm03} describes an improved
-version of PQR trees. \tnote[a]{improvement in terms of
-  what?}. \cite{h01a} describes the simpler algorithm for
-COT. \tnote[a]{This result first apprearted in proc ISAAC 92} Hsu also
-invented PC trees \cite{h01b} which is claimed to be much easier to
-implement. \cite{nsnrs09} describes a characterization of consecutive
-ones property solely based on the cardinality properties of the set representations
-of the columns (rows); every column (row) is equivalent to a set that
-has the row (column) indices of the rows (columns) that have one
-entries in this column (row). This is interesting and relevant,
-especially to this thesis because it simplifies COT to a great
-degree. \tnote[a]{because it reduces the search space for the solution
-  from set of all permutations of rows to set of all-- get this
-  figured out!}
+\cite{bl76} describes a linear time construction of a data structure
+called PQ trees. This paper draws on the close relationship of COP
+matrices to interval graphs. A PQ tree of a matrix is one that stores
+all row (column) permutations of the matrix that give the COP orders
+(there could be multiple) of the matrix. This is constructed using an
+elaborate linear time procedure. Since this
+result, several improvements have been made to the procedural
+complexity of the algorithm itself and also derivative data structures
+that are easier to construct. PQR trees is one such data structure
+\cite{mm96}, \cite{mpt98}\tnote{also, mpt98 $==$ elaborate version of
+  mm96}.  \cite{tm05} describes an improved version of PQR
+trees. \tnote[a]{improvement in terms of what?}\cite{wlh02} describes
+the simpler algorithm for COT. \tnote[a]{This result first apprearted
+  in proc ISAAC 92} Hsu also invented PC trees \cite{wlh01} which is
+claimed to be much easier to implement. \cite{nsnrs09} describes a
+characterization of consecutive ones property solely based on the
+cardinality properties of the set representations of the columns
+(rows); every column (row) is equivalent to a set that has the row
+(column) indices of the rows (columns) that have one entries in this
+column (row). This is interesting and relevant, especially to this
+thesis because it simplifies COT to a great degree. \tnote[a]{because
+  it reduces the search space for the solution from set of all
+  permutations of rows to set of all-- get this figured out!}
 
 \cite{mcc04} describes a different approach to COT. While all previous
 COT algorithms gave the COP order if the matrix has the property and
@@ -266,7 +292,7 @@ verification is more viable. Hence having a certificate
 reinforces its credibility. Note that when the matrix has COP the COP
 order is the certificate.  It may also be noted that the internal
 machinery of this algorithm \annote[a] {is related to the weighted
-  betweenness problem addressed } {in what way??} in \cite{co97}.
+  betweenness problem addressed } {in what way??} in \cite{co98}.
 \tnote[a]{expand on the COP order graph creation and it having to be
   bipartite for M to have COP. and thus an odd cycle being an evidence
   of no COP.}
@@ -274,43 +300,16 @@ machinery of this algorithm \annote[a] {is related to the weighted
 \tnote[a]{THESIS: where should this go?: \cite{jlm97} (application of
   PQ trees in graphics).}
 
-% \noindent
-To elaborate on what was mentioned earlier about \cite{nsnrs09}, the
-problem of COT can be seen as a constraint satisfaction problem
-involving a system of sets from a universe as follows. Every column of
-the binary matrix can be converted into a set of integers which are
-the indices of rows with $1$s in that column. It is apparent that if
-the matrix has COP, then constructing such sets after applying the COP
-permutation to the matrix will result in all sets with consecutive
-integers. In other words, after application of COP reordering, the
-sets are intervals. Indeed the problem now becomes finding interval
-assignments to a given set system such that there exists a permutation
-of the universe (set of row indices) which converts each set to its
-assigned interval. The result in \cite{nsnrs09} characterizes interval
-assignments to the sets which can be obtained from a single
-permutation of the rows.  They show that for each set, the cardinality
-of the interval assigned to it must be same as the cardinality of the
-set, and the intersection cardinality of any two sets must be same as
-the intersection cardinality of the corresponding intervals.  While
-this is obviously a necessary condition, this result shows this is
-also sufficient.  \cite{nsnrs09} calls such an interval assignment an
-Intersection Cardinality Preserving Interval Assignment (ICPIA).  This
-paper generalizes the idea from \cite{wlh02} of decomposing a given
-binary matrix into prime matrices for COT and describes an algorithm
-to test if an ICPIA exists for a given set system.
 
 The literature also has results on parallel COT algorithms --
 \cite{as95} \cite{bs03} \tnote[a]{is this parallel?}
-\cite{cy91}\tnote[a]{is this parallel?}
+\cite{ly91}\tnote[a]{is this parallel?}
 
 \tnote[a]{THESIS: add helly's theorem citation
   19XXdgk-Hellystheorem-Danzer-Gruenbaum-Klee}
 
-\subsection{Matrix modification to attain COP or ``almost'' COP}
-\tnote[a]{THESIS: results and survey from \cite{d08phd} Chapters 2 and
-  3}
 
-So far we have been concerned about matrices that have the consecutive
+{\bf Matrices with no COP}: So far we have been concerned about matrices that have the consecutive
 ones property. However in real life applications, it is rare that data
 sets represented by binary matrices have COP. Nevertheless, the COP is
 not arbirary and there are several interesting problems when a matrix
@@ -364,7 +363,7 @@ induces a submatrix with COP. Given a no-COP matrix $M$,
 but a maxmimum cardinality subset of rows such that $M'$ has COP is NP
 complete. \tnote[a]{check if b75 deals with COP col or COP row. also
   is it any submatrix with k less than r rows or submatrix must have
-  all columns?}. \cite{hgxx} \tnote[a]{get year XX} corrects an error of the abridged proof
+  all columns?}. \cite{hg02} corrects an error of the abridged proof
 of this reduction as given in \cite{gj79}.  \cite{d08phd} discusses
 all these problems in detail giving an extensive survey of the
 previously existing results which are almost exhaustively all
@@ -385,7 +384,7 @@ a reduction to the longest path problem, \tnote[a]{or is it a survey
 submatrix of at least $k$
 rows is NP complete. \tnote[a]{how is this different from booth's 75 result??} \tnote{[tag:appoximation,bitFlipping,matrixBreaking]}\\
 
-\tnote[a]{THESIS: where should this go? \cite{tz03} (approx submatrix with COP sparse matrices)}
+\tnote[a]{THESIS: where should this go? \cite{tz04} (approx submatrix with COP sparse matrices)}
 
 
 %\subsection{Further extensions of the COP problem}
@@ -399,120 +398,19 @@ introduced. \tnote[a]{THESIS? what does this mean? -- COP can be used as a tool 
 
 The optimization version of the $k$-run problem, i.e. minimization of
 number of blocks of ones is proven to be NP complete by
-\cite{kou77}. \tnote[a]{THESIS: what is the reduction?}
+\cite{k77}. \tnote[a]{THESIS: what is the reduction?}
 
 \tnote[a]{THESIS: 
 -- {\em other problems similar to COP}
   \begin{enumerate}
   \item \cite{ckl96} (ILP, circ ones, one drop)
-  \item \cite{th99} (generalization of COP - minimax, biotonic column) Tucker
+  \item \cite{th98} (generalization of COP - minimax, biotonic column) Tucker
   \end{enumerate}
 }
 
 
 
-\subsection{Graph Isomorphism}
-As it will be described in detail later in this document, isomorphism
-of certain classes of graphs, namely chordal graphs, have a close
-relationship with consecutive ones property and generalizations of it.
-This is perhaps because of how closely COP of a matrix relates to
-properties of graphs derived from matrices as seen in the following
-results. %-- Other relations of COP with Graphs: \\
-\tnote[a]{THESIS: peo exists iff chordal. lexicographic BFS
-  [tag:chordalGraph]} 
-A well known result in perfect graph theory is that the maximal
-cliques of an interval graph $G$ can be linearly ordered such that for
-all $v \in V(G)$, cliques containing $v$ are consecutive in the
-ordering\cite{gh64}. This clearly means that a graph $G$ is an
-interval graph if and only if \tnote[a]{verify from paper the
-  statement of claim.} maximal clique vertex incidence matrix of $G$
-has COP.  Also, maximal cliques of any chordal graph can be enumerated
-in polytime $O(m+n)$ \tnote[a]{citation?!!}.  \cite{fg65} uses these
-results to give the first polynomial time algorithm for
-COT. \tnote[a]{THESIS: check. how do they use it?}  A bipartite graph
-is convex (on $R$) if and only if its half adjacency matrix has COP on
-rows.  The results in \cite{bl62} on COT are based on the result that
-interval graphs are AT-free chordal graphs. \tnote[a]{the latter being
-  Tucker's?}
-
-\tnote[a]{THESIS: -- How COP (and TPL) relates to interval graph
-  isomorphism (and path graph isomorphism) move/summarize what is
-  already in Motivation section.}
-
-\tnote[a]{THESIS: TBD survey -- see blue notes under Graph
-  Isomorphism. namely citations in \cite{aas93}}
-
-\tnote[a]{THESIS: -- -- a brief on heirarchy of chordal graphs, path
-  graphs, interval graphs, peo, clique tree etc. and results.}
-
-\tnote[a]{THESIS: -- interval graphs are incomparability graphs. see
-  Golumbic. [tag:classification]}
-
-\tnote[a]{THESIS: finding min length hole in bipartite graph is
-  polynomial time [Sec 3.3.2 in \cite{d08phd}]}
-
-\tnote[a]{THESIS: theorem 2.2 in \cite{d08phd} - $G$ is union of
-  v.d. caterpillars iff $M$ has COP in rows. $M$ is edge vertex
-  incidence matrix $(*,2)$ of $G$}
-
-
-\subsection{Logspace complexity of graph canonization using COP}
-
-Canonization is an important tool in graph isomorphism. Invention of a
-deterministic method of canonization for any class of graphs naturally
-results in an algorithm for isomorphism. All that is required is to
-check if the canons of two graphs are the same. Thus complexity of
-graph isomorphism can be studied by studying canonization
-methods. While general graph ismorphism remains elusive in terms of
-hardness, canonization has been studied for smaller classes of graphs
-thus giving complexity/hardness results for them.
-
-In 1992, \cite{sl92} made an important discovery that tree isomorphism
-is in logspace. It was done by inventing a method of canonization of
-trees using a logspace depth first traversal
-algorithm. \tnote[a]{confirm the statement of claim}.
-
-\cite{kklv10} proved that interval graph canonization is also in
-logspace thus drawing logspace conslusions about COT. 
-% This result is
-% built on the fact that 
-Interval graphs are FP+C (fixed point with
-counting) definable \tnote[a]{elucidate} and \cite{l10} showed that
-this implies that it captures PTIME. \tnote[a]{elucidate} This result
-along with that of undirected graph reachability being in logspace
-\cite{r08}, \cite{kklv10} proved their logspace result.\\ 
-
-\tnote[a]{THESIS: -- -- the interesting survey in conclusion section
-  of kklv10}
-
-\tnote[a]{THESIS:
-{\bf COP helping some problems with hardness}
-having COP in the input structure makes some problems less hard than
-in a general input.
-
--- min set cover problem is known to be NP hard. so is min hitting
-set. these two problems are equivalent \cite{adp80}\\
--- -- complexity results: log factor polynomial time approximable \cite{f98}, W[2]-complete with solution size as parameter \cite{df99}\\
--- a couple of generalizations:\\
--- -- min degree hypergraph (MDH) problem\\
--- -- red blue covering (RBSC) problem\\
-}
-
-\tnote[a]{THESIS: \cite{d08phd} Chapter 5.}
-
-\tnote[a]{THESIS: what are \cite{d08phd} results}
-
-
-\tnote[a]{THESIS: -- Rectangle stabbing \tnote[a]{see \cite{d08phd} Chapter 6?}}
-
-
-\tnote[a]{THESIS: -- {\em \cite{dgnw06} (min membership hitting set + COP)}}
-
-
-
-\section{Motivation, Objective and Scope}
-
-A natural generalization of the interval assignment problem is
+{\bf Motivation: } A natural generalization of the interval assignment problem is
 feasible tree path labeling problem of a set system. The problem is
 defined as follows -- given a set system $\cF$ from a universe $U$ and
 a tree $T$, does there exist a bijection from $U$ to the vertices of
@@ -561,8 +459,37 @@ be isomorphism-complete; see for example \cite{kklv10}. Therefore,
   isomorphism, culminating in Graph Isomorphism }{REWORD} itself.
 
 
-%\noindent 
-\section{Summary of Results}
+
+How the problem of COT is related to the constraint statisfaction
+problem of interval assignment to sets in a system can be seen as
+follows. Every column of the binary matrix can be converted into a set
+of integers which are the indices of rows with $1$s in that column. It
+is apparent that if the matrix has COP, then constructing such sets
+after applying the COP permutation to the matrix will result in all
+sets with consecutive integers. In other words, after application of
+COP reordering, the sets are intervals. Indeed the problem now becomes
+finding interval assignments to a given set system such that there
+exists a permutation of the universe (set of row indices) which
+converts each set to its assigned interval. The result in
+\cite{nsnrs09} characterizes interval assignments to the sets which
+can be obtained from a single permutation of the rows.  They show that
+for each set, the cardinality of the interval assigned to it must be
+same as the cardinality of the set, and the intersection cardinality
+of any two sets must be same as the intersection cardinality of the
+corresponding intervals.  While this is obviously a necessary
+condition, this result shows this is also sufficient.  \cite{nsnrs09}
+calls such an interval assignment an Intersection Cardinality
+Preserving Interval Assignment (ICPIA).  This paper generalizes the
+idea from \cite{wlh02} of decomposing a given binary matrix into prime
+matrices for COT and describes an algorithm to test if an ICPIA exists
+for a given set system.
+
+
+
+
+\chapter{Summary of results}
+\label{chap:results}
+
 Given a path labeling $\cl$ to $\cF$ from a tree $T$, we give a
 necessary and sufficient condition for it to be a feasible path
 labeling.  This necessary and sufficient condition can be tested in
@@ -598,18 +525,7 @@ graphs.
 % where to test for the COP in a given matrix, the COP problem is
 % solved on an equivalent set of prime matrices.
 
-\section{Organization of document} 
-\tnote[a]{THESIS: UNCOMMENT} 
-% The necessary preliminaries with definitions etc. are presented in
-% Section~\ref{sec:prelims}. 
-Section~\ref{sec:feasible} documents the
-characterization of a feasible path labeling and finally,
-Section~\ref{sec:ksubdivstar} describes a polynomial time algorithm to
-find the tree path labeling of a given set system from a given
-$k$-subdivided tree.
-
-%\chapter{\MakeUppercase{Results}}
-\chapter{RESULTS}
+\section{RESULTS}
 % \section{Preliminaries} 
 % \label{sec:prelims} 
 
@@ -1634,7 +1550,112 @@ case-specific changes mentioned in the rules below.
 
 
 
-%\section{Conclusions}
+
+
+\chapter{Conclusion}
+\tnote{MAKE CONNECTION TO PATH GRAPH ISOMORPHISM HERE}
+As it will be described in detail later in this document, isomorphism
+of certain classes of graphs, namely chordal graphs, have a close
+relationship with consecutive ones property and generalizations of it.
+This is perhaps because of how closely COP of a matrix relates to
+properties of graphs derived from matrices as seen in the following
+results. %-- Other relations of COP with Graphs: \\
+\tnote[a]{THESIS: peo exists iff chordal. lexicographic BFS
+  [tag:chordalGraph]} 
+A well known result in perfect graph theory is that the maximal
+cliques of an interval graph $G$ can be linearly ordered such that for
+all $v \in V(G)$, cliques containing $v$ are consecutive in the
+ordering\cite{gh64}. This clearly means that a graph $G$ is an
+interval graph if and only if \tnote[a]{verify from paper the
+  statement of claim.} maximal clique vertex incidence matrix of $G$
+has COP.  Also, maximal cliques of any chordal graph can be enumerated
+in polytime $O(m+n)$ \tnote[a]{citation?!!}.  \cite{fg65} uses these
+results to give the first polynomial time algorithm for
+COT. \tnote[a]{THESIS: check. how do they use it?}  A bipartite graph
+is convex (on $R$) if and only if its half adjacency matrix has COP on
+rows.  The results in \cite{bl76}
+%\cite{bl62} 
+on COT are based on the result that
+interval graphs are AT-free chordal graphs. \tnote[a]{the latter being
+  Tucker's?}
+
+\tnote[a]{THESIS: -- How COP (and TPL) relates to interval graph
+  isomorphism (and path graph isomorphism) move/summarize what is
+  already in Motivation section.}
+
+\tnote[a]{THESIS: TBD survey -- see blue notes under Graph
+  Isomorphism. namely citations in \cite{aas93}}
+
+\tnote[a]{THESIS: -- -- a brief on heirarchy of chordal graphs, path
+  graphs, interval graphs, peo, clique tree etc. and results.}
+
+\tnote[a]{THESIS: -- interval graphs are incomparability graphs. see
+  Golumbic. [tag:classification]}
+
+\tnote[a]{THESIS: finding min length hole in bipartite graph is
+  polynomial time [Sec 3.3.2 in \cite{d08phd}]}
+
+\tnote[a]{THESIS: theorem 2.2 in \cite{d08phd} - $G$ is union of
+  v.d. caterpillars iff $M$ has COP in rows. $M$ is edge vertex
+  incidence matrix $(*,2)$ of $G$}
+
+
+{\bf Complexity challenges:} Canonization is an important tool in graph isomorphism. Invention of a
+deterministic method of canonization for any class of graphs naturally
+results in an algorithm for isomorphism. All that is required is to
+check if the canons of two graphs are the same. Thus complexity of
+graph isomorphism can be studied by studying canonization
+methods. While general graph ismorphism remains elusive in terms of
+hardness, canonization has been studied for smaller classes of graphs
+thus giving complexity/hardness results for them.
+
+In 1992, \cite{sl92} made an important discovery that tree isomorphism
+is in logspace. It was done by inventing a method of canonization of
+trees using a logspace depth first traversal
+algorithm. \tnote[a]{confirm the statement of claim}.
+
+\cite{kklv10} proved that interval graph canonization is also in
+logspace thus drawing logspace conslusions about COT. 
+% This result is
+% built on the fact that 
+Interval graphs are FP+C (fixed point with
+counting) definable \tnote[a]{elucidate} and \cite{l10} showed that
+this implies that it captures PTIME. \tnote[a]{elucidate} This result
+along with that of undirected graph reachability being in logspace
+\cite{rei08}, \cite{kklv10} proved their logspace result.\\ 
+
+\tnote[a]{THESIS: -- -- the interesting survey in conclusion section
+  of kklv10}
+
+\tnote[a]{THESIS:
+{\bf COP helping some problems with hardness}
+having COP in the input structure makes some problems less hard than
+in a general input.
+
+-- min set cover problem is known to be NP hard. so is min hitting
+set. these two problems are equivalent \cite{adp80}\\
+-- -- complexity results: log factor polynomial time approximable \cite{f98}, W[2]-complete with solution size as parameter \cite{df99}\\
+-- a couple of generalizations:\\
+-- -- min degree hypergraph (MDH) problem\\
+-- -- red blue covering (RBSC) problem\\
+}
+
+\tnote[a]{THESIS: \cite{d08phd} Chapter 5.}
+
+\tnote[a]{THESIS: what are \cite{d08phd} results}
+
+
+\tnote[a]{THESIS: -- Rectangle stabbing \tnote[a]{see \cite{d08phd} Chapter 6?}}
+
+
+
+
+
+
+
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

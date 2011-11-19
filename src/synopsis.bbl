@@ -6,20 +6,16 @@ J.~E. Atkins, E.~G. Boman, and B.~Hendrickson.
 \newblock A spectral algorithm for seriation and the consecutive ones problem.
 \newblock {\em SICOMP: SIAM Journal on Computing}, 28, 1998.
 
-\bibitem[adp80]{adp80}
-a, d, and p.
-\newblock Tbd.
-\newblock 1980.
+\bibitem[ADP80]{adp80}
+Giorgio Ausiello, Alessandro D'Atri, and Marco Protasi.
+\newblock Structure preserving reductions among convex optimization problems.
+\newblock {\em J. Comput. Syst. Sci}, 21(1):136--153, 1980.
 
-\bibitem[as95]{as95}
-as.
-\newblock Tbd.
-\newblock 1995.
-
-\bibitem[bl62]{bl62}
-booth and lueker.
-\newblock Tbd.
-\newblock 1962.
+\bibitem[AS95]{as95}
+Annexstein and Swaminathan.
+\newblock On testing consecutive-ones property in parallel.
+\newblock In {\em SPAA: Annual ACM Symposium on Parallel Algorithms and
+  Architectures}, 1995.
 
 \bibitem[BL76]{bl76}
 Kellogg~S. Booth and George~S. Lueker.
@@ -45,36 +41,36 @@ J.~R.~S. Blair and B.~Peyton.
 \newblock Technical report, Oak Ridge National Laboratory, Oak Ridge, Tennessee
   37831, 1992.
 
-\bibitem[bs03]{bs03}
-b and s.
-\newblock Tbd.
-\newblock 2003.
+\bibitem[BS03]{bs03}
+David~A. Bader and Sukanya Sreshta.
+\newblock A new parallel algorithm for planarity testing, April~11 2003.
 
 \bibitem[BTV09]{btv09}
 Chris Bourke, Raghunath Tewari, and N.~V. Vinodchandran.
 \newblock Directed planar reachability is in unambiguous log-space.
 \newblock {\em ACM Trans. Comput. Theory}, 1:4:1--4:17, February 2009.
 
-\bibitem[ckl96]{ckl96}
-c, k, and l.
-\newblock Tbd.
-\newblock 1996.
+\bibitem[CKL96]{ckl96}
+R.~Chandrasekaran, S.~N. Kabadi, and S.~Lakshminarayanan.
+\newblock An extension of a theorem of {Fulkerson} and {Gross}.
+\newblock {\em Linear Algebra and its Applications}, 246(1--3):23--29, October
+  1996.
 
-\bibitem[cy91a]{cy91}
-c and y.
-\newblock Tbd.
-\newblock 1991.
+\bibitem[COR98]{co98}
+Thomas Christof, Marcus Oswald, and Gerhard Reinelt.
+\newblock Consecutive ones and a betweenness problem in computational biology.
+\newblock {\em Lecture Notes in Computer Science}, 1412, 1998.
 
-\bibitem[CY91b]{ly91}
+\bibitem[CY91]{ly91}
 Lin Chen and Yaacov Yesha.
 \newblock Parallel recognition of the consecutive ones property with
   applications.
 \newblock {\em J. Algorithms}, 12(3):375--392, 1991.
 
-\bibitem[df99]{df99}
-d and f.
-\newblock Tbd.
-\newblock 1999.
+\bibitem[DF99]{df99}
+R.~G. Downey and M.~R. Fellows.
+\newblock {\em Parameterized Complexity}.
+\newblock Springer, 1999.
 
 \bibitem[DFH{\etalchar{+}}06]{dfh06}
 Dujmovic, Fellows, Hallett, Kitching, Liotta, McCartin, Nishimura, Ragde,
@@ -91,11 +87,6 @@ Michael Dom, Jiong Guo, and Rolf Niedermeier.
   Proceedings}, volume 4484 of {\em Lecture Notes in Computer Science}, pages
   680--691. Springer, 2007.
 
-\bibitem[dgnw06]{dgnw06}
-d, g, n, and w.
-\newblock Tbd.
-\newblock 2006.
-
 \bibitem[Dom08]{d08phd}
 Michael Dom.
 \newblock {\em Recognition, Generation, and Application of Binary Matrices with
@@ -105,9 +96,9 @@ Michael Dom.
 \newblock Published by Cuvillier, 2009.
 
 \bibitem[Fei98]{f98}
-Fei.
-\newblock Tbd.
-\newblock 1998.
+Uriel Feige.
+\newblock A threshold of ln n for approximating set cover.
+\newblock {\em J. ACM}, 45(4):634--652, 1998.
 
 \bibitem[Fer05a]{f05a}
 H.~Fernau.
@@ -154,25 +145,10 @@ Martin~Charles Golumbic.
 \newblock Elsevier Science B.V., 2004.
 \newblock Second Edition.
 
-\bibitem[h01a]{h01a}
-h.
-\newblock Tbd.
-\newblock 2001.
-
-\bibitem[h01b]{h01b}
-h.
-\newblock Tbd.
-\newblock 2001.
-
 \bibitem[HG02]{hg02}
 Hajiaghayi and Ganjali.
 \newblock A note on the consecutive ones submatrix problem.
 \newblock {\em IPL: Information Processing Letters}, 83, 2002.
-
-\bibitem[hgXX]{hgxx}
-h and g.
-\newblock Tbd.
-\newblock XXXX.
 
 \bibitem[HL06]{hl06}
 Dorit~S. Hochbaum and Asaf Levin.
@@ -190,25 +166,29 @@ Wen-Lian Hsu.
 \newblock A simple test for the consecutive ones property.
 \newblock {\em J. Algorithms}, 43(1):1--16, 2002.
 
+\bibitem[HT98]{th98}
+T.~C. Hu and P.~A. Tucker.
+\newblock Minimax programs, bitonic columns and {PQ} trees, November~29 1998.
+
 \bibitem[HT02]{ht02}
 Hochbaum and Tucker.
 \newblock Minimax problems with bitonic matrices.
 \newblock {\em NETWORKS: Networks: An International Journal}, 40, 2002.
 
-\bibitem[jkc{\etalchar{+}}04]{jkckv04}
-j, k, c, k, and v.
-\newblock Tbd: the vldb paper.
-\newblock 2004.
+\bibitem[JJLM97]{jlm97}
+Michael J{\"u}nger, Michael Junger, Sebastian Leipert, and Petra Mutzel.
+\newblock Pitfalls of using {PQ}-trees in automatic graph drawing, 1997.
+
+\bibitem[JKC{\etalchar{+}}04]{jkckv04}
+Johnson, Krishnan, Chhugani, Kumar, and Venkatasubramanian.
+\newblock Compressing large boolean matrices using reordering techniques.
+\newblock In {\em VLDB: International Conference on Very Large Data Bases}.
+  Morgan Kaufmann Publishers, 2004.
 
 \bibitem[JLL76]{jll76}
 Neil~D. Jones, Y.~Edmund Lien, and William~T. Laaser.
 \newblock New problems complete for nondeterministic log space.
 \newblock {\em MST: Mathematical Systems Theory}, 10, 1976.
-
-\bibitem[jlm97]{jlm97}
-j, l, and m.
-\newblock Tbd.
-\newblock 1997.
 
 \bibitem[KKLV10]{kklv10}
 Johannes K{\"o}bler, Sebastian Kuhnert, Bastian Laubner, and Oleg Verbitsky.
@@ -221,22 +201,18 @@ P.~S. Kumar and C.~E.~Veni Madhavan.
 \newblock Clique tree generalization and new subclasses of chordal graphs.
 \newblock {\em Discrete Applied Mathematics}, 117:109--131, 2002.
 
-\bibitem[kou77a]{kou77}
-kou.
-\newblock Tbd.
-\newblock 1977.
-
-\bibitem[Kou77b]{k77}
+\bibitem[Kou77]{k77}
 Lawrence~T. Kou.
 \newblock Polynomial complete consecutive information retrieval problems.
 \newblock {\em SIAM Journal on Computing}, 6(1):67--75, March 1977.
 
-\bibitem[Lau10a]{l10}
-Laubner.
-\newblock Tbd.
-\newblock 2010.
+\bibitem[Lau09]{l10}
+Bastian Laubner.
+\newblock Capturing polynomial time on interval graphs.
+\newblock {\em CoRR}, abs/0911.3799, 2009.
+\newblock informal publication.
 
-\bibitem[Lau10b]{lau10}
+\bibitem[Lau10]{lau10}
 Bastian Laubner.
 \newblock Capturing polynomial time on interval graphs.
 \newblock In {\em LICS}, pages 199--208. IEEE Computer Society, 2010.
@@ -252,32 +228,23 @@ Ross~M. McConnell.
 \newblock In {\em SODA: ACM-SIAM Symposium on Discrete Algorithms (A Conference
   on Theoretical and Experimental Analysis of Discrete Algorithms)}, 2004.
 
-\bibitem[mm96a]{mm96}
-m and m.
-\newblock Tbd.
-\newblock 1996.
-
-\bibitem[MM96b]{mm09}
+\bibitem[MM96]{mm96}
 J.~Meidanis and Erasmo~G. Munuera.
 \newblock A theory for the consecutive ones property.
 \newblock In {\em Proceedings of WSP'96 - Third South American Workshop on
   String Processing}, pages 194--202, 1996.
 
-\bibitem[mpt97]{mpt97}
-m, p, and t.
-\newblock Tbd.
-\newblock 1997.
+\bibitem[MPT98]{mpt98}
+Meidanis, Porto, and Telles.
+\newblock On the consecutive ones property.
+\newblock {\em DAMATH: Discrete Applied Mathematics and Combinatorial
+  Operations Research and Computer Science}, 88, 1998.
 
 \bibitem[NS09]{nsnrs09}
 N.~S. Narayanaswamy and R.~Subashini.
 \newblock A new characterization of matrices with the consecutive ones
   property.
 \newblock {\em Discrete Applied Mathematics}, 157(18):3721--3727, 2009.
-
-\bibitem[Osw97]{co97}
-Christof Oswald.
-\newblock Tbd.
-\newblock 1997.
 
 \bibitem[PPY94]{apy92}
 Barry~W. Peyton, Alex Pothen, and Xiaoqing Yuan.
@@ -290,12 +257,7 @@ John~H. Reif.
 \newblock Symmetric complementation.
 \newblock {\em JACM: Journal of the ACM}, 31(2):401--421, 1984.
 
-\bibitem[Rei08a]{r08}
-Reingold.
-\newblock Tbd.
-\newblock 2008.
-
-\bibitem[Rei08b]{rei08}
+\bibitem[Rei08]{rei08}
 Omer Reingold.
 \newblock Undirected connectivity in log-space.
 \newblock {\em J. ACM}, 55(4), 2008.
@@ -321,25 +283,27 @@ M.~Suderman and S.~Whitesides.
   planarization.
 \newblock {\em jgaa}, 9(1):149--163, 2005.
 
-\bibitem[th99]{th99}
-t and h.
-\newblock Tbd.
-\newblock 1999.
+\bibitem[TBD62]{bl62}
+UNKNOWN TBD.
+\newblock Unknown - tbd - showed interval graph is chordal + at-free.
+\newblock {\em TBD}, 1962.
 
-\bibitem[tm03]{tm03}
-t and m.
-\newblock Tbd.
-\newblock 2003.
+\bibitem[TM05]{tm05}
+Guilherme~P. Telles and Jo{\~a}o Meidanis.
+\newblock Building {PQR} trees in almost-linear time.
+\newblock {\em Electronic Notes in Discrete Mathematics}, 19:33--39, 2005.
 
 \bibitem[Tuc72]{at72}
 Alan Tucker.
 \newblock A structure theorem for the consecutive 1's property.
 \newblock {\em J. Comb.~Theory Series B}, 12:153--162, 1972.
 
-\bibitem[tz03]{tz03}
-t and z.
-\newblock Tbd.
-\newblock 2003.
+\bibitem[TZ04]{tz04}
+Jinsong Tan and Louxin Zhang.
+\newblock Approximation algorithms for the consecutive ones submatrix problem
+  on sparse matrices.
+\newblock In {\em ---}, volume 3341 of {\em Lecture Notes in Computer Science},
+  pages 835--846, 2004.
 
 \bibitem[TZ07]{tz07}
 J.~Tan and L.~Zhang.
@@ -347,9 +311,9 @@ J.~Tan and L.~Zhang.
 \newblock {\em Algorithmica}, 48(3):287--299, 2007.
 
 \bibitem[Vel85]{v85}
-Veldhorst.
-\newblock Tbd.
-\newblock 85.
+Marinus Veldhorst.
+\newblock Approximation of the consecutive ones matrix augmentation problem.
+\newblock {\em SIAM Journal on Computing}, 14(3):709--729, August 1985.
 
 \bibitem[YC95]{yc95}
 Yu and Chen.
