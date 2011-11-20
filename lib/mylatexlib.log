@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  27 OCT 2011 20:52
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  20 NOV 2011 23:39
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -29,7 +29,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.11 \usepackage{
-                 graphicx}          % Graphics related. exactly what?
+                 graphicx}          % For MetaPost
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -41,19 +41,19 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.12 \usepackage{
-                 epstopdf}          % Graphics related. exactly what?
+                 ifpdf}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
 
-./mylatexlib.sty:14: LaTeX Error: \usepackage before \documentclass.
+./mylatexlib.sty:13: LaTeX Error: \usepackage before \documentclass.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.14             {
-                  hyperref}         % Hyperlinks for references.
+l.13 \usepackage{
+                 epstopdf}          % Graphics related. exactly what?
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -65,19 +65,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.16 \usepackage{
-                 algorithm}         % For formatting algorithms with
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-./mylatexlib.sty:18: LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.18 \usepackage{
-                 algorithmic}       % Further formatting of algorithms.
+                 hyperref}          % Hyperlinks
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -89,7 +77,19 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.19 \usepackage{
-                 enumerate}         % For more options in
+                 algorithm}         % For formatting algorithms with
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+./mylatexlib.sty:21: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \usepackage{
+                 algorithmic}       % Further formatting of algorithms.
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -101,19 +101,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.22 \usepackage{
-                 amsmath}           % Easier math formulae, align,
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-./mylatexlib.sty:24: LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 \usepackage{
-                 latexsym}          % Symbols - exactly what?
+                 enumerate}         % For more options in
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -125,19 +113,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.25 \usepackage{
-                 amssymb}           % Symbols - exactly what?
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-./mylatexlib.sty:26: LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.26 \usepackage{
-                 amsfonts}          % Symbols - exactly what?
+                 amsmath}           % Easier math formulae, align,
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -149,7 +125,31 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.27 \usepackage{
-                 txfonts}           % Has certain special chars like
+                 latexsym}          % Symbols - exactly what?
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+./mylatexlib.sty:28: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \usepackage{
+                 amssymb}           % Symbols - exactly what?
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+./mylatexlib.sty:29: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 \usepackage{
+                 amsfonts}          % Symbols - exactly what?
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -161,7 +161,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.30 \usepackage{
-                 textcomp}          % Has certain special chars like
+                 txfonts}           % Has certain special chars like
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -172,14 +172,26 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.33          {
+l.33 \usepackage{
+                 textcomp}          % Has certain special chars like
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+./mylatexlib.sty:37: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37          {
                ../lib/trackchanges} % For tracking changes.
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
-./mylatexlib.sty:59: Undefined control sequence.
-l.59 \addeditor
-               {n}                  % tracking editor 1
+./mylatexlib.sty:63: Undefined control sequence.
+l.63 \addeditor
+               {bogus1}             % i want TH to have another color
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -187,54 +199,210 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./mylatexlib.sty:59: LaTeX Error: Missing \begin{document}.
+./mylatexlib.sty:63: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 \addeditor{n
-                 }                  % tracking editor 1
+l.63 \addeditor{b
+                 ogus1}             % i want TH to have another color
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-Missing character: There is no n in font nullfont!
-./mylatexlib.sty:60: Undefined control sequence.
-l.60 \addeditor
-               {a}                  % tracking editor 2
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no 1 in font nullfont!
+./mylatexlib.sty:64: Undefined control sequence.
+l.64 \addeditor
+               {bogus2}             % i want TH to have another color
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no 2 in font nullfont!
+./mylatexlib.sty:65: Undefined control sequence.
+l.65 \addeditor
+               {bogus3}             % i want TH to have another color
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 59--61
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no 3 in font nullfont!
+./mylatexlib.sty:66: Undefined control sequence.
+l.66 \addeditor
+               {bogus4}             % i want TH to have another color
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no 4 in font nullfont!
+./mylatexlib.sty:67: Undefined control sequence.
+l.67 \addeditor
+               {bogus5}             % i want TH to have another color
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no 5 in font nullfont!
+./mylatexlib.sty:68: Undefined control sequence.
+l.68 \addeditor
+               {bogus6}             % i want TH to have another color
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no 6 in font nullfont!
+./mylatexlib.sty:69: Undefined control sequence.
+l.69 \addeditor
+               {bogus7}             % i want TH to have another color
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./mylatexlib.sty:70: Undefined control sequence.
+l.70 \addeditor
+               {bogus8}             % i want TH to have another color
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no 8 in font nullfont!
+./mylatexlib.sty:71: Undefined control sequence.
+l.71 \addeditor
+               {TH}                 % tracking editor 1
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no T in font nullfont!
+Missing character: There is no H in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 63--72
 []
  []
 
+./mylatexlib.sty:77: Undefined control sequence.
+l.77 \ifpdf
+                                    % For MetaPost
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-./mylatexlib.sty:156: LaTeX Error: \algorithmiccomment undefined.
+./mylatexlib.sty:78: Undefined control sequence.
+l.78 \DeclareGraphicsRule
+                         {*}{mps}{*}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./mylatexlib.sty:78: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.156   {\algorithmiccomment}
+l.78 \DeclareGraphicsRule{*
+                           }{mps}{*}{}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no * in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no * in font nullfont!
+./mylatexlib.sty:79: Extra \fi.
+l.79 \fi
+        
+I'm ignoring this; it doesn't match any \if.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 78--80
+[] 
+ []
+
+
+./mylatexlib.sty:170: LaTeX Error: \algorithmiccomment undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.170   {\algorithmiccomment}
                              [1]{    %  {algorithmic}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 \c@theorem=\count79
 
-./mylatexlib.sty:182: LaTeX Error: No counter 'section' defined.
+./mylatexlib.sty:196: LaTeX Error: No counter 'section' defined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.182 \newtheorem{theorem}{Theorem}[section]
+l.196 \newtheorem{theorem}{Theorem}[section]
                                             
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -242,13 +410,13 @@ or  <return>  to continue without it.
 
 \c@definition=\count80
 
-./mylatexlib.sty:188: LaTeX Error: No counter 'section' defined.
+./mylatexlib.sty:202: LaTeX Error: No counter 'section' defined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.188 \newtheorem{definition}{Definition}[section]
+l.202 \newtheorem{definition}{Definition}[section]
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,

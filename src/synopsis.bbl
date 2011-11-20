@@ -1,15 +1,10 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{DFH{\etalchar{+}}06}
+\begin{thebibliography}{KKLV10}
 
 \bibitem[ABH98]{abh98}
 J.~E. Atkins, E.~G. Boman, and B.~Hendrickson.
 \newblock A spectral algorithm for seriation and the consecutive ones problem.
 \newblock {\em SICOMP: SIAM Journal on Computing}, 28, 1998.
-
-\bibitem[ADP80]{adp80}
-Giorgio Ausiello, Alessandro D'Atri, and Marco Protasi.
-\newblock Structure preserving reductions among convex optimization problems.
-\newblock {\em J. Comput. Syst. Sci}, 21(1):136--153, 1980.
 
 \bibitem[AS95]{as95}
 Annexstein and Swaminathan.
@@ -23,12 +18,6 @@ Kellogg~S. Booth and George~S. Lueker.
   planarity using {$PQ$}-tree algorithms.
 \newblock {\em Journal of Computer and System Sciences}, 13(3):335--379,
   December 1976.
-
-\bibitem[BLS99]{bls99}
-Andreas Brandst\"{a}dt, Van~Bang Le, and Jeremy~P. Spinrad.
-\newblock {\em Graph classes: a survey}.
-\newblock Society for Industrial and Applied Mathematics, Philadelphia, PA,
-  USA, 1999.
 
 \bibitem[Boo75]{b75-phd}
 Kellogg~S. Booth.
@@ -45,17 +34,6 @@ J.~R.~S. Blair and B.~Peyton.
 David~A. Bader and Sukanya Sreshta.
 \newblock A new parallel algorithm for planarity testing, April~11 2003.
 
-\bibitem[BTV09]{btv09}
-Chris Bourke, Raghunath Tewari, and N.~V. Vinodchandran.
-\newblock Directed planar reachability is in unambiguous log-space.
-\newblock {\em ACM Trans. Comput. Theory}, 1:4:1--4:17, February 2009.
-
-\bibitem[CKL96]{ckl96}
-R.~Chandrasekaran, S.~N. Kabadi, and S.~Lakshminarayanan.
-\newblock An extension of a theorem of {Fulkerson} and {Gross}.
-\newblock {\em Linear Algebra and its Applications}, 246(1--3):23--29, October
-  1996.
-
 \bibitem[COR98]{co98}
 Thomas Christof, Marcus Oswald, and Gerhard Reinelt.
 \newblock Consecutive ones and a betweenness problem in computational biology.
@@ -67,26 +45,6 @@ Lin Chen and Yaacov Yesha.
   applications.
 \newblock {\em J. Algorithms}, 12(3):375--392, 1991.
 
-\bibitem[DF99]{df99}
-R.~G. Downey and M.~R. Fellows.
-\newblock {\em Parameterized Complexity}.
-\newblock Springer, 1999.
-
-\bibitem[DFH{\etalchar{+}}06]{dfh06}
-Dujmovic, Fellows, Hallett, Kitching, Liotta, McCartin, Nishimura, Ragde,
-  Rosamond, Suderman, Whitesides, and Wood.
-\newblock A fixed-parameter approach to 2-layer planarization.
-\newblock {\em ALGRTHMICA: Algorithmica}, 45, 2006.
-
-\bibitem[DGN07]{dgn07}
-Michael Dom, Jiong Guo, and Rolf Niedermeier.
-\newblock Approximability and parameterized complexity of consecutive ones
-  submatrix problems.
-\newblock In {\em Theory and Applications of Models of Computation, 4th
-  International Conference, {TAMC} 2007, Shanghai, China, May 22-25, 2007,
-  Proceedings}, volume 4484 of {\em Lecture Notes in Computer Science}, pages
-  680--691. Springer, 2007.
-
 \bibitem[Dom08]{d08phd}
 Michael Dom.
 \newblock {\em Recognition, Generation, and Application of Binary Matrices with
@@ -94,28 +52,6 @@ Michael Dom.
 \newblock PhD thesis, In\-sti\-tut f{\"u}r In\-for\-ma\-tik,
   Fried\-rich-Schil\-ler-Uni\-ver\-si\-t{\"a}t Je\-na, Germany, 2008.
 \newblock Published by Cuvillier, 2009.
-
-\bibitem[Fei98]{f98}
-Uriel Feige.
-\newblock A threshold of ln n for approximating set cover.
-\newblock {\em J. ACM}, 45(4):634--652, 1998.
-
-\bibitem[Fer05a]{f05a}
-H.~Fernau.
-\newblock {\em Parameterized Algorithmics: {A} Graph-Theoretic Approach}.
-\newblock Habi\-li\-ta\-tions\-schrift, Universit{\"a}t T{\"u}bingen, Germany,
-  2005.
-
-\bibitem[Fer05b]{f05b}
-H.~Fernau.
-\newblock Two-layer planarization: improving on parameterized algorithmics.
-\newblock In {\em SOFSEM}, volume 3381 of {\em LNCS}, pages 137--146. Springer,
-  2005.
-
-\bibitem[Fer08]{f08}
-Henning Fernau.
-\newblock Parameterized algorithmics for linear arrangement problems.
-\newblock {\em Discrete Appl. Math.}, 156:3166--3177, October 2008.
 
 \bibitem[FG65]{fg65}
 D.~R. Fulkerson and O.~A. Gross.
@@ -166,18 +102,10 @@ Wen-Lian Hsu.
 \newblock A simple test for the consecutive ones property.
 \newblock {\em J. Algorithms}, 43(1):1--16, 2002.
 
-\bibitem[HT98]{th98}
-T.~C. Hu and P.~A. Tucker.
-\newblock Minimax programs, bitonic columns and {PQ} trees, November~29 1998.
-
 \bibitem[HT02]{ht02}
 Hochbaum and Tucker.
 \newblock Minimax problems with bitonic matrices.
 \newblock {\em NETWORKS: Networks: An International Journal}, 40, 2002.
-
-\bibitem[JJLM97]{jlm97}
-Michael J{\"u}nger, Michael Junger, Sebastian Leipert, and Petra Mutzel.
-\newblock Pitfalls of using {PQ}-trees in automatic graph drawing, 1997.
 
 \bibitem[JKC{\etalchar{+}}04]{jkckv04}
 Johnson, Krishnan, Chhugani, Kumar, and Venkatasubramanian.
@@ -185,21 +113,11 @@ Johnson, Krishnan, Chhugani, Kumar, and Venkatasubramanian.
 \newblock In {\em VLDB: International Conference on Very Large Data Bases}.
   Morgan Kaufmann Publishers, 2004.
 
-\bibitem[JLL76]{jll76}
-Neil~D. Jones, Y.~Edmund Lien, and William~T. Laaser.
-\newblock New problems complete for nondeterministic log space.
-\newblock {\em MST: Mathematical Systems Theory}, 10, 1976.
-
 \bibitem[KKLV10]{kklv10}
 Johannes K{\"o}bler, Sebastian Kuhnert, Bastian Laubner, and Oleg Verbitsky.
 \newblock Interval graphs: Canonical representation in logspace.
 \newblock {\em Electronic Colloquium on Computational Complexity (ECCC)},
   17:43, 2010.
-
-\bibitem[KM02]{km02}
-P.~S. Kumar and C.~E.~Veni Madhavan.
-\newblock Clique tree generalization and new subclasses of chordal graphs.
-\newblock {\em Discrete Applied Mathematics}, 117:109--131, 2002.
 
 \bibitem[Kou77]{k77}
 Lawrence~T. Kou.
@@ -211,11 +129,6 @@ Bastian Laubner.
 \newblock Capturing polynomial time on interval graphs.
 \newblock {\em CoRR}, abs/0911.3799, 2009.
 \newblock informal publication.
-
-\bibitem[Lau10]{lau10}
-Bastian Laubner.
-\newblock Capturing polynomial time on interval graphs.
-\newblock In {\em LICS}, pages 199--208. IEEE Computer Society, 2010.
 
 \bibitem[Lin92]{sl92}
 Steven Lindell.
@@ -246,17 +159,6 @@ N.~S. Narayanaswamy and R.~Subashini.
   property.
 \newblock {\em Discrete Applied Mathematics}, 157(18):3721--3727, 2009.
 
-\bibitem[PPY94]{apy92}
-Barry~W. Peyton, Alex Pothen, and Xiaoqing Yuan.
-\newblock A clique tree algorithm for partitioning a chordal graph into
-  transitive subgraphs.
-\newblock Technical report, Old Dominion University, Norfolk, VA, USA, 1994.
-
-\bibitem[Rei84]{rei84}
-John~H. Reif.
-\newblock Symmetric complementation.
-\newblock {\em JACM: Journal of the ACM}, 31(2):401--421, 1984.
-
 \bibitem[Rei08]{rei08}
 Omer Reingold.
 \newblock Undirected connectivity in log-space.
@@ -267,26 +169,10 @@ Peter~L. Renz.
 \newblock Intersection representations of graphs by arcs.
 \newblock {\em Pacific J. Math.}, 34(2):501--510, 1970.
 
-\bibitem[Rob51]{wsr51}
-W.~S. Robinson.
-\newblock A method for chronologically ordering archaeological deposits.
-\newblock {\em American Antiquity}, 16(4):293--301, 1951.
-
 \bibitem[Sch93]{aas93}
 Alejandro~A. Schaffer.
 \newblock A faster algorithm to recognize undirected path graphs.
 \newblock {\em Discrete Applied Mathematics}, 43:261--295, 1993.
-
-\bibitem[SW05]{sw05}
-M.~Suderman and S.~Whitesides.
-\newblock Experiments with the fixed-parameter approach for two-layer
-  planarization.
-\newblock {\em jgaa}, 9(1):149--163, 2005.
-
-\bibitem[TBD62]{bl62}
-UNKNOWN TBD.
-\newblock Unknown - tbd - showed interval graph is chordal + at-free.
-\newblock {\em TBD}, 1962.
 
 \bibitem[TM05]{tm05}
 Guilherme~P. Telles and Jo{\~a}o Meidanis.
@@ -298,26 +184,9 @@ Alan Tucker.
 \newblock A structure theorem for the consecutive 1's property.
 \newblock {\em J. Comb.~Theory Series B}, 12:153--162, 1972.
 
-\bibitem[TZ04]{tz04}
-Jinsong Tan and Louxin Zhang.
-\newblock Approximation algorithms for the consecutive ones submatrix problem
-  on sparse matrices.
-\newblock In {\em ---}, volume 3341 of {\em Lecture Notes in Computer Science},
-  pages 835--846, 2004.
-
-\bibitem[TZ07]{tz07}
-J.~Tan and L.~Zhang.
-\newblock The consecutive ones submatrix problem for sparse matrices.
-\newblock {\em Algorithmica}, 48(3):287--299, 2007.
-
 \bibitem[Vel85]{v85}
 Marinus Veldhorst.
 \newblock Approximation of the consecutive ones matrix augmentation problem.
 \newblock {\em SIAM Journal on Computing}, 14(3):709--729, August 1985.
-
-\bibitem[YC95]{yc95}
-Yu and Chen.
-\newblock Efficient parallel algorithms for doubly convex-bipartite graphs.
-\newblock {\em TCS: Theoretical Computer Science}, 147:249--265, 1995.
 
 \end{thebibliography}

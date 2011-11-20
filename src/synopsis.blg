@@ -2,44 +2,44 @@ This is BibTeX, Version 0.99c (Web2C 7.5.6)
 The top-level auxiliary file: synopsis.aux
 The style file: alpha.bst
 Database file #1: ../lib/cop-variants__thesis.bib
-You've used 58 entries,
+You've used 34 entries,
             2543 wiz_defined-function locations,
-            896 strings with 12031 characters,
-and the built_in function-call counts, 22259 in all, are:
-= -- 2268
-> -- 1000
-< -- 33
-+ -- 346
-- -- 326
-* -- 1575
-:= -- 3679
-add.period$ -- 179
-call.type$ -- 58
-change.case$ -- 348
-chr.to.int$ -- 57
-cite$ -- 58
-duplicate$ -- 890
-empty$ -- 1617
-format.name$ -- 405
-if$ -- 4507
-int.to.chr$ -- 2
+            763 strings with 8923 characters,
+and the built_in function-call counts, 12370 in all, are:
+= -- 1260
+> -- 527
+< -- 18
++ -- 179
+- -- 166
+* -- 848
+:= -- 2069
+add.period$ -- 106
+call.type$ -- 34
+change.case$ -- 194
+chr.to.int$ -- 34
+cite$ -- 34
+duplicate$ -- 509
+empty$ -- 916
+format.name$ -- 214
+if$ -- 2496
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 54
-newline$ -- 294
-num.names$ -- 174
-pop$ -- 287
+missing$ -- 32
+newline$ -- 176
+num.names$ -- 102
+pop$ -- 153
 preamble$ -- 1
-purify$ -- 410
+purify$ -- 231
 quote$ -- 0
-skip$ -- 759
+skip$ -- 428
 stack$ -- 0
-substring$ -- 1259
-swap$ -- 127
-text.length$ -- 33
-text.prefix$ -- 23
+substring$ -- 679
+swap$ -- 58
+text.length$ -- 18
+text.prefix$ -- 15
 top$ -- 0
-type$ -- 448
+type$ -- 264
 warning$ -- 0
-while$ -- 220
-width$ -- 64
-write$ -- 758
+while$ -- 122
+width$ -- 39
+write$ -- 447
