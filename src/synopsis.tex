@@ -42,15 +42,53 @@ section directly}
 \section{Illustration of the problem}
 \label{sec:problem}
 
-\def \LLL {{\em ``{\bf L}aughing with Kafka''}} %{Consider the {\bf
-                                %L}obster} 
-\def \GGG {{\em ``{\bf G}irl with Curious Hair''}} % {``{\bf G}od Bless You,
-                                % Mr. Franzen''} 
-\def \BBB {{\em ``{\bf B}rief Interviews with Hideous Men''}} %{{\bf B}room
-                                %of the System} 
-\def \TTT {{\em ``{\bf T}his is Water''}} %{``{\bf T}ennis, Trigonometry,
-                                %Tornadoes: A Midwestern  Boyhood''}
-                                %%{{\bf T}he Pale King} 
+% \def \LLL {{\em ``{\bf L}aughing with Kafka''}} 
+% \def \GGG {{\em ``{\bf G}irl with Curious Hair''}} 
+% \def \BBB {{\em ``{\bf B}rief Interviews with Hideous Men''}}
+% \def \TTT {{\em ``Everything and More: A Compact His{\bf T}ory of Infinity''}} 
+% \def \xLLL {{\bf L}}
+% \def \xGGG {{\bf G}} 
+% \def \xBBB {{\bf B}}
+% \def \xTTT {{\bf T}}
+
+%{\bf L}aughing {\bf G}irl {\bf B}rief {\bf T}his
+
+
+% \def \LLL {{\em ``{\bf L}aughing with Kafka''}} 
+% \def \GGG {{\em ``Brief {\bf I}nterviews with Hideous Men''}} 
+% \def \BBB {{\em ``Broom of the {\bf S}ystem''}}
+% \def \TTT {{\em ``Everything and More: {\bf A} Compact History of Infinity''}}
+
+% \def \xLLL {{\bf L}}
+% \def \xGGG {{\bf I}} 
+% \def \xBBB {{\bf S}}
+% \def \xTTT {{\bf A}}
+
+
+\def \LLL {{\em ``{\bf B}rief Interviews with Hideous Men''}} 
+\def \GGG {{\em ``The String {\bf T}heory''}} 
+\def \BBB {{\em ``[{\bf W}]Rhetoric and the Math Melodrama''}}
+\def \TTT {{\em ``{\bf F}ate, Time, and Language: An Essay on Free Will''}}
+
+
+\def \xLLL {{\bf B}}
+\def \xGGG {{\bf T}} 
+\def \xBBB {{\bf W}}
+\def \xTTT {{\bf F}}
+
+
+%{{\em ``Everything and More: A Compact History of In{\bf F}inity''}} 
+% {{\em ``Broom of {\bf T}he System''}} % {Consider the Lobster}
+% {{\em ``God Bless You, Mr. {\bf F}ranzen''}}
+% {{\em ``{\bf L}aughing with Kafka''}} 
+% {{\em ``{\bf G}irl with Curious Hair''}} 
+% {{\em ``Consider the {\bf L}obster|}}
+% {{\em ``{\bf G}od Bless You, Mr. Franzen''}}
+% {{\em ``{\bf T}ennis, Trigonometry,
+%                                Tornadoes: A Midwestern  Boyhood''}}
+% {{\em ``{\bf T}his is Water''}} %
+% {\em {{\bf T}he Pale King}}
+
 
 \def \Pa {{\em {\bf Pa}tricia}} 
 \def \Pi {{\em {\bf Pi}gpen}} %{{\em {\bf Ma}rcie}}
@@ -89,15 +127,11 @@ allocation to students. \tnote{use tables}
 \begin{enumerate}[]
 \item {$U = \{$Pa,$\; $Pi,$\; $Sn,$\; $Wo,$\; $Vi,$\; $Li,$\; $Ch,$\;
     $Sa,$\; $Fr,$\; $Sc,$\; $Lu$\}$}
-\item $\cF = \{L, G, B, T\}$
- % \item ${R = \{g, h, i, j, k\}}$
-  % \item ${B = \{a, b, e, g\}}$
-  % \item ${O = \{c, b, d\}}$
-  % \item ${G = \{e, f , g, i\}}$
-\item $L = \{$ Ch,$\; $ Sa,$\; $ Fr,$\; $ Sc,$\; $ Lu $\}$
-\item $G = \{$ Pa,$\; $ Pi,$\; $ Vi,$\; $ Ch $\}$
-\item $B = \{$ Su,$\; $ Pi,$\; $ Wo $\}$
-\item $T = \{$ Vi,$\; $ Li,$\; $ Ch,$\; $ Fr $\}$
+\item $\cF = \{\xLLL, \xGGG, \xBBB, \xTTT\}$
+\item $\xLLL = \{$ Ch,$\; $ Sa,$\; $ Fr,$\; $ Sc,$\; $ Lu $\}$
+\item $\xGGG = \{$ Pa,$\; $ Pi,$\; $ Vi,$\; $ Ch $\}$
+\item $\xBBB = \{$ Su,$\; $ Pi,$\; $ Wo $\}$
+\item $\xTTT = \{$ Vi,$\; $ Li,$\; $ Ch,$\; $ Fr $\}$
 \item $n = |U| = 11$, $m = |\cF| = 4$
 \end{enumerate}
 
@@ -142,12 +176,13 @@ algorithmically computed is the focus of this thesis.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.5]{../img/2_infinite_loop.png}
+%  \includegraphics[scale=0.5]{../img/2_infinite_loop.png}
+  \includegraphics[scale=0.5]{../img/2_infinite_loop_BTWF.png}
   \caption{{\residenceblock} street map with study group routes
     allocated. Routes are color coded as follows: red for
-    \textcolor{red}{\bf L} group, blue for \textcolor{blue}{\bf G}
-    group, orange for \textcolor{YellowOrange}{\bf B} group, green for
-    \textcolor{green}{\bf T} group}
+    \textcolor{red}{\xLLL} group, blue for \textcolor{blue}{\xGGG}
+    group, orange for \textcolor{YellowOrange}{\xBBB} group, green for
+    \textcolor{green}{\xTTT} group}
   \label{fig:streetmappath}
 \end{figure}
 
