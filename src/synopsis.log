@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  20 NOV 2011 16:08
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  20 NOV 2011 20:32
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -638,39 +638,39 @@ LaTeX Info: Redefining \pageref on input line 15.
 \@outlinefile=\write3
 \openout3 = `synopsis.out'.
 
- <iitm.pdf, id=51, 109.40875pt x 109.40875pt>
+ <iitm.pdf, id=59, 109.40875pt x 109.40875pt>
 File: iitm.pdf Graphic file (type pdf)
 
 <use iitm.pdf> [0
 
 {/usr/local/texlive/2007/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./iitm.
 pdf>] (./synopsis.toc
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 2.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 4.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 2.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 4.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+txsya on input line 2.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 4.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 2.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 4.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 2.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 4.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 2.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 4.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
@@ -678,28 +678,39 @@ File: utxsyc.fd 2000/12/15 v3.1
 \tf@toc=\write4
 \openout4 = `synopsis.toc'.
 
+ [1
+
+]
+(./synopsis.lot)
+\tf@lot=\write5
+\openout5 = `synopsis.lot'.
+
+ [2
+
+] (./synopsis.lof)
+\tf@lof=\write6
+\openout6 = `synopsis.lof'.
+
  [0
 
 ]
 CHAPTER 1.
-
-LaTeX Warning: The counter will not be printed.
-             The label is:  on input line 127.
-
 [1
 
-] <../img/1_infinite_loop.png, id=97, 695.59875pt x 445.665pt>
+pdfTeX warning (ext4): destination with the same identifier (name{table.1.1}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \endgroup \set@typeset@protect 
+l.216 
+      ] <../img/1_infinite_loop.png, id=130, 695.59875pt x 445.665pt>
 File: ../img/1_infinite_loop.png Graphic file (type png)
 
 <use ../img/1_infinite_loop.png>
-<../img/2_infinite_loop_BTWF.png, id=98, 823.075pt x 667.49374pt>
+<../img/2_infinite_loop_BTWF.png, id=131, 780.9175pt x 528.97626pt>
 File: ../img/2_infinite_loop_BTWF.png Graphic file (type png)
 
 <use ../img/2_infinite_loop_BTWF.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../img/3_infinite_loop.png, id=99, 823.075pt x 667.49374pt>
+<../img/3_infinite_loop.png, id=132, 823.075pt x 667.49374pt>
 File: ../img/3_infinite_loop.png Graphic file (type png)
 
 <use ../img/3_infinite_loop.png>
@@ -710,52 +721,53 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.225 
+l.285 
        <../img/1_infinite_loop.png>] [3pdfTeX warning (ext4): destination with 
 the same identifier (name{figure.1.2}) has been already used, duplicate ignored
 
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.225 
-       <../img/2_infinite_loop_BTWF.png>] [4pdfTeX warning (ext4): destination 
-with the same identifier (name{figure.1.3}) has been already used, duplicate ig
-nored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.256 
-       <../img/3_infinite_loop.png>]
-<../img/0_cop_nocop.png, id=124, 954.56625pt x 200.75pt>
+l.288 T
+       he interval assignment problem to a set system is equivalent to the <../
+img/2_infinite_loop_BTWF.png>]
+<../img/0_cop_nocop.png, id=148, 954.56625pt x 200.75pt>
 File: ../img/0_cop_nocop.png Graphic file (type png)
 
-<use ../img/0_cop_nocop.png> [5pdfTeX warning (ext4): destination with the same
- identifier (name{figure.1.4}) has been already used, duplicate ignored
+<use ../img/0_cop_nocop.png> [4pdfTeX warning (ext4): destination with the same
+ identifier (name{figure.1.3}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.318 
+l.334 \end{figure}
+                   <../img/3_infinite_loop.png>] [5pdfTeX warning (ext4): desti
+nation with the same identifier (name{figure.1.4}) has been already used, dupli
+cate ignored
+<to be read again> 
+                   \endgroup \set@typeset@protect 
+l.378 
        <../img/0_cop_nocop.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 358--364
+Underfull \hbox (badness 10000) in paragraph at lines 418--424
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 411--421
+Underfull \hbox (badness 10000) in paragraph at lines 471--481
 
  []
 
 [7]
-LaTeX Font Info:    Try loading font information for OT1+pzc on input line 489.
+LaTeX Font Info:    Try loading font information for OT1+pzc on input line 549.
 
  (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1pzc.fd
 File: ot1pzc.fd 2001/06/04 font definitions for OT1/pzc.
 )
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <12> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 489.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 549.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <8> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 489.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 549.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <6> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 489.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 549.
 
  [8]
 [9]
@@ -763,24 +775,24 @@ CHAPTER 2.
 [10
 
 ]
-LaTeX Font Info:    Try loading font information for T1+txtt on input line 773.
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 833.
 
  (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 782.
+put line 842.
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 792.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 852.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 792--792
+Underfull \hbox (badness 10000) in paragraph at lines 852--852
 []\T1/txtt/m/n/10.95 Remove $\OML/txmi/m/it/10.95 S[]$\T1/txtt/m/n/10.95 , $\OM
 L/txmi/m/it/10.95 S[]$ \T1/txtt/m/n/10.95 and add the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 789--793
+Underfull \hbox (badness 10000) in paragraph at lines 849--853
 [] []$\OMS/txsy/m/n/12 F[]   \OT1/txr/m/n/12 (\OMS/txsy/m/n/12 F[] n f\OML/txmi
 /m/it/12 S[]; S[]\OMS/txsy/m/n/12 g\OT1/txr/m/n/12 ) \OMS/txsy/m/n/12 [ f\OML/t
 xmi/m/it/12 S[] \OMS/txsy/m/n/12 \ \OML/txmi/m/it/12 S[]; S[] \OMS/txsy/m/n/12 
@@ -789,12 +801,12 @@ m/n/12 g$ []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 799--799
+Underfull \hbox (badness 10000) in paragraph at lines 859--859
 []\T1/txtt/m/n/10.95 Carry forward the path labeling
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 799--799
+Underfull \hbox (badness 10000) in paragraph at lines 859--859
 \T1/txtt/m/n/10.95 for all existing sets other than
  []
 
@@ -802,100 +814,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 799--799
 ) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.852   \begin{enumerate}
+l.912   \begin{enumerate}
                          [I {\ }] %\vspace{\topshrink}pdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@rem.1}) has been already used, dup
 licate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.852   \begin{enumerate}
+l.912   \begin{enumerate}
                          [I {\ }] %\vspace{\topshrink}pdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@rem.1}) has been already used, dup
 licate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.852   \begin{enumerate}
+l.912   \begin{enumerate}
                          [I {\ }] %\vspace{\topshrink}pdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@rem.1}) has been already used, dup
 licate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.852   \begin{enumerate}
+l.912   \begin{enumerate}
                          [I {\ }] %\vspace{\topshrink}pdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@rem.1}) has been already used, dup
 licate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.852   \begin{enumerate}
+l.912   \begin{enumerate}
                          [I {\ }] %\vspace{\topshrink}pdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@rem.1}) has been already used, dup
 licate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.852   \begin{enumerate}
+l.912   \begin{enumerate}
                          [I {\ }] %\vspace{\topshrink}pdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@rem.1}) has been already used, dup
 licate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.852   \begin{enumerate}
+l.912   \begin{enumerate}
                          [I {\ }] %\vspace{\topshrink}pdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@rem.1}) has been already used, dup
 licate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.852   \begin{enumerate}
+l.912   \begin{enumerate}
                          [I {\ }] %\vspace{\topshrink}pdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@rem.1}) has been already used, dup
 licate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.852   \begin{enumerate}
+l.912   \begin{enumerate}
                          [I {\ }] %\vspace{\topshrink}pdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@rem.1}) has been already used, dup
 licate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.852   \begin{enumerate}
+l.912   \begin{enumerate}
                          [I {\ }] %\vspace{\topshrink}pdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@rem.1}) has been already used, dup
 licate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.852   \begin{enumerate}
+l.912   \begin{enumerate}
                          [I {\ }] %\vspace{\topshrink}pdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@rem.1}) has been already used, dup
 licate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.852   \begin{enumerate}
+l.912   \begin{enumerate}
                          [I {\ }] %\vspace{\topshrink}pdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@rem.1}) has been already used, dup
 licate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.852   \begin{enumerate}
+l.912   \begin{enumerate}
                          [I {\ }] %\vspace{\topshrink}pdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@rem.1}) has been already used, dup
 licate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.852   \begin{enumerate}
+l.912   \begin{enumerate}
                          [I {\ }] %\vspace{\topshrink}]pdfTeX warning (ext4): d
 estination with the same identifier (name{ALC@rem.1}) has been already used, du
 plicate ignored
 <to be read again> 
                    \relax 
-l.1070     \STATE
+l.1130     \STATE
                   $\cF_0 \assign \cF$, $\cl_0(S) \assign \cl(S)$ for all $S ...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.1}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1070     \STATE
+l.1130     \STATE
                   $\cF_0 \assign \cF$, $\cl_0(S) \assign \cl(S)$ for all $S ...
 
-Underfull \hbox (badness 10000) in paragraph at lines 1072--1072
+Underfull \hbox (badness 10000) in paragraph at lines 1132--1132
 []\T1/txtt/m/n/10.95 Path images are such that no two
  []
 
@@ -903,181 +915,181 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1073     \STATE
+l.1133     \STATE
                   $j \assign 1$\\pdfTeX warning (ext4): destination with the sa
 me identifier (name{ALC@line.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1073     \STATE
+l.1133     \STATE
                   $j \assign 1$\\pdfTeX warning (ext4): destination with the sa
 me identifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1075 ...j-1}$ such that $v \in \cl_{j-1}(S_1)$ }
+l.1135 ...j-1}$ such that $v \in \cl_{j-1}(S_1)$ }
                                                   \label{uniqueleaf}pdfTeX warn
 ing (ext4): destination with the same identifier (name{ALC@line.3}) has been al
 ready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1075 ...j-1}$ such that $v \in \cl_{j-1}(S_1)$ }
+l.1135 ...j-1}$ such that $v \in \cl_{j-1}(S_1)$ }
                                                   \label{uniqueleaf}pdfTeX warn
 ing (ext4): destination with the same identifier (name{ALC@rem.1}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1076     \STATE
+l.1136     \STATE
                   $\cF_j \assign \cF_{j-1} \setminus \{S_1\}$\\pdfTeX warning (
 ext4): destination with the same identifier (name{ALC@line.4}) has been already
  used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1076     \STATE
+l.1136     \STATE
                   $\cF_j \assign \cF_{j-1} \setminus \{S_1\}$\\pdfTeX warning (
 ext4): destination with the same identifier (name{ALC@rem.1}) has been already 
 used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1077     \STATE
+l.1137     \STATE
                   for all $S \in \cF_{j-1}$ such that $S \ne S_1$ setpdfTeX war
 ning (ext4): destination with the same identifier (name{ALC@line.5}) has been a
 lready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1077     \STATE
+l.1137     \STATE
                   for all $S \in \cF_{j-1}$ such that $S \ne S_1$ setpdfTeX war
 ning (ext4): destination with the same identifier (name{ALC@rem.1}) has been al
 ready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1080     \STATE
+l.1140     \STATE
                   $X \assign S_1 \setminus \bigcup_{S \in \cF_{j-1}, S \ne S...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.6}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1080     \STATE
+l.1140     \STATE
                   $X \assign S_1 \setminus \bigcup_{S \in \cF_{j-1}, S \ne S...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1081     \IF{$X$ is empty}
+l.1141     \IF{$X$ is empty}
                              \label{xempty} \STATE {\bf exit} \label{ln:exit...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.7}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1081     \IF{$X$ is empty}
+l.1141     \IF{$X$ is empty}
                              \label{xempty} \STATE {\bf exit} \label{ln:exit...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1081     \IF{$X$ is empty} \label{xempty} \STATE
+l.1141     \IF{$X$ is empty} \label{xempty} \STATE
                                                    {\bf exit} \label{ln:exit...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.8}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1081     \IF{$X$ is empty} \label{xempty} \STATE
+l.1141     \IF{$X$ is empty} \label{xempty} \STATE
                                                    {\bf exit} \label{ln:exit...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1081 ...STATE {\bf exit} \label{ln:exit2} \ENDIF
+l.1141 ...STATE {\bf exit} \label{ln:exit2} \ENDIF
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{ALC@line.9}) has been already used, duplic
 ate ignored
 <to be read again> 
                    \relax 
-l.1081 ...STATE {\bf exit} \label{ln:exit2} \ENDIF
+l.1141 ...STATE {\bf exit} \label{ln:exit2} \ENDIF
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{ALC@rem.1}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.1082     \STATE
+l.1142     \STATE
                   $x \assign $ arbitrary element from $X$\\pdfTeX warning (ext4
 ): destination with the same identifier (name{ALC@line.10}) has been already us
 ed, duplicate ignored
 <to be read again> 
                    \relax 
-l.1082     \STATE
+l.1142     \STATE
                   $x \assign $ arbitrary element from $X$\\pdfTeX warning (ext4
 ): destination with the same identifier (name{ALC@rem.1}) has been already used
 , duplicate ignored
 <to be read again> 
                    \relax 
-l.1083     \STATE
+l.1143     \STATE
                   $\cF_j \assign \cF_j \cup \{\{x\}, S_1 \setminus \{x\}\} $\\p
 dfTeX warning (ext4): destination with the same identifier (name{ALC@line.11}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1083     \STATE
+l.1143     \STATE
                   $\cF_j \assign \cF_j \cup \{\{x\}, S_1 \setminus \{x\}\} $\\p
 dfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1084     \STATE
+l.1144     \STATE
                   $\cl_j(\{x\}) \assign \{v\}$\\pdfTeX warning (ext4): destinat
 ion with the same identifier (name{ALC@line.12}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.1084     \STATE
+l.1144     \STATE
                   $\cl_j(\{x\}) \assign \{v\}$\\pdfTeX warning (ext4): destinat
 ion with the same identifier (name{ALC@rem.1}) has been already used, duplicate
  ignored
 <to be read again> 
                    \relax 
-l.1085     \STATE
+l.1145     \STATE
                   $\cl_j(S_1 \setminus \{x\}) \assign \cl_{j-1}(S_1) \setmin...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.13})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1085     \STATE
+l.1145     \STATE
                   $\cl_j(S_1 \setminus \{x\}) \assign \cl_{j-1}(S_1) \setmin...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1086     \STATE
+l.1146     \STATE
                   $j \assign j+1$\\pdfTeX warning (ext4): destination with the 
 same identifier (name{ALC@line.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1086     \STATE
+l.1146     \STATE
                   $j \assign j+1$\\pdfTeX warning (ext4): destination with the 
 same identifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1087     \ENDWHILE
+l.1147     \ENDWHILE
                     pdfTeX warning (ext4): destination with the same identifier
  (name{ALC@line.15}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1087     \ENDWHILE
+l.1147     \ENDWHILE
                     pdfTeX warning (ext4): destination with the same identifier
  (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1088     \STATE
+l.1148     \STATE
                   $\cF' \assign \cF_j$, $\cl' \assign \cl_j$\\pdfTeX warning (e
 xt4): destination with the same identifier (name{ALC@rem.1}) has been already u
 sed, duplicate ignored
 <to be read again> 
                    \relax 
-l.1089     \RETURN
+l.1149     \RETURN
                    $(\cF', \cl')$
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (1.067pt too wide) in paragraph at lines 1159--1166
+Overfull \hbox (1.067pt too wide) in paragraph at lines 1219--1226
 \T1/txr/m/n/12 Al-go-rithm []2[] \T1/txtt/m/n/12 filter_2 \T1/txr/m/n/12 which 
 when ex-e-cuted se-ri-ally re-spec-tively re-sult in a new ICPPL
  []
@@ -1086,115 +1098,115 @@ when ex-e-cuted se-ri-ally re-spec-tively re-sult in a new ICPPL
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1188     \IF{$T$ is empty}
+l.1248     \IF{$T$ is empty}
                             pdfTeX warning (ext4): destination with the same id
 entifier (name{ALC@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1188     \IF{$T$ is empty}
+l.1248     \IF{$T$ is empty}
                             pdfTeX warning (ext4): destination with the same id
 entifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1189     \RETURN
+l.1249     \RETURN
                    $\emptyset$\\pdfTeX warning (ext4): destination with the sam
 e identifier (name{ALC@line.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1189     \RETURN
+l.1249     \RETURN
                    $\emptyset$\\pdfTeX warning (ext4): destination with the sam
 e identifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1190     \ENDIF
+l.1250     \ENDIF
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{ALC@line.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1190     \ENDIF
+l.1250     \ENDIF
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1191     \STATE
+l.1251     \STATE
                   $L \assign \{v \mid v \text{ is a leaf in }      T\}$\\pdfTeX
  warning (ext4): destination with the same identifier (name{ALC@line.4}) has be
 en already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1191     \STATE
+l.1251     \STATE
                   $L \assign \{v \mid v \text{ is a leaf in }      T\}$\\pdfTeX
  warning (ext4): destination with the same identifier (name{ALC@rem.1}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1192     \STATE
+l.1252     \STATE
                   $(\cF_1, \cl_1) \assign$ {\tt filter\_1($\cF, \cl,pdfTeX warn
 ing (ext4): destination with the same identifier (name{ALC@line.5}) has been al
 ready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1192     \STATE
+l.1252     \STATE
                   $(\cF_1, \cl_1) \assign$ {\tt filter\_1($\cF, \cl,pdfTeX warn
 ing (ext4): destination with the same identifier (name{ALC@rem.1}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1194     \STATE
+l.1254     \STATE
                   $(\cF_2, \cl_2) \assign$ {\tt filter\_2($\cF_1,pdfTeX warning
  (ext4): destination with the same identifier (name{ALC@line.6}) has been alrea
 dy used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1194     \STATE
+l.1254     \STATE
                   $(\cF_2, \cl_2) \assign$ {\tt filter\_2($\cF_1,pdfTeX warning
  (ext4): destination with the same identifier (name{ALC@rem.1}) has been alread
 y used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1197     \STATE
+l.1257     \STATE
                   $(\cF', \cl') \assign (\cF_2, \cl_2)$\\pdfTeX warning (ext4):
  destination with the same identifier (name{ALC@line.7}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.1197     \STATE
+l.1257     \STATE
                   $(\cF', \cl') \assign (\cF_2, \cl_2)$\\pdfTeX warning (ext4):
  destination with the same identifier (name{ALC@rem.1}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1198     \STATE
+l.1258     \STATE
                   $\phi' \leftarrow \emptyset$pdfTeX warning (ext4): destinatio
 n with the same identifier (name{ALC@line.8}) has been already used, duplicate 
 ignored
 <to be read again> 
                    \relax 
-l.1198     \STATE
+l.1258     \STATE
                   $\phi' \leftarrow \emptyset$pdfTeX warning (ext4): destinatio
 n with the same identifier (name{ALC@rem.1}) has been already used, duplicate i
 gnored
 <to be read again> 
                    \relax 
-l.1200     \FOR {every $v \in L$}
+l.1260     \FOR {every $v \in L$}
                                  pdfTeX warning (ext4): destination with the sa
 me identifier (name{ALC@line.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1200     \FOR {every $v \in L$}
+l.1260     \FOR {every $v \in L$}
                                  pdfTeX warning (ext4): destination with the sa
 me identifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1201     \STATE
+l.1261     \STATE
                   $\phi'(x) \assign v$ where $x \in \cl_2^{-1}(\{v\})$pdfTeX wa
 rning (ext4): destination with the same identifier (name{ALC@line.10}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1201     \STATE
+l.1261     \STATE
                   $\phi'(x) \assign v$ where $x \in \cl_2^{-1}(\{v\})$
-Underfull \hbox (badness 10000) in paragraph at lines 1204--1204
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1264
 []\T1/txtt/m/n/10.95 Copy the leaf labels to a one to
  []
 
@@ -1202,70 +1214,70 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1205     \STATE
+l.1265     \STATE
                   Remove $\{x\}$ and $\{v\}$ from $\cF'$, $\cl'$  appropriat...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.11})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1205     \STATE
+l.1265     \STATE
                   Remove $\{x\}$ and $\{v\}$ from $\cF'$, $\cl'$  appropriat...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1206     \ENDFOR
+l.1266     \ENDFOR
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@line.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1206     \ENDFOR
+l.1266     \ENDFOR
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1208     \STATE
+l.1268     \STATE
                   $T' \assign T \setminus L$pdfTeX warning (ext4): destination 
 with the same identifier (name{ALC@line.13}) has been already used, duplicate i
 gnored
 <to be read again> 
                    \relax 
-l.1208     \STATE
+l.1268     \STATE
                   $T' \assign T \setminus L$pdfTeX warning (ext4): destination 
 with the same identifier (name{ALC@rem.1}) has been already used, duplicate ign
 ored
 <to be read again> 
                    \relax 
-l.1210     \STATE
+l.1270     \STATE
                   $\phi'' \assign$ {\ttpdfTeX warning (ext4): destination with 
 the same identifier (name{ALC@line.14}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.1210     \STATE
+l.1270     \STATE
                   $\phi'' \assign$ {\ttpdfTeX warning (ext4): destination with 
 the same identifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1212     \STATE
+l.1272     \STATE
                   $\phi \assign \phi'' \cup \phi'$ \\pdfTeX warning (ext4): des
 tination with the same identifier (name{ALC@line.15}) has been already used, du
 plicate ignored
 <to be read again> 
                    \relax 
-l.1212     \STATE
+l.1272     \STATE
                   $\phi \assign \phi'' \cup \phi'$ \\pdfTeX warning (ext4): des
 tination with the same identifier (name{ALC@rem.1}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.1213     \RETURN
+l.1273     \RETURN
                    $\phi$
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [13]
-Overfull \hbox (66.42072pt too wide) in paragraph at lines 1219--1225
+Overfull \hbox (66.42072pt too wide) in paragraph at lines 1279--1285
 []\T1/txr/m/it/12 If $\OT1/txr/m/n/12 (\OMS/txsy/m/n/12 F\OML/txmi/m/it/12 ; \O
 T1/pzc/mb/it/12 l\OT1/txr/m/n/12 )$ \T1/txr/m/it/12 is an ICPPL from a tree $\O
 ML/txmi/m/it/12 T$ \T1/txr/m/it/12 and Al-go-rithm []3[], \T1/txtt/m/n/12 get-h
@@ -1273,28 +1285,28 @@ ypergraph-isomorphism
  []
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <17.28> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 1284
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 1344
 .
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <10> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 1284
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 1344
 .
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 1284.
+(hyperref)                removing `math shift' on input line 1344.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 1284.
+(hyperref)                removing `math shift' on input line 1344.
 
 [14pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.1
 6}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.1327 
+l.1387 
        ] [15] [16] [17]
 CHAPTER 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1652--1661
+Underfull \hbox (badness 10000) in paragraph at lines 1712--1721
 
  []
 
@@ -1311,30 +1323,31 @@ LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <5> not available
 
 ] (./synopsis.aux) ) 
 Here is how much of TeX's memory you used:
- 7096 strings out of 94073
- 98166 string characters out of 1162984
- 152823 words of memory out of 1500000
- 10005 multiletter control sequences out of 10000+50000
+ 7123 strings out of 94073
+ 98402 string characters out of 1162984
+ 152900 words of memory out of 1500000
+ 10028 multiletter control sequences out of 10000+50000
  88890 words of font info for 171 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 42i,12n,41p,458b,701s stack positions out of 5000i,500n,6000p,200000b,5000s
+ 42i,12n,41p,482b,701s stack positions out of 5000i,500n,6000p,200000b,5000s
 {/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/base/8r
-.enc}</usr/local/texlive/2007/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></
-usr/local/texlive/2007/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/lo
-cal/texlive/2007/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/tex
-live/2007/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/local/texlive/2
-007/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2007/te
-xmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2007/texmf-dis
-t/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2007/texmf-dist/fonts
-/type1/public/txfonts/txsya.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1
-/public/txfonts/txsyb.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/publi
-c/txfonts/txsyc.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/times/u
-tmb8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-</usr/local/texlive/2007/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/loc
-al/texlive/2007/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on synopsis.pdf (25 pages, 491314 bytes).
+.enc}</usr/local/texlive/2007/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></
+usr/local/texlive/2007/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/loc
+al/texlive/2007/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/tex
+live/2007/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/20
+07/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/local/texlive/2007/tex
+mf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2007/texmf-dis
+t/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2007/texmf-dist/fonts
+/type1/public/txfonts/txsy.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/
+public/txfonts/txsya.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/public
+/txfonts/txsyb.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/public/txfon
+ts/txsyc.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/times/utmb8a.p
+fb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/l
+ocal/texlive/2007/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/local/texl
+ive/2007/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on synopsis.pdf (27 pages, 498212 bytes).
 PDF statistics:
- 510 PDF objects out of 1000 (max. 8388607)
- 168 named destinations out of 1000 (max. 131072)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 539 PDF objects out of 1000 (max. 8388607)
+ 166 named destinations out of 1000 (max. 131072)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 

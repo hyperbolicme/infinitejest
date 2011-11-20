@@ -9,7 +9,7 @@
 \author{\myname} 
 \date{\MakeUppercase
   {\mysubmissionmonth}} 
-\department{\MakeUppercase {\mydept}}
+\department{\MakeUppercase{\mydept}}
 
 
 \begin{document}
@@ -20,10 +20,10 @@
 \begin{singlespace}
 \tableofcontents
 \thispagestyle{empty}
-% \listoftables
-% \addcontentsline{toc}{chapter}{LIST OF TABLES}
-% \listoffigures
-% \addcontentsline{toc}{chapter}{LIST OF FIGURES}
+\listoftables
+\addcontentsline{toc}{chapter}{LIST OF TABLES}
+\listoffigures
+\addcontentsline{toc}{chapter}{LIST OF FIGURES}
 \end{singlespace}
 
 % The main text will follow from this point so set the page numbering
@@ -65,16 +65,24 @@ section directly}
 % \def \xTTT {{\bf A}}
 
 
-\def \LLL {{\em ``{\bf B}rief Interviews with Hideous Men''}} 
-\def \GGG {{\em ``The String {\bf T}heory''}} 
-\def \BBB {{\em ``[{\bf W}]Rhetoric and the Math Melodrama''}}
-\def \TTT {{\em ``{\bf F}ate, Time, and Language: An Essay on Free Will''}}
+% \def \LLL {{\em ``{\bf B}rief Interviews with Hideous Men''}} 
+% \def \GGG {{\em ``The String {\bf T}heory''}} 
+% \def \BBB {{\em ``[{\bf W}]Rhetoric and the Math Melodrama''}}
+% \def \TTT {{\em ``{\bf F}ate, Time, and Language: An Essay on Free Will''}}
+\def \LLL {{\em ``$\mathbb{B}$rief Interviews with Hideous Men''}}
+\def \GGG {{\em ``The String $\mathbb{T}$heory''}} 
+\def \BBB {{\em ``[$\mathbb{W}$]Rhetoric and the Math Melodrama''}}
+\def \TTT {{\em ``$\mathbb{F}$ate, Time, and Language: An Essay on Free Will''}}
 
 
-\def \xLLL {{\bf B}}
-\def \xGGG {{\bf T}} 
-\def \xBBB {{\bf W}}
-\def \xTTT {{\bf F}}
+% \def \xLLL {{\bf B}}
+% \def \xGGG {{\bf T}} 
+% \def \xBBB {{\bf W}}
+% \def \xTTT {{\bf F}}
+\def \xLLL {\mathbb{B}}
+\def \xGGG {\mathbb{T}} 
+\def \xBBB {\mathbb{W}}
+\def \xTTT {\mathbb{F}}
 
 
 %{{\em ``Everything and More: A Compact History of In{\bf F}inity''}} 
@@ -102,9 +110,25 @@ section directly}
 \def \Sc {{\em {\bf Sc}hr{\"o}eder}} 
 \def \Lu {{\em {\bf Lu}cy}}
 
+\def \xPa {{\bf Pa}} 
+\def \xPi {{\bf Pi}} 
+\def \xSn {{\bf Sn}}
+\def \xWo {{\bf Wo}}
+\def \xVi {{\bf Vi}} 
+\def \xLi {{\bf Li}} 
+\def \xCh {{\bf Ch}}
+\def \xSa {{\bf Sa}}
+\def \xFr {{\bf Fr}}
+\def \xSc {{\bf Sc}} 
+\def \xLu {{\bf Lu}}
+
 \def \residenceblock {{\em Infinite Loop}}
 
 \def \WSI {{\em Wallace Studies Institute}}
+
+\def \coneohone {{\em ``Influence of post modernism in Wallace's work''}}
+\def \coneohtwo {{\em ``A study on fragmented prose method''}}
+
 
 A group of students, \Pa, \Pi, \Sn, \Wo, \Vi, \Li, \Ch, \Sa, \Fr,
   \Sc\ and \Lu\ enroll at the
@@ -124,16 +148,37 @@ number students and study groups respectively. In relation to this
 example, these are defined as follows. Also given below is the study group
 allocation to students. \tnote{use tables}
 \tnote{use other font for elements of sets}
-\begin{enumerate}[]
-\item {$U = \{$Pa,$\; $Pi,$\; $Sn,$\; $Wo,$\; $Vi,$\; $Li,$\; $Ch,$\;
-    $Sa,$\; $Fr,$\; $Sc,$\; $Lu$\}$}
-\item $\cF = \{\xLLL, \xGGG, \xBBB, \xTTT\}$
-\item $\xLLL = \{$ Ch,$\; $ Sa,$\; $ Fr,$\; $ Sc,$\; $ Lu $\}$
-\item $\xGGG = \{$ Pa,$\; $ Pi,$\; $ Vi,$\; $ Ch $\}$
-\item $\xBBB = \{$ Su,$\; $ Pi,$\; $ Wo $\}$
-\item $\xTTT = \{$ Vi,$\; $ Li,$\; $ Ch,$\; $ Fr $\}$
-\item $n = |U| = 11$, $m = |\cF| = 4$
-\end{enumerate}
+
+% \vspace{-3mm}
+% \begin{align*}
+% U &= \{\xPa,\; \xPi,\; \xSn,\; \xWo,\; \xVi,\; \xLi,\; \xCh,\;
+%     \xSa,\; \xFr,\; \xSc,\; \xLu\}\\
+% \cF &= \{\xLLL, \xGGG, \xBBB, \xTTT\}\\
+% \xLLL &= \{\xCh,\;  \xSa,\;  \xFr,\;  \xSc,\;  \xLu \}\\
+% \xGGG &= \{\xPa,\;  \xPi,\;  \xVi,\;  \xCh \}\\
+% \xBBB &= \{\xSn,\;  \xPi,\;  \xWo \}\\
+% \xTTT &= \{\xVi,\;  \xLi,\;  \xCh,\;  \xFr \}\\
+% n &= |U| = 11\\
+% m &= |\cF| = 4  
+% \end{align*}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{ll}
+    $U $&$= \{\xPa,\; \xPi,\; \xSn,\; \xWo,\; \xVi,\; \xLi,\; \xCh,\;
+    \xSa,\; \xFr,\; \xSc,\; \xLu\}$\\
+    $\cF $&$= \{\xLLL, \xGGG, \xBBB, \xTTT\}$\\
+    $\xLLL $&$= \{\xCh,\;  \xSa,\;  \xFr,\;  \xSc,\;  \xLu \}$\\
+    $\xGGG $&$= \{\xPa,\;  \xPi,\;  \xVi,\;  \xCh \}$\\
+    $\xBBB $&$= \{\xSn,\;  \xPi,\;  \xWo \}$\\
+    $\xTTT $&$= \{\xVi,\;  \xLi,\;  \xCh,\;  \xFr \}$\\
+    $n $&$= |U| = 11$\\
+    $m $&$= |\cF| = 4$      
+  \end{tabular}
+  \caption{Students and study groups in \WSI}
+  \label{tab:wsigroups}
+\end{table}
+
 
 % The administration faces a small challenge with their
 % accommodation. 
@@ -163,26 +208,26 @@ An intuitive approach to this problem would be to first find the paths
 that each study group decides to inhabit and then refine the
 allocation to individual students. A feasible allocation of exclusive
 routes to study groups is illustrated in Fig~\ref{fig:streetmappath}
-and the students' allocation of apartments that obey's this route
+and the students' allocation of apartments that obeys this route
 allocation is shown in Fig~\ref{fig:streetmappathpeople}. How this is
 algorithmically computed is the focus of this thesis.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.3]{../img/1_infinite_loop.png}
   \caption{{\residenceblock} street map}
   \label{fig:streetmap}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
   \centering
 %  \includegraphics[scale=0.5]{../img/2_infinite_loop.png}
   \includegraphics[scale=0.5]{../img/2_infinite_loop_BTWF.png}
   \caption{{\residenceblock} street map with study group routes
     allocated. Routes are color coded as follows: red for
-    \textcolor{red}{\xLLL} group, blue for \textcolor{blue}{\xGGG}
-    group, orange for \textcolor{YellowOrange}{\xBBB} group, green for
-    \textcolor{green}{\xTTT} group}
+    \textcolor{red}{$\xLLL$} group, blue for \textcolor{blue}{$\xGGG$}
+    group, orange for \textcolor{YellowOrange}{$\xBBB$} group, green for
+    \textcolor{green}{$\xTTT$} group}
   \label{fig:streetmappath}
 \end{figure}
 
@@ -195,33 +240,38 @@ algorithmically computed is the focus of this thesis.
 \end{figure}
 
 
-If all the apartments are on the same street or if they are all lined
-up on a single path, the street map becomes a tree that is just a
-path. Then the problem becomes what is called an {\em interval
-  assignment problem}. The idea of interval assignment may not be
-obvious here; hence to see this, consider a different problem in
-{\WSI} where the classes for these study groups courses need to be
-scheduled during a day (or a week or any time period). Each study
-group has a bunch of courses associated with it some of which may be
-shared by two or more study groups. It is mandatory that a student who
-is a member of a study group takes all the courses associated with
-that group. There are slots during the day for classes to be held and
-the problem is to allocate class slots to courses such that all the
-classes of a study group are consecutive. It is debatable if this will
-not hamper the attention span and memory retention rate of the students but
-that is, regrettably, out of the scope of this thesis. The parallels between this
-class allocation problem and the accommodation problem can be seen as
-follows. The set $U$ here, are the courses offered (say Course 101 ``Post
-modernism in Wallace's work'', Course 102 ``A study on fragmented prose
-method'' and so on). The collection $\cF$ is the set of study groups but the
-study groups are filled by course IDs and not students like in the
-earlier example. For instance, Course 101 is mandatory for all study
-groups {\bf L, G, B, T} and Course 102 is mandatory for only the {\bf B}
-group) and so on. The sequence of class slots for the day (or week or
-any time period) is analogous to the street map in the accommodation
-problem. It is quite obvious now why this version of the problem
-(where the ``target graph'' is a path and not any tree) is called an
-interval assignment problem. 
+As a special case, suppose all the apartments are on the same
+street or if they are all lined up on a single path, the street map
+becomes a tree that is just a path. Then the problem becomes what is
+called an {\em interval assignment problem}. The idea of interval
+assignment may not be obvious here; hence to see this, consider a
+different problem in {\WSI} where the classes for these study groups
+courses need to be scheduled during a day (or a week or any time
+period). Each study group has a bunch of courses associated with it
+some of which may be shared by two or more study groups. It is
+mandatory that a student who is a member of a study group takes all
+the courses associated with that group. There are slots during the day
+for classes to be held and the problem is to allocate class slots to
+courses such that all the classes of a study group are consecutive. It
+is debatable if this will not hamper the attention span and memory
+retention rate of the students but that is, regrettably, out of the
+scope of this thesis. The parallels between this class allocation
+problem and the accommodation problem can be seen as follows. The set
+$U$ here, are the courses offered (say Course 101 {\coneohone}, Course
+102 {\coneohtwo} and so on). In this variation of the problem, the
+collection $\cF$ is the set of study groups but the study groups are
+filled by course IDs (in place of students in the earlier
+example). For instance, Course 101 is mandatory for all study groups
+$\xLLL$, $\xGGG$, $\xBBB$, $\xTTT$ and Course 102 is mandatory for
+only the $\xLLL$ group) and so on. The sequence of class slots for the
+day (or week or any time period) is analogous to the street map in the
+accommodation problem. It is quite obvious now why this version of the
+problem (where the ``target graph'' is a path and not any
+tree\tnote{\footnote{Allowing any tree in this example could be seen
+    as a scenario where there are parallel classes. A node falling in
+    the path between two other nodes would mean that the corresponding
+    is scheduled between the other two.}}) is called an interval
+assignment problem.
 
 \tnote{TBD: BEGIN REVIEW FROM BELOW}
 
@@ -261,7 +311,7 @@ As descirbed earlier, a matrix with COP is one whose rows (columns)
 can be rearranged so that the 1s in every column (row) are in
 consecutive rows (columns).
 
-\begin{figure}[h]
+\begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.4]{../img/0_cop_nocop.png}
   
@@ -691,7 +741,7 @@ graphs.
 % leaf. It is clear that all rays are of length $k+2$. See
 % fig.~\ref{fig:kstar} for examples.
 
-% \begin{figure}[h] 
+% \begin{figure}[htbp] 
 %   \centering
 %   (i) \includegraphics{cop-tree_thesis.1} \ \ \ \ \ \  
 %   (ii)  \includegraphics{cop-tree_thesis.2}
