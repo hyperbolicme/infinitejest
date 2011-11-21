@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  21 NOV 2011 00:17
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  21 NOV 2011 10:46
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -640,7 +640,7 @@ LaTeX Info: Redefining \pageref on input line 15.
 \@outlinefile=\write3
 \openout3 = `synopsis.out'.
 
- <iitm.pdf, id=50, 109.40875pt x 109.40875pt>
+ <iitm.pdf, id=51, 109.40875pt x 109.40875pt>
 File: iitm.pdf Graphic file (type pdf)
 
 <use iitm.pdf>
@@ -685,15 +685,15 @@ as been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
 l.213 
-      ] <../img/1_infinite_loop.png, id=78, 695.59875pt x 445.665pt>
+      ] <../img/1_infinite_loop.png, id=79, 695.59875pt x 445.665pt>
 File: ../img/1_infinite_loop.png Graphic file (type png)
 
 <use ../img/1_infinite_loop.png>
-<../img/2_infinite_loop_BTWF.png, id=79, 780.9175pt x 528.97626pt>
+<../img/2_infinite_loop_BTWF.png, id=80, 780.9175pt x 528.97626pt>
 File: ../img/2_infinite_loop_BTWF.png Graphic file (type png)
 
 <use ../img/2_infinite_loop_BTWF.png>
-<../img/3_infinite_loop.png, id=80, 823.075pt x 667.49374pt>
+<../img/3_infinite_loop.png, id=81, 823.075pt x 667.49374pt>
 File: ../img/3_infinite_loop.png Graphic file (type png)
 
 <use ../img/3_infinite_loop.png>
@@ -734,16 +734,13 @@ Overfull \hbox (1.71637pt too wide) in paragraph at lines 296--296
 []\T1/txr/m/n/10 or[][]ga[][]ni[][]za[][]tion[] 
  []
 
-<../img/0_cop_nocop.png, id=98, 954.56625pt x 200.75pt>
-File: ../img/0_cop_nocop.png Graphic file (type png)
+[4]
+Package color Info: Redefining color UserColor on input line 389.
+Package color Info: Redefining color UserColor on input line 391.
+Package color Info: Redefining color UserColor on input line 393.
+Package color Info: Redefining color UserColor on input line 403.
 
-<use ../img/0_cop_nocop.png> [4]
-Package color Info: Redefining color UserColor on input line 356.
-Package color Info: Redefining color UserColor on input line 358.
-Package color Info: Redefining color UserColor on input line 360.
-Package color Info: Redefining color UserColor on input line 370.
-
-Overfull \hbox (4.17638pt too wide) in paragraph at lines 370--370
+Overfull \hbox (4.17638pt too wide) in paragraph at lines 403--403
 []\T1/txr/m/n/10 per[][]mu[][]ta[][]tions[] 
  []
 
@@ -757,23 +754,23 @@ LaTeX Warning: Marginpar on page 5 moved.
 has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.371 
-       <../img/0_cop_nocop.png (PNG copy)>]
-Package color Info: Redefining color UserColor on input line 383.
-Package color Info: Redefining color UserColor on input line 386.
-Package color Info: Redefining color UserColor on input line 389.
+l.404 
+      ]
+Package color Info: Redefining color UserColor on input line 416.
+Package color Info: Redefining color UserColor on input line 419.
+Package color Info: Redefining color UserColor on input line 422.
 
-Overfull \hbox (2.8544pt too wide) in paragraph at lines 389--389
+Overfull \hbox (2.8544pt too wide) in paragraph at lines 422--422
 []$[]$[]\T1/txr/m/it/10 TH[][]\T1/txr/m/n/10 :[]  []where[] 
  []
 
 
-Overfull \hbox (14.16638pt too wide) in paragraph at lines 389--389
+Overfull \hbox (14.16638pt too wide) in paragraph at lines 422--422
 []\T1/txr/m/n/10 Hellysthe[][]o[][]rem[]- 
  []
 
 
-Overfull \hbox (2.49638pt too wide) in paragraph at lines 389--389
+Overfull \hbox (2.49638pt too wide) in paragraph at lines 422--422
 []\T1/txr/m/n/10 Gru[][]en[][]baum[]- 
  []
 
@@ -783,9 +780,9 @@ LaTeX Warning: Marginpar on page 6 moved.
 
 LaTeX Warning: Marginpar on page 6 moved.
 
-Package color Info: Redefining color UserColor on input line 392.
+Package color Info: Redefining color UserColor on input line 425.
 
-Overfull \hbox (0.34322pt too wide) in paragraph at lines 391--393
+Overfull \hbox (0.34322pt too wide) in paragraph at lines 424--426
 []\T1/txr/m/n/12 The lit-er-a-ture also has re-sults on par-al-lel COT al-go-ri
 thms -- [[]] [[]] [[]][]$[]$ 
  []
@@ -793,33 +790,33 @@ thms -- [[]] [[]] [[]][]$[]$
 
 LaTeX Warning: Marginpar on page 6 moved.
 
-Package color Info: Redefining color UserColor on input line 406.
+Package color Info: Redefining color UserColor on input line 438.
 
 LaTeX Warning: Marginpar on page 6 moved.
 
-Package color Info: Redefining color UserColor on input line 415.
+Package color Info: Redefining color UserColor on input line 447.
 
-Overfull \hbox (1.7444pt too wide) in paragraph at lines 415--415
+Overfull \hbox (1.7444pt too wide) in paragraph at lines 447--447
 []$[]$[]\T1/txr/m/it/10 TH[][]\T1/txr/m/n/10 :[]  []check[] 
  []
 
-Package color Info: Redefining color UserColor on input line 430.
+Package color Info: Redefining color UserColor on input line 462.
 [6]
-Package color Info: Redefining color UserColor on input line 442.
-Package color Info: Redefining color UserColor on input line 449.
+Package color Info: Redefining color UserColor on input line 474.
+Package color Info: Redefining color UserColor on input line 481.
 
-Overfull \hbox (13.1744pt too wide) in paragraph at lines 449--449
+Overfull \hbox (13.1744pt too wide) in paragraph at lines 481--481
 []$[]$[]\T1/txr/m/it/10 TH[][]\T1/txr/m/n/10 :[] []elab[][]o[][]rate[] 
  []
 
 
 LaTeX Warning: Marginpar on page 7 moved.
 
-Package color Info: Redefining color UserColor on input line 459.
-Package color Info: Redefining color UserColor on input line 461.
-Package color Info: Redefining color UserColor on input line 462.
+Package color Info: Redefining color UserColor on input line 491.
+Package color Info: Redefining color UserColor on input line 493.
+Package color Info: Redefining color UserColor on input line 494.
 
-Overfull \hbox (0.95439pt too wide) in paragraph at lines 462--462
+Overfull \hbox (0.95439pt too wide) in paragraph at lines 494--494
 []$[]$[]\T1/txr/m/it/10 TH[][]\T1/txr/m/n/10 :[] []where[] 
  []
 
@@ -829,211 +826,208 @@ LaTeX Warning: Marginpar on page 7 moved.
 
 LaTeX Warning: Marginpar on page 7 moved.
 
-Package color Info: Redefining color UserColor on input line 470.
+Package color Info: Redefining color UserColor on input line 502.
 
-Overfull \hbox (36.16716pt too wide) in paragraph at lines 470--470
+Overfull \hbox (36.16716pt too wide) in paragraph at lines 502--502
 [][][]  
  []
 
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-Package color Info: Redefining color UserColor on input line 474.
 [7]
-Package color Info: Redefining color UserColor on input line 476.
+Package color Info: Redefining color UserColor on input line 506.
 
-Overfull \hbox (11.93639pt too wide) in paragraph at lines 476--476
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+Package color Info: Redefining color UserColor on input line 508.
+
+Overfull \hbox (11.93639pt too wide) in paragraph at lines 508--508
 []\T1/txr/m/n/10 (gen[][]er[][]al[][]iza[][]tion[] 
  []
 
 
 LaTeX Warning: Marginpar on page 8 moved.
 
-Package color Info: Redefining color UserColor on input line 500.
+Package color Info: Redefining color UserColor on input line 532.
 
-Overfull \hbox (4.19438pt too wide) in paragraph at lines 500--500
+Overfull \hbox (4.19438pt too wide) in paragraph at lines 532--532
 []$[]$ []\T1/txr/m/n/10 RE[][]WORD[]  
  []
 
-Package color Info: Redefining color UserColor on input line 518.
-Package color Info: Redefining color UserColor on input line 521.
-LaTeX Font Info:    Try loading font information for OT1+pzc on input line 521.
+Package color Info: Redefining color UserColor on input line 550.
+Package color Info: Redefining color UserColor on input line 553.
+LaTeX Font Info:    Try loading font information for OT1+pzc on input line 553.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1pzc.fd
 File: ot1pzc.fd 2001/06/04 font definitions for OT1/pzc.
 )
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <12> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 521.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 553.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <8> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 521.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 553.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <6> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 521.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 553.
 
-Package color Info: Redefining color UserColor on input line 524.
+Package color Info: Redefining color UserColor on input line 556.
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <10> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 524.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 556.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <7> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 524.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 556.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <5> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 524.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 556.
 
 
-Overfull \hbox (21.79439pt too wide) in paragraph at lines 524--524
+Overfull \hbox (21.79439pt too wide) in paragraph at lines 556--556
 []$[]$ []\T1/txr/m/n/10 ELAB[][]O[][]RATE.[]  
  []
 
-Package color Info: Redefining color UserColor on input line 526.
+Package color Info: Redefining color UserColor on input line 558.
 
-Overfull \hbox (4.19438pt too wide) in paragraph at lines 526--526
+Overfull \hbox (4.19438pt too wide) in paragraph at lines 558--558
 []$[]$ []\T1/txr/m/n/10 RE[][]WORD[]  
  []
 
+[8] [9]
+Package color Info: Redefining color UserColor on input line 602.
+Package color Info: Redefining color UserColor on input line 605.
 
-LaTeX Warning: Marginpar on page 8 moved.
-
-[8]
-Package color Info: Redefining color UserColor on input line 570.
-Package color Info: Redefining color UserColor on input line 573.
-
-Overfull \hbox (6.69438pt too wide) in paragraph at lines 573--573
+Overfull \hbox (6.69438pt too wide) in paragraph at lines 605--605
 []$[]$ []\T1/txr/m/n/10 RE[][]WORD.[]  
  []
 
-Package color Info: Redefining color UserColor on input line 578.
+Package color Info: Redefining color UserColor on input line 610.
 
-Overfull \hbox (6.69438pt too wide) in paragraph at lines 578--578
+Overfull \hbox (6.69438pt too wide) in paragraph at lines 610--610
 []$[]$ []\T1/txr/m/n/10 RE[][]WORD.[]  
  []
 
-[9]
-Package color Info: Redefining color UserColor on input line 734.
+Package color Info: Redefining color UserColor on input line 766.
 
-Overfull \hbox (42.07439pt too wide) in paragraph at lines 734--734
+Overfull \hbox (42.07439pt too wide) in paragraph at lines 766--766
 []$[]$[]\T1/txr/m/it/10 TH[][]\T1/txr/m/n/10 :[] []UN[][]COM[][]MENT[] 
  []
 
 
 LaTeX Warning: Reference `al:icppl-find-isomorph' on page 10 undefined on input
- line 798.
+ line 830.
 
 
 LaTeX Warning: Reference `al:icppl-find-isomorph' on page 10 undefined on input
- line 799.
+ line 831.
 
 
-LaTeX Warning: Reference `perms' on page 10 undefined on input line 821.
+LaTeX Warning: Reference `perms' on page 10 undefined on input line 853.
 
-LaTeX Font Info:    Try loading font information for T1+txtt on input line 821.
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 853.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
-Package color Info: Redefining color UserColor on input line 827.
+Package color Info: Redefining color UserColor on input line 859.
 
-Overfull \hbox (4.17638pt too wide) in paragraph at lines 827--827
+Overfull \hbox (4.17638pt too wide) in paragraph at lines 859--859
 []\T1/txr/m/n/10 sum[][]ma[][]riz[][]ing[] 
  []
 
 
-LaTeX Warning: Reference `perms' on page 10 undefined on input line 867.
-
-
-LaTeX Warning: Reference `perms' on page 10 undefined on input line 895.
+LaTeX Warning: Reference `perms' on page 10 undefined on input line 899.
 
 [10pdfTeX warning (ext4): destination with the same identifier (name{table.2}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.918 \end{lemma}
+l.902 \end{lemma}
                  ]
 
-LaTeX Warning: Reference `perms' on page 11 undefined on input line 998.
+LaTeX Warning: Reference `perms' on page 11 undefined on input line 927.
 
 
-LaTeX Warning: Reference `ln:exit1' on page 11 undefined on input line 1003.
+LaTeX Warning: Reference `perms' on page 11 undefined on input line 1030.
 
-Package color Info: Redefining color UserColor on input line 1005.
 
-Overfull \hbox (42.07439pt too wide) in paragraph at lines 1005--1005
+LaTeX Warning: Reference `ln:exit1' on page 11 undefined on input line 1035.
+
+Package color Info: Redefining color UserColor on input line 1037.
+
+Overfull \hbox (42.07439pt too wide) in paragraph at lines 1037--1037
 []$[]$[]\T1/txr/m/it/10 TH[][]\T1/txr/m/n/10 :[] []UN[][]COM[][]MENT[]  
  []
 
 
-LaTeX Warning: Reference `perms' on page 11 undefined on input line 1100.
+LaTeX Warning: Reference `perms' on page 11 undefined on input line 1132.
 
 
-LaTeX Warning: Reference `leafasgn' on page 11 undefined on input line 1102.
+LaTeX Warning: Reference `leafasgn' on page 11 undefined on input line 1134.
 
 
-LaTeX Warning: Reference `leafasgn' on page 11 undefined on input line 1117.
+LaTeX Warning: Reference `leafasgn' on page 11 undefined on input line 1149.
 
-Package color Info: Redefining color UserColor on input line 1119.
+Package color Info: Redefining color UserColor on input line 1151.
 
-Overfull \hbox (4.17638pt too wide) in paragraph at lines 1119--1119
+Overfull \hbox (4.17638pt too wide) in paragraph at lines 1151--1151
 []\T1/txr/m/n/10 sum[][]ma[][]riz[][]ing[] 
  []
 
 
-LaTeX Warning: Reference `leafasgn' on page 11 undefined on input line 1148.
+LaTeX Warning: Reference `leafasgn' on page 11 undefined on input line 1180.
 
 
-LaTeX Warning: Reference `leafasgn' on page 11 undefined on input line 1154.
+LaTeX Warning: Reference `leafasgn' on page 11 undefined on input line 1186.
 
 
-LaTeX Warning: Reference `ln:exit2' on page 11 undefined on input line 1156.
+LaTeX Warning: Reference `ln:exit2' on page 11 undefined on input line 1188.
 
 
-LaTeX Warning: Reference `leafasgn' on page 11 undefined on input line 1177.
+LaTeX Warning: Reference `leafasgn' on page 11 undefined on input line 1209.
 
 
-LaTeX Warning: Reference `perms' on page 11 undefined on input line 1214.
+LaTeX Warning: Reference `perms' on page 11 undefined on input line 1246.
 
 
-LaTeX Warning: Reference `leafasgn' on page 11 undefined on input line 1214.
+LaTeX Warning: Reference `leafasgn' on page 11 undefined on input line 1246.
 
 
 LaTeX Warning: Reference `al:icppl-find-isomorph' on page 11 undefined on input
- line 1219.
+ line 1251.
 
 [11]
 
 LaTeX Warning: Reference `al:icppl-find-isomorph' on page 12 undefined on input
- line 1221.
+ line 1253.
 
 
-LaTeX Warning: Reference `perms' on page 12 undefined on input line 1222.
+LaTeX Warning: Reference `perms' on page 12 undefined on input line 1254.
 
 
-LaTeX Warning: Reference `leafasgn' on page 12 undefined on input line 1223.
+LaTeX Warning: Reference `leafasgn' on page 12 undefined on input line 1255.
 
 
-LaTeX Warning: Reference `leafasgn' on page 12 undefined on input line 1224.
+LaTeX Warning: Reference `leafasgn' on page 12 undefined on input line 1256.
 
 
-LaTeX Warning: Reference `leafasgn' on page 12 undefined on input line 1227.
+LaTeX Warning: Reference `leafasgn' on page 12 undefined on input line 1259.
 
 
-Overfull \hbox (1.4119pt too wide) in paragraph at lines 1221--1236
+Overfull \hbox (1.4119pt too wide) in paragraph at lines 1253--1268
 []\T1/txr/m/n/12 Algorithm [] com-putes a hy-per-graph iso-mor-phism $\OML/txmi
 /m/it/12 ^^^$ \T1/txr/m/n/12 re-cur-sively us-ing Al-go-rithm []
  []
 
-Package color Info: Redefining color UserColor on input line 1237.
+Package color Info: Redefining color UserColor on input line 1269.
 
-Overfull \hbox (4.17638pt too wide) in paragraph at lines 1237--1237
+Overfull \hbox (4.17638pt too wide) in paragraph at lines 1269--1269
 []\T1/txr/m/n/10 sum[][]ma[][]riz[][]ing[] 
  []
 
 
 LaTeX Warning: Reference `al:icppl-find-isomorph' on page 12 undefined on input
- line 1275.
+ line 1307.
 
 
-Overfull \hbox (0.42084pt too wide) in paragraph at lines 1274--1280
+Overfull \hbox (0.42084pt too wide) in paragraph at lines 1306--1312
 []\T1/txr/m/it/12 If $\OT1/txr/m/n/12 (\OMS/txsy/m/n/12 F\OML/txmi/m/it/12 ; \O
 T1/pzc/mb/it/12 l\OT1/txr/m/n/12 )$ \T1/txr/m/it/12 is an ICPPL from a tree $\O
 ML/txmi/m/it/12 T$ \T1/txr/m/it/12 and Al-go-rithm [], \T1/txtt/m/n/12 get- hyp
@@ -1042,145 +1036,145 @@ ergraph-
 
 
 LaTeX Warning: Reference `al:icppl-find-isomorph' on page 12 undefined on input
- line 1299.
+ line 1331.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <14.4> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 1337
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 1369
 .
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 1337.
+(hyperref)                removing `math shift' on input line 1369.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 1337.
+(hyperref)                removing `math shift' on input line 1369.
 
 [12] [13] [14]
-Package color Info: Redefining color UserColor on input line 1500.
+Package color Info: Redefining color UserColor on input line 1532.
 
-Overfull \hbox (42.07439pt too wide) in paragraph at lines 1500--1500
+Overfull \hbox (42.07439pt too wide) in paragraph at lines 1532--1532
 []$[]$[]\T1/txr/m/it/10 TH[][]\T1/txr/m/n/10 :[] []UN[][]COM[][]MENT[]  
  []
 
-Package color Info: Redefining color UserColor on input line 1642.
+Package color Info: Redefining color UserColor on input line 1674.
 
-Overfull \hbox (16.94638pt too wide) in paragraph at lines 1642--1642
+Overfull \hbox (16.94638pt too wide) in paragraph at lines 1674--1674
 []\T1/txr/m/n/10 CON[][]NEC[][]TION[] 
  []
 
 
-Overfull \hbox (21.40637pt too wide) in paragraph at lines 1642--1642
+Overfull \hbox (21.40637pt too wide) in paragraph at lines 1674--1674
 []\T1/txr/m/n/10 ISO[][]MOR[][]PHISM[] 
  []
 
-Package color Info: Redefining color UserColor on input line 1650.
+Package color Info: Redefining color UserColor on input line 1682.
 
-Overfull \hbox (6.23637pt too wide) in paragraph at lines 1650--1650
+Overfull \hbox (6.23637pt too wide) in paragraph at lines 1682--1682
 []\T1/txr/m/n/10 lex[][]i[][]co[][]graphic[] 
  []
 
 
-Overfull \hbox (28.59639pt too wide) in paragraph at lines 1650--1650
+Overfull \hbox (28.59639pt too wide) in paragraph at lines 1682--1682
 []\T1/txr/m/n/10 [tag:chordalGraph][]  
  []
 
-Package color Info: Redefining color UserColor on input line 1657.
-Package color Info: Redefining color UserColor on input line 1659.
+Package color Info: Redefining color UserColor on input line 1689.
+Package color Info: Redefining color UserColor on input line 1691.
 
-Overfull \hbox (2.06439pt too wide) in paragraph at lines 1659--1659
+Overfull \hbox (2.06439pt too wide) in paragraph at lines 1691--1691
 []$[]$ []\T1/txr/m/n/10 ci[][]ta[][]tion?!![]  
  []
 
-Package color Info: Redefining color UserColor on input line 1661.
+Package color Info: Redefining color UserColor on input line 1693.
 
-Overfull \hbox (2.34439pt too wide) in paragraph at lines 1661--1661
+Overfull \hbox (2.34439pt too wide) in paragraph at lines 1693--1693
 []$[]$[]\T1/txr/m/it/10 TH[][]\T1/txr/m/n/10 :[] []check.[] 
  []
 
-Package color Info: Redefining color UserColor on input line 1667.
+Package color Info: Redefining color UserColor on input line 1699.
 [15]
-Package color Info: Redefining color UserColor on input line 1671.
+Package color Info: Redefining color UserColor on input line 1703.
 
-Overfull \hbox (4.18637pt too wide) in paragraph at lines 1671--1671
+Overfull \hbox (4.18637pt too wide) in paragraph at lines 1703--1703
 []\T1/txr/m/n/10 iso[][]mor[][]phism[] 
  []
 
 
-Overfull \hbox (7.51637pt too wide) in paragraph at lines 1671--1671
+Overfull \hbox (7.51637pt too wide) in paragraph at lines 1703--1703
 []\T1/txr/m/n/10 iso[][]mor[][]phism)[] 
  []
 
 
-Overfull \hbox (20.48636pt too wide) in paragraph at lines 1671--1671
+Overfull \hbox (20.48636pt too wide) in paragraph at lines 1703--1703
 []\T1/txr/m/n/10 move/summarize[] 
  []
 
 
 LaTeX Warning: Marginpar on page 16 moved.
 
-Package color Info: Redefining color UserColor on input line 1674.
+Package color Info: Redefining color UserColor on input line 1706.
 
-Overfull \hbox (7.23637pt too wide) in paragraph at lines 1674--1674
+Overfull \hbox (7.23637pt too wide) in paragraph at lines 1706--1706
 []\T1/txr/m/n/10 Iso[][]mor[][]phism.[] 
  []
 
 
 LaTeX Warning: Marginpar on page 16 moved.
 
-Package color Info: Redefining color UserColor on input line 1677.
+Package color Info: Redefining color UserColor on input line 1709.
 
 LaTeX Warning: Marginpar on page 16 moved.
 
-Package color Info: Redefining color UserColor on input line 1680.
+Package color Info: Redefining color UserColor on input line 1712.
 
-Overfull \hbox (6.82439pt too wide) in paragraph at lines 1680--1680
+Overfull \hbox (6.82439pt too wide) in paragraph at lines 1712--1712
 []$[]$[]\T1/txr/m/it/10 TH[][]\T1/txr/m/n/10 :[] []in[][]ter[][]val[] 
  []
 
 
-Overfull \hbox (15.28638pt too wide) in paragraph at lines 1680--1680
+Overfull \hbox (15.28638pt too wide) in paragraph at lines 1712--1712
 []\T1/txr/m/n/10 in[][]com[][]pa[][]ra[][]bil[][]ity[] 
  []
 
 
-Overfull \hbox (25.83638pt too wide) in paragraph at lines 1680--1680
+Overfull \hbox (25.83638pt too wide) in paragraph at lines 1712--1712
 []\T1/txr/m/n/10 [tag:classification][]  
  []
 
 
 LaTeX Warning: Marginpar on page 16 moved.
 
-Package color Info: Redefining color UserColor on input line 1683.
+Package color Info: Redefining color UserColor on input line 1715.
 
-Overfull \hbox (4.86438pt too wide) in paragraph at lines 1683--1683
+Overfull \hbox (4.86438pt too wide) in paragraph at lines 1715--1715
 []$[]$[]\T1/txr/m/it/10 TH[][]\T1/txr/m/n/10 :[] []find[][]ing[] 
  []
 
 
-Overfull \hbox (2.50638pt too wide) in paragraph at lines 1683--1683
+Overfull \hbox (2.50638pt too wide) in paragraph at lines 1715--1715
 []\T1/txr/m/n/10 cite:d08phd][]  
  []
 
 
 LaTeX Warning: Marginpar on page 16 moved.
 
-Package color Info: Redefining color UserColor on input line 1687.
+Package color Info: Redefining color UserColor on input line 1719.
 
-Overfull \hbox (9.29439pt too wide) in paragraph at lines 1687--1687
+Overfull \hbox (9.29439pt too wide) in paragraph at lines 1719--1719
 []$[]$[]\T1/txr/m/it/10 TH[][]\T1/txr/m/n/10 :[] []the[][]o[][]rem[] 
  []
 
 
 LaTeX Warning: Marginpar on page 16 moved.
 
-Package color Info: Redefining color UserColor on input line 1702.
+Package color Info: Redefining color UserColor on input line 1734.
 
 LaTeX Warning: Marginpar on page 16 moved.
 
-Package color Info: Redefining color UserColor on input line 1709.
-Package color Info: Redefining color UserColor on input line 1710.
+Package color Info: Redefining color UserColor on input line 1741.
+Package color Info: Redefining color UserColor on input line 1742.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1704--1713
+Underfull \hbox (badness 10000) in paragraph at lines 1736--1745
 
  []
 
@@ -1190,23 +1184,23 @@ LaTeX Warning: Marginpar on page 16 moved.
 
 LaTeX Warning: Marginpar on page 16 moved.
 
-Package color Info: Redefining color UserColor on input line 1715.
+Package color Info: Redefining color UserColor on input line 1747.
 
 LaTeX Warning: Marginpar on page 16 moved.
 
-Package color Info: Redefining color UserColor on input line 1730.
+Package color Info: Redefining color UserColor on input line 1762.
 
-Overfull \hbox (9.46439pt too wide) in paragraph at lines 1730--1730
+Overfull \hbox (9.46439pt too wide) in paragraph at lines 1762--1762
 []$[]$[]\T1/txr/m/it/10 TH[][]\T1/txr/m/n/10 :[] [][[[COP[] 
  []
 
 
-Overfull \hbox (6.94638pt too wide) in paragraph at lines 1730--1730
+Overfull \hbox (6.94638pt too wide) in paragraph at lines 1762--1762
 []\T1/txr/m/n/10 ap[][]prox[][]imable[] 
  []
 
 
-Overfull \hbox (15.27638pt too wide) in paragraph at lines 1730--1730
+Overfull \hbox (15.27638pt too wide) in paragraph at lines 1762--1762
 []\T1/txr/m/n/10 gen[][]er[][]al[][]iza[][]tions:[]  
  []
 
@@ -1222,13 +1216,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 6978 strings out of 94073
- 97200 string characters out of 1162984
- 162364 words of memory out of 1500000
- 9908 multiletter control sequences out of 10000+50000
+ 6975 strings out of 94073
+ 97103 string characters out of 1162984
+ 162326 words of memory out of 1500000
+ 9906 multiletter control sequences out of 10000+50000
  80607 words of font info for 151 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 42i,11n,41p,478b,562s stack positions out of 5000i,500n,6000p,200000b,5000s
+ 42i,15n,41p,478b,562s stack positions out of 5000i,500n,6000p,200000b,5000s
 {/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2007/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/local/texlive/
 2007/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/local/texlive/2007/te
@@ -1244,9 +1238,9 @@ ya.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb
 live/2007/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2007/
 texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/local/texlive/2007/texmf-dis
 t/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on synopsis.pdf (20 pages, 485966 bytes).
+Output written on synopsis.pdf (20 pages, 474704 bytes).
 PDF statistics:
- 451 PDF objects out of 1000 (max. 8388607)
+ 448 PDF objects out of 1000 (max. 8388607)
  157 named destinations out of 1000 (max. 131072)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

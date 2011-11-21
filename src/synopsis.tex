@@ -286,12 +286,12 @@ binary matrix in such a way that every column (row) has its $1$s occur
 consecutively. If this is possible the matrix is said to have the COP.
 Consecutive ones property (COP) of binary matrices is a well
 researched combinatorial problem and has several positive results on
-tests for it and computing the COP permutation (i.e. the class slot
-allocation to course IDs in the above illustration) which will be
-surveyed later in this document. Hence we are interested in extensions
-of COP, more specifically, the extension of interval assignment
-problem to tree path assignment problem (which is illustrated by the
-study group accommodation problem).
+tests for it and computing the COP permutation (i.e. the course
+schedule in the above illustration) which will be surveyed later in
+this document. Hence we are interested in extensions of COP, more
+specifically, the extension of interval assignment problem to tree
+path assignment problem (which is illustrated by the study group
+accommodation problem).
 
 \tnote{add a note on the organization of the doc}
 % The necessary preliminaries with definitions etc. are presented in
@@ -302,26 +302,83 @@ study group accommodation problem).
 % find the tree path labeling of a given set system from a given
 % $k$-subdivided tree.
 
-Section~\ref{sec:motivation} gives a brief survey of COP and relatives.
-Section~\ref{sec:results} presents a summary of our results on the
+Section~\ref{sec:motivation} gives a brief survey of COP and
+optimization problems related to it.  Section~\ref{sec:results}
+presents a summary of our results on the extention of COP namely, the
 tree path labeling problem.
 
 \section{Motivation and background}
 \label{sec:motivation}
 
-As described earlier, a matrix with COP is one whose rows (columns)
+%The course scheduling problem illustated earlier, as a special case of 
+
+It is quite obvious now why this version of the
+problem (where the ``target graph'' is a path and not any
+tree\tnote[TH]{Allowing any tree in this example could be seen as a
+  scenario where there are parallel classes. A node falling in the
+  path between two other nodes would mean that the corresponding is
+  scheduled between the other two.}) is called an interval assignment
+problem.
+
+The interval assignment problem to a set system is equivalent to the
+consecutive ones problem (COP) in binary matrices\cite{wlh02,
+  nsnrs09}.  The COP problem is to rearrange rows (columns) of a
+binary matrix in such a way that every column (row) has its $1$s occur
+consecutively. If this is possible the matrix is said to have the COP.
+Consecutive ones property (COP) of binary matrices is a well
+researched combinatorial problem and has several positive results on
+tests for it and computing the COP permutation (i.e. the course
+schedule in the above illustration) which will be surveyed later in
+this document. Hence we are interested in extensions of COP, more
+specifically, the extension of interval assignment problem to tree
+path assignment problem (which is illustrated by the study group
+accommodation problem).
+
+
+As described earlier, 
+a matrix with COP is one whose rows (columns)
 can be rearranged so that the 1s in every column (row) are in
 consecutive rows (columns).
 
+
+
+\def \un {\bf 1}
 \begin{figure}[htbp]
   \centering
-  \includegraphics[scale=0.4]{../img/0_cop_nocop.png}
-  
-  \caption{{\em Example for the COP:} The matrix on the left has the
-    COP because by permuting its columns (labeled with $c_1$-$c_4$)
-    one can obtain the matrix shown in the middle where the 1s in each
-    row appear consecutively. The matrix on the right, in contrast,
-    does not have the COP \cite{at72,d08phd}.}
+  % \includegraphics[scale=0.4]{../img/0_cop_nocop.png}
+  \begin{tabular}[h]{l|lcccl}
+    $M_1$: & $M_1'$: &&&& $M_2$:\\
+    &&&&&\\
+    \begin{tabular}[h]{llll}
+      $c_1$ & $c_2$ &$c_3$ &$c_4$\\
+      &&&\\
+      \un & 0   & \un & 0\\
+      0   & \un & 0   & \un \\
+      \un & 0   & 0   & \un
+    \end{tabular}
+    &
+    \begin{tabular}[h]{llll}
+      $c_3$ &$c_1$ &$c_4$& $c_2$\\
+      &&&\\
+      \un & \un & 0 & 0\\
+      0 & 0 & \un & \un \\
+      0 & \un & \un & 0
+    \end{tabular}
+    &&&&
+    \begin{tabular}[h]{llll}
+      $d_1$ & $d_2$ &$d_3$ &$d_4$\\
+      % &&&\\
+      &&&\\
+      \un & \un & 0 & 0\\
+      0 & \un & \un & 0 \\
+      0 & \un & 0 & \un 
+    \end{tabular}
+  \end{tabular}
+  \caption{Matrices with and without COP. $M_1$ has COP because by
+    permuting its columns, $c_1$-$c_4$, one can obtain $M_1'$ where
+    the {\un}s in each row are consecutive. $M_2$, however, does not
+    have COP since no permutation of its columns, $d_1$-$d_4$, will
+    arrange {\un}s in each row consecutively \cite{d08phd}.}
   \label{fig:cop-matrix}
 \end{figure}
 
@@ -391,18 +448,17 @@ machinery of this algorithm \annote {is related to the weighted
 The literature also has results on parallel COT algorithms --
 \cite{as95} \cite{bs03} \cite{ly91}\tnote{add english to fit context}
 
-
 \subsection{Optimization problems in COP}
-So far we have been concerned about
-matrices that have the consecutive ones property. However in real life
-applications, it is rare that data sets represented by binary matrices
-have COP. Nevertheless, the COP is not arbirary and there are several
-interesting problems when a matrix does not have COP but is ``close''
-to having COP or can be altered to have COP.
+So far we have been concerned about matrices that have the consecutive
+ones property. However in real life applications, it is rare that data
+sets represented by binary matrices have COP. Nevertheless, the COP is
+not arbirary and there are several interesting problems when a matrix
+does not have COP but is ``close'' to having COP or can be altered to
+have COP.
 
--- sect 4.1 in \cite{d08phd} has many results surveyed. hardness results,
-approx. results. results are usually for a class of matrices $(a,b)$
-where number columns and rows are restriced to $a$ and $b$
+-- sect 4.1 in \cite{d08phd} has many results surveyed. hardness
+results, approx. results. results are usually for a class of matrices
+$(a,b)$ where number columns and rows are restriced to $a$ and $b$
 \tnote{check if it is the other way around}.\\
 -- problem of flipping at most $k$ entries of $M$ to make it attain
 COP. this is NP complete \cite{b75-phd}
