@@ -130,6 +130,12 @@ Bastian Laubner.
 \newblock {\em CoRR}, abs/0911.3799, 2009.
 \newblock informal publication.
 
+\bibitem[LB63]{lb62}
+C.~G. Lekkerkerker and J.~Ch. Boland.
+\newblock Representation of a finite graph by a set of intervals on the real
+  line.
+\newblock {\em Fundamenta Mathematicae}, 51:45--64, 1962/1963.
+
 \bibitem[Lin92]{sl92}
 Steven Lindell.
 \newblock A logspace algorithm for tree canonization (extended abstract).

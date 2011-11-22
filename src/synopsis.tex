@@ -12,6 +12,8 @@
 \department{\MakeUppercase{\mydept}}
 
 
+\def \un {\bf 1}
+
 \begin{document}
 
 %\nocite{*}
@@ -37,16 +39,12 @@
 \section{Introduction}
 \label{sec:intro}
 
-% \tnote{testing 1 2 3...}
-% \tnote[bogus1]{testing 1 2 3...}
-% \tnote[bogus2]{testing 1 2 3...}
-% \tnote[bogus3]{testing 1 2 3...}
-% \tnote[bogus4]{testing 1 2 3...}
-% \tnote[bogus5]{testing 1 2 3...}
-% \tnote[bogus6]{testing 1 2 3...}
-% \tnote[bogus7]{testing 1 2 3...}
-% \tnote[bogus8]{testing 1 2 3...}
-% \tnote[TH]{testing 1 2 3...}
+\tnote{testing 1 2 3...}
+\tnote[bogus1]{testing 1 2 3...}
+\tnote[bogus2]{testing 1 2 3...}
+\tnote[GTC]{testing 1 2 3...}
+\tnote[bogus4]{testing 1 2 3...}
+\tnote[TH]{testing 1 2 3...}
 
 \subsection{Illustration of the problem}
 \label{sec:problem}
@@ -146,7 +144,8 @@ A group of students, \Pa, \Pi, \Sn, \Wo, \Vi, \Li, \Ch, \Sa, \Fr,
 % enroll at the
 {\WSI} for a liberal arts programme.  As part
 of their semester thesis, they pick a body of work to study and form
-the namesake study groups, {\LLL}, {\GGG}, {\BBB} and {\TTT}. A student
+the namesake study groups, {\LLL}, {\GGG}, {\BBB} and
+{\TTT}. \tnote[TH]{put bib entries for these works!} A student
 will be in at least one study group and may be in more than one. For
 instance, as will be seen later, {\Fr} studies both {\LLL} and {\TTT}
 while \Wo\ studies only \BBB.
@@ -219,14 +218,14 @@ and the students' allocation of apartments that obeys this route
 allocation is shown in Fig~\ref{fig:streetmappathpeople}. How this is
 algorithmically computed is the focus of this thesis.
 
-\begin{figure}[htbp]
+\begin{figure}[t]%[htbp]
  \centering
   \includegraphics[scale=0.3]{../img/1_infinite_loop.png}
   \caption{{\residenceblock} street map}
   \label{fig:streetmap}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[t]%[htbp]
   \centering
   \includegraphics[scale=0.3]{../img/2_infinite_loop_BTWF.png}
   \caption{{\residenceblock} street map with study group routes
@@ -237,7 +236,7 @@ algorithmically computed is the focus of this thesis.
   \label{fig:streetmappath}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[t] % [h]
   \centering
   \includegraphics[scale=0.5]{../img/3_infinite_loop.png}
   \caption{Individual allocation of apartments to students in
@@ -282,7 +281,7 @@ problem.
 The interval assignment problem to a set system is equivalent to the
 consecutive ones problem (COP) in binary matrices\cite{wlh02,
   nsnrs09}.  The COP problem is to rearrange rows (columns) of a
-binary matrix in such a way that every column (row) has its $1$s occur
+binary matrix in such a way that every column (row) has its {\un}s occur
 consecutively. If this is possible the matrix is said to have the COP.
 Consecutive ones property (COP) of binary matrices is a well
 researched combinatorial problem and has several positive results on
@@ -310,40 +309,30 @@ tree path labeling problem.
 \section{Motivation and background}
 \label{sec:motivation}
 
-%The course scheduling problem illustated earlier, as a special case of 
+As seen earlier, the interval assignment problem (illustrated as the
+course scheduling problem in Section~\ref{sec:problem}), is a special
+case of the problem we address in this thesis, namely the tree path
+labeling problem (illustrated as the study group accommodation
+problem). Interval assignment and COP are equivalent
+problems. In this section we will see some of the results that
+exists in the literature today towards solving the COP problem and
+optimization problems surrounding it.
 
-It is quite obvious now why this version of the
-problem (where the ``target graph'' is a path and not any
-tree\tnote[TH]{Allowing any tree in this example could be seen as a
-  scenario where there are parallel classes. A node falling in the
-  path between two other nodes would mean that the corresponding is
-  scheduled between the other two.}) is called an interval assignment
-problem.
+% The interval assignment problem to a set system is equivalent to the
+% consecutive ones problem (COP) in binary matrices\cite{wlh02,
+%   nsnrs09}.  The COP problem is to rearrange rows (columns) of a
+% binary matrix in such a way that every column (row) has its {\un}s occur
+% consecutively. If this is possible the matrix is said to have the COP.
+% Consecutive ones property (COP) of binary matrices is a well
+% researched combinatorial problem and has several positive results on
+% tests for it and computing the COP permutation (i.e. the course
+% schedule in the above illustration) which will be surveyed later in
+% this document. Hence we are interested in extensions of COP, more
+% specifically, the extension of interval assignment problem to tree
+% path assignment problem (which is illustrated by the study group
+% accommodation problem).
 
-The interval assignment problem to a set system is equivalent to the
-consecutive ones problem (COP) in binary matrices\cite{wlh02,
-  nsnrs09}.  The COP problem is to rearrange rows (columns) of a
-binary matrix in such a way that every column (row) has its $1$s occur
-consecutively. If this is possible the matrix is said to have the COP.
-Consecutive ones property (COP) of binary matrices is a well
-researched combinatorial problem and has several positive results on
-tests for it and computing the COP permutation (i.e. the course
-schedule in the above illustration) which will be surveyed later in
-this document. Hence we are interested in extensions of COP, more
-specifically, the extension of interval assignment problem to tree
-path assignment problem (which is illustrated by the study group
-accommodation problem).
-
-
-As described earlier, 
-a matrix with COP is one whose rows (columns)
-can be rearranged so that the 1s in every column (row) are in
-consecutive rows (columns).
-
-
-
-\def \un {\bf 1}
-\begin{figure}[htbp]
+\begin{figure}[t] %[htbp]
   \centering
   % \includegraphics[scale=0.4]{../img/0_cop_nocop.png}
   \begin{tabular}[h]{l|lcccl}
@@ -382,6 +371,10 @@ consecutive rows (columns).
   \label{fig:cop-matrix}
 \end{figure}
 
+Recall that a matrix with COP is one whose rows (columns)
+can be rearranged so that the {\un}s in every column (row) are in
+consecutive rows (columns). Figure~\ref{fig:cop-matrix} shows examples
+of this property.
 COP in binary matrices has several practical applications in diverse
 fields including scheduling \cite{hl06}, information retrieval
 \cite{k77} and computational biology \cite{abh98}.  Further, it is a
@@ -395,25 +388,36 @@ ones property of binary matrices are if COP can be detected
 efficiently in a binary matrix and if so, can the COP permutation of
 the matrix also be computed efficiently?  Recognition of COP in a
 binary matrix is polynomial time solvable and the first such algorithm
-was given by \cite{fg65}.  Since then several algorithms have been
-invented; PQ trees \cite{bl76} gave the first linear time
-algorithm. Variations of PQ trees \cite{mm96,wlh01,wlh02,mcc04} and
-ICPIA \cite{nsnrs09} further improve either the time complexity and/or
-the complexity of implementation.
+was given by \cite{fg65}.  A landmark result came a few years later
+when \cite{at72} discovered the families of forbidden submatrices that
+prevent a matrix from having COP and most, if not all, results that
+came later were based on this discovery which connected COP in binary
+matrices to convex bipartite graphs. In fact, the forbidden
+submatrices came as a corollary to the discovery that convex bipartite
+graphs are AT-free in \cite{at72}\tnote{check}. The first linear time
+algorithm for COP testing (COT) was invented by \cite{bl76} using a
+data structure called PQ trees.  Since then several COT algorithms
+have been invented -- some of which involved variations of PQ trees
+\cite{mm96,wlh01,mcc04}, some involved set theory and ICPIA
+\cite{wlh02,nsnrs09}, parallel COT algorithms\cite{as95,bs03,ly91} and
+certifying algorithms\cite{mcc04}. % These algorithms
+% improve over PQ trees on the time complexity and/or the complexity
+% of implementation.
 
-\cite{bl76} describes a linear time construction of a data structure
-called PQ trees. This paper draws on the close relationship of COP
-matrices to interval graphs. A PQ tree of a matrix is one that stores
-all row (column) permutations of the matrix that give the COP orders
-(there could be multiple) of the matrix. This is constructed using an
-elaborate linear time procedure. Since this result, several
-improvements have been made to the procedural complexity of the
-algorithm itself and also derivative data structures that are easier
-to construct. PQR trees is one such data structure \cite{mm96},
-\cite{mpt98}\tnote[TH]{also, mpt98 $==$ elaborate version of mm96}.
-\cite{tm05} describes an improved version of PQR
-trees. \tnote{improv in terms of what?}\cite{wlh02} describes the
-simpler algorithm for COT. Hsu also invented PC trees
+The construction of PQ trees in \cite{bl76} draws on the
+close relationship of COP matrices to interval graphs. A PQ tree of a
+matrix is one that stores all row (column) permutations of the matrix
+that give the COP orders (there could be multiple) of the matrix. This
+is constructed using an elaborate linear time procedure and is also
+a test for planarity\tnote{check check check. both interval
+  graph and planarity in this paper?}. % Since this
+% result, several improvements have been made to the procedural
+% complexity of the algorithm itself and also derivative data structures
+% that are easier to construct.
+PQR trees is a generalized data structure based on PQ trees
+\cite{mm96,mpt98}.  \cite{tm05} describes an improved algorithm to
+build PQR trees. \tnote[GTC]{improv in terms of what?}\cite{wlh02}
+describes the simpler algorithm for COT. Hsu also invented PC trees
 \cite{wlh01}\tnote[TH]{This result first appeared inproc ISAAC92}
 which is claimed to be much easier to implement. \cite{nsnrs09}
 describes a characterization of consecutive ones property solely based
@@ -422,53 +426,57 @@ columns (rows); every column (row) is equivalent to a set that has the
 row (column) indices of the rows (columns) that have one entries in
 this column (row). This is interesting and relevant, especially to
 this thesis because it simplifies COT to a great
-degree. \tnote{get this
-  figured out! - because it reduces the search space for the solution
-  from set of all permutations of rows to set of all}
+degree. \tnote[GTC]{it reduces the solution search space. fill in the blanks.}
 
 \cite{mcc04} describes a different approach to COT. While all previous
-COT algorithms gave the COP order if the matrix has the property and
-if not it exited stating negative, this algorithm gives an evidence by
-way of a certificate of
-matrix being devoid of COP thereby enabling a user to check the
-algorithm's result. This is significant from an implementation
-perspective because automated program verification is hard and manual
-verification is more viable. Hence having a certificate
-reinforces its credibility. Note that when the matrix has COP the COP
-order is the certificate.  It may also be noted that the internal
-machinery of this algorithm \annote {is related to the weighted
-  betweenness problem addressed } {in what way??} in \cite{co98}.
-\tnote{expand on the COP order graph creation and it having to be
-  bipartite for M to have COP. and thus an odd cycle being an evidence
-  of no COP.}
-\tnote[TH]{ where should this go?: cite|jlm97 (application of PQ trees
-  in graphics).\\ add helly's theorem citation
+COT algorithms gave the COP order if the matrix has the property but
+exited stating negative if otherwise, this algorithm gives an evidence
+by way of a certificate of matrix even when it has no COP. This
+enables a user to verify the algorithm's result even when the answer
+is negative. This is significant from an implementation perspective
+because automated program verification is hard and manual verification
+is more viable. Hence having a certificate reinforces an
+implementation's credibility. Note that when the matrix {\em has} COP,
+the COP order is the certificate.  The internal machinery of this
+algorithm is related to the weighted betweenness problem
+addressed\tnote[GTC]{in what way??} in \cite{co98}.  \tnote[GTC]{expand
+  on the COP order graph creation and it having to be bipartite for M
+  to have COP. and thus an odd cycle being an evidence of no COP.}
+\tnote[TH]{ where should this go?: (1) cite|jlm97 (application of PQ trees
+  in graphics). (2) helly's theorem citation
   19XXdgk-Hellystheorem-Danzer-Gruenbaum-Klee}
 
-The literature also has results on parallel COT algorithms --
-\cite{as95} \cite{bs03} \cite{ly91}\tnote{add english to fit context}
-
 \subsection{Optimization problems in COP}
+\label{sec:optcop}
 So far we have been concerned about matrices that have the consecutive
 ones property. However in real life applications, it is rare that data
-sets represented by binary matrices have COP. Nevertheless, the COP is
-not arbirary and there are several interesting problems when a matrix
-does not have COP but is ``close'' to having COP or can be altered to
-have COP.
+sets represented by binary matrices have COP, primarily due to the
+noisy nature of data available. At the same time, COP is not arbitrary
+and is a desirable property in practical data representation
+\cite{co98,jkckv04,k77}. In this context, there are several
+interesting problems when a matrix does not have COP but is ``close''
+to having COP or is allowed to be altered to have COP. These are the
+optimization problems related to a matrix which does not have
+COP. Some of the significant problems are surveyed in this section.
 
+MOVE TO THESIS?
 -- sect 4.1 in \cite{d08phd} has many results surveyed. hardness
 results, approx. results. results are usually for a class of matrices
 $(a,b)$ where number columns and rows are restriced to $a$ and $b$
 \tnote{check if it is the other way around}.\\
 -- problem of flipping at most $k$ entries of $M$ to make it attain
 COP. this is NP complete \cite{b75-phd}
+END MOVE TO THESIS?
 
-The first step in this direction is to analyze matrices without
-COP. \cite{at72} showed that a matrix that does not have COP have
-certain forbidden substructures that prevent it from having
-COP. Tucker classified these substructures into five classes of
-submatrices. This result is presented in the context of AT-free
-bipartite graphs \tnote[TH]{ check this up. give details.} which is
+\tnote[TH]{cite:lb62 - interval graphs are at-free chordal}
+
+\cite{at72} showed that a matrix that does not have COP have
+certain substructures that prevent it from having
+COP. Tucker classified these forbidden substructures into five classes of
+submatrices. This result is presented in the context of convex
+bipartite graphs which \cite{at72} proved to be
+AT-free\tnote[TH]{ check this up. give details. - doms'}. Convex bipartite
+graph have vertex incidence adjacency matrices is
 equivalent to matrices with COP. A binary matrix is converted into a
 bipartite graph as follows. The set of rows and the set of columns
 form the two partitions of the graph. Each row node is adjacent to
@@ -586,7 +594,7 @@ be isomorphism-complete; see for example \cite{kklv10}. Therefore,
 How the problem of COT is related to the constraint statisfaction
 problem of interval assignment to sets in a system can be seen as
 follows. Every column of the binary matrix can be converted into a set
-of integers which are the indices of rows with $1$s in that column. It
+of integers which are the indices of rows with {\un}s in that column. It
 is apparent that if the matrix has COP, then constructing such sets
 after applying the COP permutation to the matrix will result in all
 sets with consecutive integers. In other words, after application of
