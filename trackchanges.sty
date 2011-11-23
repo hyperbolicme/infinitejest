@@ -639,15 +639,14 @@
 
 
 %%
-%% --------------- Define frontend command: \tnote
-%%                 usage: \tnote[Editor]{note text}
+%% --------------- Define frontend command: \note
+%%                 usage: \note[Editor]{note text}
 \newcommand{\tnote}[2][]{%
   \if@trackchanges%
     \trackingstart{#1}%
     \if@trackinmargins%
       \textsuperscript{\thefootnote}%
-      \marginText{#1}{\tiny\usertext{~[#2]}}% %anjus%
-%anjus%      \marginText{#1}{\userco{#2}}%
+      \marginText{#1}{\userco{#2}}%
     \else%
       \if@trackinline%
         {\footnotesize\textsuperscript{\UserLabel}}%

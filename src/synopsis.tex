@@ -39,12 +39,12 @@
 \section{Introduction}
 \label{sec:intro}
 
-\tnote{testing 1 2 3...}
-\tnote[bogus1]{testing 1 2 3...}
-\tnote[bogus2]{testing 1 2 3...}
-\tnote[GTC]{testing 1 2 3...}
-\tnote[bogus4]{testing 1 2 3...}
-\tnote[TH]{testing 1 2 3...}
+% \tnote{testing 1 2 3...}
+% \tnote[bogus1]{testing 1 2 3...}
+% \tnote[bogus2]{testing 1 2 3...}
+% \tnote[GTC]{testing 1 2 3...}
+% \tnote[bogus4]{testing 1 2 3...}
+% \tnote[TH]{testing 1 2 3...}
 
 \subsection{Illustration of the problem}
 \label{sec:problem}
@@ -142,13 +142,13 @@ A group of students, \Pa, \Pi, \Sn, \Wo, \Vi, \Li, \Ch, \Sa, \Fr,
 % {\bf Wo}odstock, {\bf Vi}olet, {\bf Li}nus, {\bf Ch}arlie, {\bf
 %   Sa}lly, {\bf Re}run, {\bf Sc}hr{\"o}eder} and {\em {\bf Lu}cy}
 % enroll at the
-{\WSI} for a liberal arts programme.  As part
-of their semester thesis, they pick a body of work to study and form
-the namesake study groups, {\LLL}, {\GGG}, {\BBB} and
-{\TTT}. \tnote[TH]{put bib entries for these works!} A student
-will be in at least one study group and may be in more than one. For
-instance, as will be seen later, {\Fr} studies both {\LLL} and {\TTT}
-while \Wo\ studies only \BBB.
+  {\WSI} for a liberal arts programme.  As part of their semester
+  thesis, they pick a body of work to study and form the namesake
+  study groups, {\LLL}, {\GGG}, {\BBB} and {\TTT}\tnote[TH]{put bib
+    entries for these works!}. A student will be in at least one study
+  group and may be in more than one. For instance, as will be seen
+  later, {\Fr} studies both {\LLL} and {\TTT} while \Wo\ studies only
+  \BBB.
 
 Let $U$ and $\cF$ represent the set of students and the set of study
 groups respectively and the integers $n$ and $m$ denote the total
@@ -169,8 +169,11 @@ there is the study group allocation to students.
 % m &= |\cF| = 4  
 % \end{align*}
 
+\def \figtabsize {\footnotesize}
+
 \begin{table}[htbp]
   \centering
+{
   \begin{tabular}{rcl}
     $U $&$=$&$ \{\xPa,\; \xPi,\; \xSn,\; \xWo,\; \xVi,\; \xLi,\; \xCh,\;
     \xSa,\; \xFr,\; \xSc,\; \xLu\}$\\
@@ -182,7 +185,8 @@ there is the study group allocation to students.
     $n $&$=$&$ |U| = 11$\\
     $m $&$=$&$ |\cF| = 4$      
   \end{tabular}
-  \caption{Students and study groups in \WSI}
+}
+  \caption{\figtabsize Students and study groups in \WSI}
   \label{tab:wsigroups}
 \end{table}
 
@@ -192,9 +196,8 @@ The campus has a residential area {\residenceblock} that has $n$
 single occupancy apartments reserved for the study groups'
 accommodation.  All these apartments are located such that the streets
 connecting them do {\em not} form loops. Fig~\ref{fig:streetmap} shows
-the street map for {\residenceblock}. It may be noted that as a graph, it
-classifies as a tree.
-
+the street map for {\residenceblock}. It may be noted that as a graph,
+it classifies as a tree.
 
 A natural question would be to find how the students should be
 allocated apartments such that each study group has the {\em least
@@ -215,35 +218,54 @@ that each study group decides to inhabit and then refine the
 allocation to individual students. A feasible allocation of exclusive
 routes to study groups is illustrated in Fig~\ref{fig:streetmappath}
 and the students' allocation of apartments that obeys this route
-allocation is shown in Fig~\ref{fig:streetmappathpeople}. How this is
-algorithmically computed is the focus of this thesis.
+allocation is also shown\tnote[TH]{in
+  Fig~ref::fig:streetmappathpeople}. How this is algorithmically
+computed is the focus of this thesis.
 
-\begin{figure}[t]%[htbp]
+%%%%%%%%%%%% THESIS UNCOMMENT %%%%%%%%%%%%
+% \begin{figure}[t]%[htbp]
+%  \centering
+%   \includegraphics[scale=0.3]{../img/1_infinite_loop.png}
+%   \caption{{\residenceblock} street map}
+%   \label{fig:streetmap}
+% \end{figure}
+
+% \begin{figure}[t]%[htbp]
+%   \centering
+%   \includegraphics[scale=0.3]{../img/2_infinite_loop_BTWF.png}
+%   \caption{{\residenceblock} street map with study group routes
+%     allocated. Routes are color coded as follows: red for
+%     \textcolor{red}{$\xLLL$} group, blue for \textcolor{blue}{$\xGGG$}
+%     group, orange for \textcolor{YellowOrange}{$\xBBB$} group, green for
+%     \textcolor{green}{$\xTTT$} group}
+%   \label{fig:streetmappath}
+% \end{figure}
+% \begin{figure}[t] % [h]
+%   \centering
+%   \includegraphics[scale=0.5]{../img/3_infinite_loop.png}
+%   \caption{Individual allocation of apartments to students in
+%     {\residenceblock} that meets the requirements stated before.}
+%   \label{fig:streetmappathpeople}
+% \end{figure}
+%%%%%%%%%%%% END THESIS UNCOMMENT %%%%%%%%%%%%
+\begin{figure}[htbp] %[t]%
  \centering
-  \includegraphics[scale=0.3]{../img/1_infinite_loop.png}
-  \caption{{\residenceblock} street map}
-  \label{fig:streetmap}
-\end{figure}
-
-\begin{figure}[t]%[htbp]
-  \centering
-  \includegraphics[scale=0.3]{../img/2_infinite_loop_BTWF.png}
-  \caption{{\residenceblock} street map with study group routes
+  (a) \includegraphics[scale=0.2]{../img/1_infinite_loop.png}
+  (b) \includegraphics[scale=0.2]{../img/2_infinite_loop_BTWF.png}
+ \label{fig:streetmap}
+  \caption{\figtabsize (a) {\residenceblock} street map (b) {\residenceblock} street map with study group routes
     allocated. Routes are color coded as follows: red for
     \textcolor{red}{$\xLLL$} group, blue for \textcolor{blue}{$\xGGG$}
     group, orange for \textcolor{YellowOrange}{$\xBBB$} group, green for
     \textcolor{green}{$\xTTT$} group}
-  \label{fig:streetmappath}
 \end{figure}
-
-\begin{figure}[t] % [h]
+\begin{figure}[htbp] %[t]%
   \centering
-  \includegraphics[scale=0.5]{../img/3_infinite_loop.png}
-  \caption{Individual allocation of apartments to students in
+  \includegraphics[scale=0.3]{../img/3_infinite_loop.png}
+  \caption{\figtabsize Individual allocation of apartments to students in
     {\residenceblock} that meets the requirements stated before.}
   \label{fig:streetmappathpeople}
 \end{figure}
-
 
 As a special case, suppose all the apartments are on the same street
 or if they are all lined up on a single path, the street map becomes a
@@ -292,23 +314,16 @@ specifically, the extension of interval assignment problem to tree
 path assignment problem (which is illustrated by the study group
 accommodation problem).
 
-\tnote{add a note on the organization of the doc}
-% The necessary preliminaries with definitions etc. are presented in
-% Section~\ref{sec:prelims}. 
-% Section~\ref{sec:feasible} documents the
-% characterization of a feasible path labeling and finally,
-% Section~\ref{sec:ksubdivstar} describes a polynomial time algorithm to
-% find the tree path labeling of a given set system from a given
-% $k$-subdivided tree.
-
-Section~\ref{sec:motivation} gives a brief survey of COP and
+Section~\ref{sec:background} gives a brief survey of COP and
 optimization problems related to it.  Section~\ref{sec:results}
 presents a summary of our results on the extention of COP namely, the
-tree path labeling problem.
+tree path labeling problem. \tnote[TH]{update for thesis}
 
-\section{Motivation and background}
-\label{sec:motivation}
 
+\section{Background}
+\label{sec:background}
+\subsection{Matrices with COP}
+\label{sec:copmatrices}
 As seen earlier, the interval assignment problem (illustrated as the
 course scheduling problem in Section~\ref{sec:problem}), is a special
 case of the problem we address in this thesis, namely the tree path
@@ -335,7 +350,8 @@ optimization problems surrounding it.
 \begin{figure}[t] %[htbp]
   \centering
   % \includegraphics[scale=0.4]{../img/0_cop_nocop.png}
-  \begin{tabular}[h]{l|lcccl}
+{\figtabsize
+ \begin{tabular}[h]{l|lcccl}
     $M_1$: & $M_1'$: &&&& $M_2$:\\
     &&&&&\\
     \begin{tabular}[h]{llll}
@@ -363,11 +379,14 @@ optimization problems surrounding it.
       0 & \un & 0 & \un 
     \end{tabular}
   \end{tabular}
-  \caption{Matrices with and without COP. $M_1$ has COP because by
+}
+
+  \caption{\figtabsize Matrices with and without COP. $M_1$ has COP because by
     permuting its columns, $c_1$-$c_4$, one can obtain $M_1'$ where
     the {\un}s in each row are consecutive. $M_2$, however, does not
     have COP since no permutation of its columns, $d_1$-$d_4$, will
     arrange {\un}s in each row consecutively \cite{d08phd}.}
+
   \label{fig:cop-matrix}
 \end{figure}
 
@@ -459,65 +478,64 @@ to having COP or is allowed to be altered to have COP. These are the
 optimization problems related to a matrix which does not have
 COP. Some of the significant problems are surveyed in this section.
 
-MOVE TO THESIS?
--- sect 4.1 in \cite{d08phd} has many results surveyed. hardness
-results, approx. results. results are usually for a class of matrices
-$(a,b)$ where number columns and rows are restriced to $a$ and $b$
-\tnote{check if it is the other way around}.\\
--- problem of flipping at most $k$ entries of $M$ to make it attain
-COP. this is NP complete \cite{b75-phd}
-END MOVE TO THESIS?
+\tnote[TH]{ -- sect 4.1 in cite:d08phd has many results
+  surveyed. hardness results, approx. results. results are usually for
+  a class of matrices $(a,b)$ where number {\un}s in columns and rows
+  are restriced to $a$ and $b$ . -- problem of flipping at most $k$
+  entries of $M$ to make it attain COP. this is NP complete
+  cite:b75-phd}\tnote[TH]{(1) scite:lb62 showed that interval graphs
+  are AT-free.  describe AT (2) show the close relationship b/w COP
+  and graphs sec 2.2, pg 31} \cite{at72} showed that a matrix that
+does not have COP have certain substructures that prevent it from
+having COP. Tucker classified these forbidden substructures into five
+classes of submatrices. This result is presented in the context of
+convex bipartite graphs which \cite{at72} proved to be
+AT-free\tnote[TH]{ check this up. give details. - doms'}. By
+definition, convex bipartite graph have half adjacency matrices that
+have COP on either rows or columns (graph is biconvex if it has COP on
+both)\cite{d08phd}. A half adjacency matrix is a binary matrix
+representing a bipartite graph as follows. The set of rows and the set
+of columns form the two partitions of the graph. Each row node is
+adjacent to those nodes that represent the columns that have ones in
+the corresponding row. \cite{at72} proves that this bipartite graph
+has no asteroidal triple if and only if the matrix has COP and goes on
+to identify the forbidden substructures for these bipartite
+graphs. The matrices corresponding to these substructures are the
+forbidden submatrices.
 
-\tnote[TH]{cite:lb62 - interval graphs are at-free chordal}
+Once a matrix has been detected to not have COP (using any of the COT
+algorithms mentioned earlier), it is naturally of interest to find out
+the smallest (in terms of number of rows and/or columns and/or number
+of entries that are {\un}s) forbidden substructure. \cite{d08phd}
+discusses a couple of algorithms which are efficient if the number of
+ones in a row is small. This is of significance in the case of sparce
+matrices where this number is much lesser than the number of
+columns. $(*,\Delta)${\em -matrices} are matrices with no restriction
+on number of {\un}s in any column but has at most $\Delta$ {\un}s in
+any row. {\sc Min COS-R (Min COS-C), Max COS-R (Max COS-C)} are
+similar problems which deals with inducing COP on a matrix. In {\sc
+  Min COS-R (Min COS-C)} the question is to find the minimum number of
+rows (columns) that must be deleted to result in a matrix with COP.
+In the dual problem {\sc Max COS-R (Max COS-C)} the search is for the
+maximum number of rows (columns) that induces a submatrix with
+COP. Given a matrix $M$ with no COP, \cite{b75-phd} shows that finding
+a submatrix $M'$ with all columns\tnote{check if b75 deals with COP
+  col or COP row. also is it any submatrix with k less than r rows or
+  submatrix must have all columns?} but a maximum cardinality subset
+of rows such that $M'$ has COP is NP complete. \cite{hg02} corrects an
+error of the abridged proof of this reduction as given in \cite{gj79}.
+\cite{d08phd} discusses all these problems in detail giving an
+extensive survey of the previously existing results which are almost
+exhaustively all approximation results and hardness results. Taking
+this further, \cite{d08phd} presents new results in the area of
+parameterized algorithms for this problem\tnote[TH]{elaborate - what
+  are the results?}.
 
-\cite{at72} showed that a matrix that does not have COP have
-certain substructures that prevent it from having
-COP. Tucker classified these forbidden substructures into five classes of
-submatrices. This result is presented in the context of convex
-bipartite graphs which \cite{at72} proved to be
-AT-free\tnote[TH]{ check this up. give details. - doms'}. Convex bipartite
-graph have vertex incidence adjacency matrices is
-equivalent to matrices with COP. A binary matrix is converted into a
-bipartite graph as follows. The set of rows and the set of columns
-form the two partitions of the graph. Each row node is adjacent to
-those nodes that represent the columns that have ones in the
-corresponding row. \cite{at72} proves that this bipartite graph has no
-asteroidal triple if and only if the matrix has COP and goes on to
-identify the forbidden substructures for these bipartite graphs. The
-matrices corresponding to these substructures are the forbidden
-submatrices. Once a matrix has been detected to not have COP (using
-any of the COT algorithms mentioned earlier), it is naturally of
-interest to find out the smallest (in terms of number of rows, columns
-and number of entries that are ones) forbidden
-substructure. \cite{d08phd} discusses an exact algorithm with time
-complexity \annote{parameterized by the number of ones in the
-  matrix}{check this.}.
-
-{\sc Min COS-R (Min COS-C), Max COS-R (Max COS-C)} are similarly
-inspired problems. In {\sc Min COS-R (Min COS-C)} the question is to
-find the minimum number of rows (columns) that must be deleted to
-result in a matrix with COP.  In the dual problem {\sc Max COS-R (Max
-  COS-C)} the search is for the maximum number of rows (columns) that
-induces a submatrix with COP. Given a no-COP matrix $M$,
-\cite{b75-phd} shows that finding a submatrix $M'$ with all columns
-but a maxmimum cardinality subset of rows such that $M'$ has COP is NP
-complete\tnote{check if b75 deals with COP col or COP row. also
-  is it any submatrix with k less than r rows or submatrix must have
-  all columns?}. \cite{hg02} corrects an error of the abridged proof
-of this reduction as given in \cite{gj79}.  \cite{d08phd} discusses
-all these problems in detail giving an extensive survey of the
-previously existing results which are almost exhaustively all
-approximation results and hardness results. Taking this further,
-\cite{d08phd} presents new results in the area of parameterized
-algorithms for this problem\tnote[TH]{elaborate - what are
-  the results?}.
-
-
-Another problem is to find the minumum number of entries in the matrix
-that can be flipped to result in a matrix with COP.  \cite{v85}
+Another problem is to find the minimum number of entries in the matrix
+that can be toggled to result in a matrix with COP.  \cite{v85}
 discusses approximation of {\sc COP Augmentation} which is the problem
-of changing of the minimum number of zero entries to ones so that the
-resulting matrix has COP. As mentioned earlier, this problem had been
+of changing of the minimum number of zero entries to {\un}s so that the
+resulting matrix has COP. As mentioned earlier, this problem is
 known to be NP complete due to \cite{b75-phd}. \cite{v85} also proves,
 using a reduction to the longest path problem, \tnote{or is it a
   survey of another result?  check.} that finding a Tucker's forbidden
@@ -525,83 +543,33 @@ submatrix of at least $k$ rows is NP complete. \tnote{how is this
   different from booth's 75 result??}  \tnote[TH]{where should this
   go? cite|tz04 (approx submatrix with COP sparse matrices)}
 
-\cite{jkckv04} discusses the use of matrices with almost-COP in the
-storage of very large databases.  The problem is that of $k$-run
-reordering of binary matrices which they prove to be NP hard using a
-reduction from the hamiltonian path problem.  A connection of COP
-problem to the travelling salesman problem is also
-introduced. \tnote[TH]{what does this mean? -- COP can be used as a
-  tool to reorder $0.5T \le runs(M) \le T$}
-
-The optimization version of the $k$-run problem, i.e. minimization of
-number of blocks of ones is proven to be NP complete by
-\cite{k77}. \tnote[TH]{what is the reduction?}
-
-\tnote[TH]{other problems similar to COP -- cite:ckl96 (ILP, circ ones, one drop) -- cite:th98 (generalization of COP - minimax, biotonic column) Tucker}
-
-
-
-{\bf Motivation: } A natural generalization of the interval assignment problem is
-feasible tree path labeling problem of a set system. The problem is
-defined as follows -- given a set system $\cF$ from a universe $U$ and
-a tree $T$, does there exist a bijection from $U$ to the vertices of
-$T$ such that each set in the system maps to a path in $T$.  We refer
-to this as the {\em tree path labeling problem} for an input set
-system, target tree pair -- $(\cF,T)$. As a special case if the tree
-$T$ is a path, the problem becomes the interval assignment problem.
-We focus on the question of generalizing the notion of an ICPIA
-\cite{nsnrs09} to characterize feasible path assignments.  We show
-that for a given set system $\cF$, a tree $T$, and an assignment of
-paths from $T$ to the sets, there is a feasible bijection between $U$
-and $V(T)$ if and only if all intersection cardinalities among any
-three sets (not necessarily distinct) is same as the intersection
-cardinality of the paths assigned to them and the input passes a
-filtering algorithm (described in this paper) successfully.  This
-characterization gives a natural data structure that stores all the
-relevant feasible bijections between $U$ and $V(T)$. This reduces the
-search space for the solution considerably from the universe of all
-possible bijections between $U$ and $V(T)$ to only those bijections
-that maintain the characterization\tnote{REWORD}.  Further, the
-filtering algorithm is also an efficient algorithm to test if a tree
-path labeling to the set system is feasible.  This generalizes the
-result in \cite{nsnrs09}.
-
-Our results also have close connection to recognition of path graphs
-and connection to path graph isomorphism.  Graphs which can be
-represented as the intersection graph of paths in a tree are called
-{\em path graphs}\cite{mcg04}. Thus given a hypergraph $\cF$, it can
-be viewed as paths in a tree, if and only if the intersection graph of
-$\cF$ is a {\em path graph}. Path graphs are a subclass of chordal
-graphs since chordal graphs are combinatorially characterized as the
-intersection graphs of subtrees of a tree.  Path graphs are well
-studied in the literature \cite{plr70,gav78,bp93,mcg04}.  Checking if
-a graph is a path graph can be done in polynomial time by the results
-of \cite{gav78,aas93}.  However, this is only a necessary condition
-for our question.  \remove{Indeed, our work provides a sufficient
-  condition for a related problem: that is whether a path assignment
-  to be feasible?}  On the other hand, path graph isomorphism is known
-be isomorphism-complete; see for example \cite{kklv10}. Therefore,
-\annote{it is unlikely that we can solve the problem of finding
-  feasible path labeling $\cl$ for a given $\cF$ and }{WHY?} tree $T$.
-\annote{It is definitely interesting to classify the kinds of trees
-  and hypergraphs for which feasible path labelings can be
-}{ELABORATE.} found efficiently.  \annote{These results would form
-  a natural generalization of COP testing and interval graph
-  isomorphism, culminating in Graph Isomorphism }{REWORD} itself.
+\cite{jkckv04} discusses the use of matrices with almost-COP (instead
+of one block of consecutive {\un}s, they have $x$ blocks, or {\em
+  runs}, of consecutive {\un}s and $x$ is not too large) in the
+storage of very large databases.  The problem is that of reordering of
+a binary matrix such that the resulting matrix has at most $k$ runs of
+{\un}s. This is proven to be NP hard using a reduction from the
+hamiltonian path problem.\tnote[TH]{Theorem 2.1 in jkckv}
+\tnote[TH]{(1) A connection of COP problem to the travelling salesman
+  problem is also introduced. what does this mean? -- COP can be used
+  as a tool to reorder $0.5T \le runs(M) \le T$. (2) The optimization
+version of the $k$-run problem, i.e. minimization of number of blocks
+of ones is proven to be NP complete by cite:k77}\tnote{are these two
+  the same?} \tnote[TH]{what is the reduction?} \tnote[TH]{other
+  problems similar to COP -- cite:ckl96 (ILP, circ ones, one drop) --
+  cite:th98 (generalization of COP - minimax, biotonic column) Tucker}
 
 
+\section{Motivation}
+\label{sec:motive}
+As seen in Section~\ref{sec:copmatrices}, \cite{nsnrs09} describes a
+characterization of consecutive ones property based on the cardinality
+properties of the set representations of the columns. This result is
+very relevant to this thesis because aside from it simplifying COT to
+a great degree, our generalization problem is motivated by their
+results.
 
-How the problem of COT is related to the constraint statisfaction
-problem of interval assignment to sets in a system can be seen as
-follows. Every column of the binary matrix can be converted into a set
-of integers which are the indices of rows with {\un}s in that column. It
-is apparent that if the matrix has COP, then constructing such sets
-after applying the COP permutation to the matrix will result in all
-sets with consecutive integers. In other words, after application of
-COP reordering, the sets are intervals. Indeed the problem now becomes
-finding interval assignments to a given set system such that there
-exists a permutation of the universe (set of row indices) which
-converts each set to its assigned interval. The result in
+The result in
 \cite{nsnrs09} characterizes interval assignments to the sets which
 can be obtained from a single permutation of the rows.  They show that
 for each set, the cardinality of the interval assigned to it must be
@@ -616,8 +584,52 @@ matrices for COT and describes an algorithm to test if an ICPIA exists
 for a given set system.
 
 
+The tree path labeling problem is a natural generalization of the
+interval assignment problem or the COP problem. The problem is defined
+as follows -- given a set system $\cF$ from a universe $U$ and a tree
+$T$, does there exist a bijection from $U$ to the vertices of $T$ such
+that each set in the system maps to a path in $T$.  We refer to this
+as the {\em tree path labeling problem} for an input set system,
+target tree pair -- $(\cF,T)$. As a special case if the tree $T$ is a
+path, the problem becomes the interval assignment problem.  We focus
+on the question of generalizing the notion of an ICPIA \cite{nsnrs09}
+to characterize feasible path assignments.  We show that for a given
+set system $\cF$, a tree $T$, and an assignment of paths from $T$ to
+the sets, there is a feasible bijection between $U$ and $V(T)$ if and
+only if all intersection cardinalities among any three sets (not
+necessarily distinct) is same as the intersection cardinality of the
+paths assigned to them and the input passes a filtering algorithm
+(described in this paper) successfully.  This characterization gives a
+natural data structure that stores all the relevant feasible
+bijections between $U$ and $V(T)$. This reduces the search space for
+the solution considerably from the universe of all possible bijections
+between $U$ and $V(T)$ to only those bijections that maintain the
+characterization\tnote[TH]{REWORD}.  Further, the filtering algorithm
+is also an efficient algorithm to test if a tree path labeling to the
+set system is
+feasible.  %This generalizes the result in \cite{nsnrs09}.
+
+
+% How the problem of COT is related to the constraint statisfaction
+% problem of interval assignment to sets in a system can be seen as
+% follows. Every column of the binary matrix can be converted into a set
+% of integers which are the indices of rows with {\un}s in that column. It
+% is apparent that if the matrix has COP, then constructing such sets
+% after applying the COP permutation to the matrix will result in all
+% sets with consecutive integers. In other words, after application of
+% COP reordering, the sets are intervals. Indeed the problem now becomes
+% finding interval assignments to a given set system such that there
+% exists a permutation of the universe (set of row indices) which
+% converts each set to its assigned interval. 
+
+
+
 \section{Summary of results}
 \label{sec:results}
+
+We address the computation of TPL\footnote{Tree Path Labeling} for a
+given set system and tree in this research. However optimization
+problems have not been explored.
 
 Given a path labeling $\cl$ to $\cF$ from a tree $T$, we give a
 necessary and sufficient condition for it to be a feasible path
@@ -628,20 +640,21 @@ three-way intersection cardinalities are preserved.  In other words,
 in each iteration, it is sufficient to check if the intersection of
 any three sets is of the same cardinality as the intersection of the
 corresponding paths.  This generalizes the well studied question of
-the case when the given tree $T$ is a path \cite{wlh02,nsnrs09}.
+the case when the given tree $T$ is a path \cite{wlh02,nsnrs09}, in
+other words the interval assignment problem or consecutive ones problem.
 
 %\item 
-In the Section 4, \annote{we initiate an exploration of}{WTF?}
-finding feasible path labeling of set systems in a special kind of
-tree which we call the $k$-subdivided star.  \annote{This question
-  is an attempt to generalize}{REWORD.} the problem of testing if a
-matrix has the consecutive ones property.  However, we restrict the
-hypergraph $\cF$ to be such that all hyperedges have at most $k+2$
-elements.  \annote{In spite of this restricted case we consider, we
-  believe that our results are of significant interest in
-  understanding the nature of Graph Isomorphism}{REWORD.} which is
-polynomial time solvable in interval graphs and is hard on path
-graphs.
+Aside from checking if a given TPL is feasible, we also attempt to
+compute the TPL for a given set system (hypergraph) and tree, if one
+exists. For the latter problem, we have an algorithm for general trees
+which runs in exponential time. We present a polynomial time
+algorithm for a special class of trees called $k$-subdivided trees and
+when the hypergraph $\cF$ is such that all hyperedges have at most
+$k+2$ elements.  In spite of this restricted case we consider, we
+believe that our results are of significant interest in understanding
+the nature of Graph Isomorphism which is polynomial time solvable in
+interval graphs and is hard on path graphs. The connection of TPL to graph
+isomorphism will be made later in the document
 %\end{enumerate}
 
 
@@ -1703,6 +1716,33 @@ case-specific changes mentioned in the rules below.
 
 
 \section{Conclusion}
+
+
+Our results also have close connection to recognition of path graphs
+and connection to path graph isomorphism.  Graphs which can be
+represented as the intersection graph of paths in a tree are called
+{\em path graphs}\cite{mcg04}. Thus given a hypergraph $\cF$, it can
+be viewed as paths in a tree, if and only if the intersection graph of
+$\cF$ is a {\em path graph}. Path graphs are a subclass of chordal
+graphs since chordal graphs are combinatorially characterized as the
+intersection graphs of subtrees of a tree.  Path graphs are well
+studied in the literature \cite{plr70,gav78,bp93,mcg04}.  Checking if
+a graph is a path graph can be done in polynomial time by the results
+of \cite{gav78,aas93}.  However, this is only a necessary condition
+for our question.  \remove{Indeed, our work provides a sufficient
+  condition for a related problem: that is whether a path assignment
+  to be feasible?}  On the other hand, path graph isomorphism is known
+be isomorphism-complete; see for example \cite{kklv10}. Therefore,
+\annote{it is unlikely that we can solve the problem of finding
+  feasible path labeling $\cl$ for a given $\cF$ and }{WHY?} tree $T$.
+\annote{It is definitely interesting to classify the kinds of trees
+  and hypergraphs for which feasible path labelings can be
+}{ELABORATE.} found efficiently.  \annote{These results would form
+  a natural generalization of COP testing and interval graph
+  isomorphism, culminating in Graph Isomorphism }{REWORD} itself.
+
+
+
 \tnote{MAKE CONNECTION TO PATH GRAPH ISOMORPHISM HERE}
 As it will be described in detail later in this document, isomorphism
 of certain classes of graphs, namely chordal graphs, have a close
