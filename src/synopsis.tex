@@ -3,6 +3,7 @@
 
 \usepackage{times} 
 \usepackage{t1enc}
+\usepackage{boxedminipage}
 \usepackage{../lib/mylatexlib}
 
 \title{\mythesistitle} 
@@ -16,43 +17,6 @@
 \def \secfirstparatrim {-5mm}
 \def \figtabsize {\footnotesize}
 
-\begin{document}
-
-%\nocite{*}
-\maketitle
-
-% \tnote{TBD: DELETE IF WE RUN OUT OF SPACE}
-% \begin{singlespace}
-% \tableofcontents
-% \thispagestyle{empty}
-% \listoffigures
-% \addcontentsline{toc}{chapter}{LIST OF FIGURES}
-% \listoftables
-% \addcontentsline{toc}{chapter}{LIST OF TABLES}
-% \end{singlespace}
-
-% The main text will follow from this point so set the page numbering
-% to arabic from here on.
-\pagenumbering{arabic}
-\setcounter{page}{0}
-%\newpage
-
-
-\section{Introduction}
-\label{sec:intro}
-\vspace{\secfirstparatrim}
-\tnote{set context: COP - generalization - TPL - no opt. just 2 or 3
-  sentences. use the space that the illustration does.}
-% \tnote{testing 1 2 3...}
-% \tnote[bogus1]{testing 1 2 3...}
-% \tnote[bogus2]{testing 1 2 3...}
-% \tnote[GTC]{testing 1 2 3...}
-% \tnote[bogus4]{testing 1 2 3...}
-% \tnote[TH]{testing 1 2 3...}
-
-\subsection{Illustration of the problem}
-\label{sec:problem}
-\vspace{\secfirstparatrim}
 % \def \LLL {{\em ``{\bf L}aughing with Kafka''}} 
 % \def \GGG {{\em ``{\bf G}irl with Curious Hair''}} 
 % \def \BBB {{\em ``{\bf B}rief Interviews with Hideous Men''}}
@@ -61,66 +25,52 @@
 % \def \xGGG {{\bf G}} 
 % \def \xBBB {{\bf B}}
 % \def \xTTT {{\bf T}}
-
-%{\bf L}aughing {\bf G}irl {\bf B}rief {\bf T}his
-
-
+%%%%%%
 % \def \LLL {{\em ``{\bf L}aughing with Kafka''}} 
 % \def \GGG {{\em ``Brief {\bf I}nterviews with Hideous Men''}} 
 % \def \BBB {{\em ``Broom of the {\bf S}ystem''}}
 % \def \TTT {{\em ``Everything and More: {\bf A} Compact History of Infinity''}}
-
 % \def \xLLL {{\bf L}}
 % \def \xGGG {{\bf I}} 
 % \def \xBBB {{\bf S}}
 % \def \xTTT {{\bf A}}
-
-
-% \def \LLL {{\em ``{\bf B}rief Interviews with Hideous Men''}} 
-% \def \GGG {{\em ``The String {\bf T}heory''}} 
-% \def \BBB {{\em ``[{\bf W}]Rhetoric and the Math Melodrama''}}
-% \def \TTT {{\em ``{\bf F}ate, Time, and Language: An Essay on Free Will''}}
+%%%%%%
 \def \LLL {{\em ``$\mathbb{B}$rief Interviews with Hideous Men''}}
 \def \GGG {{\em ``The String $\mathbb{T}$heory''}} 
 \def \BBB {{\em ``[$\mathbb{W}$]Rhetoric and the Math Melodrama''}}
 \def \TTT {{\em ``$\mathbb{F}$ate, Time, and Language: An Essay on Free Will''}}
-
-
-% \def \xLLL {{\bf B}}
-% \def \xGGG {{\bf T}} 
-% \def \xBBB {{\bf W}}
-% \def \xTTT {{\bf F}}
 \def \xLLL {\mathbb{B}}
 \def \xGGG {\mathbb{T}} 
 \def \xBBB {\mathbb{W}}
 \def \xTTT {\mathbb{F}}
-
-
-%{{\em ``Everything and More: A Compact History of In{\bf F}inity''}} 
-% {{\em ``Broom of {\bf T}he System''}} % {Consider the Lobster}
+% {{\em ``{\bf B}rief Interviews with Hideous Men''}} 
+% {{\em ``The String {\bf T}heory''}} 
+% {{\em ``[{\bf W}]Rhetoric and the Math Melodrama''}}
+% {{\em ``{\bf F}ate, Time, and Language: An Essay on Free Will''}}
+% {{\em ``Everything and More: A Compact History of In{\bf F}inity''}} 
+% {{\em ``Broom of {\bf T}he System''}} 
+% {{\em ``Consider the Lobster''}}
 % {{\em ``God Bless You, Mr. {\bf F}ranzen''}}
 % {{\em ``{\bf L}aughing with Kafka''}} 
 % {{\em ``{\bf G}irl with Curious Hair''}} 
-% {{\em ``Consider the {\bf L}obster|}}
+% {{\em ``Consider the {\bf L}obster''}}
 % {{\em ``{\bf G}od Bless You, Mr. Franzen''}}
 % {{\em ``{\bf T}ennis, Trigonometry,
 %                                Tornadoes: A Midwestern  Boyhood''}}
-% {{\em ``{\bf T}his is Water''}} %
-% {\em {{\bf T}he Pale King}}
-
+% {{\em ``{\bf T}his is Water''}}
+% {{\em ``{\bf T}he Pale King''}}
 
 \def \Pa {{\em {\bf Pa}tricia}} 
-\def \Pi {{\em {\bf Pi}gpen}} %{{\em {\bf Ma}rcie}}
+\def \Pi {{\em {\bf Pi}gpen}}
 \def \Sn {{\em {\bf Sn}oopy}}
 \def \Wo {{\em {\bf Wo}odstock}}
 \def \Vi {{\em {\bf Vi}olet}} 
 \def \Li {{\em {\bf Li}nus}} 
 \def \Ch {{\em {\bf Ch}arlie}}
 \def \Sa {{\em {\bf Sa}lly}}
-\def \Fr {{\em {\bf Fr}anklin}}  %{{\em {\bf Re}run}} 
+\def \Fr {{\em {\bf Fr}anklin}} 
 \def \Sc {{\em {\bf Sc}hr{\"o}eder}} 
 \def \Lu {{\em {\bf Lu}cy}}
-
 \def \xPa {{\bf Pa}} 
 \def \xPi {{\bf Pi}} 
 \def \xSn {{\bf Sn}}
@@ -132,14 +82,47 @@
 \def \xFr {{\bf Fr}}
 \def \xSc {{\bf Sc}} 
 \def \xLu {{\bf Lu}}
-
 \def \residenceblock {{\em Infinite Loop}}
-
 \def \WSI {{\em Wallace Studies Institute}}
-
 \def \coneohone {{\em ``Influence of post modernism in Wallace's work''}}
 \def \coneohtwo {{\em ``A study on fragmented prose method''}}
 
+
+\begin{document}
+
+%\nocite{*}
+\maketitle
+
+% The main text will follow from this point so set the page numbering
+% to arabic from here on.
+\pagenumbering{arabic}
+\setcounter{page}{0}
+%\newpage
+
+\section{Introduction}
+\label{sec:intro}
+\vspace{\secfirstparatrim} 
+
+Consecutive ones property is a non-trivial property of binary matrices
+that has been studied widely in the literature for over past 50
+years. Detection of COP in a matrix is possible efficiently and there
+are several algorithms that achieve the same. This thesis documents
+the work done on an extension of COP extended from the equivalent
+interval assignment problem in \cite{nsnrs09}. These new results
+rigorously prove a natural extension (to trees) of their
+characterization as well as makes connections to graph isomorphism,
+namely path graph isomorphism.
+
+% \tnote{testing 1 2 3...}
+% \tnote[bogus1]{testing 1 2 3...}
+% \tnote[bogus2]{testing 1 2 3...}
+% \tnote[GTC]{testing 1 2 3...}
+% \tnote[bogus4]{testing 1 2 3...}
+% \tnote[TH]{testing 1 2 3...}
+
+\subsection{Illustration of the problem}
+\label{sec:problem}
+\vspace{\secfirstparatrim}
 
 A group of students, \Pa, \Pi, \Sn, \Wo, \Vi, \Li, \Ch, \Sa, \Fr,
   \Sc\ and \Lu\ enroll at the
@@ -176,7 +159,7 @@ there is the study group allocation to students.
 
 \begin{table}[htbp]
   \centering
-{
+  { \footnotesize
   \begin{tabular}{rcl}
     $U $&$=$&$ \{\xPa,\; \xPi,\; \xSn,\; \xWo,\; \xVi,\; \xLi,\; \xCh,\;
     \xSa,\; \xFr,\; \xSc,\; \xLu\}$\\
@@ -198,9 +181,54 @@ there is the study group allocation to students.
 The campus has a residential area {\residenceblock} that has $n$
 single occupancy apartments reserved for the study groups'
 accommodation.  All these apartments are located such that the streets
-connecting them do {\em not} form loops. Fig~\ref{fig:streetmap} shows
-the street map for {\residenceblock}. It may be noted that as a graph,
-it classifies as a tree.
+connecting them do {\em not} form
+loops. Fig~\ref{fig:streetmappathpeople} \tnote[TH]{fig:streetmap}
+shows the street map for {\residenceblock}. It may be noted that as a
+graph, it classifies as a tree.
+
+
+\begin{table}[htbp]
+  \centering
+  {\footnotesize    
+    \begin{tabular}{l||l}
+      \begin{tabular}{rcl}
+        $T $&$=$&$ \text{\em Street map tree of \residenceblock}$\\
+        $V(T) $&$=$&$ \{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 \}$\\
+        % $\phi^{-1}(V(T)) $&$=$&$ \{ \xSa,\; \xPi,\; \xFr,\; \xWo,\;
+        % \xCh,\; \xVi,\;
+        % \xPa,\; \xSn,\; \xLu,\; \xLi,\; \xSc \}$\\
+        $\cP $&$=$&$ \{R\xLLL, R\xGGG, R\xBBB, R\xTTT\}$\\
+        $R\xLLL $&$=$&$ \{9, 1, 5, 3, 11\}$\\
+        $R\xGGG $&$=$&$ \{7, 2, 6, 5\}$\\
+        $R\xBBB $&$=$&$ \{8, 2, 4 \}$\\
+        $R\xTTT $&$=$&$ \{10, 6, 5, 3\}$\\
+        $n $&$=$&$ |V| = 11$\\
+        $m $&$=$&$ |\cP| = 4$\\\\
+        $\cl $&$=$& {\em Study group to route mapping}\\        
+        $\cl(\mathbb{X}) $&$=$&  $R\mathbb{X}$ for all $\mathbb{X} \in
+        \cF$
+      \end{tabular} & 
+      \begin{tabular}{c}
+       {\em Apartment allocation }($\phi$)\\
+                    \begin{tabular}{c|c}                      
+                      1  & \xSa\\
+                      2  & \xPi\\
+                      3  & \xFr\\
+                      4  & \xWo\\
+                      5  & \xCh\\
+                      6  & \xVi\\
+                      7  & \xPa\\
+                      8  & \xSn\\
+                      9  & \xLu\\
+                      10 & \xLi\\
+                      11 & \xSc                     
+                    \end{tabular}
+      \end{tabular}\\
+    \end{tabular}
+  }
+  \caption{\figtabsize A solution to study group accommodation problem}
+  \label{tab:iltree}
+\end{table}
 
 A natural question would be to find how the students should be
 allocated apartments such that each study group has the {\em least
@@ -219,11 +247,12 @@ from other study groups (unless that apartment is also part of {\em
 An intuitive approach to this problem would be to first find the paths
 that each study group decides to inhabit and then refine the
 allocation to individual students. A feasible allocation of exclusive
-routes to study groups is illustrated in Fig~\ref{fig:streetmappath}
-and the students' allocation of apartments that obeys this route
-allocation is also shown\tnote[TH]{in
-  Fig~ref::fig:streetmappathpeople}. How this is algorithmically
-computed is the focus of this thesis.
+routes to study groups is illustrated in
+Fig~\ref{fig:streetmappathpeople} \tnote[TH]{fig:streetmappath} and
+the students' allocation of apartments that obeys this route
+allocation is also shown. Table~\ref{tab:iltree} shows the same
+solution set theoretically.  How this is algorithmically computed is
+the focus of this thesis.
 
 %%%%%%%%%%%% THESIS UNCOMMENT %%%%%%%%%%%%
 % \begin{figure}[t]%[htbp]
@@ -262,13 +291,18 @@ computed is the focus of this thesis.
 %     group, orange for \textcolor{YellowOrange}{$\xBBB$} group, green for
 %     \textcolor{green}{$\xTTT$} group}
 % \end{figure}
-% \begin{figure}[htbp] %[t]%
-%   \centering
-%   \includegraphics[scale=0.3]{../img/3_infinite_loop.png}
-%   \caption{\figtabsize Individual allocation of apartments to students in
-%     {\residenceblock} that meets the requirements stated before.}
-%   \label{fig:streetmappathpeople}
-% \end{figure}
+\begin{figure}[htbp] %[t]%
+  \centering
+  \includegraphics[scale=0.3]{../img/3_infinite_loop.png}
+  \caption{\figtabsize Individual allocation of apartments to students
+    in {\residenceblock} that meets the requirements stated before.
+    The routes are color coded as follows: red for
+    \textcolor{red}{$\xLLL$} group, blue for \textcolor{blue}{$\xGGG$}
+    group, orange for \textcolor{YellowOrange}{$\xBBB$} group, green
+    for \textcolor{green}{$\xTTT$} group. {\tiny {\em Peanuts images {\copyright} Charles
+    Schulz}}}
+  \label{fig:streetmappathpeople}
+\end{figure}
 
 As a special case, suppose all the apartments are on the same street
 or if they are all lined up on a single path, the street map becomes a
@@ -642,13 +676,16 @@ preservation makes a tree path labeling (TPL) feasible, which is a
 generalization of the COP problem. This problem, {\FTPL}\footnote{A
   {\em tree path labeling} $\cl$ is a bijection of paths from the
   target tree $T$ to the hyperedges in given hypergraph $\cF$.}, is
-defined as follows.\\
+defined as follows.
 
+%\begin{tabular}[t]{c}
+{\small
 \begin{minipage}[h]{5in}
-  % \begin{singlespace}
-  {\large \FTPL}\\
-  % \hline
-  \begin{tabular}[t]{l|l}
+ % \begin{singlespace}
+ \vspace{2mm}
+ {\large \FTPL}\\
+ \begin{tabular}[t]{l|l}
+ \hline\\
     {\tt Input} & 
     \begin{minipage}[t]{\probdefwidth}
       A hypergraph $\cF$ with vertex set $U$, a tree $T$ and a
@@ -667,6 +704,8 @@ defined as follows.\\
   \end{tabular}
   % \end{singlespace}
 \end{minipage}\\
+}
+%\end{tabular}
 
 We give a necessary and sufficient condition for {\FTPL} to output in
 affirmative. This characterization can be checked in polynomial time.
@@ -681,13 +720,16 @@ when the target tree $T$ is simply a path \cite{wlh02,nsnrs09}.
 
 Aside from checking if a given TPL is feasible, we also solve the
 problem of computing a feasible TPL for a given hypergraph and target
-tree, if one exists. This problem, {\CFTPL}, is defined as follows. \\
+tree, if one exists. This problem, {\CFTPL}, is defined as follows. 
 
+{\small
 \begin{minipage}[h]{5in}
-  % \begin{singlespace}
+ % \begin{singlespace}
+ \vspace{2mm}
   {\large \CFTPL}\\
-  % \hline
+  % 
   \begin{tabular}[t]{l|l}
+    \hline\\
     {\tt Input} & 
     \begin{minipage}[t]{\probdefwidth}
       A hypergraph $\cF$ with vertex set $U$ and a tree $T$.\\
@@ -702,37 +744,42 @@ tree, if one exists. This problem, {\CFTPL}, is defined as follows. \\
   \end{tabular}
   % \end{singlespace}
 \end{minipage}\\
-
+}
 \def \CFTPLKTREE {\sc Compute $k$-subdivided Star Path Labeling}
 
 We present a polynomial time algorithm for {\CFTPL} when the target
 tree $T$ belongs to a special class of trees called {\em
   $k$-subdivided stars} and when the hyperedges in the hypergraph
 $\cF$ have at most $k+2$ vertices. The examples of $k$-subdivided
-stars given in Figure~\ref{fig:ksubstar} makes the definition clear.
+stars are given in Figure~\ref{fig:ksubstar}.
 
 %This problem, {\CFTPLKTREE}, is defined as follows. \\
-\begin{figure}[htbp]
+\begin{figure}[t]
   \centering
-  (a) \includegraphics[scale=0.4]{../img/star.pdf}
-  (b) \includegraphics[scale=0.4]{../img/kstar.pdf}
-  \caption{\figtabsize Examples of $k$-subdivided stars. (a) $k = 0$ (b) $k = 2$ }
+  \begin{tabular}[h]{ccccc}
+  \includegraphics[scale=0.3]{../img/star.pdf} &&&&
+  \includegraphics[scale=0.3]{../img/kstar.pdf}\\
+  (a) &&&& (b)
+  \end{tabular}
+  \caption{\figtabsize Examples of $k$-subdivided stars. (a) $k = 0$
+    (b) $k = 2$ }
   \label{fig:ksubstar}
 \end{figure}
 
-
+%\vspace{3mm}
+{\small
 \begin{minipage}[h]{5in}
-  % \begin{singlespace}
+ % \begin{singlespace}
+ \vspace{2mm}
   {\large \CFTPLKTREE}\\
-  % \hline
   \begin{tabular}[t]{l|l}
+    \hline\\
     {\tt Input} & 
     \begin{minipage}[t]{\probdefwidth}
       A hypergraph $\cF$ with vertex set $U$ such that every hyperedge
       $S \in \cF$ is of cardinality atmost $k+2$ and a $k$-subdivided
       star $T$.\\
     \end{minipage}\\
-
     {\tt Question} &
     \begin{minipage}[t]{\probdefwidth}
       Does there exist a set of paths $\cP$ from $T$ and a bijection
@@ -742,17 +789,15 @@ stars given in Figure~\ref{fig:ksubstar} makes the definition clear.
   \end{tabular}
   % \end{singlespace}
 \end{minipage}\\
+}
 
-
-
-In spite of this
-restricted case we consider, we believe that our results are of
-significant interest in understanding the nature of {\sc Graph
+In spite of this being a restricted case, we believe that our results
+are of significant interest in understanding the nature of {\sc Graph
   Isomorphism} which is polynomial time solvable in interval graphs
-while being hard on path graphs\cite{kklv10}. 
-
+while being hard on path graphs\cite{kklv10}.
 
 \tnote{give gyan on why ktree is so.}
+
 
 We also have an algorithm for solving {\CFTPL} with no restrictions
 which runs in exponential time and explores a partial order theory of

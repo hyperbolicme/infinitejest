@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  23 NOV 2011 17:26
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  26 NOV 2011 15:51
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -84,6 +84,7 @@ Package: times 2005/04/12 PSNFSS-v9.2a (SPQR)
 ) (./t1enc.sty
 Package: t1enc 1994/06/01 Standard LaTeX package
 )
+(/usr/local/texlive/2007/texmf-dist/tex/latex/ltxmisc/boxedminipage.sty)
 (../lib/mylatexlib.sty
 
 LaTeX Warning: You have requested package `../lib/mylatexlib',
@@ -497,51 +498,51 @@ Package color Info: Redefining color UserColor on input line 70.
 (./synopsis.aux)
 \openout1 = `synopsis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 19.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 19.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 91.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 91.
 
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 19.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 19.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 91.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 91.
 
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 19.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 19.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 91.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 91.
 
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 19.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 19.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 91.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 91.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 19.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 91.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Try loading font information for T1+txr on input line 19.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Try loading font information for T1+txr on input line 91.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/t1txr.fd
 File: t1txr.fd 2000/12/15 v3.1
@@ -608,9 +609,9 @@ LaTeX Info: Redefining \selectfont on input line 125.
 \RaggedRightParindent=\skip64
 \JustifyingParindent=\skip65
 )
-Package caption Info: float package v1.3 (or newer) detected on input line 19.
+Package caption Info: float package v1.3 (or newer) detected on input line 91.
 Package caption Info: hyperref package v6.74m (or newer) detected on input line
- 19.
+ 91.
 
 (/usr/local/texlive/2007/texmf-dist/tex/context/base/supp-pdf.tex
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -624,7 +625,7 @@ Package caption Info: hyperref package v6.74m (or newer) detected on input line
 \MPnumerator=\count130
 \everyMPtoPDFconversion=\toks32
 )
-Package hyperref Info: Link coloring OFF on input line 19.
+Package hyperref Info: Link coloring OFF on input line 91.
  (/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2006/12/27 v2.28 Cross-referencing by name of section
 
@@ -633,8 +634,8 @@ Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
 )
 \c@section@level=\count131
 )
-LaTeX Info: Redefining \ref on input line 19.
-LaTeX Info: Redefining \pageref on input line 19.
+LaTeX Info: Redefining \ref on input line 91.
+LaTeX Info: Redefining \pageref on input line 91.
 
 (./synopsis.out) (./synopsis.out)
 \@outlinefile=\write3
@@ -643,226 +644,254 @@ LaTeX Info: Redefining \pageref on input line 19.
  <iitm.pdf, id=47, 109.40875pt x 109.40875pt>
 File: iitm.pdf Graphic file (type pdf)
 
-<use iitm.pdf>
-Package color Info: Redefining color UserColor on input line 45.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 45.
- (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/ot1txr.fd
+<use iitm.pdf> [0
+
+{/usr/local/texlive/2007/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./iitm.
+pdf>]
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 134.
+
+
+(/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 45.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 134.
+
 (/usr/local/texlive/2007/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+txsya on input line 45.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 134.
+
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 45.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 134.
+
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 45.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 134.
+
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 45.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 134.
+
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
-) [0
+)
+Package color Info: Redefining color UserColor on input line 135.
+Package color Info: Redefining color UserColor on input line 185.
 
-{/usr/local/texlive/2007/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./iitm.
-pdf>]
-Package color Info: Redefining color UserColor on input line 152.
-
-
-LaTeX Warning: Reference `fig:streetmap' on page 1 undefined on input line 201.
-
+Overfull \hbox (12.99239pt too wide) in paragraph at lines 185--185
+[]$[]$[]\T1/txr/m/it/10 TH[][]\T1/txr/m/n/10 :[] [] \T1/txr/m/n/6 [fig:streetma
+p][]  
+ []
 
 [1pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.218 
+l.188 
       ]
-
-LaTeX Warning: Reference `fig:streetmappath' on page 2 undefined on input line 
-222.
-
-Package color Info: Redefining color UserColor on input line 225.
-
-Overfull \hbox (30.75438pt too wide) in paragraph at lines 225--225
-\T1/txr/m/n/6 Fig ref::fig:streetmappathpeople][]  
- []
-
-Package color Info: Redefining color UserColor on input line 303.
-[2]
-Package color Info: Redefining color UserColor on input line 322.
- [3]
-Package color Info: Redefining color UserColor on input line 409.
-Package color Info: Redefining color UserColor on input line 425.
-Package color Info: Redefining color UserColor on input line 431.
-Package color Info: Redefining color UserColor on input line 433.
-Package color Info: Redefining color UserColor on input line 441.
- [4pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
- has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.442 
-      ]
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-Package color Info: Redefining color UserColor on input line 454.
-Package color Info: Redefining color UserColor on input line 456.
-Package color Info: Redefining color UserColor on input line 459.
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-Package color Info: Redefining color UserColor on input line 480.
-Package color Info: Redefining color UserColor on input line 482.
-Package color Info: Redefining color UserColor on input line 487.
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-[5]
-Package color Info: Redefining color UserColor on input line 518.
-Package color Info: Redefining color UserColor on input line 526.
-Package color Info: Redefining color UserColor on input line 535.
-Package color Info: Redefining color UserColor on input line 537.
-Package color Info: Redefining color UserColor on input line 538.
- [6]
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-Package color Info: Redefining color UserColor on input line 546.
-Package color Info: Redefining color UserColor on input line 551.
-Package color Info: Redefining color UserColor on input line 552.
-Package color Info: Redefining color UserColor on input line 552.
-Package color Info: Redefining color UserColor on input line 554.
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-Package color Info: Redefining color UserColor on input line 601.
-[7]
-LaTeX Font Info:    Try loading font information for OT1+pzc on input line 644.
+LaTeX Font Info:    Try loading font information for OT1+pzc on input line 207.
 
  (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1pzc.fd
 File: ot1pzc.fd 2001/06/04 font definitions for OT1/pzc.
 )
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <10> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 644.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 207.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <7> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 644.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 207.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <5> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 644.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 207.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 634--646
-
- []
-
+Package color Info: Redefining color UserColor on input line 251.
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <12> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 651.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 251.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <8> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 651.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 251.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <6> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 651.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 251.
 
-LaTeX Font Info:    Try loading font information for T1+txtt on input line 652.
 
-(/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/t1txtt.fd
-File: t1txtt.fd 2000/12/15 v3.1
+Overfull \hbox (23.32439pt too wide) in paragraph at lines 251--251
+[]$[]$[]\T1/txr/m/it/10 TH[][]\T1/txr/m/n/10 :[] [] \T1/txr/m/n/6 [fig:streetma
+ppath][]  
+ []
+
+<../img/3_infinite_loop.png, id=77, 823.075pt x 667.49374pt>
+File: ../img/3_infinite_loop.png Graphic file (type png)
+
+<use ../img/3_infinite_loop.png>
+LaTeX Font Info:    Try loading font information for TS1+txr on input line 303.
+
+
+(/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/ts1txr.fd
+File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 654--657
-
- []
-
-
-Overfull \hbox (20.19963pt too wide) in paragraph at lines 649--669
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 647--670
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 682--685
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--694
-
- []
-
-
-Overfull \hbox (20.19963pt too wide) in paragraph at lines 688--704
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 686--705
-
- []
-
-<../img/star.pdf, id=224, 244.915pt x 283.0575pt>
-File: ../img/star.pdf Graphic file (type pdf)
- <use ../img/star.pdf>
-<../img/kstar.pdf, id=225, 263.98625pt x 302.12875pt>
-File: ../img/kstar.pdf Graphic file (type pdf)
- <use ../img/kstar.pdf>
-LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <14.4> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 726.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 731--734
-
- []
-
-
-Overfull \hbox (20.19963pt too wide) in paragraph at lines 726--744
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 724--745
-
- []
-
-[9pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+Package color Info: Redefining color UserColor on input line 337.
+ [2pdfTeX warning (ext4): destination with the same identifier (name{table.2}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.745 
-       <../img/star.pdf
+l.339 
+      ] [3pdfTeX warning (ext4): destination with the same identifier (name{fig
+ure.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \endgroup \set@typeset@protect 
+l.340 T
+       he interval assignment problem to a set system is equivalent to the <../
+img/3_infinite_loop.png>]
+Package color Info: Redefining color UserColor on input line 356.
+ [4]
+Package color Info: Redefining color UserColor on input line 443.
+Package color Info: Redefining color UserColor on input line 459.
+Package color Info: Redefining color UserColor on input line 465.
+Package color Info: Redefining color UserColor on input line 467.
+Package color Info: Redefining color UserColor on input line 475.
+
+
+LaTeX Warning: Marginpar on page 5 moved.
+
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \endgroup \set@typeset@protect 
+l.476 
+      ]
+Package color Info: Redefining color UserColor on input line 488.
+Package color Info: Redefining color UserColor on input line 490.
+Package color Info: Redefining color UserColor on input line 493.
+
+
+LaTeX Warning: Marginpar on page 6 moved.
+
+
+LaTeX Warning: Marginpar on page 6 moved.
+
+Package color Info: Redefining color UserColor on input line 514.
+Package color Info: Redefining color UserColor on input line 516.
+Package color Info: Redefining color UserColor on input line 521.
+
+LaTeX Warning: Marginpar on page 6 moved.
+
+
+LaTeX Warning: Marginpar on page 6 moved.
+
+[6]
+Package color Info: Redefining color UserColor on input line 552.
+Package color Info: Redefining color UserColor on input line 560.
+Package color Info: Redefining color UserColor on input line 569.
+Package color Info: Redefining color UserColor on input line 571.
+Package color Info: Redefining color UserColor on input line 572.
+
+
+LaTeX Warning: Marginpar on page 7 moved.
+
+
+LaTeX Warning: Marginpar on page 7 moved.
+
+Package color Info: Redefining color UserColor on input line 580.
+Package color Info: Redefining color UserColor on input line 585.
+Package color Info: Redefining color UserColor on input line 586.
+Package color Info: Redefining color UserColor on input line 586.
+Package color Info: Redefining color UserColor on input line 588.
+[7]
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+Package color Info: Redefining color UserColor on input line 635.
+[8]
+LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <10.95> not available
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 687.
+
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 689.
+
+ (/usr/local/texlive/2007/texmf-dist/tex/latex/txfonts/t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 691--694
+
+ []
+
+
+Overfull \hbox (15.7896pt too wide) in paragraph at lines 686--706
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 683--709
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 735--736
+
+ []
+
+
+Overfull \hbox (15.7896pt too wide) in paragraph at lines 729--746
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 726--749
+
+ []
+
+<../img/star.pdf, id=237, 244.915pt x 283.0575pt>
+File: ../img/star.pdf Graphic file (type pdf)
+ <use ../img/star.pdf>
+<../img/kstar.pdf, id=238, 263.98625pt x 302.12875pt>
+File: ../img/kstar.pdf Graphic file (type pdf)
+ <use ../img/kstar.pdf>
+LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <14.4> not available
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 774.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 779--782
+
+ []
+
+
+Overfull \hbox (15.7896pt too wide) in paragraph at lines 774--791
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 771--793
+
+ []
+
+Package color Info: Redefining color UserColor on input line 800.
+Package color Info: Redefining color UserColor on input line 808.
+Package color Info: Redefining color UserColor on input line 1889.
+Package color Info: Redefining color UserColor on input line 1892.
+Package color Info: Redefining color UserColor on input line 1895.
+Package color Info: Redefining color UserColor on input line 1897.
+[10pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \endgroup \set@typeset@protect 
+l.1898 
+        <../img/star.pdf
 
 pdfTeX warning: pdflatex (file ../img/star.pdf): PDF inclusion: Page Group dete
 cted which pdfTeX can't handle. Ignoring it.
@@ -871,35 +900,8 @@ cted which pdfTeX can't handle. Ignoring it.
 pdfTeX warning: pdflatex (file ../img/kstar.pdf): PDF inclusion: Page Group det
 ected which pdfTeX can't handle. Ignoring it.
 >]
-Package color Info: Redefining color UserColor on input line 755.
-Package color Info: Redefining color UserColor on input line 763.
-Package color Info: Redefining color UserColor on input line 1844.
-Package color Info: Redefining color UserColor on input line 1847.
-Package color Info: Redefining color UserColor on input line 1850.
 
-Overfull \hbox (21.79439pt too wide) in paragraph at lines 1850--1850
-[]$[]$ []\T1/txr/m/n/10 ELAB[][]O[][]RATE.[]  
- []
-
-Package color Info: Redefining color UserColor on input line 1852.
-
-Overfull \hbox (4.19438pt too wide) in paragraph at lines 1852--1852
-[]$[]$ []\T1/txr/m/n/10 RE[][]WORD[]  
- []
-
-
-LaTeX Warning: Marginpar on page 10 moved.
-
-
-LaTeX Warning: Marginpar on page 10 moved.
-
-[10]
-Package color Info: Redefining color UserColor on input line 1856.
-Package color Info: Redefining color UserColor on input line 1864.
-Package color Info: Redefining color UserColor on input line 1871.
-Package color Info: Redefining color UserColor on input line 1873.
-Package color Info: Redefining color UserColor on input line 1875.
-Package color Info: Redefining color UserColor on input line 1881.
+LaTeX Warning: Marginpar on page 11 moved.
 
 
 LaTeX Warning: Marginpar on page 11 moved.
@@ -907,50 +909,57 @@ LaTeX Warning: Marginpar on page 11 moved.
 
 LaTeX Warning: Marginpar on page 11 moved.
 
-Package color Info: Redefining color UserColor on input line 1893.
-Package color Info: Redefining color UserColor on input line 1907.
+Package color Info: Redefining color UserColor on input line 1901.
+Package color Info: Redefining color UserColor on input line 1909.
+Package color Info: Redefining color UserColor on input line 1916.
+Package color Info: Redefining color UserColor on input line 1918.
+Package color Info: Redefining color UserColor on input line 1920.
+Package color Info: Redefining color UserColor on input line 1926.
 
 LaTeX Warning: Marginpar on page 11 moved.
-
-Package color Info: Redefining color UserColor on input line 1914.
-Package color Info: Redefining color UserColor on input line 1915.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1909--1918
-
- []
 
 
 LaTeX Warning: Marginpar on page 11 moved.
 
+Package color Info: Redefining color UserColor on input line 1938.
 [11]
-Package color Info: Redefining color UserColor on input line 1932.
- [12] (./synopsis.bbl [13]) [14] [15] (./synopsis.aux)
+Package color Info: Redefining color UserColor on input line 1952.
+Package color Info: Redefining color UserColor on input line 1959.
+Package color Info: Redefining color UserColor on input line 1960.
 
-LaTeX Warning: There were undefined references.
+Underfull \hbox (badness 10000) in paragraph at lines 1954--1963
 
- ) 
+ []
+
+
+LaTeX Warning: Marginpar on page 12 moved.
+
+Package color Info: Redefining color UserColor on input line 1977.
+[12] (./synopsis.bbl [13]) [14] [15] (./synopsis.aux) ) 
 Here is how much of TeX's memory you used:
- 6935 strings out of 94073
- 96336 string characters out of 1162984
- 159996 words of memory out of 1500000
- 9888 multiletter control sequences out of 10000+50000
- 93599 words of font info for 162 fonts, out of 1200000 for 2000
+ 7012 strings out of 94073
+ 97591 string characters out of 1162984
+ 158173 words of memory out of 1500000
+ 9945 multiletter control sequences out of 10000+50000
+ 118618 words of font info for 193 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 42i,15n,41p,880b,503s stack positions out of 5000i,500n,6000p,200000b,5000s
-{/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2007/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/local/texlive/
-2007/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2007/t
-exmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2007/texmf-di
-st/fonts/type1/public/txfonts/rtxsc.pfb></usr/local/texlive/2007/texmf-dist/fon
-ts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2007/texmf-dist/fonts/typ
-e1/public/txfonts/txsy.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/publ
-ic/txfonts/txsyb.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/times/
-utmb8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
-></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/lo
-cal/texlive/2007/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on synopsis.pdf (16 pages, 220154 bytes).
+ 42i,20n,41p,1060b,503s stack positions out of 5000i,500n,6000p,200000b,5000s
+{/usr/local/texlive/2007
+/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2007/texmf-dist/fon
+ts/type1/public/txfonts/rtcxi.pfb></usr/local/texlive/2007/texmf-dist/fonts/typ
+e1/public/txfonts/rtxb.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/publ
+ic/txfonts/rtxmi.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/public/txf
+onts/rtxr.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/public/txfonts/rt
+xsc.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/public/txfonts/t1xtt.pf
+b></usr/local/texlive/2007/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr
+/local/texlive/2007/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/local
+/texlive/2007/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2
+007/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2007/texmf-
+dist/fonts/type1/urw/times/utmri8a.pfb></usr/local/texlive/2007/texmf-dist/font
+s/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on synopsis.pdf (16 pages, 358378 bytes).
 PDF statistics:
- 390 PDF objects out of 1000 (max. 8388607)
- 129 named destinations out of 1000 (max. 131072)
- 112 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 402 PDF objects out of 1000 (max. 8388607)
+ 131 named destinations out of 1000 (max. 131072)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 

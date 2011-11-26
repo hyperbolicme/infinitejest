@@ -525,7 +525,8 @@
     \trackingstart{#1}%
     \if@trackinmargins%
       \textsuperscript{\thefootnote}%
-      \marginText{#1}{\userco{\textit{Text added.}}}%
+      \marginText{#1}{\tiny\userco{\textit{Text added.}}}%anjus%
+%anjus%            \marginText{#1}{\userco{\textit{Text added.}}}%
     \else%
       \if@trackinline%
           {\footnotesize\textsuperscript{\UserLabel}}%
@@ -554,7 +555,8 @@
     \trackingstart{#1}%
     \if@trackinmargins%
       \textsuperscript{\thefootnote}%
-      \marginText{#1}{\userst{#2}}%
+      \marginText{#1}{\tiny\usertext{~[#2]}}% %anjus%
+%anjus%         \marginText{#1}{\userst{#2}}%
     \else%
       \if@trackinline%
         {\footnotesize\textsuperscript{\UserLabel}\usertext{\st{#2}}}%     
@@ -583,7 +585,8 @@
     \trackingstart{#1}%
     \if@trackinmargins%
       \textsuperscript{\thefootnote}%
-      \marginText{#1}{\userst{#2}}%
+      \marginText{#1}{\tiny\usertext{~[#2]}}% %anjus%
+%anjus%            \marginText{#1}{\userst{#2}}%
     \else%
       \if@trackinline%
         {\footnotesize\textsuperscript{\UserLabel}\usertext{\st{#2}}}% 
@@ -607,7 +610,7 @@
 
 
 %%
-%% --------------- Define frontend command: \annonte
+%% --------------- Define frontend command: \annote
 %%                 usage: \annote[Editor]{highlighted text}{note text}
 \newcommand{\annote}[3][]{%
   % Make the underlining thicker and higher.
@@ -615,8 +618,9 @@
   \if@trackchanges%
     \trackingstart{#1}%
     \if@trackinmargins%
-      \textsuperscript{\thefootnote}%
-      \marginText{#1}{\userco{#3}}%
+     \textsuperscript{\thefootnote}%
+      \marginText{#1}{\tiny\usertext{~[#3]}}% %anjus%
+%anjus%      \marginText{#1}{\userco{#3}}%
       \ul{#2}%
     \else%
       \if@trackinline%
