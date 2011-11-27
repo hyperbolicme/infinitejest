@@ -672,10 +672,10 @@ hypergraph\footnote{A {\em hypergraph} is an alternate representation
   of a set system and will be used through out this section.} and thus
 is a characterization for COP. In our work we extend this
 characterization and find that trio-wise intersection cardinality
-preservation makes a tree path labeling (TPL) feasible, which is a
-generalization of the COP problem. This problem, {\FTPL}\footnote{A
+preservation makes a tree path labeling \footnote{A
   {\em tree path labeling} $\cl$ is a bijection of paths from the
-  target tree $T$ to the hyperedges in given hypergraph $\cF$.}, is
+  target tree $T$ to the hyperedges in given hypergraph $\cF$.} (TPL) feasible, which is a
+generalization of the COP problem. This problem is
 defined as follows.
 
 %\begin{tabular}[t]{c}
@@ -688,9 +688,9 @@ defined as follows.
  \hline\\
     {\tt Input} & 
     \begin{minipage}[t]{\probdefwidth}
-      A hypergraph $\cF$ with vertex set $U$, a tree $T$ and a
-      bijection $\cl$~$:$~$\cF \rightarrow \cP$, where $\cP$ is a set
-      of paths from $T$.\\
+      A hypergraph $\cF$ with vertex set $U$, a tree $T$, a set of
+      paths $\cP$ from $T$ and a
+      bijection $\cl$~$:$~$\cF \rightarrow \cP$.\\
     \end{minipage}\\
     {\tt Question} &
     \begin{minipage}[t]{\probdefwidth}
@@ -707,7 +707,8 @@ defined as follows.
 }
 %\end{tabular}
 
-We give a necessary and sufficient condition for {\FTPL} to output in
+We give a necessary and sufficient condition (called ICPPL)\tnote{say a few
+  words about icppl} for {\FTPL} to output in
 affirmative. This characterization can be checked in polynomial time.
 The most interesting consequence is that in our constructive
 procedure, it is sufficient to iteratively check if three-way
@@ -717,6 +718,8 @@ hyperedges is of the same cardinality as the intersection of the
 corresponding paths.  Thus this generalizes the well studied question
 of the feasible interval assignment problem which is the special case
 when the target tree $T$ is simply a path \cite{wlh02,nsnrs09}.
+
+\tnote{A few lines on the algo itself.}
 
 Aside from checking if a given TPL is feasible, we also solve the
 problem of computing a feasible TPL for a given hypergraph and target
@@ -745,13 +748,15 @@ tree, if one exists. This problem, {\CFTPL}, is defined as follows.
   % \end{singlespace}
 \end{minipage}\\
 }
+
+\def \kstar {$k$-subdivided star}
 \def \CFTPLKTREE {\sc Compute $k$-subdivided Star Path Labeling}
 
 We present a polynomial time algorithm for {\CFTPL} when the target
-tree $T$ belongs to a special class of trees called {\em
-  $k$-subdivided stars} and when the hyperedges in the hypergraph
-$\cF$ have at most $k+2$ vertices. The examples of $k$-subdivided
-stars are given in Figure~\ref{fig:ksubstar}.
+tree $T$ belongs to a special class of trees called {\em \kstar s} and
+when the hyperedges in the hypergraph $\cF$ have at most $k+2$
+vertices. A couple of examples of {\kstar s} are given in
+Figure~\ref{fig:ksubstar}.
 
 %This problem, {\CFTPLKTREE}, is defined as follows. \\
 \begin{figure}[t]
@@ -761,7 +766,7 @@ stars are given in Figure~\ref{fig:ksubstar}.
   \includegraphics[scale=0.3]{../img/kstar.pdf}\\
   (a) &&&& (b)
   \end{tabular}
-  \caption{\figtabsize Examples of $k$-subdivided stars. (a) $k = 0$
+  \caption{\figtabsize Examples of {\kstar s}. (a) $k = 0$
     (b) $k = 2$ }
   \label{fig:ksubstar}
 \end{figure}
@@ -777,8 +782,7 @@ stars are given in Figure~\ref{fig:ksubstar}.
     {\tt Input} & 
     \begin{minipage}[t]{\probdefwidth}
       A hypergraph $\cF$ with vertex set $U$ such that every hyperedge
-      $S \in \cF$ is of cardinality atmost $k+2$ and a $k$-subdivided
-      star $T$.\\
+      $S \in \cF$ is of cardinality atmost $k+2$ and a {\kstar} $T$.\\
     \end{minipage}\\
     {\tt Question} &
     \begin{minipage}[t]{\probdefwidth}
@@ -794,9 +798,18 @@ stars are given in Figure~\ref{fig:ksubstar}.
 In spite of this being a restricted case, we believe that our results
 are of significant interest in understanding the nature of {\sc Graph
   Isomorphism} which is polynomial time solvable in interval graphs
-while being hard on path graphs\cite{kklv10}.
-
-\tnote{give gyan on why ktree is so.}
+while being hard on path graphs\cite{kklv10}. {\kstar s} are a class
+of trees which are in many ways very close to intervals or paths. Each
+ray\footnote{The path from a leaf to the root, the vertex with highest
+degree, is called a {\em ray} of the \kstar.} are independent except
+for the root\footnote{The vertex with maximum degree in a {\kstar} is
+  called {\em root}} and hence can be considered as an independent interval
+till the root. Our algorithm builds on this fact and uses the interval
+assignment algorithm\cite{nsnrs09} up until ``reaching'' the root and
+then uses the trio-wise intersection cardinality (the extra condition
+in ICPPL after ICPIA) check to resolve the
+ambiguity about which ray the algorithm should ``grow'' the solution
+into in the next iteration.
 
 
 We also have an algorithm for solving {\CFTPL} with no restrictions

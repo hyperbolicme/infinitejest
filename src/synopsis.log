@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  26 NOV 2011 15:51
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  27 NOV 2011 07:05
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -841,57 +841,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 683--709
 
  []
 
+Package color Info: Redefining color UserColor on input line 711.
+Package color Info: Redefining color UserColor on input line 722.
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 735--736
+Underfull \hbox (badness 10000) in paragraph at lines 738--739
 
  []
 
 
-Overfull \hbox (15.7896pt too wide) in paragraph at lines 729--746
+Overfull \hbox (15.7896pt too wide) in paragraph at lines 732--749
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 726--749
+Underfull \hbox (badness 10000) in paragraph at lines 729--751
 
  []
 
-<../img/star.pdf, id=237, 244.915pt x 283.0575pt>
+<../img/star.pdf, id=239, 244.915pt x 283.0575pt>
 File: ../img/star.pdf Graphic file (type pdf)
  <use ../img/star.pdf>
-<../img/kstar.pdf, id=238, 263.98625pt x 302.12875pt>
+<../img/kstar.pdf, id=240, 263.98625pt x 302.12875pt>
 File: ../img/kstar.pdf Graphic file (type pdf)
  <use ../img/kstar.pdf>
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <14.4> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 774.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 779.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 779--782
+Underfull \hbox (badness 10000) in paragraph at lines 784--786
 
  []
 
 
-Overfull \hbox (15.7896pt too wide) in paragraph at lines 774--791
+Overfull \hbox (15.7896pt too wide) in paragraph at lines 779--795
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 771--793
+Underfull \hbox (badness 10000) in paragraph at lines 776--797
 
  []
 
-Package color Info: Redefining color UserColor on input line 800.
-Package color Info: Redefining color UserColor on input line 808.
-Package color Info: Redefining color UserColor on input line 1889.
-Package color Info: Redefining color UserColor on input line 1892.
-Package color Info: Redefining color UserColor on input line 1895.
-Package color Info: Redefining color UserColor on input line 1897.
 [10pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
  has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.1898 
-        <../img/star.pdf
+l.813 
+       <../img/star.pdf
 
 pdfTeX warning: pdflatex (file ../img/star.pdf): PDF inclusion: Page Group dete
 cted which pdfTeX can't handle. Ignoring it.
@@ -900,47 +896,57 @@ cted which pdfTeX can't handle. Ignoring it.
 pdfTeX warning: pdflatex (file ../img/kstar.pdf): PDF inclusion: Page Group det
 ected which pdfTeX can't handle. Ignoring it.
 >]
+Package color Info: Redefining color UserColor on input line 821.
+Package color Info: Redefining color UserColor on input line 1902.
+Package color Info: Redefining color UserColor on input line 1905.
+Package color Info: Redefining color UserColor on input line 1908.
+Package color Info: Redefining color UserColor on input line 1910.
+
+
+LaTeX Warning: Marginpar on page 11 moved.
+
 
 LaTeX Warning: Marginpar on page 11 moved.
 
 
 LaTeX Warning: Marginpar on page 11 moved.
 
-
-LaTeX Warning: Marginpar on page 11 moved.
-
-Package color Info: Redefining color UserColor on input line 1901.
-Package color Info: Redefining color UserColor on input line 1909.
-Package color Info: Redefining color UserColor on input line 1916.
-Package color Info: Redefining color UserColor on input line 1918.
-Package color Info: Redefining color UserColor on input line 1920.
-Package color Info: Redefining color UserColor on input line 1926.
-
-LaTeX Warning: Marginpar on page 11 moved.
-
-
-LaTeX Warning: Marginpar on page 11 moved.
-
-Package color Info: Redefining color UserColor on input line 1938.
+Package color Info: Redefining color UserColor on input line 1914.
+Package color Info: Redefining color UserColor on input line 1922.
 [11]
-Package color Info: Redefining color UserColor on input line 1952.
-Package color Info: Redefining color UserColor on input line 1959.
-Package color Info: Redefining color UserColor on input line 1960.
+Package color Info: Redefining color UserColor on input line 1929.
+Package color Info: Redefining color UserColor on input line 1931.
+Package color Info: Redefining color UserColor on input line 1933.
+Package color Info: Redefining color UserColor on input line 1939.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1954--1963
+
+LaTeX Warning: Marginpar on page 12 moved.
+
+
+LaTeX Warning: Marginpar on page 12 moved.
+
+Package color Info: Redefining color UserColor on input line 1951.
+Package color Info: Redefining color UserColor on input line 1965.
+
+LaTeX Warning: Marginpar on page 12 moved.
+
+Package color Info: Redefining color UserColor on input line 1972.
+Package color Info: Redefining color UserColor on input line 1973.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1967--1976
 
  []
 
 
 LaTeX Warning: Marginpar on page 12 moved.
 
-Package color Info: Redefining color UserColor on input line 1977.
+Package color Info: Redefining color UserColor on input line 1990.
 [12] (./synopsis.bbl [13]) [14] [15] (./synopsis.aux) ) 
 Here is how much of TeX's memory you used:
- 7012 strings out of 94073
- 97591 string characters out of 1162984
- 158173 words of memory out of 1500000
- 9945 multiletter control sequences out of 10000+50000
+ 7015 strings out of 94073
+ 97628 string characters out of 1162984
+ 156173 words of memory out of 1500000
+ 9946 multiletter control sequences out of 10000+50000
  118618 words of font info for 193 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  42i,20n,41p,1060b,503s stack positions out of 5000i,500n,6000p,200000b,5000s
@@ -957,9 +963,9 @@ b></usr/local/texlive/2007/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr
 007/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2007/texmf-
 dist/fonts/type1/urw/times/utmri8a.pfb></usr/local/texlive/2007/texmf-dist/font
 s/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on synopsis.pdf (16 pages, 358378 bytes).
+Output written on synopsis.pdf (16 pages, 360068 bytes).
 PDF statistics:
- 402 PDF objects out of 1000 (max. 8388607)
- 131 named destinations out of 1000 (max. 131072)
+ 409 PDF objects out of 1000 (max. 8388607)
+ 134 named destinations out of 1000 (max. 131072)
  117 words of extra memory for PDF output out of 10000 (max. 10000000)
 
