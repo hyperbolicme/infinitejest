@@ -24,12 +24,6 @@ Kellogg~S. Booth.
 \newblock {\em PQ-tree algorithms}.
 \newblock PhD thesis, Univ. California, Berkeley, 1975.
 
-\bibitem[BP92]{bp93}
-J.~R.~S. Blair and B.~Peyton.
-\newblock An introduction to chordal graphs and clique trees.
-\newblock Technical report, Oak Ridge National Laboratory, Oak Ridge, Tennessee
-  37831, 1992.
-
 \bibitem[BS03]{bs03}
 David~A. Bader and Sukanya Sreshta.
 \newblock A new parallel algorithm for planarity testing, April~11 2003.
