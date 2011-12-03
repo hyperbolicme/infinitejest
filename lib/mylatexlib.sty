@@ -33,9 +33,9 @@
 \usepackage{textcomp}          % Has certain special chars like
                                %  \textreferencemark
 
-%\def \tnote {\txnote}
+\usepackage[inline] 
 %\usepackage[margins] 
-\usepackage[finalnew]
+%\usepackage[finalnew]
          {../lib/trackchanges} % For tracking changes.
                                % :Package options:
                                % [finalold]
@@ -65,7 +65,7 @@
 \addeditor{GTC}                % stuff to prep for synopsis meeting +
                                %  should go into thesis
 \addeditor{bogus2}             % 
-\addeditor{bogus3}             % 
+\addeditor{a}                  % 
 \addeditor{bogus4}             % 
 \addeditor{TH}                 % extra stuff that need to go into thesis
 
@@ -142,10 +142,10 @@
   Binary Matrices} 
 \def \myname {Anju Srinivasan}
 \def \mydegree {Master of Science {\em by Research}}
-\def \mysubmissionmonth {November 2011}
+\def \mysubmissionmonth {December 2011}
 \def \mydept {Computer Science \& Engineering}
 \def \myadvisor {N.\;S.\;Narayanaswamy}
-\def \mysubmissiondate {25 October 2011}
+\def \mysubmissiondate {15 December 2011}
 \def\overlap{\between}
 \def\icppl{\maltese} 
 \def\xbullet{\textreferencemark} %\textreferencemark
@@ -177,6 +177,24 @@
 \newcommand{\set}[1]{\left\{ #1\right\}}
 \newcommand{\funct}[1]{(\left #1\right)}
 \newcommand{\Eqr}[1]{Eq.~(\ref{#1})}
+\newcommand{\supp}[1]{supp\left( #1 \right)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theorem etc. commands
+%%%%% COMMENT FOR BEAMER %%%%%
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newenvironment{proof}[1][Proof]{\begin{trivlist}
+                                \item[\hskip \labelsep {\bfseries
+                                    #1}]}
+                               {\end{trivlist}}
+\newtheorem{definition}{Definition}[section]
+\newcommand{\qed}{\hfill \mbox{\raggedright \rule{.07in}{.1in}}}
+%%%%% END - COMMENT FOR BEAMER %%%%%
+\newtheorem{observation}{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+
 
 % \newenvironment{denselist}{
 %   \begin{list}{(\arabic{enumi})}{\usecounter{enumi}
@@ -192,12 +210,3 @@
 %       \setlength{\itemsep}{0pt} }}{\end{list}}
 
 
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-\newenvironment{proof}[1][Proof]{\begin{trivlist}
- \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
-\newtheorem{definition}{Definition}[section]
-\newtheorem{observation}{Observation}
-\newcommand{\qed}{\hfill \mbox{\raggedright \rule{.07in}{.1in}}}

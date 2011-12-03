@@ -1,0 +1,30 @@
+\contentsline {chapter}{ACKNOWLEDGEMENTS}{i}{chapter*.1}
+\contentsline {chapter}{ABSTRACT}{ii}{chapter*.2}
+\contentsline {chapter}{LIST OF TABLES}{v}{chapter*.4}
+\contentsline {chapter}{LIST OF FIGURES}{vi}{chapter*.5}
+\contentsline {chapter}{ABBREVIATIONS}{vii}{chapter*.6}
+\contentsline {chapter}{NOTATION}{viii}{chapter*.7}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}to area}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}to problem}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}to your thesis}{2}{section.1.3}
+\contentsline {section}{\numberline {1.4}Organization of document}{2}{section.1.4}
+\contentsline {chapter}{\numberline {2}Consecutive Ones property}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Characterization of COP}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Recognition of COP}{3}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}\tnote [a]{Polynomial time algorithms}}{3}{changenumber.3.3}
+\contentsline {subsection}{\numberline {2.2.2}\tnote [a]{Tucker's submatrices, Dom's algo to find them}}{3}{changenumber.3.5}
+\contentsline {subsection}{\numberline {2.2.3}\tnote [a]{McConnell's certificate}}{3}{changenumber.3.6}
+\contentsline {section}{\numberline {2.3}Alteration to matrices to get COP}{3}{section.2.3}
+\contentsline {section}{\numberline {2.4}brief analysis of hard problems with input having COP (chap 5, 6 in dom)}{4}{section.2.4}
+\contentsline {section}{\numberline {2.5}Complexity of certain COP variations}{4}{section.2.5}
+\contentsline {chapter}{\numberline {3}Other problems related to COP }{5}{chapter.3}
+\contentsline {chapter}{\numberline {4}Research - Tree path labeling of path hypergraphs}{6}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{6}{section.4.1}
+\contentsline {section}{\numberline {4.2}Preliminaries}{9}{section.4.2}
+\contentsline {section}{\numberline {4.3}Characterization of Feasible Tree Path Labeling}{11}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}ICPPL when given tree is a path}{17}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}Testing for feasible path assignments to $k$-subdivided star}{18}{section.4.4}
+\contentsline {chapter}{\numberline {5} Research - [title TBD]}{22}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{23}{chapter.6}
+\contentsline {chapter}{\numberline {A}Appendix A}{24}{appendix.A}
