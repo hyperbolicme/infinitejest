@@ -7,6 +7,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{mylatexlib} [2011/10/21]
 
+%%%% TEST BEAMER
 \usepackage{epsfig}            % Graphics related. exactly what?
 \usepackage{graphicx}          % For MetaPost
 \usepackage{ifpdf}             
@@ -27,15 +28,19 @@
 \usepackage{latexsym}          % Symbols - exactly what?
 \usepackage{amssymb}           % Symbols - exactly what?
 \usepackage{amsfonts}          % Symbols - exactly what?
-% \usepackage{txfonts}           % Has certain special chars like
-                               %  \textreferencemark NOT COMPATIBLE
-                               %  WITH BEAMER, THESIS STYLE. MESSES UP FONTS.
+% TEST BEAMER % \usepackage{txfonts}           % Has certain special chars like
+% TEST BEAMER %                              %  \textreferencemark 
 %\usepackage{pifont}
 \usepackage{textcomp}          % Has certain special chars like
                                %  \textreferencemark
+%%%% END TEST BEAMER
 
-\usepackage[inline] 
-%\usepackage[margins] 
+\usepackage[inline]            % Works better if all normal text
+                                % features (bulleted text etc.) are
+                                % needed in track comments.
+%\usepackage[margins]           % More readable/closer to final
+                                % document in terms of # pages and
+                                % regular look and feel.
 %\usepackage[finalnew]
          {../lib/trackchanges} % For tracking changes.
                                % :Package options:
@@ -74,9 +79,11 @@
                       {OT1}{pzc}{m}{it}
 \DeclareMathAlphabet{\mathcalligra}
                       {T1}{calligra}{m}{n}
+%%%% TEST BEAMER
 \ifpdf                         % For MetaPost 
 \DeclareGraphicsRule{*}{mps}{*}{} 
 \fi 
+%%%% END TEST BEAMER
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -149,9 +156,7 @@
 \def \mysubmissiondate {15 December 2011}
 \def\overlap{\between}
 \def\icppl{\maltese} 
-\def\xbullet{\maltese} %  Removing \textreferencemark because
-                       % package{txfonts} messes up general font
-                       % thingies. Using \maltese to deal with it.
+\def\xbullet{\textreferencemark} %\textreferencemark
 \def\lndisplay{1}
 \def\marginal{{super-marginal }}
 \def\icpplpr{Property}
@@ -166,6 +171,7 @@
 \def\assign           {\leftarrow}
 \def\iff              {if and only if }
 
+%%%% TEST BEAMER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % New/renew commands
 \renewcommand                  % Format of comments in package 
@@ -176,6 +182,7 @@
         \parbox[right]{\commentboxsize}{ 
           \space \tt{ #1 }}\\
       \end{tabular}}}
+%%%% END TEST BEAMER
 \newcommand{\seq}[1]{\left\langle #1 \right\rangle}
 \newcommand{\set}[1]{\left\{ #1\right\}}
 \newcommand{\funct}[1]{(\left #1\right)}

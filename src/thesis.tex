@@ -2,7 +2,7 @@
               {iitmdiss}
 
 \usepackage{times}             % Font?
-\usepackage{t1enc}             % TI encoding??  
+\usepackage{t1enc}             % T1 encoding??  
                             %%% Graphics related.                 %
 
 \usepackage{../lib/mylatexlib}
@@ -264,7 +264,7 @@ theory \cite{mcg04} for interval graph recognition, characterization
 of hamiltonian graphs, and in integer linear programming
 \cite{ht02,hl06}.  Recognition of COP is polynomial time solvable by
 several algorithms. PQ trees \cite{bl76}, variations of PQ trees
-\cite{mm09,wlh01,wlh02,mcc04}, ICPIA \cite{nsnrs09} are the main ones.
+\cite{mm96,wlh01,wlh02,mcc04}, ICPIA \cite{nsnrs09} are the main ones.
 
 %\noindent
 The problem of COP testing can be easily seen as a simple constraint
@@ -1432,12 +1432,20 @@ labeling to the $k$-subdivded tree $T$.
 \chapter{Appendix A}
 
 
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography.
-
 \begin{singlespace}
+%\begin{thebibliography}{10}
+\addcontentsline{toc}{section}{Bibliography}
+
+{\footnotesize
+  \bibliographystyle{alpha} 
   \bibliography{../lib/cop-variants__thesis}
+}
+%\end{thebibliography}
 \end{singlespace}
+\newpage
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
