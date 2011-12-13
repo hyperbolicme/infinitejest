@@ -2,7 +2,7 @@
 \beamer@sectionintoc {1}{Introduction}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{An Illustration}{3}{0}{1}
 \beamer@subsectionintoc {1}{2}{Motivation}{28}{0}{1}
-\beamer@subsectionintoc {1}{3}{Definitions}{29}{0}{1}
+\beamer@subsectionintoc {1}{3}{Definitions}{31}{0}{1}
 \beamer@sectionintoc {2}{Characterization of a feasible TPL}{33}{0}{2}
 \beamer@subsectionintoc {2}{1}{ICPPL}{34}{0}{2}
 \beamer@subsectionintoc {2}{2}{Filtering algorithm}{35}{0}{2}
