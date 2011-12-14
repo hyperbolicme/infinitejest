@@ -1,4 +1,4 @@
-\begin{thebibliography}{KKLV10}
+\begin{thebibliography}{Gol04}
 
 \bibitem[Gol04]{mcg04}
 Martin~Charles Golumbic.
@@ -6,12 +6,6 @@ Martin~Charles Golumbic.
   Annals of Discrete Mathematics}.
 \newblock Elsevier Science B.V., 2004.
 \newblock Second Edition.
-
-\bibitem[KKLV10]{kklv10}
-Johannes K{\"o}bler, Sebastian Kuhnert, Bastian Laubner, and Oleg Verbitsky.
-\newblock Interval graphs: Canonical representation in logspace.
-\newblock {\em Electronic Colloquium on Computational Complexity (ECCC)},
-  17:43, 2010.
 
 \bibitem[NS09]{nsnrs09}
 N.~S. Narayanaswamy and R.~Subashini.
