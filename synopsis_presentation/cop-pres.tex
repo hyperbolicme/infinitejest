@@ -3,10 +3,10 @@
                       dvipsnames},% Since beamer loads color package 
                                   %  automatically \usepackage{color}   
                                   %  cannot be used to pass options.
-              draft,             % Draft WIP version without header &
+%              draft,             % Draft WIP version without header &
 %                                  %  footer. Faster compilation.
 %               handout,           % Handout version. not sure what it does.
-%               notes              % To print notes.
+%              notes              % To print notes.
                     ]{beamer}   
 
 %\includeonlyframes{FREXAMPLE,FREXAMPLE2,FREXAMPLE3,FR_EX_PROB}              
@@ -186,7 +186,7 @@
 \institute[CS09S012]
          {as part of {\bf M.\;S.} by Research \\ 
           advised by {\bf Dr.\;N.\;S.\;Narayanaswamy}\\ 
-          CSE, IITM, Chennai - 36}
+          CSED, IITM, Chennai - 36}
 
 \date{15 Dec 2011}
 
@@ -204,44 +204,37 @@
   \tableofcontents % [pausesections]
 }
 
-
 \section{Introduction}
 
 \subsection{Motivation}
 \frame[label=motive]{
-  \frametitle{Consecutive Ones $\rightarrow$ Path Labeling}
-  \framesubtitle{The motivation}
+  \frametitle{The Motivation}
+  \framesubtitle{consecutive ones $\rightarrow$ tree path labeling}
 
-  \tnote{get a better image!}
+  \tnote{get a better image!  break it down into overlays}
 
-   \only<1>{\includegraphics[scale=0.4]{m1.pdf}} 
-  
-  \tnote[a]{break it down into overlays}
-%  \note{}
+  \only<1>{\includegraphics[scale=0.2]{../img/smemo.pdf}}%{m1.pdf}} % 
 }
 
-\frame{
-
-\tnote{A 30 sec slide on COP? TBD IN THE END}
-
-}
+% \frame{
+% \tnote{A 30 sec slide on COP? TBD IN THE END}
+% }
 
 
 \subsection{An Illustration}
 
 \frame[label=FREXAMPLE]{
-  \frametitle{An Illustration}
-
-  \begin{centering}
-    \tnote{say something less apologetic!}
-
-%   {\bf Caveat}
-%   \begin{itemize}
-%     \item A very simplistic example.
-%     \item Aims only to introduce the combinatorial problem of TPL.
-%   \end{itemize}
+  \frametitle{}
+  \begin{overlayarea}{\textwidth}{1cm}
     
-  \end{centering}
+    \begin{centering}
+      \only<1->{\Huge An Illustration}
+    \end{centering}
+
+    \begin{centering}
+      \only<2>{of Tree Path Labeling problem}
+    \end{centering}
+  \end{overlayarea}
 }
 
 % \frame[label=FREXAMPLE2]{
@@ -315,195 +308,230 @@
 \def \xTTT {\textcolor{\clrTTT}{\mathbb{F}}}
 
 \frame[label=FREXAMPLE2]{
-  \frametitle{A Study Group Housing problem}
+  \frametitle{Study Group Accommodation problem}
 
-  \tnote{CHUCK THE TEXTUAL SET DEFINITIONS. ONLY DIAGRAMS.}
+  \tnote{ONLY DIAGRAMS.\\
+  a venn diagram of just the universe\\
+  a venn diagram of the grouping}
 
-  \begin{block}{} 
-  \begin{itemize}[<uncover@+->]
-  \item A set of \alert{$n$ students} arrive for a summer course, say
+  \note{
+%  \begin{block}{} 
+  \begin{itemize}%[<uncover@+->]
+  \item A set of {$n$ students} arrive for a summer course, say
     { $\{\xPa,\; \xPi,\; \xSn,\; \xWo,\; \xVi,\; \xLi,\; \xCh,\;
     \xSa,\; \xFr,\; \xSc,\; \xLu\}$, $n= 11$}
-  \tnote{a venn diagram of just the universe}
-
-  \item They form \alert{$m$ study groups}, say {$\{\xLLL,
+  \item They form {$m$ study groups}, say {$\{\xLLL,
       \xGGG, \xBBB, \xTTT\}$, $m = 4$}
-  \tnote{a venn diagram of the grouping}
-
   \end{itemize}
-  \end{block}
-
-%\note{}  
+%  \end{block}
+  }
 }
 
+
 \frame[label=FREXAMPLE3]{
-  \frametitle{A Study Group Housing problem}
+  \frametitle{Study Group Accommodation problem}
 
-  \begin{block}{} 
-  \begin{itemize}[<uncover@+->]
-
-  \item A student may be in more than one study group but \alert{will be in
-    at least one}, say \\
   \tnote{repeat the venn diagram of the grouping (before this bullet)}
-
-  \begin{tabular}{rcl}
-    $\xLLL $&$=$&$ \{\xCh,\;  \xSa,\;  \xFr,\;  \xSc,\;  \xLu \}$\\
-    $\xGGG $&$=$&$ \{\xPa,\;  \xPi,\;  \xVi,\;  \xCh \}$\\
-    $\xBBB $&$=$&$ \{\xSn,\;  \xPi,\;  \xWo \}$\\
-    $\xTTT $&$=$&$ \{\xVi,\;  \xLi,\;  \xCh,\;  \xFr \}$\\
- \end{tabular}
-
-  \item There are \alert{$n$ single occupancy apartments} in \residenceblock.
   \tnote{image of infinite loop}
 
-  \item Streets connecting them \alert{do not form loops.}
-  \end{itemize}
-  \end{block}
+  \note{
+%  \begin{block}{} 
+  \begin{itemize}%[<uncover@+->]
 
-%\note{}  
-%  \end{centering}
+  \item A student may be in more than one study group but {will be in
+    at least one}, say \\
+    \begin{tabular}{rcl}
+      $\xLLL $&$=$&$ \{\xCh,\;  \xSa,\;  \xFr,\;  \xSc,\;  \xLu \}$\\
+      $\xGGG $&$=$&$ \{\xPa,\;  \xPi,\;  \xVi,\;  \xCh \}$\\
+      $\xBBB $&$=$&$ \{\xSn,\;  \xPi,\;  \xWo \}$\\
+      $\xTTT $&$=$&$ \{\xVi,\;  \xLi,\;  \xCh,\;  \xFr \}$\\
+    \end{tabular}
+  \item There are {$n$ single occupancy apartments} in \residenceblock.
+  \item Streets connecting them {do not form loops.}
+  \end{itemize}
+%  \end{block}
+  }
+
+
 }
 
 
 \frame[label=FR_EX_PROB]{
-  \frametitle{A Study Group Housing problem}
-  \begin{block}{The problem}
+  \framesubtitle{}
+  {\center \Huge The problem}
+
+  \begin{block}{}
+    \begin{centering}
     {How should the students be allocated apartments such that
-    each study group has the least distance to travel for a discussion?}
+    each study group \alert{has the least distance to travel} for a discussion?} 
+    \end{centering}    
   \end{block}
+
+  \begin{block}<2->{Additional condition}
+    \begin{centering}
+    \begin{overlayarea}{\textwidth}{1cm}
+    {Students in a group should form a path.\\} \only<3>{Else, it is \em a
+    subtree labeling problem.}
+    \end{overlayarea}
+    \end{centering}
+  \end{block}
+
 }
 
 
 \frame[label=FR_EX_IMAGE]{
-  \frametitle{A Study Group Housing problem}
+  \frametitle{Study Group Accommodation problem}
 
   \tnote{update to the example in synopsis doc}
 
-% \begin{centering}
    \only<1>{\includegraphics[scale=0.4]{a1.pdf}}
    \only<2>{\includegraphics[scale=0.4]{a2.pdf}}
    \only<3>{\includegraphics[scale=0.4]{a3.pdf}}
-%  \end{centering}
 }
 
 
-\frame{ \frametitle{Tree Path Labeling of Set Systems}
-  \framesubtitle{The combinatorial problem terminology}
+\frame{ 
+  \frametitle{Basic terminology} %Tree Path Labeling of Set Systems}
+  \framesubtitle{a crash course on the TPL machinery}
 
-  \tnote{SPLIT THIS INTO FOUR SLIDES WITH CORRESPONDING PREVIOUS
+  \tnote{HAVE CORRESPONDING PREVIOUS
     IMAGES REPEATED} 
-
-  \begin{block}{Terminology}
-
-    \begin{itemize}[<uncover@+->]
-    \item The set of study groups $\{\xLLL,
+  \begin{block}{}
+    The set of study groups $\{\xLLL,
       \xGGG, \xBBB, \xTTT\}$ $\rightarrow$
       \alert{\sc Hypergraph}
-    \item {\residenceblock} block $\rightarrow$ \alert{\sc
+ \end{block}
+}
+
+\frame{ 
+  \frametitle{Basic terminology} %Tree Path Labeling of Set Systems}
+  \framesubtitle{a crash course on the TPL machinery}
+
+  \tnote{HAVE CORRESPONDING PREVIOUS
+    IMAGES REPEATED} 
+  \begin{block}{}
+   {\residenceblock} block $\rightarrow$ \alert{\sc
         Target tree}
-    \item Study group path allocation $\rightarrow$
-      \alert{\sc Tree Path Labeling (TPL)}
-    \item The apartment allocation $\rightarrow$ \alert{\sc Path
+  \end{block}
+}
+
+\frame{ 
+  \frametitle{Basic terminology} %Tree Path Labeling of Set Systems}
+  \framesubtitle{a crash course on the TPL machinery}
+
+  \tnote{HAVE CORRESPONDING PREVIOUS
+    IMAGES REPEATED} 
+  \begin{block}{}
+    Study group path allocation $\rightarrow$
+      \alert{\sc (feasible) Tree Path Labeling}
+  \end{block}
+}
+
+\frame{ 
+  \frametitle{Basic terminology} %Tree Path Labeling of Set Systems}
+  \framesubtitle{a crash course on the TPL machinery}
+
+  \tnote{HAVE CORRESPONDING PREVIOUS
+    IMAGES REPEATED} 
+  \begin{block}{}
+
+ The apartment allocation $\rightarrow$ \alert{\sc Path
         Hypergraph Isomorphism}
-    \end{itemize}
   \end{block}
 }
 
-\def\overlayht{4cm}
 
-\frame<1-6>{
-  \frametitle{Tree Path Labeling of Set Systems}
-  \framesubtitle{The combinatorial problem} 
 
-  \tnote{DELETE.}
-  \begin{block}{Terminology [contd.]}
-    \begin{overlayarea}{\textwidth}{\overlayht} 
-      \only<1>{There {\em exists} an apartment allocation that
-          ``fits'' the route mapping }
-      \only<2->{There {\em exists} a
-          \alert<2->{hypergraph isomorphism} that ``fits'' the
-          \alert<2->{TPL}\\}
-      \only<3->{$\rightarrow$ the TPL is \alert<3->{\sc feasible}\\}
+% \def\overlayht{4cm}
 
-      \only<4->{There {\em exists} \only<4>{an apartment
-          allocation}\only<5->{\alert<5-> {a hypergraph isomorphism}} that
-          gives \only<4>{the optimal route mapping}
-      \only<5->{\alert<5->{paths/adjacent vertices in tree}\\}} 
-%       \only<4>{There {\em exists} an apartment allocation that
-%       gives the optimal route mapping}
-%       \only<5-> {There {\em exists} a
-%       \alert<5->{hypergraph isomorphism} that gives 
-%       \alert<5->{paths/adjacent vertices in tree}\\}
-      \only<6->{$\rightarrow$ the hypergraph is a \alert<6->{\sc
-       path hypergraph}}
-      \end{overlayarea}
-  \end{block}
+% \frame<1-6>{
+%   \frametitle{Tree Path Labeling of Set Systems}
+%   \framesubtitle{The combinatorial problem} 
 
-}
+%   \tnote{DELETE.}
+%   \begin{block}{Terminology [contd.]}
+%     \begin{overlayarea}{\textwidth}{\overlayht} 
+%       \only<1>{There {\em exists} an apartment allocation that
+%           ``fits'' the route mapping }
+%       \only<2->{There {\em exists} a
+%           \alert<2->{hypergraph isomorphism} that ``fits'' the
+%           \alert<2->{TPL}\\}
+%       \only<3->{$\rightarrow$ the TPL is \alert<3->{\sc feasible}\\}
+
+%       \only<4->{There {\em exists} \only<4>{an apartment
+%           allocation}\only<5->{\alert<5-> {a hypergraph isomorphism}} that
+%           gives \only<4>{the optimal route mapping}
+%       \only<5->{\alert<5->{paths/adjacent vertices in tree}\\}} 
+% %       \only<4>{There {\em exists} an apartment allocation that
+% %       gives the optimal route mapping}
+% %       \only<5-> {There {\em exists} a
+% %       \alert<5->{hypergraph isomorphism} that gives 
+% %       \alert<5->{paths/adjacent vertices in tree}\\}
+%       \only<6->{$\rightarrow$ the hypergraph is a \alert<6->{\sc
+%        path hypergraph}}
+%       \end{overlayarea}
+%   \end{block}
+
+% }
 
 
 
 \frame{
-  \frametitle{Tree path labeling of path hypergraphs}
-  \framesubtitle{The two problems}
-  
-%  \note<1>{}
-  
-  \begin{block}<1->{1}
-    {\alert{Characterization} of a {\em feasible TPL} and finding
-      the certificate for feasibility i.e. {\em hypergraph
-        isomorphism}}
-  \end{block}
-  \note[item]<1>{Characterization -- hypergraph + target tree + TPL\\ 
-      (1) is it feasible? \\
-      (2)what is the isomorphism?}
+  \frametitle{The problems studied}
+%  \framesubtitle{Tree path labeling of path hypergraphs}
 
-  \begin{block}<2>{2}
-    {\alert{Computation} of a {\em feasible TPL} if any}
+  \begin{block}<1->{1. Computation}
+    {\alert{Computation} of a (feasible) tree path labeling (TPL) if any.}
   \end{block}
-  \note[item]<2>{Computation -- hypergraph + target tree\\ 
-      (1) does there exist a
-      feasible TPL?
 
-  }
+  \begin{block}<2->{2. Computation on $k$sub stars}
+    {\alert{Computation} of a (feasible) TPL if any, if target tree is a
+      \alert{$k$-subdivided star}.}
+  \end{block}
+
+  \begin{block}<3>{3. Characterization}
+    {\alert{Characterization} of a (feasible) TPL and finding
+      the certificate for feasibility - the hypergraph isomorphism} 
+  \end{block}
+
 }
 
 %\subsection{Definitions}
 
-\frame<1>[label=intro:q1]{
-\tnote{DELETE}
-%\frame<1,9>[label=intro:q1]{
-% 1   : display normal
-% 9   : TBD defined prelim
-% 2-7 : each TBD definition highlight
-% 8   : misc definition highlight
-  \begin{center}
-    {\Huge 1}
-  \end{center}
-    \begin{block}{Characterization of feasible TPL}
-    Given
-    \begin{enumerate}[i. ]
-    \item a \textcolor<9>{\alertseccolor}
-           {\alert<2>{set system or hypergraph}} $\cF$,
-    \item a \textcolor<9>{\alertseccolor}
-           {\alert<3>{feasible} \alert<4>{TPL}} $\cl:\cF \rightarrow
-      \cP$ where $\cP$ is a path system from tree $T$ and $
-      \textcolor<9>{\alertseccolor}{\alert<5,2>{supp(} \cP \alert<5,2>{)}} = V(T)$,
-    \end{enumerate}
-    \uline{what is the \textcolor<9>{\alertseccolor}{\alert<6>{hypergraph
-        isomorphism}}} \[\underline{\phi: \supp{\cF} \rightarrow
-      \supp{\cP}}\] \uline{such that the
-      \textcolor<9>{\alertseccolor}{\alert<7,4>{induced labeling}}} 
-    $\underline{\cl_\phi = \cl}$?
-  \end{block}
+% \frame<1>[label=intro:q1]{
+% \tnote{DELETE}
+% %\frame<1,9>[label=intro:q1]{
+% % 1   : display normal
+% % 9   : TBD defined prelim
+% % 2-7 : each TBD definition highlight
+% % 8   : misc definition highlight
+%   \begin{center}
+%     {\Huge 1}
+%   \end{center}
+%     \begin{block}{Characterization of feasible TPL}
+%     Given
+%     \begin{enumerate}[i. ]
+%     \item a \textcolor<9>{\alertseccolor}
+%            {\alert<2>{set system or hypergraph}} $\cF$,
+%     \item a \textcolor<9>{\alertseccolor}
+%            {\alert<3>{feasible} \alert<4>{TPL}} $\cl:\cF \rightarrow
+%       \cP$ where $\cP$ is a path system from tree $T$ and $
+%       \textcolor<9>{\alertseccolor}{\alert<5,2>{supp(} \cP \alert<5,2>{)}} = V(T)$,
+%     \end{enumerate}
+%     \uline{what is the \textcolor<9>{\alertseccolor}{\alert<6>{hypergraph
+%         isomorphism}}} \[\underline{\phi: \supp{\cF} \rightarrow
+%       \supp{\cP}}\] \uline{such that the
+%       \textcolor<9>{\alertseccolor}{\alert<7,4>{induced labeling}}} 
+%     $\underline{\cl_\phi = \cl}$?
+%   \end{block}
 
-  \note[item]<9>{to understand this these will be defined in the
-    following slides}
-  \note[item]<2>{first we'll see what a set system or hypergraph is}
-  \note[item]<6>{Next is hypergraph iso}
-  \note[item]<4>{tree path labeling}
-  \note[item]<3>{feasibility of TPL}
-}
+%   \note[item]<9>{to understand this these will be defined in the
+%     following slides}
+%   \note[item]<2>{first we'll see what a set system or hypergraph is}
+%   \note[item]<6>{Next is hypergraph iso}
+%   \note[item]<4>{tree path labeling}
+%   \note[item]<3>{feasibility of TPL}
+% }
 
 % \againframe<2>{intro:q1}
 
@@ -625,19 +653,19 @@
 
 % }
 
-\frame<1>[label=intro:q2]{
-%\frame<1-2>[label=intro:q2]{
-  \tnote{DELETE}
-  \begin{center}
-    {\Huge {\tt 2}}
-  \end{center}
-  \begin{block}{Computing a feasible TPL}
-    Given hypergraph $\cF$ with certain properties and a
-    \alert<2>{$k$-subdivided star} $T$, \uline{can we find a feasible TPL 
-      $\cl$ to $T$?}
-  \end{block}
-%  \note{}
-}
+% \frame<1>[label=intro:q2]{
+% %\frame<1-2>[label=intro:q2]{
+%   \tnote{DELETE}
+%   \begin{center}
+%     {\Huge {\tt 2}}
+%   \end{center}
+%   \begin{block}{Computing a feasible TPL}
+%     Given hypergraph $\cF$ with certain properties and a
+%     \alert<2>{$k$-subdivided star} $T$, \uline{can we find a feasible TPL 
+%       $\cl$ to $T$?}
+%   \end{block}
+% %  \note{}
+% }
 
 % \frame {
 % %  \frametitle{$k$-subdivided star}
@@ -655,16 +683,18 @@
 
 % %\againframe<1>{intro:q2}
 
+\frame{
 
-\section[Characterization]{Characterization of a feasible TPL}
+  {\center We will see the problems in LIFO order.}
+
+}
+
+\section[Characterization]{Characterization of a (feasible) TPL}
 
 \frame {
-% \againframe<1>{intro:q1}
-%   \note{recall this problem. we'll see the algorithms.}
-  \begin{center}
-    {\Huge 1}
-  \end{center}
-    \begin{block}{Characterization of feasible TPL}
+  
+   {\Huge 3.}
+   \begin{block}<2>{Characterization}
     \end{block}
 }
 
@@ -755,8 +785,8 @@
 \section[Computation of TPL]{Computing a feasible TPL on
   $k$-subdivided trees} 
 
-\againframe<1>{intro:q2}       % Show q2 again - refresher.
-%  \note{}
+% \againframe<1>{intro:q2}       % Show q2 again - refresher.
+% %  \note{}
 
 \subsection{Algorithm}
 

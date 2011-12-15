@@ -1,11 +1,11 @@
 \beamer@endinputifotherversion {3.07pt}
 \beamer@sectionintoc {2}{Introduction}{3}{0}{1}
 \beamer@subsectionintoc {2}{1}{Motivation}{3}{0}{1}
-\beamer@subsectionintoc {2}{2}{An Illustration}{5}{0}{1}
-\beamer@sectionintoc {3}{Characterization of a feasible TPL}{29}{0}{2}
-\beamer@subsectionintoc {3}{1}{ICPPL}{30}{0}{2}
-\beamer@subsectionintoc {3}{2}{Filtering algorithm}{31}{0}{2}
-\beamer@sectionintoc {4}{Computing a feasible TPL on $k$-subdivided trees}{32}{0}{3}
-\beamer@subsectionintoc {4}{1}{Algorithm}{33}{0}{3}
-\beamer@sectionintoc {5}{Conclusion}{34}{0}{4}
-\beamer@subsectionintoc {5}{1}{Application}{34}{0}{4}
+\beamer@subsectionintoc {2}{2}{An Illustration}{4}{0}{1}
+\beamer@sectionintoc {3}{Characterization of a (feasible) TPL}{22}{0}{2}
+\beamer@subsectionintoc {3}{1}{ICPPL}{24}{0}{2}
+\beamer@subsectionintoc {3}{2}{Filtering algorithm}{25}{0}{2}
+\beamer@sectionintoc {4}{Computing a feasible TPL on $k$-subdivided trees}{26}{0}{3}
+\beamer@subsectionintoc {4}{1}{Algorithm}{26}{0}{3}
+\beamer@sectionintoc {5}{Conclusion}{27}{0}{4}
+\beamer@subsectionintoc {5}{1}{Application}{27}{0}{4}
