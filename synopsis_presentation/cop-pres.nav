@@ -17,58 +17,42 @@
 \headcommand {\beamer@framepages {4}{5}}
 \headcommand {\slideentry {2}{2}{2}{6/6}{An Illustration}{0}}
 \headcommand {\beamer@framepages {6}{6}}
-\headcommand {\slideentry {2}{2}{3}{7/7}{An Illustration}{0}}
-\headcommand {\beamer@framepages {7}{7}}
-\headcommand {\slideentry {2}{2}{4}{8/10}{An Illustration}{0}}
-\headcommand {\beamer@framepages {8}{10}}
-\headcommand {\slideentry {2}{2}{5}{11/13}{An Illustration}{0}}
-\headcommand {\beamer@framepages {11}{13}}
-\headcommand {\slideentry {2}{2}{6}{14/14}{An Illustration}{0}}
-\headcommand {\beamer@framepages {14}{14}}
-\headcommand {\slideentry {2}{2}{7}{15/15}{An Illustration}{0}}
-\headcommand {\beamer@framepages {15}{15}}
-\headcommand {\slideentry {2}{2}{8}{16/16}{An Illustration}{0}}
-\headcommand {\beamer@framepages {16}{16}}
-\headcommand {\slideentry {2}{2}{9}{17/17}{An Illustration}{0}}
-\headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {2}{2}{10}{18/20}{An Illustration}{0}}
-\headcommand {\beamer@framepages {18}{20}}
-\headcommand {\slideentry {2}{2}{11}{21/21}{An Illustration}{0}}
-\headcommand {\beamer@framepages {21}{21}}
-\headcommand {\sectionentry {3}{Characterization}{22}{Characterization of a (feasible) TPL}{0}}
-\headcommand {\beamer@sectionpages {3}{21}}
-\headcommand {\beamer@subsectionpages {4}{21}}
-\headcommand {\slideentry {3}{0}{12}{22/23}{}{0}}
-\headcommand {\beamer@framepages {22}{23}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{24}{ICPPL}}\headcommand {\beamer@subsectionpages {22}{23}}
-\headcommand {\slideentry {3}{1}{1}{24/24}{ICPPL}{0}}
-\headcommand {\beamer@framepages {24}{24}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{25}{Filtering algorithm}}\headcommand {\beamer@subsectionpages {24}{24}}
-\headcommand {\slideentry {3}{2}{1}{25/25}{Filtering algorithm}{0}}
-\headcommand {\beamer@framepages {25}{25}}
-\headcommand {\sectionentry {4}{Computation of TPL}{26}{Computing a feasible TPL on $k$-subdivided trees}{0}}
-\headcommand {\beamer@sectionpages {22}{25}}
-\headcommand {\beamer@subsectionpages {25}{25}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{26}{Algorithm}}\headcommand {\beamer@subsectionpages {26}{25}}
-\headcommand {\slideentry {4}{1}{1}{26/26}{Algorithm}{0}}
-\headcommand {\beamer@framepages {26}{26}}
-\headcommand {\sectionentry {5}{Conclusion}{27}{Conclusion}{0}}
-\headcommand {\beamer@sectionpages {26}{26}}
-\headcommand {\beamer@subsectionpages {26}{26}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{27}{Application}}\headcommand {\beamer@subsectionpages {27}{26}}
-\headcommand {\slideentry {5}{1}{1}{27/29}{Application}{0}}
-\headcommand {\beamer@framepages {27}{29}}
-\headcommand {\slideentry {5}{1}{2}{30/30}{Application}{0}}
+\headcommand {\slideentry {2}{2}{3}{7/8}{An Illustration}{0}}
+\headcommand {\beamer@framepages {7}{8}}
+\headcommand {\slideentry {2}{2}{4}{9/9}{An Illustration}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\slideentry {2}{2}{5}{10/13}{An Illustration}{0}}
+\headcommand {\beamer@framepages {10}{13}}
+\headcommand {\slideentry {2}{2}{6}{14/17}{An Illustration}{0}}
+\headcommand {\beamer@framepages {14}{17}}
+\headcommand {\slideentry {2}{2}{7}{18/23}{An Illustration}{0}}
+\headcommand {\beamer@framepages {18}{23}}
+\headcommand {\slideentry {2}{2}{8}{24/27}{An Illustration}{0}}
+\headcommand {\beamer@framepages {24}{27}}
+\headcommand {\sectionentry {3}{Results}{28}{Results}{0}}
+\headcommand {\beamer@sectionpages {3}{27}}
+\headcommand {\beamer@subsectionpages {4}{27}}
+\headcommand {\slideentry {3}{0}{9}{28/29}{}{0}}
+\headcommand {\beamer@framepages {28}{29}}
+\headcommand {\slideentry {3}{0}{10}{30/30}{}{0}}
 \headcommand {\beamer@framepages {30}{30}}
-\headcommand {\sectionentry {6}{References}{31}{References}{0}}
-\headcommand {\beamer@sectionpages {27}{30}}
-\headcommand {\beamer@subsectionpages {27}{30}}
-\headcommand {\slideentry {6}{0}{3}{31/31}{}{0}}
-\headcommand {\beamer@framepages {31}{31}}
-\headcommand {\slideentry {6}{0}{4}{32/32}{}{0}}
-\headcommand {\beamer@framepages {32}{32}}
-\headcommand {\beamer@partpages {1}{33}}
-\headcommand {\beamer@subsectionpages {31}{33}}
-\headcommand {\beamer@sectionpages {31}{33}}
-\headcommand {\beamer@documentpages {33}}
-\headcommand {\def \inserttotalframenumber {27}}
+\headcommand {\slideentry {3}{0}{11}{31/32}{}{0}}
+\headcommand {\beamer@framepages {31}{32}}
+\headcommand {\sectionentry {4}{Conclusion}{33}{Conclusion}{0}}
+\headcommand {\beamer@sectionpages {28}{32}}
+\headcommand {\beamer@subsectionpages {28}{32}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{33}{Application}}\headcommand {\beamer@subsectionpages {33}{32}}
+\headcommand {\slideentry {4}{1}{1}{33/35}{Application}{0}}
+\headcommand {\beamer@framepages {33}{35}}
+\headcommand {\slideentry {4}{1}{2}{36/36}{Application}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\sectionentry {5}{References}{37}{References}{0}}
+\headcommand {\beamer@sectionpages {33}{36}}
+\headcommand {\beamer@subsectionpages {33}{36}}
+\headcommand {\slideentry {5}{0}{3}{37/37}{}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\beamer@partpages {1}{37}}
+\headcommand {\beamer@subsectionpages {37}{37}}
+\headcommand {\beamer@sectionpages {37}{37}}
+\headcommand {\beamer@documentpages {37}}
+\headcommand {\def \inserttotalframenumber {17}}

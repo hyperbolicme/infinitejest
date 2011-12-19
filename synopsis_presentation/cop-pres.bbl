@@ -1,4 +1,16 @@
-\begin{thebibliography}{Gol04}
+\begin{thebibliography}{KKLV10}
+
+\bibitem[BL76]{bl76}
+Kellogg~S. Booth and George~S. Lueker.
+\newblock Testing for the consecutive ones property, interval graphs, and graph
+  planarity using {$PQ$}-tree algorithms.
+\newblock {\em Journal of Computer and System Sciences}, 13(3):335--379,
+  December 1976.
+
+\bibitem[FG65]{fg65}
+D.~R. Fulkerson and O.~A. Gross.
+\newblock Incidence matrices and interval graphs.
+\newblock {\em Pac.~J. Math.}, 15:835--855, 1965.
 
 \bibitem[Gol04]{mcg04}
 Martin~Charles Golumbic.
@@ -7,10 +19,26 @@ Martin~Charles Golumbic.
 \newblock Elsevier Science B.V., 2004.
 \newblock Second Edition.
 
+\bibitem[KKLV10]{kklv10}
+Johannes K{\"o}bler, Sebastian Kuhnert, Bastian Laubner, and Oleg Verbitsky.
+\newblock Interval graphs: Canonical representation in logspace.
+\newblock {\em Electronic Colloquium on Computational Complexity (ECCC)},
+  17:43, 2010.
+
+\bibitem[Lin92]{sl92}
+Steven Lindell.
+\newblock A logspace algorithm for tree canonization (extended abstract).
+\newblock In {\em STOC}, pages 400--404. ACM, 1992.
+
 \bibitem[NS09]{nsnrs09}
 N.~S. Narayanaswamy and R.~Subashini.
 \newblock A new characterization of matrices with the consecutive ones
   property.
 \newblock {\em Discrete Applied Mathematics}, 157(18):3721--3727, 2009.
+
+\bibitem[Tuc72]{at72}
+Alan Tucker.
+\newblock A structure theorem for the consecutive 1's property.
+\newblock {\em J. Comb.~Theory Series B}, 12:153--162, 1972.
 
 \end{thebibliography}

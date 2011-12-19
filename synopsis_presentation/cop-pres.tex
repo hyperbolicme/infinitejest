@@ -3,13 +3,13 @@
                       dvipsnames},% Since beamer loads color package 
                                   %  automatically \usepackage{color}   
                                   %  cannot be used to pass options.
-%              draft,             % Draft WIP version without header &
+%             draft,             % Draft WIP version without header &
 %                                  %  footer. Faster compilation.
 %               handout,           % Handout version. not sure what it does.
 %              notes              % To print notes.
                     ]{beamer}   
 
-%\includeonlyframes{FREXAMPLE,FREXAMPLE2,FREXAMPLE3,FR_EX_PROB}              
+%\includeonlyframes{FR_MOTIVE} %FR_PROBLEMS} %FR_EX_IMAGE,FR_EX_TERM}              
                                  %  Use when drafting for fast compile
                                  % turnaround time. 
 
@@ -81,6 +81,9 @@
 \usepackage[normalem]{ulem}  % Underline. normalem keeps the default
                              % \em to be italics. 
 \usepackage{textcomp}
+
+\usepackage{stmaryrd}
+
 %\usepackage{pifont}
 %\usepackage{natbib}
 %\usepackage[finalnew]{../lib/trackchanges}
@@ -207,13 +210,39 @@
 \section{Introduction}
 
 \subsection{Motivation}
-\frame[label=motive]{
-  \frametitle{The Motivation}
-  \framesubtitle{consecutive ones $\rightarrow$ tree path labeling}
+\frame<1>[label=FR_MOTIVE]{
+  \frametitle{Motivation}
+%  \framesubtitle{consecutive ones is a special case of tree path labeling}
 
-  \tnote{get a better image!  break it down into overlays}
+  \begin{block}{}
+ {\footnotesize
+  \begin{tabular}{cccc c}
+    &&\textcolor{dark1}{Combinatorial}& & \\
+    &&\textcolor{dark1}{algorithms}&&\\
+    && \textcolor{dark1}{$\downarrow$} &     &\\
+    && \textcolor{dark1}{Matrix reordering} &     & \only<2-> {Tree canonization}\\
+    && \textcolor{dark1}{problems} && \only<2->{\tiny \cite{sl92}}\\
+    && \textcolor{dark1}{$\downarrow$} &&\only<2->{$\downarrow$}\\    
 
-  \only<1>{\includegraphics[scale=0.2]{../img/smemo.pdf}}%{m1.pdf}} % 
+    Interval &$\leftrightharpoons$& \textcolor{light3}{ {\bf Consecutive
+      Ones} } &\only<2->{$\Longmapsto$}& \only<2->{ Interval graph}\\
+    labeling&& \textcolor{light3}{\bf Property} && \only<2->{
+      canonization}\\
+    {\tiny \cite{kklv10}}&&{\tiny \textcolor{light3}{ \bf \cite{fg65,at72,bl76,nsnrs09}}}&&\only<2->{\tiny \cite{kklv10}}\\
+
+    $\Downarrow$&&&&\only<2->{$\Downarrow$}\\
+
+    \textcolor{light3}{\bf Tree Path}&&\only<3>{ \textcolor{red}{Path graph}}&& \only<2->{ Interval graph}\\
+    \textcolor{light3}{\bf Labeling}&\only<3>{$\Longmapsto$}&\only<3>{ \textcolor{red}{canonization}}&& \only<2->{ isomorphism}\\
+    
+    &&\only<3>{$\Downarrow$}&& \only<2->{\tiny \cite{kklv10}}\\
+    &&\only<3>{ \textcolor{red}{Path graph}}&& \\
+    &&\only<3>{ \textcolor{red}{isomorphism}}&& 
+  \end{tabular}
+ }
+
+  \end{block}
+
 }
 
 % \frame{
@@ -310,49 +339,120 @@
 \frame[label=FREXAMPLE2]{
   \frametitle{Study Group Accommodation problem}
 
-  \tnote{ONLY DIAGRAMS.\\
-  a venn diagram of just the universe\\
-  a venn diagram of the grouping}
+%   \tnote{ONLY DIAGRAMS.\\
+%   a00.pdf - a venn diagram of just the universe\\
+%   a0.pdf - a venn diagram of the grouping}
+%   \begin{tabular}{cc}
+%     $\{\xPa,\; \xPi,\; \xSn,\; \xWo,\; $
+%    &
+%       \begin{tabular}{rcl}
+%         $\xLLL $&$=$&$ \{\xCh,\;  \xSa,\;  \xFr,\;  \xSc,\;  \xLu \}$\\
+%         $\xGGG $&$=$&$ \{\xPa,\;  \xPi,\;  \xVi,\;  \xCh \}$\\
+%         $\xBBB $&$=$&$ \{\xSn,\;  \xPi,\;  \xWo \}$\\
+%         $\xTTT $&$=$&$ \{\xVi,\;  \xLi,\;  \xCh,\;  \xFr \}$\\
+%       \end{tabular}
+%     \\
 
-  \note{
-%  \begin{block}{} 
-  \begin{itemize}%[<uncover@+->]
-  \item A set of {$n$ students} arrive for a summer course, say
-    { $\{\xPa,\; \xPi,\; \xSn,\; \xWo,\; \xVi,\; \xLi,\; \xCh,\;
-    \xSa,\; \xFr,\; \xSc,\; \xLu\}$, $n= 11$}
-  \item They form {$m$ study groups}, say {$\{\xLLL,
-      \xGGG, \xBBB, \xTTT\}$, $m = 4$}
-  \end{itemize}
-%  \end{block}
-  }
+%     $\xVi,\; \xLi,\; \xCh,\; \xSa,\; $&&\\
+%     $\xFr,\; \xSc,\; \xLu\}$&&
+
+%   \end{tabular}
+
+  \begin{tabular}{cc}
+
+\includegraphics[scale=0.2]{../img/U.png} &
+      \begin{tabular}{rcl}
+        $\xLLL $&$=$&$ \{\xCh,\;  \xSa,\;  \xFr,\;  \xSc,\;  \xLu \}$\\
+        $\xGGG $&$=$&$ \{\xPa,\;  \xPi,\;  \xVi,\;  \xCh \}$\\
+        $\xBBB $&$=$&$ \{\xSn,\;  \xPi,\;  \xWo \}$\\
+        $\xTTT $&$=$&$ \{\xVi,\;  \xLi,\;  \xCh,\;  \xFr \}$\\
+      \end{tabular}\\
+      Students & Study groups
+  \end{tabular}
+
+%   \note{
+% %  \begin{block}{} 
+%   \begin{itemize}%[<uncover@+->]
+%   \item A set of {$n$ students} arrive for a summer course, say
+%     { $\{\xPa,\; \xPi,\; \xSn,\; \xWo,\; \xVi,\; \xLi,\; \xCh,\;
+%     \xSa,\; \xFr,\; \xSc,\; \xLu\}$, $n= 11$}
+%   \item They form {$m$ study groups}, say {$\{\xLLL,
+%       \xGGG, \xBBB, \xTTT\}$, $m = 4$}
+%   \end{itemize}
+% %  \end{block}
+%   }
 }
 
 
 \frame[label=FREXAMPLE3]{
   \frametitle{Study Group Accommodation problem}
 
-  \tnote{repeat the venn diagram of the grouping (before this bullet)}
-  \tnote{image of infinite loop}
+  \only<1>
+  {
+  \begin{tabular}{c|c}
+          \begin{tabular}{rcl}
+        $\xLLL $&$=$&$ \{\xCh,\;  \xSa,\;  \xFr,\;  \xSc,\;  \xLu \}$\\
+        $\xGGG $&$=$&$ \{\xPa,\;  \xPi,\;  \xVi,\;  \xCh \}$\\
+        $\xBBB $&$=$&$ \{\xSn,\;  \xPi,\;  \xWo \}$\\
+        $\xTTT $&$=$&$ \{\xVi,\;  \xLi,\;  \xCh,\;  \xFr \}$\\
+      \end{tabular}\\
+    &
+    \includegraphics[scale=0.2]{../img/1_infinite_loop.png}\\%{a1.pdf}\\
+    
+    {\small Study groups}&
+    {\small {\residenceblock } residential block}
+  \end{tabular}
+  }
 
-  \note{
-%  \begin{block}{} 
-  \begin{itemize}%[<uncover@+->]
-
-  \item A student may be in more than one study group but {will be in
-    at least one}, say \\
-    \begin{tabular}{rcl}
-      $\xLLL $&$=$&$ \{\xCh,\;  \xSa,\;  \xFr,\;  \xSc,\;  \xLu \}$\\
-      $\xGGG $&$=$&$ \{\xPa,\;  \xPi,\;  \xVi,\;  \xCh \}$\\
-      $\xBBB $&$=$&$ \{\xSn,\;  \xPi,\;  \xWo \}$\\
-      $\xTTT $&$=$&$ \{\xVi,\;  \xLi,\;  \xCh,\;  \xFr \}$\\
-    \end{tabular}
-  \item There are {$n$ single occupancy apartments} in \residenceblock.
-  \item Streets connecting them {do not form loops.}
-  \end{itemize}
-%  \end{block}
+  \only<2>
+  {
+  \begin{tabular}{c|c}
+    {\tiny
+      \begin{tabular}{rcl}
+        $\xLLL $&$=$&$ \{\xCh,\;  \xSa,\;  \xFr,\;  \xSc,\;  \xLu \}$\\
+        $\xGGG $&$=$&$ \{\xPa,\;  \xPi,\;  \xVi,\;  \xCh \}$\\
+        $\xBBB $&$=$&$ \{\xSn,\;  \xPi,\;  \xWo \}$\\
+        $\xTTT $&$=$&$ \{\xVi,\;  \xLi,\;  \xCh,\;  \xFr \}$\\
+      \end{tabular}
+    }
+&
+    \includegraphics[scale=0.1]{../img/1_infinite_loop.png}\\
+    
+    {\small Study groups}&
+    {\small {\residenceblock } residential block}
+  \end{tabular}
   }
 
 
+
+  \begin{block}<2>{}
+    \begin{itemize}
+    \item A student may be in more than one study group but {will be
+        in at least one}.
+    \item There are equal number of {single occupancy apartments} in
+      \residenceblock.
+    \item Streets connecting them {do not} form loops.
+    \end{itemize}
+    
+  \end{block}
+
+
+%   \note{
+%     \begin{itemize}
+%     \item A student may be in more than one study group but {will be
+%         in
+%         at least one}, say \\
+%       \begin{tabular}{rcl}
+%         $\xLLL $&$=$&$ \{\xCh,\;  \xSa,\;  \xFr,\;  \xSc,\;  \xLu \}$\\
+%         $\xGGG $&$=$&$ \{\xPa,\;  \xPi,\;  \xVi,\;  \xCh \}$\\
+%         $\xBBB $&$=$&$ \{\xSn,\;  \xPi,\;  \xWo \}$\\
+%         $\xTTT $&$=$&$ \{\xVi,\;  \xLi,\;  \xCh,\;  \xFr \}$\\
+%       \end{tabular}
+%     \item There are {$n$ single occupancy apartments} in
+%       \residenceblock.
+%     \item Streets connecting them {do not form loops.}
+%     \end{itemize}
+%   }
 }
 
 
@@ -363,83 +463,167 @@
   \begin{block}{}
     \begin{centering}
     {How should the students be allocated apartments such that
-    each study group \alert{has the least distance to travel} for a discussion?} 
+    \alert{students in each group should inhabit a (continuous) path}?} 
     \end{centering}    
   \end{block}
 
-  \begin{block}<2->{Additional condition}
-    \begin{centering}
-    \begin{overlayarea}{\textwidth}{1cm}
-    {Students in a group should form a path.\\} \only<3>{Else, it is \em a
-    subtree labeling problem.}
-    \end{overlayarea}
-    \end{centering}
-  \end{block}
+%   \begin{block}<2->{Additional condition}
+%     \begin{centering}
+%     \begin{overlayarea}{\textwidth}{1cm}
+%       {\\}
+%       \only<3>{Else, it is \em a subtree labeling problem} (out of
+%       scope).
+%     \end{overlayarea}
+%     \end{centering}
+%   \end{block}
 
 }
 
 
 \frame[label=FR_EX_IMAGE]{
-  \frametitle{Study Group Accommodation problem}
+  \frametitle{Allocate \textcolor{light3}{Paths} to
+    \textcolor{light3}{Study Groups}} 
+  \framesubtitle{tree path labeling \only<4>{- feasible?}}
 
-  \tnote{update to the example in synopsis doc}
+  %% Frames 2,3,4
+  {
+    \begin{tabular}{cc}
+      %% Show a0, a1 at overlay 2
+      \only<2-3>{
+       {\tiny
+      \begin{tabular}{rcl}
+        $\xLLL $&$=$&$ \{\xCh,\;  \xSa,\;  \xFr,\;  \xSc,\;  \xLu \}$\\
+        $\xGGG $&$=$&$ \{\xPa,\;  \xPi,\;  \xVi,\;  \xCh \}$\\
+        $\xBBB $&$=$&$ \{\xSn,\;  \xPi,\;  \xWo \}$\\
+        $\xTTT $&$=$&$ \{\xVi,\;  \xLi,\;  \xCh,\;  \xFr \}$\\
+      \end{tabular}}
 
-   \only<1>{\includegraphics[scale=0.4]{a1.pdf}}
-   \only<2>{\includegraphics[scale=0.4]{a2.pdf}}
-   \only<3>{\includegraphics[scale=0.4]{a3.pdf}}
+        & \includegraphics[scale=0.1]{../img/1_infinite_loop.png}
+
+        \\}
+
+      %% Show a0, a1 at overlay 3
+      \only<3-4>{
+        \includegraphics[scale=0.2]{../img/2_infinite_loop_BTWF.png}%{a2.pdf}
+      } & 
+      \only<4> {\bf Is this feasible? }\\
+      \only<2-3> {Study groups - ${\xLLL}, {\xGGG}, {\xBBB}, {\xTTT}$}&
+    \end{tabular}
+  }
+
+%   %% Frames 5,6,7
+%   {
+%     \begin{tabular}{cc}
+%       %% Show a2, a0 at overlay 5
+%       \only<5-7>{
+%         \includegraphics[scale=0.1]{../img/2_infinite_loop_BTWF.png} 
+%         \tnote{replace with udpated.}
+%         & \tnote{a0.pdf} 
+%         \\}
+
+%       %% Show a0, a1 at overlay 3
+%       \only<6> {In this case, IS feasible.&}
+      
+%       \only<7>{
+%         \includegraphics[scale=0.35]{a3.pdf}&
+%       } 
+      
+%     \end{tabular}
+%   }
 }
 
 
-\frame{ 
-  \frametitle{Basic terminology} %Tree Path Labeling of Set Systems}
+\frame[label=FR_EX_IMAGE]{
+  \frametitle{Allocate \textcolor{light3}{Apartments} to
+    \textcolor{light3}{Students}} 
+  \framesubtitle{path graph isomorphism/feasibility bijection}
+
+%   %% Frames 2,3,4
+%   {
+%     \begin{tabular}{cc}
+%       %% Show a0, a1 at overlay 2
+%       \only<2-3>{
+%         \tnote{a0.pdf} 
+%         & \includegraphics[scale=0.1]{../img/1_infinite_loop.png}
+%         \tnote{replace with udpated.}
+%         \\}
+
+%       %% Show a0, a1 at overlay 3
+%       \only<3-4>{
+%         \includegraphics[scale=0.35]{../img/2_infinite_loop_BTWF.png}
+%       } & 
+%       \only<4> {Is this feasible?}
+%     \end{tabular}
+%   }
+
+  %% Frames 5,6,7
+  {
+    \begin{tabular}{cc}
+      %% Show a2, a0 at overlay 5
+      \only<2-4>{ %<5-7>{
+        \includegraphics[scale=0.1]{../img/2_infinite_loop_BTWF.png} 
+        & 
+      \begin{tabular}{rcl}
+        $\xLLL $&$=$&$ \{\xCh,\;  \xSa,\;  \xFr,\;  \xSc,\;  \xLu \}$\\
+        $\xGGG $&$=$&$ \{\xPa,\;  \xPi,\;  \xVi,\;  \xCh \}$\\
+        $\xBBB $&$=$&$ \{\xSn,\;  \xPi,\;  \xWo \}$\\
+        $\xTTT $&$=$&$ \{\xVi,\;  \xLi,\;  \xCh,\;  \xFr \}$\\
+      \end{tabular}\\
+        \\}
+
+      %% Show a0, a1 at overlay 3
+      \only<3> %<6> 
+      {  In this case, \textcolor{light3}{\bf is feasible}.&}
+      \only<4>
+      {  \includegraphics[scale=0.1]{../img/3_infinite_loop.png}&} %{a3.pdf}
+    \end{tabular}
+  }
+}
+
+
+\def \termimgscale {0.25}
+
+\frame[label=FR_EX_TERM]{ 
+  \frametitle{Basic terminology} 
   \framesubtitle{a crash course on the TPL machinery}
 
-  \tnote{HAVE CORRESPONDING PREVIOUS
-    IMAGES REPEATED} 
-  \begin{block}{}
-    The set of study groups $\{\xLLL,
+  \only<2>{
+
+    \begin{block}{}
+      The set of study groups $\{\xLLL,
       \xGGG, \xBBB, \xTTT\}$ $\rightarrow$
       \alert{\sc Hypergraph}
- \end{block}
-}
+    \end{block}
+  }
 
-\frame{ 
-  \frametitle{Basic terminology} %Tree Path Labeling of Set Systems}
-  \framesubtitle{a crash course on the TPL machinery}
-
-  \tnote{HAVE CORRESPONDING PREVIOUS
-    IMAGES REPEATED} 
-  \begin{block}{}
-   {\residenceblock} block $\rightarrow$ \alert{\sc
+  \only<3>{
+    \includegraphics[scale=\termimgscale]{../img/1_infinite_loop.png} %\tnote{../img/1_infinite_loop.png} 
+    \begin{block}{}
+      {\residenceblock} residential block $\rightarrow$ \alert{\sc
         Target tree}
-  \end{block}
-}
+    \end{block}
+  }
 
-\frame{ 
-  \frametitle{Basic terminology} %Tree Path Labeling of Set Systems}
-  \framesubtitle{a crash course on the TPL machinery}
-
-  \tnote{HAVE CORRESPONDING PREVIOUS
-    IMAGES REPEATED} 
-  \begin{block}{}
+  \only<4>{
+    \includegraphics[scale=\termimgscale]{../img/2_infinite_loop_BTWF.png} %\tnote{../img/2_infinite_loop_BTWF.png} 
+    \begin{block}{}
     Study group path allocation $\rightarrow$
-      \alert{\sc (feasible) Tree Path Labeling}
-  \end{block}
+      \alert{\sc Tree Path Labeling}
+
+    \end{block}
+  }
+
+  \only<5,6>{
+    \includegraphics[scale=0.2]{../img/3_infinite_loop.png} %\tnote{../img/3_infinite_loop.png} 
+    \begin{block}{}
+      The apartment allocation $\rightarrow$ \alert{\sc Path
+        Hypergraph Isomorphism} 
+      
+%       \only<6>{If exists, then TPL is a
+%         \alert{\sc Feasible Tree Path Labeling}}
+    \end{block}
+  }
 }
-
-\frame{ 
-  \frametitle{Basic terminology} %Tree Path Labeling of Set Systems}
-  \framesubtitle{a crash course on the TPL machinery}
-
-  \tnote{HAVE CORRESPONDING PREVIOUS
-    IMAGES REPEATED} 
-  \begin{block}{}
-
- The apartment allocation $\rightarrow$ \alert{\sc Path
-        Hypergraph Isomorphism}
-  \end{block}
-}
-
 
 
 % \def\overlayht{4cm}
@@ -471,27 +655,33 @@
 %        path hypergraph}}
 %       \end{overlayarea}
 %   \end{block}
-
 % }
 
+\def \kstar {$k$-subdivided star}
+\def \FTPL {{\sc Feasible Tree Path Labeling}}
+\def \CFTPLKSTAR {\sc Compute $k$-subdivided Star Path Labeling}
+\def \CFTPL {\sc Compute Feasible Path Labeling} 
 
-
-\frame{
+\frame[label=FR_PROBLEMS]{
   \frametitle{The problems studied}
 %  \framesubtitle{Tree path labeling of path hypergraphs}
 
-  \begin{block}<1->{1. Computation}
-    {\alert{Computation} of a (feasible) tree path labeling (TPL) if any.}
+  \begin{block}<1,2>{1. \CFTPL} %<1->
+    {\alert{Computation} of a feasible tree path labeling (FTPL) if
+      any.}
+
+    \only<2>{}
+
   \end{block}
 
-  \begin{block}<2->{2. Computation on $k$sub stars}
-    {\alert{Computation} of a (feasible) TPL if any, if target tree is a
+  \begin{block}<1,3>{2. \CFTPLKSTAR} %<2->
+    {\alert{Computation} of an FTPL if any, if target tree is a
       \alert{$k$-subdivided star}.}
   \end{block}
 
-  \begin{block}<3>{3. Characterization}
-    {\alert{Characterization} of a (feasible) TPL and finding
-      the certificate for feasibility - the hypergraph isomorphism} 
+  \begin{block}<1,4>{3. \FTPL} %<3>
+    {\alert{Characterization} of an FTPL and finding
+      the feasibility bijection/hypergraph isomorphism} 
   \end{block}
 
 }
@@ -683,82 +873,84 @@
 
 % %\againframe<1>{intro:q2}
 
-\frame{
+% \frame{
+%   {\center We will see the problems in LIFO order - more specific to general.}
+% }
 
-  {\center We will see the problems in LIFO order.}
+\section{Results}
 
-}
-
-\section[Characterization]{Characterization of a (feasible) TPL}
-
-\frame {
+ \frame {
   
-   {\Huge 3.}
+    {\Huge 3.}
    \begin{block}<2>{Characterization}
+     \begin{itemize}
+     \item Three way intersection cardinality preservation
+     \item Filtering and pruning algorithm
+     \end{itemize}
     \end{block}
-}
+ }
 
 
 
-\subsection{ICPPL}
-\frame [label=icppl:pr]{ %[label=SLIDENOW]{ % 
-  \frametitle{ICPPL - a TPL with special properties}
-  \framesubtitle{Intersection Cardinality Preserving Path Labeling}
+% \subsection{ICPPL}
+% \frame [label=icppl:pr]{ %[label=SLIDENOW]{ % 
+%   \frametitle{ICPPL - a TPL with special properties}
+%   \framesubtitle{Intersection Cardinality Preserving Path Labeling}
 
-  \tnote[a]{TBD list ICPPL properties}
-%  \note{}
-}
+% %  \tnote[a]{TBD list ICPPL properties}
+% %  \note{}
+% }
 
-\frame<1> [label=th:icpplth]{ % [label=SLIDENOW]{ % 
-  \frametitle{The characterization}
-  \framesubtitle{ICPPL + a filtering algorithm}
+% \frame<1> [label=th:icpplth]{ % [label=SLIDENOW]{ % 
+%   \frametitle{The characterization}
+%   \framesubtitle{ICPPL + a filtering algorithm}
 
-  \tnote[a]{TBD Write the theorem}
-%  \note{}
-}
+%   \tnote[a]{TBD Write the theorem}
+% %  \note{}
+% }
 
-\subsection{Filtering algorithm}
-\frame [label=flow:filtering]{ %[label=SLIDENOW]{ %
-  \frametitle{The filtering algorithm}
-  \framesubtitle{{\tt filter\_1}\\ 
-                 {\tt filter\_2}\\ 
-                 Algorithm {\tt get-hypergraph-isomorphism}}
+% \subsection{Filtering algorithm}
+% \frame [label=flow:filtering]{ %[label=SLIDENOW]{ %
+%   \frametitle{The filtering algorithm}
+%   \framesubtitle{{\tt filter\_1}\\ 
+%                  {\tt filter\_2}\\ 
+%                  Algorithm {\tt get-hypergraph-isomorphism}}
 
-  \tnote[a]{TBD flow chart of the filtering algorithm. see notes.}
-%  \note{}
-}
+%   \tnote[a]{TBD flow chart of the filtering algorithm. see notes.}
+% %  \note{}
+% }
 
-\frame [label=al:filter1]{ %[label=SLIDENOW]{ %
-  \frametitle{\tt filter\_1}
-  \framesubtitle{Make leaves unique to paths} 
+% \frame [label=al:filter1]{ %[label=SLIDENOW]{ %
+%   \frametitle{\tt filter\_1}
+%   \framesubtitle{Make leaves unique to paths} 
 
-  \tnote[a]{TBD present the algorithm with images? with psuedocode on
-    the side? f yeah. like dessert. apple pie with cream on the side please.}
-%  \note{}
-}
+%   \tnote[a]{TBD present the algorithm with images? with psuedocode on
+%     the side? f yeah. like dessert. apple pie with cream on the side please.}
+% %  \note{}
+% }
 
-\frame [label=al:filter2]{ %[label=SLIDENOW]{ %
-  \frametitle{\tt filter\_2}
-  \framesubtitle{Find elements that map to leaves}
+% \frame [label=al:filter2]{ %[label=SLIDENOW]{ %
+%   \frametitle{\tt filter\_2}
+%   \framesubtitle{Find elements that map to leaves}
 
-  \tnote[a]{TBD present the algorithm with images? with psuedocode on
-    the side? f yeah. like dessert. apple pie with cream on the side
-    please.} 
-%  \note{}
-}
+%   \tnote[a]{TBD present the algorithm with images? with psuedocode on
+%     the side? f yeah. like dessert. apple pie with cream on the side
+%     please.} 
+% %  \note{}
+% }
 
-\frame [label=al:treeprune]{ %[label=SLIDENOW]{ %
-  \frametitle{Algorithm {\tt get-hypergraph-isomorphism}}
-  \framesubtitle{Find hypergraph isomorphism $\phi$ - recursively use
-    {\tt filter\_1} {\tt filter\_2}}
+% \frame [label=al:treeprune]{ %[label=SLIDENOW]{ %
+%   \frametitle{Algorithm {\tt get-hypergraph-isomorphism}}
+%   \framesubtitle{Find hypergraph isomorphism $\phi$ - recursively use
+%     {\tt filter\_1} {\tt filter\_2}}
 
-  \tnote[a]{TBD present the algorithm with images? with psuedocode on
-    the side? f yeah. like dessert. apple pie with cream on the side
-    please.} 
-%  \note{}
-}
+%   \tnote[a]{TBD present the algorithm with images? with psuedocode on
+%     the side? f yeah. like dessert. apple pie with cream on the side
+%     please.} 
+% %  \note{}
+% }
 
-\againframe<1>{th:icpplth}     % Show theorem again before proof.
+%\againframe<1>{th:icpplth}     % Show theorem again before proof.
 %  \note{}
 
 % \subsection{Proof and analysis}
@@ -782,13 +974,13 @@
 % }
 
 
-\section[Computation of TPL]{Computing a feasible TPL on
-  $k$-subdivided trees} 
+% \section[Computation of TPL]{Computing a feasible TPL on
+%   $k$-subdivided trees} 
 
 % \againframe<1>{intro:q2}       % Show q2 again - refresher.
 % %  \note{}
 
-\subsection{Algorithm}
+%\subsection{Algorithm}
 
 % \frame [label=SLIDENOW]{
 \frame{ \frametitle{Special case} \framesubtitle{Interval assignment
@@ -810,8 +1002,27 @@
     matrices \cite{nsnrs09}
   \end{block}
 
-%  \note{} 
 }
+
+ \frame {
+  
+    {\Huge 2.}
+  
+    \begin{tabular}[h]{ccccc}
+  \includegraphics[scale=0.3]{../img/star.pdf} &&&&
+  \includegraphics[scale=0.3]{../img/kstar.pdf}\\
+  (a) &&&& (b)
+  \end{tabular}
+
+   \begin{block}<2>{Compute TPL on $k$ subdivided stars}
+     \begin{itemize}
+     \item each rays of the k sub star are independent intervals when
+       root is excluded.
+     \item each ray is considered independently as interval
+       assignment problem
+     \end{itemize}
+    \end{block}
+ }
 
 
 
@@ -846,19 +1057,20 @@
 
 \section{Conclusion}
 \subsection{Application}
-\frame
-{
-    \frametitle{Path Labeling $\rightarrow$  Graph Isomorphism}
-    \framesubtitle{Application} 
+% \frame[label=FR_APP]
+% {
+%     \frametitle{Path Labeling $\rightarrow$  Graph Isomorphism}
+%     \framesubtitle{Application} 
 
-    \tnote{get a better image!}
-    \only<1>{\includegraphics[scale=0.3]{m1.pdf}} 
-    \only<2>{\includegraphics[scale=0.3]{m2.pdf}} 
-    \only<3>{\includegraphics[scale=0.3]{m3.pdf}} 
+%     \tnote{get a better image!}
+%     \only<1>{\includegraphics[scale=0.3]{m1.pdf}} 
+%     \only<2>{\includegraphics[scale=0.3]{m2.pdf}} 
+%     \only<3>{\includegraphics[scale=0.3]{m3.pdf}} 
 
-%    \note{}
-}
+% %    \note{}
+% }
 
+\againframe<1,2,3>{FR_MOTIVE}
 
 \frame{
   \frametitle{Thank You}
@@ -869,17 +1081,18 @@
 }
 
 \section*{References}
-\frame[allowframebreaks]{References} {
-\tnote{improve - add some jazz. this is a notional slide only for
-  offline reference.}
+\frame%[allowframebreaks]{References} 
+{
+% \tnote{improve - add some jazz. this is a notional slide only for
+%   offline reference.}
 \tiny  %\footnotesize
 \bibliographystyle{alpha}
-\bibliography{../lib/cop-variants_beamer}
+\bibliography{../lib/cop-variants__thesis}
 }
 
-\frame{
-  % TEMP: to enforce toc entries when frames haven't been decided
-  % yet. 
-} 
+% \frame{
+%   % TEMP: to enforce toc entries when frames haven't been decided
+%   % yet. 
+% } 
 
 \end{document}
