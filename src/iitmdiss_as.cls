@@ -46,7 +46,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 
-\ProvidesClass{iitmdiss}[2005/03/09 Class for IIT-Madras Dissertations]
+\ProvidesClass{iitmdiss_as}[2005/03/09 Class for IIT-Madras Dissertations]
 
 \newif\if@PhD
 \newif\if@MS
@@ -97,20 +97,22 @@
 %%\RequirePackage[hang]{caption2}  -> TeX generates error
 \RequirePackage[hang]{caption}
 
+
+%% DITCHED THIS WHOLE DAMN THING TO USE ALPHA %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Bibliography
 % 
 % natbib allows easy switching of citation style and using it along
 % with the iitm.bst makes things perfect.
-\RequirePackage[authoryear,round]{natbib} 
+% hyperbolicme % \RequirePackage[authoryear,round]{natbib} 
 %\RequirePackage[numbers,square]{natbib} 
-\bibliographystyle{iitm}
+% hyperbolicme % \bibliographystyle{iitm}
 
-\newcommand{\bibstyle@iitm}{\bibpunct{(}{)}{;}{a}{,}{,}%
-     \gdef\NAT@biblabel##1{##1. }}
+% hyperbolicme % \newcommand{\bibstyle@iitm}{\bibpunct{(}{)}{;}{a}{,}{,}%
+% hyperbolicme %      \gdef\NAT@biblabel##1{##1. }}
 %
-\setlength{\bibhang}{0pt}
-\citestyle{iitm}
+% hyperbolicme % \setlength{\bibhang}{0pt}
+% hyperbolicme % \citestyle{iitm}
 %\citestyle{unsrt_newen}
 
 
@@ -140,10 +142,13 @@
   \if@Synopsis
     {\large \em SYNOPSIS OF \par}
   \fi
-    {\Large \bf \expandafter{\@title} \par}%
+%hyperbolicme %    {\Large \bf \expandafter{\@title} \par}%
+    \begin{singlespacing} %hyperbolicme %
+      {\huge \bf \expandafter{\@title} \par} %hyperbolicme %    
+    \end{singlespacing} %hyperbolicme %
     \vskip 10ex%
     {\normalsize
-      \if@PhD
+      \if@PhD % PhD THESIS
          {\em A THESIS }\par
          \vskip 5ex%
          \if@Synopsis
@@ -160,20 +165,30 @@
          \vskip 5ex%
          {\bf \large \MakeUppercase{Doctor of Philosophy}} \par
        \else
-         \if@MS
-            {\em A THESIS }\par
+         \if@MS % MS THESIS
+%            \vskip 5ex %hyperbolicme
+%            \vskip 5ex %hyperbolicme
+%hyperbolicme %            {\em A THESIS }\par
+            {\large {\em A THESIS} }\par
             \vskip 5ex%
-            {\normalsize \em submitted by \par}
-            \vskip 5ex%
+%hyperbolicme %            {\normalsize \em submitted by \par}
+%hyperbolicme %            \vskip 5ex%
+            {\normalsize \em submitted by \par} %hyperbolicme
             {\bf \large\MakeUppercase{\@author}\par\par}
+%hyperbolicme %            {\bf \MakeUppercase{\@author}\par\par} %hyperbolicme
+%hyperbolicme %            \vskip 5ex%
             \vskip 5ex%
-            {\em for the award of the degree }\par
-            \vskip 5ex%
-            {\em of} \par
-            \vskip 5ex%
-            {\bf \large \MakeUppercase{Master Of Science}} \par
-            (by Research) \par
-         \else
+%hyperbolicme %            {\em for the award of the degree }\par
+%hyperbolicme %            \vskip 5ex%
+%hyperbolicme %            {\em of} \par
+%hyperbolicme %            \vskip 5ex%
+            {\em for the award of the degree of}\par 
+%hyperbolicme %            {\bf \large \MakeUppercase{Master Of Science}} \par
+%hyperbolicme %            {\em (by Research)} \par
+            {\large \bf {\MakeUppercase{Master Of Science}} {\em by
+                Research}}\par
+            \vskip 5ex %hyperbolicme
+         \else %%% A PROJECT REPORT
            {\em A Project Report }\par
            \vskip 5ex%
            {\normalsize \em submitted by \par}
@@ -183,10 +198,10 @@
            {\normalsize \em in partial fulfilment of the requirements\par
              for the award of the degree of \par}
            \vskip 5ex%
-           \if@MTech
+           \if@MTech %%% M Tech
              {\bf MASTER OF TECHNOLOGY}
            \fi
-           \if@BTech
+           \if@BTech %%% B Tech
               {\bf BACHELOR OF TECHNOLOGY}
            \fi
          \fi
@@ -194,18 +209,27 @@
     }
   \end{center}%
 
-  \vspace*{0.75in}
-  %\centerline{\psfig{figure=emblem.ps}}
-%  \centerline{\includegraphics{iitm.eps}}
-  \centerline{\includegraphics[scale=1.]{iitm}}
   \vspace*{-0.15in}
   \begin{center}
-    {\bf \large DEPARTMENT OF \@department\par}
-    {\bf \large INDIAN INSTITUTE OF TECHNOLOGY MADRAS.}
+%hyperbolicme %    {\bf \large DEPARTMENT OF \@department\par}
+    {\em from the department of}\par %hyperbolicme
+    {\bf \large {\@department}\par} %hyperbolicme
+    \vskip 5ex%        
+    {\em at}\par %hyperbolicme
+    {\bf \large INDIAN INSTITUTE OF TECHNOLOGY MADRAS \par Guindy, Chennai - 600036}
+%hyperbolicme %   {\bf INDIAN INSTITUTE OF TECHNOLOGY MADRAS} %hyperbolicme %
+    \vskip 5ex %hyperbolicme
     \vglue 0.50em
-    {\bf \large \@date}\par
+    \vspace*{0.75in}
+    \includegraphics[scale=1.]{iitm}\par
+%    {\bf \large \@date}\par
+    {\bf \@date}\par
   \end{center}
-  \parskip 8pt
+%   \vspace*{0.75in}
+%   %\centerline{\psfig{figure=emblem.ps}}
+% %  \centerline{\includegraphics{iitm.eps}}
+%   \centerline{\includegraphics[scale=1.]{iitm}} 
+ \parskip 8pt
 }
 
 \def\titlepage{\newpage\thispagestyle{empty}\c@page\z@}

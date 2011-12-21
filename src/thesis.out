@@ -5,35 +5,24 @@
 \BOOKMARK [0][-]{chapter*.6}{ABBREVIATIONS}{}
 \BOOKMARK [0][-]{chapter*.7}{NOTATION}{}
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}
-\BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}
-\BOOKMARK [2][-]{subsection.1.1.1}{Illustration of the problem}{section.1.1}
-\BOOKMARK [1][-]{section.1.2}{Consecutive Ones Property Testing - a Survey}{chapter.1}
-\BOOKMARK [2][-]{subsection.1.2.1}{Matrices with COP}{section.1.2}
-\BOOKMARK [2][-]{subsection.1.2.2}{Optimization problems in COP}{section.1.2}
-\BOOKMARK [1][-]{section.1.3}{Generalization of COP - The Motivation}{chapter.1}
-\BOOKMARK [1][-]{section.1.4}{Summary of results}{chapter.1}
-\BOOKMARK [1][-]{section.1.5}{Conclusion}{chapter.1}
-\BOOKMARK [1][-]{section.1.6}{to area}{chapter.1}
-\BOOKMARK [1][-]{section.1.7}{to problem}{chapter.1}
-\BOOKMARK [1][-]{section.1.8}{to your thesis}{chapter.1}
-\BOOKMARK [1][-]{section.1.9}{Organization of document}{chapter.1}
-\BOOKMARK [0][-]{chapter.2}{Consecutive Ones property}{}
-\BOOKMARK [1][-]{section.2.1}{Characterization of COP}{chapter.2}
-\BOOKMARK [1][-]{section.2.2}{Recognition of COP}{chapter.2}
-\BOOKMARK [2][-]{changenumber.16.3}{Polynomial time algorithms}{section.2.2}
-\BOOKMARK [2][-]{changenumber.16.5}{Tucker's submatrices, Dom's algo to find them}{section.2.2}
-\BOOKMARK [2][-]{changenumber.16.6}{McConnell's certificate}{section.2.2}
-\BOOKMARK [1][-]{section.2.3}{Alteration to matrices to get COP}{chapter.2}
-\BOOKMARK [1][-]{section.2.4}{brief analysis of hard problems with input having COP \(chap 5, 6 in dom\)}{chapter.2}
-\BOOKMARK [1][-]{section.2.5}{Complexity of certain COP variations}{chapter.2}
-\BOOKMARK [0][-]{chapter.3}{Other problems related to COP }{}
-\BOOKMARK [0][-]{chapter.4}{Research - Tree path labeling of path hypergraphs}{}
+\BOOKMARK [1][-]{section.1.1}{Illustration of the problem}{chapter.1}
+\BOOKMARK [1][-]{section.1.2}{Basic preliminaries - general definitions and nomenclature}{chapter.1}
+\BOOKMARK [1][-]{section.1.3}{Consecutive-Ones Property Testing - a Brief Survey}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.3.1}{Matrices with COP}{section.1.3}
+\BOOKMARK [2][-]{subsection.1.3.2}{Optimization problems in COP}{section.1.3}
+\BOOKMARK [1][-]{section.1.4}{Generalization of COP - The Motivation}{chapter.1}
+\BOOKMARK [1][-]{section.1.5}{Summary of results}{chapter.1}
+\BOOKMARK [0][-]{chapter.2}{Consecutive-Ones property - Important Results from Literature}{}
+\BOOKMARK [1][-]{section.2.1}{Matrices with COP}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Optimization problems in COP}{chapter.2}
+\BOOKMARK [0][-]{chapter.3}{Preliminaries to new results}{}
+\BOOKMARK [0][-]{chapter.4}{Tree Path Labeling of Path Hypergraphs - the New Results}{}
 \BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}
-\BOOKMARK [1][-]{section.4.2}{Preliminaries}{chapter.4}
-\BOOKMARK [1][-]{section.4.3}{Characterization of Feasible Tree Path Labeling}{chapter.4}
-\BOOKMARK [2][-]{subsection.4.3.1}{ICPPL when given tree is a path}{section.4.3}
-\BOOKMARK [1][-]{section.4.4}{Testing for feasible path assignments to k-subdivided star}{chapter.4}
-\BOOKMARK [0][-]{chapter.5}{ Research - [title TBD]}{}
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}
+\BOOKMARK [1][-]{section.4.2}{Characterization of Feasible Tree Path Labeling}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.2.1}{ICPPL when given tree is a path}{section.4.2}
+\BOOKMARK [1][-]{section.4.3}{ TPL with special target trees}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.3.1}{Testing for feasible path assignments to k-subdivided star}{section.4.3}
+\BOOKMARK [1][-]{section.4.4}{ TPL with no restrictions}{chapter.4}
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}
 \BOOKMARK [0][-]{appendix.A}{Appendix A}{}
 \BOOKMARK [1][-]{section*.8}{Bibliography}{appendix.A}

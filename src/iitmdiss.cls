@@ -97,22 +97,20 @@
 %%\RequirePackage[hang]{caption2}  -> TeX generates error
 \RequirePackage[hang]{caption}
 
-
-%% DITCHED THIS WHOLE DAMN THING TO USE ALPHA %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Bibliography
 % 
 % natbib allows easy switching of citation style and using it along
 % with the iitm.bst makes things perfect.
-% anjus % \RequirePackage[authoryear,round]{natbib} 
+\RequirePackage[authoryear,round]{natbib} 
 %\RequirePackage[numbers,square]{natbib} 
-% anjus % \bibliographystyle{iitm}
+\bibliographystyle{iitm}
 
-% anjus % \newcommand{\bibstyle@iitm}{\bibpunct{(}{)}{;}{a}{,}{,}%
-% anjus %      \gdef\NAT@biblabel##1{##1. }}
+\newcommand{\bibstyle@iitm}{\bibpunct{(}{)}{;}{a}{,}{,}%
+     \gdef\NAT@biblabel##1{##1. }}
 %
-% anjus % \setlength{\bibhang}{0pt}
-% anjus % \citestyle{iitm}
+\setlength{\bibhang}{0pt}
+\citestyle{iitm}
 %\citestyle{unsrt_newen}
 
 

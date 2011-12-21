@@ -1,5 +1,6 @@
 \documentclass[MS]             % MS thesis dissertation.
-              {iitmdiss}
+              {iitmdiss_as}    % Hacked by hyperbolicme.
+%              {iitmdiss}      % If the powers to be are finicky.
 
 \usepackage{times}             % Font?
 \usepackage{t1enc}             % T1 encoding??  
@@ -8,15 +9,17 @@
 \usepackage{../lib/mylatexlib}
 
 \def \mythesissubmissiondate {30 December 2011}
+\def \mythesissubmissionmonth {\MakeUppercase {December 2011}}
 
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title page
-\title{\mythesistitle} 
+\title{\mythesistitleNOTSYNPOSIS} 
 \author{\myname} 
-\date{\MakeUppercase
+\date{
   {\mythesissubmissionmonth}} 
-\department{\MakeUppercase{\mydept}}
+\department{\MakeUppercase{\mythesisdept}}
+%\department{\mythesisdept}
 
 %\nocite{*}
 \maketitle
@@ -28,9 +31,9 @@
 \vspace*{0.5in}
 
 \noindent 
-This is to certify that the thesis titled {\bf \mythesistitle},
-submitted by {\bf \myname}, to the Indian Institute of Technology,
-Madras, for the award of the degree of {\bf \mydegree}, is
+This is to certify that the thesis titled {\bf \mythesistitleNOTSYNPOSIS},
+submitted by {\bf \myname}, to the {\bf Indian Institute of Technology
+Madras}, for the award of the degree of {\bf \mydegree}, is 
 a bona fide record of the research work done by her under our
 supervision.  The contents of this thesis, in full or in parts, have
 not been submitted to any other Institute or University for the award
@@ -76,30 +79,50 @@ of any degree or diploma.
 % Abstract
 
 \begin{abstract}
-  \noindent {\bf Keywords}: \hspace*{0.5em} \parbox[t]{4.4in}{consecutive
+  \noindent {\em {\bf Keywords}: \hspace*{0.5em} \parbox[t]{4.4in}{consecutive
     ones property, algorithmic graph theory, hypergraph isomorphism,
-    interval labeling} \vspace*{24pt}
+    interval labeling}} \vspace*{24pt}
 
-\def \tem {}
+  \def \tem {}
   \noindent 
-  \annote{In this paper, we explore a natural generalization of
-  results on binary matrices with the |\tem consecutive ones property|. 
-  We consider the following constraint satisfaction problem. Given (i)
-  a set system $\F \subseteq$ $(2^{U} \setminus \emptyset)$ of a
-  finite set $U$ of cardinality $n$, (ii) a tree $T$ of size $n$ and
-  (iii) a bijection called |\tem tree path labeling|, $\cl$ mapping the
-  sets in $\cF$ to paths in $T$, does there exist at least one
-  bijection $\phi:U \rightarrow V(T)$ such that for each $S \in \cF$,
-  $\{\phi(x) \mid x \in S\} = \cl(S)$?  A tree path labeling of a set
-  system is called |\tem feasible| if there exists such a bijection
-  $\phi$.  We present an algorithmic characterization of feasible tree
-  path labeling. COP is a special instance of tree path labeling
-  problem when $T$ is a path.  We conclude with a polynomial time
-  algorithm to find a feasible tree path labeling of a given set
-  system when $T$ is a |\tem $k$-subdivided star|, set system has a
-  single containment tree of overlap components and set size is
-  limited to at most $k+2$. }{this is the abstract of the
-  paper. expand to fit thesis.}
+  Consecutive-ones property is a non-trivial property of binary
+  matrices that has been studied widely in the literature for over
+  past 50 years. Detection of COP in a matrix is possible efficiently
+  and there are several algorithms that achieve the same. This thesis
+  documents the work done on an extension of COP extended from the
+  equivalent interval assignment problem in \cite{nsnrs09}. These new
+  results rigorously prove a natural extension (to trees) of their
+  characterization as well as makes connections to graph isomorphism,
+  namely path graph isomorphism.
+
+  \tnote{EXPAND. 
+  Abstract must be a brief about what results we have and how it fits
+  in the body of research.\\
+  -- Area: Broad to Specialized. i.e. Combinatorial
+    algorithms -> Matrix reorganization -> general data reorganization
+    (interval assignment) -> path assignment\\
+  -- Class of problems: say, data reorganization.\\
+  -- Nature of results: Is a generalization. We have a
+    Polynomial algorithm for a subset of the generalization.\\
+% maybe add - we explore a natural
+%     generalization of results on binary matrices with the |\tem
+%     consecutive-ones property|.  We consider the following constraint
+%     satisfaction problem. Given (i) a set system $\F \subseteq$
+%     $(2^{U} \setminus \emptyset)$ of a finite set $U$ of cardinality
+%     $n$, (ii) a tree $T$ of size $n$ and (iii) a bijection called
+%     |\tem tree path labeling|, $\cl$ mapping the sets in $\cF$ to
+%     paths in $T$, does there exist at least one bijection $\phi:U
+%     \rightarrow V(T)$ such that for each $S \in \cF$, $\{\phi(x) \mid
+%     x \in S\} = \cl(S)$?  A tree path labeling of a set system is
+%     called |\tem feasible| if there exists such a bijection $\phi$.
+%     We present an algorithmic characterization of feasible tree path
+%     labeling. COP is a special instance of tree path labeling problem
+%     when $T$ is a path.  We conclude with a polynomial time algorithm
+%     to find a feasible tree path labeling of a given set system when
+%     $T$ is a |\tem $k$-subdivided star|, set system has a single
+%     containment tree of overlap components and set size is limited to
+%     at most $k+2$.
+  }
 \end{abstract}
 
 
@@ -126,8 +149,8 @@ of any degree or diploma.
 \noindent 
 \begin{tabbing}
 xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
-\textbf{COP}   \> Consecutive Ones Property \\
-\textbf{COT}   \> Consecutive Ones Testing \\
+\textbf{COP}   \> Consecutive-Ones Property \\
+\textbf{COT}   \> Consecutive-Ones Testing \\
 \textbf{ICPIA}   \> Intersection Cardinality Preservation Interval Assignment \\
 \textbf{ICPPL}   \> Intersection Cardinality Preserved Path Labeling \\
 % ADD MORE HERE
@@ -158,11 +181,20 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 \chapter{Introduction}
 \label{chap:intro}
 
-\section{Introduction}
-\label{sec:intro}
-\vspace{\secfirstparatrim} 
+% \section{Introduction}
+% \label{sec:intro}
+% \vspace{\secfirstparatrim} 
 
-Consecutive ones property is a non-trivial property of binary matrices
+\tnote{ The main themes of the thesis that must not be left out:\\
+  connection of COP to ||set systems|| and thus to general
+  data bases. cite:nsnrs09\\
+  ||graph isomorphism|| by canonization cite:kklv10\\
+  ||certificate for a problem|| cite:mcc04\\
+  Also see purple book notes.  }
+   
+
+
+Consecutive-ones property is a non-trivial property of binary matrices
 that has been studied widely in the literature for over past 50
 years. Detection of COP in a matrix is possible efficiently and there
 are several algorithms that achieve the same. This thesis documents
@@ -172,6 +204,15 @@ rigorously prove a natural extension (to trees) of their
 characterization as well as makes connections to graph isomorphism,
 namely path graph isomorphism.
 
+
+\tnote{Have a para on Organization: Outline of document}
+Section~\ref{sec:background} gives a brief survey of COP and
+optimization problems related to it followed by motivation for the
+thesis in Section~\ref{sec:motive}.  Section~\ref{sec:results}
+presents a summary of our results on the extension of COP namely, the
+tree path labeling problem. \tnote[TH]{update for thesis}
+
+
 % \tnote{testing 1 2 3...}
 % \tnote[bogus1]{testing 1 2 3...}
 % \tnote[bogus2]{testing 1 2 3...}
@@ -179,9 +220,9 @@ namely path graph isomorphism.
 % \tnote[bogus4]{testing 1 2 3...}
 % \tnote[TH]{testing 1 2 3...}
 
-\subsection{Illustration of the problem}
+\section{Illustration of the problem}
 \label{sec:problem}
-\vspace{\secfirstparatrim}
+%\vspace{\secfirstparatrim}
 
 A group of students, \Pa, \Pi, \Sn, \Wo, \Vi, \Li, \Ch, \Sa, \Fr,
   \Sc\ and \Lu\ enroll at the
@@ -201,21 +242,7 @@ groups respectively and the integers $n$ and $m$ denote the total
 number students and study groups respectively. In relation to this
 example, these are defined in Table~\ref{tab:wsigroups}. Also given
 there is the study group allocation to students.
-
-% \vspace{-3mm}
-% \begin{align*}
-% U &= \{\xPa,\; \xPi,\; \xSn,\; \xWo,\; \xVi,\; \xLi,\; \xCh,\;
-%     \xSa,\; \xFr,\; \xSc,\; \xLu\}\\
-% \cF &= \{\xLLL, \xGGG, \xBBB, \xTTT\}\\
-% \xLLL &= \{\xCh,\;  \xSa,\;  \xFr,\;  \xSc,\;  \xLu \}\\
-% \xGGG &= \{\xPa,\;  \xPi,\;  \xVi,\;  \xCh \}\\
-% \xBBB &= \{\xSn,\;  \xPi,\;  \xWo \}\\
-% \xTTT &= \{\xVi,\;  \xLi,\;  \xCh,\;  \xFr \}\\
-% n &= |U| = 11\\
-% m &= |\cF| = 4  
-% \end{align*}
-
-
+ 
 \begin{table}[htbp]
   \centering
   { \footnotesize
@@ -235,8 +262,6 @@ there is the study group allocation to students.
   \label{tab:wsigroups}
 \end{table}
 
-% The administration faces a small challenge with their
-% accommodation. 
 The campus has a residential area {\residenceblock} that has $n$
 single occupancy apartments reserved for the study groups'
 accommodation.  All these apartments are located such that the streets
@@ -253,9 +278,6 @@ graph, it classifies as a tree.
       \begin{tabular}{rcl}
         $T $&$=$&$ \text{\em Street map tree of \residenceblock}$\\
         $V(T) $&$=$&$ \{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 \}$\\
-        % $\phi^{-1}(V(T)) $&$=$&$ \{ \xSa,\; \xPi,\; \xFr,\; \xWo,\;
-        % \xCh,\; \xVi,\;
-        % \xPa,\; \xSn,\; \xLu,\; \xLi,\; \xSc \}$\\
         $\cP $&$=$&$ \{R\xLLL, R\xGGG, R\xBBB, R\xTTT\}$\\
         $R\xLLL $&$=$&$ \{9, 1, 5, 3, 11\}$\\
         $R\xGGG $&$=$&$ \{7, 2, 6, 5\}$\\
@@ -313,7 +335,6 @@ allocation is also shown. Table~\ref{tab:iltree} shows the same
 solution set theoretically.  How this is algorithmically computed is
 the focus of this thesis.
 
-%%%%%%%%%%%% THESIS UNCOMMENT %%%%%%%%%%%%
 % \begin{figure}[t]%[htbp]
 %  \centering
 %   \includegraphics[scale=0.3]{../img/1_infinite_loop.png}
@@ -327,7 +348,7 @@ the focus of this thesis.
 %   \caption{{\residenceblock} street map with study group routes
 %     allocated. Routes are color coded as follows: red for
 %     \textcolor{red}{$\xLLL$} group, blue for \textcolor{blue}{$\xGGG$}
-%     group, orange for \textcolor{YellowOrange}{$\xBBB$} group, green for
+%     group, orange for \textcolor{yellow}{$\xBBB$} group, green for
 %     \textcolor{green}{$\xTTT$} group}
 %   \label{fig:streetmappath}
 % \end{figure}
@@ -338,21 +359,22 @@ the focus of this thesis.
 %     {\residenceblock} that meets the requirements stated before.}
 %   \label{fig:streetmappathpeople}
 % \end{figure}
-%%%%%%%%%%%% END THESIS UNCOMMENT %%%%%%%%%%%%
-% \begin{figure}[htbp] %[t]%
-%  \centering
-%   (a) \includegraphics[scale=0.2]{../img/1_infinite_loop.png}
-%   (b) \includegraphics[scale=0.2]{../img/2_infinite_loop_BTWF.png}
-%  \label{fig:streetmap}
-%   \caption{\figtabsize (a) {\residenceblock} street map (b) {\residenceblock} street map with study group routes
-%     allocated. Routes are color coded as follows: red for
-%     \textcolor{red}{$\xLLL$} group, blue for \textcolor{blue}{$\xGGG$}
-%     group, orange for \textcolor{YellowOrange}{$\xBBB$} group, green for
-%     \textcolor{green}{$\xTTT$} group}
-% \end{figure}
+
 \begin{figure}[htbp] %[t]%
-  \centering
-  \includegraphics[scale=0.3]{../img/3_infinite_loop.png}
+ \centering
+  (a) \includegraphics[scale=0.2]{../img/1_infinite_loop.png}
+  (b) \includegraphics[scale=0.2]{../img/2_infinite_loop_BTWF.png}
+ \label{fig:streetmap}
+ \caption{\figtabsize (a) {\residenceblock} street map (b)
+   {\residenceblock} street map with study group routes
+   allocated. Routes are color coded as follows: red for
+   \textcolor{red}{$\xLLL$} group, blue for \textcolor{blue}{$\xGGG$}
+   group, orange for \textcolor{yellow}{$\xBBB$} group, green for
+   \textcolor{green}{$\xTTT$} group}
+% \end{figure}
+% \begin{figure}[htbp] %[t]%
+%   \centering
+  \includegraphics[scale=0.5]{../img/3_infinite_loop.png}
   \caption{\figtabsize Individual allocation of apartments to students
     in {\residenceblock} that meets the requirements stated before.
     The routes are color coded as follows: red for
@@ -398,7 +420,7 @@ tree\tnote[TH]{Allowing any tree in this example could be seen as a
 problem.
 
 The interval assignment problem to a set system is equivalent to the
-consecutive ones property (COP) problem in binary matrices\cite{wlh02,
+consecutive-ones property (COP) problem in binary matrices\cite{wlh02,
   nsnrs09}.  The COP problem is to rearrange rows (columns) of a
 binary matrix in such a way that every column (row) has its {\un}s
 occur consecutively. If this is possible the matrix is said to have
@@ -410,17 +432,16 @@ extensions of COP, more specifically, the extension of interval
 assignment problem to tree path assignment problem (which is
 illustrated by the study group accommodation problem).
 
-Section~\ref{sec:background} gives a brief survey of COP and
-optimization problems related to it followed by motivation for the
-thesis in Section~\ref{sec:motive}.  Section~\ref{sec:results}
-presents a summary of our results on the extension of COP namely, the
-tree path labeling problem. \tnote[TH]{update for thesis}
+
+\section{Basic preliminaries - general definitions and nomenclature}
+\tnote{(definitions theorems etc) needed if any
+    - graph theory}
 
 
-\section{Consecutive Ones Property Testing - a Survey} %{Background}
+\section{Consecutive-Ones Property Testing - a Brief Survey} %{Background}
 \label{sec:background}
-\vspace{\secfirstparatrim}
-In this section, a brief survey of the consecutive ones problem and its
+%\vspace{\secfirstparatrim}
+In this section, a brief survey of the consecutive-ones problem and its
 optimization problems is presented.
 
 %%%%%%                              %%%%%%
@@ -428,7 +449,7 @@ optimization problems is presented.
 %%%%%%                              %%%%%%
 \tnote[TH]{ADD: As it will be described in detail later in this
   document, isomorphism of certain % classes of graphs, namely chordal
-%   graphs, have a close relationship with consecutive ones property and
+%   graphs, have a close relationship with consecutive-ones property and
 %   generalizations of it.  This is perhaps because of how closely COP
 %   of a matrix relates to properties of graphs derived from matrices as
 %   seen in the following results.
@@ -472,7 +493,7 @@ optimization problems is presented.
 
 \subsection{Matrices with COP}
 \label{sec:copmatrices}
-\vspace{\secfirstparatrim} 
+%\vspace{\secfirstparatrim} 
 As seen earlier, the interval assignment problem (illustrated as the
 course scheduling problem in Section~\ref{sec:problem}), is a special
 case of the problem we address in this thesis, namely the tree path
@@ -574,7 +595,7 @@ build PQR trees. \tnote[GTC]{improv in terms of what?}\cite{wlh02}
 describes the simpler algorithm for COT. Hsu also invented PC trees
 \cite{wlh01}\tnote[TH]{This result first appeared inproc ISAAC92}
 which is claimed to be much easier to implement. \cite{nsnrs09}
-describes a characterization of consecutive ones property solely based
+describes a characterization of consecutive-ones property solely based
 on the cardinality properties of the set representations of the
 columns (rows); every column (row) is equivalent to a set that has the
 row (column) indices of the rows (columns) that have one entries in
@@ -602,7 +623,7 @@ addressed\tnote[GTC]{in what way??} in \cite{co98}.  \tnote[GTC]{expand
 
 \subsection{Optimization problems in COP}
 \label{sec:optcop}
-\vspace{\secfirstparatrim}  
+%\vspace{\secfirstparatrim}  
 So far we have been concerned about matrices that have the consecutive
 ones property. However in real life applications, it is rare that data
 sets represented by binary matrices have COP, primarily due to the
@@ -697,9 +718,9 @@ of ones is proven to be NP complete by cite:k77}\tnote[GTC]{are these two
 
 \section{Generalization of COP - The Motivation}  %{Motivation}
 \label{sec:motive}
-\vspace{\secfirstparatrim}  
+%\vspace{\secfirstparatrim}  
 As seen in Section~\ref{sec:copmatrices}, \cite{nsnrs09} describes a
-characterization of consecutive ones property based on the cardinality
+characterization of consecutive-ones property based on the cardinality
 properties of the set representations of the columns. This result is
 very relevant to this thesis because aside from it simplifying COT to
 a great degree, our generalization problem is motivated by their
@@ -759,12 +780,12 @@ feasible.  %This generalizes the result in \cite{nsnrs09}.
 % converts each set to its assigned interval. 
 
 
-\def \probdefwidth {0.85\linewidth}
-\def \FTPL {{\sc Feasible Tree Path Labeling}}
-\def \CFTPL {\sc Compute Feasible Path Labeling} 
+% \def \probdefwidth {0.85\linewidth}
+% \def \FTPL {{\sc Feasible Tree Path Labeling}}
+% \def \CFTPL {\sc Compute Feasible Path Labeling} 
 \section{Summary of results}
 \label{sec:results}
-\vspace{\secfirstparatrim}
+%\vspace{\secfirstparatrim}
 % We address the computation of TPL\footnote{Tree Path Labeling} for a
 % given hypergraph\footnote{The term {\em hypergraph} is used instead
 %   {\em set systems} are used interchangably in this
@@ -856,8 +877,8 @@ tree, if one exists. This problem, {\CFTPL}, is defined as follows.
 \end{minipage}\\
 }
 
-\def \kstar {$k$-subdivided star}
-\def \CFTPLKTREE {\sc Compute $k$-subdivided Star Path Labeling}
+% \def \kstar {$k$-subdivided star}
+% \def \CFTPLKTREE {\sc Compute $k$-subdivided Star Path Labeling}
 
 We present a polynomial time algorithm for {\CFTPL} when the target
 tree $T$ belongs to a special class of trees called {\em \kstar s} and
@@ -2003,314 +2024,25 @@ currently open to be solved in polynomial time.
 %   \qed
 % \end{proof}
 
-\section{Conclusion}
-\label{sec:conclusion}
-\vspace{\secfirstparatrim} 
-
-We give a characterization for feasible tree path labeling of path
-hypergraphs. The proof for this is constructive and computes a
-feasibility bijection mapping vertices of the hypergraph to vertices
-of the given target tree. This thesis also discovered an exponential algorithm
-that computes a feasible TPL to a given hypergraph if it is a path hypergraph.
-
-Our results have close connections to recognition of path graphs and
-to path graph isomorphism.  Graphs which can be represented as the
-intersection graph of paths in a tree are called {\em path
-  graphs}\cite{mcg04}. Thus, a hypergraph $\cF$ can be interpreted as
-paths in a tree, if and only if the intersection graph of $\cF$ is a
-{\em path graph}. Path graphs are a subclass of chordal graphs since
-chordal graphs are characterized as the intersection graphs of
-subtrees of a tree\cite{mcg04}.  Path graphs are well studied in the
-literature \cite{plr70}--\cite{mcg04}\tnote[TH]{Check if cite:bp93 is
-  indeed for path graphs}.  Path graph recognition can be done in
-polynomial time\cite{gav78,aas93}.  Clearly, this is a necessary
-condition in terms of the intersection graph of the input hypergraph
-$\cF$ in \FTPL. However, one can easily obtain a counterexample to
-show the insufficiency of this condition\tnote[GTC]{Give a figure
-  showing insuff.}.  Path graph isomorphism is known be
-isomorphism-complete\cite{kklv10}. Therefore, \annote[GTC]{it is unlikely
-  that we can solve the problem of finding feasible path labeling
-  $\cl$ for a given $\cF$ and }{WHY?} tree $T$.  It is
-  definitely interesting to classify the kinds of trees and
-  hypergraphs for which feasible path labelings can be\tnote[TH]{ELABORATE.}
-found efficiently.  \annote[TH]{These results would form a natural
-  generalization of COP testing and interval graph isomorphism,
-  culminating in Graph Isomorphism }{REWORD} itself.
- To this effect we consider TPL on {\kstar} and give a polynomial time
- solution for the same. 
-
-Whether TPL on general trees is solvable in $P$ remains open. So do
-optimization opportunities in TPL (possible extensions to optimization for COP in the
-Section~\ref{sec:optcop}.\tnote[TH]{link to section}).
 
 
+\chapter{Consecutive-Ones property - Important Results from Literature}
+\tnote{TBD: have a few lines about organization of chapter}
 
-\tnote[TH]{ ||Complexity challenges:|| Canonization is an important tool in graph isomorphism. Invention of a
-% deterministic method of canonization for any class of graphs naturally
-% results in an algorithm for isomorphism. All that is required is to
-% check if the canons of two graphs are the same. Thus complexity of
-% graph isomorphism can be studied by studying canonization
-% methods. While general graph ismorphism remains elusive in terms of
-% hardness, canonization has been studied for smaller classes of graphs
-% thus giving complexity/hardness results for them.
+\tnote{ Survey chapter: is the full fledged expansion of the survey in
+  introduction with details, observations, theorems etc.}
 
-% In 1992, \cite{sl92} made an important discovery that tree isomorphism
-% is in logspace. It was done by inventing a method of canonization of
-% trees using a logspace depth first traversal
-% algorithm. \tnote{confirm the statement of claim}.
+\section{Matrices with COP}
+\tnote{Expand on ref:sec:copmatrices}
 
-% \cite{kklv10} proved that interval graph canonization is also in
-% logspace thus drawing logspace conslusions about COT. 
-% % This result is
-% % built on the fact that 
-% Interval graphs are FP+C (fixed point with
-% counting) definable \tnote{elucidate} and \cite{l10} showed that
-% this implies that it captures PTIME. \tnote{elucidate} This result
-% along with that of undirected graph reachability being in logspace
-% \cite{rei08}, \cite{kklv10} proved their logspace result.
-}%
-\tnote[TH]{ (1) the interesting survey in conclusion section of kklv10
-  (2) [[[COP helping some problems with hardness]]] having COP in the
-  input structure makes some problems less hard than in a general
-  input. -- min set cover problem is known to be NP hard. so is min
-  hitting
-  set. these two problems are equivalent cite-adp80\\
-  -- -- complexity results: log factor polynomial time approximable cite-f98, W[2]-complete with solution size as parameter cite-df99\\
-  -- a couple of generalizations:\\
-  -- -- min degree hypergraph (MDH) problem\\
-  -- -- red blue covering (RBSC) problem\\
-  ----- cite-d08phd Chapter 5.\\
-  ----- what are cite-d08phd results\\
-  ----- Rectangle stabbing \\
-  ----- see cite-d08phd Chapter 6?  }
+\section{Optimization problems in COP}
+\tnote{Expand on ref:sec:optcop}
 
-
-
-\tnote{ Some things to remember - have this somewhere.
-
-  \begin{itemize}
-  \item Examples: Illustration of the problem examples. both COP and
-    extension
-  \item Basic preliminaries: (definitions theorems etc) needed if any
-    - graph theory
-  \item Organization: Outline of document
-  \end{itemize}
-  
-  Abstract must be a brief about what results we have and how it fits
-  in the body of research.
-
-  \begin{enumerate}
-  \item \emph{Area:} - Broad to Specialized. i.e. Combinatorial
-    algorithms -> Matrix reorganization -> general data reorganization
-    (interval assignment) -> path assignment
-  \item \emph{Class of problems:} say, data reorganization.
-  \item \emph{Nature of results:} Is a generalization. We have a
-    Polynomial algorithm for a subset of the generalization.
-  \end{enumerate}
-
-Introduction is a magnified version of Abstract with some brief
-citations etc. mini survey. Here talk about canonization how it
-connects these problems to graph isomorphism. Introduce our problem,
-explain why it is important etc. How canonization is a
-posisbility. Brief about results obtained.
-
-Someone who doesn't want to go through the whole thesis must get the
-gist of the whole document from the introduction chapter. that should
-be the outlook. 
-
-
-once this is done, the rest of the chapters will fall into place.
-
-{\em Survey chapter} is the full fledged expansion of the survey in
-introduction with details, observations, theorems etc.
-
-  {\em The main themes} of the thesis that must not be left out:
-  \begin{enumerate}
-  \item connection of COP to {\bf set systems} and thus to general
-    data bases. \cite{nsnrs09}
-  \item {\bf graph isomorphism} by canonization \cite{kklv10}
-  \item {\bf certificate for a problem} \cite{mcc04}
-  \end{enumerate}
-
-Also see purple book notes.
-}
-
-\section{to area}
-\section{to problem}
-\section{to your thesis}
-\section{Organization of document}
-
-
-   
-\chapter{Consecutive Ones property}
-\tnote{survey of cop includes mainly 
-\begin{enumerate}
-\item \cite{d08phd} (perhaps minus chap 4?)
-\item \cite{nsnrs09}
-\item \cite{mcc04}
-\item \cite{kklv10}
-\end{enumerate}
-.. to name a few. 
-
-sections will be as follows:}
-\section{Characterization of COP}
-
-\tnote{\cite{at72}, \cite{mcc04}, prime submatrix \cite{wlh02}?}
-\section{Recognition of COP}
-\subsection{\tnote{Polynomial time algorithms}}
-\tnote{ (pq tree, pqr, icpia)}
-\subsection{\tnote{Tucker's submatrices, Dom's algo to find them}}
-\subsection{\tnote{McConnell's certificate}}
-
-
-\section{Alteration to matrices to get COP}
-\tnote{algorithms to make a matrix into one with COP
-  (min/max-cos-r/c) \cite{d08phd} }
-\section{brief analysis of hard problems with input having COP (chap
-  5, 6 in dom)}
-\label{sec:briefanal}
-\tnote{Do I need this?}
-\section{Complexity of certain COP variations}
-\tnote{maybe combine with Section~\ref{sec:briefanal}\\
-complexity - poly, logspace}
-
-
-\chapter{Other problems related to COP }
-\tnote{(see literature)}
-
-
-
-
-
-\chapter{Research - Tree path labeling of path hypergraphs}
-\tnote{Extension to trees. ( stuff in latin paper,)}
-
-\tnote{UPDATE TO FINAL VERSION. BELOW IS OLDER VERSION WITH
-  INCOMPLETE SEC 4.}
-\section{Introduction}
-Consecutive ones property (COP) of binary matrices is a widely studied
-combinatorial problem. The problem is to rearrange rows (columns) of a
-binary matrix in such a way that every column (row) has its $1$s occur
-consecutively. If this is possible the matrix is said to have the COP.
-This problem has several practical applications in diverse fields
-including scheduling \cite{hl06}, information retrieval \cite{k77} and
-computational biology \cite{abh98}.  Further, it is a tool in graph
-theory \cite{mcg04} for interval graph recognition, characterization
-of hamiltonian graphs, and in integer linear programming
-\cite{ht02,hl06}.  Recognition of COP is polynomial time solvable by
-several algorithms. PQ trees \cite{bl76}, variations of PQ trees
-\cite{mm96,wlh01,wlh02,mcc04}, ICPIA \cite{nsnrs09} are the main ones.
-
-%\noindent
-The problem of COP testing can be easily seen as a simple constraint
-satisfaction problem involving a system of sets from a universe. Every
-column of the binary matrix can be converted into a set of integers
-which are the indices of the rows with $1$s in that column. When
-observed in this context, if the matrix has the COP, a reordering of
-its rows will result in sets that have only consecutive integers. In
-other words, the sets after reordering are intervals. Indeed the
-problem now becomes finding interval assignments to the given set
-system \cite{nsnrs09} with a single permutation of the universe (set
-of row indices) which permutes each set to its interval. The result in
-\cite{nsnrs09} characterizes interval assignments to the sets which
-can be obtained from a single permutation of the rows.  They show that
-for each set, the cardinality of the interval assigned to it must be
-same as the cardinality of the set, and the intersection cardinality
-of any two sets must be same as the interesction cardinality of the
-corresponding intervals.  While this is naturally a necessary
-condition, \cite{nsnrs09} shows this is indeed sufficient.  Such an
-interval assignment is called an Intersection Cardinality Preserving
-Interval Assignment (ICPIA).  Finally, the idea of decomposing a given
-0-1 matrix into prime matrices to check for COP is adopted from
-\cite{wlh02} to test if an ICPIA exists for a given set system.
-
-\noindent 
-{\bf Our Work.}  A natural generalization of the interval
-assignment problem is feasible tree path labeling problem of a set
-system. The problem is defined as follows -- given a set system $\cF$
-from a universe $U$ and a tree $T$, does there exist a bijection from
-$U$ to the vertices of $T$ such that each set in the system maps to a
-path in $T$.  We refer to this as the {\em tree path labeling problem}
-for an input set system, target tree pair -- $(\cF,T)$. As a special
-case if the tree $T$ is a path, the problem becomes the interval
-assignment problem.  We focus on the question of generalizing the
-notion of an ICPIA \cite{nsnrs09} to characterize feasible path
-assignments.  We show that for a given set system $\cF$, a tree $T$,
-and an assignment of paths from $T$ to the sets, there is a feasible
-bijection between $U$ and $V(T)$ if and only if all intersection
-cardinalities among any three sets (not necessarily distinct) is same
-as the intersection cardinality of the paths assigned to them and the
-input runs a filtering algorithm (described in this paper)
-successfully.  This characterization is proved constructively and it
-gives a natural data structure that stores all the relevant feasible
-bijections between $U$ and $V(T)$.  Further, the filtering algorithm
-is also an efficient algorithm to test if a tree path labeling to the
-set system is feasible.  This generalizes the result in
-\cite{nsnrs09}.
-
-%\noindent 
-\tnote{the following text could be in Further Study/Conclusion}It
-is an interesting fact that for a matrix with the COP, the
-intersection graph of the corresponding set system is an interval
-graph.  A similar connection to a subclass of chordal graphs and a
-superclass of interval graphs exists for the generalization of COP.
-In this case, the intersection graph of the corresponding set system
-must be a {\em path graph}. Chordal graphs are of great significance,
-extensively studied, and have several applications.  One of the well
-known and interesting properties of a chordal graphs is its connection
-with intersection graphs \cite{mcg04}. For every chordal graph, there
-exists a tree and a family of subtrees of this tree such that the
-intersection graph of this family is isomorphic to the chordal graph
-\cite{plr70,gav78,bp93}.  These trees when in a certain format, are
-called {\em clique trees} \cite{apy92} of the chordal graph. This is a
-compact representation of the chordal graph. There has also been work
-done on the generalization of clique trees to clique hypergraphs
-\cite{km02}.  If the chordal graph can be represented as the
-intersection graph of paths in a tree, then the graph is called path
-graph \cite{mcg04}.  Therefore, it is clear that if there is a
-bijection from $U$ to $V(T)$ such that for every set, the elements in
-it map to vertices of a unique path in $T$, then the intersection
-graph of the set system is indeed a path graph.  However, this is only
-a necessary condition and can be checked efficiently because path
-graph recognition is polynomial time
-solvable\cite{gav78,aas93}. Indeed, it is possible to construct a set
-system and tree, such that the intersection graph is a path graph, but
-there is no bijection between $U$ and $V(T)$ such that the sets map to
-paths. Path graph isomorphism is known be isomorphism-complete, see
-for example \cite{kklv10}. An interesting area of research would be to
-see what this result tells us about the complexity of the tree path
-labeling problem (not covered in this paper).
-
-%\noindent
-In the later part of this paper, we focus on a new special case of the
-tree path labeling problem. Here the set system is such that every set
-is at most $k+2$ in size and for every pair of sets in it there exists
-a sequence of sets between them with consecutive sets in this sequence
-having a strict intersection -- i.e., non-empty intersection with
-neither being contained in the other. Moreover, the given tree is a
-{\em $k$-subdivided star}. We demonstrate a polynomial time algorithm
-to find a feasible path labeling in this case.
-
-
-% In the later part of this paper, we decompose our search for a
-% bijection between $U$ and $V(T)$ into subproblems.  Each subproblem is
-% on a set subsystem in which for each set, there is another set in the
-% set subsystem with which the intersection is {\em strict}, i.e., there
-% is a non-empty intersection, but neither is contained in the other.
-% This is in the spirit of results in \cite{wlh02,nsnrs09} where to test
-% for the COP in a given matrix, the COP problem is solved on an
-% equivalent set of prime matrices.
-
-\noindent {\bf Roadmap.} The necessary preliminaries with definitions
-etc. are presented in
-Section~\ref{sec:prelims}. Section~\ref{sec:feasible} documents the
-characterization of a feasible path labeling and finally,
-Section~\ref{sec:ksubdivstar} describes a polynomial time algorithm to
-find the tree path labeling of a given set system from a given
-$k$-subdivided tree.
-
-\section{Preliminaries} 
+\chapter{Preliminaries to new results}
+%\section{Preliminaries} 
 \label{sec:prelims} 
+
+\tnote{TBD: have a few lines about organization of chapter}
 
 This section states definitions and basic facts necessary in the scope
 of this document.
@@ -2447,6 +2179,122 @@ edges are called {\em rays} of the star. A {\em $k$-subdivided star}
 is a star with all its rays subdivided exactly $k$ times. The
 definition of a {\em ray of a $k$-subdivided star} is extended to the path
 from the center to a leaf. It is clear that all rays are of length $k+2$.
+
+
+\chapter{Tree Path Labeling of Path Hypergraphs - the New Results}
+
+
+\tnote{UPDATE TO FINAL VERSION. BELOW IS OLDER VERSION WITH
+  INCOMPLETE SEC 4.}
+The problem of COP testing can be easily seen as a simple constraint
+satisfaction problem involving a system of sets from a universe. Every
+column of the binary matrix can be converted into a set of integers
+which are the indices of the rows with $1$s in that column. When
+observed in this context, if the matrix has the COP, a reordering of
+its rows will result in sets that have only consecutive integers. In
+other words, the sets after reordering are intervals. Indeed the
+problem now becomes finding interval assignments to the given set
+system \cite{nsnrs09} with a single permutation of the universe (set
+of row indices) which permutes each set to its interval. The result in
+\cite{nsnrs09} characterizes interval assignments to the sets which
+can be obtained from a single permutation of the rows.  They show that
+for each set, the cardinality of the interval assigned to it must be
+same as the cardinality of the set, and the intersection cardinality
+of any two sets must be same as the interesction cardinality of the
+corresponding intervals.  While this is naturally a necessary
+condition, \cite{nsnrs09} shows this is indeed sufficient.  Such an
+interval assignment is called an Intersection Cardinality Preserving
+Interval Assignment (ICPIA).  Finally, the idea of decomposing a given
+0-1 matrix into prime matrices to check for COP is adopted from
+\cite{wlh02} to test if an ICPIA exists for a given set system.
+
+\tnote{TBD: have a few lines about organization of chapter}
+The necessary preliminaries with definitions
+etc. are presented in
+Section~\ref{sec:prelims}. Section~\ref{sec:feasible} documents the
+characterization of a feasible path labeling and finally,
+Section~\ref{sec:ksubdivstar} describes a polynomial time algorithm to
+find the tree path labeling of a given set system from a given
+$k$-subdivided tree.
+
+\section{Introduction} 
+A natural generalization of the interval
+assignment problem is feasible tree path labeling problem of a set
+system. The problem is defined as follows -- given a set system $\cF$
+from a universe $U$ and a tree $T$, does there exist a bijection from
+$U$ to the vertices of $T$ such that each set in the system maps to a
+path in $T$.  We refer to this as the {\em tree path labeling problem}
+for an input set system, target tree pair -- $(\cF,T)$. As a special
+case if the tree $T$ is a path, the problem becomes the interval
+assignment problem.  We focus on the question of generalizing the
+notion of an ICPIA \cite{nsnrs09} to characterize feasible path
+assignments.  We show that for a given set system $\cF$, a tree $T$,
+and an assignment of paths from $T$ to the sets, there is a feasible
+bijection between $U$ and $V(T)$ if and only if all intersection
+cardinalities among any three sets (not necessarily distinct) is same
+as the intersection cardinality of the paths assigned to them and the
+input runs a filtering algorithm (described in this paper)
+successfully.  This characterization is proved constructively and it
+gives a natural data structure that stores all the relevant feasible
+bijections between $U$ and $V(T)$.  Further, the filtering algorithm
+is also an efficient algorithm to test if a tree path labeling to the
+set system is feasible.  This generalizes the result in
+\cite{nsnrs09}.
+
+%\noindent 
+\tnote{the following text could be in Further Study/Conclusion}It
+is an interesting fact that for a matrix with the COP, the
+intersection graph of the corresponding set system is an interval
+graph.  A similar connection to a subclass of chordal graphs and a
+superclass of interval graphs exists for the generalization of COP.
+In this case, the intersection graph of the corresponding set system
+must be a {\em path graph}. Chordal graphs are of great significance,
+extensively studied, and have several applications.  One of the well
+known and interesting properties of a chordal graphs is its connection
+with intersection graphs \cite{mcg04}. For every chordal graph, there
+exists a tree and a family of subtrees of this tree such that the
+intersection graph of this family is isomorphic to the chordal graph
+\cite{plr70,gav78,bp93}.  These trees when in a certain format, are
+called {\em clique trees} \cite{apy92} of the chordal graph. This is a
+compact representation of the chordal graph. There has also been work
+done on the generalization of clique trees to clique hypergraphs
+\cite{km02}.  If the chordal graph can be represented as the
+intersection graph of paths in a tree, then the graph is called path
+graph \cite{mcg04}.  Therefore, it is clear that if there is a
+bijection from $U$ to $V(T)$ such that for every set, the elements in
+it map to vertices of a unique path in $T$, then the intersection
+graph of the set system is indeed a path graph.  However, this is only
+a necessary condition and can be checked efficiently because path
+graph recognition is polynomial time
+solvable\cite{gav78,aas93}. Indeed, it is possible to construct a set
+system and tree, such that the intersection graph is a path graph, but
+there is no bijection between $U$ and $V(T)$ such that the sets map to
+paths. Path graph isomorphism is known be isomorphism-complete, see
+for example \cite{kklv10}. An interesting area of research would be to
+see what this result tells us about the complexity of the tree path
+labeling problem (not covered in this paper).
+
+%\noindent
+In the later part of this paper, we focus on a new special case of the
+tree path labeling problem. Here the set system is such that every set
+is at most $k+2$ in size and for every pair of sets in it there exists
+a sequence of sets between them with consecutive sets in this sequence
+having a strict intersection -- i.e., non-empty intersection with
+neither being contained in the other. Moreover, the given tree is a
+{\em $k$-subdivided star}. We demonstrate a polynomial time algorithm
+to find a feasible path labeling in this case.
+
+
+% In the later part of this paper, we decompose our search for a
+% bijection between $U$ and $V(T)$ into subproblems.  Each subproblem is
+% on a set subsystem in which for each set, there is another set in the
+% set subsystem with which the intersection is {\em strict}, i.e., there
+% is a non-empty intersection, but neither is contained in the other.
+% This is in the spirit of results in \cite{wlh02,nsnrs09} where to test
+% for the COP in a given matrix, the COP problem is solved on an
+% equivalent set of prime matrices.
+
+
 
 
 \section{Characterization of Feasible Tree Path  Labeling} 
@@ -3013,8 +2861,10 @@ used in the next section for finding tree path labeling from a
 $k$-subdivided star due to this graph's close relationship with
 intervals. 
 
+\section{ TPL with special target trees}
+\tnote{give problem definition etc}
 
-\section{Testing for feasible path assignments to $k$-subdivided star}
+\subsection{Testing for feasible path assignments to $k$-subdivided star}
 \label{sec:ksubdivstar}
 In this section we consider the problem of assigning paths from a
 $k$-subdivided star $T$ to a given set system $\cF$.  We consider
@@ -3353,11 +3203,92 @@ labeling to the $k$-subdivded tree $T$.
 %   ICPIA if there is one.
 % \end{proof}
 
-\chapter{ Research - [title TBD]} 
-\tnote{the matrix theory submitted in walcom, any other work - need to see notes.}
+\section{ TPL with no restrictions}
+\tnote{ADD WALCOM PAPER TEXT}
 
 
 \chapter{Conclusion}
+% \section{Conclusion}
+\label{sec:conclusion}
+%\vspace{\secfirstparatrim} 
+
+We give a characterization for feasible tree path labeling of path
+hypergraphs. The proof for this is constructive and computes a
+feasibility bijection mapping vertices of the hypergraph to vertices
+of the given target tree. This thesis also discovered an exponential algorithm
+that computes a feasible TPL to a given hypergraph if it is a path hypergraph.
+
+Our results have close connections to recognition of path graphs and
+to path graph isomorphism.  Graphs which can be represented as the
+intersection graph of paths in a tree are called {\em path
+  graphs}\cite{mcg04}. Thus, a hypergraph $\cF$ can be interpreted as
+paths in a tree, if and only if the intersection graph of $\cF$ is a
+{\em path graph}. Path graphs are a subclass of chordal graphs since
+chordal graphs are characterized as the intersection graphs of
+subtrees of a tree\cite{mcg04}.  Path graphs are well studied in the
+literature \cite{plr70}--\cite{mcg04}\tnote[TH]{Check if cite:bp93 is
+  indeed for path graphs}.  Path graph recognition can be done in
+polynomial time\cite{gav78,aas93}.  Clearly, this is a necessary
+condition in terms of the intersection graph of the input hypergraph
+$\cF$ in \FTPL. However, one can easily obtain a counterexample to
+show the insufficiency of this condition\tnote[GTC]{Give a figure
+  showing insuff.}.  Path graph isomorphism is known be
+isomorphism-complete\cite{kklv10}. Therefore, \annote[GTC]{it is unlikely
+  that we can solve the problem of finding feasible path labeling
+  $\cl$ for a given $\cF$ and }{WHY?} tree $T$.  It is
+  definitely interesting to classify the kinds of trees and
+  hypergraphs for which feasible path labelings can be\tnote[TH]{ELABORATE.}
+found efficiently.  \annote[TH]{These results would form a natural
+  generalization of COP testing and interval graph isomorphism,
+  culminating in Graph Isomorphism }{REWORD} itself.
+ To this effect we consider TPL on {\kstar} and give a polynomial time
+ solution for the same. 
+
+Whether TPL on general trees is solvable in $P$ remains open. So do
+optimization opportunities in TPL (possible extensions to optimization for COP in the
+Section~\ref{sec:optcop}.\tnote[TH]{link to section}).
+
+
+
+\tnote[TH]{ ||Complexity challenges:|| Canonization is an important tool in graph isomorphism. Invention of a
+% deterministic method of canonization for any class of graphs naturally
+% results in an algorithm for isomorphism. All that is required is to
+% check if the canons of two graphs are the same. Thus complexity of
+% graph isomorphism can be studied by studying canonization
+% methods. While general graph ismorphism remains elusive in terms of
+% hardness, canonization has been studied for smaller classes of graphs
+% thus giving complexity/hardness results for them.
+
+% In 1992, \cite{sl92} made an important discovery that tree isomorphism
+% is in logspace. It was done by inventing a method of canonization of
+% trees using a logspace depth first traversal
+% algorithm. \tnote{confirm the statement of claim}.
+
+% \cite{kklv10} proved that interval graph canonization is also in
+% logspace thus drawing logspace conslusions about COT. 
+% % This result is
+% % built on the fact that 
+% Interval graphs are FP+C (fixed point with
+% counting) definable \tnote{elucidate} and \cite{l10} showed that
+% this implies that it captures PTIME. \tnote{elucidate} This result
+% along with that of undirected graph reachability being in logspace
+% \cite{rei08}, \cite{kklv10} proved their logspace result.
+}%
+\tnote[TH]{ (1) the interesting survey in conclusion section of kklv10
+  (2) [[[COP helping some problems with hardness]]] having COP in the
+  input structure makes some problems less hard than in a general
+  input. -- min set cover problem is known to be NP hard. so is min
+  hitting
+  set. these two problems are equivalent cite-adp80\\
+  -- -- complexity results: log factor polynomial time approximable cite-f98, W[2]-complete with solution size as parameter cite-df99\\
+  -- a couple of generalizations:\\
+  -- -- min degree hypergraph (MDH) problem\\
+  -- -- red blue covering (RBSC) problem\\
+  ----- cite-d08phd Chapter 5.\\
+  ----- what are cite-d08phd results\\
+  ----- Rectangle stabbing \\
+  ----- see cite-d08phd Chapter 6?  }
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Appendices.
