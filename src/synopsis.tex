@@ -4,93 +4,18 @@
 \usepackage{times} 
 \usepackage{t1enc}
 %\usepackage{boxedminipage}
+\usepackage{../lib/mythesislib}
 \usepackage{../lib/mylatexlib}
 
 \title{\mythesistitle} 
 \author{\myname} 
 \date{\MakeUppercase
-  {\mysubmissionmonth}} 
+  {\mysynopsissubmissionmonth}} 
 \department{\MakeUppercase{\mydept}}
-
-
-\def \un {\bf 1}
-\def \secfirstparatrim {-5mm}
-\def \figtabsize {\footnotesize}
-
-% \def \LLL {{\em ``{\bf L}aughing with Kafka''}} 
-% \def \GGG {{\em ``{\bf G}irl with Curious Hair''}} 
-% \def \BBB {{\em ``{\bf B}rief Interviews with Hideous Men''}}
-% \def \TTT {{\em ``Everything and More: A Compact His{\bf T}ory of Infinity''}} 
-% \def \xLLL {{\bf L}}
-% \def \xGGG {{\bf G}} 
-% \def \xBBB {{\bf B}}
-% \def \xTTT {{\bf T}}
-%%%%%%
-% \def \LLL {{\em ``{\bf L}aughing with Kafka''}} 
-% \def \GGG {{\em ``Brief {\bf I}nterviews with Hideous Men''}} 
-% \def \BBB {{\em ``Broom of the {\bf S}ystem''}}
-% \def \TTT {{\em ``Everything and More: {\bf A} Compact History of Infinity''}}
-% \def \xLLL {{\bf L}}
-% \def \xGGG {{\bf I}} 
-% \def \xBBB {{\bf S}}
-% \def \xTTT {{\bf A}}
-%%%%%%
-\def \LLL {{\em ``$\mathbb{B}$rief Interviews with Hideous Men''}}
-\def \GGG {{\em ``The String $\mathbb{T}$heory''}} 
-\def \BBB {{\em ``[$\mathbb{W}$]Rhetoric and the Math Melodrama''}}
-\def \TTT {{\em ``$\mathbb{F}$ate, Time, and Language: An Essay on Free Will''}}
-\def \xLLL {\mathbb{B}}
-\def \xGGG {\mathbb{T}} 
-\def \xBBB {\mathbb{W}}
-\def \xTTT {\mathbb{F}}
-% {{\em ``{\bf B}rief Interviews with Hideous Men''}} 
-% {{\em ``The String {\bf T}heory''}} 
-% {{\em ``[{\bf W}]Rhetoric and the Math Melodrama''}}
-% {{\em ``{\bf F}ate, Time, and Language: An Essay on Free Will''}}
-% {{\em ``Everything and More: A Compact History of In{\bf F}inity''}} 
-% {{\em ``Broom of {\bf T}he System''}} 
-% {{\em ``Consider the Lobster''}}
-% {{\em ``God Bless You, Mr. {\bf F}ranzen''}}
-% {{\em ``{\bf L}aughing with Kafka''}} 
-% {{\em ``{\bf G}irl with Curious Hair''}} 
-% {{\em ``Consider the {\bf L}obster''}}
-% {{\em ``{\bf G}od Bless You, Mr. Franzen''}}
-% {{\em ``{\bf T}ennis, Trigonometry,
-%                                Tornadoes: A Midwestern  Boyhood''}}
-% {{\em ``{\bf T}his is Water''}}
-% {{\em ``{\bf T}he Pale King''}}
-
-\def \Pa {{\em {\bf Pa}tricia}} 
-\def \Pi {{\em {\bf Pi}gpen}}
-\def \Sn {{\em {\bf Sn}oopy}}
-\def \Wo {{\em {\bf Wo}odstock}}
-\def \Vi {{\em {\bf Vi}olet}} 
-\def \Li {{\em {\bf Li}nus}} 
-\def \Ch {{\em {\bf Ch}arlie}}
-\def \Sa {{\em {\bf Sa}lly}}
-\def \Fr {{\em {\bf Fr}anklin}} 
-\def \Sc {{\em {\bf Sc}hr{\"o}eder}} 
-\def \Lu {{\em {\bf Lu}cy}}
-\def \xPa {{\bf Pa}} 
-\def \xPi {{\bf Pi}} 
-\def \xSn {{\bf Sn}}
-\def \xWo {{\bf Wo}}
-\def \xVi {{\bf Vi}} 
-\def \xLi {{\bf Li}} 
-\def \xCh {{\bf Ch}}
-\def \xSa {{\bf Sa}}
-\def \xFr {{\bf Fr}}
-\def \xSc {{\bf Sc}} 
-\def \xLu {{\bf Lu}}
-\def \residenceblock {{\em Infinite Loop}}
-\def \WSI {{\em Wallace Studies Institute}}
-\def \coneohone {{\em ``Influence of post modernism in Wallace's work''}}
-\def \coneohtwo {{\em ``A study on fragmented prose method''}}
 
 
 \begin{document}
 
-%\nocite{*}
 \maketitle
 
 % The main text will follow from this point so set the page numbering
@@ -124,37 +49,20 @@ namely path graph isomorphism.
 \label{sec:problem}
 \vspace{\secfirstparatrim}
 
-A group of students, \Pa, \Pi, \Sn, \Wo, \Vi, \Li, \Ch, \Sa, \Fr,
-  \Sc\ and \Lu\ enroll at the
-% {\bf Wo}odstock, {\bf Vi}olet, {\bf Li}nus, {\bf Ch}arlie, {\bf
-%   Sa}lly, {\bf Re}run, {\bf Sc}hr{\"o}eder} and {\em {\bf Lu}cy}
-% enroll at the
-  {\WSI} for a liberal arts programme.  As part of their semester
-  thesis, they pick a body of work to study and form the namesake
-  study groups, {\LLL}, {\GGG}, {\BBB} and {\TTT}\tnote[TH]{put bib
-    entries for these works!}. A student will be in at least one study
-  group and may be in more than one. For instance, as will be seen
-  later, {\Fr} studies both {\LLL} and {\TTT} while \Wo\ studies only
-  \BBB.
+A group of students, \Pa, \Pi, \Sn, \Wo, \Vi, \Li, \Ch, \Sa, \Fr, \Sc\
+and \Lu\ enroll at the {\WSI} for a liberal arts programme.  As part
+of their semester thesis, they pick a body of work to study and form
+the namesake study groups, {\LLL}, {\GGG}, {\BBB} and
+{\TTT}\tnote[TH]{put bib entries for these works!}. A student will be
+in at least one study group and may be in more than one. For instance,
+as will be seen later, {\Fr} studies both {\LLL} and {\TTT} while \Wo\
+studies only \BBB.
 
 Let $U$ and $\cF$ represent the set of students and the set of study
 groups respectively and the integers $n$ and $m$ denote the total
 number students and study groups respectively. In relation to this
 example, these are defined in Table~\ref{tab:wsigroups}. Also given
 there is the study group allocation to students.
-
-% \vspace{-3mm}
-% \begin{align*}
-% U &= \{\xPa,\; \xPi,\; \xSn,\; \xWo,\; \xVi,\; \xLi,\; \xCh,\;
-%     \xSa,\; \xFr,\; \xSc,\; \xLu\}\\
-% \cF &= \{\xLLL, \xGGG, \xBBB, \xTTT\}\\
-% \xLLL &= \{\xCh,\;  \xSa,\;  \xFr,\;  \xSc,\;  \xLu \}\\
-% \xGGG &= \{\xPa,\;  \xPi,\;  \xVi,\;  \xCh \}\\
-% \xBBB &= \{\xSn,\;  \xPi,\;  \xWo \}\\
-% \xTTT &= \{\xVi,\;  \xLi,\;  \xCh,\;  \xFr \}\\
-% n &= |U| = 11\\
-% m &= |\cF| = 4  
-% \end{align*}
 
 
 \begin{table}[htbp]
@@ -176,8 +84,6 @@ there is the study group allocation to students.
   \label{tab:wsigroups}
 \end{table}
 
-% The administration faces a small challenge with their
-% accommodation. 
 The campus has a residential area {\residenceblock} that has $n$
 single occupancy apartments reserved for the study groups'
 accommodation.  All these apartments are located such that the streets
@@ -194,9 +100,6 @@ graph, it classifies as a tree.
       \begin{tabular}{rcl}
         $T $&$=$&$ \text{\em Street map tree of \residenceblock}$\\
         $V(T) $&$=$&$ \{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 \}$\\
-        % $\phi^{-1}(V(T)) $&$=$&$ \{ \xSa,\; \xPi,\; \xFr,\; \xWo,\;
-        % \xCh,\; \xVi,\;
-        % \xPa,\; \xSn,\; \xLu,\; \xLi,\; \xSc \}$\\
         $\cP $&$=$&$ \{R\xLLL, R\xGGG, R\xBBB, R\xTTT\}$\\
         $R\xLLL $&$=$&$ \{9, 1, 5, 3, 11\}$\\
         $R\xGGG $&$=$&$ \{7, 2, 6, 5\}$\\
@@ -409,7 +312,6 @@ optimization problems is presented.
 %   $M$ has COP in rows. $M$ is edge vertex incidence matrix $(*,2)$ of
 %   $G$
 }%
-
 
 \subsection{Matrices with COP}
 \label{sec:copmatrices}
@@ -699,11 +601,6 @@ feasible.  %This generalizes the result in \cite{nsnrs09}.
 % exists a permutation of the universe (set of row indices) which
 % converts each set to its assigned interval. 
 
-
-\def \probdefwidth {0.85\linewidth}
-\def \FTPL {{\sc Feasible Tree Path Labeling}}
-\def \CFTPL {\sc Compute Feasible Path Labeling} 
-
 \section{Summary of results}
 \label{sec:results}
 \vspace{\secfirstparatrim}
@@ -798,8 +695,6 @@ tree, if one exists. This problem, {\CFTPL}, is defined as follows.
 \end{minipage}\\
 }
 
-\def \kstar {$k$-subdivided star}
-\def \CFTPLKTREE {\sc Compute $k$-subdivided Star Path Labeling}
 
 We present a polynomial time algorithm for {\CFTPL} when the target
 tree $T$ belongs to a special class of trees called {\em \kstar s} and

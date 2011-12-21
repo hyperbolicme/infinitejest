@@ -34,9 +34,9 @@
 \usepackage{textcomp}          % Has certain special chars like
                                %  \textreferencemark
 
-%\usepackage[inline] 
+\usepackage[inline] 
 %\usepackage[margins] 
-\usepackage[finalnew]
+%\usepackage[finalnew]
          {../lib/trackchanges} % For tracking changes.
                                % :Package options:
                                % [finalold]
@@ -81,6 +81,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % String defs
+\def \un {\bf 1}
+
 \def\cA{{\cal A}}
 \def\cB{{\cal B}}
 \def\cC{{\cal C}}
@@ -139,14 +141,6 @@
 \def\ccT{\mathpzc{T}}
 
 
-\def \mythesistitle {Generalization of Consecutive Ones Property of
-  Binary Matrices} 
-\def \myname {Anju Srinivasan}
-\def \mydegree {Master of Science {\em by Research}}
-\def \mysubmissionmonth {December 2011}
-\def \mydept {Computer Science \& Engineering}
-\def \myadvisor {N.\;S.\;Narayanaswamy}
-\def \mysubmissiondate {15 December 2011}
 \def\overlap{\between}
 \def\icppl{\maltese} 
 \def\xbullet{\maltese} %  Removing \textreferencemark because
@@ -184,17 +178,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Theorem etc. commands
-%%%%% COMMENT FOR BEAMER %%%%%
-% \newtheorem{theorem}{Theorem}[section]
-% \newtheorem{lemma}[theorem]{Lemma}
-% \newtheorem{corollary}[theorem]{Corollary}
-% \newenvironment{proof}[1][Proof]{\begin{trivlist}
-%                                 \item[\hskip \labelsep {\bfseries
-%                                     #1}]}
-%                                {\end{trivlist}}
-% \newtheorem{definition}{Definition}[section]
-% \newcommand{\qed}{\hfill \mbox{\raggedright \rule{.07in}{.1in}}}
-%%%%% END - COMMENT FOR BEAMER %%%%%
 \newtheorem{observation}{Observation}
 \newtheorem{proposition}[theorem]{Proposition}
 

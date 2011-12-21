@@ -1,0 +1,77 @@
+%%
+%% Author: anju s
+%% 
+%% Declarations required exclusively for my thesis.
+%%
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mythesislib} [2011/12/21]
+
+%%% Sizes and widths and other relevant formatting numbers %%%
+\def \secfirstparatrim {-5mm}
+\def \figtabsize {\footnotesize}
+\def \probdefwidth {0.85\linewidth}
+
+%%% Illustration %%%
+\def \LLL {{\em ``$\mathbb{B}$rief Interviews with Hideous Men''}} 
+\def \GGG {{\em ``The String $\mathbb{T}$heory''}}  
+\def \BBB {{\em ``[$\mathbb{W}$]Rhetoric and the Math Melodrama''}} 
+\def \TTT {{\em ``$\mathbb{F}$ate, Time, and Language: An Essay on
+    Free Will''}} 
+\def \xLLL {\mathbb{B}}
+\def \xGGG {\mathbb{T}} 
+\def \xBBB {\mathbb{W}}
+\def \xTTT {\mathbb{F}}
+\def \Pa {{\em {\bf Pa}tricia}} 
+\def \Pi {{\em {\bf Pi}gpen}}
+\def \Sn {{\em {\bf Sn}oopy}}
+\def \Wo {{\em {\bf Wo}odstock}}
+\def \Vi {{\em {\bf Vi}olet}} 
+\def \Li {{\em {\bf Li}nus}} 
+\def \Ch {{\em {\bf Ch}arlie}}
+\def \Sa {{\em {\bf Sa}lly}}
+\def \Fr {{\em {\bf Fr}anklin}} 
+\def \Sc {{\em {\bf Sc}hr{\"o}eder}} 
+\def \Lu {{\em {\bf Lu}cy}}
+\def \xPa {{\bf Pa}} 
+\def \xPi {{\bf Pi}} 
+\def \xSn {{\bf Sn}}
+\def \xWo {{\bf Wo}}
+\def \xVi {{\bf Vi}} 
+\def \xLi {{\bf Li}} 
+\def \xCh {{\bf Ch}}
+\def \xSa {{\bf Sa}}
+\def \xFr {{\bf Fr}}
+\def \xSc {{\bf Sc}} 
+\def \xLu {{\bf Lu}}
+\def \residenceblock {{\em Infinite Loop}}
+\def \WSI {{\em Wallace Studies Institute}}
+\def \coneohone {{\em ``Influence of post modernism in Wallace's
+    work''}} 
+\def \coneohtwo {{\em ``A study on fragmented prose method''}} 
+\def \FTPL {{\sc Feasible Tree Path Labeling}}
+\def \CFTPL {\sc Compute Feasible Path Labeling} 
+\def \kstar {$k$-subdivided star}
+\def \CFTPLKTREE {\sc Compute $k$-subdivided Star Path Labeling}
+
+%%% Thesis title %%%
+\def \mythesistitle {Generalization of Consecutive Ones Property of
+  Binary Matrices} 
+\def \myname {Anju Srinivasan}
+\def \mydegree {Master of Science {\em by Research}}
+\def \mythesissubmissionmonth {December 2011}
+\def \mysynopsissubmissionmonth {November 2011}
+\def \mydept {Computer Science \& Engineering}
+\def \myadvisor {N.\;S.\;Narayanaswamy}
+
+%%%%% COMMENT FOR BEAMER %%%%%
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newenvironment{proof}[1][Proof]{\begin{trivlist}
+                                \item[\hskip \labelsep {\bfseries
+                                    #1}]}
+                               {\end{trivlist}}
+\newtheorem{definition}{Definition}[section]
+\newcommand{\qed}{\hfill \mbox{\raggedright \rule{.07in}{.1in}}}
+%%%%% END - COMMENT FOR BEAMER %%%%%

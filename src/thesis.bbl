@@ -1,9 +1,16 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{KKLV10}
 
 \bibitem[ABH98]{abh98}
 J.~E. Atkins, E.~G. Boman, and B.~Hendrickson.
 \newblock A spectral algorithm for seriation and the consecutive ones problem.
 \newblock {\em SICOMP: SIAM Journal on Computing}, 28, 1998.
+
+\bibitem[AS95]{as95}
+Annexstein and Swaminathan.
+\newblock On testing consecutive-ones property in parallel.
+\newblock In {\em SPAA: Annual ACM Symposium on Parallel Algorithms and
+  Architectures}, 1995.
 
 \bibitem[BL76]{bl76}
 Kellogg~S. Booth and George~S. Lueker.
@@ -18,11 +25,31 @@ Andreas Brandst\"{a}dt, Van~Bang Le, and Jeremy~P. Spinrad.
 \newblock Society for Industrial and Applied Mathematics, Philadelphia, PA,
   USA, 1999.
 
+\bibitem[Boo75]{b75-phd}
+Kellogg~S. Booth.
+\newblock {\em PQ-tree algorithms}.
+\newblock PhD thesis, Univ. California, Berkeley, 1975.
+
 \bibitem[BP92]{bp93}
 J.~R.~S. Blair and B.~Peyton.
 \newblock An introduction to chordal graphs and clique trees.
 \newblock Technical report, Oak Ridge National Laboratory, Oak Ridge, Tennessee
   37831, 1992.
+
+\bibitem[BS03]{bs03}
+David~A. Bader and Sukanya Sreshta.
+\newblock A new parallel algorithm for planarity testing, April~11 2003.
+
+\bibitem[COR98]{co98}
+Thomas Christof, Marcus Oswald, and Gerhard Reinelt.
+\newblock Consecutive ones and a betweenness problem in computational biology.
+\newblock {\em Lecture Notes in Computer Science}, 1412, 1998.
+
+\bibitem[CY91]{ly91}
+Lin Chen and Yaacov Yesha.
+\newblock Parallel recognition of the consecutive ones property with
+  applications.
+\newblock {\em J. Algorithms}, 12(3):375--392, 1991.
 
 \bibitem[Dom08]{d08phd}
 Michael Dom.
@@ -32,11 +59,21 @@ Michael Dom.
   Fried\-rich-Schil\-ler-Uni\-ver\-si\-t{\"a}t Je\-na, Germany, 2008.
 \newblock Published by Cuvillier, 2009.
 
+\bibitem[FG65]{fg65}
+D.~R. Fulkerson and O.~A. Gross.
+\newblock Incidence matrices and interval graphs.
+\newblock {\em Pac.~J. Math.}, 15:835--855, 1965.
+
 \bibitem[Gav78]{gav78}
 Fanica Gavril.
 \newblock A recognition algorithm for the intersection graphs of paths in
   trees.
 \newblock {\em Discrete Mathematics}, 23(3):211 -- 227, 1978.
+
+\bibitem[GJ79]{gj79}
+M.~R. Garey and D.~S. Johnson.
+\newblock {\em Computers and Intractability}.
+\newblock Freeman, San Francisco, 1979.
 
 \bibitem[Gol04]{mcg04}
 Martin~Charles Golumbic.
@@ -44,6 +81,11 @@ Martin~Charles Golumbic.
   Annals of Discrete Mathematics}.
 \newblock Elsevier Science B.V., 2004.
 \newblock Second Edition.
+
+\bibitem[HG02]{hg02}
+Hajiaghayi and Ganjali.
+\newblock A note on the consecutive ones submatrix problem.
+\newblock {\em IPL: Information Processing Letters}, 83, 2002.
 
 \bibitem[HL06]{hl06}
 Dorit~S. Hochbaum and Asaf Levin.
@@ -65,6 +107,12 @@ Wen-Lian Hsu.
 Hochbaum and Tucker.
 \newblock Minimax problems with bitonic matrices.
 \newblock {\em NETWORKS: Networks: An International Journal}, 40, 2002.
+
+\bibitem[JKC{\etalchar{+}}04]{jkckv04}
+Johnson, Krishnan, Chhugani, Kumar, and Venkatasubramanian.
+\newblock Compressing large boolean matrices using reordering techniques.
+\newblock In {\em VLDB: International Conference on Very Large Data Bases}.
+  Morgan Kaufmann Publishers, 2004.
 
 \bibitem[KKLV10]{kklv10}
 Johannes K{\"o}bler, Sebastian Kuhnert, Bastian Laubner, and Oleg Verbitsky.
@@ -94,6 +142,12 @@ J.~Meidanis and Erasmo~G. Munuera.
 \newblock In {\em Proceedings of WSP'96 - Third South American Workshop on
   String Processing}, pages 194--202, 1996.
 
+\bibitem[MPT98]{mpt98}
+Meidanis, Porto, and Telles.
+\newblock On the consecutive ones property.
+\newblock {\em DAMATH: Discrete Applied Mathematics and Combinatorial
+  Operations Research and Computer Science}, 88, 1998.
+
 \bibitem[NS09]{nsnrs09}
 N.~S. Narayanaswamy and R.~Subashini.
 \newblock A new characterization of matrices with the consecutive ones
@@ -116,9 +170,19 @@ Alejandro~A. Schaffer.
 \newblock A faster algorithm to recognize undirected path graphs.
 \newblock {\em Discrete Applied Mathematics}, 43:261--295, 1993.
 
+\bibitem[TM05]{tm05}
+Guilherme~P. Telles and Jo{\~a}o Meidanis.
+\newblock Building {PQR} trees in almost-linear time.
+\newblock {\em Electronic Notes in Discrete Mathematics}, 19:33--39, 2005.
+
 \bibitem[Tuc72]{at72}
 Alan Tucker.
 \newblock A structure theorem for the consecutive 1's property.
 \newblock {\em J. Comb.~Theory Series B}, 12:153--162, 1972.
+
+\bibitem[Vel85]{v85}
+Marinus Veldhorst.
+\newblock Approximation of the consecutive ones matrix augmentation problem.
+\newblock {\em SIAM Journal on Computing}, 14(3):709--729, August 1985.
 
 \end{thebibliography}
