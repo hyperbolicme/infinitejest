@@ -1,0 +1,41 @@
+COP literature
+
+DIRECTORY: /home/anju/Desktop/cop-tree/lit/lit-consecones
+
+|  
+|--- bl76 (cot)
+      mm96 (pqr trees)
+      mpt97 (pqr trees) -- elaborate version of mm96 
+      tm03 (pqr improved)
+      h01_1 (hsu's simpler algo) (first appeared in proc ISAAC 92)
+      h01_2 (PC trees)
+   
+         |---------- br04 (implementation of Q nodes)
+         
+         |----------  as95 (parallel algorithm)
+ 		       bs03 
+                       cy91
+
+         |---------- jlm97 (application of PQ trees in graphics)
+
+|
+|  
+|--- mcc04 (certificate for no COP. datastructure for general setfamily (generalized pq trees) *mcconnell)
+
+|  
+|  
+|--- v85 (augmentation/flipping, submatrix with COP)
+      hg? (submatrix with COP - NP comp reduction error correction)
+      tz03 (approx submatrix with COP sparse matrices)
+
+|
+|
+|--- jkckl04 (k run, VLDB, compression, storage) 
+
+|
+|
+|--- ckl96 (ILP, circ ones, one drop) 
+      th99 (generalization of COP - minimax, biotonic column) Tucker
+
+|--- dgnw06 (min membership hitting set + COP)
+

@@ -149,8 +149,8 @@ of any degree or diploma.
 \noindent 
 \begin{tabbing}
 xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
-\textbf{COP}   \> Consecutive-Ones Property \\
-\textbf{COT}   \> Consecutive-Ones Testing \\
+\textbf{COP}   \> Consecutive-ones Property \\
+\textbf{COT}   \> Consecutive-ones Testing \\
 \textbf{ICPIA}   \> Intersection Cardinality Preservation Interval Assignment \\
 \textbf{ICPPL}   \> Intersection Cardinality Preserved Path Labeling \\
 % ADD MORE HERE
@@ -186,11 +186,11 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 % \vspace{\secfirstparatrim} 
 
 \tnote{ The main themes of the thesis that must not be left out:\\
-  connection of COP to ||set systems|| and thus to general
+  connection of COP to *SET SYSTEMS* and thus to general
   data bases. cite:nsnrs09\\
-  ||graph isomorphism|| by canonization cite:kklv10\\
-  ||certificate for a problem|| cite:mcc04\\
-  Also see purple book notes.  }
+  *GRAPH ISOMORPHSIM* by canonization cite:kklv10\\
+  *CERTIFICATE FOR A PROBLEM* cite:mcc04\\
+  Also see purple book notes.}
    
 
 
@@ -438,7 +438,7 @@ illustrated by the study group accommodation problem).
     - graph theory}
 
 
-\section{Consecutive-Ones Property Testing - a Brief Survey} %{Background}
+\section{Consecutive-ones Property Testing - a Brief Survey} %{Background}
 \label{sec:background}
 %\vspace{\secfirstparatrim}
 In this section, a brief survey of the consecutive-ones problem and its
@@ -715,6 +715,17 @@ of ones is proven to be NP complete by cite:k77}\tnote[GTC]{are these two
   the same?} \tnote[TH]{what is the reduction?} \tnote[TH]{other
   problems similar to COP -- cite:ckl96 (ILP, circ ones, one drop) --
   cite:th98 (generalization of COP - minimax, biotonic column) Tucker}
+
+
+
+\section{Application of COP in areas of Graph theory and algorithms}
+\subsection{COP in relational database model}
+\tnote{(set systems theme)}
+\subsection{COP in graph isomorphism}
+\tnote{(canonization theme)}
+\subsection{Invention of certifying algorithms using COP}
+\tnote{ (certification McC04 theme)}
+
 
 \section{Generalization of COP - The Motivation}  %{Motivation}
 \label{sec:motive}
@@ -1087,7 +1098,7 @@ currently open to be solved in polynomial time.
 % % \item $supp(\cO_i)$ is a subset of a set in $\cO_j$
 % % \item $supp(\cO_j)$ is a subset of a set in $\cO_i$
 % % \end{enumerate}
-% % \vspace{\prelimspace} \xnoindent
+% % \vspace{\prelimspace} 
 % A hyperedge $S \in \cF$ is called {\em marginal} if for all $S'
 % \overlap S$, the overlaps $S \cap S'$ form a single inclusion chain
 % \cite{kklv10}. Additionally, if $S$ is such that it is contained in no
@@ -2026,7 +2037,7 @@ currently open to be solved in polynomial time.
 
 
 
-\chapter{Consecutive-Ones property - Important Results from Literature}
+\chapter{Consecutive-ones Property - a Survey of Important Results}
 \tnote{TBD: have a few lines about organization of chapter}
 
 \tnote{ Survey chapter: is the full fledged expansion of the survey in
@@ -2038,16 +2049,23 @@ currently open to be solved in polynomial time.
 \section{Optimization problems in COP}
 \tnote{Expand on ref:sec:optcop}
 
+\tnote{ADD NEW SECTIONS - MATCHING WHAT'S IN INTRO CHAPTER}
+
+
+
+
+
+
 \chapter{Preliminaries to new results}
+\label{ch:prelims} 
 %\section{Preliminaries} 
-\label{sec:prelims} 
+%\label{sec:prelims} 
 
-\tnote{TBD: have a few lines about organization of chapter}
+\tnote{TBD: have a few lines about organization of chapter}This
+section states definitions and basic facts necessary in the scope of
+this document.
 
-This section states definitions and basic facts necessary in the scope
-of this document.
-
-\def\xnoindent {}
+\tnote{Move some of this to general prelim in chapter 1}
 
 The set $\F \subseteq (2^{U} \setminus \emptyset)$ is a {\em set
   system} of a universe $U$ with $|U| = n$.  The {\em support} of a
@@ -2057,19 +2075,19 @@ paper, a set system is required to ``cover'' the universe; $
 supp(\cF) = U$.
 %\vspace{\prelimspace}
 
-\xnoindent The graph $T$ represents a {\em target tree} with same
+The graph $T$ represents a {\em target tree} with same
 number of vertices as elements in $U$; $|V(T)| = n$.  A {\em path
   system}\, $\cP$ is a set system of paths from $T$; $\cP \subseteq \{P
 \mid P \subseteq V, \text{ } T[P] \text{ is a path} \}$.
 %\vspace{\prelimspace}
 
-% \xnoindent
+% 
 % A set system $\cF$ can be alternatively represented by a {\em
 %   hypergraph} $\H_\cF$ whose vertex set is $supp(\cF)$ and hyperedges
 % are the sets in $\cF$. This is a known representation for interval
 % systems in literature \cite{bls99,kklv10}.  We extend this definition here to
 % path systems.  
-\xnoindent
+
 A set system $\cF$ can be alternatively represented by a {\em
   hypergraph}\, $\cF_H$ whose vertex set is $supp(\cF)$ and hyperedges
 are the sets in $\cF$. This is a known representation for interval
@@ -2080,7 +2098,7 @@ subscript $_H$ in the notation and refer to both the structures by $\cF$.
 %\vspace{\prelimspace}
 
 
-\xnoindent Two hypergraphs $\cF'$, $\cF''$ are said to be {\em
+Two hypergraphs $\cF'$, $\cF''$ are said to be {\em
   isomorphic} to each other, denoted by $\cF' \cong \cF''$, iff there
 exists a bijection $\phi: supp(\cF') \rightarrow supp(\cF'')$ such
 that for all sets $A \subseteq supp(\cF')$, $A$ is a hyperedge in
@@ -2091,7 +2109,7 @@ $\cF'$ iff $B$ is a hyperedge in $\cF''$ where $B = \{\phi(x) \mid x
 %\vspace{\prelimspace}
 
 
-\xnoindent The {\em intersection graph}\, $\bI(\cF)$ of a hypergraph
+The {\em intersection graph}\, $\bI(\cF)$ of a hypergraph
 $\cF$ is a graph such that its vertex set has a bijection to $\cF$ and
 there exists an edge between two vertices iff their corresponding
 hyperedges have a non-empty intersection \cite{mcg04}.
@@ -2113,7 +2131,7 @@ denoted in terms of $\cF$ and $\cl$ as $\cF^\cl$. In most scenarios in
 this paper, what is given are the pair $(\cF, \cl)$ and the target
 tree $T$; hence this notation will be used more often.
 
-\xnoindent If $\cF \cong \cP$ where $\cP$ is a path system, then $\cF$
+If $\cF \cong \cP$ where $\cP$ is a path system, then $\cF$
 is called a {\em path hypergraph} and $\cP$ is called {\em path
   representation} of $\cF$. If this isomorphism is $\phi: supp(\cF)
 \rightarrow V(T)$, then it is clear that there is an {\em induced path
@@ -2136,7 +2154,7 @@ $supp(\cP) = V(T)$.
 % system $\cP$ may be alternatively denoted as $\cF^\cl$.
 %\vspace{\prelimspace}
 
-\xnoindent
+
 A path labeling $(\cF, \cl)$ is defined to be {\em
   feasible} if
 $\cF \cong \cF^\cl$ and this hypergraph isomorphism $\phi: supp(\cF)
@@ -2144,7 +2162,7 @@ $\cF \cong \cF^\cl$ and this hypergraph isomorphism $\phi: supp(\cF)
 \rightarrow \cF^\cl$ such that $\cl_\phi = \cl$. 
 %\vspace{\prelimspace}
 
-\xnoindent An {\em overlap graph}\, $\bO(\cF)$ of a hypergraph $\cF$ is
+An {\em overlap graph}\, $\bO(\cF)$ of a hypergraph $\cF$ is
 a graph such that its vertex set has a bijection to $\cF$ and there
 exists an edge between two of its vertices iff their corresponding
 hyperedges overlap. Two hyperedges $S$ and $S'$ are said to {\em
@@ -2165,14 +2183,14 @@ called an {\em overlap component}.
 % \end{enumerate}
 %\vspace{\prelimspace}
 
-\xnoindent
+
 A hyperedge $S \in \cF$ is called {\em marginal} if for all $S'
 \overlap S$, the overlaps $S \cap S'$ form a single inclusion chain
 \cite{kklv10}. Additionally, if $S$ is such that it is contained in no
 other hyperedge in $\cF$, i.e., it is inclusion maximal then it is called
 {\em super-marginal}.
 
-\xnoindent A {\em star} graph is a complete bipartite graph $K_{1,p}$
+A {\em star} graph is a complete bipartite graph $K_{1,p}$
 which is clearly a tree and $p$ is the number of leaves. The vertex
 with maximum degree is called the {\em center} of the star and the
 edges are called {\em rays} of the star. A {\em $k$-subdivided star}
@@ -2211,7 +2229,7 @@ Interval Assignment (ICPIA).  Finally, the idea of decomposing a given
 \tnote{TBD: have a few lines about organization of chapter}
 The necessary preliminaries with definitions
 etc. are presented in
-Section~\ref{sec:prelims}. Section~\ref{sec:feasible} documents the
+Section~\ref{ch:prelims}. Section~\ref{sec:feasible} documents the
 characterization of a feasible path labeling and finally,
 Section~\ref{sec:ksubdivstar} describes a polynomial time algorithm to
 find the tree path labeling of a given set system from a given
@@ -2344,9 +2362,8 @@ The following lemma is useful in subsequent arguments.
   = |P_1 \cap (P_2 \setminus P_3)|$. Thus lemma is proven. \qed
 \end{proof}
 
-\def \xnoindent  {}
 
-\xnoindent In the remaining part of this section we show that $(\cF,
+In the remaining part of this section we show that $(\cF,
 \cl)$ is feasible if and only if it is an ICPPL and
 Algorithm~\ref{al:icppl-find-isomorph} returns a non-empty
 function. Algorithm~\ref{al:icppl-find-isomorph} recursively does two levels of
@@ -2469,7 +2486,7 @@ paths in the new path labeling share any leaf.
   iteration. Let us consider the possible cases for each of the above invariants for
   the $j$th iteration.
 
-  \xnoindent
+  
  \begin{enumerate}[\xbullet]
   \item {\em Invariant} I/II
     \begin{enumerate}[{I/II}a $|$] % \textbullet 
@@ -2637,7 +2654,7 @@ paths in the new path labeling share any leaf.
 %     don't change thus all invariants are still true} 
 \end{proof}
 
-\xnoindent As a result of Algorithm~\ref{perms} each leaf $v$ in $T$
+As a result of Algorithm~\ref{perms} each leaf $v$ in $T$
 is such that there is exactly one set in $\cF$ with $v$ as a vertex in
 the path assigned to it.  In Algorithm~\ref{leafasgn} we identify
 elements in $supp(\cF)$ whose images are leaves in a hypergraph
@@ -2684,7 +2701,7 @@ T\}$. Algorithm~\ref{leafasgn} is now presented with details.
   \end{algorithmic}
 \end{algorithm}
 
-\xnoindent
+
 Suppose the input ICPPL $(\cF, \cl)$ is feasible, yet set $X$ in
 Algorithm~\ref{leafasgn} is empty in some iteration of the {\bf while}
 loop. This will abort our procedure of finding the hypergraph
@@ -2745,7 +2762,7 @@ isomorphism. The following lemma shows that this will not happen.
 % }
 
 
-\xnoindent We have seen two filtering algorithms above, namely,
+We have seen two filtering algorithms above, namely,
 Algorithm~\ref{perms} {\tt filter\_1} and Algorithm~\ref{leafasgn}
 {\tt filter\_2} which when executed serially repectively result in a
 new ICPPL on the same universe $U$ and tree $T$. We also proved that
@@ -2753,7 +2770,7 @@ if the input is indeed feasible, these algorithms do indeed output the
 filtered ICPPL. Now we present the algorithmic characterization of a
 feasible tree path labeling by way of Algorithm~\ref{al:icppl-find-isomorph}.
 
-\xnoindent Algorithm~\ref{al:icppl-find-isomorph} computes a
+Algorithm~\ref{al:icppl-find-isomorph} computes a
 hypergraph isomorphism $\phi$ recursively using Algorithm~\ref{perms}
 and Algorithm~\ref{leafasgn} and pruning the leaves of the input
 tree. In brief, it is done as follows. Algorithm~\ref{leafasgn} gives
@@ -2847,7 +2864,7 @@ the characeterization of feasible path labeling.
 
 \subsection{ICPPL when given tree is a path}
 \label{subsec:icpplicpia}
-\xnoindent
+
 Consider a special case of ICPPL with the following properties.
 \begin{enumerate}
 \item Given tree $T$ is a path. Hence, all path labels are interval labels.
@@ -2871,7 +2888,7 @@ $k$-subdivided star $T$ to a given set system $\cF$.  We consider
 $\cF$ for which the overlap graph $\bO(\cF)$ is connected.  The
 overlap graph is well-known from the work of
 \cite{kklv10,nsnrs09,wlh02}.  We use the notation in
-\cite{kklv10}. Recall from Section~\ref{sec:prelims} that hyperedges
+\cite{kklv10}. Recall from Section~\ref{ch:prelims} that hyperedges
 $S$ and $S'$ are said to overlap, denoted by $S \overlap S'$, if $S$ and $S'$
 have a non-empty intersection but neither of them is contained in the
 other. The overlap graph $\bO(\cF)$ is a graph in which the vertices
@@ -2898,8 +2915,8 @@ graph. We also assume that all hyperedges are of cardinality at most
 $k+2$.
 
 
-\xnoindent
-Recall from Section~\ref{sec:prelims} that a $k$-subdivided star is a
+
+Recall from Section~\ref{ch:prelims} that a $k$-subdivided star is a
 star with each edge subdivided $k$ times.  Therefore, a $k$-subdivided
 star has a central vertex which we call the {\em root}, and each root
 to leaf path is called a {\em ray}.  First, we observe that by
@@ -2911,7 +2928,7 @@ $\seq{v_{i1},\ldots,v_{i(k+2)}=r}$ denote the sequence of vertices in
 $R_i$, where $v_{i1}$ is the leaf. Note that $r$ is a common vertex to all $R_i$.
   
 
-\xnoindent In this section the given hypergraph, the
+In this section the given hypergraph, the
 $k$-subdivided star and the root of the star are denoted by $\cO$, $T$ and vertex
 $r$, respectively.
 % For each hyperedge $X \in \cO$, we will maintain a 2-tuple of non-negative
@@ -2925,7 +2942,7 @@ $r$, respectively.
 % ray. For instance, if $X$ is labeled a path from only one ray, then
 % $p_1(X) = |X|$, $p_2(X) = 0$ and $s(X) = 0$.
 
-% \xnoindent
+% 
 % We iteratively consider each ray from which paths will be assigned to
 % hyperedges. At the beginning of each iteration hyperedges of $\cO$ are
 % classifed into the following disjoint sets.
@@ -2957,7 +2974,7 @@ $r$, respectively.
 %   \cO_i &= \cT_1^i \cup \cT_2^i, \text{    } \forall i \in [p]
 % \end{align*}
 
-\xnoindent
+
 The set $\cO_i$ refers to the set of hyperedges $\cT_1^i \cup \cT_2^i$ in
 the $i$th iteration.  Note that $\cO_1 = \cO$.  In the $i$th
 iteration, hyperedges from $\cO_i$ are assigned paths from $R_i$ using

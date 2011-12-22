@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  21 DEC 2011 18:13
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  22 DEC 2011 18:17
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -543,7 +543,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 26.
- <iitm.pdf, id=119, 109.40875pt x 109.40875pt>
+ <iitm.pdf, id=135, 109.40875pt x 109.40875pt>
 File: iitm.pdf Graphic file (type pdf)
 
 <use iitm.pdf> [0
@@ -678,15 +678,15 @@ l.337
 <to be read again> 
                    \endgroup \set@typeset@protect 
 l.337 
-      ] <../img/1_infinite_loop.png, id=255, 695.59875pt x 445.665pt>
+      ] <../img/1_infinite_loop.png, id=275, 695.59875pt x 445.665pt>
 File: ../img/1_infinite_loop.png Graphic file (type png)
 
 <use ../img/1_infinite_loop.png>
-<../img/2_infinite_loop_BTWF.png, id=256, 780.9175pt x 528.97626pt>
+<../img/2_infinite_loop_BTWF.png, id=276, 780.9175pt x 528.97626pt>
 File: ../img/2_infinite_loop_BTWF.png Graphic file (type png)
 
 <use ../img/2_infinite_loop_BTWF.png>
-<../img/3_infinite_loop.png, id=257, 823.075pt x 667.49374pt>
+<../img/3_infinite_loop.png, id=277, 823.075pt x 667.49374pt>
 File: ../img/3_infinite_loop.png Graphic file (type png)
 
 <use ../img/3_infinite_loop.png>
@@ -854,83 +854,95 @@ LaTeX Warning: Marginpar on page 9 moved.
 
 LaTeX Warning: Marginpar on page 9 moved.
 
-Package color Info: Redefining color UserColor on input line 764.
+Package color Info: Redefining color UserColor on input line 723.
 
-Overfull \hbox (2.46194pt too wide) in paragraph at lines 764--764
+LaTeX Warning: Marginpar on page 9 moved.
+
+Package color Info: Redefining color UserColor on input line 725.
+
+LaTeX Warning: Marginpar on page 9 moved.
+
+Package color Info: Redefining color UserColor on input line 727.
+[9]
+Package color Info: Redefining color UserColor on input line 775.
+
+Overfull \hbox (2.46194pt too wide) in paragraph at lines 775--775
 []$[]$[]\T1/ptm/m/it/10 TH[][]\T1/ptm/m/n/10 :[] []\T1/ptm/m/n/6 RE[][]WORD[]  
 
  []
 
-[9]
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 815.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 826.
 
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 817.
- (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/t1pcr.fd
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 828.
+(/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 819--822
+Underfull \hbox (badness 10000) in paragraph at lines 830--833
 
  []
 
 
-Overfull \hbox (22.35966pt too wide) in paragraph at lines 814--834
+Overfull \hbox (22.35966pt too wide) in paragraph at lines 825--845
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 811--837
+Underfull \hbox (badness 10000) in paragraph at lines 822--848
 
  []
 
-Package color Info: Redefining color UserColor on input line 839.
-Package color Info: Redefining color UserColor on input line 850.
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 866--867
+Package color Info: Redefining color UserColor on input line 850.
+Package color Info: Redefining color UserColor on input line 861.
+
+Underfull \hbox (badness 10000) in paragraph at lines 877--878
 
  []
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 872.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 883.
 
-Overfull \hbox (22.35966pt too wide) in paragraph at lines 860--877
+Overfull \hbox (22.35966pt too wide) in paragraph at lines 871--888
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 857--879
+Underfull \hbox (badness 10000) in paragraph at lines 868--890
 
  []
 
-<../img/star.pdf, id=429, 244.915pt x 283.0575pt>
+<../img/star.pdf, id=449, 244.915pt x 283.0575pt>
 File: ../img/star.pdf Graphic file (type pdf)
  <use ../img/star.pdf>
-<../img/kstar.pdf, id=430, 263.98625pt x 302.12875pt>
+<../img/kstar.pdf, id=450, 263.98625pt x 302.12875pt>
 File: ../img/kstar.pdf Graphic file (type pdf)
  <use ../img/kstar.pdf>
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <14.4> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 907.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 918.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 912--914
+Underfull \hbox (badness 10000) in paragraph at lines 923--925
 
  []
 
 
-Overfull \hbox (22.35966pt too wide) in paragraph at lines 907--923
+Overfull \hbox (22.35966pt too wide) in paragraph at lines 918--934
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 904--925
+Underfull \hbox (badness 10000) in paragraph at lines 915--936
 
  []
 
-[11pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4
-}) has been already used, duplicate ignored
+[11]
+Package color Info: Redefining color UserColor on input line 978.
+ [12pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+4}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.941 
+l.979 
        <../img/star.pdf
 
 pdfTeX warning: pdflatex (file ../img/star.pdf): PDF inclusion: Page Group dete
@@ -939,44 +951,42 @@ cted which pdfTeX can't handle. Ignoring it.
 
 pdfTeX warning: pdflatex (file ../img/kstar.pdf): PDF inclusion: Page Group det
 ected which pdfTeX can't handle. Ignoring it.
->]
-Package color Info: Redefining color UserColor on input line 967.
- [12]
+>] [13]
 CHAPTER 2.
-Package color Info: Redefining color UserColor on input line 2030.
-Package color Info: Redefining color UserColor on input line 2033.
+Package color Info: Redefining color UserColor on input line 2041.
+Package color Info: Redefining color UserColor on input line 2044.
 
-LaTeX Warning: Marginpar on page 13 moved.
+LaTeX Warning: Marginpar on page 14 moved.
 
-Package color Info: Redefining color UserColor on input line 2036.
-Package color Info: Redefining color UserColor on input line 2039.
-[13
+Package color Info: Redefining color UserColor on input line 2047.
+Package color Info: Redefining color UserColor on input line 2050.
+[14
 
 ]
 CHAPTER 3.
-Package color Info: Redefining color UserColor on input line 2045.
-Package color Info: Redefining color UserColor on input line 2090.
-[14
+Package color Info: Redefining color UserColor on input line 2057.
+Package color Info: Redefining color UserColor on input line 2099.
+[15
 
-] [15]
+] [16]
 CHAPTER 4.
-Package color Info: Redefining color UserColor on input line 2188.
-Package color Info: Redefining color UserColor on input line 2211.
-[16
+Package color Info: Redefining color UserColor on input line 2197.
+Package color Info: Redefining color UserColor on input line 2220.
+[17
 
 ]
-Package color Info: Redefining color UserColor on input line 2245.
- [17] [18]
+Package color Info: Redefining color UserColor on input line 2254.
+ [18] [19]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 2379.
+put line 2387.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2389--2389
+Underfull \hbox (badness 10000) in paragraph at lines 2397--2397
 []\T1/pcr/m/n/10.95 Remove $\OML/cmm/m/it/10.95 S[]$\T1/pcr/m/n/10.95 , $\OML/c
 mm/m/it/10.95 S[]$ \T1/pcr/m/n/10.95 and add the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2386--2390
+Underfull \hbox (badness 10000) in paragraph at lines 2394--2398
 [] []$\OMS/cmsy/m/n/12 F[]   \OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 F[] n f\OML/cmm/
 m/it/12 S[]; S[]\OMS/cmsy/m/n/12 g\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 [ f\OML/cm
 m/m/it/12 S[] \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 S[]; S[] \OMS/cmsy/m/n/12 n \
@@ -985,119 +995,119 @@ OML/cmm/m/it/12 S[]; S[] \OMS/cmsy/m/n/12 n \OML/cmm/m/it/12 S[]\OMS/cmsy/m/n/1
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2396--2396
+Underfull \hbox (badness 10000) in paragraph at lines 2404--2404
 []\T1/pcr/m/n/10.95 Carry forward the path
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2396--2396
+Underfull \hbox (badness 10000) in paragraph at lines 2404--2404
 \T1/pcr/m/n/10.95 labeling for all existing sets
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2399--2399
+Underfull \hbox (badness 10000) in paragraph at lines 2407--2407
 []\T1/pcr/m/n/10.95 Define path labeling for new
  []
 
-[19pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}
+[20pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.2441 \end{proof}
+l.2449 \end{proof}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.2441 \end{proof}
+l.2449 \end{proof}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.2441 \end{proof}
+l.2449 \end{proof}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.2441 \end{proof}
+l.2449 \end{proof}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.2441 \end{proof}
+l.2449 \end{proof}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.2441 \end{proof}
+l.2449 \end{proof}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.2441 \end{proof}
+l.2449 \end{proof}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.2441 \end{proof}
+l.2449 \end{proof}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.2441 \end{proof}
+l.2449 \end{proof}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.2441 \end{proof}
+l.2449 \end{proof}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.2441 \end{proof}
+l.2449 \end{proof}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.2441 \end{proof}
+l.2449 \end{proof}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.2441 \end{proof}
+l.2449 \end{proof}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.2441 \end{proof}
+l.2449 \end{proof}
                   ]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: \xbullet  on input line 2473.
+             The label is: \xbullet  on input line 2481.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2478--2495
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2500--2512
+Underfull \hbox (badness 10000) in paragraph at lines 2486--2503
 
  []
 
-[20] [21]pdfTeX warning (ext4): destination with the same identifier (name{ALC@
+
+Underfull \hbox (badness 10000) in paragraph at lines 2508--2520
+
+ []
+
+[21] [22]pdfTeX warning (ext4): destination with the same identifier (name{ALC@
 rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2664     \STATE
+l.2672     \STATE
                   $\cF_0 \assign \cF$, $\cl_0(S) \assign \cl(S)$ for all $S ...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.1}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2664     \STATE
+l.2672     \STATE
                   $\cF_0 \assign \cF$, $\cl_0(S) \assign \cl(S)$ for all $S ...
 
-Underfull \hbox (badness 10000) in paragraph at lines 2666--2666
+Underfull \hbox (badness 10000) in paragraph at lines 2674--2674
 []\T1/pcr/m/n/10.95 Path images are such that no
  []
 
@@ -1105,14 +1115,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2667     \STATE
+l.2675     \STATE
                   $j \assign 1$\\pdfTeX warning (ext4): destination with the sa
 me identifier (name{ALC@line.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2667     \STATE
+l.2675     \STATE
                   $j \assign 1$\\
-Underfull \hbox (badness 10000) in paragraph at lines 2664--2667
+Underfull \hbox (badness 10000) in paragraph at lines 2672--2675
 [] []$\OMS/cmsy/m/n/12 F[]   F$\T1/ptm/m/n/12 , $\OT1/pzc/mb/it/12 l[]\OT1/cmr/
 m/n/12 (\OML/cmm/m/it/12 S\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12   \OT1/pzc/mb/it/1
 2 l\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 S\OT1/cmr/m/n/12 )$ \T1/ptm/m/n/12 for all
@@ -1123,278 +1133,278 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2669 ...j-1}$ such that $v \in \cl_{j-1}(S_1)$ }
+l.2677 ...j-1}$ such that $v \in \cl_{j-1}(S_1)$ }
                                                   \label{uniqueleaf}pdfTeX warn
 ing (ext4): destination with the same identifier (name{ALC@line.3}) has been al
 ready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2669 ...j-1}$ such that $v \in \cl_{j-1}(S_1)$ }
+l.2677 ...j-1}$ such that $v \in \cl_{j-1}(S_1)$ }
                                                   \label{uniqueleaf}pdfTeX warn
 ing (ext4): destination with the same identifier (name{ALC@rem.1}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2670     \STATE
+l.2678     \STATE
                   $\cF_j \assign \cF_{j-1} \setminus \{S_1\}$\\pdfTeX warning (
 ext4): destination with the same identifier (name{ALC@line.4}) has been already
  used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2670     \STATE
+l.2678     \STATE
                   $\cF_j \assign \cF_{j-1} \setminus \{S_1\}$\\pdfTeX warning (
 ext4): destination with the same identifier (name{ALC@rem.1}) has been already 
 used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2671     \STATE
+l.2679     \STATE
                   for all $S \in \cF_{j-1}$ such that $S \ne S_1$ setpdfTeX war
 ning (ext4): destination with the same identifier (name{ALC@line.5}) has been a
 lready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2671     \STATE
+l.2679     \STATE
                   for all $S \in \cF_{j-1}$ such that $S \ne S_1$ setpdfTeX war
 ning (ext4): destination with the same identifier (name{ALC@rem.1}) has been al
 ready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2674     \STATE
+l.2682     \STATE
                   $X \assign S_1 \setminus \bigcup_{S \in \cF_{j-1}, S \ne S...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.6}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2674     \STATE
+l.2682     \STATE
                   $X \assign S_1 \setminus \bigcup_{S \in \cF_{j-1}, S \ne S...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2675     \IF{$X$ is empty}
+l.2683     \IF{$X$ is empty}
                              \label{xempty} \STATE {\bf exit} \label{ln:exit...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.7}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2675     \IF{$X$ is empty}
+l.2683     \IF{$X$ is empty}
                              \label{xempty} \STATE {\bf exit} \label{ln:exit...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2675     \IF{$X$ is empty} \label{xempty} \STATE
+l.2683     \IF{$X$ is empty} \label{xempty} \STATE
                                                    {\bf exit} \label{ln:exit...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.8}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2675     \IF{$X$ is empty} \label{xempty} \STATE
+l.2683     \IF{$X$ is empty} \label{xempty} \STATE
                                                    {\bf exit} \label{ln:exit...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2675 ...STATE {\bf exit} \label{ln:exit2} \ENDIF
+l.2683 ...STATE {\bf exit} \label{ln:exit2} \ENDIF
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{ALC@line.9}) has been already used, duplic
 ate ignored
 <to be read again> 
                    \relax 
-l.2675 ...STATE {\bf exit} \label{ln:exit2} \ENDIF
+l.2683 ...STATE {\bf exit} \label{ln:exit2} \ENDIF
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{ALC@rem.1}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.2676     \STATE
+l.2684     \STATE
                   $x \assign $ arbitrary element from $X$\\pdfTeX warning (ext4
 ): destination with the same identifier (name{ALC@line.10}) has been already us
 ed, duplicate ignored
 <to be read again> 
                    \relax 
-l.2676     \STATE
+l.2684     \STATE
                   $x \assign $ arbitrary element from $X$\\pdfTeX warning (ext4
 ): destination with the same identifier (name{ALC@rem.1}) has been already used
 , duplicate ignored
 <to be read again> 
                    \relax 
-l.2677     \STATE
+l.2685     \STATE
                   $\cF_j \assign \cF_j \cup \{\{x\}, S_1 \setminus \{x\}\} $\\p
 dfTeX warning (ext4): destination with the same identifier (name{ALC@line.11}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2677     \STATE
+l.2685     \STATE
                   $\cF_j \assign \cF_j \cup \{\{x\}, S_1 \setminus \{x\}\} $\\p
 dfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2678     \STATE
+l.2686     \STATE
                   $\cl_j(\{x\}) \assign \{v\}$\\pdfTeX warning (ext4): destinat
 ion with the same identifier (name{ALC@line.12}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.2678     \STATE
+l.2686     \STATE
                   $\cl_j(\{x\}) \assign \{v\}$\\pdfTeX warning (ext4): destinat
 ion with the same identifier (name{ALC@rem.1}) has been already used, duplicate
  ignored
 <to be read again> 
                    \relax 
-l.2679     \STATE
+l.2687     \STATE
                   $\cl_j(S_1 \setminus \{x\}) \assign \cl_{j-1}(S_1) \setmin...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.13})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2679     \STATE
+l.2687     \STATE
                   $\cl_j(S_1 \setminus \{x\}) \assign \cl_{j-1}(S_1) \setmin...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2680     \STATE
+l.2688     \STATE
                   $j \assign j+1$\\pdfTeX warning (ext4): destination with the 
 same identifier (name{ALC@line.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2680     \STATE
+l.2688     \STATE
                   $j \assign j+1$\\pdfTeX warning (ext4): destination with the 
 same identifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2681     \ENDWHILE
+l.2689     \ENDWHILE
                     pdfTeX warning (ext4): destination with the same identifier
  (name{ALC@line.15}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2681     \ENDWHILE
+l.2689     \ENDWHILE
                     pdfTeX warning (ext4): destination with the same identifier
  (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2682     \STATE
+l.2690     \STATE
                   $\cF' \assign \cF_j$, $\cl' \assign \cl_j$\\pdfTeX warning (e
 xt4): destination with the same identifier (name{ALC@rem.1}) has been already u
 sed, duplicate ignored
 <to be read again> 
                    \relax 
-l.2683     \RETURN
-                   $(\cF', \cl')$ [22]pdfTeX warning (ext4): destination with t
+l.2691     \RETURN
+                   $(\cF', \cl')$ [23]pdfTeX warning (ext4): destination with t
 he same identifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2777     \IF{$T$ is empty}
+l.2785     \IF{$T$ is empty}
                             pdfTeX warning (ext4): destination with the same id
 entifier (name{ALC@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2777     \IF{$T$ is empty}
+l.2785     \IF{$T$ is empty}
                             pdfTeX warning (ext4): destination with the same id
 entifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2778     \RETURN
+l.2786     \RETURN
                    $\emptyset$\\pdfTeX warning (ext4): destination with the sam
 e identifier (name{ALC@line.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2778     \RETURN
+l.2786     \RETURN
                    $\emptyset$\\pdfTeX warning (ext4): destination with the sam
 e identifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2779     \ENDIF
+l.2787     \ENDIF
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{ALC@line.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2779     \ENDIF
+l.2787     \ENDIF
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2780     \STATE
+l.2788     \STATE
                   $L \assign \{v \mid v \text{ is a leaf in }      T\}$\\pdfTeX
  warning (ext4): destination with the same identifier (name{ALC@line.4}) has be
 en already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2780     \STATE
+l.2788     \STATE
                   $L \assign \{v \mid v \text{ is a leaf in }      T\}$\\pdfTeX
  warning (ext4): destination with the same identifier (name{ALC@rem.1}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2781     \STATE
+l.2789     \STATE
                   $(\cF_1, \cl_1) \assign$ {\tt filter\_1($\cF, \cl,pdfTeX warn
 ing (ext4): destination with the same identifier (name{ALC@line.5}) has been al
 ready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2781     \STATE
+l.2789     \STATE
                   $(\cF_1, \cl_1) \assign$ {\tt filter\_1($\cF, \cl,pdfTeX warn
 ing (ext4): destination with the same identifier (name{ALC@rem.1}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2783     \STATE
+l.2791     \STATE
                   $(\cF_2, \cl_2) \assign$ {\tt filter\_2($\cF_1,pdfTeX warning
  (ext4): destination with the same identifier (name{ALC@line.6}) has been alrea
 dy used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2783     \STATE
+l.2791     \STATE
                   $(\cF_2, \cl_2) \assign$ {\tt filter\_2($\cF_1,pdfTeX warning
  (ext4): destination with the same identifier (name{ALC@rem.1}) has been alread
 y used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2786     \STATE
+l.2794     \STATE
                   $(\cF', \cl') \assign (\cF_2, \cl_2)$\\pdfTeX warning (ext4):
  destination with the same identifier (name{ALC@line.7}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.2786     \STATE
+l.2794     \STATE
                   $(\cF', \cl') \assign (\cF_2, \cl_2)$\\pdfTeX warning (ext4):
  destination with the same identifier (name{ALC@rem.1}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2787     \STATE
+l.2795     \STATE
                   $\phi' \leftarrow \emptyset$pdfTeX warning (ext4): destinatio
 n with the same identifier (name{ALC@line.8}) has been already used, duplicate 
 ignored
 <to be read again> 
                    \relax 
-l.2787     \STATE
+l.2795     \STATE
                   $\phi' \leftarrow \emptyset$pdfTeX warning (ext4): destinatio
 n with the same identifier (name{ALC@rem.1}) has been already used, duplicate i
 gnored
 <to be read again> 
                    \relax 
-l.2789     \FOR {every $v \in L$}
+l.2797     \FOR {every $v \in L$}
                                  pdfTeX warning (ext4): destination with the sa
 me identifier (name{ALC@line.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2789     \FOR {every $v \in L$}
+l.2797     \FOR {every $v \in L$}
                                  pdfTeX warning (ext4): destination with the sa
 me identifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2790     \STATE
+l.2798     \STATE
                   $\phi'(x) \assign v$ where $x \in \cl_2^{-1}(\{v\})$pdfTeX wa
 rning (ext4): destination with the same identifier (name{ALC@line.10}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2790     \STATE
+l.2798     \STATE
                   $\phi'(x) \assign v$ where $x \in \cl_2^{-1}(\{v\})$
-Underfull \hbox (badness 10000) in paragraph at lines 2793--2793
+Underfull \hbox (badness 10000) in paragraph at lines 2801--2801
 []\T1/pcr/m/n/10.95 Copy the leaf labels to a one
  []
 
@@ -1402,204 +1412,204 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2794     \STATE
+l.2802     \STATE
                   Remove $\{x\}$ and $\{v\}$ from $\cF'$, $\cl'$  appropriat...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.11})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2794     \STATE
+l.2802     \STATE
                   Remove $\{x\}$ and $\{v\}$ from $\cF'$, $\cl'$  appropriat...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2795     \ENDFOR
+l.2803     \ENDFOR
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@line.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2795     \ENDFOR
+l.2803     \ENDFOR
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2797     \STATE
+l.2805     \STATE
                   $T' \assign T \setminus L$pdfTeX warning (ext4): destination 
 with the same identifier (name{ALC@line.13}) has been already used, duplicate i
 gnored
 <to be read again> 
                    \relax 
-l.2797     \STATE
+l.2805     \STATE
                   $T' \assign T \setminus L$pdfTeX warning (ext4): destination 
 with the same identifier (name{ALC@rem.1}) has been already used, duplicate ign
 ored
 <to be read again> 
                    \relax 
-l.2799     \STATE
+l.2807     \STATE
                   $\phi'' \assign$ {\ttpdfTeX warning (ext4): destination with 
 the same identifier (name{ALC@line.14}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.2799     \STATE
+l.2807     \STATE
                   $\phi'' \assign$ {\ttpdfTeX warning (ext4): destination with 
 the same identifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2801     \STATE
+l.2809     \STATE
                   $\phi \assign \phi'' \cup \phi'$ \\pdfTeX warning (ext4): des
 tination with the same identifier (name{ALC@line.15}) has been already used, du
 plicate ignored
 <to be read again> 
                    \relax 
-l.2801     \STATE
+l.2809     \STATE
                   $\phi \assign \phi'' \cup \phi'$ \\pdfTeX warning (ext4): des
 tination with the same identifier (name{ALC@rem.1}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.2802     \RETURN
+l.2810     \RETURN
                    $\phi$pdfTeX warning (ext4): destination with the same ident
 ifier (name{ALC@line.16}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2802     \RETURN
+l.2810     \RETURN
                    $\phi$
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (91.25319pt too wide) in paragraph at lines 2808--2814
+Overfull \hbox (91.25319pt too wide) in paragraph at lines 2816--2822
 []\T1/ptm/m/it/12 If $\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 F\OML/cmm/m/it/12 ; \OT
 1/pzc/mb/it/12 l\OT1/cmr/m/n/12 )$ \T1/ptm/m/it/12 is an ICPPL from a tree $\OM
 L/cmm/m/it/12 T$ \T1/ptm/m/it/12 and Al-go-rithm []3[], \T1/pcr/m/n/12 get-hype
 rgraph-isomorphism
  []
 
-[23] [24]
-Package color Info: Redefining color UserColor on input line 2865.
+[24] [25]
+Package color Info: Redefining color UserColor on input line 2873.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 2867.
+(hyperref)                removing `math shift' on input line 2875.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 2867.
+(hyperref)                removing `math shift' on input line 2875.
 
-[25] [26]
-Package color Info: Redefining color UserColor on input line 3059.
- [27]pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.
+[26] [27]
+Package color Info: Redefining color UserColor on input line 3067.
+ [28]pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3142     \IF{$X = S_{sm}$}
+l.3150     \IF{$X = S_{sm}$}
                             pdfTeX warning (ext4): destination with the same id
 entifier (name{ALC@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3142     \IF{$X = S_{sm}$}
+l.3150     \IF{$X = S_{sm}$}
                             pdfTeX warning (ext4): destination with the same id
 entifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3143     \STATE
+l.3151     \STATE
                   -- TBD --\\pdfTeX warning (ext4): destination with the same i
 dentifier (name{ALC@line.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3143     \STATE
+l.3151     \STATE
                   -- TBD --\\pdfTeX warning (ext4): destination with the same i
 dentifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3145     \STATE
+l.3153     \STATE
                   -- TBD --\\pdfTeX warning (ext4): destination with the same i
 dentifier (name{ALC@line.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3145     \STATE
+l.3153     \STATE
                   -- TBD --\\pdfTeX warning (ext4): destination with the same i
 dentifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3145     \STATE
+l.3153     \STATE
                   -- TBD --\\pdfTeX warning (ext4): destination with the same i
 dentifier (name{ALC@line.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3145     \STATE
+l.3153     \STATE
                   -- TBD --\\pdfTeX warning (ext4): destination with the same i
 dentifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3146     \ENDIF
+l.3154     \ENDIF
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{ALC@line.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3146     \ENDIF
+l.3154     \ENDIF
                  
-Package color Info: Redefining color UserColor on input line 3207.
- [28] [29]
+Package color Info: Redefining color UserColor on input line 3215.
+ [29] [30]
 CHAPTER 5.
-Package color Info: Redefining color UserColor on input line 3230.
-Package color Info: Redefining color UserColor on input line 3235.
 Package color Info: Redefining color UserColor on input line 3238.
-Package color Info: Redefining color UserColor on input line 3240.
+Package color Info: Redefining color UserColor on input line 3243.
+Package color Info: Redefining color UserColor on input line 3246.
+Package color Info: Redefining color UserColor on input line 3248.
 
-Overfull \hbox (13.02191pt too wide) in paragraph at lines 3240--3240
+Overfull \hbox (13.02191pt too wide) in paragraph at lines 3248--3248
 []$[]$[]\T1/ptm/m/it/10 TH[][]\T1/ptm/m/n/10 :[] []\T1/ptm/m/n/6 ELAB[][]O[][]R
 ATE.[]  
  []
 
-Package color Info: Redefining color UserColor on input line 3243.
+Package color Info: Redefining color UserColor on input line 3251.
 
-Overfull \hbox (2.46194pt too wide) in paragraph at lines 3243--3243
+Overfull \hbox (2.46194pt too wide) in paragraph at lines 3251--3251
 []$[]$[]\T1/ptm/m/it/10 TH[][]\T1/ptm/m/n/10 :[] []\T1/ptm/m/n/6 RE[][]WORD[]  
 
  []
 
 
-LaTeX Warning: Marginpar on page 30 moved.
+LaTeX Warning: Marginpar on page 31 moved.
 
 
-LaTeX Warning: Marginpar on page 30 moved.
+LaTeX Warning: Marginpar on page 31 moved.
 
-Package color Info: Redefining color UserColor on input line 3249.
-Package color Info: Redefining color UserColor on input line 3276.
+Package color Info: Redefining color UserColor on input line 3257.
+Package color Info: Redefining color UserColor on input line 3284.
 
-Overfull \hbox (8.31187pt too wide) in paragraph at lines 3276--3276
+Overfull \hbox (8.31187pt too wide) in paragraph at lines 3284--3284
 []$[]$[]\T1/ptm/m/it/10 TH[][]\T1/ptm/m/n/10 :[]  []\T1/ptm/m/n/6 ||Com[][]plex
 [][]ity[] 
  []
 
-Package color Info: Redefining color UserColor on input line 3290.
+Package color Info: Redefining color UserColor on input line 3298.
 
-LaTeX Warning: Marginpar on page 30 moved.
+LaTeX Warning: Marginpar on page 31 moved.
 
-[30
+[31
 
 ]
 APPENDIX A.
-[31
+[32
 
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 3306.
+(hyperref)                be the same. Added a new anchor on input line 3314.
 
-(./thesis.bbl [32
+(./thesis.bbl [33
 
-]) [33] [34
+]) [34] [35
 
 ] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 6596 strings out of 94073
- 91574 string characters out of 1162984
- 157945 words of memory out of 1500000
- 9430 multiletter control sequences out of 10000+50000
+ 6608 strings out of 94073
+ 91755 string characters out of 1162984
+ 157949 words of memory out of 1500000
+ 9434 multiletter control sequences out of 10000+50000
  106215 words of font info for 138 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  42i,20n,41p,1091b,701s stack positions out of 5000i,500n,6000p,200000b,5000s
@@ -1627,9 +1637,9 @@ s/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a
 .pfb>
-Output written on thesis.pdf (44 pages, 642566 bytes).
+Output written on thesis.pdf (45 pages, 646423 bytes).
 PDF statistics:
- 866 PDF objects out of 1000 (max. 8388607)
- 251 named destinations out of 1000 (max. 131072)
- 271 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 896 PDF objects out of 1000 (max. 8388607)
+ 259 named destinations out of 1000 (max. 131072)
+ 303 words of extra memory for PDF output out of 10000 (max. 10000000)
 
