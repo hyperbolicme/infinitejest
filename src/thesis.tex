@@ -8,8 +8,8 @@
 \usepackage{../lib/mythesislib}
 \usepackage{../lib/mylatexlib}
 
-\def \mythesissubmissiondate {30 December 2011}
-\def \mythesissubmissionmonth {\MakeUppercase {December 2011}}
+\def \mythesissubmissiondate {10 January 2012}
+\def \mythesissubmissionmonth {\MakeUppercase {January 2012}}
 
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2054,9 +2054,164 @@ currently open to be solved in polynomial time.
 
 
 
+\chapter{Tree Path Labeling of Path Hypergraphs - the New Results}
 
 
-\chapter{Preliminaries to new results}
+\tnote{UPDATE TO FINAL VERSION. BELOW IS OLDER VERSION WITH
+  INCOMPLETE SEC 4.}
+As we saw earlier, tree path labeling problem of path hypergraphs is a
+generalization of consecutive-ones property testing.
+
+\remove{The problem of COP testing can be easily seen as a simple
+  constraint satisfaction problem involving a system of sets from a
+  universe (analogous to hypergraph). Every column of the binary
+  matrix can be converted into a set of integers which are the indices
+  of the rows with |un|s in that column. When observed in this
+  context, if the matrix has the COP, a reordering of its rows will
+  result in sets that have only consecutive integers. In other words,
+  the sets after reordering are intervals. Indeed the problem now
+  becomes finding interval assignments to the given set system
+  cite|nsnrs09| with a single permutation of the universe (set of row
+  indices) which permutes each set to its interval. The result in
+  cite|nsnrs09| characterizes interval assignments to the sets which
+  can be obtained from a single permutation of the rows.  They show
+  that for each set, the cardinality of the interval assigned to it
+  must be same as the cardinality of the set, and the intersection
+  cardinality of any two sets must be same as the interesction
+  cardinality of the corresponding intervals.  While this is naturally
+  a necessary condition, cite|nsnrs09| shows this is indeed
+  sufficient.  Such an interval assignment is called an Intersection
+  Cardinality Preserving Interval Assignment (ICPIA).  Finally, the
+  idea of decomposing a given 0-1 matrix into prime matrices to check
+  for COP is adopted from cite|wlh02| to test if an ICPIA exists for a
+  given set system.}\tnote{REPEATITION from intro chapter}
+
+A natural generalization of the interval
+assignment problem is feasible tree path labeling problem of a set
+system. The problem is defined as follows -- given a set system $\cF$
+from a universe $U$ and a tree $T$, does there exist a bijection from
+$U$ to the vertices of $T$ such that each set in the system maps to a
+path in $T$.  We refer to this as the {\em tree path labeling problem}
+for an input set system, target tree pair -- $(\cF,T)$. As a special
+case if the tree $T$ is a path, the problem becomes the interval
+assignment problem.  We focus on the question of generalizing the
+notion of an ICPIA \cite{nsnrs09} to characterize feasible path
+assignments.  We show that for a given set system $\cF$, a tree $T$,
+and an assignment of paths from $T$ to the sets, there is a feasible
+bijection between $U$ and $V(T)$ if and only if all intersection
+cardinalities among any three sets (not necessarily distinct) is same
+as the intersection cardinality of the paths assigned to them and the
+input runs a filtering algorithm (described in this paper)
+successfully.  This characterization is proved constructively and it
+gives a natural data structure that stores all the relevant feasible
+bijections between $U$ and $V(T)$.  Further, the filtering algorithm
+is also an efficient algorithm to test if a tree path labeling to the
+set system is feasible.  This generalizes the result in
+\cite{nsnrs09}.
+
+The necessary preliminaries with definitions
+etc. are presented in
+Section~\ref{ch:prelims}. Section~\ref{sec:feasible} documents the
+characterization of a feasible path labeling for any path
+labeling from any target trees. Section~\ref{sec:spltargettree}
+describes the special case where the target tree is of a particular
+family of trees and specifically,
+Section~\ref{sec:ksubdivstar} describes a polynomial time algorithm to
+find the tree path labeling of a given set system from a given
+$k$-subdivided tree. Section~\ref{sec:norestraint} describes the
+general situation where the target tree has no restrictions and the
+algorithm to find a TPL, if  any, in this case.
+
+\section{Introduction} 
+
+%\begin{tabular}[t]{c}
+{\small
+\begin{minipage}[h]{5in}
+ % \begin{singlespace}
+ \vspace{2mm}
+ {\large \FTPL}\\
+ \begin{tabular}[t]{l|l}
+ \hline\\
+    {\tt Input} & 
+    \begin{minipage}[t]{\probdefwidth}
+      A hypergraph $\cF$ with vertex set $U$, a tree $T$, a set of
+      paths $\cP$ from $T$ and a
+      bijection $\cl$~$:$~$\cF \rightarrow \cP$.\\
+    \end{minipage}\\
+    {\tt Question} &
+    \begin{minipage}[t]{\probdefwidth}
+      Does there exist a bijection $\phi$~$:$~$U \rightarrow V(T)$
+      such that $\phi$ when applied on any hyperedge in $\cF$ will
+      give
+      the path mapped to it by the given tree path labeling $\cl$.\\
+      { i.e., $\cl(S) = \{\phi(x) \mid x \in S\}$, for every hyperedge
+        $S \in \cF$.}
+    \end{minipage}\\
+  \end{tabular}
+  % \end{singlespace}
+\end{minipage}\\
+}
+%\end{tabular}
+
+
+
+%\noindent 
+\annote{It
+is an interesting fact that for a matrix with the COP, the
+intersection graph of the corresponding set system is an interval
+graph.}{the following text could be in Further Study/Conclusion}  A similar connection to a subclass of chordal graphs and a
+superclass of interval graphs exists for the generalization of COP.
+In this case, the intersection graph of the corresponding set system
+must be a {\em path graph}. Chordal graphs are of great significance,
+are extensively studied, and have several applications.  One of the well
+known and interesting properties of a chordal graphs is its connection
+with intersection graphs \cite{mcg04}. For every chordal graph, there
+exists a tree and a family of subtrees of this tree such that the
+intersection graph of this family is isomorphic to the chordal graph
+\cite{plr70,gav78,bp93}.  These trees when in a certain format, are
+called {\em clique trees} \cite{apy92} of the chordal graph. This is a
+compact representation of the chordal graph. There has also been work
+done on the generalization of clique trees to clique hypergraphs
+\cite{km02}.  If the chordal graph can be represented as the
+intersection graph of paths in a tree, then the graph is called path
+graph \cite{mcg04}.  Therefore, it is clear that if there is a
+bijection from $U$ to $V(T)$ such that for every set, the elements in
+it map to vertices of a unique path in $T$, then the intersection
+graph of the set system is indeed a path graph.  However, this is only
+a necessary condition and can be checked efficiently because path
+graph recognition is polynomial time
+solvable\cite{gav78,aas93}. Indeed, it is possible to construct a set
+system and tree, such that the intersection graph is a path graph, but
+there is no bijection between $U$ and $V(T)$ such that the sets map to
+paths. Path graph isomorphism is known be isomorphism-complete, see
+for example \cite{kklv10}. An interesting area of research would be to
+see what this result tells us about the complexity of the tree path
+labeling problem (not covered in this paper).
+
+%\noindent
+In the later part of this paper, we focus on a new special case of the
+tree path labeling problem. Here the set system is such that every set
+is at most $k+2$ in size and for every pair of sets in it there exists
+a sequence of sets between them with consecutive sets in this sequence
+having a strict intersection -- i.e., non-empty intersection with
+neither being contained in the other. Moreover, the given tree is a
+{\em $k$-subdivided star}. We demonstrate a polynomial time algorithm
+to find a feasible path labeling in this case.
+
+
+% In the later part of this paper, we decompose our search for a
+% bijection between $U$ and $V(T)$ into subproblems.  Each subproblem is
+% on a set subsystem in which for each set, there is another set in the
+% set subsystem with which the intersection is {\em strict}, i.e., there
+% is a non-empty intersection, but neither is contained in the other.
+% This is in the spirit of results in \cite{wlh02,nsnrs09} where to test
+% for the COP in a given matrix, the COP problem is solved on an
+% equivalent set of prime matrices.
+
+
+
+
+\section{Preliminaries to new results}
 \label{ch:prelims} 
 %\section{Preliminaries} 
 %\label{sec:prelims} 
@@ -2197,120 +2352,6 @@ edges are called {\em rays} of the star. A {\em $k$-subdivided star}
 is a star with all its rays subdivided exactly $k$ times. The
 definition of a {\em ray of a $k$-subdivided star} is extended to the path
 from the center to a leaf. It is clear that all rays are of length $k+2$.
-
-
-\chapter{Tree Path Labeling of Path Hypergraphs - the New Results}
-
-
-\tnote{UPDATE TO FINAL VERSION. BELOW IS OLDER VERSION WITH
-  INCOMPLETE SEC 4.}
-The problem of COP testing can be easily seen as a simple constraint
-satisfaction problem involving a system of sets from a universe. Every
-column of the binary matrix can be converted into a set of integers
-which are the indices of the rows with $1$s in that column. When
-observed in this context, if the matrix has the COP, a reordering of
-its rows will result in sets that have only consecutive integers. In
-other words, the sets after reordering are intervals. Indeed the
-problem now becomes finding interval assignments to the given set
-system \cite{nsnrs09} with a single permutation of the universe (set
-of row indices) which permutes each set to its interval. The result in
-\cite{nsnrs09} characterizes interval assignments to the sets which
-can be obtained from a single permutation of the rows.  They show that
-for each set, the cardinality of the interval assigned to it must be
-same as the cardinality of the set, and the intersection cardinality
-of any two sets must be same as the interesction cardinality of the
-corresponding intervals.  While this is naturally a necessary
-condition, \cite{nsnrs09} shows this is indeed sufficient.  Such an
-interval assignment is called an Intersection Cardinality Preserving
-Interval Assignment (ICPIA).  Finally, the idea of decomposing a given
-0-1 matrix into prime matrices to check for COP is adopted from
-\cite{wlh02} to test if an ICPIA exists for a given set system.
-
-\tnote{TBD: have a few lines about organization of chapter}
-The necessary preliminaries with definitions
-etc. are presented in
-Section~\ref{ch:prelims}. Section~\ref{sec:feasible} documents the
-characterization of a feasible path labeling and finally,
-Section~\ref{sec:ksubdivstar} describes a polynomial time algorithm to
-find the tree path labeling of a given set system from a given
-$k$-subdivided tree.
-
-\section{Introduction} 
-A natural generalization of the interval
-assignment problem is feasible tree path labeling problem of a set
-system. The problem is defined as follows -- given a set system $\cF$
-from a universe $U$ and a tree $T$, does there exist a bijection from
-$U$ to the vertices of $T$ such that each set in the system maps to a
-path in $T$.  We refer to this as the {\em tree path labeling problem}
-for an input set system, target tree pair -- $(\cF,T)$. As a special
-case if the tree $T$ is a path, the problem becomes the interval
-assignment problem.  We focus on the question of generalizing the
-notion of an ICPIA \cite{nsnrs09} to characterize feasible path
-assignments.  We show that for a given set system $\cF$, a tree $T$,
-and an assignment of paths from $T$ to the sets, there is a feasible
-bijection between $U$ and $V(T)$ if and only if all intersection
-cardinalities among any three sets (not necessarily distinct) is same
-as the intersection cardinality of the paths assigned to them and the
-input runs a filtering algorithm (described in this paper)
-successfully.  This characterization is proved constructively and it
-gives a natural data structure that stores all the relevant feasible
-bijections between $U$ and $V(T)$.  Further, the filtering algorithm
-is also an efficient algorithm to test if a tree path labeling to the
-set system is feasible.  This generalizes the result in
-\cite{nsnrs09}.
-
-%\noindent 
-\tnote{the following text could be in Further Study/Conclusion}It
-is an interesting fact that for a matrix with the COP, the
-intersection graph of the corresponding set system is an interval
-graph.  A similar connection to a subclass of chordal graphs and a
-superclass of interval graphs exists for the generalization of COP.
-In this case, the intersection graph of the corresponding set system
-must be a {\em path graph}. Chordal graphs are of great significance,
-extensively studied, and have several applications.  One of the well
-known and interesting properties of a chordal graphs is its connection
-with intersection graphs \cite{mcg04}. For every chordal graph, there
-exists a tree and a family of subtrees of this tree such that the
-intersection graph of this family is isomorphic to the chordal graph
-\cite{plr70,gav78,bp93}.  These trees when in a certain format, are
-called {\em clique trees} \cite{apy92} of the chordal graph. This is a
-compact representation of the chordal graph. There has also been work
-done on the generalization of clique trees to clique hypergraphs
-\cite{km02}.  If the chordal graph can be represented as the
-intersection graph of paths in a tree, then the graph is called path
-graph \cite{mcg04}.  Therefore, it is clear that if there is a
-bijection from $U$ to $V(T)$ such that for every set, the elements in
-it map to vertices of a unique path in $T$, then the intersection
-graph of the set system is indeed a path graph.  However, this is only
-a necessary condition and can be checked efficiently because path
-graph recognition is polynomial time
-solvable\cite{gav78,aas93}. Indeed, it is possible to construct a set
-system and tree, such that the intersection graph is a path graph, but
-there is no bijection between $U$ and $V(T)$ such that the sets map to
-paths. Path graph isomorphism is known be isomorphism-complete, see
-for example \cite{kklv10}. An interesting area of research would be to
-see what this result tells us about the complexity of the tree path
-labeling problem (not covered in this paper).
-
-%\noindent
-In the later part of this paper, we focus on a new special case of the
-tree path labeling problem. Here the set system is such that every set
-is at most $k+2$ in size and for every pair of sets in it there exists
-a sequence of sets between them with consecutive sets in this sequence
-having a strict intersection -- i.e., non-empty intersection with
-neither being contained in the other. Moreover, the given tree is a
-{\em $k$-subdivided star}. We demonstrate a polynomial time algorithm
-to find a feasible path labeling in this case.
-
-
-% In the later part of this paper, we decompose our search for a
-% bijection between $U$ and $V(T)$ into subproblems.  Each subproblem is
-% on a set subsystem in which for each set, there is another set in the
-% set subsystem with which the intersection is {\em strict}, i.e., there
-% is a non-empty intersection, but neither is contained in the other.
-% This is in the spirit of results in \cite{wlh02,nsnrs09} where to test
-% for the COP in a given matrix, the COP problem is solved on an
-% equivalent set of prime matrices.
 
 
 
@@ -2879,6 +2920,7 @@ $k$-subdivided star due to this graph's close relationship with
 intervals. 
 
 \section{ TPL with special target trees}
+\label{sec:spltargettree}
 \tnote{give problem definition etc}
 
 \subsection{Testing for feasible path assignments to $k$-subdivided star}
@@ -3221,6 +3263,7 @@ labeling to the $k$-subdivded tree $T$.
 % \end{proof}
 
 \section{ TPL with no restrictions}
+\label{sec:norestraint}
 \tnote{ADD WALCOM PAPER TEXT}
 
 

@@ -19,14 +19,14 @@
 \BOOKMARK [0][-]{chapter.2}{Consecutive-ones Property - a Survey of Important Results}{}
 \BOOKMARK [1][-]{section.2.1}{Matrices with COP}{chapter.2}
 \BOOKMARK [1][-]{section.2.2}{Optimization problems in COP}{chapter.2}
-\BOOKMARK [0][-]{chapter.3}{Preliminaries to new results}{}
-\BOOKMARK [0][-]{chapter.4}{Tree Path Labeling of Path Hypergraphs - the New Results}{}
-\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}
-\BOOKMARK [1][-]{section.4.2}{Characterization of Feasible Tree Path Labeling}{chapter.4}
-\BOOKMARK [2][-]{subsection.4.2.1}{ICPPL when given tree is a path}{section.4.2}
-\BOOKMARK [1][-]{section.4.3}{ TPL with special target trees}{chapter.4}
-\BOOKMARK [2][-]{subsection.4.3.1}{Testing for feasible path assignments to k-subdivided star}{section.4.3}
-\BOOKMARK [1][-]{section.4.4}{ TPL with no restrictions}{chapter.4}
-\BOOKMARK [0][-]{chapter.5}{Conclusion}{}
+\BOOKMARK [0][-]{chapter.3}{Tree Path Labeling of Path Hypergraphs - the New Results}{}
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}
+\BOOKMARK [1][-]{section.3.2}{Preliminaries to new results}{chapter.3}
+\BOOKMARK [1][-]{section.3.3}{Characterization of Feasible Tree Path Labeling}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.3.1}{ICPPL when given tree is a path}{section.3.3}
+\BOOKMARK [1][-]{section.3.4}{ TPL with special target trees}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.4.1}{Testing for feasible path assignments to k-subdivided star}{section.3.4}
+\BOOKMARK [1][-]{section.3.5}{ TPL with no restrictions}{chapter.3}
+\BOOKMARK [0][-]{chapter.4}{Conclusion}{}
 \BOOKMARK [0][-]{appendix.A}{Appendix A}{}
 \BOOKMARK [1][-]{section*.8}{Bibliography}{appendix.A}
