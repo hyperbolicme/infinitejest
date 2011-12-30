@@ -130,6 +130,11 @@ Lawrence~T. Kou.
 \newblock Polynomial complete consecutive information retrieval problems.
 \newblock {\em SIAM Journal on Computing}, 6(1):67--75, March 1977.
 
+\bibitem[Lin92]{sl92}
+Steven Lindell.
+\newblock A logspace algorithm for tree canonization (extended abstract).
+\newblock In {\em STOC}, pages 400--404. ACM, 1992.
+
 \bibitem[McC04]{mcc04}
 Ross~M. McConnell.
 \newblock A certifying algorithm for the consecutive-ones property.
@@ -159,6 +164,11 @@ Barry~W. Peyton, Alex Pothen, and Xiaoqing Yuan.
 \newblock A clique tree algorithm for partitioning a chordal graph into
   transitive subgraphs.
 \newblock Technical report, Old Dominion University, Norfolk, VA, USA, 1994.
+
+\bibitem[Rei84]{rei84}
+John~H. Reif.
+\newblock Symmetric complementation.
+\newblock {\em JACM: Journal of the ACM}, 31(2):401--421, 1984.
 
 \bibitem[Ren70]{plr70}
 Peter~L. Renz.
