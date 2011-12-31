@@ -7,64 +7,72 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{mythesislib} [2011/12/21]
 
+\usepackage{xspace}
+
 %%% Sizes and widths and other relevant formatting numbers %%%
 \def \secfirstparatrim {-5mm}
 \def \figtabsize {\footnotesize}
 \def \probdefwidth {0.85\linewidth}
 
 %%% Illustration %%%
-\def \LLL {{\em ``$\mathbb{B}$rief Interviews with Hideous Men''}} 
-\def \GGG {{\em ``The String $\mathbb{T}$heory''}}  
-\def \BBB {{\em ``[$\mathbb{W}$]Rhetoric and the Math Melodrama''}} 
+\def \LLL {{\em ``$\mathbb{B}$rief Interviews with Hideous Men''}\xspace} 
+\def \GGG {{\em ``The String $\mathbb{T}$heory''}\xspace}  
+\def \BBB {{\em ``[$\mathbb{W}$]Rhetoric and the Math Melodrama''}\xspace} 
 \def \TTT {{\em ``$\mathbb{F}$ate, Time, and Language: An Essay on
-    Free Will''}} 
-\def \xLLL {\mathbb{B}}
-\def \xGGG {\mathbb{T}} 
-\def \xBBB {\mathbb{W}}
-\def \xTTT {\mathbb{F}}
-\def \Pa {{\em {\bf Pa}tricia}} 
-\def \Pig {{\em {\bf Pi}gpen}} % SYNOPSIS: \def \Pi {{\em {\bf
-                               % Pi}gpen}} 
-\def \Sn {{\em {\bf Sn}oopy}}
-\def \Wo {{\em {\bf Wo}odstock}}
-\def \Vi {{\em {\bf Vi}olet}} 
-\def \Li {{\em {\bf Li}nus}} 
-\def \Ch {{\em {\bf Ch}arlie}}
-\def \Sa {{\em {\bf Sa}lly}}
-\def \Fr {{\em {\bf Fr}anklin}} 
-\def \Sc {{\em {\bf Sc}hr{\"o}eder}} 
-\def \Lu {{\em {\bf Lu}cy}}
-\def \xPa {{\bf Pa}} 
-\def \xPi {{\bf Pi}} 
-\def \xSn {{\bf Sn}}
-\def \xWo {{\bf Wo}}
-\def \xVi {{\bf Vi}} 
-\def \xLi {{\bf Li}} 
-\def \xCh {{\bf Ch}}
-\def \xSa {{\bf Sa}}
-\def \xFr {{\bf Fr}}
-\def \xSc {{\bf Sc}} 
-\def \xLu {{\bf Lu}}
-\def \residenceblock {{\em Infinite Loop}}
-\def \WSI {{\em Wallace Studies Institute}}
-\def \coneohone {{\em ``Influence of post modernism in Wallace's
-    work''}} 
-\def \coneohtwo {{\em ``A study on fragmented prose method''}} 
-\def \FTPL {{\sc Feasible Tree Path Labeling}}
-\def \CFTPL {\sc Compute Feasible Tree Path Labeling} 
-\def \kstar {$k$-subdivided star}
-\def \CFTPLKTREE {\sc Compute $k$-subdivided Star Path Labeling}
+    Free Will''}\xspace} 
+\def \xLLL {\mathbb{B}\xspace}
+\def \xGGG {\mathbb{T}\xspace} 
+\def \xBBB {\mathbb{W}\xspace}
+\def \xTTT {\mathbb{F}\xspace}
+\def \Pa {\emph{{\bf Pa}tricia}\xspace} 
+\def \Pig {\emph{{\bf Pi}gpen}\xspace} % SYNOPSIS: \def \Pi {{\em {\bf
+                               % Pi}gpen}\xspace} 
+\def \Sn {\emph{{\bf Sn}oopy}\xspace}
+\def \Wo {\emph{{\bf Wo}odstock}\xspace}
+\def \Vi {\emph{{\bf Vi}olet}\xspace} 
+\def \Li {\emph{{\bf Li}nus}\xspace} 
+\def \Ch {\emph{{\bf Ch}arlie}\xspace}
+\def \Sa {\emph{{\bf Sa}lly}\xspace}
+\def \Fr {\emph{{\bf Fr}anklin}\xspace} 
+\def \Sc {\emph{{\bf Sc}hr{\"o}eder}\xspace} 
+\def \Lu {\emph{{\bf Lu}cy}\xspace}
+
+\def \xPa {\textbf{Pa}\xspace} 
+\def \xPi {\textbf{Pi}\xspace} 
+\def \xSn {\textbf{Sn}\xspace}
+\def \xWo {\textbf{Wo}\xspace}
+\def \xVi {\textbf{Vi}\xspace} 
+\def \xLi {\textbf{Li}\xspace} 
+\def \xCh {\textbf{Ch}\xspace}
+\def \xSa {\textbf{Sa}\xspace}
+\def \xFr {\textbf{Fr}\xspace}
+\def \xSc {\textbf{Sc}\xspace} 
+\def \xLu {\textbf{Lu}\xspace}
+\def \residenceblock {\emph{Infinite Loop}\xspace}
+\def \WSI {\emph{Wallace Studies Institute}\xspace}
+\def \coneohone {\emph{``Influence of post modernism in Wallace's
+    work''}\xspace} 
+\def \coneohtwo {\emph{``A study on fragmented prose method''}\xspace} 
+\def \FTPL {\textsc{Feasible Tree Path Labeling}\xspace}
+\def \CFTPL {\textsc{Compute Feasible Tree Path Labeling}\xspace} 
+\def \kstar {$k$-subdivided star\xspace}
+\def \CFTPLINT {\textsc{Compute Interval
+    Labeling}\xspace} 
+\def \CFTPLKTREE {\textsc{Compute $k$-subdivided Star Path
+    Labeling}\xspace} 
 
 %%% Thesis title %%%
-\def \mythesistitle {Generalization of Consecutive Ones Property of Binary Matrices} 
-\def \mythesistitleNOTSYNPOSIS {Generalization of the Consecutive-ones Property}
+\def \mythesistitle {Generalization of Consecutive Ones Property of
+  Binary Matrices\xspace}  
+\def \mythesistitleNOTSYNPOSIS {Generalization of the Consecutive-ones
+  Property\xspace} 
 
-\def \myname {Anju Srinivasan}
-\def \mydegree {Master of Science {\em by Research}}
-\def \mysynopsissubmissionmonth {November 2011}
-\def \mydept {Computer Science \& Engineering}
-\def \mythesisdept {Computer Science and Engineering}
-\def \myadvisor {N.\;S.\;Narayanaswamy}
+\def \myname {Anju Srinivasan\xspace}
+\def \mydegree {Master of Science {\em by Research}\xspace}
+\def \mysynopsissubmissionmonth {November 2011\xspace}
+\def \mydept {Computer Science \& Engineering\xspace}
+\def \mythesisdept {Computer Science and Engineering\xspace}
+\def \myadvisor {N.\;S.\;Narayanaswamy\xspace}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}

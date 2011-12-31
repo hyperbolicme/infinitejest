@@ -20,17 +20,18 @@
 \BOOKMARK [1][-]{section.2.1}{Matrices with COP}{chapter.2}
 \BOOKMARK [1][-]{section.2.2}{Optimization problems in COP}{chapter.2}
 \BOOKMARK [1][-]{section.2.3}{********* COP in Relational Database Model}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.3.1}{********* COP in Graph Isomorphism}{section.2.3}
-\BOOKMARK [2][-]{subsection.2.3.2}{********* Certifying Algorithms}{section.2.3}
+\BOOKMARK [1][-]{section.2.4}{********* COP in Graph Isomorphism}{chapter.2}
+\BOOKMARK [1][-]{section.2.5}{********* Certifying Algorithms}{chapter.2}
 \BOOKMARK [0][-]{chapter.3}{Tree Path Labeling of Path Hypergraphs - the New Results}{}
 \BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}
 \BOOKMARK [1][-]{section.3.2}{Preliminaries to new results}{chapter.3}
 \BOOKMARK [1][-]{section.3.3}{Characterization of Feasible Tree Path Labeling}{chapter.3}
-\BOOKMARK [1][-]{section.3.4}{ Computing feasible TPL with special target trees give problem definition etc}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.4.1}{Target tree is a Path}{section.3.4}
-\BOOKMARK [2][-]{subsection.3.4.2}{Target tree is a k-subdivided Star}{section.3.4}
+\BOOKMARK [1][-]{changenumber.32.1}{ Computing feasible TPL with special target trees give problem definition etc}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.4.1}{Target tree is a Path}{changenumber.32.1}
+\BOOKMARK [2][-]{subsection.3.4.2}{Target tree is a k-subdivided Star}{changenumber.32.1}
 \BOOKMARK [1][-]{section.3.5}{ TPL with no restrictions}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.5.1}{Finding an assignment of tree paths to a set system}{section.3.5}
-\BOOKMARK [2][-]{subsection.3.5.2}{Complexity of Tree Path Assignment-A Discussion}{section.3.5}
+\BOOKMARK [1][-]{section.3.6}{Complexity of Tree Path Assignment-A Discussion}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.6.1}{Consecutive Ones Testing is in Logspace}{section.3.6}
 \BOOKMARK [0][-]{chapter.4}{Conclusion}{}
-\BOOKMARK [0][-]{chapter.4}{REFERENCES}{}
+\BOOKMARK [0][-]{changenumber.46.8}{REFERENCES}{}
