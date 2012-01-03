@@ -1,0 +1,2353 @@
+\chapter{Tree Path Labeling of Path Hypergraphs - the New Results}
+\label{ch:myresearch}
+
+\tnote{UPDATE TO FINAL VERSION. BELOW IS OLDER VERSION WITH INCOMPLETE
+  SEC 4.}  This chapter documents all the new results obtained by us
+in the area of tree path labeling of path hypergraphs which is the
+parent problem addressed in this thesis.
+
+Section~\ref{sec:myresearchintro} recalls the idea of tree path
+labeling. The necessary preliminaries with definitions etc. are
+presented in Section~\ref{ch:prelims}. Section~\ref{sec:feasible}
+documents the characterization of a feasible path labeling for any
+path labeling from any target trees. Section~\ref{sec:spltargettree}
+describes two special cases where the target tree is of a particular
+family of trees. The first one is shown to be equivalent to COP
+testing in Section~\ref{sec:icpplicpia}. Section~\ref{sec:ksubdivstar}
+discusses the second special case and presents a polynomial time
+algorithm to find the tree path labeling of a given set system from a
+given \kstar. Section~\ref{sec:norestraint} discusses the plain
+vanilla version where the target tree has no restrictions and the
+algorithm to find a feasible TPL, if any, in this case.
+
+
+\section{Introduction}
+\label{sec:myresearchintro}
+In Section~\ref{sec:motive} we see that consecutive-ones property and
+its equivalent problem of interval labeling of a hypergraph is a
+special case of the general problem of tree path labeling of path
+hypergraphs.  The problem of consecutive-ones property testing can be
+easily seen as a simple constraint satisfaction problem involving a
+hypergraph or a system of sets from a universe. Every column (row) of
+the binary matrix can be converted into a set of non-negative integers
+which are the indices of the rows (columns) with {\un}s in that column
+(row). When observed in this context, if the matrix has the COP on
+columns (rows), a reordering of its rows (columns) will result in sets
+that have only consecutive integers. In other words, the sets after
+applying the COP row (column) permutation are intervals.  In this
+form, one can see that this is indeed the problem of finding interval
+assignments to the given set system \cite{nsnrs09} with a single
+permutation of the universe (set of row or column indices for COP of
+columns or rows, respectively) which permutes each set to its
+interval. The result in \cite{nsnrs09} characterizes interval
+assignments to the sets which can be obtained from a single
+permutation of the rows (columns). The cardinality of the interval
+assigned to it must be same as the cardinality of the set, and the
+intersection cardinality of any two sets must be same as the
+intersection cardinality of the corresponding intervals. This is a
+necessary and sufficient condition. \tnote{(ICPIA) put reference to
+  survey chapter}
+
+Naturally, intervals are paths from a tree with maximum degree
+two. Thus the interval assignment problem can be generalized into path
+assignment problem from any tree. We refer to this as the {\em tree
+  path labeling problem}. To elaborate, the problem is defined as
+follows -- given a hypergraph $\cF$ from universe (vertex set) $U$ and
+a target tree $T$, does there exist a bijection from $U$ to the
+vertices of $T$ such that when applied to elements of each hyperedge,
+it gives a path on $T$.  More formally, the problem definition is as
+defined by \CFTPL.
+
+{\small
+  \begin{minipage}[h]{5in}
+    \vspace{2mm}
+    {\large \CFTPL}\\
+    \begin{tabular}[t]{l|l}
+      \hline\\
+      {\tt Input} & 
+      \begin{minipage}[t]{\probdefwidth}
+        A hypergraph $\cF$ with vertex set $U$ and a tree $T$.\\
+      \end{minipage}\\
+
+      {\tt Question} &
+      \begin{minipage}[t]{\probdefwidth}
+        Does there exist a set of paths $\cP$ from $T$ and a bijection
+        $\cl$~$:$~$\cF \rightarrow \cP$, such that {\FTPL} returns
+        {\bf true} on $(\cF, T, \cl)$.
+      \end{minipage}\\
+    \end{tabular}
+  \end{minipage}\\
+}
+
+
+To characterize a feasible TPL, we consider the case were a tree path
+labeling is also given as input and we are required to test if the
+given labeling is feasible. This is defined by the \FTPL problem.
+
+%\begin{tabular}[t]{c}
+{\small
+\begin{minipage}[h]{5in}
+ % \begin{singlespace}
+ \vspace{2mm}
+ {\large \FTPL}\\
+ \begin{tabular}[t]{l|l}
+ \hline\\
+    {\tt Input} & 
+    \begin{minipage}[t]{\probdefwidth}
+      A hypergraph $\cF$ with vertex set $U$, a tree $T$, a set of
+      paths $\cP$ from $T$ and a
+      bijection $\cl$~$:$~$\cF \rightarrow \cP$.\\
+    \end{minipage}\\
+    {\tt Question} &
+    \begin{minipage}[t]{\probdefwidth}
+      Does there exist a bijection $\phi$~$:$~$U \rightarrow V(T)$
+      such that $\phi$ when applied on any hyperedge in $\cF$ will
+      give
+      the path mapped to it by the given tree path labeling $\cl$.\\
+      { i.e., $\cl(S) = \{\phi(x) \mid x \in S\}$, for every hyperedge
+        $S \in \cF$.}
+    \end{minipage}\\
+  \end{tabular}
+  % \end{singlespace}
+\end{minipage}\\
+}
+% \end{tabular}
+
+Section~\ref{sec:feasible} discusses \FTPL and presents an algorithmic
+characterization for a feasible TPL.
+
+With respect to computing a feasible TPL, as suggested by \CFTPL
+problem, we were unable to discover an efficient algorithm for
+it. Hence we consider two special cases of \CFTPL -- namely, \CFTPLINT
+and \CFTPLKTREE on special target trees, intervals and \kstar,
+respectively.  Section~\ref{sec:spltargettree} discusses these
+problems.
+
+{\small
+  \begin{minipage}[h]{5in}
+    % \begin{singlespace}
+    \vspace{2mm}
+    {\large \CFTPLINT}\\
+    \begin{tabular}[t]{l|l}
+      \hline\\
+      {\tt Input} & 
+      \begin{minipage}[t]{\probdefwidth}
+        A hypergraph $\cF$ with vertex set $U$ and a tree $T$ with
+        maximum degree 2.\\
+      \end{minipage}\\
+      {\tt Question} &
+      \begin{minipage}[t]{\probdefwidth}
+        Does there exist a set of paths $\cP$ from $T$ and a bijection
+        $\cl$~$:$~$\cF \rightarrow \cP$, such that {\FTPL} returns
+        {\bf true} on $(\cF, T, \cl)$.
+      \end{minipage}\\
+    \end{tabular}
+    % \end{singlespace}
+  \end{minipage}\\
+}
+
+{\small
+  \begin{minipage}[h]{5in}
+    % \begin{singlespace}
+    \vspace{2mm}
+    {\large \CFTPLKTREE}\\
+    \begin{tabular}[t]{l|l}
+      \hline\\
+      {\tt Input} & 
+      \begin{minipage}[t]{\probdefwidth}
+        A hypergraph $\cF$ with vertex set $U$ such that every
+        hyperedge
+        $S \in \cF$ is of cardinality at most $k+2$ and a {\kstar} $T$.\\
+      \end{minipage}\\
+      {\tt Question} &
+      \begin{minipage}[t]{\probdefwidth}
+        Does there exist a set of paths $\cP$ from $T$ and a bijection
+        $\cl$~$:$~$\cF \rightarrow \cP$, such that {\FTPL} returns
+        {\bf true} on $(\cF, T, \cl)$.
+      \end{minipage}\\
+    \end{tabular}
+    % \end{singlespace}
+  \end{minipage}\\
+}
+
+\CFTPLINT is nothing but the consecutive-ones property testing
+problem.
+
+An algorithm for \CFTPL on general trees which is less efficient than
+polynomial time is presented in
+Section~\ref{sec:norestraint}. \tnote{put some more description
+  here. refer walcom.}
+
+\remove{We focus on the question of generalizing the notion of an
+  ICPIA cite-nsnrs09 to characterize feasible path assignments.  We
+  show that for a given set system $\cF$, a tree $T$, and an
+  assignment of paths from $T$ to the sets, there is a feasible
+  bijection between $U$ and $V(T)$ if and only if all intersection
+  cardinalities among any three sets (not necessarily distinct) is
+  same as the intersection cardinality of the paths assigned to them
+  and the input runs a filtering algorithm (described in this paper)
+  successfully.  This characterization is proved constructively and it
+  gives a natural data structure that stores all the relevant feasible
+  bijections between $U$ and $V(T)$.  Further, the filtering algorithm
+  is also an efficient algorithm to test if a tree path labeling to
+  the set system is feasible.  This generalizes the result in
+  cite-nsnrs09.}
+
+
+\section{Preliminaries to new results}
+\label{ch:prelims}
+
+This section states definitions and basic facts necessary in the scope
+of this document.
+
+{\bf Hypergraph Preliminaries:} The set $\F \subseteq (2^{U} \setminus
+\emptyset)$ is a {\em set system} of a universe $U$ with $|U| = n$.
+The {\em support} of a set system $\F$ denoted by $supp(\cF)$ is the
+union of all the sets in $\F$; $supp(\F) = \bigcup_{S \in \F}S$. For
+the purposes of this paper, a set system is required to ``cover'' the
+universe; $ supp(\cF) = U$.  A set system $\cF$ can also be visualized
+as a {\em hypergraph}\, vertex set is $supp(\cF)$ and hyperedges are
+the sets in $\cF$.  The {\em intersection graph}\, $\bI(\cF)$ of a
+hypergraph $\cF$ is a graph such that its vertex set has a bijection
+to $\cF$ and there exists an edge between two vertices iff their
+corresponding hyperedges have a non-empty intersection \cite{mcg04}.
+
+Two hypergraphs $\cF'$, $\cF''$ are said to be {\em isomorphic} to
+each other, denoted by $\cF' \cong \cF''$, iff there exists a
+bijection $\phi: supp(\cF') \rightarrow supp(\cF'')$ such that for all
+sets $A \subseteq supp(\cF')$, $A$ is a hyperedge in $\cF'$ iff $B$ is
+a hyperedge in $\cF''$ where $B = \{\phi(x) \mid x \in A\}$
+\cite{kklv10}, written as $B=\phi(A)$.  This is called {\em hypergraph
+  isomorphism}.
+
+\add{A set system $\cF$ can be alternatively} represented by a {\em
+  hypergraph}\, $\cF_H$ whose vertex set is $supp(\cF)$ and hyperedges
+are the sets in $\cF$. This is a known representation for interval
+systems in literature \cite{bls99,kklv10}.  We extend this definition
+here to path systems. Due to the equivalence of set system and
+hypergraph in the scope of this paper, we drop the subscript $_H$ in
+the notation and refer to both the structures by $\cF$.
+
+{\bf Path Hypergraph from a Tree:} The graph $T$ represents a {\em
+  target tree} with same number of vertices as elements in $U$;
+$|V(T)|=|U|=n$.  A {\em path system}\, $\cP$ is a set system of paths
+from $T$; $\cP \subseteq \{P \mid P \subseteq V, \text{ } T[P] \text{
+  is a path} \}$.  This generalizes the fact, from the literature
+\cite{bls99,kklv10}, that intervals can be viewed as sub-paths of a
+path.
+
+\add{Due to the equivalence of set system and hypergraph in the scope
+  of this paper, we drop the subscript $_H$ in the notation and refer
+  to both the structures by $\cF$.}
+
+If the intersection graphs of $\cF$ and $\cP$ (a path system) are
+isomorphic, $\bI(\cF) \cong \bI(\cP)$, then the associated bijection
+$\cl: \cF \rightarrow \cP$ due to this isomorphism is called a {\em
+  path labeling} of the hypergraph $\cF$.  Note that there are two
+kinds of isomorphisms here.  One is the isomorphism of intersection
+graphs on $\cF$ and $\cP$, i.e. $\bI(\cF)$ and $\bI(\cP)$
+respectively. Second is the isomorphism between the hypergraphs $\cF$
+and $\cP$.
+
+\add{To illustrate further, let $\cg: V(\cF) \rightarrow V(\cP)$ be
+  the above mentioned isomorphism where $V(\cF)$ and $V(\cP)$ are the
+  vertex sets that represent the hyperedges for each hypergraph
+  respectively, $V(\cF) = \{ v_S \mid S \in \cF\}$ and $V(\cP) = \{
+  v_P \mid P \in \cP\}$. Then the path labeling $\cl$ is defined as
+  follows: $\cl(S_1) = P_1$ iff $\cg (v_{S_1}) = v_{P_1}$.  Just to
+  emphasize, for a path labeling $\cl$ of $\cF$ with $\cP$ as the path
+  system, $\cF^\cl$ is same as $\cP$.  The path system $\cP$ may be
+  alternatively denoted in terms of $\cF$ and $\cl$ as $\cF^\cl$. In
+  most scenarios in this paper, what is given are the pair $(\cF,
+  \cl)$ and the target tree $T$; hence this notation will be used more
+  often.}
+
+If $\cF \cong \cP$ where $\cP$ is a path system, then $\cF$ is called
+a {\em path hypergraph} and $\cP$ is called {\em path representation}
+of $\cF$. If this isomorphism is $\phi: supp(\cF) \rightarrow V(T)$,
+then it is clear that there is an {\em induced path labeling}
+$\cl_\phi: \cF \rightarrow \cP$ to the set system; $\cl_\phi(S) =
+\set{y \mid y = \phi(x), x \in S}$ for all $S \in \cF$. Recall that
+$supp(\cP) = V(T)$.
+
+\add{A graph} $G$ is a {\em path graph} if it is isomorphic to the
+intersection graph $\bI(\cP)$ of a path system $\cP$.  This
+isomorphism gives a bijection $\cl': V(G) \rightarrow \cP$. Moreover,
+for the purposes of this paper, we require that in a path labeling,
+$supp(\cP) = V(T)$.  If graph $G$ is also isomorphic to $\bI(\cF)$ for
+some hypergraph $\cF$, then clearly there is a bijection $\cl: \cF
+\rightarrow \cP$ such that $\cl(S) = \cl'(v_S)$ where $v_S$ is the
+vertex corresponding to set $S$ in $\bI(\cF)$ for any $S \in
+\cF$. This bijection $\cl$ is called the {\em path labeling} of the
+hypergraph $\cF$ and the path system $\cP$ may be alternatively
+denoted as $\cF^\cl$.
+
+
+A path labeling $(\cF, \cl)$ is defined to be {\em feasible} if $\cF
+\cong \cF^\cl$ and this hypergraph isomorphism $\phi: supp(\cF)
+\rightarrow supp(\cF^\cl)$ induces a path labeling $\cl_\phi: \cF
+\rightarrow \cF^\cl$ such that $\cl_\phi = \cl$.  \add{In this work},
+we are given as input $\cF$ and a tree $T$, and the question is
+whether there is a path labeling $\cl$ to a set of paths in $T$.  We
+refer to such a solution path system by $\cF^\cl$.  A path labeling
+$(\cF, \cl)$ is defined to be {\em feasible} if
+% $\cF \cong \cF^\cl$ and this
+there is a hypergraph isomorphism $\phi: supp(\cF) \rightarrow
+supp(\cF^\cl)=V(T)$ induces a path labeling $\cl_\phi: \cF \rightarrow
+\cF^\cl$ such that $\cl_\phi = \cl$.
+
+{\bf Overlap Graphs and Marginal Hyperedges:} An {\em overlap graph}\,
+$\bO(\cF)$ of a hypergraph $\cF$ is a graph such that its vertex set
+has a bijection to $\cF$ and there exists an edge between two of its
+vertices iff their corresponding hyperedges overlap. Two hyperedges
+$S$ and $S'$ are said to {\em overlap}, denoted by $S \overlap S'$, if
+they have a non-empty intersection and neither is contained in the
+other; $S \overlap S' \text{ iff } S \cap S' \ne \emptyset, S
+\nsubseteq S', S' \nsubseteq S$. Thus $\bO(\cF)$ is a spanning
+subgraph of $\bI(\cF)$ and not necessarily connected. Each connected
+component of $\bO(\cF)$ is called an {\em overlap component}.
+
+A hyperedge $S \in \cF$ is called {\em marginal} if for all $S'
+\overlap S$, the overlaps $S \cap S'$ form a single inclusion chain
+\cite{kklv10}. Additionally, if $S$ is such that it is contained in no
+other marginal hyperedge in $\cF$, then it is called {\em
+  super-marginal}.
+
+{\bf $k$-subdivided star -- a special tree} A {\em star} graph is a
+complete bipartite graph $K_{1,p}$ which is clearly a tree and $p$ is
+the number of leaves. The vertex with maximum degree is called the
+{\em center} of the star and the edges are called {\em rays} of the
+star. A {\em $k$-subdivided star} is a star with all its rays
+subdivided exactly $k$ times. The definition of a {\em ray of a
+  $k$-subdivided star} is extended to the path from the center to a
+leaf. It is clear that all rays are of length $k+2$.
+
+
+{\tt --- WALCOM}
+
+A {\em path assignment} $\A$ to $\F$ is defined as a set assignment
+where second universe is the vertex set $V$ of a given tree $T$ and
+every second subset in the ordered pairs is a path in this
+tree. Formally, the definition is as follows.
+\begin{align*}
+  \A = \{ (S_i,P_i) \mid S_i \in \F, P_i \subseteq V \text{
+    s.t. }T[P_i] \text{ is a path, } i \in I \}
+\end{align*}
+In other words, $P_i$ is the path on the tree $T$ assigned to $S_i$ in
+$\A$. As mentioned before for set systems, the paths cover the whole
+tree, i.e. $\bigcup_{i \in I}P_i = V$ \\
+
+\noindent
+Generalizing the definition of {\em feasibility} in \cite{nsnrs09} to
+a set assignment, a path assignment $\A$ is defined to be {\em
+  feasible} if there exists a bijection defined as follows.
+\begin{align}
+  \sigma: U \rightarrow V(T), \text{ such that }\sigma(S_i) = P_i
+  \text{ for all } i \in I, \sigma \text{ is a bijection}
+  \label{eq:stf}
+\end{align}
+
+Let $X$ be a partially ordered set with $\preccurlyeq$ being the
+partial order on $X$.  $mub(X)$ represents an element in $X$ which is
+a maximal upper bound on $X$.  $X_m \in X$ is a maximal upper bound of
+$X$ if $\nexists X_q \in X$ such that $X_m
+\preccurlyeq X_q$. \\
+
+\noindent
+The set $I$ represents the index set $[m]$. If index $i$ is used
+without further qualification, it is meant to be $i \in I$. Any
+function, if not defined on a domain of sets, when applied on a set is
+understood as the function applied to each of its elements. i.e. for
+any function $f$ defined with domain $U$, the abuse of notation is as
+follows; $f(S)$ is used instead of $\hat f(S)$ where
+$\hat f(S) = \{y \mid y = f(x), x \in S\}$. \\
+
+\noindent
+When refering to a tree as $T$ it could be a reference to the tree
+itself, or the vertices of the tree. This will be clear from the
+context.\\
+
+\noindent
+Finally, an in-tree is a directed rooted tree in which all edges are
+directed toward to the root.
+
+
+\section{Characterization of Feasible Tree Path Labeling}
+\label{sec:feasible}
+
+In this section we give an algorithmic characterization of a
+feasibility of tree path labeling.  Consider a path labeling $(\cF,
+\cl)$ on the given tree $T$. We call $(\cF, \cl)$ an {\em Intersection
+  Cardinality Preserving Path Labeling (ICPPL)} if it has the
+following properties.
+
+\begin{enumerate}[{(\icpplpr\ }i) \ \ \ ]
+\item \label{pr:i} $|S| = |\cl(S)|$ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for all $S \in \cF$
+  % \vspace{\topshrink}
+\item \label{pr:ii}$|S_1 \cap S_2| = |\cl(S_1) \cap \cl(S_2)|$ \ \ \ \
+  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for all distinct $S_1, S_2 \in \cF$
+  % \vspace{\topshrink}
+\item \label{pr:iii}$|S_1 \cap S_2 \cap S_3| = |\cl(S_1) \cap \cl(S_2)
+  \cap \cl(S_3)|$ \ \ \ for all distinct $S_1, S_2, S_3 \in \cF$
+\end{enumerate}
+
+
+The following lemma is useful in subsequent arguments.
+\begin{lemma}
+  \label{lem:setminuscard}
+  If $\cl$ is an ICPPL, and $S_1, S_2, S_3 \in \cF$, then $|S_1 \cap
+  (S_2 \setminus S_3)| = |\cl(S_1) \cap (\cl(S_2) \setminus
+  \cl(S_3))|$.
+\end{lemma}
+\begin{proof}%[Proof of Lemma~\ref{lem:setminuscard}]
+  Let $P_i = \cl(S_i)$, for all $1 \le i \le 3$.  $|S_1 \cap (S_2
+  \setminus S_3)| = |(S_1 \cap S_2) \setminus S_3| = |S_1 \cap S_2| -
+  |S_1 \cap S_2 \cap S_3|$. Due to properties (ii) and (iii) of ICPPL,
+  $|S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3| = |P_1 \cap P_2| - |P_1
+  \cap P_2 \cap P_3| = |(P_1 \cap P_2) \setminus P_3| = |P_1 \cap (P_2
+  \setminus P_3)|$. Thus lemma is proven. \qed
+\end{proof}
+
+
+In the remaining part of this section we show that $(\cF, \cl)$ is
+feasible if and only if it is an ICPPL and
+Algorithm~\ref{al:icppl-find-isomorph} returns a non-empty
+function. Algorithm~\ref{al:icppl-find-isomorph} recursively does two
+levels of filtering of $(\cF, \cl)$ to make it simpler while retaining
+the set of isomorphisms, if any, between $\cF$ and $\cF^\cl$.
+% One direction of this claim isclear: that if a path labeling is
+% feasible, then all intersection cardinalities are preserved,
+% i.e. the path labeling is an ICPPL. Algorithm~\ref{perms}
+% \annote{has no premature exit condition hence any input will go
+%   through it}{Prove that the filtered sets has ICPPL iff input PL
+%   has ICPPL?}. Algorithm~\ref{leafasgn} has an exit condition at
+% line~\ref{xempty}. It can be easily verified that $X$ cannot be
+% empty if $\cl$ is a feasible path labeling. The reason is that a
+% feasible path labeling has an associated bijection between
+% $supp(\cF)$ and $V(T)$ \remove{i.e. $supp(\cF^{\cl})$} such that the
+% sets map to paths, ``preserving'' the path labeling.  The rest of
+% the section is devoted to constructively proving that it is
+% sufficient for a path labeling to be an ICPPL and pass the two
+% filtering algorithms.  To describe in brief, the constructive
+% approaches refine an ICPPL iteratively, such that at the end of each
+% iteration we have a ``filtered'' path labeling, and finally we have
+% a path labeling that defines a family of bijections from $supp(\cF)$
+% to $V(T)$\remove{ i.e. $supp(\cF^{\cl})$}.
+First, we present Algorithm~\ref{perms} or {\tt filter\_1}, and prove
+its correctness.  This algorithm refines the path labeling by
+processing pairs of paths in $\cF^\cl$ that share a leaf until no two
+paths in the new path labeling share any leaf.
+
+\begin{algorithm}[h]
+  \caption{Refine ICPPL {\tt filter\_1($\cF, \cl, T$)}}
+  \label{perms}
+  \begin{algorithmic}[\lndisplay]
+    \STATE $\cF_0 \assign \cF$, $\cl_0(S) \assign \cl(S)$ for all $S \in \cF_0$\\
+    \STATE $j \assign 1$\\
+    \WHILE {there is $S_1, S_2 \in \cF_{j-1}$ such that
+      $\cl_{j-1}(S_1)$ and $\cl_{j-1}(S_2)$ have a common leaf in
+      $T$}\label{shareleaf} \STATE $\cF_j \assign (\cF_{j-1} \setminus
+    \{S_1, S_2\}) \cup \{S_1 \cap S_2, S_1 \setminus S_2, S_2
+    \setminus S_1 \}$ \label{setbreak} \COMMENT {Remove $S_1$, $S_2$
+      and add the ``filtered'' sets} \STATE {\bf for} every $S \in
+    \cF_{j-1}$ s.t. $S \ne S_1$ and $S \ne
+    S_2$ {\bf do} $\cl_j(S) \assign \cl_{j-1}(S)$ {\bf end for}\\
+
+    \STATE $\cl_j(S_1 \cap S_2) \assign \cl_{j-1}(S_1) \cap
+    \cl_{j-1}(S_2)$ \COMMENT {Carry forward the path labeling for all
+      existing sets other than $S_1$, $S_2$} \STATE $\cl_j(S_1
+    \setminus S_2) \assign \cl_{j-1}(S_1) \setminus \cl_{j-1}(S_2)$
+    \COMMENT {Define path labeling for new sets} \STATE $\cl_j(S_2
+    \setminus S_1) \assign \cl_{j-1}(S_2) \setminus \cl_{j-1}(S_1)$
+
+    \IF{$(\cF_j, \cl_j)$ does not satisfy (\icpplpr~\ref{pr:iii}) of
+      ICPPL}
+    \label{ln:3waycheck}
+    \STATE {\bf exit} \label{ln:exit1} \\
+    \ENDIF
+
+    \STATE $j \assign j+1$\\
+    \ENDWHILE
+    \STATE $\cF' \assign \cF_j$, $\cl' \assign \cl_j$\\
+    \RETURN $(\cF', \cl')$
+  \end{algorithmic}
+\end{algorithm}
+
+\begin{lemma}
+  \label{lem:feasible}
+  In Algorithm~\ref{perms}, if input $(\cF, \cl)$ is a feasible path
+  assignment then at the end of $j$th iteration of the {\bf while}
+  loop, $j \ge 0$, $(\cF_j, \cl_j)$ is a feasible path assignment.
+\end{lemma}
+\begin{proof}%[Proof of Lemma~\ref{lem:feasible}]
+  We will prove this by mathematical induction on the number of
+  iterations. The base case $(\cF_0, \cl_0)$ is feasible since it is
+  the input itself which is given to be feasible. Assume the lemma is
+  true till $j-1$th iteration. i.e. every hypergraph isomorphism
+  $\phi: supp\left(\cF_{j-1}\right) \rightarrow V\left(T \right)$ that
+  defines $(\cF, \cl)$'s feasibility, is such that the induced path
+  labeling on $\cF_{j-1}$, $\cl_{\phi[{\cF_{j-1}}]}$ is equal to
+  $\cl_{j-1}$. We will prove that $\phi$ is also the bijection that
+  makes $(\cF_j, \cl_j)$ feasible. Note that $supp(\cF_{j-1}) =
+  supp(\cF_{j})$ since the new sets in $\cF_j$ are created from basic
+  set operations to the sets in $\cF_{j-1}$. For the same reason and
+  $\phi$ being a bijection, it is clear that when applying the $\phi$
+  induced path labeling on $\cF_j$, $ \cl_{\phi[{\cF_{j}}]}(S_1
+  \setminus S_2) = \cl_{\phi[{\cF_{j-1}}]}(S_1) \setminus
+  \cl_{\phi[{\cF_{j-1}}]}(S_2)$. Now observe that $ \cl_j(S_1
+  \setminus S_2) = \cl_{j-1}(S_1) \setminus \cl_{j-1}(S_2) =
+  \cl_{\phi[{\cF_{j-1}}]}(S_1) \setminus
+  \cl_{\phi[{\cF_{j-1}}]}(S_2)$. Thus the induced path labeling
+  $\cl_{\phi[{\cF_{j}}]} = \cl_{j}$. Therefore lemma is proven.  \qed
+\end{proof}
+
+
+{\tt WALCOM begin}
+
+
+\begin{lemma}
+  \label{lem:setminuscard}
+  If $\cA$ is an ICPPA, and $(S_1, P_1),(S_2, P_2),(S_3, P_3) \in
+  \cA$, then $|S_1 \cap (S_2 \setminus S_3)| = |P_1 \cap (P_2
+  \setminus P_3)|$.
+\end{lemma}
+\begin{proof}
+  $|S_1 \cap (S_2 \setminus S_3)| = |(S_1 \cap S_2) \setminus S_3| =
+  |S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3|$. Due to conditions (ii)
+  and (iii) of ICPPA, $|S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3| = |P_1
+  \cap P_2| - |P_1 \cap P_2 \cap P_3| = |(P_1 \cap P_2) \setminus P_3|
+  = |P_1 \cap (P_2 \setminus P_3)|$. Thus lemma is proven. \qed
+\end{proof}
+
+\begin{lemma}
+  \label{lem:fourpaths} Consider four paths in a tree $Q_1, Q_2, Q_3,
+  Q_4$ such that they have nonempty pairwise intersection and $Q_1,
+  Q_2$ share a leaf. Then there exists distinct $i, j, k \in
+  \{1,2,3,4\}$ such that, $Q_1 \cap Q_2 \cap Q_3 \cap Q_4 = Q_i \cap
+  Q_j \cap Q_k$.
+\end{lemma}
+\begin{proof}
+  {\em Case 1:} w.l.o.g, consider $Q_3 \cap Q_4$ and let us call it
+  $Q$. This is clearly a path (intersection of two paths is a path).
+  % Since $Q_1, Q_2$ share a leaf, the following are paths $Q_1
+  % \setminus Q_2$, $Q_2 \setminus Q_1$, $Q_1 \cap Q_2$ and they are
+  % mutually disjoint.
+  Suppose $Q$ does not intersect with $Q_1 \setminus Q_2$, i.e. $Q
+  \cap (Q_1 \setminus Q_2) = \O$. Then $Q \cap Q_1 \cap Q_2 = Q \cap
+  Q_2$. Similarly, if $Q \cap (Q_2 \setminus Q_1) = \O$, $Q \cap Q_1
+  \cap Q_2 = Q \cap Q_1$. Thus it is clear that if the intersection of
+  any two paths does not intersect with any of the set differences of
+  the remaining two paths, the claim in the lemma is true.
+  % Note that $Q_1 \setminus Q_2$ and $Q_2
+  % \setminus Q_1$ are paths because $Q_1, Q_2$ share a leaf.\\
+  {\em Case 2:} Let us consider the compliment of the previous
+  case. i.e. the intersection of any two paths intersects with both
+  the set differences of the other two. First let us consider $Q \cap
+  (Q_1 \setminus Q_2) \ne \O$ and $Q \cap (Q_1 \setminus Q_2) \ne \O$,
+  where $Q = Q_3 \cap Q_4$. Since $Q_1$ and $Q_2$ share a leaf, there
+  is exactly one vertex at which they branch off from the path $Q_1
+  \cap Q_2$ into two paths $Q_1 \setminus Q_2$ and $Q_2 \setminus
+  Q_1$. Let this vertex be $v$. It is clear that if path $Q_3 \cap
+  Q_4$, must intersect with paths $Q_1 \setminus Q_2$ and $Q_2
+  \setminus Q_1$, it must contain $v$ since these are paths from a
+  tree. Moreover, $Q_3 \cap Q_4$ intersects with $Q_1 \cap Q_2$ at
+  exactly $v$ and only at $v$ which means that $Q_1 \cap Q_2$ does not
+  intersect with $Q_3 \setminus Q_4$ or $Q_4 \setminus Q_3$ which
+  contradicts initial condition of this case. Thus this
+  case cannot occur and case 1 is the only possible scenario. \\
+  Thus lemma is proven \qed
+\end{proof}
+
+
+\begin{lemma}
+  \label{lem:invar1}
+  In Algorithm \ref{perms}, at the end of $j$th iteration, $j \ge 0$,
+  of the while loop of Algorithm \ref{perms}, the following invariants
+  are maintained.
+  \begin{itemize}
+  \item {\em Invariant I:} $Q$ is a path in $T$ for each $(P,Q) \in
+    \Pi_j$
+  \item {\em Invariant II:} $|P|=|Q|$ for each $(P,Q) \in \Pi_j$
+  \item {\em Invariant III:} For any two $(P,Q), (P',Q') \in \Pi_j$,
+    $|P' \cap P''|=|Q' \cap Q''|$.
+  \item {\em Invariant IV:} For any three, $(P',Q'), (P'',Q''), (P, Q)
+    \in \Pi_j$, $|P' \cap P'' \cap P|=|Q' \cap Q'' \cap Q|$.
+  \end{itemize}
+\end{lemma}
+\begin{proof}
+  Proof is by induction on the number of iterations, $j$. In the rest
+  of the proof, the term ``new sets'' will refer to the new sets added
+  in $j$th iteration as defined in line \ref{setbreak} of Algorithm
+  \ref{perms}, i.e. the following three assignment pairs for some
+  $(P_1,Q_1), (P_2,Q_2) \in \Pi_{j-1}$ where $Q_1$ and $Q_2$ intersect
+  and share a leaf: $(P_1 \cap P_2, Q_1 \cap Q_2)$, or $(P_1 \setminus
+  P_2, Q_1 \setminus Q_2)$, or $(P_2 \setminus P_1, Q_2
+  \setminus Q_1)$.\\
+  \noindent
+  The base case, $\Pi_0 = \{(S_i,P_i) \mid i \in [m]\}$, is trivially
+  true since it is the input which is an ICPPA.  Assume the lemma is
+  true till the $j-1$ iteration. Consider $j$th
+  iteration:\\
+  \noindent
+  If $(P,Q)$, $(P',Q')$ and $(P'',Q'')$ are in $\Pi_{j}$ and
+  $\Pi_{j-1}$, all the invariants are
+  clearly true because they are from $j-1$ iteration.\\
+  If $(P,Q)$ is in $\Pi_{j}$ and not in $\Pi_{j-1}$, then it must be
+  one of the new sets added in $\Pi_j$. Since $(P_1,Q_1)$ and
+  $(P_2,Q_2)$ are from $\Pi_{j-1}$ and $Q_1,Q_2$ intersect and have a
+  common leaf, it can be verified that the
+  new sets are also paths. \\
+  By hypothesis for invariant III, invariant II also holds for $(P,Q)$
+  no matter which new set in $\Pi_j$ it
+  is.\\
+  To prove invariant III, if $(P,Q)$ and $(P',Q')$ are not in
+  $\Pi_{j-1}$, then they are both new sets and invariant III holds
+  trivially (new sets are disjoint). Next consider $(P,Q), (P',Q') \in
+  \Pi_j$ with only one of them, say $(P',Q')$, in $\Pi_{j-1}$. Then
+  $(P,Q)$ is one of the new sets added in line \ref{setbreak}. It is
+  easy to see that if $(P,Q)$ is $(P_1 \cap P_2, Q_1 \cap Q_2)$, then
+  due to invariant IV in hypothesis, invariant III becomes true in
+  this iteration. Similarly, using lemma \ref{lem:setminuscard}
+  invariant III is proven if $(P, Q)$ is $(P_1 \setminus P_2, Q_1
+  \setminus Q_2)$, or $(P_2 \setminus P_1, Q_2
+  \setminus Q_1)$.\\
+  To prove invariant IV, consider three assignments
+  $(P,Q),(P',Q'),(P'',Q'')$. If at least two of these pairs are in not
+  $\Pi_{j-1}$, then they are any two of the new sets. Note that these
+  new sets are disjoint and hence if $(P',Q'), (P'',Q'')$ are any of
+  these sets, $|P \cap P' \cap P''|=|Q \cap Q' \cap Q''|=0$ and
+  invariant IV is true. Now we consider the case if at most one of
+  $(P,Q),(P',Q'),(P'',Q'')$ is not in $\Pi_{j-1}$. If none of them are
+  not in $\Pi_{j-1}$ (i.e. all of them are in $\Pi_{j-1}$), invariant
+  IV is clearly true. Consider the case where exactly one of them is
+  not in $\Pi_{j-1}$. w.l.o.g let that be $(P,Q)$ and it could be any
+  one of the new sets. If $(P,Q)$ is $(P_1 \cap P_2, Q_1 \cap Q_2)$,
+  from lemma \ref{lem:fourpaths} and invariant III hypothesis,
+  invariant IV is proven. Similarly if $(P,Q)$ is any of the other new
+  sets, invariant IV is proven by also using lemma
+  \ref{lem:setminuscard}. \qed
+
+\end{proof} {\tt WALCOM end}
+
+\begin{lemma}
+  \label{lem:invar1} In Algorithm~\ref{perms}, at the end of $j$th
+  iteration, $j \ge 0$, of the {\bf while} loop, the following
+  invariants are maintained.
+  \begin{enumerate}[I {\ }] %\vspace{\topshrink}
+  \item $\cl_j(R)$ is a path in $T$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+    \ \ \ \ \ \ \ \ \ \ for all $R \in \cF_j$%\vspace{\topshrink}
+  \item $|R| = |\cl_j(R)|$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+    \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for all $R \in
+    \cF_j$%\vspace{\topshrink}
+  \item $|R \cap R'| = |\cl_j(R) \cap \cl_j(R')|$, \ \ \ \ \ \ \ \ \ \
+    \ \ \ \ \ \ \ \ \ \ for all $R, R' \in \cF_j$%\vspace{\topshrink}
+  \item $|R \cap R' \cap R''|=|\cl_j(R) \cap \cl_j(R') \cap
+    \cl_j(R'')|$, \ \ \ for all $R, R', R'' \in \cF_j$
+  \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+  Proof is by induction on the number of iterations, $j$. In this
+  proof, the term ``new sets'' will refer to the sets added to $\cF_j$
+  in $j$th iteration in line~\ref{setbreak} of Algorithm~\ref{perms},
+  $S_1 \cap S_2, S_1 \setminus S_2, S_2 \setminus S_1$ and its images
+  in $\cl_j$ where $\cl_{j-1}(S_1)$
+  and $\cl_{j-1}(S_2)$ intersect and share a leaf.\\
+  The invariants are true in the base case $(\cF_0, \cl_0)$, since it
+  is the input ICPPL.  Assume the lemma is true till the $j-1$th
+  iteration. Let us consider the possible cases for each of the above
+  invariants for the $j$th iteration.
+
+  
+  \begin{enumerate}[\xbullet]
+  \item {\em Invariant} I/II
+    \begin{enumerate}[{I/II}a $|$] % \textbullet
+    \item {\em $R$ is not a new set.} It is in $\cF_{j-1}$. Thus
+      trivially true by induction hypothesis.
+    \item {\em $R$ is a new set.} If $R$ is in $\cF_{j}$ and not in
+      $\cF_{j-1}$, then it must be one of the new sets added in
+      $\cF_j$. In this case, it is clear that for each new set, the
+      image under $\cl_j$ is a path since by definition the chosen
+      sets $S_1$, $S_2$ are from $\cF_{j-1}$ and due to the while loop
+      condition, $\cl_{j-1}(S_1)$, $\cl_{j-1}(S_2)$ have a
+      common leaf. Thus invariant I is proven.\\
+      Moreover, due to induction hypothesis of invariant III and the
+      definition of $l_j$ in terms of $l_{j-1}$, invariant II is
+      indeed true in the $j$th iteration for any of the new sets.  If
+      $R = S_1 \cap S_2$, $|R| = |S_1 \cap S_2| = |\cl_{j-1}(S_1) \cap
+      \cl_{j-1}(S_2)| = |\cl_j(S_1 \cap S_2)| = |\cl_j(R)|$.  If $R =
+      S_1 \setminus S_2$, $|R| = |S_1 \setminus S_2| = |S_1| - |S_1
+      \cap S_2| = |\cl_{j-1}(S_1)| - |\cl_{j-1}(S_1) \cap
+      \cl_{j-1}(S_2)| = |\cl_{j-1}(S_1) \setminus \cl_{j-1}(S_2)| =
+      |\cl_j(S_1 \setminus S_2)|
+      = |\cl_j(R)|$. Similarly if $R = S_2 \setminus S_1$.\\
+    \end{enumerate}
+  \item {\em Invariant} III
+    \begin{enumerate}[{III}a $|$]
+    \item {\em $R$ and $R'$ are not new sets.} It is in
+      $\cF_{j-1}$. Thus trivially true by induction hypothesis.
+    \item {\em Only one, say $R$, is a new set.} Due to invariant IV
+      induction hypothesis, Lemma~\ref{lem:setminuscard} and
+      definition of $\cl_j$, it follows that invariant III is true no
+      matter which of the new sets $R$ is equal to. If $R = S_1 \cap
+      S_2$, $|R \cap R'| = |S_1 \cap S_2 \cap R'| = |\cl_{j-1}(S_1)
+      \cap \cl_{j-1}(S_2) \cap \cl_{j-1}(R')| = |\cl_j(S_1 \cap S_2)
+      \cap \cl_j(R')| = |\cl_j(R) \cap \cl_j(R')|$.  If $R = S_1
+      \setminus S_2$, $|R \cap R'| = |(S_1 \setminus S_2) \cap R'| =
+      |(\cl_{j-1}(S_1) \setminus \cl_{j-1}(S_2)) \cap \cl_{j-1}(R')| =
+      |\cl_{j}(S_1 \cap S_2) \cap \cl_{j}(R')| = |\cl_{j}(R) \cap
+      \cl_{j}(R')|$. Similarly, if $R = S_2 \setminus
+      S_1$. Note $R'$ is not a new set.\\
+
+    \item {\em $R$ and $R'$ are new sets.} By definition, the new sets
+      and their path images in path label $\cl_j$ are disjoint so $|R
+      \cap R'| = |\cl_j(R) \cap \cl_j(R)| = 0$. Thus case proven.
+    \end{enumerate}
+  \item {\em Invariant} IV
+    
+    Due to the condition in line~\ref{ln:3waycheck}, this invariant is
+    ensured at the end of every iteration.
+    % \begin{enumerate} [{Case 3.}1:]
+    % \item {\em $R$, $R'$ and $R''$ are not new sets.} Trivially true
+    %   by induction hypothesis.
+    % \item {\em Only one, say $R$, is a new set.}  If $R = S_1 \cap
+    %   S_2$, from Lemma~\ref{lem:fourpaths} and invariant III
+    %   hypothesis, this case is proven. Similarly if $R$ is any of
+    %   the other new sets, the case is proven by also using Lemma
+    %   ~\ref{lem:setminuscard}.
+    % \item {\em At least two of $R, R', R''$ are new sets.}  The new
+    %   sets are disjoint hence this case is vacuously true.
+    % \end{enumerate}
+  \end{enumerate} \qed
+  % \vspace{-6mm}
+
+\end{proof}
+
+\begin{lemma}
+  \label{lem:noexit1}
+  If the input ICPPL $(\cF, \cl)$ to Algorithm~\ref{perms} is
+  feasible, then the set of hypergraph isomorphism functions that
+  defines $(\cF, \cl)$'s feasibility is the same as the set that
+  defines $(\cF_j, \cl_j)$'s feasibility, if any.  Secondly, for any
+  iteration $j > 0$ of the {\em \bf while} loop, the {\em \bf exit}
+  statement in line~\ref{ln:exit1} will not execute.
+\end{lemma}
+\begin{proof}
+  Since $(\cF,\cl)$ is feasible, by Lemma~\ref{lem:feasible}
+  $(\cF_j,\cl_j)$ for every iteration $j > 0$ is
+  feasible.  % Therefore,
+  % every hypergraph isomorphism $\phi: supp(\cF) \rightarrow V(T)$
+  % that induces $\cl$ on $\cF$ also induces $\cl_{j-1}$ and $\cl_{j}$
+  % on $\cF_{j-1}$ and $\cF_{j}$ respectively, i.e.,
+  % $\cl_{\phi[\cF_{j-1}]} = \cl_{j-1}$ and $\cl_{\phi[\cF_j]} =
+  % \cl_j$. Thus it can be seen that for all $x \in supp(\cF)$, for
+  % all $v \in V(T)$ the following hold true.
+  Also, every hypergraph isomorphism $\phi: supp(\cF) \rightarrow
+  V(T)$ that induces $\cl$ on $\cF$ also induces $\cl_{j}$ on
+  $\cF_{j}$, i.e., $\cl_{\phi[\cF_j]} = \cl_j$. Thus it can be seen
+  that for all $x \in supp(\cF)$, for all $v \in V(T)$, if $(x,v) \in
+  \phi$ then $v \in \cl_{j}(S)$ for all $S \in \cF_{j}$ such that $x
+  \in S$.
+  % the following hold true.
+  % \begin{enumerate}[i. ]
+  % \item If $(x,v) \in \phi$ then $v \in \cl_{j-1}(S)$ for all $S \in
+  %   \cF_{j-1}$ such that $x \in S$.
+  % \item If $(x,v) \in \phi$ then $v \in \cl_{j}(S)$ for all $S \in
+  %   \cF_{j}$ such that $x \in S$
+  % \end{enumerate}
+  In other words, filter 1 outputs a filtered path labeling that
+  ``preserves''
+  hypergraph isomorphisms of the original path labeling.\\
+  Secondly, line~\ref{ln:exit1} will execute iff the exit condition in
+  line~\ref{ln:3waycheck}, i.e. failure of three way intersection
+  preservation, becomes true in any iteration of the {\em \bf while}
+  loop.  Due to Lemma~\ref{lem:invar1} Invariant IV, the exit
+  condition does not occur if the input is a feasible ICPPL.\qed
+
+  % such that $\phi(x) = v$ where $v$ is the leaf considered in the
+  % first iterations of while. Clearly, $\phi$ is a renaming of
+  % vertices in hypergraph $\cF$ to those in hypergraph
+  % $\cF^\cl$. Thus the following facts can be observed in every
+  % iteration of the loop.
+
+  % \begin{enumerate}[\hspace{2mm}i. ] \vspace{\topshrink}
+  % \item all intersection cardinalities are preserved in this path
+  %   labeling \vspace{\topshrink}
+  % \item element $x$ is exclusive in a hyperedge in $\cF$ since $v$
+  %   is exclusive in a hyperedge in $\cF^\cl$.
+  % \end{enumerate}
+
+  % Thus the exit condition is never rendered true after $x$ and $v$
+  % are removed from their respective hyperedges. \qed
+
+  % \noindent
+  % This proof uses mathematical induction on the number of iterations
+  % $j$, $j \ge 0$, of the loop that executed without exiting. The
+  % base case, $j = 0$ is obviously true since the input is an ICPPL
+  % and the exit condition cannot hold true due to ICPPL property
+  % (iii).  Assume the algorithm executes till the end of $j-1$th
+  % iteration without exiting at line ~\ref{ln:3waycheck}. Consider
+  % the $j$th iteration. From Lemma ~\ref{lem:feasible} we know that
+  % $(\cF_j, \cl_j)$ and $(\cF_{j-1}, \cl_{j-1})$ are
+  % feasible\remove[AS]{and from the proof in lemma lem:invar1 we know
+  %   that $(\cF_{j-1}, \cl_{j-1})$ satisfies all the invariants
+  %   defined in the lemma}.  Thus there exists a bijection $\phi:
+  % supp(\cF) \rightarrow V(T)$ such that the induced path
+  %   % labeling on $\cF_{j-1}$ $\cl_{\phi[\cF_{j-1}]} = \cl_{j-1}$.
+  % labeling on $\cF_{j}$, $\cl_{\phi[\cF_{j}]}$ and on $\cF_{j-1}$,
+  % $\cl_{\phi[\cF_{j-1}]}$ are equal to $\cl_{j}$ and $\cl_{j-1}$
+  % respectively.  We need to prove that for any $R, R', R'' \in
+  % \cF_{j}$, $|R \cap R' \cap R''| = |\cl_j(R) \cap \cl_j(R') \cap
+  % \cl_j(R'')|$.  The following are the possible cases that could
+  % arise. From argument above, $|\cl_j(R) \cap \cl_j(R') \cap
+  % \cl_j(R'')| = |\cl_{\phi[\cF_{j}]}(R) \cap \cl_{\phi[\cF_{j}]}
+  % (R') \cap \cl_{\phi[\cF_{j}]} (R'')|$
+
+  % \begin{enumerate}[a $|$]
+  % \item {\em None of the sets are new. $R, R', R'' \in \cF_{j-1}$.}
+  %   We know $(\cF_{j-1}, \cl_{j-1})$ is feasible. Thus $|R \cap R'
+  %   \cap R''| = |\cl_{j-1}(R) \cap \cl_{j-1}(R') \cap
+  %   \cl_{j-1}(R'')| = |\cl_{j}(R) \cap \cl_{j}(R') \cap
+  %   \cl_{j}(R'')|$.
+  % \item {\em Only one, say $R$, is a new set.}  Let $R = S_1 \cap
+  %   S_2$ ($S_1, S_2$ are defined in the proof of lemma
+  %   ~\ref{lem:invar1}). Now we have $|R \cap R' \cap R''| = |S_1
+  %   \cap S_2 \cap R' \cap R''| = |\cl_{j-1}(S_1) \cap \cl_{j-1}(S_2)
+  %   \cap \cl_{j-1}(R') \cap \cl_{j-1}(R'')| = |\cl_{j}(R) \cap
+  %   \cl_{j}(R') \cap \cl_{j}(R'')|$. Thus proven. If $R$ is any of
+  %   the other new sets, the same claim can be verified using lemma
+  %   ~\ref{lem:setminuscard}.
+  %     % \item []{\bf Case 3:}
+  % \item {\em At least two of $R, R', R''$ are new sets.}  The new
+  %   sets are disjoint hence this case is vacuously true.
+  % \end{enumerate}
+  % \qed \tnote[E2]{remove the induction proof. just text saying x and
+  %   v are exclusive in these sets therefore the intersection
+  %   cardinalities don't change thus all invariants are still true}
+\end{proof}
+
+As a result of Algorithm~\ref{perms} each leaf $v$ in $T$ is such that
+there is exactly one set in $\cF$ with $v$ as a vertex in the path
+assigned to it.  In Algorithm~\ref{leafasgn} we identify elements in
+$supp(\cF)$ whose images are leaves in a hypergraph isomorphism if one
+exists.  Let $S \in \cF$ be such that $\cl(S)$ is a path with leaf and
+$v \in V(T)$ is the unique leaf incident on it.  We define a new path
+labeling $\cl_{new}$ such that $\cl_{new}(\set{x}) = \set{v}$ where
+$x$ an arbitrary element from $S \setminus \bigcup_{\hS \ne S}
+\hS$. In other words, $x$ is an element present in no other set in
+$\cF$ except $S$. This is intuitive since $v$ is present in no other
+path image under $\cl$ other than $\cl(S)$.  The element $x$ and leaf
+$v$ are then removed from the set $S$ and path $\cl(S)$
+respectively. After doing this for all leaves in $T$, all path images
+in the new path labeling $\cl_{new}$ except leaf labels (a path that
+has only a leaf is called the {\em leaf label} for the corresponding
+single element hyperedge or set) are paths from a new pruned tree $T_0
+= T \setminus \{v \mid v \text{ is a leaf in }
+T\}$. Algorithm~\ref{leafasgn} is now presented with details.
+
+
+\begin{algorithm}[h]
+  \caption{Leaf labeling from an ICPPL {\tt filter\_2($\cF, \cl, T$)}}
+  \label{leafasgn}
+  \begin{algorithmic}[\lndisplay]
+    \STATE $\cF_0 \assign \cF$, $\cl_0(S) \assign \cl(S)$ for all $S
+    \in \cF_0$ \COMMENT {Path images are such that no two path images
+      share a leaf.}
+    \STATE $j \assign 1$\\
+    \WHILE {there is a leaf $v$ in $T$ and a unique $S_1 \in
+      \cF_{j-1}$ such that $v \in \cl_{j-1}(S_1)$ }\label{uniqueleaf}
+    \STATE $\cF_j \assign \cF_{j-1} \setminus \{S_1\}$\\
+    \STATE for all $S \in \cF_{j-1}$ such that $S \ne S_1$ set
+    $\cl_j(S) \assign
+    \cl_{j-1}(S)$\\
+    \STATE $X \assign S_1 \setminus \bigcup_{S \in \cF_{j-1}, S \ne S_1}S$\\
+    \IF{$X$ is empty} \label{xempty} \STATE {\bf
+      exit} \label{ln:exit2} \ENDIF
+    \STATE $x \assign $ arbitrary element from $X$\\
+    \STATE $\cF_j \assign \cF_j \cup \{\{x\}, S_1 \setminus \{x\}\} $\\
+    \STATE $\cl_j(\{x\}) \assign \{v\}$\\
+    \STATE $\cl_j(S_1 \setminus \{x\}) \assign \cl_{j-1}(S_1) \setminus \{v\}$\\
+    \STATE $j \assign j+1$\\
+    \ENDWHILE
+    \STATE $\cF' \assign \cF_j$, $\cl' \assign \cl_j$\\
+    \RETURN $(\cF', \cl')$
+  \end{algorithmic}
+\end{algorithm}
+
+
+Suppose the input ICPPL $(\cF, \cl)$ is feasible, yet set $X$ in
+Algorithm~\ref{leafasgn} is empty in some iteration of the {\bf while}
+loop. This will abort our procedure of finding the hypergraph
+isomorphism. The following lemma shows that this will not happen.
+
+
+{\tt WALCOM begin}
+\begin{lemma}
+  \label{lem:invar3}
+  In Algorithm \ref{leafasgn},for all $j \geq 0$, at the end of the
+  $j$th iteration the four invariants given in lemma \ref{lem:invar1}
+  are valid.
+  % Moreover, $X$ as defined in the algorithm is non-empty if this is
+  % an ICPPA.
+\end{lemma}
+\begin{proof}
+  First we see that $X = S_{i_1} \setminus \bigcup_{i \ne i_1, i \in
+    I}S_i$ is non empty in every iteration for an ICPPA. Suppose $X$
+  is empty. We know that $v \in P_{i_1} \setminus \bigcup_{i \ne i_1,
+    i \in I}P_i$ since $v$ is in the unique path $P_{i_1}$. Since this
+  is an ICPPA $|S_{i_1}| = |P_{i_1}|$. For any $x \in S_{i_1}$ it is
+  contained in at least two sets due to our assumption. Let $S_{i_2}$
+  be a second set that contains $x$. We know $v \notin
+  P_{i_2}$. Therefore there cannot exist a permutation that maps
+  elements of $S_{i_2}$ to $P_{i_2}$. This contradicts our assumption
+  that this is an ICPPA. Thus $X$ cannot be empty.
+
+
+  We use mathematical induction on the number of iterations for this
+  proof. The term ``new sets'' will refer to the sets added in $\Pi_j$
+  in the $j$th iteration, i.e. $(P' \setminus \{x\},Q' \setminus
+  \{v\})$ and $(\{x\},\{v\})$ for some $(P',Q')$ in $\Pi_{j-1}$ such
+  that $v$ is a leaf and $Q'$ is the unique path
+  incident on it.\\
+  For $\Pi_0$ all invariants hold because it is output from algorithm
+  \ref{perms} which is an ICPPA. Hence base case is proved.  Assume
+  the lemma holds for $\Pi_{j-1}$. Consider $\Pi_j$ and any $(P,Q) \in
+  \Pi_j$. If $(P,Q) $ is in $ \Pi_j$ and $\Pi_{j-1}$ invariants I and
+  II are true because of induction assumption. If it is only in
+  $\Pi_j$, then it is $\{(P' \setminus \{x\}),(Q' \setminus \{v\})$ or
+  $(\{x\},\{v\})$ for some $(P',Q')$ in $\Pi_{j-1}$. By definition,
+  $x$ is an element in $P'$ (as defined in the algorithm) and $v$ is a
+  leaf in $Q'$. If $(P,Q)$ is $\{(P' \setminus \{x\}),(Q' \setminus
+  \{v\})$, $Q$ is a path since only a leaf is removed from path
+  $Q'$. We know $|P'| = |Q'|$, therefore $|P' \setminus \{x\}| = |Q'
+  \setminus \{v\}|$. Hence in this case invariants I and II are
+  obvious. It is easy to see these invariants hold if $(P,Q)$ is
+  $(\{x\},\{v\})$.
+
+
+  For invariant III consider $(P_1,Q_1),(P_2,Q_2)$ in $\Pi_j$. If both
+  of them are also in $\Pi_{j-1}$, claim is proved. If one of them is
+  not in $\Pi_{j-1}$ then it has to be $\{(P' \setminus \{x\}),(Q'
+  \setminus \{v\})$ or $(\{x\},\{v\})$ for some $(P',Q')$ in
+  $\Pi_{j-1}$. Since by definition, $Q'$ is the only path with $v$ and
+  $P'$ the only set with $x$ in the previous iteration, $|P_1 \cap (P'
+  \setminus \{x\})| = |P_1 \cap P'|$ and $|Q_1 \cap (Q' \setminus
+  \{v\})| = |Q_1 \cap Q'|$ and $|P_1 \cap \{x\}| = 0, Q_1 \cap \{v\} =
+  0$. Thus invariant III is also proven.
+
+  \noindent
+  To prove invariant IV, consider $(P_1,Q_1),(P_2,Q_2), (P_3,Q_3)$ in
+  $\Pi_j$. If exactly one of them, say $P_3 \notin \Pi_{j-1}$, it is
+  one of the new sets. By the same argument used to prove invariant
+  III, $|P_1 \cap P_2 \cap (P' \setminus \{x\})| = |P_1 \cap P_2 \cap
+  P'|$ and $|Q_1 \cap Q_2 \cap (Q' \setminus \{x\})| = |Q_1 \cap Q_2
+  \cap Q'|$. Since $P_1, P_2, P'$ are all in $\Pi_{j-1}$, by induction
+  hypothesis $|P_1 \cap P_2 \cap P'| = |Q_1 \cap Q_2 \cap Q'|$. Also
+  $|P_1 \cap P_2 \cap \{x\}| = 0, Q_1 \cap Q_2 \cap \{v\} = 0$.  If
+  two or more of them are not in $\Pi_{j-1}$, then it can be verified
+  that $|P_1 \cap P_2 \cap P_3| = |Q_1 \cap Q_2 \cap Q_3|$ since the
+  new sets in $\Pi_j$ are either disjoint or as follows: assuming
+  $P_1, P_2 \notin \Pi_{j-1}$ and new sets are derived from $(P', Q'),
+  (P'', Q'') \in \Pi_{j-1}$ with $x_1, x_2$ exclusively in $P_1, P_2$,
+  $(\{x_1\},\{v_1\}), (\{x_2\},\{v_2\}) \in \Pi_j $ thus $v_1, v_2$
+  are exclusively in $Q_1, Q_2$ resp. it follows that $|P_1 \cap P_2
+  \cap P_3| = |(P' \setminus \{x_1\}) \cap (P'' \setminus \{x_2\})
+  \cap P_3| = |P' \cap P'' \cap P_3| = |Q' \cap Q'' \cap Q_3| = |(Q'
+  \setminus \{v_1\} \cap Q'' \setminus \{v_2\} \cap Q_3| = |Q_1 \cap
+  Q_2 \cap Q_3|$. Thus invariant IV is also proven.  \qed
+\end{proof}
+
+Using algorithms \ref{perms} and \ref{leafasgn} we prove the following
+theorem.
+
+\begin{theorem}
+  \label{th:perm}
+  If $\cA$ is an ICPPA, then there exists a bijection $\sigma : U
+  \rightarrow V(T)$ such that $\sigma(S_i) = P_i$ for all $i \in I$
+\end{theorem}
+\begin{proof}
+  This is a contructive proof. First, the given ICPPA $\cA$ and tree
+  $T$ are given as input to Algorithm \ref{perms}. This yields a
+  ``filtered'' ICPPA as the output which is input to Algorithm
+  \ref{leafasgn}.  It can be observed that the output of Algorithm
+  \ref{leafasgn} is a set of interval assignments to sets and
+  one-to-one assignment of elements of $U$ to each leaf of $T$. To be
+  precise, it would be of the form $\cB_0 = \cA_0 \cup \cL_0$. The
+  leaf assignments are defined in $\cL_0 = \{ (x_i,v_i) \mid x_i \in
+  U, v_i \in T, x_i \ne x_j, v_i \ne v_j, i \ne j, i,j \in [k] \}$
+  where $k$ is the number of leaves in $T$. The path assignments are
+  defined in $\cA_0 \subseteq \{(S_i',P_i') \mid S_i' \subseteq U_0,
+  P_i' \text{ is a path from } T_0\}$ where $T_0$ is the tree obtained
+  by removing all the leaves in $T$ and $U_0 = U \setminus \{ x \mid x
+  \text{ is assigned to a leaf in }\cL_0 \}$. Now we have a subproblem
+  of finding the permutation for the path assignment $\cA_0$ which has
+  paths from tree $T_0$ and sets from universe $U_0$. Now we repeat
+  the procedure and the path assignment $\cA_0$ and tree $T_0$ is
+  given as input to Algorithm \ref{perms}. The output of this
+  algorithm is given to Algorithm \ref{leafasgn} to get a new union of
+  path and leaf assignments $\cB_1 = \cA_1 \cup \cL_1$ defined similar
+  to $\cB_0, \cL_0, \cA_0$. In general, the two algorithms are run on
+  path assignment $\cA_{i-1}$ with paths from tree $T_{i-1}$ to get a
+  new subproblem with path assignment $\cA_i$ and tree $T_{i}$. $T_i$
+  is the subtree of $T_{i-1}$ obtained by removing all its
+  leaves. More importantly, it gives leaf assignments $\cL_{i}$ to the
+  leaves in tree $T_{i-1}$. This is continued until we get a
+  subproblem with path assignment $\cA_{d-1}$ and tree $T_{d-1}$ for
+  some $d \le n$ which is just a path. From the last lemma we know
+  that $\cA_{d-1}$ is an ICPPA. Another observation is that an ICPPA
+  with all its tree paths being intervals (subpaths from a path) is
+  nothing but an ICPIA\cite{nsnrs09}.  Let $\cA_{d-1}$ be equal to
+  $\{(S_i'',P_i'') \mid S_i'' \subseteq U_{d-1}, P_i'' \text{ is a
+    path from } T_{d-1} \}$. It is true that the paths $P_i''$s may
+  not be precisely an interval in the sense of consecutive integers
+  because they are some nodes from a tree. However, it is easy to see
+  that the nodes of $T_{d-1}$ can be ordered from left to right and
+  ranked to get intervals $I_i$ for every path $P_i''$ as
+  follows. $I_i = \{[l,r] \mid l = \text{ the lowest rank of the nodes
+    in }P_i'', r = l+|P_i''|-1 \}$. Let asssignment $\cA_d$ be with
+  the renamed paths. $\cA_d = \{ (S_i'', I_i) \mid (S_i'', P_i'') \in
+  \cA_{d-1} \}$. What has been effectively done is renaming the nodes
+  in $T_{d-1}$ to get a tree $T_d$.  The ICPIA $\cA_d$ is now in the
+  format that the ICPIA algorithm requires which gives us the
+  permutation $\sigma' : U_{d-1} \rightarrow T_{d-1}$
+
+\noindent
+$\sigma'$ along with all the leaf assignments $\cL_i$ gives us the
+permutation for the original path assignment $\cA$.  More precisely,
+the permutation for tree path assignment $\cA$ is defined as
+follows. $\sigma: U \rightarrow T$ such that the following is
+maintained.
+\begin{align*}
+  \sigma(x) &= \sigma'(x),   \text{ if } x \in U_{d-1} \\
+  &= \cL_i(x), \text{ where $x$ is assigned to a leaf in a subproblem
+    $\cA_{i-1}, T_{i-1}$}
+\end{align*}
+
+\noindent
+To summarize, run algorithm \ref{perms} and \ref{leafasgn} on
+$T$. After the leaves have been assigned to specific elements from
+$U$, remove all leaves from $T$ to get new tree $T_0$. The leaf
+assignments are in $\cL_0$. Since only leaves were removed $T_0$ is
+indeed a tree. Repeat the algorithms on $T_0$ to get leaf assignments
+$\cL_{1}$. Remove the leaves in $T_0$ to get $T_1$ and so on until the
+pruned tree $T_d$ is a single path. Now run ICPIA algorithm on $T_d$
+to get permutation $\sigma'$. The relation $\cL_0 \cup \cL_1 \cup
+.. \cup \cL_{d} \cup \sigma'$ gives the bijection required in the
+original problem.\qed
+\end{proof}
+
+
+{\tt WALCOM end}
+
+
+\begin{lemma}
+  \label{lem:xnotempty}
+  If the input ICPPL $(\cF, \cl)$ to Algorithm~\ref{leafasgn} is
+  feasible, then for all iterations $j > 0$ of the {\em \bf while}
+  loop, the {\em \bf exit} statement in line~\ref{ln:exit2} does not
+  execute.
+\end{lemma}
+\begin{proof}
+  Assume $X$ is empty for some iteration $j > 0$. We know that $v$ is
+  an element of $\cl_{j-1}(S_1)$. Since it is uniquely present in
+  $\cl_{j-1}(S_1)$, it is clear that $v \in \cl_{j-1}(S_1) \setminus
+  \bigcup_{(S \in \cF_{j-1}) \wedge (S \ne S_1)}\cl_{j-1}(S)$.  Note
+  that for any $x \in S_1$ it is contained in at least two sets due to
+  our assumption about cardinality of $X$. Let $S_2 \in \cF_{j-1}$ be
+  another set that contains $x$. From the above argument, we know $v
+  \notin \cl_{j-1}(S_2)$. Therefore there cannot exist a hypergraph
+  isomorphism bijection that maps elements in $S_2$ to those in
+  $\cl_{j-1}(S_2)$. This contradicts our assumption that the input is
+  feasible. Thus $X$ cannot be empty if input is ICPPL and feasible.
+  \qed
+\end{proof}
+
+\begin{lemma}
+  \label{lem:invar3}
+  In Algorithm~\ref{leafasgn}, for all $j > 0$, at the end of the
+  $j$th iteration of the {\bf while} loop the four invariants given in
+  Lemma~\ref{lem:invar1} hold.
+\end{lemma}
+\begin{proof}
+  By Lemma~\ref{lem:xnotempty} we know that set $X$ will not be empty
+  in any iteration of the {\em \bf while} loop if input ICPPL $(\cF,
+  \cl)$ is feasible and $\cl_j$ is always computed for all $j >
+  0$. Also note that removing a leaf from any path keeps the new path
+  connected. Thus invariant I is obviously true. In every iteration $j
+  > 0$, we remove exactly one element $x$ from one set $S$ in $\cF$
+  and exactly one vertex $v$ which is a leaf from one path
+  $\cl_{j-1}(S)$ in $T$. This is because as seen in
+  Lemma~\ref{lem:xnotempty}, $x$ is exclusive to $S$ and $v$ is
+  exclusive to $\cl_{j-1}(S)$. Due to this fact, it is clear that the
+  intersection cardinality equations do not change, i.e., invariants
+  II, III, IV remain true. On the other hand, if the input ICPPL is
+  not feasible the invariants are vacuously true. \qed
+\end{proof}
+
+% \textcolor{cyan}{
+%   \begin{lemma}
+%     \label{lem:notfeasibleexit}
+%     \tnote{IS THIS CORRECT?}  If input ICPPL $(\cF, \cl)$ is not
+%     feasible, then in one of the recursive calls to Algorithm --3--,
+%     the {\em \bf exit} statement in line x in Algorithm --1 or line
+%     y in Algorithm --2 will get executed.
+%   \end{lemma}
+% }
+
+
+We have seen two filtering algorithms above, namely,
+Algorithm~\ref{perms} {\tt filter\_1} and Algorithm~\ref{leafasgn}
+{\tt filter\_2} which when executed serially repectively result in a
+new ICPPL on the same universe $U$ and tree $T$. We also proved that
+if the input is indeed feasible, these algorithms do indeed output the
+filtered ICPPL. Now we present the algorithmic characterization of a
+feasible tree path labeling by way of
+Algorithm~\ref{al:icppl-find-isomorph}.
+
+Algorithm~\ref{al:icppl-find-isomorph} computes a hypergraph
+isomorphism $\phi$ recursively using Algorithm~\ref{perms} and
+Algorithm~\ref{leafasgn} and pruning the leaves of the input tree. In
+brief, it is done as follows. Algorithm~\ref{leafasgn} gives us the
+leaf labels in $\cF_2$, i.e., the elements in $supp(\cF)$ that map to
+leaves in $T$, where $(\cF_2, \cl_2)$ is the output of
+Algorithm~\ref{leafasgn}. All leaves in $T$ are then pruned away. The
+leaf labels are removed from the path labeling $\cl_2$ and the
+corresponding elements are removed from the corresponding sets in
+$\cF_2$. This tree pruning algorithm is recursively called on the
+altered hypergraph $\cF'$, path label $\cl'$ and tree $T'$. The
+recursive call returns the bijection $\phi''$ for the rest of the
+elements in $supp(\cF)$ which along with the leaf labels $\phi'$ gives
+us the hypergraph isomorphism $\phi$.  The following lemma formalizes
+the characeterization of feasible path labeling.
+
+\begin{algorithm}[h]
+  \caption{{\tt get- hypergraph- isomorphism ($\cF, \cl, T$)}}
+  \label{al:icppl-find-isomorph}
+  \begin{algorithmic}[\lndisplay]
+
+    \IF{$T$ is empty}
+    \RETURN $\emptyset$\\
+    \ENDIF
+    \STATE $L \assign \{v \mid v \text{ is a leaf in }      T\}$\\
+    \STATE $(\cF_1, \cl_1) \assign$ {\tt filter\_1($\cF, \cl,
+      T$)}\\
+    \STATE $(\cF_2, \cl_2) \assign$ {\tt filter\_2($\cF_1,
+      \cl_1, T$)}\\
+
+    \STATE $(\cF', \cl') \assign (\cF_2, \cl_2)$\\
+    \STATE $\phi' \leftarrow \emptyset$
+
+    \FOR {every $v \in L$} \STATE $\phi'(x) \assign v$ where $x \in
+    \cl_2^{-1}(\{v\})$ \COMMENT {Copy the leaf labels to a one to one
+      function $\phi': supp(\cF) \rightarrow L$
+    }\\
+    \STATE Remove $\{x\}$ and $\{v\}$ from $\cF'$, $\cl'$  appropriately\\
+    \ENDFOR
+
+    \STATE $T' \assign T \setminus L$
+
+    \STATE $\phi'' \assign$ {\tt get-hypergraph-isomorphism($\cF',
+      \cl', T'$)}
+    \STATE $\phi \assign \phi'' \cup \phi'$ \\
+    \RETURN $\phi$
+  \end{algorithmic}
+\end{algorithm}
+
+\begin{lemma}
+  \label{lem:hyperiso} %{lem:perm}
+  If $(\cF, \cl)$ is an ICPPL from a tree $T$ and
+  Algorithm~\ref{al:icppl-find-isomorph}, {\tt get- hypergraph-
+    isomorphism ($\cF, \cl, T$)} returns a non-empty function, then
+  there exists a hypergraph isomorphism $\phi : supp(\cF) \rightarrow
+  V(T)$ such that the $\phi$-induced tree path labeling is equal to
+  $\cl$ or $\cl_\phi = \cl$.
+\end{lemma}
+\begin{proof}
+  It is clear that in the end of every recursive call to
+  Algorithm~\ref{al:icppl-find-isomorph}, the function $\phi'$ is one
+  to one involving all the leaves in the tree passed as input to that
+  recursive call. Moreover, by Lemma~\ref{lem:noexit1} and
+  Lemma~\ref{lem:xnotempty} it is consistent with the tree path
+  labeling $\cl$ passed. The tree pruning is done by only removing
+  leaves in each call to the function and is done till the tree
+  becomes empty. Thus the returned function $\phi: supp(\cF)
+  \rightarrow V(T)$ is a union of mutually exclusive one to one
+  functions exhausting all vertices of the tree. In other words, it is
+  a bijection from $supp(\cF)$ to $V(T)$ inducing the given path
+  labeling $\cl$ and thus a hypergraph isomorphism. \qed
+\end{proof}
+
+\begin{theorem}
+  \label{th:charac}
+  A path labeling $(\cF, \cl)$ on tree $T$ is feasible iff it is an
+  ICPPL and Algorithm~\ref{al:icppl-find-isomorph} with $(\cF, \cl,
+  T)$ as input returns a non-empty function.
+\end{theorem}
+\begin{proof}
+  From Lemma~\ref{lem:hyperiso}, we know that if $(\cF, \cl)$ is an
+  ICPPL and Algorithm~\ref{al:icppl-find-isomorph} with $(\cF, \cl,
+  T)$ as input returns a non-empty function, $(\cF, \cl)$ is feasible.
+  Now consider the case where $(\cF, \cl)$ is feasible. i.e. there
+  exists a hypergraph isomorphism $\phi$ such that $\cl_\phi =
+  \cl$. Lemma~\ref{lem:noexit1} and Lemma~\ref{lem:xnotempty} show us
+  that filter 1 and filter 2 do not exit if input is feasible. Thus
+  Algorithm~\ref{al:icppl-find-isomorph} returns a non-empty
+  function.\qed
+\end{proof}
+
+
+\section{ Computing feasible TPL with special target trees \tnote{give
+    problem definition etc}}
+\label{sec:spltargettree}
+
+Section~\ref{sec:feasible} described properties that a TPL must have
+for it to be feasible. The next problem of interest is to test if a
+given hypergraph is a path hypergraph with respect to a given target
+tree\footnote{A larger problem would be to find if a given hypergraph
+  is a path graph on any tree. This problem is not addressed in this
+  thesis.}. In other words, the problem is to find out if a feasible
+tree path labeling exists from a given target tree for a given
+hypergraph. In this section we will see two special cases of this
+problem where the target tree is from a particular family of
+trees. The first one, where the tree is a path, is a shown to be
+equivalent to the well studied problem of consecutive-ones in
+Section~\ref{sec:icpplicpia}. The second one, where the tree is a
+$k$-subdivided tree\footnote{See Section~\ref{ch:prelims} for the
+  formal definition.}, has been solved using a polynomial time
+algorithm. The latter problem enforces some conditions on the
+hypergraph too which will be seen in Section~\ref{sec:ksubdivstar}.
+
+\subsection{Target tree is a Path}
+\label{sec:icpplicpia}
+
+Consider a special case of ICPPL with the following properties.
+\begin{enumerate}
+\item Given tree $T$ is a path. Hence, all path labels are interval
+  labels.
+\item Only pairwise intersection cardinality preservation is
+  sufficient. i.e. property (iii) in ICPPL is not enforced.
+\item The filter algorithms do not have {\em \bf exit} statements.
+\end{enumerate}
+This is called an Intersection Cardinality Preservation Interval
+Assignment (ICPIA) \cite{nsnrs09}. This structure and its algorithm is
+used in the next section for finding tree path labeling from a
+$k$-subdivided star due to this graph's close relationship with
+intervals.
+
+\subsection{Target tree is a $k$-subdivided Star}
+\label{sec:ksubdivstar}
+
+\begin{figure}[t] %[htbp] 
+  \centering
+  \begin{tabular}{lr}
+    (a) \includegraphics{cop-tree_thesis.1}&
+    (b) \includegraphics{cop-tree_thesis.2}
+  \end{tabular}
+  \caption{\figtabsize (a) $8$-subdivided star with 7 rays (b)
+    3-subdivided star with 3 rays}
+  \label{fig:kstar}
+\end{figure}
+
+In this section we consider the problem of assigning paths from a
+$k$-subdivided star $T$ to a given set system $\cF$.  We consider
+$\cF$ for which the overlap graph $\bO(\cF)$ is connected.  The
+overlap graph is well-known from the work of
+\cite{kklv10,nsnrs09,wlh02}.  We use the notation in
+\cite{kklv10}. Recall from Section~\ref{ch:prelims} that hyperedges
+$S$ and $S'$ are said to overlap, denoted by $S \overlap S'$, if $S$
+and $S'$ have a non-empty intersection but neither of them is
+contained in the other. The overlap graph $\bO(\cF)$ is a graph in
+which the vertices correspond to the sets in $\cF$, and the vertices
+corresponding to the hyperedges $S$ and $S'$ are adjacent if and only
+if they overlap.  Note that the intersection graph of $\cF$,
+$\bI(\cF)$ is different from $\bO(\cF)$ and $\bO(\cF) \subseteq
+\bI(\cF)$.  A connected component of $\bO(\cF)$ is called an overlap
+component of $\cF$.  An interesting property of the overlap components
+is that any two distinct overlap components, say $\cO_1$ and $\cO_2$,
+are such that any two sets $S_1 \in \cO_1$ and $S_2 \in \cO_2$ are
+disjoint, or, w.l.o.g, all the sets in $\cO_1$ are contained within
+one set in $\cO_2$.  This containment relation naturally determines a
+decomposition of the overlap components into rooted containment trees.
+We consider the case when there is only one rooted containment tree,
+and we first present our algorithm when $\bO(\cF)$ is connected.  It
+is easy to see that once the path labeling to the overlap component in
+the root of the containment tree is achieved, the path labeling to the
+other overlap components in the rooted containment tree is essentially
+finding a path labeling when the target tree is a path: each target
+path is a path that is allocated to sets in the root overlap
+component.  Therefore, for the rest of this section, $\bO(\cF)$ is a
+connected graph. We also assume that all hyperedges are of cardinality
+at most $k+2$.
+
+Recall from Section~\ref{ch:prelims} that a $k$-subdivided star is a
+star with each edge subdivided $k$ times. Therefore, a $k$-subdivided
+star has a central vertex which we call the {\em root}, and each root
+to leaf path is called a {\em ray}. First, we observe that by removing
+the root $r$ from $T$, we get a collection of $p$ vertex disjoint
+paths of length $k+1$, $p$ being the number of leaves in $T$.  We
+denote the rays by $R_1, \ldots, R_p$, and the number of vertices in
+$R_i$, $i \in [p]$ is $k+2$.  Let $\seq{v_{i1},\ldots,v_{i(k+2)}=r}$
+denote the sequence of vertices in $R_i$, where $v_{i1}$ is the
+leaf. Note that $r$ is a common vertex to all $R_i$.
+
+In this section the given hypergraph, the $k$-subdivided star and the
+root of the star are denoted by $\cO$, $T$ and vertex $r$,
+respectively.
+% For each hyperedge $X \in \cO$, we will maintain a 2-tuple of
+% non-negative numbers $\seq{p_1(X), p_2(X)}$.  The numbers satisfy
+% the property that $p_1(X) + p_2(X) \leq |X|$, and at the end of path
+% labeling, for each $X$, $p_1(X) + p_2(X) = |X|$.  This signifies the
+% algorithm tracking the lengths of subpaths of the path assigned to
+% $X$ from at most two rays. We also maintain another parameter called
+% the {\em residue} of $X$ denoted by $s(X)=|X| - p_1(X)$. This
+% signifies the residue path length that must be assigned to $X$ which
+% must be from another ray. For instance, if $X$ is labeled a path
+% from only one ray, then $p_1(X) = |X|$, $p_2(X) = 0$ and $s(X) = 0$.
+
+% 
+% We iteratively consider each ray from which paths will be assigned
+% to hyperedges. At the beginning of each iteration hyperedges of
+% $\cO$ are classifed into the following disjoint sets.
+% \begin{enumerate}
+% \item [$\cL_1^i$] {\em Labeled without $r$.} Those that have been
+%   labeled with a path which does not contain $r$ in one of the
+%   previous iterations.\\ $\cL_1^i = \set{ X \mid p_1(X) = |X| \text{
+%       and } p_2(X) = 0 \text{ and } s(X) = 0, X \in \cO}$
+% \item [$\cL_2^i$] {\em Labeled with $r$.} Those that have been
+%   labeled with two subpaths of $\cl(X)$ containing $r$ from two
+%   different rays in two previous iterations.\\ $\cL_2^i = \set{X
+%     \mid 0 < p_1\left(X\right), p_2\left(X\right) < |X| \text{ and }
+%     s(X) = 0, X \in \cO}$
+% \item [$\cT_1^i$] {\em Type 1 / partially labeled.} Those that have
+%   been labeled with one path containing $r$ from a single ray in one
+%   of the previous iterations. Here, $p_1(X)$ denotes the length of
+%   the subpath of $\cl(X)$ that $X$ has been so far labeled
+%   with. Also, it is clear that such a path must start at $r$ and
+%   must be in a ray different from the one corresponding to $p_1(X)$.\\
+%   $\cT_1^i = \set{ X \mid 0 < p_1(X) < |X| \text{ and } p_2(X) = 0
+%     \text{ and } s(X) > 0, X \in \cO}$
+% \item [$\cT_2^i$] {\em Type 2 / not labeled.} Those that have not
+%   been
+%   labeled with a path in any previous iteration.\\
+%   $\cT_2^i = \set{ X \mid p_1(X) = p_2(X) = 0 \text{ and } s(X) =
+%     |X|, X \in \cO}$
+% \end{enumerate}
+% \vspace{-2mm}
+% \begin{align*}
+%   \cO &= \cL_1^i \cup \cL_2^i \cup \cT_1^i \cup \cT_2^i, \text{    } \forall i \in [p]\\
+%   \cO_i &= \cT_1^i \cup \cT_2^i, \text{ } \forall i \in [p]
+% \end{align*}
+
+
+The set $\cO_i$ refers to the set of hyperedges $\cT_1^i \cup \cT_2^i$
+in the $i$th iteration.  Note that $\cO_1 = \cO$.  In the $i$th
+iteration, hyperedges from $\cO_i$ are assigned paths from $R_i$ using
+the following rules. Also the end of the iteration, $\cL_1^{i+1},
+\cL_2^{i+1}, \cT_1^{i+1}, \cT_2^{i+1}$ are set to $\cL_1^{i},
+\cL_2^{i}, \cT_1^{i}, \cT_2^{i}$ respectively, along with some
+case-specific changes mentioned in the rules below.
+
+\noindent
+Suppose the given hypergraph has a feasible path labeling to the given
+tree $T$. Let this labeling be $\cl$. Now we present an algorithm that
+lists the sequence of edges that maintain a set of properties
+necessary for them to have a feasible tree path labeling.
+\begin{enumerate}[I.]
+\item {\bf Step 1}
+  \begin{enumerate}
+  \item {\bf {There are type 1 edges, $\mathbf{|\cT_1^i| > 0}$}:}
+    % , and for each such $X$ assign the path in $R_i$ of length
+    % $s(X)$ starting at $v_{i,k+2}=r$.  $X$ is then removed from
+    % $\cO_i$, and $p_2(X)=s(X)$, and $s(X)=0$.If any intersection
+    % cardinality is violated because of this assignment, EXIT
+    % reporting the non-existence of a feasible assignment.
+    {If there is only one $\cT_1^i$ hyperedge, label it to the unique
+      path in $R_i$ of length $s(X)$ starting at $v_{i(k+2)}=r$. If
+      there are more than one $\cT_1^i$ hyperedges, for any pair of
+      hyperedges $S_1, S_2 \in \cT_1^i$, one of the following is
+      true. Let $\cl'(X) \subseteq R_j$ denote the subpath of length
+      $p_1(X)$ that has been assigned to $X$ from a previously
+      considered ray $R_j$.}
+    \begin{enumerate}[{\em Case }1. ]
+    \item $|\cl'(S_1) \cap \cl'(S_2)| = 1$ and $|S_1 \cap S_2| > 1$
+      i.e. they are in different rays and their residues must contain
+      their intersection. Hence assign both to $R_i$.
+    \item $|\cl'(S_1) \cap \cl'(S_2)| > 1$ and $|S_1 \cap S_2| >
+      |\cl'(S_1) \cap \cl'(S_2)|$ i.e. they are in the same rays and
+      their residues must contain their intersection. Hence assign
+      both to $R_i$.
+    \item $|\cl'(S_1) \cap \cl'(S_2)| > 1$ and $|S_1 \cap S_2| =
+      |\cl'(S_1) \cap \cl'(S_2)|$. i.e. the intersection cardinality
+      has been met. Hence assign only $S_1$ to $R_i$ and $S_2$ must be
+      assigned to some $i \ge p$.
+    \end{enumerate}
+    Remove the labeled edge or edges from $\cO_i$ and add it to
+    $\cO_{i+1}$. Also do not add it to $\cT_1^{i+1}$ and add to
+    $\cL_2^{i+1}$.
+  \item {\bf {There are no type-1 edges nor} super-marginal type-2
+      hyperedges:} If all type-2 edges of length at most $k+1$, EXIT
+    by saying there is no ICPPL.  Otherwise, Find an $X$ of type-2
+    such that $|X| \geq k+2$, assign it the unique path starting at
+    $v_{i(k+1)}=r$ of length $k+2$, and set $p_1(X)=k+2,
+    s(X)=|X|-(k+2)$, assign it the unique path starting at
+    $v_{i(k+1)}=r$ of length $k+2$, mark this as a type-1 hyperedge,
+    and add it to $\cO_{i+1}$ after removing it from $\cO_i$.
+    % \remove{Next, iteratively, consider each type-1 edge $X \in
+    %   \cO_i$, and if it intersects a previously assigned $Y$ such
+    %   that
+    %   $\cl(Y) \subseteq R_i$, assign a path of length $s(X)$
+    %   containing $v_{i(k+2)}=r$, set $p_2(X)=s(X), s(X)=0$, and
+    %   remove
+    %   $X$ from $\cO_i$.}\tnote{covered in step 2}
+
+  \item {\bf There are super-marginal type-2 hyperedges {and no type-1
+        edges:}} Let $X$ be a super-marginal hyperedge. If $|X| \leq
+    k+2$, then $X$ is assigned the path of length $|X|$ starting at
+    $v_{i1}$, and $p_1(X) = |X|, p_2(X)=0$. $X$ is removed from
+    $\cO_i$ and not added to $\cO_{i+1}$.  If $|X| > k+2$, then
+    $p_1(X)=k+2$, assign it the unique path starting at $v_{i(k+1)}=r$
+    of length $k+2$ and $s(X) = |X| - (k+2)$.  In this case, $X$ is
+    classified as a Type-1 edge, removed from $\cO_i$, and added to
+    $\cO_{i+1}$.
+  \end{enumerate}
+\item {\bf Step 2:} Iteratively, a hyperedge $X$ is selected from
+  $\cO_i$ that has an overlap with one of the hyperedges $Y$ such that
+  $\cl(Y) \subseteq R_i$, and a unique path is assigned to $X$.  The
+  path, say $U(X) \subseteq R_i$, that is assigned can be decided
+  unambiguously since the $X \overlap Y$, and all intersection
+  cardinalities can be preserved only at one of the ends of $\cl(Y)$.
+  
+  \noindent
+  Let $\cl(X)$ denote the unique path assigned to $X$.  If $X$ is a
+  type-2 hyperedge and if the unique path of length $|X|$ does not
+  contain $r$, then $p_1(X) = |X|, p_2(X)=0$, and $X$ is removed from
+  $\cO_i$.  In the case when $\cl(X)$ has to contain $r$, then
+  $p_1(X)$ is the length of the path, $p_2(X)=0$, and $s(X) =
+  |X|-p_1(X)$. Further $X$ is classified as a type-1 hyperedge, added
+  to $\cO_{i+1}$ and removed from $\cO_i$.  In the case when $X$ is a
+  type-1 hyperedge, then we check if $U(X)$, which is of length $s(X)$
+  contains $r$. If it does, then we assign $\cl(X) \leftarrow \cl(X)
+  \cup U(X)$, remove $X$ from $\cO_i$ and do not add it to
+  $\cO_{i+1}$.  If not, then we {\bf Exit} reporting that an
+  assignment cannot be found.  The iteration ends when no hyperedge in
+  $\cO_i$ has an overlap with a hyperedge assigned to $R_i$.
+\end{enumerate}
+
+\noindent
+The order in which they are assigned is the sequence of hyperedges
+with the following properties. Note that if such a sequence cannot be
+computed, $\cO$ cannot have a feasible path labeling from $T$.
+
+\noindent
+\tnote{need to formalize the below properties} In the following lemmas
+we identify a set of necessary conditions for $\cF$ to have an ICPPL
+in the $k$-subdivided star $T$.  If during the execution of the above
+algorithm, one of these necessary conditions is not satisfied, the
+algorithm exits reporting the non-existence of an ICPPL.
+\begin{lemma}
+  Let all hyperedges in $\cO_i$ be type-1 edges.  Then there is a
+  maximal subset $\ccT_i \subseteq \cO_i$ with the following
+  properties:
+  \begin{enumerate}
+  \item $\ccT_i$ form an inclusion chain.
+  \item For all $X \in \ccT_i$, $s(X) \leq k+2$, and There is a an $X
+    \in \ccT_i$ such that $s(X)=k+2$.
+  \end{enumerate}
+\end{lemma}
+\begin{lemma}
+  If there are no \marginal type-2 edges in $\cO_i$, then there exists
+  at least $p-i$ type-2 hyperedges $X \in \cO_i$ such that $|X| \geq
+  k+2$.
+  % is a exist type-2 hyperedges of length at least $k+2$, and there
+  % must be at least $r-i$ such type-2 hyperedge, basically at least
+  % one per ray.  Each hyperedge contained in such an hyperedges of
+  % length at least $k+2$, is transitively related under the overlap
+  % relation to one that gets assigned a path that contains
+  % $r$. Basically, the proof will argue that otherwise, there will be
+  % a \marginal type-2 hyperedge, or that it is infeasible.  Also, it
+  % is here we assume that we assume that the size of the two
+  % universes is the same.
+\end{lemma}
+\begin{lemma}
+  At the end of Step-1 in the $i$-th iteration, if one hyperedge $X$
+  of type-2 is such that $\cl(X) \subseteq R_i$, then all other
+  hyperedges in $\cO_i$ are connected to $X$ in the overlap component.
+\end{lemma}
+\begin{lemma}
+  At the end of Step-2, If control has exit at any time, there is no
+  ICPPL. If control has not exit, then $R_i$ is saturated.  No
+  hyperedge of $\cO_{i+1}$ will get a path from $R_i$ in the future
+  iterations.  No type-2 hyperedge of $\cO_{i+1}$ will get a path from
+  $R_i$.  Basically $R_i$ is done.
+\end{lemma}
+\begin{lemma}
+  Finally, we need to prove that the assignment is an ICPPL. Secondly,
+  if there is a permutation then maps sets to paths, then it is indeed
+  an ICPPL, and our algorithm will basically find it.  It is a unique
+  assignment upto permutation of the leaves.
+\end{lemma}
+
+
+\begin{lemma}
+  \label{lem:sup-mar}
+  If $X \in \cF$ is super-marginal and $(\cF, \cl)$ is a feasible tree
+  path labeling to tree $T$, then $\cl(X)$ will
+  contain a leaf in $T$.\\
+  On the otherhand, if $\cl(X)$ has a leaf in $T$, $X$ is marginal but
+  may not be super-marginal.
+\end{lemma}
+\begin{proof}
+  Suppose $X \in \cF$ is super-marginal and $(\cF, \cl)$ is a feasible
+  path labeling from $T$.  Assume $\cl(X)$ does not have a leaf.  Let
+  $R_i$ be one of the rays (or the only ray) $\cl(X)$ is part of.
+  Since $X$ is in a connected overlap component, there exists $Y_1 \in
+  \cF$ and $X \nsubseteq Y_1$ such that $Y_1 \overlap X$ and $Y_1$ has
+  at least one vertex closer to the leaf in $R_i$ than any vertex in
+  $X$. Similarly with the same argument there exists $Y_2 \in \cF$
+  with same subset and overlap relation with $X$ except it has has at
+  least one vertex farther away from the leaf in $R_i$ than any vertex
+  in $X$. Clearly $Y_1 \cap X$ and $Y_2 \cap X$ cannot be part of same
+  inclusion chain which contradicts that assumption $X$ is
+  super-marginal. Thus the claim is proven.\qed
+\end{proof}
+
+\noindent
+Consider the overlap graph $\bO(\cF)$ of the given hypergraph
+$\cF$. Let $S_{sm} \in \cF$ be such that it is a super-marginal
+hyperedge.  Algorithm~\ref{al:ktree-label} uses $S_{sm}$ along with
+the overlap graph $\bO(\cF)$ to calculate the feasible tree path
+labeling to the $k$-subdivded tree $T$.
+
+\begin{algorithm}[h]
+  \caption{{\tt compute-ksubtree-path-labeling($X, \cF, T$)}}
+  \label{al:ktree-label}
+  \begin{algorithmic}[\lndisplay]
+    \IF{$X = S_{sm}$}
+    \STATE -- TBD --\\
+    \ELSE
+    \STATE -- TBD --\\
+    \ENDIF
+
+  \end{algorithmic}
+\end{algorithm}
+
+
+\section{ TPL with no restrictions}
+\label{sec:norestraint}
+
+{\tt abstract begin} it is known that if the given tree is a path a
+feasible assignment can be found in polynomial time, and we observe
+that it can actually be done in logspace. \tnote{[TRUE?]}  {\tt
+  abstract end}
+
+In Section \ref{prelims} we present the necessary preliminaries, in
+Section \ref{feasible} we present our characterization of feasible
+tree path assignments, and in Section \ref{decompos} we present the
+characterizing subproblems for finding a bijection between $U$ and
+$V(T)$ such that sets map to tree paths. Finally, in Section
+\ref{complexity} we conclude by showing that Tree Path Assignment is
+GI-Complete, and also observe that Consecutive Ones Testing is in
+Logspace.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DUMMYTOC \subsection{Introduction}
+
+\annote{ We refer to this as the Tree Path Assignment problem for an
+  input $(\cF,T)$ pair.}{Add this ``pair'' as a definition in
+  ch:prelims}
+
+\remove{It is an interesting fact that for a matrix with the COP, the
+  intersection graph of the corresponding set system is an interval
+  graph.  A similar connection to a subclass of chordal graphs, and
+  this subclass contains interval graphs, exists for the
+  generalization of COP.  In this case, the intersection graph of the
+  corresponding set system must be a path graph. Chordal graphs are of
+  great significance, extensively studied, and have several
+  applications.  One of the well known and interesting properties of a
+  chordal graphs is its connection with intersection graphs
+  cite{mcg04}. For every chordal graph, there exists a tree and a
+  family of subtrees of this tree such that the intersection graph of
+  this family is isomorphic to the chordal graph
+  cite{plr70,gav78,bp93}.  Certain format of these trees are called
+  clique trees cite{apy92} of the graph which is a compact
+  representation of the chordal graph. There has also been work done
+  on the generalization of clique trees to clique hypergraphs
+  cite{km02}.  If the chordal graph can be represented as the
+  intersection graph of paths in a tree, then the graph is called path
+  graph cite{mcg04} or path chordal graph.  Therefore, it is clear
+  that if there is a bijection from $U$ to $V(T)$ such that the sets
+  map to paths, then the intersection graph of the set system is
+  indeed a path chordal graph.  This is, however, only a necessary
+  condition and can be checked efficiently, as path graph recognition
+  is polynomial solvable cite{gav78,aas93}.  Indeed, it is possible to
+  construct a set system and tree, such that the intersection graph is
+  a path chordal graph, but there is no bijection between $U$ and
+  $V(T)$ such that the sets map to paths.  This connection indeed
+  suggests that our problem is indeed as hard as path graph
+  isomorphism.  Further path graph isomorphism is known be
+  isomorphism-complete, see for example cite{kklv10}. } In the second
+part of this paper, we decompose our search for a bijection between
+$U$ and $V(T)$ into subproblems.  Each subproblem is on a set system
+in which for each set, there is another set in the set system with
+which the intersection is {\em strict}- there is a non-empty
+intersection, but neither is contained in the other.  This is in the
+spirit of results in \cite{wlh02,nsnrs09} where to test for COP in a
+given matrix, the COP problem is solved on an equivalent set of prime
+matrices.  \annote{Our decomposition localizes the challenge of path
+  graph isomorphism to two problems.}{HOW?}
+
+Finally, we show that Tree Path Assignment is isomorphism-complete.
+We also point out Consecutive Ones Testing is in Logspace from two
+different results in the literature \cite{kklv10, mcc04}. To the best
+of our knowledge this observation has not been made earlier.
+
+
+\subsection{Finding an assignment of tree paths to a set
+  system} \label{decompos} In the previous section we have shown that
+the problem of finding a Tree Path Asssignment to an input $(\cF,T)$
+is equivalent to finding an ICPPA to $\cF$ in tree $T$.  In this
+section we characterize those set systems that have an ICPPA in a
+given tree.  As a consequence of this characterization we identify two
+sub-problems that must be solved to obtain an ICPPA.  We do not solve
+the problem and in the next section show that finding an ICPPA in a
+given tree is GI-Complete.
+
+\noindent
+A set system can be concisely represented by a binary matrix where the
+row indices denote the universe of the set system and the column
+indices denote each of the sets. Let the binary matrix be $M$ with
+order $n \times m$, the set system be $\cF = \{S_i \mid i \in [m]\}$,
+universe of set system $U = \{x_1, \dots ,x_n\}$. If $M$ represents
+$\cF$, $|U| = n, |\cF| = m$. Thus $(i,j)$th element of $M$, $M_{ij} =
+1$ iff $x_i \in S_j$. If $\cF$ has a feasible tree path assignment
+(ICPPA) $\cA = \{(S_i,P_i) \mid i \in [m]\}$, then we say its
+corresponding matrix $M$ has an ICPPA. Conversly we say that a matrix
+$M$ has an ICPPA if there exists an ICPPA $\cA$ as defined
+above.\\
+\noindent
+We now define the strict intersection graph or overlap graph of
+$\cF$. This graph occurs at many places in the literature, see for
+example \cite{kklv10, wlh02, nsnrs09}.  The vertices of the graph
+correspond to the sets in $\cF$.  An edge is present between vertices
+of two sets iff the corresponding sets have a nonempty intersection
+and none is contained in the other. Formally, intersection graph is
+$G_f = (V_f, E_f)$ such that $V_f = \{v_i \mid S_i \in \cF\}$ and $E_f
+= \{(v_i, v_j) \mid S_i \cap S_j \ne \O \text{ and }S_i \nsubseteq
+S_j, S_j \nsubseteq S_i \}$.  We use this graph to decompose $M$ as
+described in \cite{wlh02,nsnrs09}.  A prime sub-matrix of $M$ is
+defined as the matrix formed by a set of columns of $M$ which
+correspond to a connected component of the graph $G_f$.  Let us denote
+the prime sub-matrices by $M_1,\ldots,M_p$ each corresponding to one
+of the $p$ components of $G_f$. Clearly, two distinct matrices have a
+distinct set of columns.  Let $col(M_i)$ be the set of columns in the
+sub-matrix $M_i$.  The support of a prime sub-matrix $M_i$ is defined
+as $supp(M_i) = \displaystyle \bigcup_{j \in col(M_i)}S_j$.  Note that
+for each $i$, $supp(M_i) \subseteq U$.  For a set of prime
+sub-matrices $X$ we define
+$supp(X) = \displaystyle \bigcup_{M \in X} supp(M)$. \\
+
+
+\noindent
+Consider the relation $\preccurlyeq$ on the prime sub-matrices $M_1,
+\ldots, M_p$ defined as follows:
+\begin{equation}
+  \nonumber \{(M_i,M_j) | \mbox{ A set } S \in
+  M_i \mbox{ is contained in a set } S' \in M_j\} \cup \{(M_i,M_i) | 1
+  \leq i \leq p\} 
+\end{equation}
+
+\noindent
+This relation is the same as that defined in \cite{nsnrs09}. The prime
+submatrices and the above relation can be defined for any set
+system. We will use this structure of prime submatrices to present our
+results on an an ICPPA for a set system $\cF$. Recall the following
+lemmas, and theorem that $\preccurlyeq$ is a partial order, from
+\cite{nsnrs09}.
+
+\begin{lemma} \label{lem:containment} Let $(M_i,M_j) \in
+  \preccurlyeq$.  Then there is a set $S' \in M_j$ such that for each
+  $S \in M_i$, $S \subseteq S'$.
+\end{lemma}
+\begin{lemma}
+  For each pair of prime sub-matrices, either $(M_i,M_j) \not\in
+  \preccurlyeq$ or $(M_j,M_i) \not\in \preccurlyeq$.
+  % If $(M_i,M_j) \in \preccurlyeq$ and $(M_j,M_i) \in \preccurlyeq$,
+  % then $i = j$ and $|M_i| = 1$.
+\end{lemma}
+\begin{lemma}
+  If $(M_i,M_j) \in \preccurlyeq $ and $(M_j,M_k) \in \preccurlyeq$,
+  then $(M_i,M_k) \in \preccurlyeq$.
+\end{lemma}
+\begin{lemma}
+  If $(M_i,M_j) \in \preccurlyeq$ and $(M_i,M_k) \in \preccurlyeq$,
+  then either $(M_j,M_k) \in \preccurlyeq$ or $(M_k,M_j) \in
+  \preccurlyeq$.
+\end{lemma}
+\begin{theorem} \label{thm:partitionold} $\preccurlyeq$ is a partial
+  order on the set of prime sub-matrices of $M$.  Further, it uniquely
+  partitions the prime sub-matrices of $M$ such that on each set in
+  the partition $\preccurlyeq$ induces a total order.
+\end{theorem}
+For the purposes of this paper, we refine the total order mentioned in
+Theorem \ref{thm:partitionold}. We do this by identifying an in-tree
+rooted at each maximal upper bound under $\preccurlyeq$.  Each of
+these in-trees will be on disjoint vertex sets, which in this case
+would be disjoint sets of prime-submatrices.  The in-trees are
+specified by selecting the appropriate edges from the Hasse diagram
+associated with $\preccurlyeq$.  Let $\cI$ be the following set:
+\begin{align*}
+  \cI = \{ (M_i,M_j) \in \preccurlyeq \mid \nexists M_k s.t. M_i
+  \preccurlyeq M_k, M_k \preccurlyeq M_j \} \cup \{ (M_i,M_i), i \in
+  [p] \}
+\end{align*}
+
+\begin{theorem} \label{thm:partition} Consider the directed graph $X$
+  whose vertices correspond to the prime sub-matrices, and the edges
+  are given by $\cI$.  Then, $X$ is a vertex disjoint collection of
+  in-trees and the root of each in-tree is a maximal upper bound in
+  $\preccurlyeq$.
+\end{theorem}
+\begin{proof}
+  To observe that $X$ is a collection of in-trees, we observe that for
+  vertices corresponding to maximal upper bounds, no out-going edge is
+  present in $I$.  Secondly, for each other element, exactly one
+  out-going edge is chosen, and for the minimal lower bound, there is
+  no in-coming edge.  Consequently, $X$ is acyclic, and since each
+  vertex has at most one edge leaving it, it follows that $X$ is a
+  collection of in-trees, and for each in-tree, the root is a maximal
+  upper bound in $\preccurlyeq$.  Hence the theorem.
+\end{proof}
+Let the partition of $X$ given by Theorem \ref{thm:partition} be
+$\{X_1,\ldots,X_r\}$.  Further, each in-tree itself can be layered
+based on the distance from the root.  The root is considered to be at
+level zero. For $j \geq 0$, Let $X_{i,j}$ denote the set of prime
+matrices in level $j$ of in-tree $X_i$.
+
+\begin{lemma}
+  \label{lem:subicppa}
+  Let $M$ be a matrix and let $X$ be the directed graph whose vertices
+  are in correspondence with the prime submatrices of $M$.  Further
+  let $\{X_1,\ldots,X_r\}$ be the partition of $X$ into in-trees as
+  defined above.  Then, matrix $M$ has an ICPPA in tree $T$ iff $T$
+  can be partitioned into vertex disjoint subtrees $\{T_1, T_2, \dots
+  T_r\}$ such that, for each $1 \leq i \leq r$, the set of prime
+  sub-matrices corresponding to vertices in $X_i$ has an ICPPA in
+  $T_i$.
+\end{lemma}
+\begin{proof}
+  Let us consider the reverse direction first.  Let us assume that $T$
+  can be partitioned into $T_1, \ldots, T_r$ such that for each $1
+  \leq i \leq r $, the set of prime sub-matrices corresponding to
+  vertices in $X_i$ has an ICPPA in $T_i$.  It is clear from the
+  properties of the partial order $\preccurlyeq$ that these ICPPAs
+  naturally yield an ICPPA of $M$ in $T$.  The main property used in
+  this inference is that for each $1 \leq i \neq j \leq r$, $supp(X_i)
+  \cap supp(X_j) = \phi$.
+
+\noindent
+To prove the forward direction, we show that if $M$ has an ICPPA, say
+$\cA$, in $T$, then there exists a partition of $T$ into vertex
+disjoint subtree $T_1, \ldots, T_r$ such that for each $1 \leq i \leq
+r$, the set of prime sub-matrices corresponding to vertices in $X_i$
+has an ICPPA in $T_i$.  For each $1 \leq i \leq r$, we define based on
+$\cA$ a subtree $T_i$ corresponding to $X_i$.  We then argue that the
+trees thus defined are vertex disjoint, and complete the proof.
+Consider $X_i$ and consider the prime sub-matrix in $X_{i,0}$.
+Consider the paths assigned under $\cA$ to the sets in the prime
+sub-matrix in $X_{i,0}$.  Since the component in $G_f$ corresponding
+to this matrix is a connected component, it follows that union of
+paths assigned to this prime-submatrix is a subtree of $T$.  We call
+this sub-tree $T_i$.  All other prime-submatrices in $X_i$ are
+assigned paths in $T_i$ since $\cA$ is an ICPPA, and the support of
+other prime sub-matrices in $X_i$ are contained in the support of the
+matrix in $X_{i,0}$.  Secondly, for each $1 \leq i \neq j \leq r$,
+$supp(X_i) \cap supp(X_j) = \phi$, and since $\cA$ is an ICPPA, it
+follows that $T_i$ and $T_j$ are vertex disjoint.  Finally, since $|U|
+= |V(T)|$, it follows that $T_1, \ldots, T_r$ is a partition of $T$
+into vertex disjoint sub-trees such that for each $1 \leq i \leq r$,
+the set of matrices corresponding to nodes in $X_i$ has an ICPPA in
+$T_i$.  Hence the lemma.
+\end{proof}
+The essence of the following lemma is that an ICPPA only needs to be
+assigned to the prime sub-matrix corresponding to the root of each
+in-tree, and all the other prime sub-matrices only need to have an
+Intersection Cardinality Preserving Interval Assignments (ICPIA).
+Recall, an ICPIA is an assignment of intervals to sets such that the
+cardinality of an assigned interval is same as the cardinality of the
+interval, and the cardinality of intersection of any two sets is same
+as the cardinality of the intersection of the corresponding intervals.
+It is shown in \cite{nsnrs09} that the existence of an ICPIA is a
+necessary and sufficient condition for a matrix to have COP.  We
+present the pseudo-code to test if $M$ has an ICPPA in $T$.
+\begin{lemma} \label{lem:rooticppa} Let $M$ be a matrix and let $X$ be
+  the directed graph whose vertices are in correspondence with the
+  prime submatrices of $M$.  Further let $\{X_1,\ldots,X_r\}$ be the
+  partition of $X$ into in-trees as defined earlier in this section.
+  Let $T$ be the given tree and let $\{T_1, \ldots, T_r\}$ be a given
+  partition of $T$ into vertex disjoint sub-trees.  Then, for each $1
+  \leq i \leq r$, the set of matrices corresponding to vertices of
+  $X_i$ has an ICPPA in $T_i$ if and only if the matrix in $X_{i,0}$
+  has an ICPPA in $T_i$ and all other matrices in $X_i$ have an {\bf
+    {\em ICPIA}}.
+\end{lemma}
+\begin{proof}
+  The proof is based on the following fact- $\preccurlyeq$ is a
+  partial order and $X$ is a digraph which is the disjoint union of
+  in-trees.  Each edge in the in-tree is a containment relationship
+  among the supports of the corresonding sub-matrices. Therefore, any
+  ICPPA to a prime sub-matrix that is not the root is contained in a
+  path assigned to the sets in the parent matrix.  Consequently, any
+  ICPPA to the prime sub-matrix that is not at the root is an ICPIA,
+  and any ICPIA can be used to construct an ICPPA to the matrices
+  corresponding to nodes in $X_i$ provided the matrix in the root has
+  an ICPPA in $T_i$.  Hence the lemma.
+\end{proof}
+Lemma \ref{lem:subicppa} and Lemma \ref{lem:rooticppa} point out two
+algorithmic challenges in finding an ICPPA for a given set system
+$\cF$ in a tree $T$.  Given $\cF$, finding $X$ and its partition
+$\{X_1,\ldots,X_r\}$ into in-trees can be done in polynomial time.  On
+the other hand, as per lemma \ref{lem:subicppa} we need to parition
+$T$ into vertex disjoint sub-trees $\{T_1, \ldots, T_r\}$ such that
+for each $i$, the set of matrices corresponding to nodes in $X_i$ have
+an ICPPA in $T_i$.  This seems to be a challenging step, and it must
+be remarked that this step is easy when $T$ itself is a path, as each
+individual $T_i$ would be sub-paths.  The second algorithmic challenge
+is identified by lemma \ref{lem:rooticppa} which is to assign an ICPPA
+from a given tree to the matrix associated with the root node of
+$X_i$.
+\begin{algorithm}[h]
+  \caption{Algorithm to find an ICPPA for a matrix $M$ on tree $T$:
+    $main\_ICPPA(M, T$)}
+  \label{al:icppa-main}
+  \begin{algorithmic}
+    \STATE Identify the prime sub-matrices. This is done by constructing the strict overlap graph and identify connected components.  Each connected component yields a prime sub-matrix.   \\
+    \STATE Construct the partial order $\preccurlyeq$ on the set of prime sub-matrices.  \\
+    \STATE Construct the partition $X_1,\ldots,X_r$ of the prime
+    sub-matrices induced by $\preccurlyeq$ \\
+    \STATE For each $1 \leq i \leq r$, Check if all matrices except
+    those in $X_{i,0}$ has an ICPIA.  If a matrix does not have ICPIA
+    exit with a negative answer.  To check for the existence of ICPIA,
+    use the result in \cite{nsnrs09}.  \STATE Find a partition of
+    $T_1, \ldots, T_r$ such that matrices in $X_{i,0}$ has an ICPPA in
+    $T_i$.  If not such partition exists, exit with negative answer.
+  \end{algorithmic}
+\end{algorithm}
+
+
+\section{Complexity of Tree Path Assignment-A Discussion}
+\label{complexity}
+Recall that the input to the Tree Path Assignment question is an order
+pair $(\cF,T)$ where $\cF$ is a family of subsets of an universe $U$,
+and $T$ is a tree such that $|V(T)| = |U|$.  The question is to come
+up with a bijection from $U$ to $V(T)$ such that the image of each set
+in $\cF$ is a path in $T$.
+
+
+\subsection{Consecutive Ones Testing is in Logspace}
+While Tree Path Assignment is isomorphism-complete, it is polynomial
+time solvable when the given tree is a path.  Indeed, in this case we
+encounter a restatement of matrices with the COP.  The known
+approaches to testing for COP fall into two categories: those that
+provide a witness when the input matrix does not have COP, and those
+that do not provide a witness.  The first linear time algorithm for
+testing COP for a binary matrix was using a data structure called PQ
+trees, which represent all COP orderings of $M$, invented by
+\cite{bl76}. There is a PQ tree for a matrix iff the matrix has COP.
+Indeed, this is an algorithmic characterization of the consecutive
+ones property and the absence of the PQ-tree does not yield any
+witness to the reason for failure.  A closely related data structure
+is the generalized PQ tree in \cite{mcc04}.  In generalized PQ tree
+the P and Q nodes are called prime and linear nodes. Aside from that,
+it has a third type of node called degenerate nodes which is present
+only if the set system does not have COP \cite{mcc04}.  Using the idea
+of generalized PQ tree, \cite{mcc04} proves that checking for
+bipartiteness in the certain incomparability graph is sufficient to
+check for COP.  \cite{mcc04} invented a certificate to confirm when a
+binary matrix does not have COP.  \cite{mcc04} describes a graph
+called incompatibility graph of a set system $\cF$ which has vertices
+$(a,b), a \ne b$ for every $a, b \in U$, $U$ being the universe of the
+set system. There are edges $((a,b),(b,c))$ and $((b,a),(c,b))$ if
+there is a set $S \in \cF$ such that $a, c \in S$ and $b \notin S$. In
+other words the vertices of an edge in this graph represents two
+orderings that cannot occur in a consecutive ones ordering of $\cF$.
+\begin{theorem}[Theorem 6.1, \cite{mcc04}]
+  Let $\cF$ be an arbitrary set family on domain $V$. Then $\cF$ has
+  the consecutive ones property if and only if its incompatibility
+  graph is bipartite, and if it does not have the consecutive ones
+  property, the incompatibility graph has an odd cycle of length at
+  most $n+3$.
+\end{theorem}
+This theorem gives a certificate as to why a given matrix does not
+have COP.  Similarly, the approach of testing for an ICPIA in
+\cite{nsnrs09} also gives a different certificate- a prime sub-matrix
+that does not have an ICPIA.  Further, the above theorem can be used
+to check if a given matrix has COP in logspace by checking if its
+incompatibility graph is bipartite. \cite{rei84} showed that checking
+for bipartiteness can be done in logspace. Thus we conclude that
+consecutive ones testing can be done in logspace.
+
+\noindent
+More recently, \cite{kklv10} showed that interval graph isomorphism
+can be done in logspace. Their paper proves that a canon for interval
+graphs can be calculated in logspace using an interval hypergraph
+representation of the interval graph with each hyperedge being a set
+to which an interval shall be assigned by the canonization
+algorithm. An overlap graph (subgraph of intersection graph, edges
+define only strict intersections and no containment) of the hyperedges
+of the hypergraph is created and canons are computed for each overlap
+component. The overlap components define a tree like relation due to
+the fact that two overlap components are such that either all the
+hyperedges of one is disjoint from all in the other, or all of them
+are contained in one hyperedge in the other. This is similar to the
+containment tree defined in \cite{nsnrs09} and in this paper. Finally
+the canon for the whole graph is created using logspace tree
+canonization algorithm from \cite{sl92}. The interval labelling done
+in this process of canonization is exactly the same as the problem of
+assigning feasible intervals to a set system, and thus the problem of
+finding a COP ordering in a binary matrix \cite{nsnrs09}.
+
+\begin{theorem}[Theorem 4.7, \cite{kklv10}]
+  \label{th:canonlabel}
+  Given an interval hypergraph $\cH$, a canonical interval labeling
+  $l_H$ for $H$ can be computed in FL.
+\end{theorem}
+
+
+We present the following reduction to see that COP testing is indeed
+in logspace. Given a binary matrix $M$ of order $n \times m$, let $S_i
+= \{j \mid M[j,i]=1 \}$. Let $\cF = \{S_i \mid i \in [m] \}$ be this
+set system. Construct a hypergraph $\cH$ with its vertex set being
+$\{1, 2, \dots n\}$. The edge set of $\cH$ is isomorphic to
+$\cF$. Thus every edge in $\cH$ represents a set in the given set
+system $\cF$. Let this mapping be $\pi: E(\cH) \rightarrow \cF$. It is
+easy to see that if $M$ has COP, then $\cH$ is an interval
+hypergraph. From theorem \ref{th:canonlabel}, it is clear that the
+interval labeling $l_{\cH}: V(\cH) \rightarrow [n]$ can be calculated
+in logspace. Construct sets $I_i = \{ \l_{\cH}(x) \mid x \in E, E \in
+E(\cH), \pi(E) = S_i\}$, for all $i \in [m]$. Since $\cH$ is an
+interval hypergraph, $I_i$ is an interval for all $i \in [m]$, and is
+the interval assigned to $S_i$ if $M$ has COP.
+
+Now we have the following corollary.
+\begin{corollary}
+  \label{cor:coplog}
+  If a binary matrix $M$ has COP then the interval assignments to each
+  of its columns can be calculated in FL.
+\end{corollary}
+
+\noindent
+Finally, we conclude by asking about the complexity of Tree Path
+Assignment restricted to other subclasses of trees.  In particular, is
+Tree Path Assignment in caterpillars easier than Tree Path assignment
+in general trees.
+
+
+
+% \noindent
+% It has been long known that interval graph recognition is in
+% logspace\cite{rei84}. Recently interval graph isomorphism was also
+% shown to be logspace decidable using a logspace canonization
+% algorithm by \cite{kklv10}.  This result is built on top of logspace
+% results of undirected graph connectivity \cite{rei08}, logspace
+% tractability using a certain logical formalism called FP+C and
+% modular decomposition of interval graphs\cite{lau10} etc.  Interval
+% graphs are closely connected to binary matrices with COP. The
+% maximal clique vertex incidence matrix (matrix with rows
+% representing maximal cliques and columns representing vertices of a
+% graph) has COP on columns iff the graph is an interval
+% graph\cite{fg65}. This follows from the interval graph
+% characterization by \cite{gh64}. Due to this close relation it is
+% natural to see if consecutive ones property can be
+% tested in logspace. \\
+% \noindent
+% We also explore some extensions of the interval assignment problem
+% in \cite{nsnrs09}, namely caterpillar path assignment problem.
+
+% We present a logspace algorithm here that uses the ICPIA
+% characterization of binary matrices with COP (set system associated
+% with such a matrix)\cite{nsnrs09}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DUMMYTOC Assignment\tnote{Merge
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   with the original charac
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   section}}
+% \label{feasible}
+% Consider a path assignment $\cA = \{(S_i, P_i) \mid S_i \in \cF, P_i
+% \text{ is a path from $T$}, i \in [m]\}$ to a set system $\cF =
+% \{S_i \mid S_i \subseteq U, i \in [m]\}$, were $T$ is a given tree,
+% $U$ is the set system's universe and $m$ is the number of sets in
+% $\cF$. We call $\cA$ an {\em Intersection Cardinality Preserving
+%   Path Assignment (ICPPA)} if it has the following properties.
+
+% \begin{enumerate}
+% \item [i.]  $|S_i| = |P_i|$ for all $i \in [m]$
+% \item [ii.] $|S_i \cap S_j| = |P_i \cap P_j|$ for all $i,j \in [m]$
+%   % \item [iii.] $|\bigcup_{i \in J} S_i| = |\bigcup_{i \in J} P_i|$
+%   %   for all $J \subseteq I$\footnote{TBD: this is needed now to
+%   %     fix
+%   %     some proofs}
+% \item [iii.] $|S_i \cap S_j \cap S_k| = |P_i \cap P_j \cap P_k|$ for
+%   all $i,j,k \in [m]$
+% \end{enumerate}
+
+% \begin{lemma}
+%   \label{lem:setminuscard}
+%   If $\cA$ is an ICPPA, and $(S_1, P_1),(S_2, P_2),(S_3, P_3) \in
+%   \cA$, then $|S_1 \cap (S_2 \setminus S_3)| = |P_1 \cap (P_2
+%   \setminus P_3)|$.
+% \end{lemma}
+% \begin{proof}
+%   $|S_1 \cap (S_2 \setminus S_3)| = |(S_1 \cap S_2) \setminus S_3| =
+%   |S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3|$. Due to conditions (ii)
+%   and (iii) of ICPPA, $|S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3| =
+%   |P_1 \cap P_2| - |P_1 \cap P_2 \cap P_3| = |(P_1 \cap P_2)
+%   \setminus P_3| = |P_1 \cap (P_2 \setminus P_3)|$. Thus lemma is
+%   proven. \qed
+% \end{proof}
+
+% \begin{lemma}
+%   \label{lem:fourpaths} Consider four paths in a tree $Q_1, Q_2,
+%   Q_3, Q_4$ such that they have nonempty pairwise intersection and
+%   $Q_1, Q_2$ share a leaf. Then there exists distinct $i, j, k \in
+%   \{1,2,3,4\}$ such that, $Q_1 \cap Q_2 \cap Q_3 \cap Q_4 = Q_i \cap
+%   Q_j \cap Q_k$.
+% \end{lemma}
+% \begin{proof}
+%   {\em Case 1:} w.l.o.g, consider $Q_3 \cap Q_4$ and let us call it
+%   $Q$. This is clearly a path (intersection of two paths is a path).
+%   %   Since $Q_1, Q_2$ share a leaf, the following are paths $Q_1
+%   %   \setminus Q_2$, $Q_2 \setminus Q_1$, $Q_1 \cap Q_2$ and they
+%   %   are
+%   %   mutually disjoint.
+%   Suppose $Q$ does not intersect with $Q_1 \setminus Q_2$, i.e. $Q
+%   \cap (Q_1 \setminus Q_2) = \O$. Then $Q \cap Q_1 \cap Q_2 = Q \cap
+%   Q_2$. Similarly, if $Q \cap (Q_2 \setminus Q_1) = \O$, $Q \cap Q_1
+%   \cap Q_2 = Q \cap Q_1$. Thus it is clear that if the intersection
+%   of any two paths does not intersect with any of the set
+%   differences of the remaining two paths, the claim in the lemma is
+%   true.
+%   %   Note that $Q_1 \setminus Q_2$ and $Q_2
+%   %   \setminus Q_1$ are paths because $Q_1, Q_2$ share a leaf.\\
+%   {\em Case 2:} Let us consider the compliment of the previous
+%   case. i.e. the intersection of any two paths intersects with both
+%   the set differences of the other two. First let us consider $Q
+%   \cap (Q_1 \setminus Q_2) \ne \O$ and $Q \cap (Q_1 \setminus Q_2)
+%   \ne \O$, where $Q = Q_3 \cap Q_4$. Since $Q_1$ and $Q_2$ share a
+%   leaf, there is exactly one vertex at which they branch off from
+%   the path $Q_1 \cap Q_2$ into two paths $Q_1 \setminus Q_2$ and
+%   $Q_2 \setminus Q_1$. Let this vertex be $v$. It is clear that if
+%   path $Q_3 \cap Q_4$, must intersect with paths $Q_1 \setminus Q_2$
+%   and $Q_2 \setminus Q_1$, it must contain $v$ since these are paths
+%   from a tree. Moreover, $Q_3 \cap Q_4$ intersects with $Q_1 \cap
+%   Q_2$ at exactly $v$ and only at $v$ which means that $Q_1 \cap
+%   Q_2$ does not intersect with $Q_3 \setminus Q_4$ or $Q_4 \setminus
+%   Q_3$ which contradicts initial condition of this case. Thus this
+%   case cannot occur and case 1 is the only possible scenario. \\
+%   Thus lemma is proven \qed
+% \end{proof}
+
+
+% \noindent
+% In the remaining part of this section we show that a path assignment
+% is feasible if and only if it is an ICPPA.  One direction of this
+% claim is clear: that is a path assignment is feasible, then all
+% intersection cardinalities are preserved, that is the path
+% assignment is an ICPPA.  The reason is that a feasible path
+% assignment has an associated bijection between $U$ and $V(T)$ such
+% that the sets map to paths.  The rest of the section is devoted to
+% constructively proving that it is sufficient, for the existence of a
+% bijection, for a path assignment to be an ICPPA.  At a top-level,
+% the constructive approaches refine the path assignment iteratively,
+% such that at the end of each iteration we have a path assignment,
+% and finally we have a family of bijections.  First we present and
+% then prove the correctness of Algorithm \ref{perms}.  This algorithm
+% refines the path assignment by considering pairs of paths that share
+% a leaf.
+
+% \begin{algorithm}[h]
+%   \caption{Permutations from an ICPPA $\{(S_i,P_i) | i \in I\}$}
+%   \label{perms}
+%   \begin{algorithmic}
+%     \STATE Let $\Pi_0=\{(S_i,P_i)| i \in I\}$\\
+%     \STATE $j = 1$;
+%     \label{shareleaf} \WHILE {There is $(P_1,Q_1), (P_2,Q_2) \in
+%       \Pi_{j-1}$ with $Q_1$ and $Q_2$ having a common leaf} \STATE
+%     $\Pi_j= \Pi_{j-1} \setminus \{(P_1,Q_1),(P_2,Q_2)\}$;
+%     \label{setbreak}\STATE $\Pi_j = \Pi_j \cup \{(P_1 \cap P_2,Q_1
+%     \cap Q_2), (P_1 \setminus P_2,Q_1 \setminus Q_2), (P_2 \setminus
+%     P_1, Q_2 \setminus Q_1)\}$; \STATE $j = j+1$; \ENDWHILE \STATE
+%     $\Pi = \Pi_j$; \STATE Return $\Pi$;
+%   \end{algorithmic}
+% \end{algorithm}
+
+% \begin{lemma}
+%   \label{lem:invar1}
+%   In Algorithm \ref{perms}, at the end of $j$th iteration, $j \ge
+%   0$, of the while loop of Algorithm \ref{perms}, the following
+%   invariants are maintained.
+%   \begin{itemize}
+%   \item {\em Invariant I:} $Q$ is a path in $T$ for each $(P,Q) \in
+%     \Pi_j$
+%   \item {\em Invariant II:} $|P|=|Q|$ for each $(P,Q) \in \Pi_j$
+%   \item {\em Invariant III:} For any two $(P,Q), (P',Q') \in \Pi_j$,
+%     $|P' \cap P''|=|Q' \cap Q''|$.
+%   \item {\em Invariant IV:} For any three, $(P',Q'), (P'',Q''), (P,
+%     Q) \in \Pi_j$, $|P' \cap P'' \cap P|=|Q' \cap Q'' \cap Q|$.
+%   \end{itemize}
+% \end{lemma}
+% \begin{proof}
+%   Proof is by induction on the number of iterations, $j$. In the
+%   rest of the proof, the term ``new sets'' will refer to the new
+%   sets added in $j$th iteration as defined in line \ref{setbreak} of
+%   Algorithm \ref{perms}, i.e. the following three assignment pairs
+%   for some $(P_1,Q_1), (P_2,Q_2) \in \Pi_{j-1}$ where $Q_1$ and
+%   $Q_2$ intersect and share a leaf: $(P_1 \cap P_2, Q_1 \cap Q_2)$,
+%   or $(P_1 \setminus P_2, Q_1 \setminus Q_2)$, or $(P_2 \setminus
+%   P_1, Q_2
+%   \setminus Q_1)$.\\
+%   \noindent
+%   The base case, $\Pi_0 = \{(S_i,P_i) \mid i \in [m]\}$, is
+%   trivially true since it is the input which is an ICPPA.  Assume
+%   the lemma is true till the $j-1$ iteration. Consider $j$th
+%   iteration:\\
+%   \noindent
+%   If $(P,Q)$, $(P',Q')$ and $(P'',Q'')$ are in $\Pi_{j}$ and
+%   $\Pi_{j-1}$, all the invariants are
+%   clearly true because they are from $j-1$ iteration.\\
+%   If $(P,Q)$ is in $\Pi_{j}$ and not in $\Pi_{j-1}$, then it must be
+%   one of the new sets added in $\Pi_j$. Since $(P_1,Q_1)$ and
+%   $(P_2,Q_2)$ are from $\Pi_{j-1}$ and $Q_1,Q_2$ intersect and have
+%   a common leaf, it can be verified that the
+%   new sets are also paths. \\
+%   By hypothesis for invariant III, invariant II also holds for
+%   $(P,Q)$ no matter which new set in $\Pi_j$ it
+%   is.\\
+%   To prove invariant III, if $(P,Q)$ and $(P',Q')$ are not in
+%   $\Pi_{j-1}$, then they are both new sets and invariant III holds
+%   trivially (new sets are disjoint). Next consider $(P,Q), (P',Q')
+%   \in \Pi_j$ with only one of them, say $(P',Q')$, in
+%   $\Pi_{j-1}$. Then $(P,Q)$ is one of the new sets added in line
+%   \ref{setbreak}. It is easy to see that if $(P,Q)$ is $(P_1 \cap
+%   P_2, Q_1 \cap Q_2)$, then due to invariant IV in hypothesis,
+%   invariant III becomes true in this iteration. Similarly, using
+%   lemma \ref{lem:setminuscard} invariant III is proven if $(P, Q)$
+%   is $(P_1 \setminus P_2, Q_1 \setminus Q_2)$, or $(P_2 \setminus
+%   P_1, Q_2
+%   \setminus Q_1)$.\\
+%   To prove invariant IV, consider three assignments
+%   $(P,Q),(P',Q'),(P'',Q'')$. If at least two of these pairs are in
+%   not $\Pi_{j-1}$, then they are any two of the new sets. Note that
+%   these new sets are disjoint and hence if $(P',Q'), (P'',Q'')$ are
+%   any of these sets, $|P \cap P' \cap P''|=|Q \cap Q' \cap Q''|=0$
+%   and invariant IV is true. Now we consider the case if at most one
+%   of $(P,Q),(P',Q'),(P'',Q'')$ is not in $\Pi_{j-1}$. If none of
+%   them are not in $\Pi_{j-1}$ (i.e. all of them are in $\Pi_{j-1}$),
+%   invariant IV is clearly true. Consider the case where exactly one
+%   of them is not in $\Pi_{j-1}$. w.l.o.g let that be $(P,Q)$ and it
+%   could be any one of the new sets. If $(P,Q)$ is $(P_1 \cap P_2,
+%   Q_1 \cap Q_2)$, from lemma \ref{lem:fourpaths} and invariant III
+%   hypothesis, invariant IV is proven. Similarly if $(P,Q)$ is any of
+%   the other new sets, invariant IV is proven by also using lemma
+%   \ref{lem:setminuscard}. \qed
+
+% \end{proof}
+
+% \noindent
+% It can be observed that the output of algorithm \ref{perms} is such
+% that every leaf is incident on at most a single path in the new set
+% of assignments. This is due to the loop condition at line
+% \ref{shareleaf}. Let $v_1$ be the leaf incident on path
+% $P_i$. Assign to it any one element from $S_i \setminus \bigcup_{i
+%   \ne j} S_j$. Remove $(S_i, P_i)$ from assignments and add
+% $(\{x_1\}, \{v_1\}), (S_i \setminus \{x_1\}, P_i \setminus
+% \{v_1\})$. Now all assignments except single leaf assignments are
+% paths from the subtree $T_0 = T \setminus \{v \mid v \text{ is a
+%   leaf in } T\}$.
+
+
+% \begin{algorithm}[h]
+%   \caption{Leaf assignments from an ICPPA $\{(S_i,P_i) | i \in I\}$}
+%   \label{leafasgn}
+%   \begin{algorithmic}
+%     \STATE Let $\Pi_0=\{(S_i,P_i)| i \in [m]\}$. Paths are such that
+%     no
+%     two paths $P_i, P_j, i \ne j$ share a leaf.\\
+%     \STATE $j = 1$\\
+%     \WHILE {there is a leaf $v$ and a unique $(S_{i_1}, P_{i_1})$
+%       such that $v \in P_{i_1}$}
+%     \STATE $\Pi_j=   \Pi_{j-1} \setminus \{(S_{i_1}, P_{i_1})\}$\\
+%     \STATE $X = S_{i_1} \setminus \bigcup_{i \ne i_1, i \in I}S_i$
+%     \IF{$X$ is empty} \STATE exit \ENDIF; \STATE Let $x = $
+%     arbitrary element from $X$ \vspace{2mm}
+
+%     \STATE $\Pi_j = \Pi_j \cup \{(S_{i_1} \setminus \{x\}),(P_{i_1}
+%     \setminus
+%     \{v\}), (\{x\},\{v\})\}$\\
+%     \STATE $j = j+1$\\
+%     \ENDWHILE
+%     \STATE $\Pi = \Pi_j$\\
+%     \STATE Return $\Pi$\\
+%   \end{algorithmic}
+% \end{algorithm}
+
+% \begin{lemma}
+%   \label{lem:invar3}
+%   In Algorithm \ref{leafasgn},for all $j \geq 0$, at the end of the
+%   $j$th iteration the four invariants given in lemma
+%   \ref{lem:invar1} are valid.
+%   %   Moreover, $X$ as defined in the algorithm is non-empty if this
+%   %   is
+%   %   an ICPPA.
+% \end{lemma}
+% \begin{proof}
+%   First we see that $X = S_{i_1} \setminus \bigcup_{i \ne i_1, i \in
+%     I}S_i$ is non empty in every iteration for an ICPPA. Suppose $X$
+%   is empty. We know that $v \in P_{i_1} \setminus \bigcup_{i \ne
+%     i_1, i \in I}P_i$ since $v$ is in the unique path
+%   $P_{i_1}$. Since this is an ICPPA $|S_{i_1}| = |P_{i_1}|$. For any
+%   $x \in S_{i_1}$ it is contained in at least two sets due to our
+%   assumption. Let $S_{i_2}$ be a second set that contains $x$. We
+%   know $v \notin P_{i_2}$. Therefore there cannot exist a
+%   permutation that maps elements of $S_{i_2}$ to $P_{i_2}$. This
+%   contradicts our assumption that this is an ICPPA. Thus $X$ cannot
+%   be empty.
+
+
+%   We use mathematical induction on the number of iterations for this
+%   proof. The term ``new sets'' will refer to the sets added in
+%   $\Pi_j$ in the $j$th iteration, i.e. $(P' \setminus \{x\},Q'
+%   \setminus \{v\})$ and $(\{x\},\{v\})$ for some $(P',Q')$ in
+%   $\Pi_{j-1}$ such that $v$ is a leaf and $Q'$ is the unique path
+%   incident on it.\\
+%   For $\Pi_0$ all invariants hold because it is output from
+%   algorithm \ref{perms} which is an ICPPA. Hence base case is
+%   proved.  Assume the lemma holds for $\Pi_{j-1}$. Consider $\Pi_j$
+%   and any $(P,Q) \in \Pi_j$. If $(P,Q) $ is in $ \Pi_j$ and
+%   $\Pi_{j-1}$ invariants I and II are true because of induction
+%   assumption. If it is only in $\Pi_j$, then it is $\{(P' \setminus
+%   \{x\}),(Q' \setminus \{v\})$ or $(\{x\},\{v\})$ for some $(P',Q')$
+%   in $\Pi_{j-1}$. By definition, $x$ is an element in $P'$ (as
+%   defined in the algorithm) and $v$ is a leaf in $Q'$. If $(P,Q)$ is
+%   $\{(P' \setminus \{x\}),(Q' \setminus \{v\})$, $Q$ is a path since
+%   only a leaf is removed from path $Q'$. We know $|P'| = |Q'|$,
+%   therefore $|P' \setminus \{x\}| = |Q' \setminus \{v\}|$. Hence in
+%   this case invariants I and II are obvious. It is easy to see these
+%   invariants hold if $(P,Q)$ is $(\{x\},\{v\})$.
+
+
+%   For invariant III consider $(P_1,Q_1),(P_2,Q_2)$ in $\Pi_j$. If
+%   both of them are also in $\Pi_{j-1}$, claim is proved. If one of
+%   them is not in $\Pi_{j-1}$ then it has to be $\{(P' \setminus
+%   \{x\}),(Q' \setminus \{v\})$ or $(\{x\},\{v\})$ for some $(P',Q')$
+%   in $\Pi_{j-1}$. Since by definition, $Q'$ is the only path with
+%   $v$ and $P'$ the only set with $x$ in the previous iteration,
+%   $|P_1 \cap (P' \setminus \{x\})| = |P_1 \cap P'|$ and $|Q_1 \cap
+%   (Q' \setminus \{v\})| = |Q_1 \cap Q'|$ and $|P_1 \cap \{x\}| = 0,
+%   Q_1 \cap \{v\} = 0$. Thus invariant III is also proven.
+
+%   \noindent
+%   To prove invariant IV, consider $(P_1,Q_1),(P_2,Q_2), (P_3,Q_3)$
+%   in $\Pi_j$. If exactly one of them, say $P_3 \notin \Pi_{j-1}$, it
+%   is one of the new sets. By the same argument used to prove
+%   invariant III, $|P_1 \cap P_2 \cap (P' \setminus \{x\})| = |P_1
+%   \cap P_2 \cap P'|$ and $|Q_1 \cap Q_2 \cap (Q' \setminus \{x\})| =
+%   |Q_1 \cap Q_2 \cap Q'|$. Since $P_1, P_2, P'$ are all in
+%   $\Pi_{j-1}$, by induction hypothesis $|P_1 \cap P_2 \cap P'| =
+%   |Q_1 \cap Q_2 \cap Q'|$. Also $|P_1 \cap P_2 \cap \{x\}| = 0, Q_1
+%   \cap Q_2 \cap \{v\} = 0$.  If two or more of them are not in
+%   $\Pi_{j-1}$, then it can be verified that $|P_1 \cap P_2 \cap P_3|
+%   = |Q_1 \cap Q_2 \cap Q_3|$ since the new sets in $\Pi_j$ are
+%   either disjoint or as follows: assuming $P_1, P_2 \notin
+%   \Pi_{j-1}$ and new sets are derived from $(P', Q'), (P'', Q'') \in
+%   \Pi_{j-1}$ with $x_1, x_2$ exclusively in $P_1, P_2$,
+%   $(\{x_1\},\{v_1\}), (\{x_2\},\{v_2\}) \in \Pi_j $ thus $v_1, v_2$
+%   are exclusively in $Q_1, Q_2$ resp. it follows that $|P_1 \cap P_2
+%   \cap P_3| = |(P' \setminus \{x_1\}) \cap (P'' \setminus \{x_2\})
+%   \cap P_3| = |P' \cap P'' \cap P_3| = |Q' \cap Q'' \cap Q_3| = |(Q'
+%   \setminus \{v_1\} \cap Q'' \setminus \{v_2\} \cap Q_3| = |Q_1 \cap
+%   Q_2 \cap Q_3|$. Thus invariant IV is also proven.  \qed
+% \end{proof}
+
+% Using algorithms \ref{perms} and \ref{leafasgn} we prove the
+% following theorem.
+
+% \begin{theorem}
+%   \label{th:perm}
+%   If $\cA$ is an ICPPA, then there exists a bijection $\sigma : U
+%   \rightarrow V(T)$ such that $\sigma(S_i) = P_i$ for all $i \in I$
+% \end{theorem}
+% \begin{proof}
+%   This is a contructive proof. First, the given ICPPA $\cA$ and tree
+%   $T$ are given as input to Algorithm \ref{perms}. This yields a
+%   ``filtered'' ICPPA as the output which is input to Algorithm
+%   \ref{leafasgn}.  It can be observed that the output of Algorithm
+%   \ref{leafasgn} is a set of interval assignments to sets and
+%   one-to-one assignment of elements of $U$ to each leaf of $T$. To
+%   be precise, it would be of the form $\cB_0 = \cA_0 \cup
+%   \cL_0$. The leaf assignments are defined in $\cL_0 = \{ (x_i,v_i)
+%   \mid x_i \in U, v_i \in T, x_i \ne x_j, v_i \ne v_j, i \ne j, i,j
+%   \in [k] \}$ where $k$ is the number of leaves in $T$. The path
+%   assignments are defined in $\cA_0 \subseteq \{(S_i',P_i') \mid
+%   S_i' \subseteq U_0, P_i' \text{ is a path from } T_0\}$ where
+%   $T_0$ is the tree obtained by removing all the leaves in $T$ and
+%   $U_0 = U \setminus \{ x \mid x \text{ is assigned to a leaf in
+%   }\cL_0 \}$. Now we have a subproblem of finding the permutation
+%   for the path assignment $\cA_0$ which has paths from tree $T_0$
+%   and sets from universe $U_0$. Now we repeat the procedure and the
+%   path assignment $\cA_0$ and tree $T_0$ is given as input to
+%   Algorithm \ref{perms}. The output of this algorithm is given to
+%   Algorithm \ref{leafasgn} to get a new union of path and leaf
+%   assignments $\cB_1 = \cA_1 \cup \cL_1$ defined similar to $\cB_0,
+%   \cL_0, \cA_0$. In general, the two algorithms are run on path
+%   assignment $\cA_{i-1}$ with paths from tree $T_{i-1}$ to get a new
+%   subproblem with path assignment $\cA_i$ and tree $T_{i}$. $T_i$ is
+%   the subtree of $T_{i-1}$ obtained by removing all its leaves. More
+%   importantly, it gives leaf assignments $\cL_{i}$ to the leaves in
+%   tree $T_{i-1}$. This is continued until we get a subproblem with
+%   path assignment $\cA_{d-1}$ and tree $T_{d-1}$ for some $d \le n$
+%   which is just a path. From the last lemma we know that $\cA_{d-1}$
+%   is an ICPPA. Another observation is that an ICPPA with all its
+%   tree paths being intervals (subpaths from a path) is nothing but
+%   an ICPIA\cite{nsnrs09}.  Let $\cA_{d-1}$ be equal to
+%   $\{(S_i'',P_i'') \mid S_i'' \subseteq U_{d-1}, P_i'' \text{ is a
+%     path from } T_{d-1} \}$. It is true that the paths $P_i''$s may
+%   not be precisely an interval in the sense of consecutive integers
+%   because they are some nodes from a tree. However, it is easy to
+%   see that the nodes of $T_{d-1}$ can be ordered from left to right
+%   and ranked to get intervals $I_i$ for every path $P_i''$ as
+%   follows. $I_i = \{[l,r] \mid l = \text{ the lowest rank of the
+%     nodes in }P_i'', r = l+|P_i''|-1 \}$. Let asssignment $\cA_d$ be
+%   with the renamed paths. $\cA_d = \{ (S_i'', I_i) \mid (S_i'',
+%   P_i'') \in \cA_{d-1} \}$. What has been effectively done is
+%   renaming the nodes in $T_{d-1}$ to get a tree $T_d$.  The ICPIA
+%   $\cA_d$ is now in the format that the ICPIA algorithm requires
+%   which gives us the permutation $\sigma' : U_{d-1} \rightarrow
+%   T_{d-1}$
+
+%   \noindent
+%   $\sigma'$ along with all the leaf assignments $\cL_i$ gives us the
+%   permutation for the original path assignment $\cA$.  More
+%   precisely, the permutation for tree path assignment $\cA$ is
+%   defined as follows. $\sigma: U \rightarrow T$ such that the
+%   following is maintained.
+%   \begin{align*}
+%     \sigma(x) &= \sigma'(x),   \text{ if } x \in U_{d-1} \\
+%     &= \cL_i(x), \text{ where $x$ is assigned to a leaf in a
+%       subproblem $\cA_{i-1}, T_{i-1}$}
+%   \end{align*}
+
+%   \noindent
+%   To summarize, run algorithm \ref{perms} and \ref{leafasgn} on
+%   $T$. After the leaves have been assigned to specific elements from
+%   $U$, remove all leaves from $T$ to get new tree $T_0$. The leaf
+%   assignments are in $\cL_0$. Since only leaves were removed $T_0$
+%   is indeed a tree. Repeat the algorithms on $T_0$ to get leaf
+%   assignments $\cL_{1}$. Remove the leaves in $T_0$ to get $T_1$ and
+%   so on until the pruned tree $T_d$ is a single path. Now run ICPIA
+%   algorithm on $T_d$ to get permutation $\sigma'$. The relation
+%   $\cL_0 \cup \cL_1 \cup .. \cup \cL_{d} \cup \sigma'$ gives the
+%   bijection required in the original problem.\qed
+% \end{proof}
+
+

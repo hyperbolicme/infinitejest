@@ -1,0 +1,133 @@
+\chapter{Conclusion}
+\label{ch:conclusion}
+
+\begin{center} {\tt MOVED FROM INTRO SUBSECTION IN ch:myresearch
+    CHAPTER begin}
+\end{center}
+
+% \annote{
+It is an interesting fact that for a matrix with the COP, the
+intersection graph of the corresponding set system is an interval
+graph. % }{the following text could be in Further Study/Conclusion}
+A similar connection to a subclass of chordal graphs and a superclass
+of interval graphs exists for the generalization of COP.  In this
+case, the intersection graph of the corresponding set system must be a
+{\em path graph}. Chordal graphs are of great significance, are
+extensively studied, and have several applications.  One of the well
+known and interesting properties of a chordal graphs is its connection
+with intersection graphs \cite{mcg04}. For every chordal graph, there
+exists a tree and a family of subtrees of this tree such that the
+intersection graph of this family is isomorphic to the chordal graph
+\cite{plr70,gav78,bp93}.  These trees when in a certain format, are
+called {\em clique trees} \cite{apy92} of the chordal graph. This is a
+compact representation of the chordal graph. There has also been work
+done on the generalization of clique trees to clique hypergraphs
+\cite{km02}.  If the chordal graph can be represented as the
+intersection graph of paths in a tree, then the graph is called path
+graph \cite{mcg04}.  Therefore, it is clear that if there is a
+bijection from $U$ to $V(T)$ such that for every set, the elements in
+it map to vertices of a unique path in $T$, then the intersection
+graph of the set system is indeed a path graph.  However, this is only
+a necessary condition and can be checked efficiently because path
+graph recognition is polynomial time
+solvable\cite{gav78,aas93}. Indeed, it is possible to construct a set
+system and tree, such that the intersection graph is a path graph, but
+there is no bijection between $U$ and $V(T)$ such that the sets map to
+paths. Path graph isomorphism is known be isomorphism-complete, see
+for example \cite{kklv10}. An interesting area of research would be to
+see what this result tells us about the complexity of the tree path
+labeling problem (not covered in this paper).
+
+\begin{center} {\tt MOVED FROM INTRO SUBSECTION IN ch:myresearch
+    CHAPTER\\ end}
+\end{center}
+
+We give a characterization for feasible tree path labeling of path
+hypergraphs. The proof for this is constructive and computes a
+feasibility bijection mapping vertices of the hypergraph to vertices
+of the given target tree. This thesis also discovered an exponential
+algorithm that computes a feasible TPL to a given hypergraph if it is
+a path hypergraph.
+
+Our results have close connections to recognition of path graphs and
+to path graph isomorphism.  Graphs which can be represented as the
+intersection graph of paths in a tree are called {\em path
+  graphs}\cite{mcg04}. Thus, a hypergraph $\cF$ can be interpreted as
+paths in a tree, if and only if the intersection graph of $\cF$ is a
+{\em path graph}. Path graphs are a subclass of chordal graphs since
+chordal graphs are characterized as the intersection graphs of
+subtrees of a tree\cite{mcg04}.  Path graphs are well studied in the
+literature \cite{plr70}--\cite{mcg04}\tnote{Check if cite:bp93 is
+  indeed for path graphs}.  Path graph recognition can be done in
+polynomial time\cite{gav78,aas93}.  Clearly, this is a necessary
+condition in terms of the intersection graph of the input hypergraph
+$\cF$ in \FTPL. However, one can easily obtain a counterexample to
+show the insufficiency of this condition\tnote{Give a figure
+  showing insuff.}.  Path graph isomorphism is known be
+isomorphism-complete\cite{kklv10}. Therefore, \annote{it is
+  unlikely that we can solve the problem of finding feasible path
+  labeling $\cl$ for a given $\cF$ and }{WHY?} tree $T$.  It is
+definitely interesting to classify the kinds of trees and hypergraphs
+for which feasible path labelings can be\tnote{ELABORATE.}  found
+efficiently.  \annote{These results would form a natural
+  generalization of COP testing and interval graph isomorphism,
+  culminating in Graph Isomorphism }{REWORD} itself.  To this effect
+we consider TPL on {\kstar} and give a polynomial time solution for
+the same.
+
+
+While we address the computation of TPL for a given
+hypergraph% \footnote{The term {\em hypergraph} is used
+% instead {\em set systems} are used interchangably in this
+% section. Hypergraphs that have TPLs on some target tree are called
+% {\em path hypergraphs}.}
+from a given target tree in this research, however optimization
+problems in TPL, akin to problems in Section~\ref{sec:optcop} for COP,
+is outside the scope of this thesis. Whether TPL on general trees is
+solvable in $P$ remains open. So do optimization opportunities in TPL
+(possible extensions to optimization for COP in the
+Section~\ref{sec:optcop}.\tnote{link to section}).
+
+
+% \newpage %DUMMY
+\tnote{ ||Complexity challenges:|| Canonization is an important
+  tool in graph isomorphism. Invention of a
+  % deterministic method of canonization for any class of graphs
+  % naturally results in an algorithm for isomorphism. All that is
+  % required is to check if the canons of two graphs are the
+  % same. Thus complexity of graph isomorphism can be studied by
+  % studying canonization methods. While general graph ismorphism
+  % remains elusive in terms of hardness, canonization has been
+  % studied for smaller classes of graphs thus giving
+  % complexity/hardness results for them.
+
+  % In 1992, \cite{sl92} made an important discovery that tree
+  % isomorphism is in logspace. It was done by inventing a method of
+  % canonization of trees using a logspace depth first traversal
+  % algorithm. \tnote{confirm the statement of claim}.
+
+  % \cite{kklv10} proved that interval graph canonization is also in
+  % logspace thus drawing logspace conslusions about COT.
+  % % This result is
+  % % built on the fact that
+  % Interval graphs are FP+C (fixed point with counting) definable
+  % \tnote{elucidate} and \cite{l10} showed that this implies that it
+  % captures PTIME. \tnote{elucidate} This result along with that of
+  % undirected graph reachability being in logspace \cite{rei08},
+  % \cite{kklv10} proved their logspace result.
+}%
+\tnote{ (1) the interesting survey in conclusion section of kklv10
+  (2) [[[COP helping some problems with hardness]]] having COP in the
+  input structure makes some problems less hard than in a general
+  input. -- min set cover problem is known to be NP hard. so is min
+  hitting
+  set. these two problems are equivalent cite-adp80\\
+  -- -- complexity results: log factor polynomial time approximable cite-f98, W[2]-complete with solution size as parameter cite-df99\\
+  -- a couple of generalizations:\\
+  -- -- min degree hypergraph (MDH) problem\\
+  -- -- red blue covering (RBSC) problem\\
+  ----- cite-d08phd Chapter 5.\\
+  ----- what are cite-d08phd results\\
+  ----- Rectangle stabbing \\
+  ----- see cite-d08phd Chapter 6?  }
+

@@ -1,10 +1,20 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  30 DEC 2011 21:30
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  3 JAN 2012 15:08
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**\input thesis.tex
-(./thesis.tex (./iitmdiss_as.cls
-Document Class: iitmdiss_as 2005/03/09 Class for IIT-Madras Dissertations
+**thesis.tex
+(./thesis.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
+erman, danish, esperanto, spanish, catalan, galician, estonian, farsi, finnish,
+ french, greek, monogreek, ancientgreek, croatian, hungarian, interlingua, ibyc
+us, indonesian, icelandic, italian, latin, mongolian, dutch, norsk, polish, por
+tuguese, pinyin, romanian, russian, slovenian, uppersorbian, serbian, swedish, 
+turkish, ukenglish, ukrainian, loaded.
+(./iitmdiss_as.cls
+Document Class: iitmdiss_as 2012/01/01 Class for IIT-Madras Dissertations - hac
+ked by hyperbolicme. Base iitmdiss 2005/03/09
 (/usr/local/texlive/2007/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2005/09/16 v1.4f Standard LaTeX document class
 (/usr/local/texlive/2007/texmf-dist/tex/latex/base/size12.clo
@@ -70,17 +80,62 @@ Package: times 2005/04/12 PSNFSS-v9.2a (SPQR)
 ) (./t1enc.sty
 Package: t1enc 1994/06/01 Standard LaTeX package
 )
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/ot1enc.def
+File: ot1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding OT1 on input line 43.
+))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count91
+\lst@gtempboxa=\box26
+\lst@token=\toks16
+\lst@length=\count92
+\lst@currlwidth=\dimen113
+\lst@column=\count93
+\lst@pos=\count94
+\lst@lostspace=\dimen114
+\lst@width=\dimen115
+\lst@newlines=\count95
+\lst@lineno=\count96
+\c@lstlisting=\count97
+\lst@maxwidth=\dimen116
+
+(/usr/local/texlive/2007/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2004/10/17 1.3b (Carsten Heinz)
+)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2004/09/07 1.3 (Carsten Heinz)
+\c@lstnumber=\count98
+\lst@skipnumbers=\count99
+\lst@framebox=\box27
+)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2004/09/05 1.3 listings configuration
+))
+Package: listings 2004/10/17 1.3b (Carsten Heinz)
+
 (../lib/mythesislib.sty
 
 LaTeX Warning: You have requested package `../lib/mythesislib',
                but the package provides `mythesislib'.
 
 Package: mythesislib 2011/12/21
+(/usr/local/texlive/2007/texmf-dist/tex/latex/ltxmisc/endnotes.sty
+\c@endnote=\count100
+\endnotesep=\dimen117
+\@enotes=\write3
+)
 (/usr/local/texlive/2007/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2006/05/08 v1.12 Space after command names (DPC,MH)
 )
-\c@theorem=\count91
-\c@definition=\count92
+\c@theorem=\count101
+\c@definition=\count102
 )
 (../lib/mylatexlib.sty
 
@@ -107,13 +162,13 @@ Package graphics Info: Driver file: pdftex.def on input line 90.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2007/01/08 v0.04d Graphics/color for pdfTeX
-\Gread@gobject=\count93
+\Gread@gobject=\count103
 ))
-\Gin@req@height=\dimen113
-\Gin@req@width=\dimen114
+\Gin@req@height=\dimen118
+\Gin@req@width=\dimen119
 )
-\epsfxsize=\dimen115
-\epsfysize=\dimen116
+\epsfxsize=\dimen120
+\epsfysize=\dimen121
 )
 (/usr/local/texlive/2007/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2006/02/20 v1.4 Provides the ifpdf switch (HO)
@@ -127,9 +182,9 @@ Package epstopdf Warning: Shell escape feature is not enabled.
 
 ) (/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2007/02/07 v6.75r Hypertext links for LaTeX
-\@linkdim=\dimen117
-\Hy@linkcounter=\count94
-\Hy@pagecounter=\count95
+\@linkdim=\dimen122
+\Hy@linkcounter=\count104
+\Hy@pagecounter=\count105
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2007/02/07 v6.75r Hyperref: PDFDocEncoding definition (HO)
@@ -154,24 +209,24 @@ Package hyperref Info: Bookmarks ON on input line 2444.
 Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 2599.
-\Fld@menulength=\count96
-\Field@Width=\dimen118
-\Fld@charsize=\dimen119
-\Choice@toks=\toks16
-\Field@toks=\toks17
+\Fld@menulength=\count106
+\Field@Width=\dimen123
+\Fld@charsize=\dimen124
+\Choice@toks=\toks17
+\Field@toks=\toks18
 Package hyperref Info: Hyper figures OFF on input line 3102.
 Package hyperref Info: Link nesting OFF on input line 3107.
 Package hyperref Info: Hyper index ON on input line 3110.
 Package hyperref Info: backreferencing OFF on input line 3117.
 Package hyperref Info: Link coloring OFF on input line 3122.
-\Hy@abspage=\count97
-\c@Item=\count98
-\c@Hfootnote=\count99
+\Hy@abspage=\count107
+\c@Item=\count108
+\c@Hfootnote=\count109
 )
 *hyperref using default driver hpdftex*
 (/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2007/02/07 v6.75r Hyperref driver for pdfTeX
-\Fld@listcount=\count100
+\Fld@listcount=\count110
 )
 (/usr/local/texlive/2007/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 
@@ -179,17 +234,17 @@ Package: algorithm
 Document Style `algorithm' - floating environment
 (/usr/local/texlive/2007/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count101
-\float@exts=\toks18
-\float@box=\box26
-\@float@everytoks=\toks19
-\@floatcapt=\box27
+\c@float@type=\count111
+\float@exts=\toks19
+\float@box=\box28
+\@float@everytoks=\toks20
+\@floatcapt=\box29
 )
 (/usr/local/texlive/2007/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\@float@every@algorithm=\toks20
-\c@algorithm=\count102
+\@float@every@algorithm=\toks21
+\c@algorithm=\count112
 )
 (/usr/local/texlive/2007/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2006/06/02
@@ -197,26 +252,26 @@ Package: algorithmic 2006/06/02
 Document Style `algorithmic' - environment
 (/usr/local/texlive/2007/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2005/08/06 v4.2 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count103
-\calc@Bcount=\count104
-\calc@Adimen=\dimen120
-\calc@Bdimen=\dimen121
+\calc@Acount=\count113
+\calc@Bcount=\count114
+\calc@Adimen=\dimen125
+\calc@Bdimen=\dimen126
 \calc@Askip=\skip43
 \calc@Bskip=\skip44
 LaTeX Info: Redefining \setlength on input line 75.
 LaTeX Info: Redefining \addtolength on input line 76.
-\calc@Ccount=\count105
+\calc@Ccount=\count115
 \calc@Cskip=\skip45
 )
-\c@ALC@line=\count106
-\c@ALC@rem=\count107
-\c@ALC@depth=\count108
+\c@ALC@line=\count116
+\c@ALC@rem=\count117
+\c@ALC@depth=\count118
 \ALC@tlm=\skip46
 \algorithmicindent=\skip47
 )
 (/usr/local/texlive/2007/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
-\@enLab=\toks21
+\@enLab=\toks22
 )
 (/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
@@ -228,51 +283,51 @@ Package: amstext 2000/06/29 v2.01
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks22
-\ex@=\dimen122
+\@emptytoks=\toks23
+\ex@=\dimen127
 ))
 (/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen123
+\pmbraise@=\dimen128
 )
 (/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count109
+\inf@bad=\count119
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count110
-\leftroot@=\count111
+\uproot@=\count120
+\leftroot@=\count121
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count112
-\DOTSCASE@=\count113
+\classnum@=\count122
+\DOTSCASE@=\count123
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
-\Mathstrutbox@=\box28
-\strutbox@=\box29
-\big@size=\dimen124
+\Mathstrutbox@=\box30
+\strutbox@=\box31
+\big@size=\dimen129
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count114
-\c@MaxMatrixCols=\count115
+\macc@depth=\count124
+\c@MaxMatrixCols=\count125
 \dotsspace@=\muskip11
-\c@parentequation=\count116
-\dspbrk@lvl=\count117
-\tag@help=\toks23
-\row@=\count118
-\column@=\count119
-\maxfields@=\count120
-\andhelp@=\toks24
-\eqnshift@=\dimen125
-\alignsep@=\dimen126
-\tagshift@=\dimen127
-\tagwidth@=\dimen128
-\totwidth@=\dimen129
-\lineht@=\dimen130
-\@envbody=\toks25
+\c@parentequation=\count126
+\dspbrk@lvl=\count127
+\tag@help=\toks24
+\row@=\count128
+\column@=\count129
+\maxfields@=\count130
+\andhelp@=\toks25
+\eqnshift@=\dimen130
+\alignsep@=\dimen131
+\tagshift@=\dimen132
+\tagwidth@=\dimen133
+\totwidth@=\dimen134
+\lineht@=\dimen135
+\@envbody=\toks26
 \multlinegap=\skip49
 \multlinetaggap=\skip50
-\mathdisplay@stack=\toks26
+\mathdisplay@stack=\toks27
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
@@ -375,15 +430,15 @@ Package color Info: Driver file: pdftex.def on input line 130.
 )
 (/usr/local/texlive/2007/texmf-dist/tex/latex/soul/soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
-\SOUL@word=\toks27
-\SOUL@lasttoken=\toks28
-\SOUL@cmds=\toks29
-\SOUL@buffer=\toks30
-\SOUL@token=\toks31
+\SOUL@word=\toks28
+\SOUL@lasttoken=\toks29
+\SOUL@cmds=\toks30
+\SOUL@buffer=\toks31
+\SOUL@token=\toks32
 \SOUL@spaceskip=\skip51
-\SOUL@ttwidth=\dimen131
-\SOUL@uldp=\dimen132
-\SOUL@ulht=\dimen133
+\SOUL@ttwidth=\dimen136
+\SOUL@uldp=\dimen137
+\SOUL@ulht=\dimen138
 )
 (/usr/local/texlive/2007/texmf-dist/tex/latex/ltxmisc/morefloats.sty
 \bx@S=\insert233
@@ -405,19 +460,28 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \bx@II=\insert217
 \bx@JJ=\insert216
 )
-\c@userid=\count121
-\c@changenumber=\count122
-\c@storefootnote=\count123
-\c@numeditors=\count124
-\c@maxeditors=\count125
+\c@userid=\count131
+\c@changenumber=\count132
+\c@storefootnote=\count133
+\c@numeditors=\count134
+\c@maxeditors=\count135
 )
 Package color Info: Redefining color UserColor on input line 69.
 Package color Info: Redefining color UserColor on input line 70.
 Package color Info: Redefining color UserColor on input line 71.
-Package color Info: Redefining color UserColor on input line 72.
-\c@observation=\count126
+Package color Info: Redefining color UserColor on input line 73.
+\c@observation=\count136
 )
-(./thesis.aux
+(./thesis.aux (./001certificate.aux) (./002ack.aux) (./0021ded.aux)
+(./003abstract.aux) (./004abbrv.aux) (./005notation.aux) (./010chap1.aux)
+(./020chap2.aux
+
+LaTeX Warning: Label `sec:copmatrices' multiply defined.
+
+
+LaTeX Warning: Label `sec:optcop' multiply defined.
+
+) (./030chap3.aux
 
 LaTeX Warning: Label `lem:setminuscard' multiply defined.
 
@@ -427,33 +491,34 @@ LaTeX Warning: Label `lem:invar1' multiply defined.
 
 LaTeX Warning: Label `lem:invar3' multiply defined.
 
-)
+) (./040chap4.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 15.
- (/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 19.
+
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 15.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 19.
 
-(/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/t1ptm.fd
-File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+(/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -------------------- Geometry parameters
 paper: a4paper
@@ -517,304 +582,211 @@ LaTeX Info: Redefining \selectfont on input line 125.
 \RaggedRightParindent=\skip64
 \JustifyingParindent=\skip65
 )
-Package caption Info: float package v1.3 (or newer) detected on input line 15.
+Package caption Info: float package v1.3 (or newer) detected on input line 19.
 Package caption Info: hyperref package v6.74m (or newer) detected on input line
- 15.
+ 19.
+Package caption Info: listings package v1.2 (or newer) detected on input line 1
+9.
 
 (/usr/local/texlive/2007/texmf-dist/tex/context/base/supp-pdf.tex
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count127
-\scratchdimen=\dimen134
-\scratchbox=\box30
-\nofMPsegments=\count128
-\nofMParguments=\count129
-\MPscratchCnt=\count130
-\MPscratchDim=\dimen135
-\MPnumerator=\count131
-\everyMPtoPDFconversion=\toks32
+\scratchcounter=\count137
+\scratchdimen=\dimen139
+\scratchbox=\box32
+\nofMPsegments=\count138
+\nofMParguments=\count139
+\MPscratchCnt=\count140
+\MPscratchDim=\dimen140
+\MPnumerator=\count141
+\everyMPtoPDFconversion=\toks33
 )
-Package hyperref Info: Link coloring OFF on input line 15.
+Package hyperref Info: Link coloring OFF on input line 19.
  (/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2006/12/27 v2.28 Cross-referencing by name of section
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/oberdiek/refcount.sty
 Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
 )
-\c@section@level=\count132
+\c@section@level=\count142
 )
-LaTeX Info: Redefining \ref on input line 15.
-LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \ref on input line 19.
+LaTeX Info: Redefining \pageref on input line 19.
 
 (./thesis.out) (./thesis.out)
-\@outlinefile=\write3
-\openout3 = `thesis.out'.
+\@outlinefile=\write4
+\openout4 = `thesis.out'.
 
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 27.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 27.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 27.
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 27.
- <iitm.pdf, id=155, 109.40875pt x 109.40875pt>
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 28.
+ <iitm.pdf, id=103, 109.40875pt x 109.40875pt>
 File: iitm.pdf Graphic file (type pdf)
 
 <use iitm.pdf> [0
 
 {/usr/local/texlive/2007/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./iitm.
 pdf>]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 30.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
+ (./thesis.toc
+LaTeX Font Info:    Try loading font information for U+lasy on input line 8.
 
-Certificate
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 37.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 54.
 (/usr/local/texlive/2007/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 54.
+LaTeX Font Info:    Try loading font information for U+msa on input line 8.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 54.
+LaTeX Font Info:    Try loading font information for U+msb on input line 8.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
-)pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.68 \acknowledgements
-                       [0
+) [4
+
+
+
+
 
 ]
-Package color Info: Redefining color UserColor on input line 70.
- [1
+Package color Info: Redefining color UserColor on input line 32.
+Package color Info: Redefining color UserColor on input line 40.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
 
-]
-Package color Info: Redefining color UserColor on input line 119.
- [2
+Overfull \hbox (0.56985pt too wide) in paragraph at lines 40--40
+[]$[]$[]\OT1/ptm/m/it/10 mi[][]nor[][]\OT1/ptm/m/n/10 :[] []\OT1/ptm/m/n/6 make
+[] 
+ []
 
-] (./thesis.toc [3
-
-]
-Package color Info: Redefining color UserColor on input line 29.
 )
-\tf@toc=\write4
-\openout4 = `thesis.toc'.
+\tf@toc=\write5
+\openout5 = `thesis.toc'.
 
- [4] (./thesis.lot)
-\tf@lot=\write5
-\openout5 = `thesis.lot'.
-
-
-[5
-
-] (./thesis.lof
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 3.
-
-(/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 4.
-)
-\tf@lof=\write6
-\openout6 = `thesis.lof'.
+ [5] (./thesis.lot)
+\tf@lot=\write6
+\openout6 = `thesis.lot'.
 
  [6
 
-] [7
+] (./thesis.lof)
+\tf@lof=\write7
+\openout7 = `thesis.lof'.
+
+ [7
 
 ]
-[8
+\openout2 = `010chap1.aux'.
 
-]
+ (./010chap1.tex
 CHAPTER 1.
-Package color Info: Redefining color UserColor on input line 187.
-Package color Info: Redefining color UserColor on input line 192.
-Package color Info: Redefining color UserColor on input line 209.
-Package color Info: Redefining color UserColor on input line 243.
-
-Overfull \hbox (7.85564pt too wide) in paragraph at lines 243--243
-[]$[]$[]\T1/ptm/m/it/10 TH[][]\T1/ptm/m/n/10 :[] []\T1/ptm/m/n/6 fig:streetmap[
-]  
- []
-
+Package color Info: Redefining color UserColor on input line 49.
 [1
 
 
+
+
 ]
-LaTeX Font Info:    Try loading font information for OT1+pzc on input line 262.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
+LaTeX Font Info:    Try loading font information for OT1+pzc on input line 101.
 
  (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1pzc.fd
 File: ot1pzc.fd 2001/06/04 font definitions for OT1/pzc.
 )
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <10> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 262.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 101.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <7> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 262.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 101.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <5> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 262.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 101.
 
-Package color Info: Redefining color UserColor on input line 306.
-LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <12> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 306.
-
-LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <8> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 306.
-
-LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <6> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 306.
-
-
-Overfull \hbox (18.18753pt too wide) in paragraph at lines 306--306
-[]$[]$[]\T1/ptm/m/it/10 TH[][]\T1/ptm/m/n/10 :[] []\T1/ptm/m/n/6 fig:streetmapp
-ath[]  
- []
-
-[2pdfTeX warning (ext4): destination with the same identifier (name{table.1.1})
- has been already used, duplicate ignored
+ [2pdfTeX warning (ext4): destination with the same identifier (name{table.1.1}
+) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.311 
+l.140 
       pdfTeX warning (ext4): destination with the same identifier (name{table.1
 .2}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.311 
-      ] <../img/1_infinite_loop.png, id=302, 695.59875pt x 445.665pt>
+l.140 
+      ] <../img/1_infinite_loop.png, id=240, 695.59875pt x 445.665pt>
 File: ../img/1_infinite_loop.png Graphic file (type png)
 
 <use ../img/1_infinite_loop.png>
-<../img/2_infinite_loop_BTWF.png, id=303, 780.9175pt x 528.97626pt>
+<../img/2_infinite_loop_BTWF.png, id=241, 780.9175pt x 528.97626pt>
 File: ../img/2_infinite_loop_BTWF.png Graphic file (type png)
 
 <use ../img/2_infinite_loop_BTWF.png>
-<../img/3_infinite_loop.png, id=304, 823.075pt x 667.49374pt>
+<../img/3_infinite_loop.png, id=242, 823.075pt x 667.49374pt>
 File: ../img/3_infinite_loop.png Graphic file (type png)
 
 <use ../img/3_infinite_loop.png>
-Package color Info: Redefining color UserColor on input line 336.
-Package color Info: Redefining color UserColor on input line 339.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 198.
 
 
-LaTeX Warning: Marginpar on page 3 moved.
+(/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Package color Info: Redefining color UserColor on input line 202.
+LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <12> not available
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 202.
 
-Package color Info: Redefining color UserColor on input line 371.
+LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <8> not available
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 202.
+
+LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <6> not available
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 202.
+
+Package color Info: Redefining color UserColor on input line 234.
+
+Overfull \hbox (10.15175pt too wide) in paragraph at lines 234--234
+[]$[]$[]\OT1/ptm/m/it/10 mi[][]nor[][]\OT1/ptm/m/n/10 :[] []\OT1/ptm/m/n/6 Al[]
+[]low[][]ing[] 
+ []
+
 [3] [4pdfTeX warning (ext4): destination with the same identifier (name{figure.
 1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.386 
+l.236 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 1.2}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.386 
-       <../img/1_infinite_loop.png> <../img/2_infinite_loop_BTWF.png> <../img/3
-_infinite_loop.png>]
-Overfull \hbox (0.4919pt too wide) in paragraph at lines 388--388
-[]\T1/ptm/b/n/17.28 Basic pre-lim-i-nar-ies - gen-eral def-i-ni-tions and nomen
--
- []
-
-Package color Info: Redefining color UserColor on input line 390.
-Package color Info: Redefining color UserColor on input line 408.
-Package color Info: Redefining color UserColor on input line 410.
-
-Package trackchanges Warning: Editor 'THX' unknown.
-(trackchanges)                 on input line 410.
-
-Package color Info: Redefining color UserColor on input line 416.
-
-Package trackchanges Warning: Editor 'THX' unknown.
-(trackchanges)                 on input line 416.
-
-Package color Info: Redefining color UserColor on input line 418.
-
-Package trackchanges Warning: Editor 'THX' unknown.
-(trackchanges)                 on input line 418.
-
-Package color Info: Redefining color UserColor on input line 422.
-Package color Info: Redefining color UserColor on input line 423.
-
-Package trackchanges Warning: Editor 'THX' unknown.
-(trackchanges)                 on input line 423.
-
-
-Overfull \hbox (7.2937pt too wide) in paragraph at lines 423--423
-[]$[]$[]\T1/ptm/m/it/10 THX[][]\T1/ptm/m/n/10 :[] []\T1/ptm/m/n/6 ci[][]ta[][]t
-ion?!![]  
- []
-
-Package color Info: Redefining color UserColor on input line 425.
-Package color Info: Redefining color UserColor on input line 426.
-
-Package trackchanges Warning: Editor 'THX' unknown.
-(trackchanges)                 on input line 426.
-
-Package color Info: Redefining color UserColor on input line 431.
-Package color Info: Redefining color UserColor on input line 432.
-
-Package trackchanges Warning: Editor 'THX' unknown.
-(trackchanges)                 on input line 432.
-
-Package color Info: Redefining color UserColor on input line 443.
-
-Package trackchanges Warning: Editor 'THX' unknown.
-(trackchanges)                 on input line 443.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-[5]
-Package color Info: Redefining color UserColor on input line 523.
-Package color Info: Redefining color UserColor on input line 537.
-Package color Info: Redefining color UserColor on input line 540.
-Package color Info: Redefining color UserColor on input line 542.
-Package color Info: Redefining color UserColor on input line 550.
- [6pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3
-}) has been already used, duplicate ignored
+l.236 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+1.3}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.551 
-      ]
-Package color Info: Redefining color UserColor on input line 563.
-Package color Info: Redefining color UserColor on input line 565.
-Package color Info: Redefining color UserColor on input line 568.
+l.236 
+       <../img/1_infinite_loop.png> <../img/2_infinite_loop_BTWF.png> <../img/3
+_infinite_loop.png>]
+Overfull \hbox (0.4919pt too wide) in paragraph at lines 251--251
+[]\OT1/ptm/b/n/17.28 Basic pre-lim-i-nar-ies - gen-eral def-i-ni-tions and nome
+n-
+ []
+
+Package color Info: Redefining color UserColor on input line 253.
+[5]
+Package color Info: Redefining color UserColor on input line 341.
+Package color Info: Redefining color UserColor on input line 355.
+Package color Info: Redefining color UserColor on input line 358.
+Package color Info: Redefining color UserColor on input line 360.
+Package color Info: Redefining color UserColor on input line 368.
+ [6]
+Package color Info: Redefining color UserColor on input line 381.
+Package color Info: Redefining color UserColor on input line 383.
+Package color Info: Redefining color UserColor on input line 386.
 
 
 LaTeX Warning: Marginpar on page 7 moved.
@@ -822,11 +794,11 @@ LaTeX Warning: Marginpar on page 7 moved.
 
 LaTeX Warning: Marginpar on page 7 moved.
 
-Package color Info: Redefining color UserColor on input line 590.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 590.
-Package color Info: Redefining color UserColor on input line 592.
-Package color Info: Redefining color UserColor on input line 597.
+Package color Info: Redefining color UserColor on input line 408.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 408.
+Package color Info: Redefining color UserColor on input line 410.
+Package color Info: Redefining color UserColor on input line 415.
 
 LaTeX Warning: Marginpar on page 7 moved.
 
@@ -834,25 +806,29 @@ LaTeX Warning: Marginpar on page 7 moved.
 LaTeX Warning: Marginpar on page 7 moved.
 
 [7]
-Package color Info: Redefining color UserColor on input line 628.
-Package color Info: Redefining color UserColor on input line 636.
-Package color Info: Redefining color UserColor on input line 645.
-Package color Info: Redefining color UserColor on input line 647.
-Package color Info: Redefining color UserColor on input line 648.
- [8]
+Package color Info: Redefining color UserColor on input line 446.
+Package color Info: Redefining color UserColor on input line 454.
+Package color Info: Redefining color UserColor on input line 463.
+Package color Info: Redefining color UserColor on input line 465.
+Package color Info: Redefining color UserColor on input line 466.
 
-LaTeX Warning: Marginpar on page 9 moved.
 
-Package color Info: Redefining color UserColor on input line 656.
-Package color Info: Redefining color UserColor on input line 662.
+LaTeX Warning: Marginpar on page 8 moved.
 
-Overfull \hbox (23.47563pt too wide) in paragraph at lines 662--662
-[][]\T1/ptm/m/n/6 .[] 
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+Package color Info: Redefining color UserColor on input line 474.
+Package color Info: Redefining color UserColor on input line 480.
+
+Overfull \hbox (23.47563pt too wide) in paragraph at lines 480--480
+[][]\OT1/ptm/m/n/6 .[] 
  []
 
-Package color Info: Redefining color UserColor on input line 662.
-Package color Info: Redefining color UserColor on input line 663.
-Package color Info: Redefining color UserColor on input line 665.
+Package color Info: Redefining color UserColor on input line 480.
+Package color Info: Redefining color UserColor on input line 481.
+Package color Info: Redefining color UserColor on input line 483.
+[8]
 
 LaTeX Warning: Marginpar on page 9 moved.
 
@@ -865,93 +841,99 @@ LaTeX Warning: Marginpar on page 9 moved.
 
 LaTeX Warning: Marginpar on page 9 moved.
 
-Package color Info: Redefining color UserColor on input line 675.
+Package color Info: Redefining color UserColor on input line 493.
 
 LaTeX Warning: Marginpar on page 9 moved.
 
-Package color Info: Redefining color UserColor on input line 679.
+Package color Info: Redefining color UserColor on input line 497.
 
 LaTeX Warning: Marginpar on page 9 moved.
 
-Package color Info: Redefining color UserColor on input line 683.
+Package color Info: Redefining color UserColor on input line 501.
 
-Overfull \hbox (2.4313pt too wide) in paragraph at lines 688--694
-\T1/ptm/m/n/12 Section []1.3.1[] in-tro-duced a suc-cinct char-ac-ter-i-za-tion
- for consecutive-ones prop-erty which
+Overfull \hbox (2.4313pt too wide) in paragraph at lines 506--512
+\OT1/ptm/m/n/12 Section []2.5.1[] in-tro-duced a suc-cinct char-ac-ter-i-za-tio
+n for consecutive-ones prop-erty which
  []
 
 [9]
-Package color Info: Redefining color UserColor on input line 741.
+\openout3 = `thesis.ent'.
+
+Package color Info: Redefining color UserColor on input line 559.
  [10]
-Package color Info: Redefining color UserColor on input line 764.
+Package color Info: Redefining color UserColor on input line 582.
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 777.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 594.
 
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 779.
- (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 596.
+
+ (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 781--784
+Underfull \hbox (badness 10000) in paragraph at lines 598--601
 
  []
 
 
-Overfull \hbox (22.35966pt too wide) in paragraph at lines 776--796
+Overfull \hbox (22.35966pt too wide) in paragraph at lines 593--613
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 773--798
+Underfull \hbox (badness 10000) in paragraph at lines 590--615
 
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 827--828
+
+Underfull \hbox (badness 10000) in paragraph at lines 644--645
 
  []
 
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 834.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 651.
 
-Overfull \hbox (22.35966pt too wide) in paragraph at lines 822--838
+Overfull \hbox (22.35966pt too wide) in paragraph at lines 639--655
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 819--840
+Underfull \hbox (badness 10000) in paragraph at lines 636--657
 
  []
 
-<../img/star.pdf, id=498, 244.915pt x 283.0575pt>
+[11] <../img/star.pdf, id=407, 244.915pt x 283.0575pt>
 File: ../img/star.pdf Graphic file (type pdf)
  <use ../img/star.pdf>
-<../img/kstar.pdf, id=499, 263.98625pt x 302.12875pt>
+<../img/kstar.pdf, id=408, 263.98625pt x 302.12875pt>
 File: ../img/kstar.pdf Graphic file (type pdf)
  <use ../img/kstar.pdf>
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <14.4> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 863.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 680.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 868--871
+Underfull \hbox (badness 10000) in paragraph at lines 685--688
 
  []
 
 
-Overfull \hbox (22.35966pt too wide) in paragraph at lines 863--880
+Overfull \hbox (22.35966pt too wide) in paragraph at lines 680--697
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 860--882
+Underfull \hbox (badness 10000) in paragraph at lines 677--699
 
  []
 
-Package color Info: Redefining color UserColor on input line 883.
+Package color Info: Redefining color UserColor on input line 700.
+Package color Info: Redefining color UserColor on input line 724.
+Package color Info: Redefining color UserColor on input line 729.
+Package color Info: Redefining color UserColor on input line 732.
 [12pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4
 }) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.900 
+l.739 
        <../img/star.pdf
 
 pdfTeX warning: pdflatex (file ../img/star.pdf): PDF inclusion: Page Group dete
@@ -961,936 +943,302 @@ cted which pdfTeX can't handle. Ignoring it.
 pdfTeX warning: pdflatex (file ../img/kstar.pdf): PDF inclusion: Page Group det
 ected which pdfTeX can't handle. Ignoring it.
 >]
-Package color Info: Redefining color UserColor on input line 908.
-Package color Info: Redefining color UserColor on input line 913.
-Package color Info: Redefining color UserColor on input line 916.
-
 
 LaTeX Warning: Marginpar on page 13 moved.
 
 
 LaTeX Warning: Marginpar on page 13 moved.
 
-Package color Info: Redefining color UserColor on input line 925.
-[13]
+Package color Info: Redefining color UserColor on input line 741.
+(./thesis.ent)) [13]
+\openout2 = `020chap2.aux'.
+
+ (./020chap2.tex
 CHAPTER 2.
-Package color Info: Redefining color UserColor on input line 929.
-Package color Info: Redefining color UserColor on input line 932.
+Package color Info: Redefining color UserColor on input line 5.
+Package color Info: Redefining color UserColor on input line 23.
+
+Overfull \hbox (11.9276pt too wide) in paragraph at lines 23--23
+[]$[]$[]\OT1/ptm/m/it/10 press[][]ing[][]\OT1/ptm/m/n/10 :[] []\OT1/ptm/m/n/6 A
+DD:[] 
+ []
+
+Package color Info: Redefining color UserColor on input line 24.
+Package color Info: Redefining color UserColor on input line 30.
+Package color Info: Redefining color UserColor on input line 31.
+Package color Info: Redefining color UserColor on input line 35.
+
+Overfull \hbox (18.26341pt too wide) in paragraph at lines 35--35
+[]$[]$[]\OT1/ptm/m/it/10 press[][]ing[][]\OT1/ptm/m/n/10 :[] []\OT1/ptm/m/n/6 m
+ax[][]i[][]mal[] 
+ []
+
+Package color Info: Redefining color UserColor on input line 35.
+Package color Info: Redefining color UserColor on input line 37.
+
+Overfull \hbox (18.06552pt too wide) in paragraph at lines 37--37
+[]$[]$[]\OT1/ptm/m/it/10 press[][]ing[][]\OT1/ptm/m/n/10 :[] []\OT1/ptm/m/n/6 c
+ite[] []fg65[] 
+ []
+
+Package color Info: Redefining color UserColor on input line 38.
+Package color Info: Redefining color UserColor on input line 43.
+
+Overfull \hbox (6.77571pt too wide) in paragraph at lines 43--43
+[]$[]$[]\OT1/ptm/m/it/10 press[][]ing[][]\OT1/ptm/m/n/10 :[]  []\OT1/ptm/m/n/6 
+A[] 
+ []
+
+Package color Info: Redefining color UserColor on input line 44.
+
+Overfull \hbox (0.76375pt too wide) in paragraph at lines 44--44
+[]$[]$[]\OT1/ptm/m/it/10 press[][]ing[][]\OT1/ptm/m/n/10 :[] [] 
+ []
+
+Package color Info: Redefining color UserColor on input line 55.
+
+Overfull \hbox (0.76375pt too wide) in paragraph at lines 55--55
+[]$[]$[]\OT1/ptm/m/it/10 press[][]ing[][]\OT1/ptm/m/n/10 :[] [] 
+ []
+
 
 LaTeX Warning: Marginpar on page 14 moved.
 
-Package color Info: Redefining color UserColor on input line 936.
-Package color Info: Redefining color UserColor on input line 940.
-Package color Info: Redefining color UserColor on input line 945.
-Package color Info: Redefining color UserColor on input line 946.
 
 LaTeX Warning: Marginpar on page 14 moved.
 
-Package color Info: Redefining color UserColor on input line 950.
-Package color Info: Redefining color UserColor on input line 951.
 
 LaTeX Warning: Marginpar on page 14 moved.
 
-Package color Info: Redefining color UserColor on input line 955.
-Package color Info: Redefining color UserColor on input line 956.
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+Package color Info: Redefining color UserColor on input line 61.
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+Package color Info: Redefining color UserColor on input line 65.
+
+Overfull \hbox (19.84578pt too wide) in paragraph at lines 65--65
+[]$[]$[]\OT1/ptm/m/it/10 im[][]por[][]tant[][]\OT1/ptm/m/n/10 :[] []\OT1/ptm/m/
+n/6 move[] 
+ []
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+Package color Info: Redefining color UserColor on input line 115.
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+Package color Info: Redefining color UserColor on input line 120.
+Package color Info: Redefining color UserColor on input line 120.
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+Package color Info: Redefining color UserColor on input line 124.
+Package color Info: Redefining color UserColor on input line 124.
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+Package color Info: Redefining color UserColor on input line 128.
+Package color Info: Redefining color UserColor on input line 128.
+
+LaTeX Warning: Marginpar on page 14 moved.
+
 
 LaTeX Warning: Marginpar on page 14 moved.
 
 [14
 
-]
-CHAPTER 3.
-Package color Info: Redefining color UserColor on input line 963.
-Package color Info: Redefining color UserColor on input line 1007.
-[15
+
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1027--1028
-
- []
-
-
-Overfull \hbox (22.35966pt too wide) in paragraph at lines 1022--1037
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1020--1039
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1058
-
- []
-
-
-Overfull \hbox (22.35966pt too wide) in paragraph at lines 1050--1070
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1073
-
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1095
-
- []
-
-
-Overfull \hbox (22.35966pt too wide) in paragraph at lines 1088--1104
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1085--1106
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1116--1119
-
- []
-
-
-Overfull \hbox (22.35966pt too wide) in paragraph at lines 1111--1128
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1108--1130
-
- []
-
-Package color Info: Redefining color UserColor on input line 1137.
-Package color Info: Redefining color UserColor on input line 1151.
-[17]
-Package color Info: Redefining color UserColor on input line 1180.
-Package color Info: Redefining color UserColor on input line 1198.
-Package color Info: Redefining color UserColor on input line 1220.
- [18]
-Package color Info: Redefining color UserColor on input line 1230.
-Package color Info: Redefining color UserColor on input line 1248.
- [19]
-Underfull \hbox (badness 10000) in paragraph at lines 1294--1298
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1309--1314
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1315--1323
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1324--1328
-
- []
-
-[20]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 1402.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1412--1412
-[]\T1/pcr/m/n/10.95 Remove $\OML/cmm/m/it/10.95 S[]$\T1/pcr/m/n/10.95 , $\OML/c
-mm/m/it/10.95 S[]$ \T1/pcr/m/n/10.95 and add the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1409--1413
-[] []$\OMS/cmsy/m/n/12 F[]   \OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 F[] n f\OML/cmm/
-m/it/12 S[]; S[]\OMS/cmsy/m/n/12 g\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 [ f\OML/cm
-m/m/it/12 S[] \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 S[]; S[] \OMS/cmsy/m/n/12 n \
-OML/cmm/m/it/12 S[]; S[] \OMS/cmsy/m/n/12 n \OML/cmm/m/it/12 S[]\OMS/cmsy/m/n/1
-2 g$ []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1419--1419
-[]\T1/pcr/m/n/10.95 Carry forward the path
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1419--1419
-\T1/pcr/m/n/10.95 labeling for all existing sets
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1422
-[]\T1/pcr/m/n/10.95 Define path labeling for new
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[21]
-Overfull \hbox (5.45537pt too wide) in paragraph at lines 1485--1490
-[]\T1/ptm/m/it/12 Consider four paths in a tree $\OML/cmm/m/it/12 Q[]; Q[]; Q[]
-; Q[]$ \T1/ptm/m/it/12 such that they have nonempty
- []
-
-
-LaTeX Warning: Command \O invalid in math mode on input line 1498.
-
-Missing character: There is no Ø in font cmr12!
-
-LaTeX Warning: Command \O invalid in math mode on input line 1499.
-
-Missing character: There is no Ø in font cmr12!
-
-LaTeX Warning: Command \O invalid in math mode on input line 1508.
-
-Missing character: There is no Ø in font cmr12!
-
-LaTeX Warning: Command \O invalid in math mode on input line 1508.
-
-Missing character: There is no Ø in font cmr12!
-[22pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.1521 \end{proof}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.1521 \end{proof}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.1521 \end{proof}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.1521 \end{proof}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.1521 \end{proof}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.1521 \end{proof}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.1521 \end{proof}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.1521 \end{proof}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.1521 \end{proof}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.1521 \end{proof}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.1521 \end{proof}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.1521 \end{proof}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.1521 \end{proof}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.1521 \end{proof}
-                  ] [23] [24]
-
-LaTeX Warning: The counter will not be printed.
-             The label is: \xbullet  on input line 1625.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1630--1647
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1652--1664
-
- []
-
-[25]pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1816     \STATE
-                  $\cF_0 \assign \cF$, $\cl_0(S) \assign \cl(S)$ for all $S ...
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.1}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1816     \STATE
-                  $\cF_0 \assign \cF$, $\cl_0(S) \assign \cl(S)$ for all $S ...
-
-Underfull \hbox (badness 10000) in paragraph at lines 1818--1818
-[]\T1/pcr/m/n/10.95 Path images are such that no
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1819     \STATE
-                  $j \assign 1$\\pdfTeX warning (ext4): destination with the sa
-me identifier (name{ALC@line.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1819     \STATE
-                  $j \assign 1$\\
-Underfull \hbox (badness 10000) in paragraph at lines 1816--1819
-[] []$\OMS/cmsy/m/n/12 F[]   F$\T1/ptm/m/n/12 , $\OT1/pzc/mb/it/12 l[]\OT1/cmr/
-m/n/12 (\OML/cmm/m/it/12 S\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12   \OT1/pzc/mb/it/1
-2 l\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 S\OT1/cmr/m/n/12 )$ \T1/ptm/m/n/12 for all
- $\OML/cmm/m/it/12 S \OMS/cmsy/m/n/12 2 F[]$  
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1821 ...j-1}$ such that $v \in \cl_{j-1}(S_1)$ }
-                                                  \label{uniqueleaf}pdfTeX warn
-ing (ext4): destination with the same identifier (name{ALC@line.3}) has been al
-ready used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1821 ...j-1}$ such that $v \in \cl_{j-1}(S_1)$ }
-                                                  \label{uniqueleaf}pdfTeX warn
-ing (ext4): destination with the same identifier (name{ALC@rem.1}) has been alr
-eady used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1822     \STATE
-                  $\cF_j \assign \cF_{j-1} \setminus \{S_1\}$\\pdfTeX warning (
-ext4): destination with the same identifier (name{ALC@line.4}) has been already
- used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1822     \STATE
-                  $\cF_j \assign \cF_{j-1} \setminus \{S_1\}$\\pdfTeX warning (
-ext4): destination with the same identifier (name{ALC@rem.1}) has been already 
-used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1823     \STATE
-                  for all $S \in \cF_{j-1}$ such that $S \ne S_1$ setpdfTeX war
-ning (ext4): destination with the same identifier (name{ALC@line.5}) has been a
-lready used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1823     \STATE
-                  for all $S \in \cF_{j-1}$ such that $S \ne S_1$ setpdfTeX war
-ning (ext4): destination with the same identifier (name{ALC@rem.1}) has been al
-ready used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1826     \STATE
-                  $X \assign S_1 \setminus \bigcup_{S \in \cF_{j-1}, S \ne S...
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.6}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1826     \STATE
-                  $X \assign S_1 \setminus \bigcup_{S \in \cF_{j-1}, S \ne S...
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1827     \IF{$X$ is empty}
-                             \label{xempty} \STATE {\bf exit} \label{ln:exit...
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.7}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1827     \IF{$X$ is empty}
-                             \label{xempty} \STATE {\bf exit} \label{ln:exit...
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1827     \IF{$X$ is empty} \label{xempty} \STATE
-                                                   {\bf exit} \label{ln:exit...
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.8}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1827     \IF{$X$ is empty} \label{xempty} \STATE
-                                                   {\bf exit} \label{ln:exit...
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1827 ...STATE {\bf exit} \label{ln:exit2} \ENDIF
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{ALC@line.9}) has been already used, duplic
-ate ignored
-<to be read again> 
-                   \relax 
-l.1827 ...STATE {\bf exit} \label{ln:exit2} \ENDIF
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{ALC@rem.1}) has been already used, duplica
-te ignored
-<to be read again> 
-                   \relax 
-l.1828     \STATE
-                  $x \assign $ arbitrary element from $X$\\pdfTeX warning (ext4
-): destination with the same identifier (name{ALC@line.10}) has been already us
-ed, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1828     \STATE
-                  $x \assign $ arbitrary element from $X$\\pdfTeX warning (ext4
-): destination with the same identifier (name{ALC@rem.1}) has been already used
-, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1829     \STATE
-                  $\cF_j \assign \cF_j \cup \{\{x\}, S_1 \setminus \{x\}\} $\\p
-dfTeX warning (ext4): destination with the same identifier (name{ALC@line.11}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1829     \STATE
-                  $\cF_j \assign \cF_j \cup \{\{x\}, S_1 \setminus \{x\}\} $\\p
-dfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1830     \STATE
-                  $\cl_j(\{x\}) \assign \{v\}$\\pdfTeX warning (ext4): destinat
-ion with the same identifier (name{ALC@line.12}) has been already used, duplica
-te ignored
-<to be read again> 
-                   \relax 
-l.1830     \STATE
-                  $\cl_j(\{x\}) \assign \{v\}$\\pdfTeX warning (ext4): destinat
-ion with the same identifier (name{ALC@rem.1}) has been already used, duplicate
- ignored
-<to be read again> 
-                   \relax 
-l.1831     \STATE
-                  $\cl_j(S_1 \setminus \{x\}) \assign \cl_{j-1}(S_1) \setmin...
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.13})
- has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1831     \STATE
-                  $\cl_j(S_1 \setminus \{x\}) \assign \cl_{j-1}(S_1) \setmin...
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1832     \STATE
-                  $j \assign j+1$\\pdfTeX warning (ext4): destination with the 
-same identifier (name{ALC@line.14}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1832     \STATE
-                  $j \assign j+1$\\pdfTeX warning (ext4): destination with the 
-same identifier (name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1833     \ENDWHILE
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{ALC@line.15}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1833     \ENDWHILE
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1834     \STATE
-                  $\cF' \assign \cF_j$, $\cl' \assign \cl_j$\\pdfTeX warning (e
-xt4): destination with the same identifier (name{ALC@rem.1}) has been already u
-sed, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1835     \RETURN
-                   $(\cF', \cl')$
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[26] [27] [28] [29] [30]pdfTeX warning (ext4): destination with the same identi
-fier (name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2089     \IF{$T$ is empty}
-                            pdfTeX warning (ext4): destination with the same id
-entifier (name{ALC@line.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2089     \IF{$T$ is empty}
-                            pdfTeX warning (ext4): destination with the same id
-entifier (name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2090     \RETURN
-                   $\emptyset$\\pdfTeX warning (ext4): destination with the sam
-e identifier (name{ALC@line.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2090     \RETURN
-                   $\emptyset$\\pdfTeX warning (ext4): destination with the sam
-e identifier (name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2091     \ENDIF
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{ALC@line.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2091     \ENDIF
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2092     \STATE
-                  $L \assign \{v \mid v \text{ is a leaf in }      T\}$\\pdfTeX
- warning (ext4): destination with the same identifier (name{ALC@line.4}) has be
-en already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2092     \STATE
-                  $L \assign \{v \mid v \text{ is a leaf in }      T\}$\\pdfTeX
- warning (ext4): destination with the same identifier (name{ALC@rem.1}) has bee
-n already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2093     \STATE
-                  $(\cF_1, \cl_1) \assign$ {\tt filter\_1($\cF, \cl,pdfTeX warn
-ing (ext4): destination with the same identifier (name{ALC@line.5}) has been al
-ready used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2093     \STATE
-                  $(\cF_1, \cl_1) \assign$ {\tt filter\_1($\cF, \cl,pdfTeX warn
-ing (ext4): destination with the same identifier (name{ALC@rem.1}) has been alr
-eady used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2095     \STATE
-                  $(\cF_2, \cl_2) \assign$ {\tt filter\_2($\cF_1,pdfTeX warning
- (ext4): destination with the same identifier (name{ALC@line.6}) has been alrea
-dy used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2095     \STATE
-                  $(\cF_2, \cl_2) \assign$ {\tt filter\_2($\cF_1,pdfTeX warning
- (ext4): destination with the same identifier (name{ALC@rem.1}) has been alread
-y used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2098     \STATE
-                  $(\cF', \cl') \assign (\cF_2, \cl_2)$\\pdfTeX warning (ext4):
- destination with the same identifier (name{ALC@line.7}) has been already used,
- duplicate ignored
-<to be read again> 
-                   \relax 
-l.2098     \STATE
-                  $(\cF', \cl') \assign (\cF_2, \cl_2)$\\pdfTeX warning (ext4):
- destination with the same identifier (name{ALC@rem.1}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.2099     \STATE
-                  $\phi' \leftarrow \emptyset$pdfTeX warning (ext4): destinatio
-n with the same identifier (name{ALC@line.8}) has been already used, duplicate 
-ignored
-<to be read again> 
-                   \relax 
-l.2099     \STATE
-                  $\phi' \leftarrow \emptyset$pdfTeX warning (ext4): destinatio
-n with the same identifier (name{ALC@rem.1}) has been already used, duplicate i
-gnored
-<to be read again> 
-                   \relax 
-l.2101     \FOR {every $v \in L$}
-                                 pdfTeX warning (ext4): destination with the sa
-me identifier (name{ALC@line.9}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2101     \FOR {every $v \in L$}
-                                 pdfTeX warning (ext4): destination with the sa
-me identifier (name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2102     \STATE
-                  $\phi'(x) \assign v$ where $x \in \cl_2^{-1}(\{v\})$pdfTeX wa
-rning (ext4): destination with the same identifier (name{ALC@line.10}) has been
- already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2102     \STATE
-                  $\phi'(x) \assign v$ where $x \in \cl_2^{-1}(\{v\})$
-Underfull \hbox (badness 10000) in paragraph at lines 2105--2105
-[]\T1/pcr/m/n/10.95 Copy the leaf labels to a one
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2106     \STATE
-                  Remove $\{x\}$ and $\{v\}$ from $\cF'$, $\cl'$  appropriat...
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.11})
- has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2106     \STATE
-                  Remove $\{x\}$ and $\{v\}$ from $\cF'$, $\cl'$  appropriat...
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2107     \ENDFOR
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{ALC@line.12}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2107     \ENDFOR
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2109     \STATE
-                  $T' \assign T \setminus L$pdfTeX warning (ext4): destination 
-with the same identifier (name{ALC@line.13}) has been already used, duplicate i
-gnored
-<to be read again> 
-                   \relax 
-l.2109     \STATE
-                  $T' \assign T \setminus L$pdfTeX warning (ext4): destination 
-with the same identifier (name{ALC@rem.1}) has been already used, duplicate ign
-ored
-<to be read again> 
-                   \relax 
-l.2111     \STATE
-                  $\phi'' \assign$ {\ttpdfTeX warning (ext4): destination with 
-the same identifier (name{ALC@line.14}) has been already used, duplicate ignore
-d
-<to be read again> 
-                   \relax 
-l.2111     \STATE
-                  $\phi'' \assign$ {\ttpdfTeX warning (ext4): destination with 
-the same identifier (name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2113     \STATE
-                  $\phi \assign \phi'' \cup \phi'$ \\pdfTeX warning (ext4): des
-tination with the same identifier (name{ALC@line.15}) has been already used, du
-plicate ignored
-<to be read again> 
-                   \relax 
-l.2113     \STATE
-                  $\phi \assign \phi'' \cup \phi'$ \\pdfTeX warning (ext4): des
-tination with the same identifier (name{ALC@rem.1}) has been already used, dupl
-icate ignored
-<to be read again> 
-                   \relax 
-l.2114     \RETURN
-                   $\phi$pdfTeX warning (ext4): destination with the same ident
-ifier (name{ALC@line.16}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2114     \RETURN
-                   $\phi$
-Overfull \hbox (25.25322pt too wide) in paragraph at lines 2120--2126
-[]\T1/ptm/m/it/12 If $\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 F\OML/cmm/m/it/12 ; \OT
-1/pzc/mb/it/12 l\OT1/cmr/m/n/12 )$ \T1/ptm/m/it/12 is an ICPPL from a tree $\OM
-L/cmm/m/it/12 T$ \T1/ptm/m/it/12 and Al-go-rithm []3[], \T1/pcr/m/n/12 get- hyp
-ergraph-
- []
-
-[31]
-Package color Info: Redefining color UserColor on input line 2162.
-LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <17.28> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 2162
-.
-
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `\tnote' on input line 2162.
-
-[32]
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 2199.
-
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 2199.
-
-File: cop-tree_thesis.1 Graphic file (type mps)
-[MP to PDF] (./cop-tree_thesis.1)
-File: cop-tree_thesis.2 Graphic file (type mps)
- [MP to PDF] (./cop-tree_thesis.2) [33pdfTeX warning (ext4): destination with t
-he same identifier (name{figure.3.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.2243 
-       ] [34]
-Package color Info: Redefining color UserColor on input line 2400.
- [35]pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.
+Package color Info: Redefining color UserColor on input line 192.
+ [15pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 1}) has been already used, duplicate ignored
 <to be read again> 
-                   \relax 
-l.2483     \IF{$X = S_{sm}$}
-                            pdfTeX warning (ext4): destination with the same id
-entifier (name{ALC@line.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2483     \IF{$X = S_{sm}$}
-                            pdfTeX warning (ext4): destination with the same id
-entifier (name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2484     \STATE
-                  -- TBD --\\pdfTeX warning (ext4): destination with the same i
-dentifier (name{ALC@line.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2484     \STATE
-                  -- TBD --\\pdfTeX warning (ext4): destination with the same i
-dentifier (name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2486     \STATE
-                  -- TBD --\\pdfTeX warning (ext4): destination with the same i
-dentifier (name{ALC@line.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2486     \STATE
-                  -- TBD --\\pdfTeX warning (ext4): destination with the same i
-dentifier (name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2486     \STATE
-                  -- TBD --\\pdfTeX warning (ext4): destination with the same i
-dentifier (name{ALC@line.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2486     \STATE
-                  -- TBD --\\pdfTeX warning (ext4): destination with the same i
-dentifier (name{ALC@rem.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2487     \ENDIF
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{ALC@line.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2487     \ENDIF
-                 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-Package color Info: Redefining color UserColor on input line 2500.
-
-LaTeX Warning: Reference `prelims' on page 36 undefined on input line 2503.
+                   \endgroup \set@typeset@protect 
+l.199 
+      ]
+Package color Info: Redefining color UserColor on input line 206.
+Package color Info: Redefining color UserColor on input line 209.
+Package color Info: Redefining color UserColor on input line 211.
+Package color Info: Redefining color UserColor on input line 219.
+Package color Info: Redefining color UserColor on input line 232.
+Package color Info: Redefining color UserColor on input line 234.
+Package color Info: Redefining color UserColor on input line 237.
 
 
-LaTeX Warning: Reference `feasible' on page 36 undefined on input line 2504.
+LaTeX Warning: Marginpar on page 16 moved.
 
-[36]
-Package color Info: Redefining color UserColor on input line 2517.
-Package color Info: Redefining color UserColor on input line 2547.
 
-Overfull \hbox (4.30008pt too wide) in paragraph at lines 2547--2547
-[][][][]\T1/ptm/m/n/6 citeplr70,gav78,bp93.[][] 
+LaTeX Warning: Marginpar on page 16 moved.
+
+[16]
+Package color Info: Redefining color UserColor on input line 259.
+Package color Info: Redefining color UserColor on input line 261.
+Package color Info: Redefining color UserColor on input line 266.
+
+
+LaTeX Warning: Marginpar on page 17 moved.
+
+
+LaTeX Warning: Marginpar on page 17 moved.
+
+Package color Info: Redefining color UserColor on input line 297.
+Package color Info: Redefining color UserColor on input line 305.
+[17]
+Package color Info: Redefining color UserColor on input line 314.
+Package color Info: Redefining color UserColor on input line 316.
+Package color Info: Redefining color UserColor on input line 317.
+
+
+LaTeX Warning: Marginpar on page 18 moved.
+
+
+LaTeX Warning: Marginpar on page 18 moved.
+
+Package color Info: Redefining color UserColor on input line 325.
+Package color Info: Redefining color UserColor on input line 330.
+
+Overfull \hbox (23.47563pt too wide) in paragraph at lines 330--330
+[][]\OT1/ptm/m/n/6 .[] 
  []
 
-Package color Info: Redefining color UserColor on input line 2556.
+Package color Info: Redefining color UserColor on input line 331.
+Package color Info: Redefining color UserColor on input line 331.
+Package color Info: Redefining color UserColor on input line 333.
 
-LaTeX Warning: Marginpar on page 37 moved.
-
-
-LaTeX Warning: Command \O invalid in math mode on input line 2594.
-
-Missing character: There is no Ø in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 2574--2607
-
- []
-
-[37] [38]
-Overfull \hbox (10.4285pt too wide) in paragraph at lines 2631--2635
-[]\T1/ptm/m/it/12 For each pair of prime sub-matrices, ei-ther $\OT1/cmr/m/n/12
- (\OML/cmm/m/it/12 M[]; M[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 62\U/msa/m/n/12 4
-$ \T1/ptm/m/it/12 or $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M[]; M[]\OT1/cmr/m/n/12
- ) \OMS/cmsy/m/n/12 62\U/msa/m/n/12 4$\T1/ptm/m/it/12 . 
- []
+LaTeX Warning: Marginpar on page 18 moved.
 
 
-Overfull \hbox (31.02487pt too wide) in paragraph at lines 2641--2644
-[]\T1/ptm/m/it/12 If $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M[]; M[]\OT1/cmr/m/n/12
- ) \OMS/cmsy/m/n/12 2\U/msa/m/n/12 4$ \T1/ptm/m/it/12 and $\OT1/cmr/m/n/12 (\OM
-L/cmm/m/it/12 M[]; M[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2\U/msa/m/n/12 4$\T1/p
-tm/m/it/12 , then ei-ther $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M[]; M[]\OT1/cmr/m
-/n/12 ) \OMS/cmsy/m/n/12 2\U/msa/m/n/12 4$ \T1/ptm/m/it/12 or $\OT1/cmr/m/n/12 
-(\OML/cmm/m/it/12 M[]; M[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2\U/msa/m/n/12 4$\
-T1/ptm/m/it/12 . 
- []
-
-[39] [40]
-Underfull \hbox (badness 5893) in paragraph at lines 2779--2779
-[] \T1/ptm/b/n/12 Al-go-rithm 5 \T1/ptm/m/n/12 Al-go-rithm to find an ICPPA for
- a ma-trix $\OML/cmm/m/it/12 M$ \T1/ptm/m/n/12 on tree $\OML/cmm/m/it/12 T$\T1/
-ptm/m/n/12 :
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2782     \STATE
-                  Identify the prime sub-matrices. This is done by construct...
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.1}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2782     \STATE
-                  Identify the prime sub-matrices. This is done by construct...
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.2}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2783     \STATE
-                  Construct the partial order $\preccurlyeq$ on the set of p...
-pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.3}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2784     \STATE
-                  Construct the partition $X_1,\ldots,X_r$ of the primepdfTeX w
-arning (ext4): destination with the same identifier (name{ALC@line.4}) has been
- already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2786     \STATE
-                  For each $1 \leq i \leq r$, Check if all matrices exceptpdfTe
-X warning (ext4): destination with the same identifier (name{ALC@line.5}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2789 ...se the result in \cite{nsnrs09}.  \STATE
-                                                   Find a partition of [41]
-[42]
-
-LaTeX Warning: Command \l invalid in math mode on input line 2886.
-
-Missing character: There is no ª in font cmr12!
-[43] [44]
-CHAPTER 4.
-[45
-
-]
-Package color Info: Redefining color UserColor on input line 3360.
-Package color Info: Redefining color UserColor on input line 3365.
-Package color Info: Redefining color UserColor on input line 3368.
-Package color Info: Redefining color UserColor on input line 3370.
-
-Overfull \hbox (13.02191pt too wide) in paragraph at lines 3370--3370
-[]$[]$[]\T1/ptm/m/it/10 TH[][]\T1/ptm/m/n/10 :[] []\T1/ptm/m/n/6 ELAB[][]O[][]R
-ATE.[]  
- []
-
-Package color Info: Redefining color UserColor on input line 3373.
-
-Overfull \hbox (2.46194pt too wide) in paragraph at lines 3373--3373
-[]$[]$[]\T1/ptm/m/it/10 TH[][]\T1/ptm/m/n/10 :[] []\T1/ptm/m/n/6 RE[][]WORD[]  
-
- []
+LaTeX Warning: Marginpar on page 18 moved.
 
 
-LaTeX Warning: Marginpar on page 46 moved.
+LaTeX Warning: Marginpar on page 18 moved.
 
 
-LaTeX Warning: Marginpar on page 46 moved.
+LaTeX Warning: Marginpar on page 18 moved.
 
-Package color Info: Redefining color UserColor on input line 3388.
-Package color Info: Redefining color UserColor on input line 3416.
+(./thesis.ent [18])
+Package color Info: Redefining color UserColor on input line 350.
+) [19]
 
-Overfull \hbox (8.31187pt too wide) in paragraph at lines 3416--3416
-[]$[]$[]\T1/ptm/m/it/10 TH[][]\T1/ptm/m/n/10 :[]  []\T1/ptm/m/n/6 ||Com[][]plex
-[][]ity[] 
- []
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\tnote' on input line 96.
 
-Package color Info: Redefining color UserColor on input line 3430.
+(./thesis.bbl [47
 
-LaTeX Warning: Marginpar on page 46 moved.
 
-[46] (./thesis.bbl [47
 
-]) [48] (./thesis.aux)
 
-LaTeX Warning: There were undefined references.
-
+]) [48] (./thesis.aux (./001certificate.aux) (./002ack.aux)
+(./0021ded.aux) (./003abstract.aux) (./004abbrv.aux) (./005notation.aux)
+(./010chap1.aux) (./020chap2.aux) (./030chap3.aux) (./040chap4.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6796 strings out of 94073
- 94371 string characters out of 1162984
- 273182 words of memory out of 1500000
- 9548 multiletter control sequences out of 10000+50000
- 111493 words of font info for 147 fonts, out of 1200000 for 2000
+ 7991 strings out of 94073
+ 111575 string characters out of 1162984
+ 183637 words of memory out of 1500000
+ 10806 multiletter control sequences out of 10000+50000
+ 62994 words of font info for 128 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 42i,20n,41p,1176b,1472s stack positions out of 5000i,500n,6000p,200000b,5000s
-{/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/20
-07/texmf-dist/fonts/type1/bluesky/cm/cmbx8.pfb></usr/local/texlive/2007/texmf-d
-ist/fonts/type1/bluesky/cm/cmex10.pfb></usr/local/texlive/2007/texmf-dist/fonts
-/type1/bluesky/cm/cmmi10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bl
-uesky/cm/cmmi12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/
-cmmi6.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi8.pfb>
-</usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/loca
-l/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr12.pfb></usr/local/texlive/
-2007/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/texlive/2007/texmf-
-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2007/texmf-dist/fonts/
-type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blues
-ky/cm/cmsy10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cms
-y6.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy7.pfb></u
-sr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy8.pfb></usr/local/t
-exlive/2007/texmf-dist/fonts/type1/bluesky/ams/msam10.pfb></usr/local/texlive/2
-007/texmf-dist/fonts/type1/bluesky/ams/msbm10.pfb></usr/local/texlive/2007/texm
-f-dist/fonts/type1/bluesky/ams/msbm7.pfb></usr/local/texlive/2007/texmf-dist/fo
-nts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/type
-1/urw/times/utmb8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/time
-s/utmbi8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/times/utmr8a.
-pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr
-/local/texlive/2007/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on thesis.pdf (58 pages, 760115 bytes).
+ 42i,20n,42p,773b,498s stack positions out of 5000i,500n,6000p,200000b,5000s
+pdfTeX warning (dest): name{figure.3.1} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.4} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.6.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.5.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.4.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.4.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{changenumber.32.1} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.3} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter*.7} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter*.6} has been referenced but does not exist,
+ replaced by a fixed one
+
+{/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
+live/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/texlive/2007
+/texmf-dist/fonts/type1/bluesky/cm/cmmi12.pfb></usr/local/texlive/2007/texmf-di
+st/fonts/type1/bluesky/cm/cmmi6.pfb></usr/local/texlive/2007/texmf-dist/fonts/t
+ype1/bluesky/cm/cmr10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blues
+ky/cm/cmr12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr6
+.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/
+local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texli
+ve/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/texlive/2007/t
+exmf-dist/fonts/type1/bluesky/cm/cmsy6.pfb></usr/local/texlive/2007/texmf-dist/
+fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/texlive/2007/texmf-dist/fonts/type
+1/bluesky/cm/cmsy8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/
+ams/msbm10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/msbm
+7.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></
+usr/local/texlive/2007/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/
+texlive/2007/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2
+007/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2007/texmf-
+dist/fonts/type1/urw/times/utmri8a.pfb></usr/local/texlive/2007/texmf-dist/font
+s/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on thesis.pdf (26 pages, 540915 bytes).
 PDF statistics:
- 1119 PDF objects out of 1200 (max. 8388607)
- 323 named destinations out of 1000 (max. 131072)
- 343 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 687 PDF objects out of 1000 (max. 8388607)
+ 193 named destinations out of 1000 (max. 131072)
+ 239 words of extra memory for PDF output out of 10000 (max. 10000000)
 

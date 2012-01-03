@@ -46,7 +46,8 @@
 
 \NeedsTeXFormat{LaTeX2e}
 
-\ProvidesClass{iitmdiss_as}[2005/03/09 Class for IIT-Madras Dissertations]
+\ProvidesClass{iitmdiss_as}[2012/01/01 Class for IIT-Madras
+Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
 
 \newif\if@PhD
 \newif\if@MS

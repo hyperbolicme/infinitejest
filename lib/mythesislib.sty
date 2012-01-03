@@ -7,7 +7,9 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{mythesislib} [2011/12/21]
 
-\usepackage{xspace}
+\usepackage{endnotes}          % To have "Notes" section as an
+                               %  alternative to footnotes.
+\usepackage{xspace}            % For smart spaceing in \def strings.
 
 %%% Sizes and widths and other relevant formatting numbers %%%
 \def \secfirstparatrim {-5mm}
@@ -15,10 +17,11 @@
 \def \probdefwidth {0.85\linewidth}
 
 %%% Illustration %%%
-\def \LLL {{\em ``$\mathbb{B}$rief Interviews with Hideous Men''}\xspace} 
-\def \GGG {{\em ``The String $\mathbb{T}$heory''}\xspace}  
-\def \BBB {{\em ``[$\mathbb{W}$]Rhetoric and the Math Melodrama''}\xspace} 
-\def \TTT {{\em ``$\mathbb{F}$ate, Time, and Language: An Essay on
+\def \illustrationproblem {study group accomodation problem\xspace} 
+\def \LLL {\emph{``$\mathbb{B}$rief Interviews with Hideous Men''}\xspace} 
+\def \GGG {\emph{ ``The String $\mathbb{T}$heory''}\xspace}  
+\def \BBB {\emph{ ``[$\mathbb{W}$]Rhetoric and the Math Melodrama''}\xspace} 
+\def \TTT {\emph{ ``$\mathbb{F}$ate, Time, and Language: An Essay on
     Free Will''}\xspace} 
 \def \xLLL {\mathbb{B}\xspace}
 \def \xGGG {\mathbb{T}\xspace} 
@@ -56,6 +59,7 @@
 \def \FTPL {\textsc{Feasible Tree Path Labeling}\xspace}
 \def \CFTPL {\textsc{Compute Feasible Tree Path Labeling}\xspace} 
 \def \kstar {$k$-subdivided star\xspace}
+\def \kstars {$k$-subdivided stars\xspace}
 \def \CFTPLINT {\textsc{Compute Interval
     Labeling}\xspace} 
 \def \CFTPLKTREE {\textsc{Compute $k$-subdivided Star Path
@@ -84,5 +88,5 @@
 \newtheorem{definition}{Definition}[section]
 \newcommand{\qed}{\hfill \mbox{\raggedright \rule{.07in}{.1in}}}
 
-
+\renewcommand\notesname{Chapter Notes}
 

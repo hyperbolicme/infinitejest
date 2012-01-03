@@ -8,6 +8,8 @@
 \ProvidesPackage{mylatexlib} [2011/10/21]
 
 \usepackage{epsfig}            % Graphics related. exactly what?
+%\usepackage{picins}            % Placing pictures inside text. NOT
+                               %  AVAILABLE - TBD  
 \usepackage{graphicx}          % For MetaPost
 \usepackage{ifpdf}             
 \usepackage{epstopdf}          % Graphics related. exactly what?
@@ -34,7 +36,6 @@
 %\usepackage{pifont}
 \usepackage{textcomp}          % Has certain special chars like
                                %  \textreferencemark
-
 %\usepackage[inline] 
 \usepackage[margins] 
 %\usepackage[finalnew]
@@ -64,12 +65,12 @@
                                %   All changes and notes will be
                                %   shown inline.
 
-\addeditor{GTC}                % stuff to prep for synopsis meeting +
-                               %  should go into thesis
-\addeditor{bogus2}             % 
-\addeditor{a}                  % 
-\addeditor{bogus4}             % 
-\addeditor{TH}                 % extra stuff that need to go into thesis
+\addeditor{bogus1}             %
+\addeditor{important}          % needs attention level 2
+\addeditor{dire} %{a}          % needs attention level infinity NOW!
+\addeditor{minor}              % least priority TBDs that
+                               %  need to go into thesis  
+\addeditor{pressing}           % needs attention level 1
 
 \DeclareMathAlphabet{\mathpzc} % Loading certain calligraphy fonts
                       {OT1}{pzc}{m}{it}
