@@ -381,15 +381,23 @@ feasibility of tree path labeling.  Consider a path labeling $(\cF,
   Cardinality Preserving Path Labeling (ICPPL)} if it has the
 following properties.
 
-\begin{enumerate}[{(\icpplpr\ }i) \ \ \ ]
-\item \label{pr:i} $|S| = |\cl(S)|$ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for all $S \in \cF$
+% \begin{enumerate}[{(\icpplpr\ }i) \ \ \ ]
+% \item \label{pr:i} $|S| = |\cl(S)|$ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+%   \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for all $S \in \cF$
+%   % \vspace{\topshrink}
+% \item \label{pr:ii}$|S_1 \cap S_2| = |\cl(S_1) \cap \cl(S_2)|$ \ \ \ \
+%   \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for all distinct $S_1, S_2 \in \cF$
+%   % \vspace{\topshrink}
+% \item \label{pr:iii}$|S_1 \cap S_2 \cap S_3| = |\cl(S_1) \cap \cl(S_2)
+%   \cap \cl(S_3)|$ \ \ \ for all distinct $S_1, S_2, S_3 \in \cF$
+% \end{enumerate}
+\begin{enumerate}[{(\icpplpr\ }i)]
+\item \label{pr:i} $|S| = |\cl(S)|$ for all $S \in \cF$
   % \vspace{\topshrink}
-\item \label{pr:ii}$|S_1 \cap S_2| = |\cl(S_1) \cap \cl(S_2)|$ \ \ \ \
-  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for all distinct $S_1, S_2 \in \cF$
+\item \label{pr:ii}$|S_1 \cap S_2| = |\cl(S_1) \cap \cl(S_2)|$ for all distinct $S_1, S_2 \in \cF$
   % \vspace{\topshrink}
 \item \label{pr:iii}$|S_1 \cap S_2 \cap S_3| = |\cl(S_1) \cap \cl(S_2)
-  \cap \cl(S_3)|$ \ \ \ for all distinct $S_1, S_2, S_3 \in \cF$
+  \cap \cl(S_3)|$ for all distinct $S_1, S_2, S_3 \in \cF$
 \end{enumerate}
 
 
@@ -406,7 +414,7 @@ The following lemma is useful in subsequent arguments.
   |S_1 \cap S_2 \cap S_3|$. Due to properties (ii) and (iii) of ICPPL,
   $|S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3| = |P_1 \cap P_2| - |P_1
   \cap P_2 \cap P_3| = |(P_1 \cap P_2) \setminus P_3| = |P_1 \cap (P_2
-  \setminus P_3)|$. Thus lemma is proven. \qed
+  \setminus P_3)|$. Thus lemma is proven. %\qed
 \end{proof}
 
 
@@ -499,7 +507,7 @@ paths in the new path labeling share any leaf.
   \setminus S_2) = \cl_{j-1}(S_1) \setminus \cl_{j-1}(S_2) =
   \cl_{\phi[{\cF_{j-1}}]}(S_1) \setminus
   \cl_{\phi[{\cF_{j-1}}]}(S_2)$. Thus the induced path labeling
-  $\cl_{\phi[{\cF_{j}}]} = \cl_{j}$. Therefore lemma is proven.  \qed
+  $\cl_{\phi[{\cF_{j}}]} = \cl_{j}$. Therefore lemma is proven.  %\qed
 \end{proof}
 
 
@@ -517,7 +525,7 @@ paths in the new path labeling share any leaf.
   |S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3|$. Due to conditions (ii)
   and (iii) of ICPPA, $|S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3| = |P_1
   \cap P_2| - |P_1 \cap P_2 \cap P_3| = |(P_1 \cap P_2) \setminus P_3|
-  = |P_1 \cap (P_2 \setminus P_3)|$. Thus lemma is proven. \qed
+  = |P_1 \cap (P_2 \setminus P_3)|$. Thus lemma is proven. %\qed
 \end{proof}
 
 \begin{lemma}
@@ -556,7 +564,7 @@ paths in the new path labeling share any leaf.
   intersect with $Q_3 \setminus Q_4$ or $Q_4 \setminus Q_3$ which
   contradicts initial condition of this case. Thus this
   case cannot occur and case 1 is the only possible scenario. \\
-  Thus lemma is proven \qed
+  Thus lemma is proven %\qed
 \end{proof}
 
 
@@ -626,7 +634,7 @@ paths in the new path labeling share any leaf.
   from lemma \ref{lem:fourpaths} and invariant III hypothesis,
   invariant IV is proven. Similarly if $(P,Q)$ is any of the other new
   sets, invariant IV is proven by also using lemma
-  \ref{lem:setminuscard}. \qed
+  \ref{lem:setminuscard}. %\qed
 
 \end{proof} {\tt WALCOM end}
 
@@ -719,7 +727,7 @@ paths in the new path labeling share any leaf.
     % \item {\em At least two of $R, R', R''$ are new sets.}  The new
     %   sets are disjoint hence this case is vacuously true.
     % \end{enumerate}
-  \end{enumerate} \qed
+  \end{enumerate} %\qed
   % \vspace{-6mm}
 
 \end{proof}
@@ -763,7 +771,7 @@ paths in the new path labeling share any leaf.
   line~\ref{ln:3waycheck}, i.e. failure of three way intersection
   preservation, becomes true in any iteration of the {\em \bf while}
   loop.  Due to Lemma~\ref{lem:invar1} Invariant IV, the exit
-  condition does not occur if the input is a feasible ICPPL.\qed
+  condition does not occur if the input is a feasible ICPPL.%\qed
 
   % such that $\phi(x) = v$ where $v$ is the leaf considered in the
   % first iterations of while. Clearly, $\phi$ is a renaming of
@@ -779,7 +787,7 @@ paths in the new path labeling share any leaf.
   % \end{enumerate}
 
   % Thus the exit condition is never rendered true after $x$ and $v$
-  % are removed from their respective hyperedges. \qed
+  % are removed from their respective hyperedges. %\qed
 
   % \noindent
   % This proof uses mathematical induction on the number of iterations
@@ -822,7 +830,7 @@ paths in the new path labeling share any leaf.
   % \item {\em At least two of $R, R', R''$ are new sets.}  The new
   %   sets are disjoint hence this case is vacuously true.
   % \end{enumerate}
-  % \qed \tnote[E2]{remove the induction proof. just text saying x and
+  % %\qed \tnote[E2]{remove the induction proof. just text saying x and
   %   v are exclusive in these sets therefore the intersection
   %   cardinalities don't change thus all invariants are still true}
 \end{proof}
@@ -955,7 +963,7 @@ isomorphism. The following lemma shows that this will not happen.
   \cap P_3| = |(P' \setminus \{x_1\}) \cap (P'' \setminus \{x_2\})
   \cap P_3| = |P' \cap P'' \cap P_3| = |Q' \cap Q'' \cap Q_3| = |(Q'
   \setminus \{v_1\} \cap Q'' \setminus \{v_2\} \cap Q_3| = |Q_1 \cap
-  Q_2 \cap Q_3|$. Thus invariant IV is also proven.  \qed
+  Q_2 \cap Q_3|$. Thus invariant IV is also proven.  %\qed
 \end{proof}
 
 Using algorithms \ref{perms} and \ref{leafasgn} we prove the following
@@ -1034,7 +1042,7 @@ $\cL_{1}$. Remove the leaves in $T_0$ to get $T_1$ and so on until the
 pruned tree $T_d$ is a single path. Now run ICPIA algorithm on $T_d$
 to get permutation $\sigma'$. The relation $\cL_0 \cup \cL_1 \cup
 .. \cup \cL_{d} \cup \sigma'$ gives the bijection required in the
-original problem.\qed
+original problem.%\qed
 \end{proof}
 
 
@@ -1060,7 +1068,7 @@ original problem.\qed
   isomorphism bijection that maps elements in $S_2$ to those in
   $\cl_{j-1}(S_2)$. This contradicts our assumption that the input is
   feasible. Thus $X$ cannot be empty if input is ICPPL and feasible.
-  \qed
+  %\qed
 \end{proof}
 
 \begin{lemma}
@@ -1082,7 +1090,7 @@ original problem.\qed
   exclusive to $\cl_{j-1}(S)$. Due to this fact, it is clear that the
   intersection cardinality equations do not change, i.e., invariants
   II, III, IV remain true. On the other hand, if the input ICPPL is
-  not feasible the invariants are vacuously true. \qed
+  not feasible the invariants are vacuously true. %\qed
 \end{proof}
 
 % \textcolor{cyan}{
@@ -1175,7 +1183,7 @@ the characeterization of feasible path labeling.
   \rightarrow V(T)$ is a union of mutually exclusive one to one
   functions exhausting all vertices of the tree. In other words, it is
   a bijection from $supp(\cF)$ to $V(T)$ inducing the given path
-  labeling $\cl$ and thus a hypergraph isomorphism. \qed
+  labeling $\cl$ and thus a hypergraph isomorphism. %\qed
 \end{proof}
 
 \begin{theorem}
@@ -1193,7 +1201,7 @@ the characeterization of feasible path labeling.
   \cl$. Lemma~\ref{lem:noexit1} and Lemma~\ref{lem:xnotempty} show us
   that filter 1 and filter 2 do not exit if input is feasible. Thus
   Algorithm~\ref{al:icppl-find-isomorph} returns a non-empty
-  function.\qed
+  function.%\qed
 \end{proof}
 
 
@@ -1509,7 +1517,7 @@ algorithm exits reporting the non-existence of an ICPPL.
   least one vertex farther away from the leaf in $R_i$ than any vertex
   in $X$. Clearly $Y_1 \cap X$ and $Y_2 \cap X$ cannot be part of same
   inclusion chain which contradicts that assumption $X$ is
-  super-marginal. Thus the claim is proven.\qed
+  super-marginal. Thus the claim is proven.%\qed
 \end{proof}
 
 \noindent
@@ -2003,7 +2011,7 @@ in general trees.
 %   and (iii) of ICPPA, $|S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3| =
 %   |P_1 \cap P_2| - |P_1 \cap P_2 \cap P_3| = |(P_1 \cap P_2)
 %   \setminus P_3| = |P_1 \cap (P_2 \setminus P_3)|$. Thus lemma is
-%   proven. \qed
+%   proven. %\qed
 % \end{proof}
 
 % \begin{lemma}
@@ -2044,7 +2052,7 @@ in general trees.
 %   Q_2$ does not intersect with $Q_3 \setminus Q_4$ or $Q_4 \setminus
 %   Q_3$ which contradicts initial condition of this case. Thus this
 %   case cannot occur and case 1 is the only possible scenario. \\
-%   Thus lemma is proven \qed
+%   Thus lemma is proven %\qed
 % \end{proof}
 
 
@@ -2149,7 +2157,7 @@ in general trees.
 %   Q_1 \cap Q_2)$, from lemma \ref{lem:fourpaths} and invariant III
 %   hypothesis, invariant IV is proven. Similarly if $(P,Q)$ is any of
 %   the other new sets, invariant IV is proven by also using lemma
-%   \ref{lem:setminuscard}. \qed
+%   \ref{lem:setminuscard}. %\qed
 
 % \end{proof}
 
@@ -2266,7 +2274,7 @@ in general trees.
 %   \cap P_3| = |(P' \setminus \{x_1\}) \cap (P'' \setminus \{x_2\})
 %   \cap P_3| = |P' \cap P'' \cap P_3| = |Q' \cap Q'' \cap Q_3| = |(Q'
 %   \setminus \{v_1\} \cap Q'' \setminus \{v_2\} \cap Q_3| = |Q_1 \cap
-%   Q_2 \cap Q_3|$. Thus invariant IV is also proven.  \qed
+%   Q_2 \cap Q_3|$. Thus invariant IV is also proven.  %\qed
 % \end{proof}
 
 % Using algorithms \ref{perms} and \ref{leafasgn} we prove the
@@ -2347,7 +2355,7 @@ in general trees.
 %   so on until the pruned tree $T_d$ is a single path. Now run ICPIA
 %   algorithm on $T_d$ to get permutation $\sigma'$. The relation
 %   $\cL_0 \cup \cL_1 \cup .. \cup \cL_{d} \cup \sigma'$ gives the
-%   bijection required in the original problem.\qed
+%   bijection required in the original problem.%\qed
 % \end{proof}
 
 

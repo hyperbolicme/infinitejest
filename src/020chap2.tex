@@ -1,15 +1,92 @@
-\chapter{Consecutive-ones Property - a Survey of Important Results}
+\chapter{\CoP\,-- A Survey of Important Results}
 \label{ch:copsurvey}
-\tnote{[i] TBD: have a few lines about organization of chapter\ \ \ \
-  \ [ii] Survey chapter: is the full fledged expansion of the survey in
-  introduction with details, observations, theorems etc.}
 
+This chapter surveys several results that are significant to this
+thesis or to \COP in general. These predominantly pertain to
+characterizations of \COP, algorithmic tests to check for \COP (COT),
+optimization problems on binary matrices that do not have \COP and
+some applications of \COP.
 
+\tnote[important]{ADD: have a few lines about organization of chapter}
 
-\section*{-- REAL CONTENT --}
+\tnote{DEFINE COP SOMEWHERE}
 
+\section{\COP in Graph Theory}
 
+\COP is closely connected to several types of graphs by way of
+describing certain combinatorial graph properties. There are also
+certain graphs, like convex bipartite graphs, that are defined solely
+by some of its associated matrix having \COP.  In this section we will
+see the relevance of \cop to graphs.  To see this we introduce certain
+binary matrices that are used to define graphs in different
+ways. While adjacency matrix is perhaps the most commonly used such
+matrix, Definition~\ref{def:graphmatrices} defines this and a few
+more.
 
+\begin{definition}{\emph{Matrices that define
+      graphs.\cite[Def.~2.4]{d08phd}}} %
+  \label{def:graphmatrices} %
+  Let $G$ and $H$ be defined as follows. $G = (V,E_G)$ is a graph with
+  vertex set $V = \{v_i \mid i \in [n]\}$ and edge set $E_G \subseteq
+  \{(v_i,v_j) \mid i, j \in [n]\}$ such that $|E_G| = m$. $H = (A, B,
+  E_H)$ is a bipartite graph with partitions $A = \{a_i \mid i \in
+  [n_a]\}$ and $B = \{b_i \mid i \in [n_b]\}$.
+  \begin{enumerate}[{\ref{def:graphmatrices}}--i.]
+  \item \emph{Adjacency matrix} of $G$ is the symmetric $n \times n$
+    binary matrix $M$ with $m_{i,j} = \un$ \iff $(v_i,v_j) \in E_G$
+    for all $i,j \in [n]$.
+  \item \emph{Augmented adjacency matrix} of $G$ is obtained from its
+    adjacency matrix by setting all main diagonal elements to \un, \ie
+    $m_{i,i} = \un$ for all $i \in [n]$.
+  \item \emph{Maximal clique matrix} or \emph{vertex-clique incidence
+      matrix} of $G$ is the $n \times k$ binary matrix $M$ with
+    $m_{i,j} = \un$ \iff $v_i \in C_j$ for all $i \in [n], j \in [k]$
+    where $\{C_j \mid j \in [k]\}$ is the set of maximal cliques of
+    $G$.
+  \item \emph{Half adjacency matrix} of $H$ is the $n_a \times n_b$
+    binary matrix $M$ with $m_{i,j} = \un$ \iff $(a_i, b_j) \in E_H$
+  \end{enumerate}
+\end{definition}
+
+Now we will see in Definition~\ref{def:graphwithcop} certain graph
+classes that is related to \COP or \CROP.\\
+
+%\hrule
+\begin{definition}{\emph{Graphs that relate to
+      COP.\cite[Def.~2.5]{d08phd}}} %
+   \label{def:graphwithcop} %
+   Let $G$ be a graph and $H$ be a bipartite graph.
+
+   \begin{enumerate}[\ref{def:graphwithcop}--i.]
+   \item $G$ is \emph{convex-round} if its adjacency matrix has the
+     \CROP.
+   \item $G$ is \emph{concave-round} if its augmented adjacency matrix
+     has \CROP. \tnote{cite BHY00} \tnote[minor]{add CROP to glossary}
+   \item $G$ is an \emph{interval graph} if its vertices can be mapped
+     to intervals on the real line \stt two vertices are adjacent \iff
+     their corresponding intervals overlap \tnote{cite Ben59, Haj57}.
+     $G$ is an interval graph \iff its maximal clique matrix has COP
+     due to the result by \cite{gh64} which states that the maximal
+     cliques of interval graph $G$ can be linearly ordered \stt for
+     all $v \in V(G)$, cliques containing $v$ are consecutive in the
+     ordering.
+   \item $G$ is a \emph{unit interval graph} if it is an interval
+     graph \stt all intervals have the same length.
+   \item $G$ is a \emph{proper interval graph} if it is an interval
+     graph \stt no interval properly contains another.
+   \item $G$ is a \emph{circular-arc graph} if its vertices can be
+     mapped to a set of arcs on a circle \stt two vertices are
+     adjacent \iff their corresponding arcs overlap.
+   \item $H$ is \emph{convex bipartite} if its half adjacency matrix
+     has \COP on either rows or columns.
+   \item $H$ is \emph{biconvex bipartite} or \emph{doubly
+       convex}\cite{yc95} if its half adjacency matrix has \COP on
+     both rows and columns.
+   \item $H$ is \emph{circular convex} if its half adjacency matrix
+     has \CROP.
+   \end{enumerate}
+\end{definition}
+%\hrule
 
 %%%%%%                                              %%%%%%
 % [pressing]{\ \ \ \ \  is the second level of [pressing]%

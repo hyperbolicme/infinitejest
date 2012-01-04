@@ -70,6 +70,11 @@ Fanica Gavril.
   trees.
 \newblock {\em Discrete Mathematics}, 23(3):211 -- 227, 1978.
 
+\bibitem[GH64]{gh64}
+P.~C. Gilmore and A.~J. Hoffman.
+\newblock A characterization of comparability graphs and of interval graphs.
+\newblock {\em Can.~J. Math.}, 16:539--548, 1964.
+
 \bibitem[GJ79]{gj79}
 M.~R. Garey and D.~S. Johnson.
 \newblock {\em Computers and Intractability}.
@@ -194,5 +199,10 @@ Alan Tucker.
 Marinus Veldhorst.
 \newblock Approximation of the consecutive ones matrix augmentation problem.
 \newblock {\em SIAM Journal on Computing}, 14(3):709--729, August 1985.
+
+\bibitem[YC95]{yc95}
+Yu and Chen.
+\newblock Efficient parallel algorithms for doubly convex-bipartite graphs.
+\newblock {\em TCS: Theoretical Computer Science}, 147:249--265, 1995.
 
 \end{thebibliography}

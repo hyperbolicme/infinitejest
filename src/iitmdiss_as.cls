@@ -1,4 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Edited by hyperbolicme
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % This is a class for LaTeX2e that should format a report as per
 % the IITM Thesis guidelines.  The page layout is set using the
@@ -84,14 +86,23 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
 %% Using setspace to do the single/double spacing.  Setspace also
 %% makes all tables and figures have single spacing automatically.
 \RequirePackage{setspace} 
-\RequirePackage{atbeginend} % used to redefine the list environs
-\setstretch{1.5}
+\RequirePackage{atbeginend} % To wrap/encapsule an environ
+                            % around/inside another.
+% -EITHER- 1.5 spacing %
+% \def \thesisspace {1.5}
+% \setstretch{\thesisspace} % 1.5 spaces out more than command
+%                             onehalfspacing/environ onehalfspace. 
+%
+% -OR- onehalfspacing  %
+\def \thesisspacing{\onehalfspacing}
+\thesisspacing             % More appealing.
 
-\BeforeBegin{itemize}{\vspace*{-5ex}\begin{singlespace}}
-\AfterEnd{itemize}{\end{singlespace}}
 
-\BeforeBegin{enumerate}{\vspace*{-5ex}\begin{singlespace}}
-\AfterEnd{enumerate}{\end{singlespace}}
+%% hyperbolicme: one half spacing for lists too.  
+% \AfterBegin{itemize}{\begin{onehalfspace}}
+% \BeforeEnd{itemize}{\end{onehalfspace}}
+% \AfterBegin{enumerate}{\begin{onehalfspace}}
+% \BeforeEnd{enumerate}{\end{onehalfspace}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The figure captioning is done correctly via the hang option.
@@ -217,7 +228,7 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
     {\bf \large {\@department}\par} %hyperbolicme
     \vskip 5ex%        
     {\em at}\par %hyperbolicme
-    {\bf \large INDIAN INSTITUTE OF TECHNOLOGY MADRAS \par Guindy, Chennai - 600036}
+    {\bf \large INDIAN INSTITUTE OF TECHNOLOGY MADRAS} \par Guindy, Chennai - 600036
 %hyperbolicme %   {\bf INDIAN INSTITUTE OF TECHNOLOGY MADRAS} %hyperbolicme %
     \vskip 5ex %hyperbolicme
     \vglue 0.50em
@@ -354,4 +365,6 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
    \renewcommand\appendixname{APPENDIX}
 \fi
 
+%% hyperbolicme: changing overall font to Computer Modern Roman
+\renewcommand\familydefault{cmr}
 

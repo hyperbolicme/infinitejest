@@ -17,24 +17,25 @@
 \contentsline {subsection}{\numberline {1.5.3}********* Certifying Algorithms}{9}{subsection.1.5.3}
 \contentsline {section}{\numberline {1.6}Generalization of COP - the Motivation}{9}{section.1.6}
 \contentsline {section}{\numberline {1.7}Summary of New Results in this Thesis}{11}{section.1.7}
-\contentsline {chapter}{\numberline {2}Consecutive-ones Property - a Survey of Important Results}{14}{chapter.2}
-\contentsline {section}{\numberline {2.1}Matrices with COP}{14}{section.2.1}
-\contentsline {section}{\numberline {2.2}Optimization problems in COP}{14}{section.2.2}
-\contentsline {section}{\numberline {2.3}********* COP in Relational Database Model}{14}{section.2.3}
-\contentsline {section}{\numberline {2.4}********* COP in Graph Isomorphism}{14}{section.2.4}
-\contentsline {section}{\numberline {2.5}********* Certifying Algorithms}{14}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Matrices with COP}{15}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Optimization problems in COP}{17}{subsection.2.5.2}
-\contentsline {chapter}{\numberline {3}Tree Path Labeling of Path Hypergraphs - the New Results}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction}{15}{section.3.1}
-\contentsline {section}{\numberline {3.2}Preliminaries to new results}{17}{section.3.2}
-\contentsline {section}{\numberline {3.3}Characterization of Feasible Tree Path Labeling}{21}{section.3.3}
-\contentsline {section}{\numberline {3.4} Computing feasible TPL with special target trees \tnote {give problem definition etc}}{32}{changenumber.32.1}
-\contentsline {subsection}{\numberline {3.4.1}Target tree is a Path}{32}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Target tree is a $k$-subdivided Star}{33}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.5} TPL with no restrictions}{36}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Finding an assignment of tree paths to a set system}{37}{subsection.3.5.1}
-\contentsline {section}{\numberline {3.6}Complexity of Tree Path Assignment-A Discussion}{42}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Consecutive Ones Testing is in Logspace}{42}{subsection.3.6.1}
-\contentsline {chapter}{\numberline {4}Conclusion}{45}{chapter.4}
-\contentsline {chapter}{REFERENCES \tnote [minor]{make names in bib file uniform style w.r.t. firstname/initials}}{47}{changenumber.19.1}
+\contentsline {chapter}{\numberline {2}Consecutive-ones Property\xspace \tmspace +\thinmuskip {.1667em}-- A Survey of Important Results}{14}{chapter.2}
+\contentsline {section}{\numberline {2.1}COP\xspace in Graph Theory}{14}{section.2.1}
+\contentsline {section}{\numberline {2.2}Matrices with COP}{15}{section.2.2}
+\contentsline {section}{\numberline {2.3}Optimization problems in COP}{16}{section.2.3}
+\contentsline {section}{\numberline {2.4}********* COP in Relational Database Model}{16}{section.2.4}
+\contentsline {section}{\numberline {2.5}********* COP in Graph Isomorphism}{16}{section.2.5}
+\contentsline {section}{\numberline {2.6}********* Certifying Algorithms}{16}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Matrices with COP}{16}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Optimization problems in COP}{18}{subsection.2.6.2}
+\contentsline {chapter}{\numberline {3}Tree Path Labeling of Path Hypergraphs - the New Results}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{20}{section.3.1}
+\contentsline {section}{\numberline {3.2}Preliminaries to new results}{22}{section.3.2}
+\contentsline {section}{\numberline {3.3}Characterization of Feasible Tree Path Labeling}{26}{section.3.3}
+\contentsline {section}{\numberline {3.4} Computing feasible TPL with special target trees \tnote {give problem definition etc}}{37}{changenumber.37.1}
+\contentsline {subsection}{\numberline {3.4.1}Target tree is a Path}{38}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Target tree is a $k$-subdivided Star}{38}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5} TPL with no restrictions}{42}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Finding an assignment of tree paths to a set system}{43}{subsection.3.5.1}
+\contentsline {section}{\numberline {3.6}Complexity of Tree Path Assignment-A Discussion}{48}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Consecutive Ones Testing is in Logspace}{48}{subsection.3.6.1}
+\contentsline {chapter}{\numberline {4}Conclusion}{51}{chapter.4}
+\contentsline {chapter}{REFERENCES \tnote [minor]{make names in bib file uniform style w.r.t. firstname/initials}}{53}{changenumber.20.1}

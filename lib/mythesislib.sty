@@ -10,11 +10,15 @@
 \usepackage{endnotes}          % To have "Notes" section as an
                                %  alternative to footnotes.
 \usepackage{xspace}            % For smart spaceing in \def strings.
+\usepackage{amsthm}            % For theorem, lemma etc.
 
 %%% Sizes and widths and other relevant formatting numbers %%%
 \def \secfirstparatrim {-5mm}
 \def \figtabsize {\footnotesize}
 \def \probdefwidth {0.85\linewidth}
+\def \ie {i.\,e.\xspace}
+\def \iff {if and only if\xspace}
+\def \stt {such that\xspace}
 
 %%% Illustration %%%
 \def \illustrationproblem {study group accomodation problem\xspace} 
@@ -56,6 +60,16 @@
 \def \coneohone {\emph{``Influence of post modernism in Wallace's
     work''}\xspace} 
 \def \coneohtwo {\emph{``A study on fragmented prose method''}\xspace} 
+
+%%% Other strings
+\def \cop {consecutive-ones property\xspace}
+\def \Cop {Consecutive-ones property\xspace}
+\def \CoP {Consecutive-ones Property\xspace}
+\def \COP {COP\xspace}
+\def \crop {circular-ones property\xspace}
+\def \Crop {Circular-ones property\xspace}
+\def \CROP {CROP\xspace}
+
 \def \FTPL {\textsc{Feasible Tree Path Labeling}\xspace}
 \def \CFTPL {\textsc{Compute Feasible Tree Path Labeling}\xspace} 
 \def \kstar {$k$-subdivided star\xspace}
@@ -78,15 +92,57 @@
 \def \mythesisdept {Computer Science and Engineering\xspace}
 \def \myadvisor {N.\;S.\;Narayanaswamy\xspace}
 
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
-\newenvironment{proof}[1][Proof]{\begin{trivlist}
-                                \item[\hskip \labelsep {\bfseries
-                                    #1}]}
-                               {\end{trivlist}}
-\newtheorem{definition}{Definition}[section]
-\newcommand{\qed}{\hfill \mbox{\raggedright \rule{.07in}{.1in}}}
+\renewcommand\notesname{Chapter Notes} % Redefine Endnotes section
+                                % title. 
 
-\renewcommand\notesname{Chapter Notes}
+%% The following are meant to be used with amsthm
+% \newtheoremstyle{defnstyle}%
+%   {9pt}{9pt}%               Space above & below
+%   {\itshape}%                       Body style
+%   {-12pt}%                  Heading indent amount
+%   {\sffamily\bfseries}{:}%  Heading font and punctuation after
+%   {\newline}% Spacing after heading
+%   {}%                       Head spec
+\newtheoremstyle{defnstyle}%
+  {9pt}{9pt}%               Space above & below
+  {\small}%            Body style
+  {0pt}%                  Heading indent amount
+  {\normalsize\bfseries}{}%  Heading font and punctuation after
+  {\newline}% Spacing after heading
+  {}%                       Head spec
+
+\newtheorem{theorem}{Theorem}[section] % Section relative numbering
+\newtheorem{lemma}[theorem]{Lemma}     % Shares counter with theorem
+\newtheorem{corollary}[theorem]{Corollary} % Shares counter with
+                                       % theorem 
+%\theoremstyle{plain}
+%\theoremstyle{remark}
+\theoremstyle{defnstyle}
+%\theoremstyle{definition}              % No italics in body of
+                                       %  definition  
+\newtheorem{definition}{Definition}[section] % Section relative 
+                                       % numbering 
+% \newenvironment{proof}[1][Proof]{\begin{trivlist}
+%                                 \item[\hskip \labelsep {\bfseries
+%                                     #1}]}
+%                                {\end{trivlist}}
+%\newcommand{\qed}{\hfill \mbox{\raggedright \rule{.07in}{.1in}}}
+
+%%% Package atbeginend commands to space theorem environs
+\AfterBegin{theorem}{\onehalfspacing}
+                   %{\begin{onehalfspace}}
+%\BeforeEnd{theorem}{\end{onehalfspace}}
+\AfterBegin{lemma}{\onehalfspacing}
+                 %{\begin{onehalfspace}}
+%\BeforeEnd{lemma}{\end{onehalfspace}}
+\AfterBegin{corollary}{\onehalfspacing}
+                     %{\begin{onehalfspace}}
+%\BeforeEnd{corollary}{\end{onehalfspace}}
+\AfterBegin{definition}{\onehalfspacing}
+                      %{\begin{onehalfspace}}
+% \BeforeEnd{definition}{\end{onehalfspace}}
+\AfterBegin{proof}{\onehalfspacing}
+                 %{\begin{onehalfspace}}
+%\BeforeEnd{proof}{\end{onehalfspace}}
+
 
