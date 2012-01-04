@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  4 JAN 2012 09:39
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  4 JAN 2012 11:35
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -712,241 +712,273 @@ LaTeX Warning: Marginpar on page 14 moved.
 
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
+] <../img/ex1_concaveroundgr.pdf, id=207, 262.86696pt x 245.67671pt>
+File: ../img/ex1_concaveroundgr.pdf Graphic file (type pdf)
+
+<use ../img/ex1_concaveroundgr.pdf>
+<../img/ex2_intervalgr.pdf, id=208, 262.86696pt x 245.67671pt>
+File: ../img/ex2_intervalgr.pdf Graphic file (type pdf)
+
+<use ../img/ex2_intervalgr.pdf>
+File: ../img/ex2_intervalgr.pdf Graphic file (type pdf)
+ <use ../img/ex2_intervalgr.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 153--155
 
  []
 
-Package color Info: Redefining color UserColor on input line 64.
-Package color Info: Redefining color UserColor on input line 64.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 156.
 
-Overfull \hbox (2.97pt too wide) in paragraph at lines 64--64
+(/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Package color Info: Redefining color UserColor on input line 156.
+Package color Info: Redefining color UserColor on input line 174.
+Package color Info: Redefining color UserColor on input line 174.
+
+Overfull \hbox (2.97pt too wide) in paragraph at lines 174--174
 []$[]$[]\OT1/cmr/m/it/10 mi[][]nor[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/n/6 add[
 ] 
  []
 
+[15pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \endgroup \set@typeset@protect 
+l.175    \item $
+                G$ is an \emph{interval graph} if its vertices can be mappedpdf
+TeX warning (ext4): destination with the same identifier (name{table.2.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \endgroup \set@typeset@protect 
+l.175    \item $
+                G$ is an \emph{interval graph} if its vertices can be mapped <.
+./img/ex1_concaveroundgr.pdf> <../img/ex2_intervalgr.pdf>]
 
-LaTeX Warning: Marginpar on page 15 moved.
+LaTeX Warning: Marginpar on page 16 moved.
 
-Package color Info: Redefining color UserColor on input line 67.
-Package color Info: Redefining color UserColor on input line 100.
+Package color Info: Redefining color UserColor on input line 177.
+Package color Info: Redefining color UserColor on input line 214.
 
-Overfull \hbox (18.3587pt too wide) in paragraph at lines 100--100
+Overfull \hbox (18.3587pt too wide) in paragraph at lines 214--214
 []$[]$[]\OT1/cmr/m/it/10 press[][]ing[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/n/6 A
 DD:[] 
  []
 
-Package color Info: Redefining color UserColor on input line 101.
+Package color Info: Redefining color UserColor on input line 215.
 
-Overfull \hbox (12.35562pt too wide) in paragraph at lines 101--101
+Overfull \hbox (12.35562pt too wide) in paragraph at lines 215--215
 []\OT1/cmr/m/n/6 [tag:chordalGraph][]  
  []
 
-Package color Info: Redefining color UserColor on input line 107.
-Package color Info: Redefining color UserColor on input line 108.
-Package color Info: Redefining color UserColor on input line 112.
+Package color Info: Redefining color UserColor on input line 221.
+Package color Info: Redefining color UserColor on input line 222.
+Package color Info: Redefining color UserColor on input line 226.
 
-Overfull \hbox (27.29747pt too wide) in paragraph at lines 112--112
+Overfull \hbox (27.29747pt too wide) in paragraph at lines 226--226
 []$[]$[]\OT1/cmr/m/it/10 press[][]ing[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/n/6 m
 ax[][]i[][]mal[] 
  []
 
-Package color Info: Redefining color UserColor on input line 112.
-Package color Info: Redefining color UserColor on input line 114.
+Package color Info: Redefining color UserColor on input line 226.
+Package color Info: Redefining color UserColor on input line 228.
 
-Overfull \hbox (30.45027pt too wide) in paragraph at lines 114--114
+Overfull \hbox (26.46414pt too wide) in paragraph at lines 228--228
 []$[]$[]\OT1/cmr/m/it/10 press[][]ing[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/n/6 c
 ite[] []fg65[] 
  []
 
-Package color Info: Redefining color UserColor on input line 115.
+Package color Info: Redefining color UserColor on input line 229.
+Package color Info: Redefining color UserColor on input line 234.
 
-Overfull \hbox (3.8673pt too wide) in paragraph at lines 115--115
-[]$[]$[]\OT1/cmr/m/it/10 press[][]ing[][]\OT1/cmr/m/n/10 :[] [] 
- []
-
-Package color Info: Redefining color UserColor on input line 120.
-
-Overfull \hbox (12.13385pt too wide) in paragraph at lines 120--120
+Overfull \hbox (12.13385pt too wide) in paragraph at lines 234--234
 []$[]$[]\OT1/cmr/m/it/10 press[][]ing[][]\OT1/cmr/m/n/10 :[]  []\OT1/cmr/m/n/6 
 A[] 
  []
 
-Package color Info: Redefining color UserColor on input line 121.
+Package color Info: Redefining color UserColor on input line 235.
 
-Overfull \hbox (3.8673pt too wide) in paragraph at lines 121--121
+Overfull \hbox (3.8673pt too wide) in paragraph at lines 235--235
 []$[]$[]\OT1/cmr/m/it/10 press[][]ing[][]\OT1/cmr/m/n/10 :[] [] 
  []
 
-Package color Info: Redefining color UserColor on input line 132.
+Package color Info: Redefining color UserColor on input line 246.
 
-Overfull \hbox (3.8673pt too wide) in paragraph at lines 132--132
+Overfull \hbox (3.8673pt too wide) in paragraph at lines 246--246
 []$[]$[]\OT1/cmr/m/it/10 press[][]ing[][]\OT1/cmr/m/n/10 :[] [] 
  []
 
 
-LaTeX Warning: Marginpar on page 15 moved.
+LaTeX Warning: Marginpar on page 16 moved.
 
 
-LaTeX Warning: Marginpar on page 15 moved.
+LaTeX Warning: Marginpar on page 16 moved.
 
 
-LaTeX Warning: Marginpar on page 15 moved.
+LaTeX Warning: Marginpar on page 16 moved.
 
 
-LaTeX Warning: Marginpar on page 15 moved.
+LaTeX Warning: Marginpar on page 16 moved.
 
 
-LaTeX Warning: Marginpar on page 15 moved.
+LaTeX Warning: Marginpar on page 16 moved.
 
 
-LaTeX Warning: Marginpar on page 15 moved.
+LaTeX Warning: Marginpar on page 16 moved.
 
 
-LaTeX Warning: Marginpar on page 15 moved.
+LaTeX Warning: Marginpar on page 16 moved.
 
 
-LaTeX Warning: Marginpar on page 15 moved.
+LaTeX Warning: Marginpar on page 16 moved.
 
 
-LaTeX Warning: Marginpar on page 15 moved.
+LaTeX Warning: Marginpar on page 16 moved.
 
 
-LaTeX Warning: Marginpar on page 15 moved.
+LaTeX Warning: Marginpar on page 16 moved.
 
-Package color Info: Redefining color UserColor on input line 138.
+Package color Info: Redefining color UserColor on input line 252.
 
-Overfull \hbox (12.17229pt too wide) in paragraph at lines 138--138
+Overfull \hbox (12.17229pt too wide) in paragraph at lines 252--252
 []\OT1/cmr/m/n/6 ref:sec:copmatrices[]  
  []
 
 
-LaTeX Warning: Marginpar on page 15 moved.
+LaTeX Warning: Marginpar on page 16 moved.
 
-Package color Info: Redefining color UserColor on input line 142.
+Package color Info: Redefining color UserColor on input line 256.
 
-Overfull \hbox (27.95038pt too wide) in paragraph at lines 142--142
+Overfull \hbox (27.95038pt too wide) in paragraph at lines 256--256
 []$[]$[]\OT1/cmr/m/it/10 im[][]por[][]tant[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/
 n/6 move[] 
  []
 
-[15]
-Package color Info: Redefining color UserColor on input line 192.
 
-Overfull \hbox (13.11272pt too wide) in paragraph at lines 195--195
+LaTeX Warning: Marginpar on page 16 moved.
+
+Package color Info: Redefining color UserColor on input line 306.
+
+LaTeX Warning: Marginpar on page 16 moved.
+
+
+Overfull \hbox (13.11272pt too wide) in paragraph at lines 309--309
 []\OT1/cmr/bx/n/17.28 ********* COP in Re-la-tional Database Model 
  []
 
-Package color Info: Redefining color UserColor on input line 197.
-Package color Info: Redefining color UserColor on input line 197.
+Package color Info: Redefining color UserColor on input line 311.
+Package color Info: Redefining color UserColor on input line 311.
 
 LaTeX Warning: Marginpar on page 16 moved.
 
-Package color Info: Redefining color UserColor on input line 201.
 
-Overfull \hbox (2.36684pt too wide) in paragraph at lines 201--201
+LaTeX Warning: Marginpar on page 16 moved.
+
+Package color Info: Redefining color UserColor on input line 315.
+
+Overfull \hbox (2.36684pt too wide) in paragraph at lines 315--315
 []\OT1/cmr/m/n/6 sec:appgraphiso[]  
  []
 
-Package color Info: Redefining color UserColor on input line 201.
+Package color Info: Redefining color UserColor on input line 315.
 
-Overfull \hbox (5.60863pt too wide) in paragraph at lines 201--201
+Overfull \hbox (9.59476pt too wide) in paragraph at lines 315--315
 []$[]$ []\OT1/cmr/m/n/6 (can[][]on[][]iza[][]tion[] 
  []
 
+[16]
 
-LaTeX Warning: Marginpar on page 16 moved.
+LaTeX Warning: Marginpar on page 17 moved.
 
-Package color Info: Redefining color UserColor on input line 205.
+Package color Info: Redefining color UserColor on input line 319.
 
-Overfull \hbox (0.96684pt too wide) in paragraph at lines 205--205
+Overfull \hbox (0.96684pt too wide) in paragraph at lines 319--319
 []\OT1/cmr/m/n/6 sec:appcertalgo[]  
  []
 
-Package color Info: Redefining color UserColor on input line 205.
+Package color Info: Redefining color UserColor on input line 319.
 
-Overfull \hbox (5.16418pt too wide) in paragraph at lines 205--205
+Overfull \hbox (5.16418pt too wide) in paragraph at lines 319--319
 []$[]$  []\OT1/cmr/m/n/6 (cer[][]ti[][]fi[][]ca[][]tion[] 
  []
 
 
-LaTeX Warning: Marginpar on page 16 moved.
+LaTeX Warning: Marginpar on page 17 moved.
 
-[16pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+Package color Info: Redefining color UserColor on input line 383.
+[17pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.247 
+l.390 
       ]
-Package color Info: Redefining color UserColor on input line 269.
-Package color Info: Redefining color UserColor on input line 283.
-Package color Info: Redefining color UserColor on input line 286.
-Package color Info: Redefining color UserColor on input line 288.
-Package color Info: Redefining color UserColor on input line 296.
-
-
-LaTeX Warning: Marginpar on page 17 moved.
-
-
-LaTeX Warning: Marginpar on page 17 moved.
-
-[17]
-Package color Info: Redefining color UserColor on input line 309.
-Package color Info: Redefining color UserColor on input line 311.
-Package color Info: Redefining color UserColor on input line 314.
-
-
-LaTeX Warning: Marginpar on page 18 moved.
-
-
-LaTeX Warning: Marginpar on page 18 moved.
-
-Package color Info: Redefining color UserColor on input line 336.
-Package color Info: Redefining color UserColor on input line 338.
-Package color Info: Redefining color UserColor on input line 343.
-
-LaTeX Warning: Marginpar on page 18 moved.
-
-
-LaTeX Warning: Marginpar on page 18 moved.
-
-Package color Info: Redefining color UserColor on input line 374.
-Package color Info: Redefining color UserColor on input line 382.
-[18]
-Package color Info: Redefining color UserColor on input line 391.
-Package color Info: Redefining color UserColor on input line 393.
-Package color Info: Redefining color UserColor on input line 394.
-
-
-LaTeX Warning: Marginpar on page 19 moved.
-
-
-LaTeX Warning: Marginpar on page 19 moved.
-
+Package color Info: Redefining color UserColor on input line 397.
+Package color Info: Redefining color UserColor on input line 400.
 Package color Info: Redefining color UserColor on input line 402.
-Package color Info: Redefining color UserColor on input line 407.
+Package color Info: Redefining color UserColor on input line 410.
 
-Overfull \hbox (24.08672pt too wide) in paragraph at lines 407--407
+
+LaTeX Warning: Marginpar on page 18 moved.
+
+
+LaTeX Warning: Marginpar on page 18 moved.
+
+Package color Info: Redefining color UserColor on input line 423.
+Package color Info: Redefining color UserColor on input line 425.
+Package color Info: Redefining color UserColor on input line 428.
+
+LaTeX Warning: Marginpar on page 18 moved.
+
+
+LaTeX Warning: Marginpar on page 18 moved.
+
+[18]
+Package color Info: Redefining color UserColor on input line 450.
+Package color Info: Redefining color UserColor on input line 452.
+Package color Info: Redefining color UserColor on input line 457.
+
+
+LaTeX Warning: Marginpar on page 19 moved.
+
+
+LaTeX Warning: Marginpar on page 19 moved.
+
+Package color Info: Redefining color UserColor on input line 488.
+Package color Info: Redefining color UserColor on input line 496.
+[19]
+Package color Info: Redefining color UserColor on input line 505.
+Package color Info: Redefining color UserColor on input line 507.
+Package color Info: Redefining color UserColor on input line 508.
+
+
+LaTeX Warning: Marginpar on page 20 moved.
+
+
+LaTeX Warning: Marginpar on page 20 moved.
+
+Package color Info: Redefining color UserColor on input line 516.
+Package color Info: Redefining color UserColor on input line 521.
+
+Overfull \hbox (24.08672pt too wide) in paragraph at lines 521--521
 [][]\OT1/cmr/m/n/6 .[] 
  []
 
-Package color Info: Redefining color UserColor on input line 408.
-Package color Info: Redefining color UserColor on input line 408.
-Package color Info: Redefining color UserColor on input line 410.
+Package color Info: Redefining color UserColor on input line 522.
+Package color Info: Redefining color UserColor on input line 522.
+Package color Info: Redefining color UserColor on input line 524.
 
-LaTeX Warning: Marginpar on page 19 moved.
-
-
-LaTeX Warning: Marginpar on page 19 moved.
+LaTeX Warning: Marginpar on page 20 moved.
 
 
-LaTeX Warning: Marginpar on page 19 moved.
+LaTeX Warning: Marginpar on page 20 moved.
 
 
-LaTeX Warning: Marginpar on page 19 moved.
+LaTeX Warning: Marginpar on page 20 moved.
 
 
-LaTeX Warning: Marginpar on page 19 moved.
+LaTeX Warning: Marginpar on page 20 moved.
+
+
+LaTeX Warning: Marginpar on page 20 moved.
 
 (./thesis.ent
 LaTeX Font Info:    Try loading font information for OT1+pzc on input line 38.
@@ -959,19 +991,22 @@ LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <7> not available
 (Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 38.
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <5> not available
 (Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 38.
-
-[19])
-Package color Info: Redefining color UserColor on input line 427.
+)
+Package color Info: Redefining color UserColor on input line 541.
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <12> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 427.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 541.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <8> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 427.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 541.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <6> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 427.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 541.
 
-) [20]
+)
+
+LaTeX Warning: Marginpar on page 20 moved.
+
+[20]
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `\tnote' on input line 97.
@@ -989,13 +1024,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7854 strings out of 94073
- 109128 string characters out of 1162984
- 184104 words of memory out of 1500000
- 10732 multiletter control sequences out of 10000+50000
- 22719 words of font info for 79 fonts, out of 1200000 for 2000
+ 7916 strings out of 94073
+ 110149 string characters out of 1162984
+ 185264 words of memory out of 1500000
+ 10782 multiletter control sequences out of 10000+50000
+ 23853 words of font info for 83 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 42i,15n,42p,773b,552s stack positions out of 5000i,500n,6000p,200000b,5000s
+ 42i,17n,42p,773b,592s stack positions out of 5000i,500n,6000p,200000b,5000s
 pdfTeX warning (dest): name{figure.3.1} has been referenced but does not exis
 t, replaced by a fixed one
 
@@ -1095,33 +1130,31 @@ replaced by a fixed one
 pdfTeX warning (dest): name{chapter*.7} has been referenced but does not exist,
  replaced by a fixed one
 
-pdfTeX warning (dest): name{changenumber.20.9} has been referenced but does not
- exist, replaced by a fixed one
-
 {/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
 live/2007/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/2007
 /texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2007/texmf-di
 st/fonts/type1/bluesky/cm/cmbx6.pfb></usr/local/texlive/2007/texmf-dist/fonts/t
-ype1/bluesky/cm/cmbx8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blues
-ky/cm/cmbxti10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/c
-mcsc10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pf
-b></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi12.pfb></usr/l
-ocal/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi6.pfb></usr/local/texli
-ve/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi8.pfb></usr/local/texlive/2007/te
-xmf-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2007/texmf-dist/f
-onts/type1/bluesky/cm/cmr12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1
-/bluesky/cm/cmr6.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm
-/cmr7.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb><
-/usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/loca
-l/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy6.pfb></usr/local/texlive/
-2007/texmf-dist/fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/texlive/2007/texmf
--dist/fonts/type1/bluesky/cm/cmsy8.pfb></usr/local/texlive/2007/texmf-dist/font
-s/type1/bluesky/cm/cmti10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/b
-luesky/cm/cmti12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/zapfch
-an/uzcmi8a.pfb>
-Output written on thesis.pdf (14 pages, 276241 bytes).
+ype1/bluesky/cm/cmbx7.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blues
+ky/cm/cmbx8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmbx
+ti10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmcsc10.pfb
+></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/lo
+cal/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi12.pfb></usr/local/texli
+ve/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi6.pfb></usr/local/texlive/2007/te
+xmf-dist/fonts/type1/bluesky/cm/cmmi8.pfb></usr/local/texlive/2007/texmf-dist/f
+onts/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1
+/bluesky/cm/cmr12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/c
+m/cmr6.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb>
+</usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local
+/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/texlive/
+2007/texmf-dist/fonts/type1/bluesky/cm/cmsy6.pfb></usr/local/texlive/2007/texmf
+-dist/fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/texlive/2007/texmf-dist/font
+s/type1/bluesky/cm/cmsy8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bl
+uesky/cm/cmti10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/
+cmti12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/courier/ucrr8a.p
+fb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on thesis.pdf (14 pages, 359615 bytes).
 PDF statistics:
- 509 PDF objects out of 1000 (max. 8388607)
- 166 named destinations out of 1000 (max. 131072)
- 118 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 549 PDF objects out of 1000 (max. 8388607)
+ 168 named destinations out of 1000 (max. 131072)
+ 128 words of extra memory for PDF output out of 10000 (max. 10000000)
 
