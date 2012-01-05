@@ -1,3 +1,7 @@
+\definecolor{gray}{rgb}{0.8,0.8,0.8}
+\def\tblhcolor {gray}
+
+
 \chapter{\CoP\,-- A Survey of Important Results}
 \label{ch:copsurvey}
 
@@ -23,9 +27,11 @@ ways. While adjacency matrix is perhaps the most commonly used such
 matrix, Definition~\ref{def:graphmatrices} defines this and a few
 more.
 
-\begin{definition}{\emph{Matrices that define
-      graphs.\cite[Def.~2.4]{d08phd}}} %
-  \label{def:graphmatrices} %
+% \begin{definition}{\emph{Matrices that define
+%       graphs.\cite[Def.~2.4]{d08phd}}} %
+\begin{definition}
+  {\em Matrices that define graphs. \cite[Def.~2.4]{d08phd}.}  
+  \label{def:graphmatrices} 
   Let $G$ and $H$ be defined as follows. $G = (V,E_G)$ is a graph with
   vertex set $V = \{v_i \mid i \in [n]\}$ and edge set $E_G \subseteq
   \{(v_i,v_j) \mid i, j \in [n]\}$ such that $|E_G| = m$. $H = (A, B,
@@ -44,393 +50,295 @@ more.
     where $\{C_j \mid j \in [k]\}$ is the set of maximal cliques of
     $G$.
   \item \emph{Half adjacency matrix} of $H$ is the $n_a \times n_b$
-    binary matrix $M$ with $m_{i,j} = \un$ \iff $(a_i, b_j) \in E_H$
+    binary matrix $M$ with $m_{i,j} = \un$ \iff $(a_i, b_j) \in E_H$.
   \end{enumerate}
 \end{definition}
-\qed
 
-\begin{figure}[t]
-  \centering
-  \begin{tabular}[h]{cccl}
-    \figtabsize
-    ${\bf G_1}$: 
-    \includegraphics[scale=0.2]{../img/ex1_concaveroundgr.pdf} &
-    ${\bf G_2}$: 
-    \includegraphics[scale=0.2]{../img/ex2_intervalgr.pdf} &
-    ${\bf H}$: 
-    \includegraphics[scale=0.2]{../img/ex2_intervalgr.pdf} &
-    \begin{tabular}[h]{l|llll}
-      % ${\bf B}$:
-      % &&&&\\
-      ${\bf C}$ &$w_1$ &$w_2$ &$w_3$ &$w_4$\\
-      \hline
-      $u_1$ &\un   &\un   &0     &0   \\
-      $u_2$ &\un   &\un   &\un   &\un \\
-      $u_3$ &0     &0     &\un   &\un \\
-      $u_4$ &0     &\un   &\un   &0   \\
-      $u_5$ &\un   &\un   &\un   &0   
-    \end{tabular}
-  \end{tabular}\\
-
-  \begin{tabular}{lll} 
-    \begin{tabular}[h]{l|lll lll}
-      % ${\bf A_1}$:  
-      %&&&&&&\\
-      ${\bf A_1}$ &$v_1$ &$v_2$ &$v_3$ &$v_4$ &$v_5$ &$v_6$\\
-      \hline
-      $v_1$     &0     &\un   &\un  &0     &\un   &\un \\
-      $v_2$     &\un   &0     &\un  &\un   &0     &\un \\
-      $v_3$     &\un   &\un   &0    &\un   &\un   &0   \\
-      $v_4$     &0     &\un   &\un  &0     &0     &0   \\
-      $v_5$     &\un   &0     &\un  &0     &0     &0   \\
-      $v_6$     &\un   &\un   &0    &0     &0     &0   
-    \end{tabular}
-    & 
-    \begin{tabular}[h]{l|llll}
-      % ${\bf B}$:  
-      %&&&&\\
-      ${\bf B}$&$c_1$ &$c_2$ &$c_3$ &$c_4$\\
-      \hline
-      $v_1$ &\un   &\un   &\un   &0   \\
-      $v_2$ &\un   &0     &0     &0   \\
-      $v_3$ &0     &\un   &0     &0   \\
-      $v_4$ &0     &0     &\un   &\un \\
-      $v_5$ &0     &\un   &\un   &0   \\
-      $v_6$ &0     &0     &0     &\un  
-    \end{tabular}
-    & 
-    \\    
-    && \\
-    \begin{tabular}[h]{l|llllll}
-      % ${\bf A_2}$:  
-      %&&&&&&\\
-      ${\bf A_2}$&$v_1$ &$v_2$ &$v_3$ &$v_4$ &$v_5$ &$v_6$\\
-      \hline
-      $v_1$ &\un   &\un   &\un  &0     &\un   &\un \\
-      $v_2$ &\un   &\un   &\un  &\un   &0     &\un \\
-      $v_3$ &\un   &\un   &\un  &\un   &\un   &0   \\
-      $v_4$ &0     &\un   &\un  &\un   &0     &0   \\
-      $v_5$ &\un   &0     &\un  &0     &\un   &0   \\
-      $v_6$ &\un   &\un   &0    &0     &0     &\un 
-    \end{tabular}    
-    &
-    \begin{tabular}[h]{l|llllll}
-      % ${\bf A_3}$:  
-      %&&&&&&\\
-      ${\bf A_2'}$ &$v_1$ &$v_6$ &$v_2$ &$v_4$ &$v_3$ &$v_5$\\
-      \hline
-      $v_1$ &\un   &\un   &\un  &0     &\un   &\un \\
-      $v_6$ &\un   &\un   &\un  &0     &0     &0   \\
-      $v_2$ &\un   &\un   &\un  &\un   &\un   &0   \\
-      $v_4$ &0     &0     &\un  &\un   &\un   &0   \\
-      $v_3$ &\un   &0     &\un  &\un   &\un   &\un \\
-      $v_5$ &\un   &0     &0    &0     &\un   &\un 
-    \end{tabular}
-   & \\
-
-
-% ex3_convexbipartitegr.png  
-  \end{tabular}
-
-  
-
-  \caption[\figtabsize Matrices defined in
-  Def.~\ref{def:graphmatrices}]{\figtabsize $A_1$ is the
-    {\em adjacency matrix} and $A_2$ is the {\em augmented adjacency matrix} of
-    $G_1$. $A_2'$ is obtained from $A_2$ by permuting its rows
-    and columns to achieve {\em \CROP order}, \ie $A_2$ has
-    \CROP\,-- thus $G_1$
-    is {\em a concave-round graph} (Def.~\ref{def:graphwithcop}~\ref{def::concave-round})
-    and {\em a circular-arc graph} (Tab.~\ref{tab:graphmatrices})
-    $B$ is the maximal clique matrix of $G_2$ and has \COP\,-- thus $G_2$ is an
-    {\em interval graph}(Def.~\ref{def:graphwithcop}~\ref{def::concave-round}). $C$ is
-    the half adjacency matrix of bipartite graph $H$ and has \COP on
-    rows -- thus $H$ is {a convex bipartite graph}.} 
-  \label{fig:graphmatrices}
-\end{figure}
-
+\figgraphmatrices
 
 Now we will see in Definition~\ref{def:graphwithcop} certain graph
 classes that is related to \COP or \CROP.\\
 
-{\tt tab~\ref{tab:graphmatrices} -}   \tnote{have an abridged version of table 2.1 in dom}
+\begin{definition}{\emph{Graphs that relate to
+      COP.\cite[Def.~2.5]{d08phd}}} %
+  \label{def:graphwithcop} %
+  Let $G$ be a graph and $H$ be a bipartite graph.
 
+  \begin{enumerate}[\ref{def:graphwithcop}--i.]
+  \item $G$ is \emph{convex-round} if its adjacency matrix has the
+    \CROP.
+  \item \label{def::concave-round} $G$ is \emph{concave-round} if its
+    augmented adjacency matrix has \CROP. \tnote{cite BHY00}
+    \tnote[minor]{add CROP to glossary}
+  \item $G$ is an \emph{interval graph} if its vertices can be mapped
+    to intervals on the real line \stt two vertices are adjacent \iff
+    their corresponding intervals overlap \tnote{cite Ben59, Haj57}.
+    $G$ is an interval graph \iff its maximal clique matrix has COP
+    \cite{fg65}\endnote{This follows \cite{gh64} which states that the
+      maximal cliques of interval graph $G$ can be linearly ordered
+      \stt for all $v \in V(G)$, cliques containing $v$ are
+      consecutive in the ordering \cite[Th. 8.1]{mcg04}.}
+    \begin{enumerate}[a.]
+    \item $G$ is a \emph{unit interval graph} if it is an interval
+      graph \stt all intervals have the same length.\endnotemark[2]
+    \item $G$ is a \emph{proper interval graph} if it is an interval
+      graph \stt no interval properly contains another.\endnote{The
+        set of unit interval graphs and the set of proper interval
+        graphs are the same} \tnote{cite {rob69,gar07} in endnote. pg
+        33 dom}
+    \end{enumerate}
+ \item $G$ is a \emph{circular-arc graph} if its vertices can be
+    mapped to a set of arcs on a circle \stt two vertices are adjacent
+    \iff their corresponding arcs overlap.\tnote[pressing]{how is
+      CO/ROP related?}
+  \item \label{def::convexbi} $H$ is \emph{convex bipartite on columns (rows)} if its half adjacency matrix
+    has \COP on rows (columns).
+  \item $H$ is \emph{biconvex bipartite} or \emph{doubly
+      convex}\cite{yc95} if its half adjacency matrix has \COP on both
+    rows and columns.
+  \item $H$ is \emph{circular convex} if its half adjacency matrix has
+    \CROP.
+  \end{enumerate}
+\end{definition}
+
+Interval graphs and circular-arc graphs have a long history in
+research. The interest around them is due to their very desirable
+property that several problems that are NP-hard\tnote[minor]{all NPC
+  problems are NPH yes?} on general graphs are not so in these graph
+classes, \ie they are polynomial time solvable on them. In a similar
+fashion, a lot of problems that are hard on general matrices have
+efficient solutions on matrics with \COP or \CROP \cite[more citations
+pg.\,33]{d08phd}. 
+
+Table~\ref{tab:graphmatrices} summarises the way these graphs are
+characterized by their matrices having \COP or \CROP.
+Our focus in this chapter (and thesis) is mainly \COP and 
+having seen how useful \COP is in identifying or characterizing many
+types of graphs, we will now see results that study recognition of \COP
+in matrices in the following section.
+
+
+\temptext{ tab~\ref{tab:graphmatrices} -  have an abridged version
+  of table 2.1 in dom. see notes for the possibility of a
+  ``circle diagram''.} 
 \begin{table}[htbp]
   \centering
- \caption{\figtabsize **** Graph matrices}
+ \caption{\figtabsize Graph matrices \temptext{PLACEHOLDER}}
   \label{tab:graphmatrices}
 \end{table}
 
-%\hrule
-\begin{definition}{\emph{Graphs that relate to
-      COP.\cite[Def.~2.5]{d08phd}}} %
-   \label{def:graphwithcop} %
-   Let $G$ be a graph and $H$ be a bipartite graph.
-
-   \begin{enumerate}[\ref{def:graphwithcop}--i.]
-   \item $G$ is \emph{convex-round} if its adjacency matrix has the
-     \CROP.
-   \item \label{def::concave-round} $G$ is \emph{concave-round} if its augmented adjacency matrix
-     has \CROP. \tnote{cite BHY00} \tnote[minor]{add CROP to glossary}
-   \item $G$ is an \emph{interval graph} if its vertices can be mapped
-     to intervals on the real line \stt two vertices are adjacent \iff
-     their corresponding intervals overlap \tnote{cite Ben59, Haj57}.
-     $G$ is an interval graph \iff its maximal clique matrix has COP
-     due to the result by \cite{gh64} which states that the maximal
-     cliques of interval graph $G$ can be linearly ordered \stt for
-     all $v \in V(G)$, cliques containing $v$ are consecutive in the
-     ordering.
-   \item $G$ is a \emph{unit interval graph} if it is an interval
-     graph \stt all intervals have the same length.
-   \item $G$ is a \emph{proper interval graph} if it is an interval
-     graph \stt no interval properly contains another.
-   \item $G$ is a \emph{circular-arc graph} if its vertices can be
-     mapped to a set of arcs on a circle \stt two vertices are
-     adjacent \iff their corresponding arcs overlap.
-   \item $H$ is \emph{convex bipartite} if its half adjacency matrix
-     has \COP on either rows or columns.
-   \item $H$ is \emph{biconvex bipartite} or \emph{doubly
-       convex}\cite{yc95} if its half adjacency matrix has \COP on
-     both rows and columns.
-   \item $H$ is \emph{circular convex} if its half adjacency matrix
-     has \CROP.
-   \end{enumerate}
-\end{definition}
-\qed
-%\hrule
-
-
-
-
-%%%%%%                                              %%%%%%
-% [pressing]{\ \ \ \ \  is the second level of [pressing]%
-%%%%%%                                              %%%%%%
-\tnote[pressing]{ADD: As it will be described in detail later in this
-  document, isomorphism of certain % classes of graphs, namely chordal
-  % graphs, have a close relationship with consecutive-ones property
-  % and generalizations of it.  This is perhaps because of how closely
-  % COP of a matrix relates to properties of graphs derived from
-  % matrices as seen inz the following results.
-} \tnote[pressing]{\ \ \ \ \ ADD: peo exists iff chordal. lexicographic BFS
-  [tag:chordalGraph]} %
-\tnote[pressing]{\ \ \ \ \ ADD: A well known result in %perfect graph theory is that
-  % the maximal cliques of an interval graph $G$ can be linearly
-  % ordered such that for all $v \in V(G)$, cliques containing $v$ are
-  % consecutive in the ordering cite~{gh64}. This clearly means that a
-  % graph $G$ is an interval graph if and only if
-}%
-\tnote[pressing]{\ \ \ \ \ verify from paper the statement of claim.}%
-\tnote[pressing]{maximal clique vertex incidence matrix
-  of% $G$ has COP.  Also, maximal cliques of any
-  % chordal graph can be enumerated in polytime $O(m+n)$
-} \tnote[pressing]{\ \ \ \ \ citation?!!}%
-\tnote[pressing]{cite~{fg65} uses these results to give the first polynomial
-  time algorithm for COT.}%
-\tnote[pressing]{\ \ \ \ \ check. how do they use it?}%
-\tnote[pressing]{ A bipartite graph is
-  convex% (on $R$) if and only if its half adjacency matrix has COP
-  % on rows.  The results in cite~{bl76} on COT are based on the
-  % result that interval graphs are AT-free chordal graphs.
-}%
-\tnote[pressing]{\ \ \ \ \ the latter being Tucker's?}%
-\tnote[pressing]{\ \ \ \ \ (2) TBD survey
-  -- % see blue notes (in notebook) under Graph Isomorphism. namely
-  % citations in cite:aas93 (3) a brief on heirarchy of chordal
-  % graphs, path graphs, interval graphs, peo, clique tree etc. and
-  % results. (4) interval graphs are incomparability graphs. see
-  % Golumbic. [tag:classification] (5) finding min length hole in
-  % bipartite graph is polynomial time [Sec 3.3.2 in cite:d08phd] (6)
-  % theorem 2.2 in cite:d08phd - $G$ is union of v.d. caterpillars iff
-  % $M$ has COP in rows. $M$ is edge vertex incidence matrix $(*,2)$
-  % of $G$
-}%
-
-
+\clearpage      % Print pending floats
 
 \section{Matrices with COP}
 \label{sec:surveycoptest}
-\tnote{Expand on ref:sec:copmatrices}
 
-Figure~\ref{fig:cop-matrix} shows examples of consecutive-ones
-property. \tnote[important]{move to general def section? if so, decide
-how to cross ref with repetition for completeness of chapter.}
+The most important questions with respect to a particular 
+property desired in a structure/object are perhaps the following.
+\begin{itemize}%[]
+\singlespacing
+\item Does the desired property exist in the given input?
+\item If the test is affirmative, what is a certificate of the affirmative?
+\item If the test is negative, what are the optimization possibilities
+  for the property in the input? In other words, how close to having the
+  property can the input be?
+\item If the test is negative, what is a certificate of the negative?
+\end{itemize}
 
-\begin{figure}[t] %[htbp]
+In this section and the rest of the chapter we see results that shaped the
+correponding areas respectively for \cop in binary matrices.
+
+\begin{enumerate}[a.]
+\singlespacing
+\item \label{q:testcop} Does a given binary matrix have \COP?
+\item \label{q:copperm} What is the \COP permutation for the given matrix with \COP?
+\item \label{q:copopt} What are the optimizations possible and practically useful on
+  the given matrix without \COP?
+\item \label{q:nocopcert} If algorithm for (\ref{q:testcop}) returns \textbf{false}, can a
+  certificate for this be computed?
+\end{enumerate}
+
+Without doubt, besides computing answers to these questions, we are
+interested in the efficiency of these computations in terms of
+computational complexity theory. Results towards
+questions~(\ref{q:testcop}) and (\ref{q:copperm}) are surveyed in this
+section. Those for question~(\ref{q:copopt}) are discussed in
+Section~\ref{sec:surveycopopt} and question~(\ref{q:nocopcert}) is discussed
+in Section~\ref{sec:surveycertalgo}.
+
+It may be noted that one way to design an algorithm to test for \COP
+is by deriving one from any interval graph recognition algorithm using the
+result {\sc hmpv00}\tnote{cite hmpv00} \tnote{in endnote put the theorem 2.7 - dom
+  pg 43} \cite{d08phd} which demonstrates how such a derivation can be
+done. However, this does not necessarily yield an efficient
+algorithm. We will see results that directly solve the problem on
+matrices since it is known that questions~(\ref{q:testcop}) and
+(\ref{q:copperm}) stated above for \COP are efficiently solvable.
+Table~\ref{tab:cophistory} gives a snapshot of these results.
+
+\begin{table}[htbp]
   \centering
+   \includegraphics[scale=0.5]{../img/cophistory.png} % TEMPORARY
 
-  {\figtabsize
-    \begin{tabular}[h]{l|lcccl}
-      $M_1$: & $M_1'$: &&&& $M_2$:\\
-      &&&&&\\
-      \begin{tabular}[h]{llll}
-        $c_1$ & $c_2$ &$c_3$ &$c_4$\\
-        &&&\\
-        \un & 0   & \un & 0\\
-        0   & \un & 0   & \un \\
-        \un & 0   & 0   & \un
-      \end{tabular}
-      &
-      \begin{tabular}[h]{llll}
-        $c_3$ &$c_1$ &$c_4$& $c_2$\\
-        &&&\\
-        \un & \un & 0 & 0\\
-        0 & 0 & \un & \un \\
-        0 & \un & \un & 0
-      \end{tabular}
-      &&&&
-      \begin{tabular}[h]{llll}
-        $d_1$ & $d_2$ &$d_3$ &$d_4$\\
-        % &&&\\
-        &&&\\
-        \un & \un & 0 & 0\\
-        0 & \un & \un & 0 \\
-        0 & \un & 0 & \un 
-      \end{tabular}
-    \end{tabular}
-  }
+  \caption[\figtabsize A brief history of \COP research]{\figtabsize A
+    brief history of \COP research \temptext{ OLD IMG - PLACEHOLDER - A LATEX
+    TABLE WILL REPLACE THIS + WILL BE UPDATED }}
+  \label{tab:cophistory}
+\end{table}
 
-  \caption[\figtabsize Matrices with and without COP.]{\figtabsize
-    Matrices with and without COP. $M_1$ has COP because by permuting
-    its columns, $c_1$-$c_4$, one can obtain $M_1'$ where the {\un}s
-    in each row are consecutive. $M_2$, however, does not have COP
-    since no permutation of its columns, $d_1$-$d_4$, will arrange
-    {\un}s in each row consecutively \cite{d08phd}.}
+\subsection{Tucker's forbidden submatrices for \COP}
 
-  \label{fig:cop-matrix}
+% \change{While it is remarkable that the first polynomial time
+%   algorithm for \COP testing came in }{The first polynomial time
+%   algorithm for \COP testing came in }\cite{fg65} \change{,}{.}
+% \change{it is safe to say that the most}{A few years later, a very}
+% significant result in understanding \COP came \remove{a few years
+%   later} from Tucker which gave a combinatorial (negative)
+% characterization of matrices with COP \cite{at72}.
+A polynomial time algorithm for \COP testing was seen for the first
+time in \cite{fg65} which uses overlapping properties of columns with
+\un s. A few years later, a deeply significant result based on very
+different ideas in understanding \COP came from Tucker which gave a
+combinatorial (negative) characterization of matrices with COP
+\cite{at72}. This result influenced most of the \COP results that
+followed in the literature \annote[pressing]{including linear time
+  algorithms}{did it? which ones?} for \COP recognition.
+
+\cite{at72} discovered certain forbidden structures for convex
+bipartite graphs\endnote{The terminology in \cite{at72} differs. It
+  uses the term {\em graphs with $V_1$-consecutive arragement} instead
+  of {\em convex bipartite graphs}.} and by definition of this graph
+class, this translates to a set of forbidden submatrices for matrices
+with \cop.  The following are the theorems from \cite{at72} that
+acheived this characterization.
+
+
+Theorem~\ref{th:tuckeratfree} proves that convex bipartite graphs
+cannot have {\em asteroidal triples}\endnote{If $G = (V,E)$ is a
+  graph, a set of three vertices from $V$ form an {\em asteroidal
+    triple} if between any two of them there exists a path in $G$ that
+  does not contain any vertex from the closed neighborhood of the
+  third vertex.} contained in the corresponding vertex
+partition\endnote{The partition corresponds to columns (rows) if its
+  half adjacency matrix has \COP columns (rows).}.
+Theorem~\ref{th:tuckerforbidden} shows what are the structures in a
+bipartite graph that force one of its vertex partitions to have
+asteriodal triples -- in other words, it identifies the subgraphs that
+prevent the graph from being convex bipartite.
+
+
+\begin{theorem}
+  (\cite[Th.~6]{at72}, \cite[Th.~2.3]{d08phd})\\
+  A bipartite graph $G = (V_1, V_2, E)$ is convex bipartite on
+  columns\endnote{Abridged to match terminology adopted in this
+    document. See previous note.} \iff $V_1$ contains no asteroidal
+  triple of $G$.
+  \label{th:tuckeratfree}
+\end{theorem}
+
+\begin{theorem}
+  (\cite[Th.~7]{at72}, \cite[Th.~2.4]{d08phd})\\
+  In a bipartite graph $G = (V_1, V_2, E)$ the vertex set $V_1$
+  contains no asteroidal triple \iff $G$ contains none of the graphs
+  $G_{I_k}$, $G_{II_k}$, $G_{III_k}$ (with $k \ge 1$), $G_{IV}$,
+  $G_{V}$ as shown in Figure~\ref{fig:forbiddensubgraphs} as subgraphs.
+  \label{th:tuckerforbidden}
+\end{theorem}
+
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[scale=0.35]{../img/tuckersforbiddensubgraphs.png}  
+  \caption[\figtabsize Tucker's forbidden subgraphs]{\figtabsize Tucker's
+    forbidden subgraphs for convex bipartite graphs. \temptext{ PLACEHOLDER
+    IMG }} 
+  \label{fig:forbiddensubgraphs}
 \end{figure}
 
+Theorem~\ref{th:tuckeratfree} and Theorem~\ref{th:tuckerforbidden}
+result in the following Theorem~\ref{th:tuckercop} which characterizes
+matrices with \COP.
+
+\begin{theorem}
+  (\cite[Th.~9]{at72}, \cite[Th.~2.5]{d08phd})\\
+  A matrix $M$ has \COP \iff it contains none of the matrices 
+$M_{I_k}$, $M_{II_k}$, $M_{III_k}$ (with $k \ge 1$), $M_{IV}$,
+  $M_{V}$ as shown in Figure~\ref{fig:forbiddensubmatrices} as submatrices.
+  \label{th:tuckercop}
+\end{theorem}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[scale=0.35]{../img/tuckersforbiddensubmatrices.png}  
+  \caption[\figtabsize Tucker's forbidden submatrices]{\figtabsize Tucker's
+    forbidden submatrices for convex bipartite graphs. \temptext{ PLACEHOLDER
+    IMG }} 
+  \label{fig:forbiddensubmatrices}
+\end{figure}
+
+It can be verified that the matrices in
+Figure~\ref{fig:forbiddensubmatrices} are the half adjacency matrices
+of the graphs in Figure~\ref{fig:forbiddensubgraphs} respectively
+which is not surprising due to Definition~\ref{def:graphwithcop}~\ref{def::convexbi}. 
+
+\temptext{
+  \begin{enumerate}[-I-]
+  \item PQ trees. Define. Concise flowchart of algorithm? [BL76]\\
+    The construction of PQ trees in \cite{bl76} draws on the close
+    relationship of matrices with COP to interval graphs. A PQ tree of
+    a matrix is one that stores all row (column) permutations of the
+    matrix that give the COP orders (there could be multiple orders of
+    rows or columns) of the matrix. This is constructed using an
+    elaborate linear time procedure and is also a test for
+    planarity\tnote{check check check. both interval graph and
+      planarity in this paper?}.
+  \item Variations - PQR, PC etc. [MM96, Hsu01, McC04]\\
+    PQR trees is a generalized data structure based on PQ trees
+    \cite{mm96,mpt98}.  \cite{tm05} describes an improved algorithm to
+    build PQR
+    trees. \tnote{improv in terms of what?}.\\
+    Generalized PQ trees McC04 - brief. Will be elaborated in
+    Section~\ref{sec:surveycertalgo}\\
+    Hsu also invented PC trees \cite{wlh01}\tnote{This result first
+      appeared inproc ISAAC92} which is claimed to be much easier to
+    implement.
+  \item Set theoretic characterizations [Hsu02, NS09]\\
+    \cite{wlh02} describes the simpler algorithm for
+    COT.\tnote[pressing]{in terms of what?}\\
+    \cite{nsnrs09} describes a characterization of consecutive-ones
+    property solely based on the cardinality properties of the set
+    representations of the columns (rows); every column (row) is
+    equivalent to a set that has the row (column) indices of the rows
+    (columns) that have one entries in this column (row). This is
+    interesting and relevant, especially to this thesis because it
+    simplifies COT to a great degree by reducing the solution search
+    space owing to the a simple set theoretic characterization.\\
+  \item Parallel algorithms [AS95, BS03, CY91]\\
+  \item
+  \end{enumerate}
+
+}
 
 
+\tnote[pressing]{ The results in cite~{bl76} on COT are based on the
+   result that interval graphs are AT-free chordal graphs.
+ -  Tucker's?}%
+
+
+\tnote[pressing]{cite~{fg65} uses these results to give the first polynomial
+  time algorithm for COT. WHICH RESULTS? \ \ \ \ \ check. how do they use it?}%
+
+
+\tnote[pressing]{ADD: peo exists iff chordal. lexicographic BFS
+  [tag:chordalGraph]} %
+
+
+\clearpage      % Print pending floats
 \section{Optimization problems in COP}
 \label{sec:surveycopopt}
 \tnote{Expand on ref:sec:optcop}
 
-
-\section{********* COP in Relational Database Model}
-\label{sec:surveyrdbm}
-\tnote{Expand on sec:apprdbm} \tnote{(set systems theme)}
-
-\section{********* COP in Graph Isomorphism}
-\label{sec:surveygraphiso}
-\tnote{Expand on sec:appgraphiso} \tnote{(canonization theme)}
-
-\section{********* Certifying Algorithms}
-\label{sec:surveycertalgo}
-\tnote{Expand on sec:appcertalgo} \tnote{ (certification McC04 theme)}
-
-
-\section*{-- REFERENCE CONTENT --}
-%%%%%%%%%%%%% listing package for pretty formatting BEGIN
-% \lstloadlanguages{C}
-% \lstset{language=C, commentstyle=\scriptsize,
-%   numberstyle=\tiny, numbers=left,               % Line numbers
-%   stepnumber=2,numbersep=5pt,firstnumber=10, 
-%   showstringspaces=false,                    % No explicit spaces
-%   emph={printf},emphstyle=\underbar,      % Specific formatting
-%   emph=[2]{sum},emphstyle=[2]\color{blue},      % Sp format (multiple)
-%   emph=[3]{i},emphstyle=[3]\color{red}      % Sp format (multiple)
-%   } 
-
-%   \begin{singlespacing}
-%     % Text inside "lstlisting" env is verbatim.
-%     \begin{lstlisting}[keywordstyle=\textbf]      
-% int sum;
-% int i; /* for loop variable */ 
-% sum = 0; 
-% for (i=0, i<n; i++) { 
-%   sum += a[i]; 
-% } 
-% printf{"This is stupid."}
-%     \end{lstlisting}
-%   \end{singlespacing}
-
-%%%%%%%%%%%%% listing package for pretty formatting END
-
-{%\fontfamily{cmvtt}\selectfont
-\color{blue}
-\subsection{Matrices with COP}
-\label{sec:copmatrices}
-As seen earlier, the interval assignment problem (illustrated as the
-course scheduling problem in Section~\ref{sec:problem}), is a special
-case of the problem we address in this thesis, namely the tree path
-labeling problem (illustrated as the \illustrationproblem). The
-interval assignment problem and COP problem are equivalent
-problems. In this section we will see some of the results that exists
-in the literature today towards solving the COP problem and
-optimization problems surrounding it.
-
-Recall that a matrix with COP is one whose rows (columns) can be
-rearranged so that the {\un}s in every column (row) are in consecutive
-rows (columns). COP in binary matrices has several practical applications
-in diverse fields including scheduling \cite{hl06}, information
-retrieval \cite{k77} and computational biology \cite{abh98}.  Further,
-it is a tool in graph theory \cite{mcg04} for interval graph
-recognition, characterization of Hamiltonian graphs, planarity testing
-\cite{bl76} and in integer linear programming \cite{ht02,hl06}.
-
-
-The obvious first questions after being introduced to the consecutive
-ones property of binary matrices are if COP can be detected
-efficiently in a binary matrix and if so, can the COP permutation of
-the matrix also be computed efficiently?  Recognition of COP in a
-binary matrix is polynomial time solvable and the first such algorithm
-was given by \cite{fg65}.  A landmark result came a few years later
-when \cite{at72} discovered the families of forbidden submatrices that
-prevent a matrix from having COP and most, if not all, results that
-came later were based on this discovery which connected COP in binary
-matrices to convex bipartite graphs. In fact, the forbidden
-submatrices came as a corollary to the discovery that convex bipartite
-graphs are AT-free in \cite{at72}\tnote{check}. The first linear
-time algorithm for COP testing (COT) was invented by \cite{bl76} using
-a data structure called PQ trees.  Since then several COT algorithms
-have been invented -- some of which involved variations of PQ trees
-\cite{mm96,wlh01,mcc04}, some involved set theory and ICPIA
-\cite{wlh02,nsnrs09}, parallel COT algorithms\cite{as95,bs03,ly91} and
-certifying algorithms\cite{mcc04}.
-
-The construction of PQ trees in \cite{bl76} draws on the close
-relationship of matrices with COP to interval graphs. A PQ tree of a
-matrix is one that stores all row (column) permutations of the matrix
-that give the COP orders (there could be multiple orders of rows or
-columns) of the matrix. This is constructed using an elaborate linear
-time procedure and is also a test for planarity\tnote{check check
-  check. both interval graph and planarity in this paper?}.  PQR trees
-is a generalized data structure based on PQ trees \cite{mm96,mpt98}.
-\cite{tm05} describes an improved algorithm to build PQR
-trees. \tnote{improv in terms of what?}\cite{wlh02} describes the
-simpler algorithm for COT. Hsu also invented PC trees
-\cite{wlh01}\tnote{This result first appeared inproc ISAAC92}
-which is claimed to be much easier to implement. \cite{nsnrs09}
-describes a characterization of consecutive-ones property solely based
-on the cardinality properties of the set representations of the
-columns (rows); every column (row) is equivalent to a set that has the
-row (column) indices of the rows (columns) that have one entries in
-this column (row). This is interesting and relevant, especially to
-this thesis because it simplifies COT to a great degree. \tnote{it
-  reduces the solution search space. fill in the blanks.}
-
-\cite{mcc04} describes a different approach to COT. While all previous
-COT algorithms gave the COP order if the matrix has the property but
-exited stating negative if otherwise, this algorithm gives an evidence
-by way of a certificate of matrix even when it has no COP. This
-enables a user to verify the algorithm's result even when the answer
-is negative. This is significant from an implementation perspective
-because automated program verification is hard and manual verification
-is more viable. Hence having a certificate reinforces an
-implementation's credibility. Note that when the matrix {\em has} COP,
-the COP order is the certificate.  The internal machinery of this
-algorithm is related to the weighted betweenness problem
-addressed\tnote{in what way??} in \cite{co98}.  \tnote{expand
-  on the COP order graph creation and it having to be bipartite for M
-  to have COP. and thus an odd cycle being an evidence of no COP.}
-\tnote{ where should this go?: (1) cite|jlm97 (application of PQ
-  trees in graphics). (2) helly's theorem citation
-  19XXdgk-Hellystheorem-Danzer-Gruenbaum-Klee}
-
-
-\subsection{Optimization problems in COP}
-\label{sec:optcop}
-
+%{\color{blue} \footnotesize
+\temptext{
 So far we have been concerned about matrices that have the consecutive
 ones property. However in real life applications, it is rare that data
 sets represented by binary matrices have COP, primarily due to the
@@ -521,21 +429,85 @@ Hamiltonian path problem.\tnote{Theorem 2.1 in jkckv} \tnote{(1) A
   is proven to be NP complete by cite:k77}\tnote{are these two the
   same?} \tnote{what is the reduction?} \tnote{other problems similar
   to COP -- cite:ckl96 (ILP, circ ones, one drop) -- cite:th98
-  (generalization of COP - minimax, biotonic column) Tucker} }
+  (generalization of COP - minimax, biotonic column) Tucker} 
 
 
+}
+
+\section{Certifying Algorithms}
+\label{sec:surveycertalgo}
+%\tnote{Expand on sec:appcertalgo} \tnote{ (certification McC04
+%theme)}
+
+\temptext{ Certifying algorithm (Generalized PQ trees) [McC04] -- Move this to section on
+    certifying algo. 
+
+\cite{mcc04} describes a different approach to COT. While all previous
+COT algorithms gave the COP order if the matrix has the property but
+exited stating negative if otherwise, this algorithm gives an evidence
+by way of a certificate of matrix even when it has no COP. This
+enables a user to verify the algorithm's result even when the answer
+is negative. This is significant from an implementation perspective
+because automated program verification is hard and manual verification
+is more viable. Hence having a certificate reinforces an
+implementation's credibility. Note that when the matrix {\em has} COP,
+the COP order is the certificate.  The internal machinery of this
+algorithm is related to the weighted betweenness problem
+addressed\tnote{in what way??} in \cite{co98}.  \tnote{expand
+  on the COP order graph creation and it having to be bipartite for M
+  to have COP. and thus an odd cycle being an evidence of no COP.}
+
+}
 
 
+\section{COP in Relational Database Model}
+\label{sec:surveyrdbm}
+\tnote{Expand on sec:apprdbm} \tnote{(set systems theme)}
 
+\section{COP in Graph Isomorphism}
+\label{sec:surveygraphiso}
+\tnote{Expand on sec:appgraphiso} \tnote{(canonization theme)}
 
+\temptext{
+The survey from kklv10 conclusion.
+}
 
-
-
-
-
-
+% \section{Other applications}
+% {\tt If any. \tnote{ where should this go?}: (1) cite|jlm97 (application of PQ
+%   trees in graphics). (2) helly's theorem citation
+%   19XXdgk-Hellystheorem-Danzer-Gruenbaum-Klee}}
 
 
 
 
 \theendnotes\tnote{remove if none.} 
+
+
+
+
+%%%%%%%%%%%%% listing package for pretty formatting BEGIN
+% \lstloadlanguages{C}
+% \lstset{language=C, commentstyle=\scriptsize,
+%   numberstyle=\tiny, numbers=left,               % Line numbers
+%   stepnumber=2,numbersep=5pt,firstnumber=10, 
+%   showstringspaces=false,                    % No explicit spaces
+%   emph={printf},emphstyle=\underbar,      % Specific formatting
+%   emph=[2]{sum},emphstyle=[2]\color{blue},      % Sp format (multiple)
+%   emph=[3]{i},emphstyle=[3]\color{red}      % Sp format (multiple)
+%   } 
+
+%   \begin{singlespacing}
+%     % Text inside "lstlisting" env is verbatim.
+%     \begin{lstlisting}[keywordstyle=\textbf]      
+% int sum;
+% int i; /* for loop variable */ 
+% sum = 0; 
+% for (i=0, i<n; i++) { 
+%   sum += a[i]; 
+% } 
+% printf{"This is stupid."}
+%     \end{lstlisting}
+%   \end{singlespacing}
+
+%%%%%%%%%%%%% listing package for pretty formatting END
+

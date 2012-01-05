@@ -255,7 +255,57 @@ illustrated by the study group accommodation problem).
 \begin{definition}{\emph{\Cop}}
   \tnote[important]{define cop here. refer to it in chap 2 or
     duplicate it using slash def }
+  \begin{enumerate}
+  \item \Cop
+  \item Strong \cop
+  \item \Cop order or \cop permutation
+  \end{enumerate}
 \end{definition}
+
+\begin{figure}[t] %[htbp]
+  \centering
+  {\figtabsize
+    \begin{tabular}[h]{l|lcccl}
+      $M_1$: & $M_1'$: &&&& $M_2$:\\
+      &&&&&\\
+      \begin{tabular}[h]{llll}
+        $c_1$ & $c_2$ &$c_3$ &$c_4$\\
+        &&&\\
+        \un & 0   & \un & 0\\
+        0   & \un & 0   & \un \\
+        \un & 0   & 0   & \un
+      \end{tabular}
+      &
+      \begin{tabular}[h]{llll}
+        $c_3$ &$c_1$ &$c_4$& $c_2$\\
+        &&&\\
+        \un & \un & 0 & 0\\
+        0 & 0 & \un & \un \\
+        0 & \un & \un & 0
+      \end{tabular}
+      &&&&
+      \begin{tabular}[h]{llll}
+        $d_1$ & $d_2$ &$d_3$ &$d_4$\\
+        % &&&\\
+        &&&\\
+        \un & \un & 0 & 0\\
+        0 & \un & \un & 0 \\
+        0 & \un & 0 & \un 
+      \end{tabular}
+    \end{tabular}
+  }
+
+  \caption[\figtabsize Matrices with and without COP.]{\figtabsize
+    Matrices with and without COP. $M_1$ has COP because by permuting
+    its columns, $c_1$-$c_4$, one can obtain $M_1'$ where the {\un}s
+    in each row are consecutive. $M_2$, however, does not have COP
+    since no permutation of its columns, $d_1$-$d_4$, will arrange
+    {\un}s in each row consecutively \cite{d08phd}.}
+
+  \label{fig:cop-matrix}
+\end{figure}
+
+
 
 \begin{definition}{\emph{\Crop}}
   \tnote[important]{define circ1 here. refer to it in chap 2 or
@@ -357,7 +407,8 @@ prevent a matrix from having COP and most, if not all, results that
 came later were based on this discovery which connected COP in binary
 matrices to convex bipartite graphs. In fact, the forbidden
 submatrices came as a corollary to the discovery that convex bipartite
-graphs are AT-free in \cite{at72}\tnote{check}. The first linear
+graphs are AT-free on at least one of the partitions in
+\cite{at72}\tnote{check the real meaning of AT FREE. }. The first linear
 time algorithm for COP testing (COT) was invented by \cite{bl76} using
 a data structure called PQ trees.  Since then several COT algorithms
 have been invented -- some of which involved variations of PQ trees
@@ -503,19 +554,22 @@ Hamiltonian path problem.\tnote{Theorem 2.1 in jkckv}
 
 
 
-\section{********* Application of COP in Areas of Graph Theory and
+\section{Application of COP in Areas of Graph Theory and
   Algorithms}
 \label{sec:appcopGTA}
 
-\subsection{********* COP in Relational Database Model}
+\temptext{Combine COP in Relational Database Model + COP in Graph
+  Isomorphism + Certifying Algorithms}
+
+%\subsection{COP in Relational Database Model}
 \label{sec:apprdbm}
 \tnote{(set systems theme)}
 
-\subsection{********* COP in Graph Isomorphism}
+%\subsection{}
 \label{sec:appgraphiso}
 \tnote{(canonization theme)}
 
-\subsection{********* Certifying Algorithms}
+%\subsection{}
 \label{sec:appcertalgo}
 \tnote{ (certification McC04 theme)}
 

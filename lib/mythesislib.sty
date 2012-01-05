@@ -7,10 +7,17 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{mythesislib} [2011/12/21]
 
+%\usepackage{color}
+\usepackage{amsmath}           % Easier math formulae, align,
+                               %  subequations \ldots .
+\usepackage{amsthm}            % For theorem, lemma etc. (headed list)
 \usepackage{endnotes}          % To have "Notes" section as an
                                %  alternative to footnotes.
 \usepackage{xspace}            % For smart spaceing in \def strings.
-\usepackage{amsthm}            % For theorem, lemma etc.
+%\usepackage{array}
+\usepackage{colortbl}
+%\usepackage{fancybox}          % For oval boxes, shadowed etc.
+%\usepackage{picinpar}
 
 %%% Sizes and widths and other relevant formatting numbers %%%
 \def \secfirstparatrim {-5mm}
@@ -92,8 +99,16 @@
 \def \mythesisdept {Computer Science and Engineering\xspace}
 \def \myadvisor {N.\;S.\;Narayanaswamy\xspace}
 
-\renewcommand\notesname{Chapter Notes} % Redefine Endnotes section
+\renewcommand\notesname{\hrule width 7cm Chapter Notes} % Redefine Endnotes section
                                 % title. 
+% \newcommand\topfigrule{\hrule height 0.5pt \vspace{1pt} \hrule height 1pt}  % Command to produce a separating item
+%                                 %  between floats at top of page and
+%                                 %  text following it.
+% \newcommand\botfigrule{\hrule height 1pt \vspace{1pt} \hrule height 0.5pt}  % Command same as topfigrule but for
+%                                 % ones at bottom of page.
+
+
+
 
 %% The following are meant to be used with amsthm
 % \newtheoremstyle{defnstyle}%
@@ -105,12 +120,13 @@
 %   {}%                       Head spec
 \newtheoremstyle{defnstyle}%
   {9pt}{9pt}%               Space above & below
-  {\small}%            Body style
-  {0pt}%                  Heading indent amount
-  {\normalsize\bfseries}{}%  Heading font and punctuation after
-  {\newline}% Spacing after heading
-  {}%                       Head spec
-
+  {\small}%                 Body style
+  {0pt}%                    Heading indent amount
+  {\normalsize\bfseries}{:} %{\defstart}%  Heading font and punctuation after
+  {\newline}%               Spacing after heading %% 
+%  {\thmnote{#3}}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ \textbf{(#3)}}}%                       Head spec
+%\colorbox{gray}
 \newtheorem{theorem}{Theorem}[section] % Section relative numbering
 \newtheorem{lemma}[theorem]{Lemma}     % Shares counter with theorem
 \newtheorem{corollary}[theorem]{Corollary} % Shares counter with
@@ -126,6 +142,10 @@
 %                                 \item[\hskip \labelsep {\bfseries
 %                                     #1}]}
 %                                {\end{trivlist}}
+\newcommand{\defstart}{{\ \framebox[0.2in]{\maltese}}} 
+\newcommand{\defnstop}{\hfill \framebox[0.2in]{\maltese}} %\mbox{\raggedright \rule{.07in}{.1in}}}
+\newcommand{\temptext}[1]{{\color{blue} \footnotesize #1}}
+
 %\newcommand{\qed}{\hfill \mbox{\raggedright \rule{.07in}{.1in}}}
 
 %%% Package atbeginend commands to space theorem environs
@@ -140,7 +160,7 @@
 %\BeforeEnd{corollary}{\end{onehalfspace}}
 \AfterBegin{definition}{\onehalfspacing}
                       %{\begin{onehalfspace}}
-% \BeforeEnd{definition}{\end{onehalfspace}}
+\BeforeEnd{definition}{\defnstop}
 \AfterBegin{proof}{\onehalfspacing}
                  %{\begin{onehalfspace}}
 %\BeforeEnd{proof}{\end{onehalfspace}}

@@ -9,6 +9,9 @@
 
 \usepackage{../lib/mythesislib}
 \usepackage{../lib/mylatexlib}
+\usepackage{thesisfiguresandtables} % Code for tables are in this
+                                % package if it is too long to inline
+                                % in .tex file.
 
 % \usepackage{comment}         % DEBUG ONLY
 %\includeonly{020chap2}         % DEBUG ONLY 
@@ -77,8 +80,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Main body Chapters
 %
+\include{figuresandtables} % Load floats. No rendering.
+
 \include{010chap1}
-\setcounter{endnote}{0} % need to empty the file too. how?!
+% turning counter reset. perhaps universal endnote counter is good?
+% being schizo about it now. DECIDE! ENDNOTEMARKS DEPEND ON IT.
+\setcounter{endnote}{0} % need to empty the file too. how?! -
+                        % FIXED. turns out, just having notes is
+                        % enough. or maybe it was fluke.
 \include{020chap2}
 \include{030chap3}
 \include{040chap4}
@@ -94,8 +103,9 @@
 % Bibliography.
 %
 \begin{singlespace}
-  \addcontentsline{toc}{chapter}{REFERENCES \tnote[minor]{make names
-    in bib file uniform style w.r.t. firstname/initials}}
+  \addcontentsline{toc}{chapter}{REFERENCES \tnote[minor]{(i)make names
+    in bib file uniform style w.r.t. firstname/initials (ii) have back
+  refs - i.e. pages that cite the item.}}
 
   {\footnotesize%
     \bibliographystyle{alpha}%
