@@ -8,32 +8,74 @@
 \ProvidesPackage{thesisfiguresandtables} [2012/01/05]
 
 
+\def\figcopmatrix{
+  \begin{figure}[htbp] %[t] %
+    \centering {\figtabsize
+      \begin{tabular}[h]{l|lcccl}
+        $M_1$: & $M_1'$: &&&& $M_2$:\\
+        &&&&&\\
+        \begin{tabular}[h]{llll}
+          $c_1$ & $c_2$ &$c_3$ &$c_4$\\
+          &&&\\
+          \un & 0   & \un & 0\\
+          0   & \un & 0   & \un \\
+          \un & 0   & 0   & \un
+        \end{tabular}
+        &
+        \begin{tabular}[h]{llll}
+          $c_3$ &$c_1$ &$c_4$& $c_2$\\
+          &&&\\
+          \un & \un & 0 & 0\\
+          0 & 0 & \un & \un \\
+          0 & \un & \un & 0
+        \end{tabular}
+        &&&&
+        \begin{tabular}[h]{llll}
+          $d_1$ & $d_2$ &$d_3$ &$d_4$\\
+          % &&&\\
+          &&&\\
+          \un & \un & 0 & 0\\
+          0 & \un & \un & 0 \\
+          0 & \un & 0 & \un 
+        \end{tabular}
+      \end{tabular}
+    }
+
+    \caption[\figtabsize Matrices with and without COP.]{\figtabsize
+      Matrices with and without COP. $M_1$ has COP because by
+      permuting its columns, $c_1$-$c_4$, one can obtain $M_1'$ where
+      the {\un}s in each row are consecutive. $M_2$, however, does not
+      have COP since no permutation of its columns, $d_1$-$d_4$, will
+      arrange {\un}s in each row consecutively \cite{d08phd}.}
+
+    \label{fig:cop-matrix}
+  \end{figure}
+}
+
+
 \def\figgraphmatrices{
   \begin{figure}[htbp]% [t] % [p]%
     \centering
 
-  \begin{tabular}[htbp]{cccl}
+  \begin{tabular}{ll}
     \figtabsize
-    ${\bf G_1}$: 
-    \includegraphics[scale=0.2]{../img/ex1_concaveroundgr.pdf} &
-    ${\bf G_2}$: 
-    \includegraphics[scale=0.2]{../img/ex2_intervalgr.pdf} &
-    ${\bf H}$: 
-    \includegraphics[scale=0.2]{../img/ex2_intervalgr.pdf} &
-    \begin{tabular}[htbp]
-      {>{\columncolor{\tblhcolor}}  l llll}                       % Shade header col..
-      \rowcolor[gray]{0.8} 
-      ${\bf C}$ &$w_1$ &$w_2$ &$w_3$ &$w_4$\\ % ..and row
+%    ${\bf G_1}$:  % height=30mm,keepaspectratio=true
+    \includegraphics[bb=120 120 150 180 ,scale=0.4]{../img/graphmatrices_g1.png} 
+   &                 % COL BREAK
+   \begin{tabular}[htbp]
+      {>{\columncolor{\tblhcolor}}  l llllll}                       % Shade header col..
+      \rowcolor[gray]{0.8}                                          % ..and row
+      ${\bf A_2}$&$v_1$ &$v_2$ &$v_3$ &$v_4$ &$v_5$ &$v_6$\\
       % \hline
-      $u_1$ &\un   &\un   &0     &0   \\
-      $u_2$ &\un   &\un   &\un   &\un \\
-      $u_3$ &0     &0     &\un   &\un \\
-      $u_4$ &0     &\un   &\un   &0   \\
-      $u_5$ &\un   &\un   &\un   &0   
-    \end{tabular}
-  \end{tabular}\\
-  \vspace{5mm}
-  \begin{tabular}{lll}
+      $v_1$ &\un   &\un   &\un  &0     &\un   &\un \\
+      $v_2$ &\un   &\un   &\un  &\un   &0     &\un \\
+      $v_3$ &\un   &\un   &\un  &\un   &\un   &0   \\
+      $v_4$ &0     &\un   &\un  &\un   &0     &0   \\
+      $v_5$ &\un   &0     &\un  &0     &\un   &0   \\
+      $v_6$ &\un   &\un   &0    &0     &0     &\un 
+    \end{tabular}    
+    \\
+    & \\
     \begin{tabular}[htbp]%{l|lll lll}
       {>{\columncolor{\tblhcolor}}  l llllll}                       % Shade header col..
       \rowcolor[gray]{0.8}                                          % ..and row
@@ -46,35 +88,7 @@
       $v_5$     &\un   &0     &\un  &0     &0     &0   \\
       $v_6$     &\un   &\un   &0    &0     &0     &0   
     \end{tabular}
-    & 
-    \begin{tabular}[htbp]
-      {>{\columncolor{\tblhcolor}}  l llll}                       % Shade header col..
-      \rowcolor[gray]{0.8}                                          % ..and row
-      ${\bf B}$&$c_1$ &$c_2$ &$c_3$ &$c_4$\\
-      % \hline
-      $v_1$ &\un   &\un   &\un   &0   \\
-      $v_2$ &\un   &0     &0     &0   \\
-      $v_3$ &0     &\un   &0     &0   \\
-      $v_4$ &0     &0     &\un   &\un \\
-      $v_5$ &0     &\un   &\un   &0   \\
-      $v_6$ &0     &0     &0     &\un  
-    \end{tabular}
-    & 
-    \\    
-    && \\
-    \begin{tabular}[htbp]
-      {>{\columncolor{\tblhcolor}}  l llllll}                       % Shade header col..
-      \rowcolor[gray]{0.8}                                          % ..and row
-      ${\bf A_2}$&$v_1$ &$v_2$ &$v_3$ &$v_4$ &$v_5$ &$v_6$\\
-      % \hline
-      $v_1$ &\un   &\un   &\un  &0     &\un   &\un \\
-      $v_2$ &\un   &\un   &\un  &\un   &0     &\un \\
-      $v_3$ &\un   &\un   &\un  &\un   &\un   &0   \\
-      $v_4$ &0     &\un   &\un  &\un   &0     &0   \\
-      $v_5$ &\un   &0     &\un  &0     &\un   &0   \\
-      $v_6$ &\un   &\un   &0    &0     &0     &\un 
-    \end{tabular}    
-    &
+   &                 % COL BREAK
     \begin{tabular}[htbp]
       {>{\columncolor{\tblhcolor}}  l llllll}                       % Shade header col..
       \rowcolor[gray]{0.8}                                          % ..and row
@@ -87,7 +101,40 @@
       $v_3$ &\un   &0     &\un  &\un   &\un   &\un \\
       $v_5$ &\un   &0     &0    &0     &\un   &\un 
     \end{tabular}
+    \\    
     & \\
+%    ${\bf G_2}$: 
+    \includegraphics[bb=120 120 150 180, scale=0.5,keepaspectratio=true]{../img/graphmatrices_g2.png} 
+    &                 % COL BREAK
+    \begin{tabular}[htbp]
+      {>{\columncolor{\tblhcolor}}  l llll}                         % Shade header col..
+      \rowcolor[gray]{0.8}                                          % ..and row
+      ${\bf B}$&$c_1$ &$c_2$ &$c_3$ &$c_4$\\
+      % \hline
+      $v_1$ &\un   &\un   &\un   &0   \\
+      $v_2$ &\un   &0     &0     &0   \\
+      $v_3$ &0     &\un   &0     &0   \\
+      $v_4$ &0     &0     &\un   &\un \\
+      $v_5$ &0     &\un   &\un   &0   \\
+      $v_6$ &0     &0     &0     &\un  
+    \end{tabular}
+    \\
+    & \\
+%    ${\bf H}$: % bb=120 120 150 180, keepaspectratio=true , angle=90,
+    \includegraphics[scale=0.4]{../img/graphmatrices_H.png}
+    &                 % COL BREAK
+    \begin{tabular}[htbp]
+      {>{\columncolor{\tblhcolor}}  l llll}                       % Shade header col..
+      \rowcolor[gray]{0.8}                                        % ..and row
+      ${\bf C}$ &$w_1$ &$w_2$ &$w_3$ &$w_4$\\                      
+      % \hline
+      $u_1$ &\un   &\un   &0     &0   \\
+      $u_2$ &\un   &\un   &\un   &\un \\
+      $u_3$ &0     &0     &\un   &\un \\
+      $u_4$ &0     &\un   &\un   &0   \\
+      $u_5$ &\un   &\un   &\un   &0   
+    \end{tabular}
+    \\
   \end{tabular}
 
   \caption[\figtabsize Matrices defined in

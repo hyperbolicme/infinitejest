@@ -250,75 +250,45 @@ illustrated by the study group accommodation problem).
 
 \section{Basic preliminaries - general definitions and nomenclature}
 \label{sec:basicprelim}
-\tnote{(definitions theorems etc) needed if any - graph theory}
 
-\begin{definition}{\emph{\Cop}}
+\begin{definition}[\emph{Binary matrix}]
+  Let $M$ be an $n \times m$ matrix. $m_{i,j}$ denotes its $(i,j)$th
+  element, i.e. element at $i$th row and $j$th column. $M$ is a binary
+  matrix if each of its element is 0 or \un.
+  In other words, for all $i \in [n]$ and $j \in [m]$, $m_{i,j} \in
+  \{0, \un\}$ 
+\end{definition}
+
+\begin{definition}[\emph{set system}]
+\end{definition}
+
+
+\begin{definition}[\emph{\Cop}]
   \tnote[important]{define cop here. refer to it in chap 2 or
     duplicate it using slash def }
   \begin{enumerate}
   \item \Cop
   \item Strong \cop
   \item \Cop order or \cop permutation
+  \item \Cop for set systems\tnote{see mcc04}
   \end{enumerate}
 \end{definition}
 
-\begin{figure}[t] %[htbp]
-  \centering
-  {\figtabsize
-    \begin{tabular}[h]{l|lcccl}
-      $M_1$: & $M_1'$: &&&& $M_2$:\\
-      &&&&&\\
-      \begin{tabular}[h]{llll}
-        $c_1$ & $c_2$ &$c_3$ &$c_4$\\
-        &&&\\
-        \un & 0   & \un & 0\\
-        0   & \un & 0   & \un \\
-        \un & 0   & 0   & \un
-      \end{tabular}
-      &
-      \begin{tabular}[h]{llll}
-        $c_3$ &$c_1$ &$c_4$& $c_2$\\
-        &&&\\
-        \un & \un & 0 & 0\\
-        0 & 0 & \un & \un \\
-        0 & \un & \un & 0
-      \end{tabular}
-      &&&&
-      \begin{tabular}[h]{llll}
-        $d_1$ & $d_2$ &$d_3$ &$d_4$\\
-        % &&&\\
-        &&&\\
-        \un & \un & 0 & 0\\
-        0 & \un & \un & 0 \\
-        0 & \un & 0 & \un 
-      \end{tabular}
-    \end{tabular}
-  }
+\figcopmatrix
+\tnote[important]{have a figure for set systems also}
 
-  \caption[\figtabsize Matrices with and without COP.]{\figtabsize
-    Matrices with and without COP. $M_1$ has COP because by permuting
-    its columns, $c_1$-$c_4$, one can obtain $M_1'$ where the {\un}s
-    in each row are consecutive. $M_2$, however, does not have COP
-    since no permutation of its columns, $d_1$-$d_4$, will arrange
-    {\un}s in each row consecutively \cite{d08phd}.}
-
-  \label{fig:cop-matrix}
-\end{figure}
-
-
-
-\begin{definition}{\emph{\Crop}}
+\begin{definition}[\emph{\Crop}]
   \tnote[important]{define circ1 here. refer to it in chap 2 or
     duplicate it using slash def }
 \end{definition}
 
 
-\begin{definition}{\emph{Binary matrix}}
-  Let $M$ be an $n \times m$ matrix. $m_{i,j}$ denotes its $(i,j)$th
-  element, i.e. element at $i$th row and $j$th column. $M$ is a binary
-  matrix if each of its element is 0 or \un.
-  In other words, for all $i \in [n]$ and $j \in [m]$, $m_{i,j} \in
-  \{0, \un\}$ 
+\begin{definition}[\emph{Graph, Tree}]
+  
+\end{definition}
+
+\begin{definition}[\emph{Maximal clique}]
+  
 \end{definition}
 
 

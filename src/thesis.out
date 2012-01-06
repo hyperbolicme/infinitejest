@@ -1,37 +1,12 @@
-\BOOKMARK [0][-]{chapter*.1}{ACKNOWLEDGEMENTS}{}
-\BOOKMARK [0][-]{chapter*.2}{ABSTRACT}{}
-\BOOKMARK [0][-]{chapter*.4}{LIST OF TABLES}{}
-\BOOKMARK [0][-]{chapter*.5}{LIST OF FIGURES}{}
-\BOOKMARK [0][-]{chapter*.6}{ABBREVIATIONS}{}
-\BOOKMARK [0][-]{chapter*.7}{NOTATION}{}
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}
-\BOOKMARK [1][-]{section.1.1}{Organization of the document}{chapter.1}
-\BOOKMARK [1][-]{section.1.2}{Illustration of the problem}{chapter.1}
-\BOOKMARK [1][-]{section.1.3}{Basic preliminaries - general definitions and nomenclature}{chapter.1}
-\BOOKMARK [1][-]{section.1.4}{Consecutive-ones Property Testing - a Brief Survey}{chapter.1}
-\BOOKMARK [2][-]{subsection.1.4.1}{Matrices with COP}{section.1.4}
-\BOOKMARK [2][-]{subsection.1.4.2}{Optimization problems in COP}{section.1.4}
-\BOOKMARK [1][-]{section.1.5}{Application of COP in Areas of Graph Theory and Algorithms}{chapter.1}
-\BOOKMARK [1][-]{section.1.6}{Generalization of COP - the Motivation}{chapter.1}
-\BOOKMARK [1][-]{section.1.7}{Summary of New Results in this Thesis}{chapter.1}
+\BOOKMARK [0][-]{chapter*.2}{LIST OF TABLES}{}
+\BOOKMARK [0][-]{chapter*.3}{LIST OF FIGURES}{}
 \BOOKMARK [0][-]{chapter.2}{Consecutive-ones Property-- A Survey of Important Results}{}
 \BOOKMARK [1][-]{section.2.1}{COP in Graph Theory}{chapter.2}
 \BOOKMARK [1][-]{section.2.2}{Matrices with COP}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.2.1}{Tucker's forbidden submatrices for COP}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.2}{PQ tree -- a linear COT algorithm}{section.2.2}
 \BOOKMARK [1][-]{section.2.3}{Optimization problems in COP}{chapter.2}
 \BOOKMARK [1][-]{section.2.4}{Certifying Algorithms}{chapter.2}
 \BOOKMARK [1][-]{section.2.5}{COP in Relational Database Model}{chapter.2}
 \BOOKMARK [1][-]{section.2.6}{COP in Graph Isomorphism}{chapter.2}
-\BOOKMARK [0][-]{chapter.3}{Tree Path Labeling of Path Hypergraphs - the New Results}{}
-\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}
-\BOOKMARK [1][-]{section.3.2}{Preliminaries to new results}{chapter.3}
-\BOOKMARK [1][-]{section.3.3}{Characterization of Feasible Tree Path Labeling}{chapter.3}
-\BOOKMARK [1][-]{section.3.4}{ Computing feasible TPL with special target trees give problem definition etc}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.4.1}{Target tree is a Path}{section.3.4}
-\BOOKMARK [2][-]{subsection.3.4.2}{Target tree is a k-subdivided Star}{section.3.4}
-\BOOKMARK [1][-]{section.3.5}{ TPL with no restrictions}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.5.1}{Finding an assignment of tree paths to a set system}{section.3.5}
-\BOOKMARK [1][-]{section.3.6}{Complexity of Tree Path Assignment-A Discussion}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.6.1}{Consecutive Ones Testing is in Logspace}{section.3.6}
-\BOOKMARK [0][-]{chapter.4}{Conclusion}{}
-\BOOKMARK [0][-]{chapter.4}{REFERENCES [minor]\(i\)make names in bib file uniform style w.r.t. firstname/initials \(ii\) have back refs - i.e. pages that cite the item.}{}
+\BOOKMARK [0][-]{changenumber.24.1}{REFERENCES [minor]\(i\)make names in bib file uniform style w.r.t. firstname/initials \(ii\) have back refs - i.e. pages that cite the item.}{}

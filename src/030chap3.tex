@@ -176,7 +176,7 @@ problem.
 An algorithm for \CFTPL on general trees which is less efficient than
 polynomial time is presented in
 Section~\ref{sec:norestraint}. \tnote{put some more description
-  here. refer walcom.}
+  here. refer WG11.}
 
 \remove{We focus on the question of generalizing the notion of an
   ICPIA cite-nsnrs09 to characterize feasible path assignments.  We
@@ -323,7 +323,7 @@ subdivided exactly $k$ times. The definition of a {\em ray of a
 leaf. It is clear that all rays are of length $k+2$.
 
 
-{\tt --- WALCOM}
+\temptext{ --- WG11 begin --- }
 
 A {\em path assignment} $\A$ to $\F$ is defined as a set assignment
 where second universe is the vertex set $V$ of a given tree $T$ and
@@ -371,6 +371,7 @@ context.\\
 Finally, an in-tree is a directed rooted tree in which all edges are
 directed toward to the root.
 
+\temptext{ --- WG11 end --- }
 
 \section{Characterization of Feasible Tree Path Labeling}
 \label{sec:feasible}
@@ -511,7 +512,7 @@ paths in the new path labeling share any leaf.
 \end{proof}
 
 
-{\tt WALCOM begin}
+\temptext{ --- WG11 begin --- }
 
 
 \begin{lemma}
@@ -636,7 +637,8 @@ paths in the new path labeling share any leaf.
   sets, invariant IV is proven by also using lemma
   \ref{lem:setminuscard}. %\qed
 
-\end{proof} {\tt WALCOM end}
+\end{proof} 
+\temptext{ --- WG11 end --- }
 
 \begin{lemma}
   \label{lem:invar1} In Algorithm~\ref{perms}, at the end of $j$th
@@ -889,8 +891,7 @@ Algorithm~\ref{leafasgn} is empty in some iteration of the {\bf while}
 loop. This will abort our procedure of finding the hypergraph
 isomorphism. The following lemma shows that this will not happen.
 
-
-{\tt WALCOM begin}
+\temptext{ --- WG11 begin --- }
 \begin{lemma}
   \label{lem:invar3}
   In Algorithm \ref{leafasgn},for all $j \geq 0$, at the end of the
@@ -1044,9 +1045,7 @@ to get permutation $\sigma'$. The relation $\cL_0 \cup \cL_1 \cup
 .. \cup \cL_{d} \cup \sigma'$ gives the bijection required in the
 original problem.%\qed
 \end{proof}
-
-
-{\tt WALCOM end}
+\temptext{ --- WG11 end --- }
 
 
 \begin{lemma}

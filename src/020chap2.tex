@@ -13,8 +13,6 @@ some applications of \COP.
 
 \tnote[important]{ADD: have a few lines about organization of chapter}
 
-\tnote{DEFINE COP SOMEWHERE}
-
 \section{\COP in Graph Theory}
 
 \COP is closely connected to several types of graphs by way of
@@ -49,6 +47,7 @@ more.
     $m_{i,j} = \un$ \iff $v_i \in C_j$ for all $i \in [n], j \in [k]$
     where $\{C_j \mid j \in [k]\}$ is the set of maximal cliques of
     $G$.
+    \label{def::maxcliquematrix}
   \item \emph{Half adjacency matrix} of $H$ is the $n_a \times n_b$
     binary matrix $M$ with $m_{i,j} = \un$ \iff $(a_i, b_j) \in E_H$.
   \end{enumerate}
@@ -78,6 +77,7 @@ classes that is related to \COP or \CROP.\\
       maximal cliques of interval graph $G$ can be linearly ordered
       \stt for all $v \in V(G)$, cliques containing $v$ are
       consecutive in the ordering \cite[Th. 8.1]{mcg04}.}
+
     \begin{enumerate}[a.]
     \item $G$ is a \emph{unit interval graph} if it is an interval
       graph \stt all intervals have the same length.\endnotemark[2]
@@ -91,8 +91,9 @@ classes that is related to \COP or \CROP.\\
     mapped to a set of arcs on a circle \stt two vertices are adjacent
     \iff their corresponding arcs overlap.\tnote[pressing]{how is
       CO/ROP related?}
-  \item \label{def::convexbi} $H$ is \emph{convex bipartite on columns (rows)} if its half adjacency matrix
-    has \COP on rows (columns).
+  \item $H$ is \emph{convex bipartite on columns (rows)} if its half
+    adjacency matrix has \COP on rows (columns).%
+    \label{def::convexbi}
   \item $H$ is \emph{biconvex bipartite} or \emph{doubly
       convex}\cite{yc95} if its half adjacency matrix has \COP on both
     rows and columns.
@@ -127,7 +128,7 @@ in matrices in the following section.
   \label{tab:graphmatrices}
 \end{table}
 
-\clearpage      % Print pending floats
+%\clearpage      % Print pending floats
 
 \section{Matrices with COP}
 \label{sec:surveycoptest}
@@ -153,8 +154,8 @@ correponding areas respectively for \cop in binary matrices.
 \item \label{q:copperm} What is the \COP permutation for the given matrix with \COP?
 \item \label{q:copopt} What are the optimizations possible and practically useful on
   the given matrix without \COP?
-\item \label{q:nocopcert} If algorithm for (\ref{q:testcop}) returns \textbf{false}, can a
-  certificate for this be computed?
+\item \label{q:nocopcert} If algorithm for (\ref{q:testcop}) returns
+  \textbf{false}, can a certificate for this be computed?
 \end{enumerate}
 
 Without doubt, besides computing answers to these questions, we are
@@ -185,6 +186,7 @@ Table~\ref{tab:cophistory} gives a snapshot of these results.
   \label{tab:cophistory}
 \end{table}
 
+%\clearpage
 \subsection{Tucker's forbidden submatrices for \COP}
 
 % \change{While it is remarkable that the first polynomial time
@@ -278,20 +280,108 @@ $M_{I_k}$, $M_{II_k}$, $M_{III_k}$ (with $k \ge 1$), $M_{IV}$,
 It can be verified that the matrices in
 Figure~\ref{fig:forbiddensubmatrices} are the half adjacency matrices
 of the graphs in Figure~\ref{fig:forbiddensubgraphs} respectively
-which is not surprising due to Definition~\ref{def:graphwithcop}~\ref{def::convexbi}. 
+which is not surprising due to
+Definition~\ref{def:graphwithcop}~\ref{def::convexbi}.
+
+%\clearpage
+\subsection{$PQ$ tree -- a linear COT algorithm}
+
+Booth and Lueker in their paper \cite{bl76} gave the first linear
+algorithm for \cop testing by way of an interval graph recognition
+algorithm. Their result has close relations to the characterization of
+interval graphs by \cite{gh64}. A graph $G$ is an interval graph \iff
+all its maximal cliques can be linearly ordered \stt for any vertex
+$v$ in $G$, all the cliques that $v$ is incident on are consecutive in
+this order. Clearly, this means that the maximal clique incidence
+matrix\footnote{
+  Definition~\ref{def:graphmatrices}~\ref{def::maxcliquematrix}} must
+have \COP on rows. This algorithm constructs a data structure called
+\PQtree. A \PQtree represents all the \COP orderings of the matrix it
+is associated with. \cite{bl76}'s algorithm uses the fact that if a
+matrix has \COP, a \PQtree for it can be constructed. It is
+interesting to note that aside from interval graph recognition and
+\COP testing, \PQtree is also useful in other applications like
+finding planar embeddings of planar graphs \cite{lec67,mcc04} and
+recognizing \CROP in a matrix.
+
+\begin{definition}[\emph{\PQtree \cite{bl76, mcc04}}]\\
+  A \PQtree of matrix $M$ with \COP, is a tree with the following properties.
+  \begin{enumerate}[i.]
+    \singlespacing
+  \item Each leaf uniquely represents a row (column) of $M$. The leaf
+    order of the tree gives a \COP order for column (row)\endnote{Note
+      that \COP order for column requires permutation of rows and vice
+      versa.} for $M$.
+  \item Every non-leaf node in the tree are labeled $P$ or $Q$.
+  \item \label{def::nodep} The children of $P$ nodes are
+    unordered. They can be permuted in any fashion to obtain a new
+    \COP order for $M$.
+  \item \label{def::nodeq} The children of $Q$ nodes are linearly
+    ordered. Their order can be reversed to get obtain a new \COP
+    order for $M$.
+  \end{enumerate}
+  \label{def:pqtree}
+\end{definition}
+
+Thus, effectively, there exists a bijection between set of matrices
+with \COP and the set of \PQtrees (accurately speaking, each matrix
+with \COP bijectively maps to an equivalence class of \PQtrees due to
+properties (\ref{def::nodep}) and (\ref{def::nodeq})). See
+Figure~\ref{fig:pqtree} for an example of \PQtree.
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tabular}[h]{lr}
+    \begin{tabular}[h]
+      {>{\columncolor{\tblhcolor}} l lllllllllll|}
+      \hline
+      $r_1$   &\un &0   &\un &0   &0   &0    &0   \\
+      $r_2$   &\un &0   &\un &0   &0   &0    &0   \\
+      $r_3$   &\un &0   &0   &\un &0   &0    &0   \\
+      $r_4$   &\un &0   &0   &\un &0   &0    &0   \\
+      $r_5$   &\un &0   &0   &0   &0   &0    &0   \\
+      $r_6$   &\un &\un &0   &0   &0   &0    &0   \\
+      $r_7$   &0   &\un &0   &0   &0   &\un  &0   \\
+      $r_8$   &0   &\un &0   &0   &\un &\un  &0   \\
+      $r_9$   &0   &\un &0   &0   &\un &\un  &0   \\
+      $r_{10}$ &0   &\un &0   &0   &\un &\un  &\un \\
+      $r_{11}$ &0   &\un &0   &0   &\un &0    &\un \\
+      \hline
+    \end{tabular}
+    &
+    \includegraphics[scale=0.3]{../img/pqtree.png}
+    
+  \end{tabular}
+ 
+  \caption[\figtabsize An example for \PQtree]{\figtabsize An example for \PQtree.
+    Permuting the order of the left child of the root, we see that
+    \temptext{(d,a,b,c,e,f,g,h,i,j,k)} is a \COP order. Reversing the
+    order of the right child of the root, we see that
+    \temptext{(a,b,c,d,e,f,k,j,h,i,g) } is yet another \COP order. \temptext{PLACEHOLDER IMG.}
+    \cite[Fig.~1\endnote{\cite{mcc04}illustrates \COP on rows. Our
+      convention in this document is \COP on columns and thus example
+      matrix has been transposed. }]{mcc04}}
+  \label{fig:pqtree}
+\end{figure}
+
+The \cite{bl76} algorithm with input $n \times m$ matrix $M$ starts
+with a \PQtree for a vacuous $n \times 0$ matrix $M'$ (submatrix
+induced by 0 columns). This is known as a {\em universal} \PQtree
+which is one with its root as a $P$ node and only leaves as its
+children -- each leaf representative of a row of input (by definition
+of \COP for columns). This induced submatrix $M'$ vacuously has \COP.
+Each column is then added iteratively to $M'$ to check if the new $M'$
+has \COP.  By a complicated, but linear, procedure the algorithm does
+one of the following actions in each iteration: (a) declare that $M$
+has no \COP, or (b) modify the current \PQtree to represent the new
+$M'$ (which clearly, must have \COP, since if not, option (a) would
+have been executed).
+
+
 
 \temptext{
-  \begin{enumerate}[-I-]
-  \item PQ trees. Define. Concise flowchart of algorithm? [BL76]\\
-    The construction of PQ trees in \cite{bl76} draws on the close
-    relationship of matrices with COP to interval graphs. A PQ tree of
-    a matrix is one that stores all row (column) permutations of the
-    matrix that give the COP orders (there could be multiple orders of
-    rows or columns) of the matrix. This is constructed using an
-    elaborate linear time procedure and is also a test for
-    planarity\tnote{check check check. both interval graph and
-      planarity in this paper?}.
-  \item Variations - PQR, PC etc. [MM96, Hsu01, McC04]\\
+  \begin{enumerate}[ -I-]
+  \item  Variations - PQR, PC etc. [MM96, Hsu01, McC04]\\
     PQR trees is a generalized data structure based on PQ trees
     \cite{mm96,mpt98}.  \cite{tm05} describes an improved algorithm to
     build PQR
@@ -312,8 +402,7 @@ which is not surprising due to Definition~\ref{def:graphwithcop}~\ref{def::conve
     interesting and relevant, especially to this thesis because it
     simplifies COT to a great degree by reducing the solution search
     space owing to the a simple set theoretic characterization.\\
-  \item Parallel algorithms [AS95, BS03, CY91]\\
-  \item
+  \item Parallel algorithms [AS95, BS03, CY91]
   \end{enumerate}
 
 }
@@ -332,7 +421,7 @@ which is not surprising due to Definition~\ref{def:graphwithcop}~\ref{def::conve
   [tag:chordalGraph]} %
 
 
-\clearpage      % Print pending floats
+%\clearpage      % Print pending floats
 \section{Optimization problems in COP}
 \label{sec:surveycopopt}
 \tnote{Expand on ref:sec:optcop}

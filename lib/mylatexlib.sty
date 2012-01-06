@@ -34,41 +34,6 @@
 %\usepackage{pifont}
 \usepackage{textcomp}          % Has certain special chars like
                                %  \textreferencemark
-%\usepackage[inline] 
-%\usepackage[margins] 
-\usepackage[finalnew]
-         {../lib/trackchanges} % For tracking changes.
-                               % :Package options:
-                               % [finalold]
-                               %   Ignore all of the edits. 
-                               %   The document will look as if
-                               %   the edits had not been added. 
-                               % [finalnew]
-                               %   Accept all of the edits. 
-                               %   Notes will not be shown in the
-                               %   final output. 
-                               % [footnotes]
-                               %   Added text will be shown
-                               %   inline. Removed text and notes
-                               %   will be shown as footnotes.  
-                               %   This is the default option.
-                               % [margins]
-                               %   Added text will be shown
-                               %   inline. Removed text and notes
-                               %   will be shown in the
-                               %   margin. Margin notes will be
-                               %   aligned with the edits when
-                               %   possible. 
-                               % [inline]
-                               %   All changes and notes will be
-                               %   shown inline.
-
-\addeditor{bogus1}             %
-\addeditor{important}          % needs attention level 2
-\addeditor{dire} %{a}          % needs attention level infinity NOW!
-\addeditor{minor}              % least priority TBDs that
-                               %  need to go into thesis  
-\addeditor{pressing}           % needs attention level 1
 
 \DeclareMathAlphabet{\mathpzc} % Loading certain calligraphy fonts
                       {OT1}{pzc}{m}{it}
@@ -178,8 +143,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Theorem etc. commands
-\newtheorem{observation}{Observation}
-\newtheorem{proposition}[theorem]{Proposition}
+% \newtheorem{observation}{Observation}
+% \newtheorem{proposition}[theorem]{Proposition}
 
 
 % \newenvironment{denselist}{
