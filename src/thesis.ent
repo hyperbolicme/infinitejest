@@ -192,3 +192,11 @@ been
 transposed.
 
 \@endanenote 
+\@doanenote {9}
+macro:->First
+appeared
+in
+\cite
+{wlh92_isaac}.\tnote
+{check}
+\@endanenote 

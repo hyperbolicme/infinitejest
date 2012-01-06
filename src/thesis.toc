@@ -35,4 +35,4 @@
 \contentsline {section}{\numberline {3.6}Complexity of Tree Path Assignment-A Discussion}{51}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}Consecutive Ones Testing is in Logspace}{52}{subsection.3.6.1}
 \contentsline {chapter}{\numberline {4}Conclusion}{54}{chapter.4}
-\contentsline {chapter}{REFERENCES \tnote [minor]{(i)make names in bib file uniform style w.r.t. firstname/initials (ii) have back refs - i.e. pages that cite the item.}}{56}{changenumber.24.1}
+\contentsline {chapter}{REFERENCES \tnote [minor]{(i)make names in bib file uniform style w.r.t. firstname/initials (ii) have back refs - i.e. pages that cite the item.}}{56}{changenumber.24.2}
