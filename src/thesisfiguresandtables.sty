@@ -154,3 +154,43 @@
   \label{fig:graphmatrices}
   \end{figure}
 }
+
+
+
+\def\figpqtree{
+  \begin{figure}[htbp]
+    \centering
+    \begin{tabular}[h]{lr}
+      \begin{tabular}[h]
+        {>{\columncolor{\tblhcolor}} l lllllllllll|}
+        \hline
+        $r_1$   &\un &0   &\un &0   &0   &0    &0   \\
+        $r_2$   &\un &0   &\un &0   &0   &0    &0   \\
+        $r_3$   &\un &0   &0   &\un &0   &0    &0   \\
+        $r_4$   &\un &0   &0   &\un &0   &0    &0   \\
+        $r_5$   &\un &0   &0   &0   &0   &0    &0   \\
+        $r_6$   &\un &\un &0   &0   &0   &0    &0   \\
+        $r_7$   &0   &\un &0   &0   &0   &\un  &0   \\
+        $r_8$   &0   &\un &0   &0   &\un &\un  &0   \\
+        $r_9$   &0   &\un &0   &0   &\un &\un  &0   \\
+        $r_{10}$ &0   &\un &0   &0   &\un &\un  &\un \\
+        $r_{11}$ &0   &\un &0   &0   &\un &0    &\un \\
+        \hline
+      \end{tabular}
+      &
+      \includegraphics[scale=0.3]{../img/pqtree.png}
+    
+    \end{tabular}
+ 
+    \caption[\figtabsize An example for \PQtree]{\figtabsize An
+      example for \PQtree.  Permuting the order of the left child of
+      the root, we see that \temptext{(d,a,b,c,e,f,g,h,i,j,k)} is a
+      \COP order. Reversing the order of the right child of the root,
+      we see that \temptext{(a,b,c,d,e,f,k,j,h,i,g) } is yet another
+      \COP order. \temptext{PLACEHOLDER IMG.}
+      \cite[Fig.~1\endnote{\cite{mcc04}illustrates \COP on rows. Our
+        convention in this document is \COP on columns and thus
+        example matrix has been transposed. }]{mcc04}}
+    \label{fig:pqtree}
+  \end{figure}
+}

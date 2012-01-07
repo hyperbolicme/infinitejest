@@ -54,6 +54,13 @@ the
 same
 \@endanenote 
 \@doanenote {3}
+macro:->First
+published
+in
+\cite
+{wlh02isaac92}
+\@endanenote 
+\@doanenote {4}
 macro:->The
 terminology
 in
@@ -76,7 +83,7 @@ convex
 bipartite
 graphs}.
 \@endanenote 
-\@doanenote {4}
+\@doanenote {5}
 macro:->If
 $G
 =
@@ -123,7 +130,7 @@ the
 third
 vertex.
 \@endanenote 
-\@doanenote {5}
+\@doanenote {6}
 macro:->The
 partition
 corresponds
@@ -140,7 +147,7 @@ has
 columns
 (rows).
 \@endanenote 
-\@doanenote {6}
+\@doanenote {7}
 macro:->Abridged
 to
 match
@@ -153,7 +160,7 @@ See
 previous
 note.
 \@endanenote 
-\@doanenote {7}
+\@doanenote {8}
 macro:->Note
 that
 \COP
@@ -168,7 +175,7 @@ and
 vice
 versa.
 \@endanenote 
-\@doanenote {8}
+\@doanenote {9}
 macro:->\cite
 {mcc04}illustrates
 \COP
@@ -192,11 +199,10 @@ been
 transposed.
 
 \@endanenote 
-\@doanenote {9}
-macro:->First
-appeared
+\@doanenote {10}
+macro:->As
+seen
 in
-\cite
-{wlh92_isaac}.\tnote
-{check}
+Section~\ref
+{theCourseScheduleExample}
 \@endanenote 

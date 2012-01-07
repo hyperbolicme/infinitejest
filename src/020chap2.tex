@@ -176,14 +176,70 @@ matrices since it is known that questions~(\ref{q:testcop}) and
 (\ref{q:copperm}) stated above for \COP are efficiently solvable.
 Table~\ref{tab:cophistory} gives a snapshot of these results.
 
+
+\def\tabparboxw{10cm}
 \begin{table}[htbp]
   \centering
-   \includegraphics[scale=0.5]{../img/cophistory.png} % TEMPORARY
+  {
+    \fontencoding{OT1}\fontfamily     {cmss}\selectfont
+    % \sffamily
+    \footnotesize
+    % \includegraphics[scale=0.5]{../img/cophistory.png} % TEMPORARY
 
-  \caption[\figtabsize A brief history of \COP research]{\figtabsize A
-    brief history of \COP research \temptext{ OLD IMG - PLACEHOLDER - A LATEX
-    TABLE WILL REPLACE THIS + WILL BE UPDATED }}
-  \label{tab:cophistory}
+   \begin{tabular}[h]{lll}
+     \hline
+     \hline
+     % 
+     1899 & \parbox[t]{\tabparboxw}{ First mention of \COP} & \cite{p59}  \\ 
+
+     \rowcolor[gray]{0.8} %
+     1951 & \parbox[t]{\tabparboxw}{ Heuristics for COT} & \cite{wsr51} \\
+
+     1965 & \parbox[t]{\tabparboxw}{ First polynomial time algorithm
+       for \COP testing} & \cite{fg65} \\ 
+
+     \rowcolor[gray]{0.8} %
+     1972 & \parbox[t]{\tabparboxw}{ Characterization for \COP -- forbidden
+       submatrices} &
+     \cite{at72} \\
+
+     1976 & \parbox[t]{\tabparboxw}{ First linear time algorithm for COT --
+       \PQtree} &
+     \cite{bl76} \\
+
+     \rowcolor[gray]{0.8} %
+     1992 & \parbox[t]{\tabparboxw}{ Linear
+       time algorithm COT without \PQtree} & \cite{wlh02}\endnote{First
+       published in \cite{wlh02isaac92}} \\
+
+     2001 & \parbox[t]{\tabparboxw}{\PCtree\ -- a simplification of
+       \PQtree} & \cite{wlh01,hm03} \\  
+
+     \rowcolor[gray]{0.8} %     
+     1996 & \parbox[t]{\tabparboxw}{\PQRtree\ -- generalization of
+       \PQtree for any binary matrix regardless of its \COP status} &
+     \cite{mm96} \\ 
+
+     1998 & \parbox[t]{\tabparboxw}{ Almost linear time to construct
+       \PQRtree} & \cite{mpt98} \\ 
+
+     \rowcolor[gray]{0.8} %
+     2004 & \parbox[t]{\tabparboxw}{ A certifying algorithm for no
+       \COP.\\ Generalized \PQtree.} & \cite{mcc04} \\ 
+
+     2009 & \parbox[t]{\tabparboxw}{ Set theoretic, cardinality based
+       characterization of \COP\ -- ICPIA} & \cite{nsnrs09} \\ 
+
+     \rowcolor[gray]{0.8} %
+     2010 & \parbox[t]{\tabparboxw}{ Logspace \COP testing} &
+     \cite{kklv10}\\ 
+     \hline
+     \hline
+   \end{tabular}
+ }
+ \caption[\figtabsize A brief history of \COP research]{\figtabsize A
+   brief history of \COP research }
+ \label{tab:cophistory}
 \end{table}
 
 %\clearpage
@@ -329,40 +385,7 @@ with \COP bijectively maps to an equivalence class of \PQtrees due to
 properties (\ref{def::nodep}) and (\ref{def::nodeq})). See
 Figure~\ref{fig:pqtree} for an example of \PQtree.
 
-\begin{figure}[htbp]
-  \centering
-  \begin{tabular}[h]{lr}
-    \begin{tabular}[h]
-      {>{\columncolor{\tblhcolor}} l lllllllllll|}
-      \hline
-      $r_1$   &\un &0   &\un &0   &0   &0    &0   \\
-      $r_2$   &\un &0   &\un &0   &0   &0    &0   \\
-      $r_3$   &\un &0   &0   &\un &0   &0    &0   \\
-      $r_4$   &\un &0   &0   &\un &0   &0    &0   \\
-      $r_5$   &\un &0   &0   &0   &0   &0    &0   \\
-      $r_6$   &\un &\un &0   &0   &0   &0    &0   \\
-      $r_7$   &0   &\un &0   &0   &0   &\un  &0   \\
-      $r_8$   &0   &\un &0   &0   &\un &\un  &0   \\
-      $r_9$   &0   &\un &0   &0   &\un &\un  &0   \\
-      $r_{10}$ &0   &\un &0   &0   &\un &\un  &\un \\
-      $r_{11}$ &0   &\un &0   &0   &\un &0    &\un \\
-      \hline
-    \end{tabular}
-    &
-    \includegraphics[scale=0.3]{../img/pqtree.png}
-    
-  \end{tabular}
- 
-  \caption[\figtabsize An example for \PQtree]{\figtabsize An example for \PQtree.
-    Permuting the order of the left child of the root, we see that
-    \temptext{(d,a,b,c,e,f,g,h,i,j,k)} is a \COP order. Reversing the
-    order of the right child of the root, we see that
-    \temptext{(a,b,c,d,e,f,k,j,h,i,g) } is yet another \COP order. \temptext{PLACEHOLDER IMG.}
-    \cite[Fig.~1\endnote{\cite{mcc04}illustrates \COP on rows. Our
-      convention in this document is \COP on columns and thus example
-      matrix has been transposed. }]{mcc04}}
-  \label{fig:pqtree}
-\end{figure}
+\figpqtree
 
 The \cite{bl76} algorithm with input $n \times m$ matrix $M$ starts
 with a \PQtree for a vacuous $n \times 0$ matrix $M'$ (submatrix
@@ -379,41 +402,22 @@ have been executed).
 
 After the invention of \PQtrees, there has been several variants of
 the same with either simpler procedure of construction, like \PCtree
-\cite{wlh01}\endnote{First appeared in
-  \cite{wlh92_isaac}.\tnote{check}} or a generalization of it, like
+\cite{wlh01} or a generalization of it, like
 generalized \PQtree \cite{mcc04}. \PQRtree is another generalization
 of \PQtree by \cite{mm96,mpt98}. There algorithm was improved by
 \cite{tm05} \tnote{improved in terms of
   what?}. % describes an improved algorithm to
 % build PQR trees.
     
-\temptext{Expand a little more on PC trees and PQR trees.}
+\temptext{Expand a little more on PC trees and PQR trees.?}
 
-We will see more of \PQRtree in Section~\ref{sec:surveycertalgo}
+We will see more of generalized \PQtree in Section~\ref{sec:surveycertalgo}.
 
 
 \temptext{
   \begin{enumerate}[ -I-]
-  \item  Variations - PQR, PC etc. [MM96, Hsu01, McC04]\\
-    Generalized PQ trees McC04 - brief. Will be elaborated in
-    Section~\ref{sec:surveycertalgo}\\
-    Hsu also invented PC trees \cite{wlh01}\tnote{This result first
-      appeared inproc ISAAC92} which is claimed to be much easier to
-    implement.
-  \item Set theoretic characterizations [Hsu02, NS09]\\
-    \cite{wlh02} describes the simpler algorithm for
-    COT.\tnote[pressing]{in terms of what?}\\
-    \cite{nsnrs09} describes a characterization of consecutive-ones
-    property solely based on the cardinality properties of the set
-    representations of the columns (rows); every column (row) is
-    equivalent to a set that has the row (column) indices of the rows
-    (columns) that have one entries in this column (row). This is
-    interesting and relevant, especially to this thesis because it
-    simplifies COT to a great degree by reducing the solution search
-    space owing to the a simple set theoretic characterization.\\
-  \item Parallel algorithms [AS95, BS03, CY91]
+   \item Parallel algorithms [AS95, BS03, CY91]
   \end{enumerate}
-
 }
 
 
@@ -532,13 +536,64 @@ Hamiltonian path problem.\tnote{Theorem 2.1 in jkckv} \tnote{(1) A
 
 }
 
-\section{Certifying Algorithms}
+%\section{Certifying Algorithms}
+\section{COP for set systems}
 \label{sec:surveycertalgo}
 %\tnote{Expand on sec:appcertalgo} \tnote{ (certification McC04
 %theme)}
 
-\temptext{ Certifying algorithm (Generalized PQ trees) [McC04] -- Move this to section on
-    certifying algo. 
+Section~\ref{xxx} mentions how a binary matrix naturally maps to a
+system of sets.  A set can be constructed for each column of matrix
+with its elements being those row indices at which the column has \un
+s. Thus the collection of sets corresponding each column of the matrix
+forms a set system with universe as the set of all row indices of the
+matrix.  This simple construction is formally described in
+Definition~\ref{def:matrixsetsystem}.
+
+\begin{definition}%
+  \label{def:matrixsetsystem}%
+  [\emph{Set system of a binary matrix}.] Let $M$ be a binary matrix
+  of order $n \times m$ % , $r_i, i \in [n]$ be the rows in $M$
+  and $\{c_i \mid i \in [m]\}$ be the columns in $M$. A set system
+  $\cF_{M} = \{S_i \mid S_i \subseteq [n], i \in [m]\}$ is defined
+  such that for every column $c_i$ of $M$, set $S_i = \{j \mid m_{ji}
+  = \un \}$. The collection $\cF_M$ is the set system of matrix $M$.
+\end{definition}
+
+Thus the idea of \cop naturally maps to set sytems as well\endnote{As
+  seen in Section~\ref{theCourseScheduleExample}} as
+Definition~\ref{def:copforsets} states. This is equivalent to \COP for
+matrices seen in Definition~\ref{def:copmatrix}.
+
+\begin{definition}%
+  \label{def:copforsets}%
+  [\emph{\Cop for set systems% \cite{mcc04}
+  }.] A set system $\cF$ with universe $U$ has the \cop if it is
+  possible to assign a linear order to $U$ where each set $S \in \cF$
+  is an interval in the linear order.\tnote[important]{NOT formal
+    enough.}
+\end{definition}
+
+
+
+
+
+
+\temptext{ Certifying algorithm (Generalized PQ trees) [McC04] -- Move
+  this to section on certifying algo.
+
+Set theoretic characterizations [Hsu02, NS09]\\
+    \cite{wlh02} describes the simpler algorithm for
+    COT.\tnote[pressing]{in terms of what?}\\
+    \cite{nsnrs09} describes a characterization of consecutive-ones
+    property solely based on the cardinality properties of the set
+    representations of the columns (rows); every column (row) is
+    equivalent to a set that has the row (column) indices of the rows
+    (columns) that have one entries in this column (row). This is
+    interesting and relevant, especially to this thesis because it
+    simplifies COT to a great degree by reducing the solution search
+    space owing to the a simple set theoretic characterization.\\
+
 
 \cite{mcc04} describes a different approach to COT. While all previous
 COT algorithms gave the COP order if the matrix has the property but
