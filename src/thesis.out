@@ -4,9 +4,9 @@
 \BOOKMARK [1][-]{section.2.1}{COP in Graph Theory}{chapter.2}
 \BOOKMARK [1][-]{section.2.2}{Matrices with COP}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.2.1}{Tucker's forbidden submatrices for COP}{section.2.2}
-\BOOKMARK [2][-]{subsection.2.2.2}{PQ tree -- a linear COT algorithm}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.2}{Booth and Lueker's PQ tree -- a linear COT algorithm}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.3}{PC-tree-- a generalization of PQ-tree}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.4}{Generalized PQ-tree -- COP for set systems}{section.2.2}
 \BOOKMARK [1][-]{section.2.3}{Optimization problems in COP}{chapter.2}
-\BOOKMARK [1][-]{section.2.4}{COP for set systems}{chapter.2}
-\BOOKMARK [1][-]{section.2.5}{COP in Relational Database Model}{chapter.2}
-\BOOKMARK [1][-]{section.2.6}{COP in Graph Isomorphism}{chapter.2}
-\BOOKMARK [0][-]{changenumber.24.3}{REFERENCES [minor]\(i\)make names in bib file uniform style w.r.t. firstname/initials \(ii\) have back refs - i.e. pages that cite the item.}{}
+\BOOKMARK [1][-]{section.2.4}{COP in Graph Isomorphism}{chapter.2}
+\BOOKMARK [0][-]{changenumber.27.1}{REFERENCES [minor]\(i\)make names in bib file uniform style w.r.t. firstname/initials \(ii\) have back refs - i.e. pages that cite the item.}{}

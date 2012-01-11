@@ -25,6 +25,8 @@ ways. While adjacency matrix is perhaps the most commonly used such
 matrix, Definition~\ref{def:graphmatrices} defines this and a few
 more.
 
+
+
 % \begin{definition}{\emph{Matrices that define
 %       graphs.\cite[Def.~2.4]{d08phd}}} %
 \begin{definition}
@@ -62,7 +64,6 @@ classes that is related to \COP or \CROP.\\
       COP.\cite[Def.~2.5]{d08phd}}} %
   \label{def:graphwithcop} %
   Let $G$ be a graph and $H$ be a bipartite graph.
-
   \begin{enumerate}[\ref{def:graphwithcop}--i.]
   \item $G$ is \emph{convex-round} if its adjacency matrix has the
     \CROP.
@@ -77,7 +78,6 @@ classes that is related to \COP or \CROP.\\
       maximal cliques of interval graph $G$ can be linearly ordered
       \stt for all $v \in V(G)$, cliques containing $v$ are
       consecutive in the ordering \cite[Th. 8.1]{mcg04}.}
-
     \begin{enumerate}[a.]
     \item $G$ is a \emph{unit interval graph} if it is an interval
       graph \stt all intervals have the same length.\endnotemark[2]
@@ -102,21 +102,33 @@ classes that is related to \COP or \CROP.\\
   \end{enumerate}
 \end{definition}
 
-Interval graphs and circular-arc graphs have a long history in
-research. The interest around them is due to their very desirable
-property that several problems that are NP-hard\tnote[minor]{all NPC
-  problems are NPH yes?} on general graphs are not so in these graph
-classes, \ie they are polynomial time solvable on them. In a similar
-fashion, a lot of problems that are hard on general matrices have
-efficient solutions on matrics with \COP or \CROP \cite[more citations
-pg.\,33]{d08phd}. 
+Interval graphs\endnote { \cite{mcc04} cites that the problem of
+  recognizing interval graphs has significance in molecular
+  biology. Interestingly, in the late 1950s, before the structure of
+  DNA was well-understood, Seymour Benzer was able to show that the
+  intersection graph of a large number of fragments of genetic
+  material was an interval graph \cite{sb59}. This was regarded as
+  compelling evidence that genetic information was somehow arranged
+  inside a structure that had a linear topology which we now know to
+  be true\tnote{linear arrangement of DNA/genes?}.} and circular-arc
+graphs have a long history in research.  The interest around them is
+due to their very desirable property that several problems that are
+NP-hard \tnote[minor]{all NPC problems are NPH yes?} on general
+graphs, like finding a maximum clique or minimum coloring or
+independent set, are polynomial time solvable in these graph classes
+\cite{clrs01}.
+In a similar fashion, a lot of problems that are hard on general
+matrices have efficient solutions on matrices with \COP or \CROP
+\cite[more citations pg.\,33]{d08phd}.
 
 Table~\ref{tab:graphmatrices} summarises the way these graphs are
 characterized by their matrices having \COP or \CROP.
 Our focus in this chapter (and thesis) is mainly \COP and 
 having seen how useful \COP is in identifying or characterizing many
-types of graphs, we will now see results that study recognition of \COP
+types of graphs\endnote{\COP has several other applications
+  \tnote{fill up.}}, we will now see results that study recognition of \COP
 in matrices in the following section.
+
 
 
 \temptext{ tab~\ref{tab:graphmatrices} -  have an abridged version
@@ -190,7 +202,9 @@ Table~\ref{tab:cophistory} gives a snapshot of these results.
      \hline
      \hline
      % 
-     1899 & \parbox[t]{\tabparboxw}{ First mention of \COP} & \cite{p59}  \\ 
+     1899 & \parbox[t]{\tabparboxw}{ First mention of \COP
+       (archaeology)} & \parbox[t]{2cm}{\temptext{by petrie -- cite
+         kendall 69 pacific journal of mathematics 1969 }}  \\ 
 
      \rowcolor[gray]{0.8} %
      1951 & \parbox[t]{\tabparboxw}{ Heuristics for COT} & \cite{wsr51} \\
@@ -242,6 +256,26 @@ Table~\ref{tab:cophistory} gives a snapshot of these results.
  \label{tab:cophistory}
 \end{table}
 
+
+The first polynomial time algorithm for \COP testing was by
+\cite{fg65} which uses overlapping properties of columns with \un
+s. Their result has close relations to the characterization of
+interval graphs by \cite{gh64}. A graph $G$ is an interval graph \iff
+all its maximal cliques can be linearly ordered \stt for any vertex
+$v$ in $G$, all the cliques that $v$ is incident on are consecutive in
+this order. Clearly, this means that the maximal clique incidence
+matrix\endnote{
+  Definition~\ref{def:graphmatrices}~\ref{def::maxcliquematrix}} must
+have \COP on rows.
+
+A few years later, a deeply significant result based on very
+different ideas in understanding \COP came from Tucker which gave a
+combinatorial (negative) characterization of matrices with COP
+\cite{at72}. This result influenced most of the \COP results that
+followed in the literature \annote[pressing]{including linear time
+  algorithms}{did it? which ones?} for \COP recognition.
+
+
 %\clearpage
 \subsection{Tucker's forbidden submatrices for \COP}
 
@@ -252,14 +286,6 @@ Table~\ref{tab:cophistory} gives a snapshot of these results.
 % significant result in understanding \COP came \remove{a few years
 %   later} from Tucker which gave a combinatorial (negative)
 % characterization of matrices with COP \cite{at72}.
-A polynomial time algorithm for \COP testing was seen for the first
-time in \cite{fg65} which uses overlapping properties of columns with
-\un s. A few years later, a deeply significant result based on very
-different ideas in understanding \COP came from Tucker which gave a
-combinatorial (negative) characterization of matrices with COP
-\cite{at72}. This result influenced most of the \COP results that
-followed in the literature \annote[pressing]{including linear time
-  algorithms}{did it? which ones?} for \COP recognition.
 
 \cite{at72} discovered certain forbidden structures for convex
 bipartite graphs\endnote{The terminology in \cite{at72} differs. It
@@ -270,7 +296,7 @@ with \cop.  The following are the theorems from \cite{at72} that
 acheived this characterization.
 
 
-Theorem~\ref{th:tuckeratfree} proves that convex bipartite graphs
+Theorem~\ref{th:tuckeratfree} states that convex bipartite graphs
 cannot have {\em asteroidal triples}\endnote{If $G = (V,E)$ is a
   graph, a set of three vertices from $V$ form an {\em asteroidal
     triple} if between any two of them there exists a path in $G$ that
@@ -278,7 +304,7 @@ cannot have {\em asteroidal triples}\endnote{If $G = (V,E)$ is a
   third vertex.} contained in the corresponding vertex
 partition\endnote{The partition corresponds to columns (rows) if its
   half adjacency matrix has \COP columns (rows).}.
-Theorem~\ref{th:tuckerforbidden} shows what are the structures in a
+Theorem~\ref{th:tuckerforbidden} lists the structures in a
 bipartite graph that force one of its vertex partitions to have
 asteriodal triples -- in other words, it identifies the subgraphs that
 prevent the graph from being convex bipartite.
@@ -340,40 +366,49 @@ which is not surprising due to
 Definition~\ref{def:graphwithcop}~\ref{def::convexbi}.
 
 %\clearpage
-\subsection{$PQ$ tree -- a linear COT algorithm}
+\subsection{Booth and Lueker's $PQ$ tree -- a linear COT algorithm}
 
 Booth and Lueker in their paper \cite{bl76} gave the first linear
-algorithm for \cop testing by way of an interval graph recognition
-algorithm. Their result has close relations to the characterization of
-interval graphs by \cite{gh64}. A graph $G$ is an interval graph \iff
-all its maximal cliques can be linearly ordered \stt for any vertex
-$v$ in $G$, all the cliques that $v$ is incident on are consecutive in
-this order. Clearly, this means that the maximal clique incidence
-matrix\footnote{
-  Definition~\ref{def:graphmatrices}~\ref{def::maxcliquematrix}} must
-have \COP on rows. This algorithm constructs a data structure called
-\PQtree. A \PQtree represents all the \COP orderings of the matrix it
-is associated with. \cite{bl76}'s algorithm uses the fact that if a
-matrix has \COP, a \PQtree for it can be constructed. It is
+algorithm\endnote{Time complexity is $O\left(m+n+f\right)$ where $m
+  \times n$ is the order of the input matrix and $f$ is the number of $\un$s in it.} for \cop testing while given a linear time interval graph
+recognition algorithm by a simplification of \tnote{cite - A. Lempel,
+  S. Even and I. Cederbaum, An Algorithm for Planarity Testing of
+  Graphs, Theory of Graphs, ed., P. Rosenstiehl, Gordon and Breach,
+  New York, (1967), 215-232.  }'s planarity test algorithm.
+% Hsu in wlh01 said BL76 gave a planarity test - "the induced PQ-tree
+% algorithm can considerably simplify Booth and Lueker’s modification
+% of Lempel, Even and Cederbaum’s planarity test. " 
+%
+% McConnell in hm03 said the first linear algo for interval graph
+% recog was by BL76 - "Benzer’s work and other applications of
+% interval graphs motivated a search for eﬃcient algorithms for
+% recognizing interval graphs, and for constructing a set of intervals
+% to represent the graph when it is one [8]. A linear-time algorithm
+% was given in 1976 by Booth and Lueker [2]." 
+\cite{bl76} introduces a data structure called \PQtree and their \COP
+testing algorithm is a constructive one that outputs a \PQtree if the
+input has \COP. A \PQtree represents all the \COP orderings of the
+matrix it is associated with. \cite{bl76}'s algorithm uses the fact
+that if a matrix has \COP, a \PQtree for it can be constructed. It is
 interesting to note that aside from interval graph recognition and
 \COP testing, \PQtree is also useful in other applications like
 finding planar embeddings of planar graphs \cite{lec67,mcc04} and
 recognizing \CROP in a matrix.
 
 \begin{definition}[\emph{\PQtree \cite{bl76, mcc04}}]\\
-  A \PQtree of matrix $M$ with \COP, is a tree with the following properties.
+  A \PQtree of matrix $M$ with \COP on columns (rows), is a tree with the following properties.
   \begin{enumerate}[i.]
     \singlespacing
   \item Each leaf uniquely represents a row (column) of $M$. The leaf
     order of the tree gives a \COP order for column (row)\endnote{Note
       that \COP order for column requires permutation of rows and vice
       versa.} for $M$.
-  \item Every non-leaf node in the tree are labeled $P$ or $Q$.
+  \item Every non-leaf node in the tree is labeled $P$ or $Q$.
   \item \label{def::nodep} The children of $P$ nodes are
     unordered. They can be permuted in any fashion to obtain a new
     \COP order for $M$.
   \item \label{def::nodeq} The children of $Q$ nodes are linearly
-    ordered. Their order can be reversed to get obtain a new \COP
+    ordered. Their order can be reversed to obtain a new \COP
     order for $M$.
   \end{enumerate}
   \label{def:pqtree}
@@ -400,155 +435,133 @@ has no \COP, or (b) modify the current \PQtree to represent the new
 $M'$ (which clearly, must have \COP, since if not, option (a) would
 have been executed).
 
-After the invention of \PQtrees, there has been several variants of
-the same with either simpler procedure of construction, like \PCtree
-\cite{wlh01} or a generalization of it, like
-generalized \PQtree \cite{mcc04}. \PQRtree is another generalization
-of \PQtree by \cite{mm96,mpt98}. There algorithm was improved by
-\cite{tm05} \tnote{improved in terms of
-  what?}. % describes an improved algorithm to
+
+This algorithm is notoriously difficult to program. In the procedure
+to change the \PQtree at each iteration, nodes are considered from
+leaves to tree. At each node considered, it uses one of nine templates
+to determine how the tree must be altered in the vicinity of this
+node. Recognition of this template poses a difficult challenge in
+terms of implementing it. Each template is actually a representative
+of a larger class of similar templates, which must be dealt with
+explicitly by a program\cite{mcc04}.
+
+
+After the invention of \PQtrees, presumably due to the implementation
+challenge it posed, there has been several variants of the same in the
+literature, like \PCtree
+\cite{sh99,wlh01,hm03}, generalized \PQtree \cite{km89,mcc04}, \PQRtree
+\cite{mm96,mpt98} etc. Most of these are generalizations of \PQtree --
+for instance, \PCtree is generalized to matrices with \CROP, \PQRtree and
+generalized \PQtree are generalized to matrices and set systems with
+or without \COP. \cite{km89} invented a modified form of \PQtree a simpler
+incremental update of the tree only for recognizing interval graphs.
+\cite{kr88} constructed efficient parallel algorithms for manipulating
+PQ trees. \temptext{dom chapter 2 pg 40 Variations of PQTrees first
+  para - summarize.}  
+
+In the next few following sections we will see some of these
+variations.
+%Their algorithm was improved by \cite{tm05}
+%\tnote{improved in terms of what?}. 
+% describes an improved algorithm to
 % build PQR trees.
+
     
-\temptext{Expand a little more on PC trees and PQR trees.?}
+\subsection{\PCtree -- a generalization of \PQtree}
 
-We will see more of generalized \PQtree in Section~\ref{sec:surveycertalgo}.
+\PCtree is a generalization of \PQtree. It is a data structure that is
+analogous to \PQtree but for matrices with \crop. \PCtree was
+introduced by \cite{sh99} for the purpose of planarity testing where
+this data structure represents partial embeddings of planar
+graphs. % noted from wlh01 abstract.
+In \cite{wlh01}, Hsu reintroduces \PCtree as a generalization of
+\PQtree and shows how it simplifies \cite{bl76}'s planarity test by
+making the \PQtree construction much less complicated. Later
+\cite{hm03}, discovers that \PCtree is a representation of all \crop
+orders of a matrix when it is unrooted. \PCtree presented in
+\cite{wlh01} is rooted; however the construction of \PCtree is the
+same in both results. The property of being unrooted is necessary in
+order to use \PCtree as a data structure for encoding circular
+ordering. Definition~\ref{def:pctree} defines \PCtree.
 
-
-\temptext{
-  \begin{enumerate}[ -I-]
-   \item Parallel algorithms [AS95, BS03, CY91]
+\begin{definition}
+  \label{def:pctree}
+  [\emph{\PCtree} \cite{wlh01,d08phd}.]  A \PCtree of matrix $M$ with
+  \CROP on columns (rows), is a tree with the following properties.
+  \begin{enumerate}[i.]
+    \singlespacing
+  \item Is unrooted -- thus it has (a) no parent child relationship
+    between nodes (b) there is no left to right (or vice versa)
+    ordering.
+  \item Each leaf uniquely represents a row (column) of $M$. The leaf
+    order of the tree gives a \CROP order for column (row) for
+    $M$. Moreover, any sequence obtained by considering the leaves in
+    clockwise or counter-clockwise order describes a \CROP order for
+    $M$.
+  \item Every non-leaf node in the tree is labeled $P$ or $C$.
+  \item The neighbors of $P$ nodes can be permuted in any fashion to
+    obtain a new \CROP order for $M$.
+  \item \label{def::pcmirror} The tree can be changed by applying the following
+    ``mirroring'' operation to obtain a new \CROP order for $M$. Root
+    the \PCtree at a neighbor of a $C$-node, $v$ and mirror the
+    subtree whose root is $v$ and finally unrooting the
+    tree. Mirroring a subtree is done by putting the children of every
+    node of the subtree in reverse order.
   \end{enumerate}
-}
+\end{definition}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[scale=0.4]{../img/pctree_hm03.png}
+
+  \centering
+  \includegraphics[scale=0.4]{../img/pctree_dom.png}
+  \caption{\figtabsize \PCtree \temptext{ PLACEHOLDER 
+IMGS \cite{hm03, d08phd}}}
+  \label{fig:pctree}
+\end{figure}
+
+As a data structure when \PCtree is compared with \PQtree, the
+differences are, (i) it is unrooted, (ii) it represents all \CROP order of a
+matrix (iii) it has $C$ nodes instead of $Q$ nodes which can be
+``mirrored'' (operation defined in Definition~\ref{def:pctree}~\ref{def::pcmirror}).
+The algorithms of construction of \PQtree in \cite{bl76} and that of
+\PCtree in \cite{wlh01, hm03} starkly differ since the latter is a
+much simplified procedure.
 
 
-\tnote[pressing]{ The results in cite~{bl76} on COT are based on the
-   result that interval graphs are AT-free chordal graphs.
- -  Tucker's?}%
+
+% WLH01 abstract:
+% [..] The original implementation of the PQ-tree algorithms by Booth and
+% Lueker using nine templates in each bottom-up iteration is rather
+% complicated. Also the complexity analysis is rather intricate. We give
+% a very simple linear time PC-tree algorithm with the following
+% advantages: (1) it does not use any template; (2) at each iteration,
+% it does all necessary tree-modification operations in one batch and
+% does not involve the node-by-node bottom-up matching; (3) it can be
+% used naturally to test the circular ones property in matrices; (4) the
+% induced PQ-tree algorithm can considerably simplify Booth and Lueker’s
+% modification of Lempel, Even and Cederbaum’s planarity test.
 
 
-\tnote[pressing]{cite~{fg65} uses these results to give the first polynomial
-  time algorithm for COT. WHICH RESULTS? \ \ \ \ \ check. how do they use it?}%
 
-
-\tnote[pressing]{ADD: peo exists iff chordal. lexicographic BFS
-  [tag:chordalGraph]} %
+\tnote[FYI]{ The results in cite~{bl76} on COT are based on the
+   result that interval graphs are AT-free chordal graphs cite~{lb62}?
+ No they don't seem related. this is the stupid bl lb confusion.}%
 
 
 %\clearpage      % Print pending floats
-\section{Optimization problems in COP}
-\label{sec:surveycopopt}
-\tnote{Expand on ref:sec:optcop}
-
-%{\color{blue} \footnotesize
-\temptext{
-So far we have been concerned about matrices that have the consecutive
-ones property. However in real life applications, it is rare that data
-sets represented by binary matrices have COP, primarily due to the
-noisy nature of data available. At the same time, COP is not arbitrary
-and is a desirable property in practical data representation
-\cite{co98,jkckv04,k77}. In this context, there are several
-interesting problems when a matrix does not have COP but is ``close''
-to having COP or is allowed to be altered to have COP. These are the
-optimization problems related to a matrix which does not have
-COP. Some of the significant problems are surveyed in this section.
-
-\tnote{ -- sect 4.1 in cite:d08phd has many results
-  surveyed. hardness results, approx. results. results are usually for
-  a class of matrices $(a,b)$ where number {\un}s in columns and rows
-  are restriced to $a$ and $b$ . -- problem of flipping at most $k$
-  entries of $M$ to make it attain COP. this is NP complete
-  cite:b75-phd}\tnote{(1) scite:lb62 showed that interval graphs
-  are AT-free.  describe AT (2) show the close relationship b/w COP
-  and graphs sec 2.2, pg 31} \cite{at72} showed that a matrix that
-does not have COP have certain substructures that prevent it from
-having COP. Tucker classified these forbidden substructures into five
-classes of submatrices. This result is presented in the context of
-convex bipartite graphs which \cite{at72} proved to be
-AT-free\tnote{ check this up. give details. - doms'}. By
-definition, convex bipartite graph have half adjacency matrices that
-have COP on either rows or columns (graph is biconvex if it has COP on
-both)\cite{d08phd}. A half adjacency matrix is a binary matrix
-representing a bipartite graph as follows. The set of rows and the set
-of columns form the two partitions of the graph. Each row node is
-adjacent to those nodes that represent the columns that have {\un}s in
-the corresponding row. \cite{at72} proves that this bipartite graph
-has no asteroidal triple if and only if the matrix has COP and goes on
-to identify the forbidden substructures for these bipartite
-graphs. The matrices corresponding to these substructures are the
-forbidden submatrices.
-
-Once a matrix has been detected to not have COP (using any of the COT
-algorithms mentioned earlier), it is naturally of interest to find out
-the smallest forbidden substructure (in terms of number of rows and/or
-columns and/or number of entries that are {\un}s). \cite{d08phd}
-discusses a couple of algorithms which are efficient if the number of
-{\un}s in a row is small. This is of significance in the case of
-sparse matrices where this number is much lesser than the number of
-columns. $(*,\Delta)${\em -matrices} are matrices with no restriction
-on number of {\un}s in any column but has at most $\Delta$ {\un}s in
-any row. {\sc Min COS-R (Min COS-C), Max COS-R (Max COS-C)} are
-similar problems which deals with inducing COP on a matrix. In {\sc
-  Min COS-R (Min COS-C)} the question is to find the minimum number of
-rows (columns) that must be deleted to result in a matrix with COP.
-In the dual problem {\sc Max COS-R (Max COS-C)} the search is for the
-maximum number of rows (columns) that induces a submatrix with
-COP. Given a matrix $M$ with no COP, \cite{b75-phd} shows that finding
-a submatrix $M'$ with all columns\tnote{check if b75 deals with
-  COP col or COP row. also is it any submatrix with k less than r rows
-  or submatrix must have all columns?} but a maximum cardinality
-subset of rows such that $M'$ has COP is NP complete. \cite{hg02}
-corrects an error of the abridged proof of this reduction as given in
-\cite{gj79}.  \cite{d08phd} discusses all these problems in detail
-giving an extensive survey of the previously existing results which
-are almost exhaustively all approximation results and hardness
-results. Taking this further, \cite{d08phd} presents new results in
-the area of parameterized algorithms for this
-problem\tnote{elaborate - what are the results?}.
-
-Another problem is to find the minimum number of entries in the matrix
-that can be toggled to result in a matrix with COP.  \cite{v85}
-discusses approximation of {\sc COP Augmentation} which is the problem
-of changing of the minimum number of zero entries to {\un}s so that
-the resulting matrix has COP. As mentioned earlier, this problem is
-known to be NP complete due to \cite{b75-phd}. \cite{v85} also proves,
-using a reduction to the longest path problem, \tnote{or is it a
-  survey of another result?  check.} that finding a Tucker's forbidden
-submatrix of at least $k$ rows is NP complete. \tnote{how is this
-  different from booth's 75 result??}  \tnote{where should this go?
-  cite|tz04 (approx submatrix with COP sparse matrices)}
-
-\cite{jkckv04} discusses the use of matrices with almost-COP (instead
-of one block of consecutive {\un}s, they have $x$ blocks, or {\em
-  runs}, of consecutive {\un}s and $x$ is not too large) in the
-storage of very large databases.  The problem is that of reordering of
-a binary matrix such that the resulting matrix has at most $k$ runs of
-{\un}s. This is proved to be NP hard using a reduction from the
-Hamiltonian path problem.\tnote{Theorem 2.1 in jkckv} \tnote{(1) A
-  connection of COP problem to the travelling salesman problem is also
-  introduced. what does this mean? -- COP can be used as a tool to
-  reorder $0.5T \le runs(M) \le T$. (2) The optimization version of
-  the $k$-run problem, i.e. minimization of number of blocks of ones
-  is proven to be NP complete by cite:k77}\tnote{are these two the
-  same?} \tnote{what is the reduction?} \tnote{other problems similar
-  to COP -- cite:ckl96 (ILP, circ ones, one drop) -- cite:th98
-  (generalization of COP - minimax, biotonic column) Tucker} 
-
-
-}
-
 %\section{Certifying Algorithms}
-\section{COP for set systems}
+\subsection{Generalized \PQtree\ --  COP for set systems}
 \label{sec:surveycertalgo}
-%\tnote{Expand on sec:appcertalgo} \tnote{ (certification McC04
-%theme)}
 
-Section~\ref{xxx} mentions how a binary matrix naturally maps to a
-system of sets.  A set can be constructed for each column of matrix
-with its elements being those row indices at which the column has \un
-s. Thus the collection of sets corresponding each column of the matrix
-forms a set system with universe as the set of all row indices of the
-matrix.  This simple construction is formally described in
-Definition~\ref{def:matrixsetsystem}.
+Section~\ref{sec:motive} mentions how a binary matrix naturally maps
+to a system of sets.  A set can be constructed for each column of
+matrix with its elements being those row indices at which the column
+has \un s. Thus the collection of sets corresponding each column of
+the matrix forms a set system with universe as the set of all row
+indices of the matrix.  This simple construction is formally described
+in Definition~\ref{def:matrixsetsystem}.
 
 \begin{definition}%
   \label{def:matrixsetsystem}%
@@ -561,7 +574,7 @@ Definition~\ref{def:matrixsetsystem}.
 \end{definition}
 
 Thus the idea of \cop naturally maps to set sytems as well\endnote{As
-  seen in Section~\ref{theCourseScheduleExample}} as
+  seen in Section~\ref{sec:courseschedule}} as
 Definition~\ref{def:copforsets} states. This is equivalent to \COP for
 matrices seen in Definition~\ref{def:copmatrix}.
 
@@ -574,13 +587,40 @@ matrices seen in Definition~\ref{def:copmatrix}.
     enough.}
 \end{definition}
 
+\tnote{What does n89 say? download paper from cornell website.}
+Generalized \PQtree is a data structure defined in \cite{mcc04} for
+arbitrary set systems. If the set system has \COP, the generalized
+\PQtree is identical to its \PQtree. 
+
+An important observation made by \cite{mm96} is that if $\cF$ is a set
+system with \COP then, aside from every set in $\cF$ being consecutive
+(after applying the \COP order) the following sets must also be
+consecutive for any $A, B \in \cF$ 
+\begin{enumerate}
+  \item The intersection $A \cap B$ 
+  \item The union $A \cup B$ if $A \cap B \ne \emptyset$
+  \item The relative complements $A \setminus B$ and $B \setminus A$
+    if $B \nsubseteq A$ and  $A \nsubseteq B$ respectively.
+  \item Additionally the sets $U$, singleton sets and the empty set $\emptyset$
+    (collectively called {\em trivial sets} in \cite{mm96}) are consecutive in all orderings
+    of the universe. $\emptyset$ is considered consecutive by convention.
+\end{enumerate}
+
+For any set system $\cF$, the smallest super set system containing
+$\cF$ and the trivial sets that is closed under the above operations
+is called the {\em weak closure} of $\cF$, denoted $\cW(\cF)$
+\cite[Def.~3.2]{mcc04} \cite[Def.~2]{mm96}.
+
+What is interesting is that the set of \COP permutations of $\cF$ is
+the same as that of $\cW(\cF)$. \cite[Th.~3]{mm96}
+
+The generalized \PQtree of $\cF$ is defined as the {\em decomposition
+  tree} of its weak closure $\cW(\cF)$. Decomposition tree is the
+inclusion tree (inclusion p.o. Hasse diagram) of the strong elements
+of $\cW(\cF)$ with labels {\em prime, linear} and {\em degenerate}.\cite{mcc04}
 
 
-
-
-
-\temptext{ Certifying algorithm (Generalized PQ trees) [McC04] -- Move
-  this to section on certifying algo.
+\temptext{ Certifying algorithm (Generalized PQ trees) [McC04] -- 
 
 Set theoretic characterizations [Hsu02, NS09]\\
     \cite{wlh02} describes the simpler algorithm for
@@ -613,13 +653,115 @@ addressed\tnote{in what way??} in \cite{co98}.  \tnote{expand
 }
 
 
-\section{COP in Relational Database Model}
-\label{sec:surveyrdbm}
-\tnote{Expand on sec:apprdbm} \tnote{(set systems theme)}
+% \section{COP in Relational Database Model}
+% \label{sec:surveyrdbm}
+% \tnote{Expand on sec:apprdbm} \tnote{(set systems theme)}
+\section{Optimization problems in COP}
+\label{sec:surveycopopt}
+\tnote{Expand on ref:sec:optcop}
+
+\temptext{ So far we have been concerned about matrices that have the
+  consecutive ones property. However in real life applications, it is
+  rare that data sets represented by binary matrices have COP,
+  primarily due to the noisy nature of data available. At the same
+  time, COP is not arbitrary and is a desirable property in practical
+  data representation \cite{co98,jkckv04,k77}. In this context, there
+  are several interesting problems when a matrix does not have COP but
+  is ``close'' to having COP or is allowed to be altered to have
+  COP. These are the optimization problems related to a matrix which
+  does not have COP. Some of the significant problems are surveyed in
+  this section.
+
+\tnote{ -- sect 4.1 in cite:d08phd has many results surveyed. hardness
+  results, approx. results. results are usually for a class of
+  matrices $(a,b)$ where number {\un}s in columns and rows are
+  restriced to $a$ and $b$ . -- problem of flipping at most $k$
+  entries of $M$ to make it attain COP. this is NP complete
+  cite:b75-phd}%
+\tnote{(1) scite:lb62 showed that interval graphs are chordal and
+  AT-free.} %
+\temptext{couple of lines refering to tucker's submatrices. refer
+  earlier section.}
+
+Once a matrix has been detected to not have COP (using any of the COT
+algorithms mentioned earlier), it is naturally of interest 
+
+\begin{enumerate}
+\item  to find out
+the smallest forbidden substructure (in terms of number of rows and/or
+columns and/or number of entries that are {\un}s). \cite{d08phd}
+discusses a couple of algorithms which are efficient if the number of
+{\un}s in a row is small. This is of significance in the case of
+sparse matrices where this number is much lesser than the number of
+columns. 
+
+\item $(*,\Delta)${\em -matrices} are matrices with no restriction
+on number of {\un}s in any column but has at most $\Delta$ {\un}s in
+any row. 
+{\sc Min COS-R (Min COS-C), Max COS-R (Max COS-C)} are
+similar problems which deals with {\em inducing COP} on a matrix.
+
+\begin{enumerate}
+\item In the dual problem {\sc Max COS-R (Max COS-C)} the search is for the
+maximum number of rows (columns) that induces a submatrix with
+COP.
+\item In {\sc
+  Min COS-R (Min COS-C)} the question is to find the minimum number of
+rows (columns) that must be deleted to result in a matrix with COP.
+\end{enumerate}
+
+Given a matrix $M$ with no COP, \cite{b75-phd} shows that finding
+a submatrix $M'$ with all columns\tnote{check if b75 deals with
+  COP col or COP row. also is it any submatrix with k less than r rows
+  or submatrix must have all columns?} but a maximum cardinality
+subset of rows such that $M'$ has COP is NP complete. \cite{hg02}
+corrects an error of the abridged proof of this reduction as given in
+\cite{gj79}.  \cite{d08phd} discusses all these problems in detail
+giving an extensive survey of the previously existing results which
+are almost exhaustively all approximation results and hardness
+results. Taking this further, \cite{d08phd} presents new results in
+the area of parameterized algorithms for this
+problem\tnote{elaborate - what are the results?}.
+
+\item Another problem is to find the minimum number of entries in the matrix
+that can be toggled to result in a matrix with COP.  \cite{v85}
+discusses approximation of {\sc COP Augmentation} which is the problem
+of changing of the minimum number of zero entries to {\un}s so that
+the resulting matrix has COP. As mentioned earlier, this problem is
+known to be NP complete due to \cite{b75-phd}. \cite{v85} also proves,
+using a reduction to the longest path problem, \tnote{or is it a
+  survey of another result?  check.} that finding a Tucker's forbidden
+submatrix of at least $k$ rows is NP complete. \tnote{how is this
+  different from booth's 75 result??}  \tnote{where should this go?
+  cite|tz04 (approx submatrix with COP sparse matrices)}
+
+\item \cite{jkckv04} discusses the use of matrices with almost-COP (instead
+of one block of consecutive {\un}s, they have $x$ blocks, or {\em
+  runs}, of consecutive {\un}s and $x$ is not too large) in the
+storage of very large databases.  The problem is that of reordering of
+a binary matrix such that the resulting matrix has at most $k$ runs of
+{\un}s. This is proved to be NP hard using a reduction from the
+Hamiltonian path problem.\tnote{Theorem 2.1 in jkckv} \tnote{(1) A
+  connection of COP problem to the travelling salesman problem is also
+  introduced. what does this mean? -- COP can be used as a tool to
+  reorder $0.5T \le runs(M) \le T$. (2) The optimization version of
+  the $k$-run problem, i.e. minimization of number of blocks of ones
+  is proven to be NP complete by cite:k77}\tnote{are these two the
+  same?} \tnote{what is the reduction?} \tnote{other problems similar
+  to COP -- cite:ckl96 (ILP, circ ones, one drop) -- cite:th98
+  (generalization of COP - minimax, biotonic column) Tucker} 
+
+\end{enumerate}
+
+}
+
 
 \section{COP in Graph Isomorphism}
 \label{sec:surveygraphiso}
 \tnote{Expand on sec:appgraphiso} \tnote{(canonization theme)}
+
+\tnote[pressing]{ADD: peo exists iff chordal. lexicographic BFS
+  [tag:chordalGraph]} %
 
 \temptext{
 The survey from kklv10 conclusion.

@@ -1,16 +1,26 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{KKLV10}
+\begin{thebibliography}{DFH{\etalchar{+}}06}
 
 \bibitem[ABH98]{abh98}
 J.~E. Atkins, E.~G. Boman, and B.~Hendrickson.
 \newblock A spectral algorithm for seriation and the consecutive ones problem.
 \newblock {\em SICOMP: SIAM Journal on Computing}, 28, 1998.
 
+\bibitem[ADP80]{adp80}
+Giorgio Ausiello, Alessandro D'Atri, and Marco Protasi.
+\newblock Structure preserving reductions among convex optimization problems.
+\newblock {\em J. Comput. Syst. Sci}, 21(1):136--153, 1980.
+
 \bibitem[AS95]{as95}
 Annexstein and Swaminathan.
 \newblock On testing consecutive-ones property in parallel.
 \newblock In {\em SPAA: Annual ACM Symposium on Parallel Algorithms and
   Architectures}, 1995.
+
+\bibitem[Ben59]{sb59}
+S.~Benzer.
+\newblock On the topology of the genetic ﬁne structure.
+\newblock {\em Proc. Nat. Acad. Sci. U.S.A.}, 45:1607--1620, 1959.
 
 \bibitem[BL76]{bl76}
 Kellogg~S. Booth and George~S. Lueker.
@@ -40,6 +50,22 @@ J.~R.~S. Blair and B.~Peyton.
 David~A. Bader and Sukanya Sreshta.
 \newblock A new parallel algorithm for planarity testing, April~11 2003.
 
+\bibitem[BTV09]{btv09}
+Chris Bourke, Raghunath Tewari, and N.~V. Vinodchandran.
+\newblock Directed planar reachability is in unambiguous log-space.
+\newblock {\em ACM Trans. Comput. Theory}, 1:4:1--4:17, February 2009.
+
+\bibitem[CKL96]{ckl96}
+R.~Chandrasekaran, S.~N. Kabadi, and S.~Lakshminarayanan.
+\newblock An extension of a theorem of {Fulkerson} and {Gross}.
+\newblock {\em Linear Algebra and its Applications}, 246(1--3):23--29, October
+  1996.
+
+\bibitem[CLRS01]{clrs01}
+T.H. Cormen, C.E. Leiserson, R.L. Rivest, and C.~Stein.
+\newblock {\em Introduction to Algorithms}.
+\newblock McGraw Hill, Boston, MA, USA, 2001.
+
 \bibitem[COR98]{co98}
 Thomas Christof, Marcus Oswald, and Gerhard Reinelt.
 \newblock Consecutive ones and a betweenness problem in computational biology.
@@ -51,6 +77,26 @@ Lin Chen and Yaacov Yesha.
   applications.
 \newblock {\em J. Algorithms}, 12(3):375--392, 1991.
 
+\bibitem[DF99]{df99}
+R.~G. Downey and M.~R. Fellows.
+\newblock {\em Parameterized Complexity}.
+\newblock Springer, 1999.
+
+\bibitem[DFH{\etalchar{+}}06]{dfh06}
+Dujmovic, Fellows, Hallett, Kitching, Liotta, McCartin, Nishimura, Ragde,
+  Rosamond, Suderman, Whitesides, and Wood.
+\newblock A fixed-parameter approach to 2-layer planarization.
+\newblock {\em ALGRTHMICA: Algorithmica}, 45, 2006.
+
+\bibitem[DGN07]{dgn07}
+Michael Dom, Jiong Guo, and Rolf Niedermeier.
+\newblock Approximability and parameterized complexity of consecutive ones
+  submatrix problems.
+\newblock In {\em Theory and Applications of Models of Computation, 4th
+  International Conference, {TAMC} 2007, Shanghai, China, May 22-25, 2007,
+  Proceedings}, volume 4484 of {\em Lecture Notes in Computer Science}, pages
+  680--691. Springer, 2007.
+
 \bibitem[Dom08]{d08phd}
 Michael Dom.
 \newblock {\em Recognition, Generation, and Application of Binary Matrices with
@@ -58,6 +104,28 @@ Michael Dom.
 \newblock PhD thesis, In\-sti\-tut f{\"u}r In\-for\-ma\-tik,
   Fried\-rich-Schil\-ler-Uni\-ver\-si\-t{\"a}t Je\-na, Germany, 2008.
 \newblock Published by Cuvillier, 2009.
+
+\bibitem[Fei98]{f98}
+Uriel Feige.
+\newblock A threshold of ln n for approximating set cover.
+\newblock {\em J. ACM}, 45(4):634--652, 1998.
+
+\bibitem[Fer05a]{f05a}
+H.~Fernau.
+\newblock {\em Parameterized Algorithmics: {A} Graph-Theoretic Approach}.
+\newblock Habi\-li\-ta\-tions\-schrift, Universit{\"a}t T{\"u}bingen, Germany,
+  2005.
+
+\bibitem[Fer05b]{f05b}
+H.~Fernau.
+\newblock Two-layer planarization: improving on parameterized algorithmics.
+\newblock In {\em SOFSEM}, volume 3381 of {\em LNCS}, pages 137--146. Springer,
+  2005.
+
+\bibitem[Fer08]{f08}
+Henning Fernau.
+\newblock Parameterized algorithmics for linear arrangement problems.
+\newblock {\em Discrete Appl. Math.}, 156:3166--3177, October 2008.
 
 \bibitem[FG65]{fg65}
 D.~R. Fulkerson and O.~A. Gross.
@@ -98,6 +166,17 @@ Dorit~S. Hochbaum and Asaf Levin.
   approximation algorithms.
 \newblock {\em Discrete Optimization}, 3(4):327--340, 2006.
 
+\bibitem[HM03]{hm03}
+Wen-Lian Hsu and Ross~M. McConnell.
+\newblock {PC} trees and circular-ones arrangements.
+\newblock {\em Theoretical Computer Science}, 296:99--116, 2003.
+
+\bibitem[Hsu92]{wlh92}
+Wen-Lian Hsu.
+\newblock A simple test for the consecutive ones property.
+\newblock volume 650 of {\em LNCS}, pages 459--469. Sprinver-Verlag, 1992.
+\newblock ISAAC. Later appeared in J. Algorithms 2002 @wlh02.
+
 \bibitem[Hsu01]{wlh01}
 Wen-Lian Hsu.
 \newblock {PC}-trees vs. {PQ}-trees.
@@ -108,10 +187,18 @@ Wen-Lian Hsu.
 \newblock A simple test for the consecutive ones property.
 \newblock {\em J. Algorithms}, 43(1):1--16, 2002.
 
+\bibitem[HT98]{th98}
+T.~C. Hu and P.~A. Tucker.
+\newblock Minimax programs, bitonic columns and {PQ} trees, November~29 1998.
+
 \bibitem[HT02]{ht02}
 Hochbaum and Tucker.
 \newblock Minimax problems with bitonic matrices.
 \newblock {\em NETWORKS: Networks: An International Journal}, 40, 2002.
+
+\bibitem[JJLM97]{jlm97}
+Michael J{\"u}nger, Michael Junger, Sebastian Leipert, and Petra Mutzel.
+\newblock Pitfalls of using {PQ}-trees in automatic graph drawing, 1997.
 
 \bibitem[JKC{\etalchar{+}}04]{jkckv04}
 Johnson, Krishnan, Chhugani, Kumar, and Venkatasubramanian.
@@ -119,11 +206,21 @@ Johnson, Krishnan, Chhugani, Kumar, and Venkatasubramanian.
 \newblock In {\em VLDB: International Conference on Very Large Data Bases}.
   Morgan Kaufmann Publishers, 2004.
 
+\bibitem[JLL76]{jll76}
+Neil~D. Jones, Y.~Edmund Lien, and William~T. Laaser.
+\newblock New problems complete for nondeterministic log space.
+\newblock {\em MST: Mathematical Systems Theory}, 10, 1976.
+
 \bibitem[KKLV10]{kklv10}
 Johannes K{\"o}bler, Sebastian Kuhnert, Bastian Laubner, and Oleg Verbitsky.
 \newblock Interval graphs: Canonical representation in logspace.
 \newblock {\em Electronic Colloquium on Computational Complexity (ECCC)},
   17:43, 2010.
+
+\bibitem[KM89]{km89}
+N.~Korte and R.H. Moehring.
+\newblock An incremental linear-time algorithm for recognizing interval graphs.
+\newblock {\em SIAM J. Comput.}, pages 68--81, 1989.
 
 \bibitem[KM02]{km02}
 P.~S. Kumar and C.~E.~Veni Madhavan.
@@ -134,6 +231,28 @@ P.~S. Kumar and C.~E.~Veni Madhavan.
 Lawrence~T. Kou.
 \newblock Polynomial complete consecutive information retrieval problems.
 \newblock {\em SIAM Journal on Computing}, 6(1):67--75, March 1977.
+
+\bibitem[KR88]{kr88}
+P.N. Klein and J.H. Reif.
+\newblock An efficient parallel algorithm for planarity.
+\newblock {\em Journal of Computer and System Science}, 18:190--246, 1988.
+
+\bibitem[Lau09]{l10}
+Bastian Laubner.
+\newblock Capturing polynomial time on interval graphs.
+\newblock {\em CoRR}, abs/0911.3799, 2009.
+\newblock informal publication.
+
+\bibitem[Lau10]{lau10}
+Bastian Laubner.
+\newblock Capturing polynomial time on interval graphs.
+\newblock In {\em LICS}, pages 199--208. IEEE Computer Society, 2010.
+
+\bibitem[LB63]{lb62}
+C.~G. Lekkerkerker and J.~Ch. Boland.
+\newblock Representation of a finite graph by a set of intervals on the real
+  line.
+\newblock {\em Fundamenta Mathematicae}, 51:45--64, 1962/1963.
 
 \bibitem[Lin92]{sl92}
 Steven Lindell.
@@ -158,6 +277,12 @@ Meidanis, Porto, and Telles.
 \newblock {\em DAMATH: Discrete Applied Mathematics and Combinatorial
   Operations Research and Computer Science}, 88, 1998.
 
+\bibitem[Nov89]{n89}
+Mark~B. Novick.
+\newblock Generalized {PQ}-trees.
+\newblock Technical Report 1074, Dept. of Computer Science, Cornell University,
+  Ithaca, NY 14853-7501, Dec 1989.
+
 \bibitem[NS09]{nsnrs09}
 N.~S. Narayanaswamy and R.~Subashini.
 \newblock A new characterization of matrices with the consecutive ones
@@ -175,6 +300,11 @@ John~H. Reif.
 \newblock Symmetric complementation.
 \newblock {\em JACM: Journal of the ACM}, 31(2):401--421, 1984.
 
+\bibitem[Rei08]{rei08}
+Omer Reingold.
+\newblock Undirected connectivity in log-space.
+\newblock {\em J. ACM}, 55(4), 2008.
+
 \bibitem[Ren70]{plr70}
 Peter~L. Renz.
 \newblock Intersection representations of graphs by arcs.
@@ -190,6 +320,17 @@ Alejandro~A. Schaffer.
 \newblock A faster algorithm to recognize undirected path graphs.
 \newblock {\em Discrete Applied Mathematics}, 43:261--295, 1993.
 
+\bibitem[SH99]{sh99}
+W.K. Shih and W.L. Hsu.
+\newblock Note a new planarity test.
+\newblock {\em TCS: Theoretical Computer Science}, 223:179--191, 1999.
+
+\bibitem[SW05]{sw05}
+M.~Suderman and S.~Whitesides.
+\newblock Experiments with the fixed-parameter approach for two-layer
+  planarization.
+\newblock {\em jgaa}, 9(1):149--163, 2005.
+
 \bibitem[TM05]{tm05}
 Guilherme~P. Telles and Jo{\~a}o Meidanis.
 \newblock Building {PQR} trees in almost-linear time.
@@ -199,6 +340,18 @@ Guilherme~P. Telles and Jo{\~a}o Meidanis.
 Alan Tucker.
 \newblock A structure theorem for the consecutive 1's property.
 \newblock {\em J. Comb.~Theory Series B}, 12:153--162, 1972.
+
+\bibitem[TZ04]{tz04}
+Jinsong Tan and Louxin Zhang.
+\newblock Approximation algorithms for the consecutive ones submatrix problem
+  on sparse matrices.
+\newblock In {\em ---}, volume 3341 of {\em Lecture Notes in Computer Science},
+  pages 835--846, 2004.
+
+\bibitem[TZ07]{tz07}
+J.~Tan and L.~Zhang.
+\newblock The consecutive ones submatrix problem for sparse matrices.
+\newblock {\em Algorithmica}, 48(3):287--299, 2007.
 
 \bibitem[Vel85]{v85}
 Marinus Veldhorst.

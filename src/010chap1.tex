@@ -201,12 +201,15 @@ algorithmically computed is the focus of this thesis.
   TITLES. ADD {$\xLLL$} {$\xGGG$} {$\xBBB$} {$\xTTT$} [ii]make
   dashed/textured lines for routes. make it color agnostic.}
 
-As a special case, suppose all the apartments are on the same street
-or if they are all lined up on a single path, the street map becomes a
-tree that is just a path. Then the problem becomes what is called an
-{\em interval assignment problem}. The idea of interval assignment may
-not be obvious here; hence to see this, consider a different problem
-in {\WSI} where the classes for these study groups courses need to be
+\subsection{Special case}
+\label{sec:courseschedule}
+As a special case of the study group accommodation problem, suppose
+all the apartments are on the same street or if they are all lined up
+on a single path, the street map becomes a tree that is just a
+path. Then the problem becomes what is called an {\em interval
+  assignment problem}. The idea of interval assignment may not be
+obvious here; hence to see this, consider a different problem in
+{\WSI} where the classes for these study groups courses need to be
 scheduled during a day (or a week or any time period). Each study
 group has a bunch of courses associated with it some of which may be
 shared by two or more study groups. It is mandatory that a student who
@@ -281,6 +284,8 @@ illustrated by the study group accommodation problem).
 
 \begin{definition}[\emph{set system}]
     \label{def:setsystem}
+
+    also include overlapping sets.
 \end{definition}
 
 \begin{definition}[\emph{Graph, Tree}]
@@ -291,6 +296,7 @@ illustrated by the study group accommodation problem).
   \label{def:maxclique}    
 \end{definition}
 
+If $n$ is a positive integer, $[n]$ denotes the set $\{1,2,... n\}$.
 
 \section{Consecutive-ones Property Testing - a Brief Survey}
 \label{sec:background}
@@ -378,16 +384,15 @@ came later were based on this discovery which connected COP in binary
 matrices to convex bipartite graphs. In fact, the forbidden
 submatrices came as a corollary to the discovery that convex bipartite
 graphs are AT-free on at least one of the partitions in
-\cite{at72}\tnote{check the real meaning of AT FREE. }. The first linear
-time algorithm for COP testing (COT) was invented by \cite{bl76} using
-a data structure called PQ trees.  Since then several COT algorithms
-have been invented -- some of which involved variations of PQ trees
-\cite{mm96,wlh01,mcc04}, some involved set theory and ICPIA
-\cite{wlh02,nsnrs09}, parallel COT algorithms\cite{as95,bs03,ly91} and
-certifying algorithms\cite{mcc04}.
+\cite{at72}. The first linear time algorithm for COP testing (COT) was
+invented by \cite{bl76} using a data structure called \PQtrees.  Since
+then several COT algorithms have been invented -- some of which
+involved variations of \PQtrees \cite{mm96,wlh01,mcc04}, some involved
+set theory and ICPIA \cite{wlh02,nsnrs09}, parallel COT
+algorithms\cite{as95,bs03,ly91} and certifying algorithms\cite{mcc04}.
 
-The construction of PQ trees in \cite{bl76} draws on the close
-relationship of matrices with COP to interval graphs. A PQ tree of a
+The construction of \PQtrees in \cite{bl76} draws on the close
+relationship of matrices with \COP to interval graphs. A PQ tree of a
 matrix is one that stores all row (column) permutations of the matrix
 that give the COP orders (there could be multiple orders of rows or
 columns) of the matrix. This is constructed using an elaborate linear
@@ -440,19 +445,11 @@ to having COP or is allowed to be altered to have COP. These are the
 optimization problems related to a matrix which does not have
 COP. Some of the significant problems are surveyed in this section.
 
-\tnote{ -- sect 4.1 in cite:d08phd has many results
-  surveyed. hardness results, approx. results. results are usually for
-  a class of matrices $(a,b)$ where number {\un}s in columns and rows
-  are restriced to $a$ and $b$ . -- problem of flipping at most $k$
-  entries of $M$ to make it attain COP. this is NP complete
-  cite:b75-phd}\tnote{(1) scite:lb62 showed that interval graphs
-  are AT-free.  describe AT (2) show the close relationship b/w COP
-  and graphs sec 2.2, pg 31} \cite{at72} showed that a matrix that
-does not have COP have certain substructures that prevent it from
-having COP. Tucker classified these forbidden substructures into five
-classes of submatrices. This result is presented in the context of
-convex bipartite graphs which \cite{at72} proved to be
-AT-free\tnote{ check this up. give details. - doms'}. By
+\cite{at72} showed that a matrix that does not have COP have certain
+substructures that prevent it from having COP. Tucker classified these
+forbidden substructures into five classes of submatrices. This result
+is presented in the context of convex bipartite graphs which
+\cite{at72} proved to be AT-free in one of the partitions. By
 definition, convex bipartite graph have half adjacency matrices that
 have COP on either rows or columns (graph is biconvex if it has COP on
 both)\cite{d08phd}. A half adjacency matrix is a binary matrix
@@ -460,10 +457,10 @@ representing a bipartite graph as follows. The set of rows and the set
 of columns form the two partitions of the graph. Each row node is
 adjacent to those nodes that represent the columns that have {\un}s in
 the corresponding row. \cite{at72} proves that this bipartite graph
-has no asteroidal triple if and only if the matrix has COP and goes on
-to identify the forbidden substructures for these bipartite
-graphs. The matrices corresponding to these substructures are the
-forbidden submatrices.
+has no asteroidal triple in vertex partition corresponding to rows if
+and only if the matrix has COP on columns and goes on to identify the
+forbidden substructures for these bipartite graphs. The matrices
+corresponding to these substructures are the forbidden submatrices.
 
 Once a matrix has been detected to not have COP (using any of the COT
 algorithms mentioned earlier), it is naturally of interest to find out
@@ -473,7 +470,7 @@ discusses a couple of algorithms which are efficient if the number of
 {\un}s in a row is small. This is of significance in the case of
 sparse matrices where this number is much lesser than the number of
 columns. $(*,\Delta)${\em -matrices} are matrices with no restriction
-on number of {\un}s in any column but has at most $\Delta$ {\un}s in
+on number of {\un}s in any column but have at most $\Delta$ {\un}s in
 any row. {\sc Min COS-R (Min COS-C), Max COS-R (Max COS-C)} are
 similar problems which deals with inducing COP on a matrix. In {\sc
   Min COS-R (Min COS-C)} the question is to find the minimum number of

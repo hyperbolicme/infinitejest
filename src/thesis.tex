@@ -12,13 +12,51 @@
 \usepackage{thesisfiguresandtables} % Code for tables are in this
                                 % package if it is too long to inline
                                 % in .tex file.
+%\usepackage[inline] 
+\usepackage[margins] 
+%\usepackage[finalnew]
+         {../lib/trackchanges} % For tracking changes.
+                               % :Package options:
+                               % [finalold]
+                               %   Ignore all of the edits. 
+                               %   The document will look as if
+                               %   the edits had not been added. 
+                               % [finalnew]
+                               %   Accept all of the edits. 
+                               %   Notes will not be shown in the
+                               %   final output. 
+                               % [footnotes]
+                               %   Added text will be shown
+                               %   inline. Removed text and notes
+                               %   will be shown as footnotes.  
+                               %   This is the default option.
+                               % [margins]
+                               %   Added text will be shown
+                               %   inline. Removed text and notes
+                               %   will be shown in the
+                               %   margin. Margin notes will be
+                               %   aligned with the edits when
+                               %   possible. 
+                               % [inline]
+                               %   All changes and notes will be
+                               %   shown inline.
+
+\addeditor{fyi}                % use "fyi" - for general notes with no
+%                                 action points.
+\addeditor{important}          % needs attention level 2
+\addeditor{dire}               % needs attention level infinity NOW!
+\addeditor{minor}              % least priority TBDs that
+                               %  need to go into thesis  
+\addeditor{pressing}           % needs attention level 1
+%                              
 
 % \usepackage{comment}         % DEBUG ONLY
 \includeonly{020chap2}         % DEBUG ONLY 
 %\includeonly{0021ded}         % DEBUG ONLY
 
-\def \mythesissubmissiondate {10 January 2012}
+\def \mythesissubmissiondate {13 January 2012}
 \def \mythesissubmissionmonth {\MakeUppercase {January 2012}}
+
 
 \begin{document}
 
@@ -29,6 +67,8 @@
   {\mythesissubmissionmonth}}
 \department{\MakeUppercase{\mythesisdept}}
 \maketitle
+
+\nocite{*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Certificate

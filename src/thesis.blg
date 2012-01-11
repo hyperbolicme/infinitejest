@@ -13,47 +13,48 @@ A level-1 auxiliary file: 030chap3.aux
 A level-1 auxiliary file: 040chap4.aux
 The style file: alpha.bst
 Database file #1: ../lib/cop-variants__thesis.bib
-Warning--I didn't find a database entry for "p59"
 Warning--I didn't find a database entry for "lec67"
-You've used 38 entries,
+Warning--I didn't find a database entry for "wlh02isaac92"
+Warning--empty booktitle in wlh92
+You've used 66 entries,
             2543 wiz_defined-function locations,
-            801 strings with 9682 characters,
-and the built_in function-call counts, 14085 in all, are:
-= -- 1438
-> -- 615
-< -- 18
-+ -- 211
-- -- 196
-* -- 982
-:= -- 2357
-add.period$ -- 117
-call.type$ -- 38
-change.case$ -- 220
-chr.to.int$ -- 38
-cite$ -- 38
-duplicate$ -- 565
-empty$ -- 1036
-format.name$ -- 248
-if$ -- 2836
-int.to.chr$ -- 1
+            956 strings with 13070 characters,
+and the built_in function-call counts, 25633 in all, are:
+= -- 2627
+> -- 1142
+< -- 39
++ -- 395
+- -- 372
+* -- 1813
+:= -- 4222
+add.period$ -- 205
+call.type$ -- 66
+change.case$ -- 395
+chr.to.int$ -- 65
+cite$ -- 67
+duplicate$ -- 1023
+empty$ -- 1859
+format.name$ -- 461
+if$ -- 5202
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 36
-newline$ -- 195
-num.names$ -- 114
-pop$ -- 173
+missing$ -- 62
+newline$ -- 335
+num.names$ -- 198
+pop$ -- 321
 preamble$ -- 1
-purify$ -- 261
+purify$ -- 466
 quote$ -- 0
-skip$ -- 472
+skip$ -- 875
 stack$ -- 0
-substring$ -- 809
-swap$ -- 61
-text.length$ -- 18
-text.prefix$ -- 15
+substring$ -- 1496
+swap$ -- 153
+text.length$ -- 39
+text.prefix$ -- 25
 top$ -- 0
-type$ -- 292
-warning$ -- 0
-while$ -- 142
-width$ -- 44
-write$ -- 498
-(There were 2 warnings)
+type$ -- 508
+warning$ -- 1
+while$ -- 258
+width$ -- 73
+write$ -- 867
+(There were 3 warnings)

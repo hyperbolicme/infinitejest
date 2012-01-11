@@ -54,13 +54,115 @@ the
 same
 \@endanenote 
 \@doanenote {3}
+macro:->
+\cite
+{mcc04}
+cites
+that
+the
+problem
+of
+recognizing
+interval
+graphs
+has
+significance
+in
+molecular
+biology.
+Interestingly,
+in
+the
+late
+1950s,
+before
+the
+structure
+of
+DNA
+was
+well-understood,
+Seymour
+Benzer
+was
+able
+to
+show
+that
+the
+intersection
+graph
+of
+a
+large
+number
+of
+fragments
+of
+genetic
+material
+was
+an
+interval
+graph
+\cite
+{sb59}.
+This
+was
+regarded
+as
+compelling
+evidence
+that
+genetic
+information
+was
+somehow
+arranged
+inside
+a
+structure
+that
+had
+a
+linear
+topology
+which
+we
+now
+know
+to
+be
+true\tnote
+{linear
+arrangement
+of
+DNA/genes?}.
+\@endanenote 
+\@doanenote {4}
+macro:->\COP
+has
+several
+other
+applications
+\tnote
+{fill
+up.}
+\@endanenote 
+\@doanenote {5}
 macro:->First
 published
 in
 \cite
 {wlh02isaac92}
 \@endanenote 
-\@doanenote {4}
+\@doanenote {6}
+macro:->
+Definition~\ref
+{def:graphmatrices}~\ref
+{def::maxcliquematrix}
+\@endanenote 
+\@doanenote {7}
 macro:->The
 terminology
 in
@@ -83,7 +185,7 @@ convex
 bipartite
 graphs}.
 \@endanenote 
-\@doanenote {5}
+\@doanenote {8}
 macro:->If
 $G
 =
@@ -130,7 +232,7 @@ the
 third
 vertex.
 \@endanenote 
-\@doanenote {6}
+\@doanenote {9}
 macro:->The
 partition
 corresponds
@@ -147,7 +249,7 @@ has
 columns
 (rows).
 \@endanenote 
-\@doanenote {7}
+\@doanenote {10}
 macro:->Abridged
 to
 match
@@ -160,7 +262,36 @@ See
 previous
 note.
 \@endanenote 
-\@doanenote {8}
+\@doanenote {11}
+macro:->Time
+complexity
+is
+$O\left
+(m+n+f\right
+)$
+where
+$m
+\times
+n$
+is
+the
+order
+of
+the
+input
+matrix
+and
+$f$
+is
+the
+number
+of
+$\un
+$s
+in
+it.
+\@endanenote 
+\@doanenote {12}
 macro:->Note
 that
 \COP
@@ -175,7 +306,7 @@ and
 vice
 versa.
 \@endanenote 
-\@doanenote {9}
+\@doanenote {13}
 macro:->\cite
 {mcc04}illustrates
 \COP
@@ -199,10 +330,10 @@ been
 transposed.
 
 \@endanenote 
-\@doanenote {10}
+\@doanenote {14}
 macro:->As
 seen
 in
 Section~\ref
-{theCourseScheduleExample}
+{sec:courseschedule}
 \@endanenote 

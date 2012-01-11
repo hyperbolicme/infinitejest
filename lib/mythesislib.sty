@@ -19,41 +19,8 @@
 %\usepackage{fancybox}          % For oval boxes, shadowed etc.
 %\usepackage{picinpar}
 
-%\usepackage[inline] 
-\usepackage[margins] 
-%\usepackage[finalnew]
-         {../lib/trackchanges} % For tracking changes.
-                               % :Package options:
-                               % [finalold]
-                               %   Ignore all of the edits. 
-                               %   The document will look as if
-                               %   the edits had not been added. 
-                               % [finalnew]
-                               %   Accept all of the edits. 
-                               %   Notes will not be shown in the
-                               %   final output. 
-                               % [footnotes]
-                               %   Added text will be shown
-                               %   inline. Removed text and notes
-                               %   will be shown as footnotes.  
-                               %   This is the default option.
-                               % [margins]
-                               %   Added text will be shown
-                               %   inline. Removed text and notes
-                               %   will be shown in the
-                               %   margin. Margin notes will be
-                               %   aligned with the edits when
-                               %   possible. 
-                               % [inline]
-                               %   All changes and notes will be
-                               %   shown inline.
-
-\addeditor{bogus1}             %
-\addeditor{important}          % needs attention level 2
-\addeditor{dire} %{a}          % needs attention level infinity NOW!
-\addeditor{minor}              % least priority TBDs that
-                               %  need to go into thesis  
-\addeditor{pressing}           % needs attention level 1
+%% MOVED TRACK CHANGES TO THESIS.TEX TO MAKE COMPILING REVIEW VERSIONS
+%% EASIER WITH ONE FILE EDIT.
 
 %%% Sizes and widths and other relevant formatting numbers %%%
 \def \secfirstparatrim {-5mm}
@@ -170,9 +137,9 @@
   {9pt}{9pt}%                 Space above & below
   {\small}%                   Body style
   {0pt}%                      Heading indent amount
-  {\normalsize\bfseries}{:}%  Heading font and
+  {\normalsize\bfseries}{.}%  Heading font and
                            %   punctuation after.
-  {\newline}%                 Spacing after heading.
+  {0pt}%                 Spacing after heading.
   {\thmname{#1}\thmnumber{ #2}\thmnote{ \textbf{(#3)}}}% Head spec 
 %
 \newtheorem{theorem}{Theorem}[section] % Section relative numbering. 
@@ -197,6 +164,12 @@
 \AfterBegin{definition}{\thesisspacing}
 \BeforeEnd{definition}{\defnstop}
 \AfterBegin{proof}{\thesisspacing}
+
+% \AfterBegin{enumerate}{    
+%   \setlength{\topsep}{0pt} 
+%   \setlength{\partopsep}{0pt}
+%   \setlength{\itemsep}{0pt}
+% }
 
 
 %%%%%
