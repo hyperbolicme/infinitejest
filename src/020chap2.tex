@@ -414,11 +414,15 @@ recognizing \CROP in a matrix.
   \label{def:pqtree}
 \end{definition}
 
-Thus, effectively, there exists a bijection between set of matrices
-with \COP and the set of \PQtrees (accurately speaking, each matrix
-with \COP bijectively maps to an equivalence class of \PQtrees due to
-properties (\ref{def::nodep}) and (\ref{def::nodeq})). See
-Figure~\ref{fig:pqtree} for an example of \PQtree.
+See Figure~\ref{fig:pqtree} for an example of \PQtree. It may be noted
+that there is no way an empty set of \COP orderings can be represented
+in this data structure. For this reason, \PQtree is undefined for
+matrices that do not have \COP.  Thus effectively, there exists a
+bijection between set of matrices with \COP and the set of \PQtrees
+(accurately speaking, each matrix with \COP bijectively maps to an
+equivalence class of \PQtrees resulting from properties (\ref{def::nodep}) and
+(\ref{def::nodeq})).
+
 
 \figpqtree
 
@@ -436,10 +440,11 @@ $M'$ (which clearly, must have \COP, since if not, option (a) would
 have been executed).
 
 
-This algorithm is notoriously difficult to program. In the procedure
-to change the \PQtree at each iteration, nodes are considered from
-leaves to tree. At each node considered, it uses one of nine templates
-to determine how the tree must be altered in the vicinity of this
+Judging from notes in literature, this algorithm is apparently
+notoriously difficult to program. In the procedure to modify the
+\PQtree at each iteration, nodes are considered from leaves to
+tree. At each node considered, it uses one of nine templates to
+determine how the tree must be altered in the vicinity of this
 node. Recognition of this template poses a difficult challenge in
 terms of implementing it. Each template is actually a representative
 of a larger class of similar templates, which must be dealt with
@@ -448,16 +453,15 @@ explicitly by a program\cite{mcc04}.
 
 After the invention of \PQtrees, presumably due to the implementation
 challenge it posed, there has been several variants of the same in the
-literature, like \PCtree
-\cite{sh99,wlh01,hm03}, generalized \PQtree \cite{km89,mcc04}, \PQRtree
-\cite{mm96,mpt98} etc. Most of these are generalizations of \PQtree --
-for instance, \PCtree is generalized to matrices with \CROP, \PQRtree and
-generalized \PQtree are generalized to matrices and set systems with
-or without \COP. \cite{km89} invented a modified form of \PQtree a simpler
-incremental update of the tree only for recognizing interval graphs.
-\cite{kr88} constructed efficient parallel algorithms for manipulating
-PQ trees. \temptext{dom chapter 2 pg 40 Variations of PQTrees first
-  para - summarize.}  
+literature, like \PCtree \cite{sh99,wlh01,hm03}, generalized \PQtree
+\cite{km89,mcc04}, \PQRtree \cite{mm96,mpt98} etc. Most of these are
+generalizations of \PQtree -- for instance, \PCtree is generalized to
+matrices with \CROP, \PQRtree and generalized \PQtree are generalized
+to matrices and set systems with or without \COP. \cite{km89} invented
+a modified form of \PQtree a simpler incremental update of the tree
+only for recognizing interval graphs.  \cite{kr88} constructed
+efficient parallel algorithms for manipulating PQ trees. \temptext{dom
+  chapter 2 pg 40 Variations of PQTrees first para - summarize.}
 
 In the next few following sections we will see some of these
 variations.
@@ -465,6 +469,126 @@ variations.
 %\tnote{improved in terms of what?}. 
 % describes an improved algorithm to
 % build PQR trees.
+
+
+%\section{Certifying Algorithms}
+\subsection{\PQRtree\ --  COP for set systems}
+\label{sec:surveycertalgo}
+
+Section~\ref{sec:motive} mentions how a binary matrix naturally maps
+to a system of sets.  A set can be constructed for each column of
+matrix with its elements being those row indices at which the column
+has \un s. Thus the collection of sets corresponding each column of
+the matrix forms a set system with universe as the set of all row
+indices of the matrix.  This simple construction is formally described
+in Definition~\ref{def:matrixsetsystem} along with the idea of \cop
+for set systems\endnote{As seen in Section~\ref{sec:courseschedule}}.
+
+\begin{definition}%
+  \label{def:matrixsetsystem}%
+  % [\emph{Set system of a binary matrix}.]
+  [\emph{\Cop for set systems}.]  Let $M$ be a binary matrix of order
+  $n \times m$ % , $r_i, i \in [n]$ be the rows in $M$
+  and $\{c_i \mid i \in [m]\}$ be the columns in $M$. A set system
+  $\cF_{M} = \{S_i \mid S_i \subseteq [n], i \in [m]\}$ is defined
+  such that for every column $c_i$ of $M$, set $S_i = \{j \mid m_{ji}
+  = \un \}$. The collection $\cF_M$ is the {\em set system of binary
+    matrix} $M$.\\
+  A set system $\cF$ from universe $U = \{1, 2, \ldots, n\}$ has the
+  \cop if it is possible to assign a linear order $\lambda$ to $U$
+  where each set $S \in \cF$ appears as a consecutive subsequence of
+  $\lambda$ (an interval) in the linear order.
+\end{definition}
+
+It is easy to see the equivalence of this definition to \COP for
+matrices in Definition~\ref{def:copmatrix}.
+
+Generalized \PQtree is a data structure defined in \cite{n89, mcc04} for
+arbitrary set systems. If the set system has \COP, the generalized
+\PQtree is identical to its \PQtree. We will use the notation from
+\cite{n89} and call generalized \PQtrees as \gPQtrees. 
+
+A \gPQtree of a given set system $\cF$ from universe $U$ represents
+all the sets from $\power{U}$ that have trivial intersections with
+every set in $\cF$. 
+
+Two sets $A$ and $B$ are said to have a trivial intersection if $A
+\cap B$ is one of the following -- $\emptyset$, $A$ or $B$. In other
+words, $A$ and $B$ are either disjoint or one is the subset of the
+other. {\em Trivial sets} are sets that have trivial intersections
+with any set in $\power{U}$. These are namely, $U$, singleton sets in
+$\power{U}$ and $\emptyset$\cite{n89, mm96}.
+
+An important observation made by \cite{mm96} is that if $\cF$ is a set
+system with \COP then, aside from every set in $\cF$ being consecutive
+(after applying the \COP order) the following sets must also be
+consecutive for any $A, B \in \cF$.
+\begin{enumerate}
+  \item The intersection $A \cap B$ 
+  \item The union $A \cup B$ if $A \cap B \ne \emptyset$
+  \item The relative complements $A \setminus B$ and $B \setminus A$
+    if $B \nsubseteq A$ and $A \nsubseteq B$ respectively.
+\end{enumerate}
+
+Additionally the {\em trivial sets} of universe $U$ denoted by
+$\cT(U)$, are namely -- $U$, singleton sets and the empty set
+$\emptyset$. Clearly, $\cT(U)$ are consecutive
+in all orderings of $U$. $\emptyset$ is considered consecutive by
+convention.
+
+
+
+Overlap components are computable in linear time \cite{mm95,wlh92}.
+
+
+
+For any set system $\cF$, the smallest super set system containing
+$\cF$ and the trivial sets that is closed under the above operations
+is called the {\em weak closure} of $\cF$, denoted $\cW(\cF)$
+\cite[Def.~3.2]{mcc04} \cite[Def.~2]{mm96}.
+
+What is interesting is that the set of \COP permutations of $\cF$ is
+the same as that of $\cW(\cF)$. \cite[Th.~3]{mm96}
+
+The generalized \PQtree of $\cF$ is defined as the {\em decomposition
+  tree} of its weak closure $\cW(\cF)$. Decomposition tree is the
+inclusion tree (inclusion p.o. Hasse diagram) of the strong elements
+of $\cW(\cF)$ with labels {\em prime, linear} and {\em degenerate}.\cite{mcc04}
+
+
+\temptext{ Certifying algorithm (Generalized PQ trees) [McC04] -- 
+
+Set theoretic characterizations [Hsu02, NS09]\\
+    \cite{wlh02} describes the simpler algorithm for
+    COT.\tnote[pressing]{in terms of what?}\\
+    \cite{nsnrs09} describes a characterization of consecutive-ones
+    property solely based on the cardinality properties of the set
+    representations of the columns (rows); every column (row) is
+    equivalent to a set that has the row (column) indices of the rows
+    (columns) that have one entries in this column (row). This is
+    interesting and relevant, especially to this thesis because it
+    simplifies COT to a great degree by reducing the solution search
+    space owing to the a simple set theoretic characterization.\\
+
+
+\cite{mcc04} describes a different approach to COT. While all previous
+COT algorithms gave the COP order if the matrix has the property but
+exited stating negative if otherwise, this algorithm gives an evidence
+by way of a certificate of matrix even when it has no COP. This
+enables a user to verify the algorithm's result even when the answer
+is negative. This is significant from an implementation perspective
+because automated program verification is hard and manual verification
+is more viable. Hence having a certificate reinforces an
+implementation's credibility. Note that when the matrix {\em has} COP,
+the COP order is the certificate.  The internal machinery of this
+algorithm is related to the weighted betweenness problem
+addressed\tnote{in what way??} in \cite{co98}.  \tnote{expand
+  on the COP order graph creation and it having to be bipartite for M
+  to have COP. and thus an odd cycle being an evidence of no COP.}
+
+}
+
+
 
     
 \subsection{\PCtree -- a generalization of \PQtree}
@@ -551,108 +675,6 @@ much simplified procedure.
 
 
 %\clearpage      % Print pending floats
-%\section{Certifying Algorithms}
-\subsection{Generalized \PQtree\ --  COP for set systems}
-\label{sec:surveycertalgo}
-
-Section~\ref{sec:motive} mentions how a binary matrix naturally maps
-to a system of sets.  A set can be constructed for each column of
-matrix with its elements being those row indices at which the column
-has \un s. Thus the collection of sets corresponding each column of
-the matrix forms a set system with universe as the set of all row
-indices of the matrix.  This simple construction is formally described
-in Definition~\ref{def:matrixsetsystem}.
-
-\begin{definition}%
-  \label{def:matrixsetsystem}%
-  [\emph{Set system of a binary matrix}.] Let $M$ be a binary matrix
-  of order $n \times m$ % , $r_i, i \in [n]$ be the rows in $M$
-  and $\{c_i \mid i \in [m]\}$ be the columns in $M$. A set system
-  $\cF_{M} = \{S_i \mid S_i \subseteq [n], i \in [m]\}$ is defined
-  such that for every column $c_i$ of $M$, set $S_i = \{j \mid m_{ji}
-  = \un \}$. The collection $\cF_M$ is the set system of matrix $M$.
-\end{definition}
-
-Thus the idea of \cop naturally maps to set sytems as well\endnote{As
-  seen in Section~\ref{sec:courseschedule}} as
-Definition~\ref{def:copforsets} states. This is equivalent to \COP for
-matrices seen in Definition~\ref{def:copmatrix}.
-
-\begin{definition}%
-  \label{def:copforsets}%
-  [\emph{\Cop for set systems% \cite{mcc04}
-  }.] A set system $\cF$ with universe $U$ has the \cop if it is
-  possible to assign a linear order to $U$ where each set $S \in \cF$
-  is an interval in the linear order.\tnote[important]{NOT formal
-    enough.}
-\end{definition}
-
-\tnote{What does n89 say? download paper from cornell website.}
-Generalized \PQtree is a data structure defined in \cite{mcc04} for
-arbitrary set systems. If the set system has \COP, the generalized
-\PQtree is identical to its \PQtree. 
-
-An important observation made by \cite{mm96} is that if $\cF$ is a set
-system with \COP then, aside from every set in $\cF$ being consecutive
-(after applying the \COP order) the following sets must also be
-consecutive for any $A, B \in \cF$ 
-\begin{enumerate}
-  \item The intersection $A \cap B$ 
-  \item The union $A \cup B$ if $A \cap B \ne \emptyset$
-  \item The relative complements $A \setminus B$ and $B \setminus A$
-    if $B \nsubseteq A$ and  $A \nsubseteq B$ respectively.
-  \item Additionally the sets $U$, singleton sets and the empty set $\emptyset$
-    (collectively called {\em trivial sets} in \cite{mm96}) are consecutive in all orderings
-    of the universe. $\emptyset$ is considered consecutive by convention.
-\end{enumerate}
-
-For any set system $\cF$, the smallest super set system containing
-$\cF$ and the trivial sets that is closed under the above operations
-is called the {\em weak closure} of $\cF$, denoted $\cW(\cF)$
-\cite[Def.~3.2]{mcc04} \cite[Def.~2]{mm96}.
-
-What is interesting is that the set of \COP permutations of $\cF$ is
-the same as that of $\cW(\cF)$. \cite[Th.~3]{mm96}
-
-The generalized \PQtree of $\cF$ is defined as the {\em decomposition
-  tree} of its weak closure $\cW(\cF)$. Decomposition tree is the
-inclusion tree (inclusion p.o. Hasse diagram) of the strong elements
-of $\cW(\cF)$ with labels {\em prime, linear} and {\em degenerate}.\cite{mcc04}
-
-
-\temptext{ Certifying algorithm (Generalized PQ trees) [McC04] -- 
-
-Set theoretic characterizations [Hsu02, NS09]\\
-    \cite{wlh02} describes the simpler algorithm for
-    COT.\tnote[pressing]{in terms of what?}\\
-    \cite{nsnrs09} describes a characterization of consecutive-ones
-    property solely based on the cardinality properties of the set
-    representations of the columns (rows); every column (row) is
-    equivalent to a set that has the row (column) indices of the rows
-    (columns) that have one entries in this column (row). This is
-    interesting and relevant, especially to this thesis because it
-    simplifies COT to a great degree by reducing the solution search
-    space owing to the a simple set theoretic characterization.\\
-
-
-\cite{mcc04} describes a different approach to COT. While all previous
-COT algorithms gave the COP order if the matrix has the property but
-exited stating negative if otherwise, this algorithm gives an evidence
-by way of a certificate of matrix even when it has no COP. This
-enables a user to verify the algorithm's result even when the answer
-is negative. This is significant from an implementation perspective
-because automated program verification is hard and manual verification
-is more viable. Hence having a certificate reinforces an
-implementation's credibility. Note that when the matrix {\em has} COP,
-the COP order is the certificate.  The internal machinery of this
-algorithm is related to the weighted betweenness problem
-addressed\tnote{in what way??} in \cite{co98}.  \tnote{expand
-  on the COP order graph creation and it having to be bipartite for M
-  to have COP. and thus an odd cycle being an evidence of no COP.}
-
-}
-
-
 % \section{COP in Relational Database Model}
 % \label{sec:surveyrdbm}
 % \tnote{Expand on sec:apprdbm} \tnote{(set systems theme)}

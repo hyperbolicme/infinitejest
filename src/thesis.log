@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  10 JAN 2012 14:32
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  11 JAN 2012 10:26
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -852,7 +852,7 @@ t4): destination with the same identifier (name{figure.2.3}) has been already u
 sed, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.422 
+l.425 
        <../img/tuckersforbiddensubmatrices.png (PNG copy)>]
 <../img/pqtree.png, id=378, 546.04pt x 353.32pt>
 File: ../img/pqtree.png Graphic file (type png)
@@ -861,119 +861,108 @@ File: ../img/pqtree.png Graphic file (type png)
 }) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.461 
+l.465 
        <../img/pqtree.png (PNG copy)>]
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 470.
+(hyperref)                removing `math shift' on input line 475.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 470.
+(hyperref)                removing `math shift' on input line 475.
 
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 470.
-
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 470.
-
-<../img/pctree_hm03.png, id=407, 738.76pt x 620.3175pt>
-File: ../img/pctree_hm03.png Graphic file (type png)
-
-<use ../img/pctree_hm03.png>
-<../img/pctree_dom.png, id=408, 886.31125pt x 261.97874pt>
-File: ../img/pctree_dom.png Graphic file (type png)
-
-<use ../img/pctree_dom.png> [22] [23pdfTeX warning (ext4): destination with the
- same identifier (name{figure.2.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.531 
-       <../img/pctree_hm03.png (PNG copy)> <../img/pctree_dom.png (PNG copy)>]
-Package color Info: Redefining color UserColor on input line 550.
-
-
-Package trackchanges Warning: Editor 'FYI' unknown.
-(trackchanges)                 on input line 550.
-
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 555.
-
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 555.
-
-Package color Info: Redefining color UserColor on input line 587.
-
-Overfull \hbox (23.75873pt too wide) in paragraph at lines 587--587
-[]$[]$[]\OT1/cmr/m/it/10 im[][]por[][]tant[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/
-n/6 NOT[] 
- []
-
-Package color Info: Redefining color UserColor on input line 590.
-[24]
-Overfull \hbox (21.29103pt too wide) in paragraph at lines 617--621
+[22]
+Overfull \hbox (21.29103pt too wide) in paragraph at lines 553--557
 \OT1/cmr/m/n/12 gram) of the strong el-e-ments of $\OMS/cmsy/m/n/12 W\OT1/cmr/m
 /n/12 (\OMS/cmsy/m/n/12 F\OT1/cmr/m/n/12 )$ with la-bels \OT1/cmr/m/it/12 prime
 , lin-ear \OT1/cmr/m/n/12 and \OT1/cmr/m/it/12 degenerate\OT1/cmr/m/n/12 .[[]] 
 
  []
 
-Package color Info: Redefining color UserColor on input line 653.
+Package color Info: Redefining color UserColor on input line 589.
 
-Overfull \hbox (6.04776pt too wide) in paragraph at lines 653--653
+Overfull \hbox (6.04776pt too wide) in paragraph at lines 589--589
 []$[]$[]\OT1/cmr/m/it/10 press[][]ing[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/n/6 i
 n[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 653--653
+Underfull \hbox (badness 10000) in paragraph at lines 589--589
 
  []
 
-Package color Info: Redefining color UserColor on input line 653.
-Package color Info: Redefining color UserColor on input line 653.
+Package color Info: Redefining color UserColor on input line 589.
+Package color Info: Redefining color UserColor on input line 589.
 
-LaTeX Warning: Marginpar on page 25 moved.
+LaTeX Warning: Marginpar on page 23 moved.
 
-Package color Info: Redefining color UserColor on input line 661.
 
-LaTeX Warning: Marginpar on page 25 moved.
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 594.
 
-Package color Info: Redefining color UserColor on input line 756.
-Package color Info: Redefining color UserColor on input line 756.
 
-LaTeX Warning: Marginpar on page 25 moved.
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 594.
 
-[25]
-Package color Info: Redefining color UserColor on input line 756.
-Package color Info: Redefining color UserColor on input line 756.
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 594.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 594.
+
+[23] <../img/pctree_hm03.png, id=448, 738.76pt x 620.3175pt>
+File: ../img/pctree_hm03.png Graphic file (type png)
+
+<use ../img/pctree_hm03.png>
+<../img/pctree_dom.png, id=449, 886.31125pt x 261.97874pt>
+File: ../img/pctree_dom.png Graphic file (type png)
+
+<use ../img/pctree_dom.png>
+Package color Info: Redefining color UserColor on input line 674.
+
+
+Package trackchanges Warning: Editor 'FYI' unknown.
+(trackchanges)                 on input line 674.
+
+Package color Info: Redefining color UserColor on input line 683.
+[24] [25pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.2.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \endgroup \set@typeset@protect 
+l.684 
+       <../img/pctree_hm03.png (PNG copy)> <../img/pctree_dom.png (PNG copy)>]
+Package color Info: Redefining color UserColor on input line 778.
+Package color Info: Redefining color UserColor on input line 778.
 
 
 LaTeX Warning: Marginpar on page 26 moved.
 
-Package color Info: Redefining color UserColor on input line 756.
-Package color Info: Redefining color UserColor on input line 756.
-Package color Info: Redefining color UserColor on input line 756.
+Package color Info: Redefining color UserColor on input line 778.
+Package color Info: Redefining color UserColor on input line 778.
+
+LaTeX Warning: Marginpar on page 26 moved.
+
+Package color Info: Redefining color UserColor on input line 778.
+Package color Info: Redefining color UserColor on input line 778.
+Package color Info: Redefining color UserColor on input line 778.
 
 LaTeX Warning: Marginpar on page 26 moved.
 
 
 LaTeX Warning: Marginpar on page 26 moved.
 
-Package color Info: Redefining color UserColor on input line 756.
-Package color Info: Redefining color UserColor on input line 756.
+Package color Info: Redefining color UserColor on input line 778.
+Package color Info: Redefining color UserColor on input line 778.
 
-Overfull \hbox (24.08672pt too wide) in paragraph at lines 756--756
+Overfull \hbox (24.08672pt too wide) in paragraph at lines 778--778
 [][]\OT1/cmr/m/n/6 .[] 
  []
 
-Package color Info: Redefining color UserColor on input line 756.
-Package color Info: Redefining color UserColor on input line 756.
-Package color Info: Redefining color UserColor on input line 756.
+Package color Info: Redefining color UserColor on input line 778.
+Package color Info: Redefining color UserColor on input line 778.
+Package color Info: Redefining color UserColor on input line 778.
 
 LaTeX Warning: Marginpar on page 26 moved.
 
@@ -989,15 +978,15 @@ LaTeX Warning: Marginpar on page 26 moved.
 
 LaTeX Warning: Marginpar on page 26 moved.
 
-Package color Info: Redefining color UserColor on input line 761.
+Package color Info: Redefining color UserColor on input line 783.
 
-Overfull \hbox (2.36684pt too wide) in paragraph at lines 761--761
+Overfull \hbox (2.36684pt too wide) in paragraph at lines 783--783
 []\OT1/cmr/m/n/6 sec:appgraphiso[]  
  []
 
-Package color Info: Redefining color UserColor on input line 761.
+Package color Info: Redefining color UserColor on input line 783.
 
-Overfull \hbox (9.59476pt too wide) in paragraph at lines 761--761
+Overfull \hbox (9.59476pt too wide) in paragraph at lines 783--783
 []$[]$ []\OT1/cmr/m/n/6 (can[][]on[][]iza[][]tion[] 
  []
 
@@ -1007,36 +996,33 @@ LaTeX Warning: Marginpar on page 26 moved.
 
 LaTeX Warning: Marginpar on page 26 moved.
 
-Package color Info: Redefining color UserColor on input line 764.
+Package color Info: Redefining color UserColor on input line 786.
 
-Overfull \hbox (22.34483pt too wide) in paragraph at lines 764--764
+Overfull \hbox (22.34483pt too wide) in paragraph at lines 786--786
 []$[]$[]\OT1/cmr/m/it/10 press[][]ing[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/n/6 A
 DD:[] 
  []
 
 
-Overfull \hbox (12.35562pt too wide) in paragraph at lines 764--764
+Overfull \hbox (12.35562pt too wide) in paragraph at lines 786--786
 []\OT1/cmr/m/n/6 [tag:chordalGraph][]  
  []
 
 
 LaTeX Warning: Marginpar on page 26 moved.
 
-(./thesis.ent
+[26] (./thesis.ent
 Package color Info: Redefining color UserColor on input line 140.
-
-
-LaTeX Warning: Marginpar on page 26 moved.
-
 Package color Info: Redefining color UserColor on input line 150.
 
-LaTeX Warning: Marginpar on page 26 moved.
+
+LaTeX Warning: Marginpar on page 27 moved.
 
 
-LaTeX Warning: Citation `wlh02isaac92' on page 26 undefined on input line 157.
+LaTeX Warning: Citation `wlh02isaac92' on page 27 undefined on input line 157.
 
-[26])
-Package color Info: Redefining color UserColor on input line 778.
+)
+Package color Info: Redefining color UserColor on input line 800.
 ) [27]
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
@@ -1070,9 +1056,9 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  8156 strings out of 94073
- 113079 string characters out of 1162984
- 199820 words of memory out of 1500000
- 10950 multiletter control sequences out of 10000+50000
+ 113039 string characters out of 1162984
+ 203030 words of memory out of 1500000
+ 10953 multiletter control sequences out of 10000+50000
  21989 words of font info for 84 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  42i,19n,43p,1211b,628s stack positions out of 5000i,500n,6000p,200000b,5000s
@@ -1202,9 +1188,9 @@ pe1/bluesky/cm/cmti12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blues
 ky/ams/msam10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/m
 sbm10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/public/cm-super/sfrm1
 200.pfb>
-Output written on thesis.pdf (23 pages, 680957 bytes).
+Output written on thesis.pdf (23 pages, 683444 bytes).
 PDF statistics:
- 720 PDF objects out of 1000 (max. 8388607)
- 228 named destinations out of 1000 (max. 131072)
+ 723 PDF objects out of 1000 (max. 8388607)
+ 225 named destinations out of 1000 (max. 131072)
  158 words of extra memory for PDF output out of 10000 (max. 10000000)
 

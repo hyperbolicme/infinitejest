@@ -174,8 +174,8 @@ Wen-Lian Hsu and Ross~M. McConnell.
 \bibitem[Hsu92]{wlh92}
 Wen-Lian Hsu.
 \newblock A simple test for the consecutive ones property.
-\newblock volume 650 of {\em LNCS}, pages 459--469. Sprinver-Verlag, 1992.
-\newblock ISAAC. Later appeared in J. Algorithms 2002 @wlh02.
+\newblock In {\em Proc. of the ISAAC'92\/} \cite{wlh02}, pages 459--469.
+\newblock Later appeared in J. Algorithms 2002.
 
 \bibitem[Hsu01]{wlh01}
 Wen-Lian Hsu.
@@ -265,11 +265,18 @@ Ross~M. McConnell.
 \newblock In {\em SODA: ACM-SIAM Symposium on Discrete Algorithms (A Conference
   on Theoretical and Experimental Analysis of Discrete Algorithms)}, 2004.
 
-\bibitem[MM96]{mm96}
+\bibitem[MM95]{mm95}
 J.~Meidanis and Erasmo~G. Munuera.
+\newblock A simple linear time algorithm for binary phylogeny.
+\newblock In N.~Ziviani, J.~Piquer, B.~Ribeiro, and R.~Baeza-Yates, editors,
+  {\em Proc. of the XV International Conference of the Chilean Computing
+  Society}, pages 275--283, Nov 1995.
+
+\bibitem[MM96]{mm96}
+J.~Meidanis and E.~G. Munuera.
 \newblock A theory for the consecutive ones property.
-\newblock In {\em Proceedings of WSP'96 - Third South American Workshop on
-  String Processing}, pages 194--202, 1996.
+\newblock In {\em Proc. of the III South American Workshop on String
+  Processing\/} \cite{mpt98}, pages 194--202.
 
 \bibitem[MPT98]{mpt98}
 Meidanis, Porto, and Telles.

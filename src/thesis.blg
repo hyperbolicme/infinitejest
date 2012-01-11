@@ -15,46 +15,45 @@ The style file: alpha.bst
 Database file #1: ../lib/cop-variants__thesis.bib
 Warning--I didn't find a database entry for "lec67"
 Warning--I didn't find a database entry for "wlh02isaac92"
-Warning--empty booktitle in wlh92
-You've used 66 entries,
+You've used 67 entries,
             2543 wiz_defined-function locations,
-            956 strings with 13070 characters,
-and the built_in function-call counts, 25633 in all, are:
-= -- 2627
-> -- 1142
+            965 strings with 13304 characters,
+and the built_in function-call counts, 26131 in all, are:
+= -- 2679
+> -- 1175
 < -- 39
-+ -- 395
-- -- 372
-* -- 1813
-:= -- 4222
-add.period$ -- 205
-call.type$ -- 66
-change.case$ -- 395
-chr.to.int$ -- 65
++ -- 406
+- -- 382
+* -- 1851
+:= -- 4303
+add.period$ -- 207
+call.type$ -- 67
+change.case$ -- 401
+chr.to.int$ -- 66
 cite$ -- 67
-duplicate$ -- 1023
-empty$ -- 1859
-format.name$ -- 461
-if$ -- 5202
+duplicate$ -- 1037
+empty$ -- 1879
+format.name$ -- 472
+if$ -- 5303
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 62
-newline$ -- 335
-num.names$ -- 198
-pop$ -- 321
+missing$ -- 63
+newline$ -- 340
+num.names$ -- 203
+pop$ -- 322
 preamble$ -- 1
-purify$ -- 466
+purify$ -- 473
 quote$ -- 0
-skip$ -- 875
+skip$ -- 902
 stack$ -- 0
-substring$ -- 1496
-swap$ -- 153
+substring$ -- 1536
+swap$ -- 159
 text.length$ -- 39
 text.prefix$ -- 25
 top$ -- 0
-type$ -- 508
-warning$ -- 1
-while$ -- 258
-width$ -- 73
-write$ -- 867
-(There were 3 warnings)
+type$ -- 516
+warning$ -- 0
+while$ -- 265
+width$ -- 74
+write$ -- 877
+(There were 2 warnings)
