@@ -23,17 +23,18 @@
 \contentsline {subsection}{\numberline {2.2.3}$PQR$-tree\xspace \ -- COP for set systems}{22}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}$PC$-tree\xspace -- a generalization of $PQ$-tree\xspace }{24}{subsection.2.2.4}
 \contentsline {section}{\numberline {2.3}Optimization problems in COP}{26}{section.2.3}
-\contentsline {section}{\numberline {2.4}COP in Graph Isomorphism}{26}{section.2.4}
+\contentsline {section}{\numberline {2.4}COP in Graph Isomorphism}{27}{section.2.4}
 \contentsline {chapter}{\numberline {3}Tree Path Labeling of Path Hypergraphs - the New Results}{28}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introduction}{28}{section.3.1}
 \contentsline {section}{\numberline {3.2}Preliminaries to new results}{30}{section.3.2}
 \contentsline {section}{\numberline {3.3}Characterization of Feasible Tree Path Labeling}{33}{section.3.3}
-\contentsline {section}{\numberline {3.4} Computing feasible TPL with special target trees \tnote {give problem definition etc}}{44}{section.3.4}
+\contentsline {section}{\numberline {3.4} Computing feasible TPL with special target trees \tnote {give problem definition etc}}{44}{changenumber.44.1}
 \contentsline {subsection}{\numberline {3.4.1}Target tree is a Path}{45}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Target tree is a $k$-subdivided Star}{45}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.5} TPL with no restrictions}{49}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Finding an assignment of tree paths to a set system}{50}{subsection.3.5.1}
-\contentsline {section}{\numberline {3.6}Complexity of Tree Path Assignment-A Discussion}{54}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Consecutive Ones Testing is in Logspace}{55}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.4.3}Description of the Algorithm}{47}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5} TPL with no restrictions}{51}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Finding an assignment of tree paths to a set system}{52}{subsection.3.5.1}
+\contentsline {section}{\numberline {3.6}Complexity of Tree Path Assignment-A Discussion}{56}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Consecutive Ones Testing is in Logspace}{56}{subsection.3.6.1}
 \contentsline {chapter}{\numberline {4}Conclusion}{57}{chapter.4}
-\contentsline {chapter}{REFERENCES \tnote [minor]{(i)make names in bib file uniform style w.r.t. firstname/initials (ii) have back refs - i.e. pages that cite the item.}}{59}{changenumber.27.3}
+\contentsline {chapter}{REFERENCES \tnote [minor]{(i)make names in bib file uniform style w.r.t. firstname/initials (ii) have back refs - i.e. pages that cite the item.}}{59}{theorem.3.6.3}

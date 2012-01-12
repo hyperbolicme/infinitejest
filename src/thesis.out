@@ -1,12 +1,15 @@
 \BOOKMARK [0][-]{chapter*.2}{LIST OF TABLES}{}
 \BOOKMARK [0][-]{chapter*.3}{LIST OF FIGURES}{}
-\BOOKMARK [0][-]{chapter.2}{Consecutive-ones Property-- A Survey of Important Results}{}
-\BOOKMARK [1][-]{section.2.1}{COP in Graph Theory}{chapter.2}
-\BOOKMARK [1][-]{section.2.2}{Matrices with COP}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.2.1}{Tucker's forbidden submatrices for COP}{section.2.2}
-\BOOKMARK [2][-]{subsection.2.2.2}{Booth and Lueker's PQ tree -- a linear COT algorithm}{section.2.2}
-\BOOKMARK [2][-]{subsection.2.2.3}{PQR-tree -- COP for set systems}{section.2.2}
-\BOOKMARK [2][-]{subsection.2.2.4}{PC-tree-- a generalization of PQ-tree}{section.2.2}
-\BOOKMARK [1][-]{section.2.3}{Optimization problems in COP}{chapter.2}
-\BOOKMARK [1][-]{section.2.4}{COP in Graph Isomorphism}{chapter.2}
-\BOOKMARK [0][-]{changenumber.27.3}{REFERENCES [minor]\(i\)make names in bib file uniform style w.r.t. firstname/initials \(ii\) have back refs - i.e. pages that cite the item.}{}
+\BOOKMARK [0][-]{chapter.3}{Tree Path Labeling of Path Hypergraphs - the New Results}{}
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}
+\BOOKMARK [1][-]{section.3.2}{Preliminaries to new results}{chapter.3}
+\BOOKMARK [1][-]{section.3.3}{Characterization of Feasible Tree Path Labeling}{chapter.3}
+\BOOKMARK [1][-]{changenumber.44.1}{ Computing feasible TPL with special target trees give problem definition etc}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.4.1}{Target tree is a Path}{changenumber.44.1}
+\BOOKMARK [2][-]{subsection.3.4.2}{Target tree is a k-subdivided Star}{changenumber.44.1}
+\BOOKMARK [2][-]{subsection.3.4.3}{Description of the Algorithm}{changenumber.44.1}
+\BOOKMARK [1][-]{section.3.5}{ TPL with no restrictions}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.5.1}{Finding an assignment of tree paths to a set system}{section.3.5}
+\BOOKMARK [1][-]{section.3.6}{Complexity of Tree Path Assignment-A Discussion}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.6.1}{Consecutive Ones Testing is in Logspace}{section.3.6}
+\BOOKMARK [0][-]{theorem.3.6.3}{REFERENCES [minor]\(i\)make names in bib file uniform style w.r.t. firstname/initials \(ii\) have back refs - i.e. pages that cite the item.}{}

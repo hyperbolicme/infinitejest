@@ -38,10 +38,10 @@ applying the COP row (column) permutation are intervals.  In this
 form, one can see that this is indeed the problem of finding interval
 assignments to the given set system \cite{nsnrs09} with a single
 permutation of the universe (set of row or column indices for COP of
-columns or rows, respectively) which permutes each set to its
+columns or rows, respectively) which permutes each set to an
 interval. The result in \cite{nsnrs09} characterizes interval
 assignments to the sets which can be obtained from a single
-permutation of the rows (columns). The cardinality of the interval
+permutation of the universe. The cardinality of the interval
 assigned to it must be same as the cardinality of the set, and the
 intersection cardinality of any two sets must be same as the
 intersection cardinality of the corresponding intervals. This is a
@@ -51,12 +51,13 @@ necessary and sufficient condition. \tnote{(ICPIA) put reference to
 Naturally, intervals are paths from a tree with maximum degree
 two. Thus the interval assignment problem can be generalized into path
 assignment problem from any tree. We refer to this as the {\em tree
-  path labeling problem}. To elaborate, the problem is defined as
-follows -- given a hypergraph $\cF$ from universe (vertex set) $U$ and
-a target tree $T$, does there exist a bijection from $U$ to the
-vertices of $T$ such that when applied to elements of each hyperedge,
-it gives a path on $T$.  More formally, the problem definition is as
-defined by \CFTPL.
+  path labeling problem of path hypergraphs}. This is analogous to the
+interval labeling problem in literature \cite{kklv10} to interval
+hypergraphs. To elaborate, the problem is defined as follows -- given
+a hypergraph $\cF$ from universe (hypergraph vertex set) $U$ and a target tree
+$T$, does there exist a bijection $\phi$ from $U$ to the vertices of $T$ such
+that for each hyperedge when applied to its elements, $\phi$ gives a path on
+$T$.  More formally, the problem definition is as defined by \CFTPL.
 
 {\small
   \begin{minipage}[h]{5in}
@@ -118,8 +119,8 @@ characterization for a feasible TPL.
 
 With respect to computing a feasible TPL, as suggested by \CFTPL
 problem, we were unable to discover an efficient algorithm for
-it. Hence we consider two special cases of \CFTPL -- namely, \CFTPLINT
-and \CFTPLKTREE on special target trees, intervals and \kstar,
+it. Hence we consider two special cases of \CFTPL\ -- namely, \CFTPLINT
+and \CFTPLKTREE on special target trees, intervals and \kstars,
 respectively.  Section~\ref{sec:spltargettree} discusses these
 problems.
 
@@ -382,16 +383,6 @@ feasibility of tree path labeling.  Consider a path labeling $(\cF,
   Cardinality Preserving Path Labeling (ICPPL)} if it has the
 following properties.
 
-% \begin{enumerate}[{(\icpplpr\ }i) \ \ \ ]
-% \item \label{pr:i} $|S| = |\cl(S)|$ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-%   \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for all $S \in \cF$
-%   % \vspace{\topshrink}
-% \item \label{pr:ii}$|S_1 \cap S_2| = |\cl(S_1) \cap \cl(S_2)|$ \ \ \ \
-%   \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for all distinct $S_1, S_2 \in \cF$
-%   % \vspace{\topshrink}
-% \item \label{pr:iii}$|S_1 \cap S_2 \cap S_3| = |\cl(S_1) \cap \cl(S_2)
-%   \cap \cl(S_3)|$ \ \ \ for all distinct $S_1, S_2, S_3 \in \cF$
-% \end{enumerate}
 \begin{enumerate}[{(\icpplpr\ }i)]
 \item \label{pr:i} $|S| = |\cl(S)|$ for all $S \in \cF$
   % \vspace{\topshrink}
@@ -1228,19 +1219,26 @@ hypergraph too which will be seen in Section~\ref{sec:ksubdivstar}.
 \subsection{Target tree is a Path}
 \label{sec:icpplicpia}
 
-Consider a special case of ICPPL with the following properties.
-\begin{enumerate}
-\item Given tree $T$ is a path. Hence, all path labels are interval
-  labels.
-\item Only pairwise intersection cardinality preservation is
-  sufficient. i.e. property (iii) in ICPPL is not enforced.
-\item The filter algorithms do not have {\em \bf exit} statements.
-\end{enumerate}
-This is called an Intersection Cardinality Preservation Interval
-Assignment (ICPIA) \cite{nsnrs09}. This structure and its algorithm is
+Consider a special case of ICPPL with the following properties when the tree $T$
+is a path.  Hence, all path labels are can be viewed as intervals assigned to the
+sets in $\cF$.  It is shown, in \cite{nsnrs09}, that the filtering algorithms outlined
+above need only preserve pairwise intersection cardinalities, and higher level
+intersection cardinalities are preserved by the Helly Property of intervals.  Consequently,
+the filter algorithms do not need to ever evaluate the additional check to {\em \bf exit}.
+%\begin{enumerate}
+%\item Given tree $T$ is a path. Hence, all path labels are interval labels.
+%\item Only pairwise intersection cardinality
+%  preservation is sufficient. i.e. property (iii) in ICPPL is not enforced.
+%\item The filter algorithms do not have {\em \bf exit} statements.
+%\end{enumerate}
+%This is called an Intersection Cardinality Preservation Interval
+%Assignment (ICPIA) \cite{nsnrs09}. 
+This structure and its algorithm is
 used in the next section for finding tree path labeling from a
 $k$-subdivided star due to this graph's close relationship with
-intervals.
+intervals. 
+
+
 
 \subsection{Target tree is a $k$-subdivided Star}
 \label{sec:ksubdivstar}
@@ -1355,154 +1353,214 @@ the following rules. Also the end of the iteration, $\cL_1^{i+1},
 \cL_2^{i}, \cT_1^{i}, \cT_2^{i}$ respectively, along with some
 case-specific changes mentioned in the rules below.
 
-\noindent
-Suppose the given hypergraph has a feasible path labeling to the given
-tree $T$. Let this labeling be $\cl$. Now we present an algorithm that
-lists the sequence of edges that maintain a set of properties
-necessary for them to have a feasible tree path labeling.
-\begin{enumerate}[I.]
-\item {\bf Step 1}
-  \begin{enumerate}
-  \item {\bf {There are type 1 edges, $\mathbf{|\cT_1^i| > 0}$}:}
-    % , and for each such $X$ assign the path in $R_i$ of length
-    % $s(X)$ starting at $v_{i,k+2}=r$.  $X$ is then removed from
-    % $\cO_i$, and $p_2(X)=s(X)$, and $s(X)=0$.If any intersection
-    % cardinality is violated because of this assignment, EXIT
-    % reporting the non-existence of a feasible assignment.
-    {If there is only one $\cT_1^i$ hyperedge, label it to the unique
-      path in $R_i$ of length $s(X)$ starting at $v_{i(k+2)}=r$. If
-      there are more than one $\cT_1^i$ hyperedges, for any pair of
-      hyperedges $S_1, S_2 \in \cT_1^i$, one of the following is
-      true. Let $\cl'(X) \subseteq R_j$ denote the subpath of length
-      $p_1(X)$ that has been assigned to $X$ from a previously
-      considered ray $R_j$.}
-    \begin{enumerate}[{\em Case }1. ]
-    \item $|\cl'(S_1) \cap \cl'(S_2)| = 1$ and $|S_1 \cap S_2| > 1$
-      i.e. they are in different rays and their residues must contain
-      their intersection. Hence assign both to $R_i$.
-    \item $|\cl'(S_1) \cap \cl'(S_2)| > 1$ and $|S_1 \cap S_2| >
-      |\cl'(S_1) \cap \cl'(S_2)|$ i.e. they are in the same rays and
-      their residues must contain their intersection. Hence assign
-      both to $R_i$.
-    \item $|\cl'(S_1) \cap \cl'(S_2)| > 1$ and $|S_1 \cap S_2| =
-      |\cl'(S_1) \cap \cl'(S_2)|$. i.e. the intersection cardinality
-      has been met. Hence assign only $S_1$ to $R_i$ and $S_2$ must be
-      assigned to some $i \ge p$.
-    \end{enumerate}
-    Remove the labeled edge or edges from $\cO_i$ and add it to
-    $\cO_{i+1}$. Also do not add it to $\cT_1^{i+1}$ and add to
-    $\cL_2^{i+1}$.
-  \item {\bf {There are no type-1 edges nor} super-marginal type-2
-      hyperedges:} If all type-2 edges of length at most $k+1$, EXIT
-    by saying there is no ICPPL.  Otherwise, Find an $X$ of type-2
-    such that $|X| \geq k+2$, assign it the unique path starting at
-    $v_{i(k+1)}=r$ of length $k+2$, and set $p_1(X)=k+2,
-    s(X)=|X|-(k+2)$, assign it the unique path starting at
-    $v_{i(k+1)}=r$ of length $k+2$, mark this as a type-1 hyperedge,
-    and add it to $\cO_{i+1}$ after removing it from $\cO_i$.
-    % \remove{Next, iteratively, consider each type-1 edge $X \in
-    %   \cO_i$, and if it intersects a previously assigned $Y$ such
-    %   that
-    %   $\cl(Y) \subseteq R_i$, assign a path of length $s(X)$
-    %   containing $v_{i(k+2)}=r$, set $p_2(X)=s(X), s(X)=0$, and
-    %   remove
-    %   $X$ from $\cO_i$.}\tnote{covered in step 2}
+\temptext{repetition}
 
-  \item {\bf There are super-marginal type-2 hyperedges {and no type-1
-        edges:}} Let $X$ be a super-marginal hyperedge. If $|X| \leq
-    k+2$, then $X$ is assigned the path of length $|X|$ starting at
-    $v_{i1}$, and $p_1(X) = |X|, p_2(X)=0$. $X$ is removed from
-    $\cO_i$ and not added to $\cO_{i+1}$.  If $|X| > k+2$, then
-    $p_1(X)=k+2$, assign it the unique path starting at $v_{i(k+1)}=r$
-    of length $k+2$ and $s(X) = |X| - (k+2)$.  In this case, $X$ is
-    classified as a Type-1 edge, removed from $\cO_i$, and added to
-    $\cO_{i+1}$.
-  \end{enumerate}
-\item {\bf Step 2:} Iteratively, a hyperedge $X$ is selected from
-  $\cO_i$ that has an overlap with one of the hyperedges $Y$ such that
-  $\cl(Y) \subseteq R_i$, and a unique path is assigned to $X$.  The
-  path, say $U(X) \subseteq R_i$, that is assigned can be decided
-  unambiguously since the $X \overlap Y$, and all intersection
-  cardinalities can be preserved only at one of the ends of $\cl(Y)$.
+In this section we consider the problem of assigning paths from a
+$k$-subdivided star $T$ to a given set system $\cF$ such that each set
+$X \in \cF$ is of cardinality at most $k+2$.  Secondly, we present our
+results only for the case when overlap graph $\bO(\cF)$ is connected.
+%The
+%overlap graph is well-known from the work of
+%\cite{kklv10,nsnrs09,wlh02}.  We use the notation in
+%\cite{kklv10}. Recall from Section~\ref{sec:prelims} that hyperedges
+%$S$ and $S'$ are said to overlap, denoted by $S \overlap S'$, if $S$ and $S'$
+%have a non-empty intersection but neither of them is contained in the
+%other. The overlap graph $\bO(\cF)$ is a graph in which the vertices
+%correspond to the sets in $\cF$, and the vertices corresponding to the
+%hyperedges $S$ and $S'$ are adjacent if and only if they overlap.  Note
+%that the intersection graph of $\cF$, $\bI(\cF)$ is different from
+%$\bO(\cF)$ and $\bO(\cF) \subseteq \bI(\cF)$.  
+A connected component of $\bO(\cF)$ is called an overlap component of
+$\cF$.  An interesting property of the overlap components is that any
+two distinct overlap components, say $\cO_1$ and $\cO_2$, are such
+that any two sets $S_1 \in \cO_1$ and $S_2 \in \cO_2$ are disjoint,
+or, w.l.o.g, all the sets in $\cO_1$ are contained within one set in
+$\cO_2$.  This containment relation naturally determines a
+decomposition of the overlap components into rooted containment trees.
+We consider the case when there is only one rooted containment tree,
+and we first present our algorithm when $\bO(\cF)$ is connected.  It
+is easy to see that once the path labeling to the overlap component in
+the root of the containment tree is achieved, the path labeling to the
+other overlap components in the rooted containment tree is essentially
+finding a path labeling when the target tree is a path: each target
+path is a path that is allocated to sets in the root overlap
+component.  Therefore, for the rest of this section, $\bO(\cF)$ is a
+connected graph. Recall that we also consider the special case when
+all hyperedges are of cardinality at most $k+2$.  By definition, a
+$k$-subdivided star has a central vertex which we call the {\em root},
+and each root to leaf path is called a {\em ray}.  First, we observe
+that by removing the root $r$ from $T$, we get a collection of $p$
+vertex disjoint paths of length $k+1$, $p$ being the number of leaves
+in $T$.  We denote the rays by $R_1, \ldots, R_p$, and the number of
+vertices in $R_i$, $i \in [p]$ is $k+2$.  Let
+$\seq{v_{i1},\ldots,v_{i(k+2)}=r}$ denote the sequence of vertices in
+$R_i$, where $v_{i1}$ is the leaf. Note that $r$ is a common vertex to
+all $R_i$.
   
-  \noindent
-  Let $\cl(X)$ denote the unique path assigned to $X$.  If $X$ is a
-  type-2 hyperedge and if the unique path of length $|X|$ does not
-  contain $r$, then $p_1(X) = |X|, p_2(X)=0$, and $X$ is removed from
-  $\cO_i$.  In the case when $\cl(X)$ has to contain $r$, then
-  $p_1(X)$ is the length of the path, $p_2(X)=0$, and $s(X) =
-  |X|-p_1(X)$. Further $X$ is classified as a type-1 hyperedge, added
-  to $\cO_{i+1}$ and removed from $\cO_i$.  In the case when $X$ is a
-  type-1 hyperedge, then we check if $U(X)$, which is of length $s(X)$
-  contains $r$. If it does, then we assign $\cl(X) \leftarrow \cl(X)
-  \cup U(X)$, remove $X$ from $\cO_i$ and do not add it to
-  $\cO_{i+1}$.  If not, then we {\bf Exit} reporting that an
-  assignment cannot be found.  The iteration ends when no hyperedge in
-  $\cO_i$ has an overlap with a hyperedge assigned to $R_i$.
+
+
+\subsection{Description of the Algorithm}
+In this section the given hypergraph $\cF$, the $k$-subdivided star
+and the root of the star are denoted by $\cO$, $T$ and vertex $r$,
+respectively.  In particular, note that the vertices of $\cO$
+correspond to the sets in $\cF$, and the edges correspond to the
+overlap relation.
+
+\noindent
+For each hyperedge $X \in \cO$, we will maintain a 2-tuple of non-negative
+ numbers $\seq{p_1(X), p_2(X)}$.  The numbers satisfy the property that
+ $p_1(X) + p_2(X) \leq |X|$, and at the end of path labeling, for each
+ $X$, $p_1(X) + p_2(X) = |X|$.  This signifies the algorithm tracking
+ the lengths of subpaths of the path assigned to $X$ from at most two
+ rays. We also maintain another parameter called the {\em residue} of
+ $X$ denoted by $s(X)=|X| - p_1(X)$. This signifies the residue path
+ length that must be assigned to $X$ which must be from another
+ ray. For instance, if $X$ is labeled a path from only one ray, then
+ $p_1(X) = |X|$, $p_2(X) = 0$ and $s(X) = 0$.
+
+ \xnoindent The algorithm proceeds in iterations, and in the $i$-th
+ iteration, $i > 1$, a single hyperedge $X$ that overlaps with a
+ hyperedge that has been assigned a path is considered.  At the
+ beginning of each iteration hyperedges of $\cO$ are classifed into
+ the following disjoint sets.
+ \begin{enumerate}
+ \item [$\cL_1^i$] {\em Labeled without $r$.} Those that have been
+   labeled with a path which does not contain $r$ in one of the
+   previous iterations.\\  $\cL_1^i = \set{ X \mid p_1(X) = |X| \text{ and
+     } p_2(X) = 0 \text{ and } s(X) = 0, X \in \cO}$
+ \item [$\cL_2^i$] {\em Labeled with $r$.} Those that have been labeled
+   with two subpaths of $\cl(X)$ containing $r$ from two different rays
+   in two previous iterations.\\ $\cL_2^i = \set{X \mid 0 < p_1\left(X\right),
+     p_2\left(X\right) < |X|=p_1(X)+p_2(X) \text{ and } s(X) = 0, X \in \cO}$
+   \item [$\cT_1^i$] {\em Type 1 / partially labeled.} Those that have
+     been labeled with one path containing $r$ from a single ray in one
+     of the previous iterations. Here, $p_1(X)$ denotes the length of
+     the subpath of $\cl(X)$ that $X$ has been so far labeled
+     with. \\
+     $\cT_1^i = \set{ X \mid 0 < p_1(X) < |X| \text{ and } p_2(X) = 0
+       \text{ and } s(X) = |X|-p_1(X), X \in \cO}$
+   \item [$\cT_2^i$] {\em Type 2 / not labeled.} Those that have not been
+     labeled with a path in any previous iteration.\\
+     $\cT_2^i = \set{ X \mid p_1(X) = p_2(X) = 0 \text{ and } s(X) = |X|,
+       X \in \cO}$
+ \end{enumerate}
+% \vspace{-2mm}
+% \begin{align*}
+%   \cO &= \cL_1^i \cup \cL_2^i \cup \cT_1^i \cup \cT_2^i, \text{    } \forall i \in [p]\\
+%   \cO_i &= \cT_1^i \cup \cT_2^i, \text{    } \forall i \in [p]
+% \end{align*}
+
+\noindent
+The set $\cO_i$ refers to the set of hyperedges $\cT_1^i \cup \cT_2^i$
+in the $i$th iteration.  Note that $\cO_1 = \cO$.  In the $i$th
+iteration, hyperedges from $\cO_i$ are assigned paths from $T$ using
+the following rules. Also the end of the iteration, $\cL_1^{i+1},
+\cL_2^{i+1}, \cT_1^{i+1}, \cT_2^{i+1}$ are set to $\cL_1^{i},
+\cL_2^{i}, \cT_1^{i}, \cT_2^{i}$ respectively, along with some
+case-specific changes mentioned in the rules below.
+
+\noindent
+\begin{enumerate}[I.]
+\item {\bf Iteration 1:} Let $S=\{X_1,\ldots,X_s\}$ denote the
+  super-marginal hyperedges from $\cO_1$.  If $|S|=s \neq p$, then
+  exit reporting failure.  Else, assign to each $X_j \in S$, the path
+  from $R_j$ such that the path contains the leaf in $R_j$.  This path
+  is refered to as $\cl(X_j)$.  Set $p_1(X_j)=|X|, p_2(X_j)=s(X_j)=0$.
+  Hyperedges in $S$ are not added to $\cO_2$ but are added to
+  $\cL_1^2$ and all other hyperedges are added to
+  $\cO_2$.
+\item {\bf Iteration $i$:} Let $X$ be a hyperedge from $\cO_i$ such
+  that there exists $Y \in \cL_1^i \cup \cL_2^i$ and $X \overlap
+  Y$. Further let $Z \in \cL_1^i \cup L_2^i$ such that $Z \overlap Y$.
+  If $X \in \cT_2^i$, and if there are multiple $Y$ candidates then
+  any $Y$ is selected.  On the other hand, if $X \in \cT_1^i$, then
+  $X$ has a partial path assignment, $\cl'(X)$ from a previous
+  iteration, say from ray $R_j$. Then, $Y$ is
+  chosen such that $X \cap Y$ has a non-empty intersection with a ray
+  different from $R_j$.  The key things that are done in assigning a
+  path to $X$ are as follows. The {\em end} of path $\cl(Y)$ where
+  $\cl(X)$ would overlap is found, and then based on this the
+  existence of a feasible assignment is decided.  It is important to
+  note that since $X \overlap Y$, $\cl(X) \overlap \cl(Y)$ in any
+  feasible assignment.  Therefore, the notion of the {\em end} at
+  which $\cl(X)$ and $\cl(Y)$ overlap is unambiguous, since for any
+  path, there are two end points.
+  \begin{enumerate}
+  \item \label{iendpoint} {\em End point of $\cl(Y)$ where $\cl(X)$ overlaps
+      depends on $X \cap Z$:} If $X \cap Z
+    \neq \emptyset$, then $\cl(X)$ has an overlap of $|X \cap Y|$ at that
+    end of $\cl(Y)$ at which $\cl(Y)$ and $\cl(Z)$ overlap.  If $X
+    \cap Z = \emptyset$, then $\cl(X)$ has an overlap of $|X \cap Y|$ at
+    that end of $\cl(Y)$ where $\cl(Y)$ and $\cl(Z)$ do not intersect.
+  \item {\em Any path of length $s(X)$ at the appropriate end contains
+      $r$:} If $X \in \cT_1^i$ then after finding the appropriate end
+    as in step~\ref{iendpoint} this the unique path of length $s(X)$
+    should end at $r$.  If not, we exit reporting failure.  Else,
+    $\cl(X)$ is computed as union of $\cl'(X)$ and this path. If any
+    three-way intersection cardinality is violated with this new
+    assignment, then exit, reporting failure.  Otherwise, $X$ is added
+    to $\cL_2^{i+1}$.  On the other hand, if $X \in \cT_2^i$, then
+    after step~\ref{iendpoint}, $\cl(X)$ or $\cl'(X)$ is unique up to
+    the root and including it. Clearly, the vertices $\cl(X)$ or
+    $\cl'(X)$ contains depends on $|X|$ and $|X \cap Y|$.  If any
+    three way intersection cardinality is violated due to this
+    assignment, exit, reporting failure.  Otherwise,
+    $p_1(X)$ is updated as the length of the assigned path, and $s(X)
+    = |X|-p_1(X)$.  If $s(X) > 0$, then $X$ is added to $\cT_1^{i+1}$.
+    If $s(X)=0$, then $X$ is added to $\cL_1^{i+1}$.
+  \item {\em The unique path of length $s(X)$ overlapping at the
+      appropriate end of $Y$ does not contain $r$:} In this case,
+    $\cl(X)$ is updated to include this path.  If any three way
+    intersection cardinality is violated, exit, reporting failure.
+    Otherwise, update $p_1(X)$ and $p_2(X)$ are appropriate, $X$ is
+    added to $\cL_1^{i+1}$ or $\cL_2^{i+1}$, as appropriate.
+  \end{enumerate}
 \end{enumerate}
 
-\noindent
-The order in which they are assigned is the sequence of hyperedges
-with the following properties. Note that if such a sequence cannot be
-computed, $\cO$ cannot have a feasible path labeling from $T$.
+\noindent {\bf Proof of Correctness and Analysis of Running Time:} It
+is clear that the algorithm runs in polynomial time, as at each step,
+at most three-way intersection cardinalities need to be checked.
+Further, finding super-marginal hyperedges can also be done in
+polynomial time, as it involves considering the overlap regions and
+checking if the inclusion partial order contains a single minimal
+element.  In particular, once the super-marginal edges are identified,
+each iteration involes finding the next hyperedge to consider, and
+testing for a path to that hyperedge.  To identify the next hyperedge
+to consider, we consider the breadth first layering of the hyperedges
+with the zeroeth layer consisting of the super-marginal hyperedges.
+Since $\cO$ is connected, it follows that all hyperedges of $\cO$ will
+be considered by the algorithm.  Once a hyperedge is considered, the
+path to be assigned to it can also be computed in constant time.  In
+particular, in the algorithm the path to be assigned to $X$ depends on
+$\cl(Y), \cl(Z)$, $s(X)$ and the presence or absence of $r$ in the
+candidate partial path $\cl'(X)$.  Therefore, once the super-marginal
+edges are identified, the running time of the algorithm is linear in
+the size of the input.  By the technique used for constructing prime
+matrices \cite{wlh02}, the super-marginal edges can be found in linear
+time in the input size.  Therefore, the algorithm can be implemented
+to run in linear time in the input size.
 
 \noindent
-\tnote{need to formalize the below properties} In the following lemmas
-we identify a set of necessary conditions for $\cF$ to have an ICPPL
-in the $k$-subdivided star $T$.  If during the execution of the above
-algorithm, one of these necessary conditions is not satisfied, the
-algorithm exits reporting the non-existence of an ICPPL.
-\begin{lemma}
-  Let all hyperedges in $\cO_i$ be type-1 edges.  Then there is a
-  maximal subset $\ccT_i \subseteq \cO_i$ with the following
-  properties:
-  \begin{enumerate}
-  \item $\ccT_i$ form an inclusion chain.
-  \item For all $X \in \ccT_i$, $s(X) \leq k+2$, and There is a an $X
-    \in \ccT_i$ such that $s(X)=k+2$.
-  \end{enumerate}
-\end{lemma}
-\begin{lemma}
-  If there are no \marginal type-2 edges in $\cO_i$, then there exists
-  at least $p-i$ type-2 hyperedges $X \in \cO_i$ such that $|X| \geq
-  k+2$.
-  % is a exist type-2 hyperedges of length at least $k+2$, and there
-  % must be at least $r-i$ such type-2 hyperedge, basically at least
-  % one per ray.  Each hyperedge contained in such an hyperedges of
-  % length at least $k+2$, is transitively related under the overlap
-  % relation to one that gets assigned a path that contains
-  % $r$. Basically, the proof will argue that otherwise, there will be
-  % a \marginal type-2 hyperedge, or that it is infeasible.  Also, it
-  % is here we assume that we assume that the size of the two
-  % universes is the same.
-\end{lemma}
-\begin{lemma}
-  At the end of Step-1 in the $i$-th iteration, if one hyperedge $X$
-  of type-2 is such that $\cl(X) \subseteq R_i$, then all other
-  hyperedges in $\cO_i$ are connected to $X$ in the overlap component.
-\end{lemma}
-\begin{lemma}
-  At the end of Step-2, If control has exit at any time, there is no
-  ICPPL. If control has not exit, then $R_i$ is saturated.  No
-  hyperedge of $\cO_{i+1}$ will get a path from $R_i$ in the future
-  iterations.  No type-2 hyperedge of $\cO_{i+1}$ will get a path from
-  $R_i$.  Basically $R_i$ is done.
-\end{lemma}
-\begin{lemma}
-  Finally, we need to prove that the assignment is an ICPPL. Secondly,
-  if there is a permutation then maps sets to paths, then it is indeed
-  an ICPPL, and our algorithm will basically find it.  It is a unique
-  assignment upto permutation of the leaves.
-\end{lemma}
-
-
+The proof of correctness uses the following main properties:
+\begin{enumerate}
+\item The $k$-subdivided star has a very symmetric structure.  This
+  symmetry is quantified based on the following observation -- either
+  there are no feasible path labelings of $\cO$ using paths from $T$,
+  or there are exactly $p!$ feasible path labelings.  In other words,
+  there is either no feasible assignment, or effectively a unique
+  assignment modulo symmetry.
+\item The $p$ super-marginal hyperedges, if they exist, will each be
+  assigned a path from distinct rays, and each such path contains the
+  leaf.
+\item For a candidate hyperedge $X$, the partial path assignment
+  $\cl'(X)$ is decided by its overlap with $\cl(Y)$ and cardinality of
+  intersection with $\cl(Z)$.
+\end{enumerate}
+These properties are formalized as follows:
 \begin{lemma}
   \label{lem:sup-mar}
-  If $X \in \cF$ is super-marginal and $(\cF, \cl)$ is a feasible tree
-  path labeling to tree $T$, then $\cl(X)$ will
-  contain a leaf in $T$.\\
-  On the otherhand, if $\cl(X)$ has a leaf in $T$, $X$ is marginal but
-  may not be super-marginal.
+  If $X \in \cF$ is super-marginal and $\cl$ is a feasible tree path
+  labeling to tree $T$, then $\cl(X)$ will contain a leaf in $T$.
 \end{lemma}
 \begin{proof}
   Suppose $X \in \cF$ is super-marginal and $(\cF, \cl)$ is a feasible
@@ -1516,28 +1574,163 @@ algorithm exits reporting the non-existence of an ICPPL.
   least one vertex farther away from the leaf in $R_i$ than any vertex
   in $X$. Clearly $Y_1 \cap X$ and $Y_2 \cap X$ cannot be part of same
   inclusion chain which contradicts that assumption $X$ is
-  super-marginal. Thus the claim is proven.%\qed
+  super-marginal. Thus the claim is proved.\qed
+\end{proof}
+\begin{lemma}
+  If $\cO$ does not have any super-marginal edges, then in any
+  feasible path labeling $\cl$ of $\cO$ with paths from $T$ is such
+  that, for any hyperedge $X$ for which $\cl(X)$ contains a leaf, $|X|
+  \geq k+3$.
+\end{lemma}
+\begin{proof}
+  The proof of this lemma is by contradiction.  Let $X$ be a
+  hyperedges such that $|X| \leq k+2$ and that $\cl(X)$ has a leaf.
+  This implies that the overlap regions with $X$, which are captured by
+  the overlap regions with $\cl(X)$, will form a single inclusion
+  chain. This shows that $X$ is a marginal hyperedge which
+  contradicts the assumption that $\cO$ does not have super-marginal
+  hyperedges. \qed
+\end{proof}
+This lemma is used to prove the next lemma for the case when for all
+$X \in \cO$, $|X| \leq k+2$.  The proof is left out as it just uses
+the previous lemma and the fact that the hyperedges in $X$ have at
+most $k+2$ elements.
+\begin{lemma}
+  If there is a feasible path labeling for $\cO$ in $T$, then there
+  are exactly $p$ super-marginal hyperedges.
+\end{lemma}
+These lemmas now are used to prove the following theorem.
+\begin{theorem}
+  Given $\cO$ and a $k$-subdivided star $T$, the above algorithm
+  decides correctly if there is a feasible path labeling $\cl$.
+\end{theorem}
+\begin{proof} {\em Outline.}
+%   If the algorithm outputs a path labeling $\cl$, then it is clear
+%   that it is an ICPPL. The reason is that the algorithm checks that
+%   three-way intersection cardinalities are preserved in each iteration
+%   which ensures \icpplpr~\ref{pr:iii}. Moreover, it is clear that
+%   $\cl(X)$ for any $X \in \cO$ is computed by maintaining
+%   \icpplpr~\ref{pr:i} and \icpplpr~\ref{pr:ii}. For such a labeling
+%   $\cl$, the proof that it is feasible is by induction on $k$. What
+%   needs to be shown is that Algorithm~\ref{al:icppl-find-isomorph}
+%   successfully runs on input $(\cO, \cl)$. In base case $k=0$, $T$ is
+%   a star. The claim is clear by observing that after Filter 1 and one
+%   iteration of Filter 2, all the leaves have found their pre-images
+%   from support $\cO$.  Therefore, in the induction step, it is clear
+%   that after Filter 1 and one iteration of Filter 2, the leaves are
+%   assigned pre-images.  Removing the leaves from $T$ and the
+%   pre-images from support of $\cO$, results in an ICPPL to a
+%   $(k-1)$-subdivided star.  Now we apply the induction hypothesis, and
+%   we get a isomorphism between the hypergraph $\cO$ and $\cO^\cl$.
+  If the algorithm outputs a path labeling $\cl$, then it is clear
+  that it is an ICPPL. The reason is that the algorithm checks that
+  three-way intersection cardinalities are preserved in each iteration
+  which ensures ICPPL \icpplpr~\ref{pr:iii}. Moreover, it is clear
+  that $\cl(X)$ for any $X \in \cO$ is computed by maintaining ICPPL
+  \icpplpr~\ref{pr:i} and ICPPL \icpplpr~\ref{pr:ii}. For such a
+  labeling $\cl$, the proof that it is feasible is by induction on
+  $k$. What needs to be shown is that
+  Algorithm~\ref{al:icppl-find-isomorph} successfully runs on input
+  $(\cO, \cl)$. In base case $k=0$, $T$ is a star. Also every set is
+  at most size 2 ($k+2$) size and thus overlaps are at most 1. If two
+  paths share a leaf in {\tt filter\_1} one must be of length 2 and
+  the other of length 1. Thus the exit condition is not met. Further,
+  it is also clear that the exit condition in {\tt filter\_2} is also
+  not met. Thus claim proven for base case.  Now assume the claim to
+  be true when target tree is a $(k-1)$-subdivided star. Consider the
+  case of a $k$-subdivided star.  We can show that after {\tt
+    filter\_1} and one iteration of a modified {\tt filter\_2} {\em
+    all} leaves are assigned pre-images.  Removing the leaves from $T$
+  and the pre-images from support of $\cO$, results in an ICPPL to a
+  $(k-1)$-subdivided star.  Now we apply the induction hypothesis, and
+  we get an isomorphism between the hypergraphs $\cO$ and $\cO^\cl$.
+
+  \noindent
+  In the reverse direction if there is a feasible path labeling $\cl$,
+  then we know that $\cl$ is unique up to isomorphism.  Therefore,
+  again by induction on $k$ it follows that the algorithm finds $\cl$.
+  \qed
 \end{proof}
 
-\noindent
-Consider the overlap graph $\bO(\cF)$ of the given hypergraph
-$\cF$. Let $S_{sm} \in \cF$ be such that it is a super-marginal
-hyperedge.  Algorithm~\ref{al:ktree-label} uses $S_{sm}$ along with
-the overlap graph $\bO(\cF)$ to calculate the feasible tree path
-labeling to the $k$-subdivded tree $T$.
 
-\begin{algorithm}[h]
-  \caption{{\tt compute-ksubtree-path-labeling($X, \cF, T$)}}
-  \label{al:ktree-label}
-  \begin{algorithmic}[\lndisplay]
-    \IF{$X = S_{sm}$}
-    \STATE -- TBD --\\
-    \ELSE
-    \STATE -- TBD --\\
-    \ENDIF
+% \noindent
+% Consider the overlap graph $\bO(\cF)$ of the given hypergraph
+% $\cF$. Let $S_{sm} \in \cF$ be such that it is a super-marginal
+% hyperedge.  Algorithm~\ref{al:ktree-label} uses $S_{sm}$ along with
+% the overlap graph $\bO(\cF)$ to calculate the feasible tree path
+% labeling to the $k$-subdivded tree $T$.
+%
+% \begin{algorithm}[h]
+%   \caption{{\tt compute-ksubtree-path-labeling($X, \cF, T$)}}
+%   \label{al:ktree-label}
+%   \begin{algorithmic}[\lndisplay]
+%     \IF{$X = S_{sm}$}
+%     \STATE -- TBD --\\
+%     \ELSE
+%     \STATE -- TBD --\\
+%     \ENDIF
+%
+%   \end{algorithmic}
+% \end{algorithm}
 
-  \end{algorithmic}
-\end{algorithm}
+
+% \subsection{temp section from nsnsr09}
+
+% \begin{algorithm}
+%   \caption{Basic step in an algorithm to find an ICPIA for a prime
+%     matrix $M'$}
+%   \label{ds-algo}
+%   ICPIA(Set $S$, Integer $p > 0$)
+
+%   \noindent
+%   /* {\tt $S \cap S^i \not = \phi$ for some $i \in \{1,\ldots,p\}$,
+%     but $S \not\subseteq S^i$, $S^i \not\subseteq S$.  \\ Assigns to
+%     $S$ an interval $I$ such that $\{I^1,\ldots,I^p,I\}$ forms an
+%     ICPIA for $\{S^1,\ldots,S^p,S\}$.} */
+%   \begin{algorithmic}
+%     \STATE Let $|S \cap S^i| = z$. \\
+%     \STATE Let $I_l$ be the interval such that $|I_l \cap I^i| = z$, $|I_l| = |S|$ and the $z$ common elements are the smallest elements of $I^i$. \\
+%     \STATE Let $I_r$ be the interval such that $|I_r \cap I^i| = z$, $|I_r| = |S|$, and the $z$ common elements are the largest elements of $I^i$. \\
+%     \IF {$p == 1$}
+%     \STATE Assign $I_l$ to $S$ \\
+%     \STATE /* {\tt In this case, $I_r$ could also be assigned to $S$.  This will yield the {\bf other} ICPIA} */\\
+%     \ELSE \IF{$|I_l \cap I^q| = |S \cap S^q|$ for each $q \in
+%       \{1,\ldots,p\}$}
+%     \STATE Assign $I_l$ to $S$ and exit.\\
+%     \ENDIF \IF{$|I_r \cap I^q| = |S \cap S^q|$ for each $q \in
+%       \{1,\ldots,p\}$}
+%     \STATE Assign $I_r$ to $S$ and exit.\\
+%     \ENDIF \ENDIF \STATE Report no ICPIA and exit.
+%   \end{algorithmic}
+% \end{algorithm}
+
+
+% \begin{theorem}
+%   Algorithm~\ref{ds-algo} outputs an ICPIA to a prime matrix $M'$
+%   iff there is an ICPIA for $M'$.
+% \end{theorem}
+% \begin{proof}
+%   The only-if part of the theorem is straightforward.  We now show
+%   that if there is an ICPIA for $M'$, then Algorithm~\ref{ds-algo}
+%   will indeed discover it.  The key fact is that in $M'$ for each
+%   set $S$, there is another set $T \in M'$ such that $S \cap T \not
+%   = \phi$, and $S$ and $T$ are not contained in each other.  Due to
+%   this fact, there are exactly two ICPIAs for $M'$.  The two
+%   distinct ICPIAs differ based on the interval assigned to $S_1$,
+%   see Algorithm ~\ref{ds-algo}.  If $I_l$ is assigned to $S_1$, then
+%   we get one, and the other ICPIA is obtained by assigning $I_r$ to
+%   $S_1$.  For each subsequent set, say $S^j$, the interval to be
+%   assigned is forced.  It is forced due to the fact that the
+%   interval assigned to $S^j$ is based on the interval assigned to
+%   $S^i$, where $S^i \cap S^j \not = \phi$, and $S^i \not\subseteq
+%   S^j$, and $S^j \not\subseteq S^i$.  Given the fact that the
+%   algorithm is an exact implementation of these observations, it
+%   follows that Algorithm~\ref{ds-algo} finds an ICPIA if there is
+%   one.
+% \end{proof}
+
+
+
 
 
 \section{ TPL with no restrictions}

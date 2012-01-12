@@ -495,29 +495,45 @@ for set systems\endnote{As seen in Section~\ref{sec:courseschedule}}.
   = \un \}$. The collection $\cF_M$ is the {\em set system of binary
     matrix} $M$.\\
   A set system $\cF$ from universe $U = \{1, 2, \ldots, n\}$ has the
-  \cop if it is possible to assign a linear order $\lambda$ to $U$
-  where each set $S \in \cF$ appears as a consecutive subsequence of
-  $\lambda$ (an interval) in the linear order.
+  {\em \cop} if it is possible to assign a linear order, \ie a
+  permutation $\sigma = u_1u_2\ldots u_n$ to $U$ \stt each set $S \in
+  \cF$ appears as a consecutive subsequence $u_{i}u_{i+1}\ldots
+  u_{i+k-1}$ (also called an interval) of $\lambda$ in the linear order, where
+  positive integers $k = |S|$ and $i \le n+1-k$.
 \end{definition}
 
 It is easy to see the equivalence of this definition to \COP for
 matrices in Definition~\ref{def:copmatrix}.
 
-Generalized \PQtree is a data structure defined in \cite{n89, mcc04} for
-arbitrary set systems. If the set system has \COP, the generalized
-\PQtree is identical to its \PQtree. We will use the notation from
-\cite{n89} and call generalized \PQtrees as \gPQtrees. 
+Generalized \PQtree or \gPQtree is a data structure defined in \cite{n89} to
+represent all orthogonal sets of a set system $\cF$. {\em Orthogonal
+  sets} of $\cF$ are sets that do not overlap with any set in $\cF$. A
+data structure with the same name was later defined in \cite{mcc04} as
+part of a {\em substitution decomposition} for a set system
+$\cF$. \tnote{define substitutio decomp.} This is later used to define
+a certificate if $\cF$ has no \COP. \PQRtree is a data structure
+defined in \cite{mm96} as a data structure to represent any set system
+$\cF$ with additional information in their $R$-nodes if $\cF$ has no
+\COP.  All three of these data structures are proposed as
+generalizations of \cite{bl76}'s \PQtree and hence produce the
+$\PQtree$ if $\cF$ has \COP. As a whole, all these three data
+strutures are near-identical with their differences being notional.
+In this section, we will discuss the basic theory that they all hold
+and stick to the name of the data structure as \PQRtree.
 
-A \gPQtree of a given set system $\cF$ from universe $U$ represents
+A \PQRtree of a given set system $\cF$ from universe $U$ represents
 all the sets from $\power{U}$ that have trivial intersections with
-every set in $\cF$. 
-
-Two sets $A$ and $B$ are said to have a trivial intersection if $A
-\cap B$ is one of the following -- $\emptyset$, $A$ or $B$. In other
-words, $A$ and $B$ are either disjoint or one is the subset of the
-other. {\em Trivial sets} are sets that have trivial intersections
-with any set in $\power{U}$. These are namely, $U$, singleton sets in
-$\power{U}$ and $\emptyset$\cite{n89, mm96}.
+every set in $\cF$.  Two sets $A$ and $B$ are said to have a {\em
+  trivial intersection} if $A \cap B$ is one of the following --
+$\emptyset$, $A$ or $B$. In other words, $A$ and $B$ are either (i)
+disjoint or (ii) one is the subset of the other. Such sets are also
+called {\em orthogonal sets} or said that $A$ is orthogonal to $B$. {\em Trivial subsets}
+of a universe $U$, denoted by $\cT(U)$, are sets that have trivial
+intersections with any set in $\power{U}$. Namely, $\cT(U)$ consists
+of $U$, singleton sets in $\power{U}$ and $\emptyset$\cite{n89, mm96}.
+In other words, the all sets presented in a \PQRtree share the
+property that they do not overlap with any set in $\cF$. We will now
+see how this helps in testing for \COP in $\cF$.
 
 An important observation made by \cite{mm96} is that if $\cF$ is a set
 system with \COP then, aside from every set in $\cF$ being consecutive
@@ -529,31 +545,33 @@ consecutive for any $A, B \in \cF$.
   \item The relative complements $A \setminus B$ and $B \setminus A$
     if $B \nsubseteq A$ and $A \nsubseteq B$ respectively.
 \end{enumerate}
+Also note that trivially, sets in $\cT(U)$ are consecutive in any
+permutation of $U$\endnote{$\emptyset$ is considered consecutive by
+  convention.}.
 
-Additionally the {\em trivial sets} of universe $U$ denoted by
-$\cT(U)$, are namely -- $U$, singleton sets and the empty set
-$\emptyset$. Clearly, $\cT(U)$ are consecutive
-in all orderings of $U$. $\emptyset$ is considered consecutive by
-convention.
-
-
-
-Overlap components are computable in linear time \cite{mm95,wlh92}.
-
-
-
-For any set system $\cF$, the smallest super set system containing
-$\cF$ and the trivial sets that is closed under the above operations
-is called the {\em weak closure} of $\cF$, denoted $\cW(\cF)$
-\cite[Def.~3.2]{mcc04} \cite[Def.~2]{mm96}.
+Any set system that is closed under the above operations and contains
+$\cT(U)$ is called {\complete} \cite{mm96} or a {\em weakly partative
+  family} \cite{mcc04}. Such a set system is easier to
+work with for reasons that will become apparent.\tnote{VAGUe!}
+For any set system $\cF$, the smallest super set system that is
+complete/weakly partative is called the {\em weak closure} of $\cF$,
+denoted $\cW(\cF)$ \cite[Def.~3.2]{mcc04}. \cite[Def.~2, smallest {\em
+  complete} supercollection]{mm96}.
 
 What is interesting is that the set of \COP permutations of $\cF$ is
-the same as that of $\cW(\cF)$. \cite[Th.~3]{mm96}
+the same as that of $\cW(\cF)$ \cite[Th.~3]{mm96}. The reason this is
+interesting is because it becomes apparent by this theory that it is
+easier to use $\cW(\cF)$ to create the $\PQRtree$ for $\cF$.
+
 
 The generalized \PQtree of $\cF$ is defined as the {\em decomposition
   tree} of its weak closure $\cW(\cF)$. Decomposition tree is the
 inclusion tree (inclusion p.o. Hasse diagram) of the strong elements
 of $\cW(\cF)$ with labels {\em prime, linear} and {\em degenerate}.\cite{mcc04}
+
+
+
+Overlap components are computable in linear time \cite{mm95,wlh92}.
 
 
 \temptext{ Certifying algorithm (Generalized PQ trees) [McC04] -- 
