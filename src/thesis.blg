@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99c (Web2C 7.5.6)
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: 001certificate.aux
 A level-1 auxiliary file: 002ack.aux
-A level-1 auxiliary file: 0021ded.aux
+A level-1 auxiliary file: 0031ded.aux
 A level-1 auxiliary file: 003abstract.aux
 A level-1 auxiliary file: 004abbrv.aux
 A level-1 auxiliary file: 005notation.aux
@@ -11,13 +11,14 @@ A level-1 auxiliary file: 010chap1.aux
 A level-1 auxiliary file: 020chap2.aux
 A level-1 auxiliary file: 030chap3.aux
 A level-1 auxiliary file: 040chap4.aux
+A level-1 auxiliary file: 050appa.aux
 The style file: alpha.bst
 Database file #1: ../lib/cop-variants__thesis.bib
 Warning--I didn't find a database entry for "lec67"
 Warning--I didn't find a database entry for "wlh02isaac92"
 You've used 67 entries,
             2543 wiz_defined-function locations,
-            965 strings with 13304 characters,
+            966 strings with 13315 characters,
 and the built_in function-call counts, 26131 in all, are:
 = -- 2679
 > -- 1175

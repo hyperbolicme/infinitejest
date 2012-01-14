@@ -111,10 +111,12 @@
 \def\singlemaltinbox{\fbox{\footnotesize\maltese}}
 \def\triplemaltinbox{\fbox{\footnotesize\maltese\maltese\maltese}}
 
-\newcommand{\power}[1]{2^{#1}}%{\cP(#1)}
+\newcommand{\power}[1]{2^{#1}}%{\cP\left(#1\right)}
 \newcommand{\defnstop}{\hfill \singlemaltinbox} 
 \newcommand{\temptext}[1]           % For public draft notes 
   {{\color{blue} \footnotesize #1}} 
+\newcommand{\supt}[1]{supp\left(#1\right)}
+
 
 \renewcommand\notesname{\hrule width 7cm \large Chapter Notes} % Redefine Endnotes section
                                 % title. 
@@ -128,44 +130,70 @@
 %%%%%%%%%%%%%%%%
 %% The following are meant to be used with amsthm
 %
-% \newtheoremstyle{defnstyle}%
-%   {9pt}{9pt}%               Space above & below
-%   {\itshape}%                       Body style
-%   {-12pt}%                  Heading indent amount
-%   {\sffamily\bfseries}{:}%  Heading font and punctuation after
-%   {\newline}% Spacing after heading
-%   {}%                       Head spec
-\newtheoremstyle{defnstyle}%  Custom theorem style.
-  {9pt}{9pt}%                 Space above & below
-  {\small}%                   Body style
+\newtheoremstyle{defnstyle}%  Custom style: Definition
+  {20pt}{20pt}%               Space above & below
+  {\thesisspacing \small} %   Body style
+    % \fontfamily{cmss}\selectfont\scriptsize % \sffamily
   {0pt}%                      Heading indent amount
-  {\normalsize\bfseries}{.}%  Heading font and
-                           %   punctuation after.
-  {0pt}%                 Spacing after heading.
+  {\fontfamily{bch}
+    \selectfont
+    \normalsize
+    \bfseries}{.}%            Heading font and punctuation after.
+  {5pt}%                      Spacing after heading.
   {\thmname{#1}\thmnumber{ #2}\thmnote{ \textbf{(#3)}}}% Head spec 
 %
-\newtheorem{theorem}{Theorem}[section] % Section relative numbering. 
-\newtheorem{lemma}[theorem]{Lemma}     % Shares counter with theorem.
-\newtheorem{corollary}[theorem]{Corollary} % Shares counter with 
-                                           %  theorem. 
+\newtheoremstyle{thmstyle}%   Custom style: Theorem, Lemma, etc.
+  {20pt}{0pt}%               Space above & below
+  {\thesisspacing \em}    %   Body style             % \sffamily
+  {0pt}%                      Heading indent amount
+  {\fontfamily{bch}
+    \selectfont
+    \normalsize
+    \bfseries 
+    \thesisspacing}{.}%       Heading font and punctuation after.
+  {5pt}%\newline%{0pt}%       Spacing after heading.
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\textbf{ (#3)}}}% Head spec 
+%
+% \newtheoremstyle{prfstyle}%   Custom style: Proof.
+%   {0pt}{20pt}%                Space above & below
+%   {\thesisspacing \em}    %   Body style             % \sffamily
+%   {0pt}%                      Heading indent amount
+%   {\normalsize
+%     \em 
+%     \thesisspacing}{.}%       Heading font and punctuation after.
+%   {5pt}%\newline%{0pt}%       Spacing after heading.
+%   {\thmname{#1}\thmnumber{ #2}\thmnote{\textbf{ (#3)}}}% Head spec 
+%
+%
 %\theoremstyle{plain}        % Standard style for theorem, lemma.
 %\theoremstyle{remark}       % Standard style.
 %\theoremstyle{definition}   % Standard style. No italics in body of
-                             %  definition  
-\theoremstyle{defnstyle}     % Apply custom style to definition.
-\newtheorem{definition}{Definition}[section] % Section relative 
+%                            %  definition  
+%
+\theoremstyle{thmstyle}                % Apply custom style
+\newtheorem{theorem}{Theorem}[section] % Section relative numbering. 
+\theoremstyle{thmstyle}                % Apply custom style
+\newtheorem{lemma}[theorem]{Lemma}     % Shares counter with theorem.
+\theoremstyle{thmstyle}                % Apply custom style
+\newtheorem{corollary}[theorem]
+  {Corollary}                          % Shares counter with theorem. 
+\theoremstyle{defnstyle}               % Apply custom style
+\newtheorem{definition}{Definition}
+  [section] % Section relative 
                                              %  numbering.
+%\newcommand{\adefnote}[1]{\textbf{ #1. }}
 \newtheorem{observation}{Observation}
 \newtheorem{proposition}[theorem]{Proposition}
 
+
 %%%%%
 %%% Package atbeginend commands to space theorem environs
-\AfterBegin{theorem}{\thesisspacing}
-\AfterBegin{lemma}{\thesisspacing}
-\AfterBegin{corollary}{\thesisspacing}
-\AfterBegin{definition}{\thesisspacing}
-\BeforeEnd{definition}{\defnstop}
-\AfterBegin{proof}{\thesisspacing}
+% \AfterBegin{theorem}{\thesisspacing}
+% \AfterBegin{lemma}{\thesisspacing}
+% \AfterBegin{corollary}{\thesisspacing}
+% \AfterBegin{definition}{\thesisspacing}
+% \BeforeEnd{definition}{\defnstop}
+% \AfterBegin{proof}{\thesisspacing}
 
 % \AfterBegin{enumerate}{    
 %   \setlength{\topsep}{0pt} 

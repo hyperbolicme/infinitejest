@@ -48,12 +48,12 @@
 \addeditor{minor}              % least priority TBDs that
                                %  need to go into thesis  
 \addeditor{pressing}           % needs attention level 1
-%                              
+                             
 
 % \usepackage{comment}         % DEBUG ONLY
 %\includeonly{020chap2}         % DEBUG ONLY 
-\includeonly{030chap3}         % DEBUG ONLY 
-%\includeonly{0021ded}         % DEBUG ONLY
+%\includeonly{030chap3,050appa}         % DEBUG ONLY 
+%\includeonly{0031ded}         % DEBUG ONLY
 
 \def \mythesissubmissiondate {13 January 2012}
 \def \mythesissubmissionmonth {\MakeUppercase {January 2012}}
@@ -64,8 +64,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title page
 %
-\title{\mythesistitleNOTSYNPOSIS} \author{\myname} \date{
-  {\mythesissubmissionmonth}}
+\title{\mythesistitleNOTSYNPOSIS \tnote{Synopsis title is ``Generalization
+  of Consecutive Ones Property of Binary Matrices''}}% 
+\author{\myname}% 
+\date{{\mythesissubmissionmonth}}%
 \department{\MakeUppercase{\mythesisdept}}
 \maketitle
 
@@ -85,7 +87,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Dedication?
 %
-\include{0021ded}
+\include{0031ded}%{0021ded}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -136,9 +138,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Appendices.
 %
-% \appendix %%% NON NEIN NAHI ILLA NONE
-% \chapter{A}
-% \newpage
+\appendix %%% NON NEIN NAHI ILLA NONE. But maybe.
+\include{050appa}
+
+%\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography.

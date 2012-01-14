@@ -86,7 +86,10 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
 %% Using setspace to do the single/double spacing.  Setspace also
 %% makes all tables and figures have single spacing automatically.
 \RequirePackage{setspace} 
-\RequirePackage{atbeginend} % To wrap/encapsule an environ
+
+% atbeginend MESSES UP A LOT OF SYNTAX.
+%\RequirePackage{atbeginend} % To wrap/encapsule an environ 
+
                             % around/inside another.
 % -EITHER- 1.5 spacing %
 % \def \thesisspace {1.5}

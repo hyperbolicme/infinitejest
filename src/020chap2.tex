@@ -13,6 +13,8 @@ some applications of \COP.
 
 \tnote[important]{ADD: have a few lines about organization of chapter}
 
+
+
 \section{\COP in Graph Theory}
 
 \COP is closely connected to several types of graphs by way of
@@ -189,6 +191,9 @@ matrices since it is known that questions~(\ref{q:testcop}) and
 Table~\ref{tab:cophistory} gives a snapshot of these results.
 
 
+    \tnote[important]{1899 by petrie -- cite
+         kendall 69 pacific journal of mathematics 1969 }
+
 \def\tabparboxw{10cm}
 \begin{table}[htbp]
   \centering
@@ -198,13 +203,13 @@ Table~\ref{tab:cophistory} gives a snapshot of these results.
     \footnotesize
     % \includegraphics[scale=0.5]{../img/cophistory.png} % TEMPORARY
 
-   \begin{tabular}[h]{lll}
+  \begin{tabular}{lll}
      \hline
      \hline
      % 
      1899 & \parbox[t]{\tabparboxw}{ First mention of \COP
-       (archaeology)} & \parbox[t]{2cm}{\temptext{by petrie -- cite
-         kendall 69 pacific journal of mathematics 1969 }}  \\ 
+       (archaeology)} & 
+       \\ % \parbox[t]{2cm}{} 
 
      \rowcolor[gray]{0.8} %
      1951 & \parbox[t]{\tabparboxw}{ Heuristics for COT} & \cite{wsr51} \\
@@ -268,12 +273,13 @@ matrix\endnote{
   Definition~\ref{def:graphmatrices}~\ref{def::maxcliquematrix}} must
 have \COP on rows.
 
-A few years later, a deeply significant result based on very
-different ideas in understanding \COP came from Tucker which gave a
+A few years later, a deeply significant result based on very different
+ideas in understanding \COP came from Tucker which gave a
 combinatorial (negative) characterization of matrices with COP
 \cite{at72}. This result influenced most of the \COP results that
-followed in the literature \annote[pressing]{including linear time
-  algorithms}{did it? which ones?} for \COP recognition.
+followed in the literature including linear time
+algorithms\tnote[pressing]{linear? did it? which ones?} for \COP
+recognition.
 
 
 %\clearpage
@@ -395,7 +401,7 @@ interesting to note that aside from interval graph recognition and
 finding planar embeddings of planar graphs \cite{lec67,mcc04} and
 recognizing \CROP in a matrix.
 
-\begin{definition}[\emph{\PQtree \cite{bl76, mcc04}}]\\
+\begin{definition}[\PQtree \cite{bl76, mcc04}]
   A \PQtree of matrix $M$ with \COP on columns (rows), is a tree with the following properties.
   \begin{enumerate}[i.]
     \singlespacing
@@ -527,13 +533,14 @@ every set in $\cF$.  Two sets $A$ and $B$ are said to have a {\em
   trivial intersection} if $A \cap B$ is one of the following --
 $\emptyset$, $A$ or $B$. In other words, $A$ and $B$ are either (i)
 disjoint or (ii) one is the subset of the other. Such sets are also
-called {\em orthogonal sets} or said that $A$ is orthogonal to $B$. {\em Trivial subsets}
-of a universe $U$, denoted by $\cT(U)$, are sets that have trivial
-intersections with any set in $\power{U}$. Namely, $\cT(U)$ consists
-of $U$, singleton sets in $\power{U}$ and $\emptyset$\cite{n89, mm96}.
-In other words, the all sets presented in a \PQRtree share the
-property that they do not overlap with any set in $\cF$. We will now
-see how this helps in testing for \COP in $\cF$.
+called {\em orthogonal sets} or said that $A$ is orthogonal to
+$B$. {\em Trivial subsets} of a universe $U$, denoted by $\cT(U)$, are
+sets that have trivial intersections with any set in
+$\power{U}$. Namely, $\cT(U)$ consists of $U$, singleton sets in
+$\power{U}$ and $\emptyset$\cite{n89, mm96}.  In other words, the all
+sets presented in a \PQRtree share the property that they do not
+overlap with any set in $\cF$. We will now see how this helps in
+testing for \COP in $\cF$.
 
 An important observation made by \cite{mm96} is that if $\cF$ is a set
 system with \COP then, aside from every set in $\cF$ being consecutive
@@ -550,7 +557,7 @@ permutation of $U$\endnote{$\emptyset$ is considered consecutive by
   convention.}.
 
 Any set system that is closed under the above operations and contains
-$\cT(U)$ is called {\complete} \cite{mm96} or a {\em weakly partative
+$\cT(U)$ is called {\em complete} \cite{mm96} or a {\em weakly partative
   family} \cite{mcc04}. Such a set system is easier to
 work with for reasons that will become apparent.\tnote{VAGUe!}
 For any set system $\cF$, the smallest super set system that is

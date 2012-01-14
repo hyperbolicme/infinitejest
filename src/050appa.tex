@@ -1,0 +1,39 @@
+\chapter{More proofs \tnote{remove/modify}}
+\begin{lemma}
+  \label{lem:fourpaths} Consider four paths in a tree $Q_1, Q_2, Q_3,
+  Q_4$ such that they have nonempty pairwise intersection and $Q_1,
+  Q_2$ share a leaf. Then there exists distinct $i, j, k \in
+  \{1,2,3,4\}$ such that, $Q_1 \cap Q_2 \cap Q_3 \cap Q_4 = Q_i \cap
+  Q_j \cap Q_k$.
+\end{lemma}
+\begin{proof}\thesisspacing
+  {\em Case 1:} w.l.o.g, consider $Q_3 \cap Q_4$ and let us call it
+  $Q$. This is clearly a path (intersection of two paths is a path).
+  % Since $Q_1, Q_2$ share a leaf, the following are paths $Q_1
+  % \setminus Q_2$, $Q_2 \setminus Q_1$, $Q_1 \cap Q_2$ and they are
+  % mutually disjoint.
+  Suppose $Q$ does not intersect with $Q_1 \setminus Q_2$, i.e. $Q
+  \cap (Q_1 \setminus Q_2) = \O$. Then $Q \cap Q_1 \cap Q_2 = Q \cap
+  Q_2$. Similarly, if $Q \cap (Q_2 \setminus Q_1) = \O$, $Q \cap Q_1
+  \cap Q_2 = Q \cap Q_1$. Thus it is clear that if the intersection of
+  any two paths does not intersect with any of the set differences of
+  the remaining two paths, the claim in the lemma is true.
+  % Note that $Q_1 \setminus Q_2$ and $Q_2
+  % \setminus Q_1$ are paths because $Q_1, Q_2$ share a leaf.\\
+  {\em Case 2:} Let us consider the compliment of the previous
+  case. i.e. the intersection of any two paths intersects with both
+  the set differences of the other two. First let us consider $Q \cap
+  (Q_1 \setminus Q_2) \ne \O$ and $Q \cap (Q_1 \setminus Q_2) \ne \O$,
+  where $Q = Q_3 \cap Q_4$. Since $Q_1$ and $Q_2$ share a leaf, there
+  is exactly one vertex at which they branch off from the path $Q_1
+  \cap Q_2$ into two paths $Q_1 \setminus Q_2$ and $Q_2 \setminus
+  Q_1$. Let this vertex be $v$. It is clear that if path $Q_3 \cap
+  Q_4$, must intersect with paths $Q_1 \setminus Q_2$ and $Q_2
+  \setminus Q_1$, it must contain $v$ since these are paths from a
+  tree. Moreover, $Q_3 \cap Q_4$ intersects with $Q_1 \cap Q_2$ at
+  exactly $v$ and only at $v$ which means that $Q_1 \cap Q_2$ does not
+  intersect with $Q_3 \setminus Q_4$ or $Q_4 \setminus Q_3$ which
+  contradicts initial condition of this case. Thus this
+  case cannot occur and case 1 is the only possible scenario. \\
+  Thus lemma is proven %\qed
+\end{proof}
