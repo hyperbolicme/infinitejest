@@ -27,10 +27,6 @@ ways. While adjacency matrix is perhaps the most commonly used such
 matrix, Definition~\ref{def:graphmatrices} defines this and a few
 more.
 
-
-
-% \begin{definition}{\emph{Matrices that define
-%       graphs.\cite[Def.~2.4]{d08phd}}} %
 \begin{definition}
   {\em Matrices that define graphs. \cite[Def.~2.4]{d08phd}.}  
   \label{def:graphmatrices} 
@@ -76,17 +72,17 @@ classes that is related to \COP or \CROP.\\
     to intervals on the real line \stt two vertices are adjacent \iff
     their corresponding intervals overlap \tnote{cite Ben59, Haj57}.
     $G$ is an interval graph \iff its maximal clique matrix has COP
-    \cite{fg65}\endnote{This follows \cite{gh64} which states that the
+    \cite{fg65}\footnote{This follows \cite{gh64} which states that the
       maximal cliques of interval graph $G$ can be linearly ordered
       \stt for all $v \in V(G)$, cliques containing $v$ are
       consecutive in the ordering \cite[Th. 8.1]{mcg04}.}
     \begin{enumerate}[a.]
     \item $G$ is a \emph{unit interval graph} if it is an interval
-      graph \stt all intervals have the same length.\endnotemark[2]
+      graph \stt all intervals have the same length.\footnotemark[2]
     \item $G$ is a \emph{proper interval graph} if it is an interval
-      graph \stt no interval properly contains another.\endnote{The
+      graph \stt no interval properly contains another.\footnote{The
         set of unit interval graphs and the set of proper interval
-        graphs are the same} \tnote{cite {rob69,gar07} in endnote. pg
+        graphs are the same} \tnote{cite {rob69,gar07} in footnote. pg
         33 dom}
     \end{enumerate}
  \item $G$ is a \emph{circular-arc graph} if its vertices can be
@@ -104,7 +100,7 @@ classes that is related to \COP or \CROP.\\
   \end{enumerate}
 \end{definition}
 
-Interval graphs\endnote { \cite{mcc04} cites that the problem of
+Interval graphs\footnote{\cite{mcc04} cites that the problem of
   recognizing interval graphs has significance in molecular
   biology. Interestingly, in the late 1950s, before the structure of
   DNA was well-understood, Seymour Benzer was able to show that the
@@ -112,37 +108,38 @@ Interval graphs\endnote { \cite{mcc04} cites that the problem of
   material was an interval graph \cite{sb59}. This was regarded as
   compelling evidence that genetic information was somehow arranged
   inside a structure that had a linear topology which we now know to
-  be true\tnote{linear arrangement of DNA/genes?}.} and circular-arc
-graphs have a long history in research.  The interest around them is
-due to their very desirable property that several problems that are
-NP-hard \tnote[minor]{all NPC problems are NPH yes?} on general
-graphs, like finding a maximum clique or minimum coloring or
-independent set, are polynomial time solvable in these graph classes
-\cite{clrs01}.
-In a similar fashion, a lot of problems that are hard on general
-matrices have efficient solutions on matrices with \COP or \CROP
-\cite[more citations pg.\,33]{d08phd}.
+  be true from the discovery of linear structure of DNA.}and
+circular-arc graphs have a long history in research.  The interest
+around them is due to their very desirable property that several
+problems that are NP-hard \tnote[minor]{all NPC problems are NPH yes?}
+on general graphs, like finding a maximum clique or minimum coloring
+or independent set, are polynomial time solvable in these graph
+classes \cite{clrs01}.  In a similar fashion, a lot of problems that
+are hard on general matrices have efficient solutions on matrices with
+\COP or \CROP \cite[more citations pg.\,33]{d08phd}.
 
 Table~\ref{tab:graphmatrices} summarises the way these graphs are
 characterized by their matrices having \COP or \CROP.
 Our focus in this chapter (and thesis) is mainly \COP and 
 having seen how useful \COP is in identifying or characterizing many
-types of graphs\endnote{\COP has several other applications
-  \tnote{fill up.}}, we will now see results that study recognition of \COP
+types of graphs\footnote{\COP has several other applications
+  \temptext{fill up.}}, we will now see results that study recognition of \COP
 in matrices in the following section.
-
-
 
 \temptext{ tab~\ref{tab:graphmatrices} -  have an abridged version
   of table 2.1 in dom. see notes for the possibility of a
   ``circle diagram''.} 
 \begin{table}[htbp]
   \centering
+% \includegraphics[scale=0.1]{../img/circlediagram_domtab2.1__2.png} %
  \caption{\figtabsize Graph matrices \temptext{PLACEHOLDER}}
   \label{tab:graphmatrices}
 \end{table}
 
-%\clearpage      % Print pending floats
+
+
+
+
 
 \section{Matrices with COP}
 \label{sec:surveycoptest}
@@ -182,7 +179,7 @@ in Section~\ref{sec:surveycertalgo}.
 
 It may be noted that one way to design an algorithm to test for \COP
 is by deriving one from any interval graph recognition algorithm using the
-result {\sc hmpv00}\tnote{cite hmpv00} \tnote{in endnote put the theorem 2.7 - dom
+result {\sc hmpv00}\tnote{cite hmpv00} \tnote{in footnote put the theorem 2.7 - dom
   pg 43} \cite{d08phd} which demonstrates how such a derivation can be
 done. However, this does not necessarily yield an efficient
 algorithm. We will see results that directly solve the problem on
@@ -190,75 +187,72 @@ matrices since it is known that questions~(\ref{q:testcop}) and
 (\ref{q:copperm}) stated above for \COP are efficiently solvable.
 Table~\ref{tab:cophistory} gives a snapshot of these results.
 
-
-    \tnote[important]{1899 by petrie -- cite
+\tnote[important]{1899 by petrie -- cite
          kendall 69 pacific journal of mathematics 1969 }
 
 \def\tabparboxw{10cm}
 \begin{table}[htbp]
   \centering
   {
-    \fontencoding{OT1}\fontfamily     {cmss}\selectfont
-    % \sffamily
-    \footnotesize
-    % \includegraphics[scale=0.5]{../img/cophistory.png} % TEMPORARY
+    \fontencoding{OT1}\fontfamily{cmss}\selectfont%
+    \footnotesize%
 
-  \begin{tabular}{lll}
-     \hline
-     \hline
-     % 
-     1899 & \parbox[t]{\tabparboxw}{ First mention of \COP
-       (archaeology)} & 
-       \\ % \parbox[t]{2cm}{} 
+    \begin{tabular}{lll}
+      \hline
+      \hline
 
-     \rowcolor[gray]{0.8} %
-     1951 & \parbox[t]{\tabparboxw}{ Heuristics for COT} & \cite{wsr51} \\
+      1899 & \parbox[t]{\tabparboxw}{ First mention of \COP
+        (archaeology)} &                  \\
 
-     1965 & \parbox[t]{\tabparboxw}{ First polynomial time algorithm
-       for \COP testing} & \cite{fg65} \\ 
+      \rowcolor[gray]{0.8} %
+      1951 & \parbox[t]{\tabparboxw}{ Heuristics for COT} & \cite{wsr51} \\
 
-     \rowcolor[gray]{0.8} %
-     1972 & \parbox[t]{\tabparboxw}{ Characterization for \COP -- forbidden
-       submatrices} &
-     \cite{at72} \\
+      1965 & \parbox[t]{\tabparboxw}{ First polynomial time algorithm
+        for \COP testing} & \cite{fg65} \\ 
 
-     1976 & \parbox[t]{\tabparboxw}{ First linear time algorithm for COT --
-       \PQtree} &
-     \cite{bl76} \\
+      \rowcolor[gray]{0.8} %
+      1972 & \parbox[t]{\tabparboxw}{ Characterization for \COP -- forbidden
+        submatrices} &
+      \cite{at72} \\
 
-     \rowcolor[gray]{0.8} %
-     1992 & \parbox[t]{\tabparboxw}{ Linear
-       time algorithm COT without \PQtree} & \cite{wlh02}\endnote{First
-       published in \cite{wlh02isaac92}} \\
+      1976 & \parbox[t]{\tabparboxw}{ First linear time algorithm for COT --
+        \PQtree} &
+      \cite{bl76} \\
 
-     2001 & \parbox[t]{\tabparboxw}{\PCtree\ -- a simplification of
-       \PQtree} & \cite{wlh01,hm03} \\  
+      \rowcolor[gray]{0.8} %
+      1992 & \parbox[t]{\tabparboxw}{ Linear
+        time algorithm COT without \PQtree} & \cite{wlh02}%\footnote{First
+      % published in \cite{wlh02isaac92}}
+      \\
 
-     \rowcolor[gray]{0.8} %     
-     1996 & \parbox[t]{\tabparboxw}{\PQRtree\ -- generalization of
-       \PQtree for any binary matrix regardless of its \COP status} &
-     \cite{mm96} \\ 
+      2001 & \parbox[t]{\tabparboxw}{\PCtree\ -- a simplification of
+        \PQtree} & \cite{wlh01,hm03} \\  
 
-     1998 & \parbox[t]{\tabparboxw}{ Almost linear time to construct
-       \PQRtree} & \cite{mpt98} \\ 
+      \rowcolor[gray]{0.8} %     
+      1996 & \parbox[t]{\tabparboxw}{\PQRtree\ -- generalization of
+        \PQtree for any binary matrix regardless of its \COP status} &
+      \cite{mm96} \\ 
 
-     \rowcolor[gray]{0.8} %
-     2004 & \parbox[t]{\tabparboxw}{ A certifying algorithm for no
-       \COP.\\ Generalized \PQtree.} & \cite{mcc04} \\ 
+      1998 & \parbox[t]{\tabparboxw}{ Almost linear time to construct
+        \PQRtree} & \cite{mpt98} \\ 
 
-     2009 & \parbox[t]{\tabparboxw}{ Set theoretic, cardinality based
-       characterization of \COP\ -- ICPIA} & \cite{nsnrs09} \\ 
+      \rowcolor[gray]{0.8} %
+      2004 & \parbox[t]{\tabparboxw}{ A certifying algorithm for no
+        \COP.\\ Generalized \PQtree.} & \cite{mcc04} \\ 
 
-     \rowcolor[gray]{0.8} %
-     2010 & \parbox[t]{\tabparboxw}{ Logspace \COP testing} &
-     \cite{kklv10}\\ 
-     \hline
-     \hline
-   \end{tabular}
- }
- \caption[\figtabsize A brief history of \COP research]{\figtabsize A
-   brief history of \COP research }
- \label{tab:cophistory}
+      2009 & \parbox[t]{\tabparboxw}{ Set theoretic, cardinality based
+        characterization of \COP\ -- ICPIA} & \cite{nsnrs09} \\ 
+
+      \rowcolor[gray]{0.8} %
+      2010 & \parbox[t]{\tabparboxw}{ Logspace \COP testing} &
+      \cite{kklv10}\\ 
+      \hline
+      \hline
+    \end{tabular}
+  }
+\caption[\figtabsize A brief history of \COP research]{\figtabsize A
+  brief history of \COP research }
+\label{tab:cophistory}
 \end{table}
 
 
@@ -269,7 +263,7 @@ interval graphs by \cite{gh64}. A graph $G$ is an interval graph \iff
 all its maximal cliques can be linearly ordered \stt for any vertex
 $v$ in $G$, all the cliques that $v$ is incident on are consecutive in
 this order. Clearly, this means that the maximal clique incidence
-matrix\endnote{
+matrix\footnote{
   Definition~\ref{def:graphmatrices}~\ref{def::maxcliquematrix}} must
 have \COP on rows.
 
@@ -282,7 +276,6 @@ algorithms\tnote[pressing]{linear? did it? which ones?} for \COP
 recognition.
 
 
-%\clearpage
 \subsection{Tucker's forbidden submatrices for \COP}
 
 % \change{While it is remarkable that the first polynomial time
@@ -294,7 +287,7 @@ recognition.
 % characterization of matrices with COP \cite{at72}.
 
 \cite{at72} discovered certain forbidden structures for convex
-bipartite graphs\endnote{The terminology in \cite{at72} differs. It
+bipartite graphs\footnote{The terminology in \cite{at72} differs. It
   uses the term {\em graphs with $V_1$-consecutive arragement} instead
   of {\em convex bipartite graphs}.} and by definition of this graph
 class, this translates to a set of forbidden submatrices for matrices
@@ -303,12 +296,12 @@ acheived this characterization.
 
 
 Theorem~\ref{th:tuckeratfree} states that convex bipartite graphs
-cannot have {\em asteroidal triples}\endnote{If $G = (V,E)$ is a
+cannot have {\em asteroidal triples}\footnote{If $G = (V,E)$ is a
   graph, a set of three vertices from $V$ form an {\em asteroidal
     triple} if between any two of them there exists a path in $G$ that
   does not contain any vertex from the closed neighborhood of the
   third vertex.} contained in the corresponding vertex
-partition\endnote{The partition corresponds to columns (rows) if its
+partition\footnote{The partition corresponds to columns (rows) if its
   half adjacency matrix has \COP columns (rows).}.
 Theorem~\ref{th:tuckerforbidden} lists the structures in a
 bipartite graph that force one of its vertex partitions to have
@@ -319,7 +312,7 @@ prevent the graph from being convex bipartite.
 \begin{theorem}
   (\cite[Th.~6]{at72}, \cite[Th.~2.3]{d08phd})\\
   A bipartite graph $G = (V_1, V_2, E)$ is convex bipartite on
-  columns\endnote{Abridged to match terminology adopted in this
+  columns\footnote{Abridged to match terminology adopted in this
     document. See previous note.} \iff $V_1$ contains no asteroidal
   triple of $G$.
   \label{th:tuckeratfree}
@@ -358,12 +351,105 @@ $M_{I_k}$, $M_{II_k}$, $M_{III_k}$ (with $k \ge 1$), $M_{IV}$,
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[scale=0.35]{../img/tuckersforbiddensubmatrices.png}  
+%  \includegraphics[scale=0.35]{../img/tuckersforbiddensubmatrices.png}  
+  \setlength\dashlinedash{1pt} %
+  \setlength\dashlinegap{0pt}  %  Make non zero if cline can be done
+                               %   with dashed lines.
+  \singlespacing
+  \begin{tabular}[h]{ll}
+%   \small 
+   \begin{tabular}[t]{|lll ll l|l} %                   MATRIX 1
+      \multicolumn{7}{l}{\normalsize \hspace{-0.5in} $M_{I_k}, k \ge 1$}              \\   
+      \multicolumn{6}{c}{\matrixbracetop{3.25}{$k+2$}}   \\
+      \cline{1-6} % \firsthline %      Begin matrix  %%%%%%
+      \un & \un & 0   & \multicolumn{2}{c}{\dots}  & 0    &
+        \hspace{-0.1in}\multirow{5}{*}{\matrixbraceright{2.5}{$k+2$}}   \\    
+      0   & \un & \un & 0 & ...& 0   \\
+      \multicolumn{6}{|c|}{\dots}                        \\
+      0   & \multicolumn{2}{c}{\dots}  & 0   & \un & \un \\
+      \cline{1-6} % \hdashline %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      \un & 0   & \multicolumn{2}{c}{\dots}  & 0   & \un \\
+      \cline{1-6} % \lasthline %      End matrix  %%%%%%%%%
+    \end{tabular}
+    &%
+%    \small
+    \begin{tabular}[t]{|lll ll ll|l} %                   MATRIX 2
+      \multicolumn{8}{l}{\normalsize \hspace{-0.5in}$M_{II_k}, k \ge 1$}                   \\
+      \multicolumn{7}{c}{\matrixbracetop{3.8}{$k+3$}}            \\ 
+      \cline{1-7}%  \firsthline %      Begin matrix  %%%%%%%%%%%%
+      \un & \un & 0   & \multicolumn{3}{c:}{\dots}       & 0    &
+        \hspace{-0.1in}\multirow{6}{*}{\matrixbraceright{3}{$k+3$}}         \\
+      0   & \un & \un & 0 & \multicolumn{2}{c:}{\dots}   & 0   \\ 
+      \multicolumn{6}{|c:}{\dots}                        &     \\
+      0   & \multicolumn{2}{c}{\dots}  & 0   & \un              &
+        \multicolumn{1}{l:}{\un} & 0                           \\
+      \cline{1-6}    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      0   & \un & \multicolumn{4}{c}{\dots}              & \un \\
+      \un & \multicolumn{3}{c}{\dots}        & \un & 0   & \un \\
+      \cline{1-7}% \lasthline %      End matrix  %%%%%%%%%%%%%%%%
+    \end{tabular}
+    \\\\%
+%    \small
+    \begin{tabular}[t]{|lll ll l l|l} %                  MATRIX 3 
+      \multicolumn{8}{l}{\normalsize \hspace{-0.5in}$M_{III_k}, k \ge 1$}                  \\
+      \multicolumn{7}{c}{\matrixbracetop{3.8}{$k+3$}}            \\
+      \cline{1-7}%      \firsthline %      Begin matrix %%%%%%%%%
+      \un & \un & 0   & \multicolumn{3}{c:}{\dots}       & 0    &
+        \hspace{-0.1in}\multirow{5}{*}{\matrixbraceright{2.5}{$k+2$}}         \\
+      0   & \un & \un & 0 & \multicolumn{2}{c:}{\dots}   & 0   \\ 
+      \multicolumn{6}{|c:}{\dots}                        &     \\
+      0   & \multicolumn{2}{c}{\dots}  & 0   & \un              &
+        \multicolumn{1}{l:}{\un}                         & 0   \\
+      \cline{1-6}    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      0   & \un & \multicolumn{2}{c}{\dots}  & \un & 0   & \un \\
+      \cline{1-7}%      \lasthline %      End matrix %%%%%%%%%%%%
+    \end{tabular}
+    &%
+%    \small
+    \begin{tabular}[t]{|llllll|}  %                     MATRIX 4
+      \multicolumn{6}{l}{\normalsize \hspace{-0.5in}$M_{IV}$} \\
+      \multicolumn{6}{l}{} \\
+      \firsthline
+      \un & \un & 0 & 0 & 0 & 0   \\
+      0 & 0 & \un & \un & 0 & 0   \\
+      0 & 0 & 0 & 0 & \un & \un   \\
+      \un & 0 & \un & 0 & \un & 0 \\
+      \lasthline
+    \end{tabular}
+    \\\\%
+%    \small
+    \begin{tabular}[t]{|lllll|}  %                     MATRIX 5
+      \multicolumn{5}{l}{\normalsize \hspace{-0.5in}$M_{V}$} \\
+      \multicolumn{5}{l}{} \\
+      \firsthline
+      \un & \un & 0   & 0   & 0   \\
+      0   & 0   & \un & \un & 0   \\
+      \un & \un & \un & \un & 0   \\
+      \un & 0   & \un & 0   & \un \\
+      \lasthline
+    \end{tabular}
+  \end{tabular}
+
+    
+
+
+
   \caption[\figtabsize Tucker's forbidden submatrices]{\figtabsize Tucker's
-    forbidden submatrices for convex bipartite graphs. \temptext{ PLACEHOLDER
-    IMG }} 
+    forbidden submatrices for convex bipartite graphs. \cite{at72}} 
   \label{fig:forbiddensubmatrices}
 \end{figure}
+ 
+
+
+
+
+
+
+
+
+
+
+
 
 It can be verified that the matrices in
 Figure~\ref{fig:forbiddensubmatrices} are the half adjacency matrices
@@ -371,16 +457,16 @@ of the graphs in Figure~\ref{fig:forbiddensubgraphs} respectively
 which is not surprising due to
 Definition~\ref{def:graphwithcop}~\ref{def::convexbi}.
 
-%\clearpage
 \subsection{Booth and Lueker's $PQ$ tree -- a linear COT algorithm}
 
 Booth and Lueker in their paper \cite{bl76} gave the first linear
-algorithm\endnote{Time complexity is $O\left(m+n+f\right)$ where $m
-  \times n$ is the order of the input matrix and $f$ is the number of $\un$s in it.} for \cop testing while given a linear time interval graph
-recognition algorithm by a simplification of \tnote{cite - A. Lempel,
-  S. Even and I. Cederbaum, An Algorithm for Planarity Testing of
-  Graphs, Theory of Graphs, ed., P. Rosenstiehl, Gordon and Breach,
-  New York, (1967), 215-232.  }'s planarity test algorithm.
+algorithm\footnote{Time complexity is $O\left(m+n+f\right)$ where $m
+  \times n$ is the order of the input matrix and $f$ is the number of
+  $\un$s in it.} for \cop testing while given a linear time interval
+graph recognition algorithm by a simplification of \tnote{cite -
+  A. Lempel, S. Even and I. Cederbaum, An Algorithm for Planarity
+  Testing of Graphs, Theory of Graphs, ed., P. Rosenstiehl, Gordon and
+  Breach, New York, (1967), 215-232.  }'s planarity test algorithm.
 % Hsu in wlh01 said BL76 gave a planarity test - "the induced PQ-tree
 % algorithm can considerably simplify Booth and Lueker’s modification
 % of Lempel, Even and Cederbaum’s planarity test. " 
@@ -401,12 +487,14 @@ interesting to note that aside from interval graph recognition and
 finding planar embeddings of planar graphs \cite{lec67,mcc04} and
 recognizing \CROP in a matrix.
 
+%\begin{minipage}[h]{5.5in}
 \begin{definition}[\PQtree \cite{bl76, mcc04}]
-  A \PQtree of matrix $M$ with \COP on columns (rows), is a tree with the following properties.
+  A \PQtree of matrix $M$ with \COP on columns (rows), is a tree with
+  the following properties.
   \begin{enumerate}[i.]
     \singlespacing
   \item Each leaf uniquely represents a row (column) of $M$. The leaf
-    order of the tree gives a \COP order for column (row)\endnote{Note
+    order of the tree gives a \COP order for column (row)\footnote{Note
       that \COP order for column requires permutation of rows and vice
       versa.} for $M$.
   \item Every non-leaf node in the tree is labeled $P$ or $Q$.
@@ -419,6 +507,7 @@ recognizing \CROP in a matrix.
   \end{enumerate}
   \label{def:pqtree}
 \end{definition}
+%\end{minipage}
 
 See Figure~\ref{fig:pqtree} for an example of \PQtree. It may be noted
 that there is no way an empty set of \COP orderings can be represented
@@ -477,7 +566,8 @@ variations.
 % build PQR trees.
 
 
-%\section{Certifying Algorithms}
+
+
 \subsection{\PQRtree\ --  COP for set systems}
 \label{sec:surveycertalgo}
 
@@ -488,12 +578,12 @@ has \un s. Thus the collection of sets corresponding each column of
 the matrix forms a set system with universe as the set of all row
 indices of the matrix.  This simple construction is formally described
 in Definition~\ref{def:matrixsetsystem} along with the idea of \cop
-for set systems\endnote{As seen in Section~\ref{sec:courseschedule}}.
+for set systems\footnote{As seen in Section~\ref{sec:courseschedule}}.
 
 \begin{definition}%
-  \label{def:matrixsetsystem}%
+  \label{def:matrixsetsystem}{\emph{\Cop for set systems}}%
   % [\emph{Set system of a binary matrix}.]
-  [\emph{\Cop for set systems}.]  Let $M$ be a binary matrix of order
+   Let $M$ be a binary matrix of order
   $n \times m$ % , $r_i, i \in [n]$ be the rows in $M$
   and $\{c_i \mid i \in [m]\}$ be the columns in $M$. A set system
   $\cF_{M} = \{S_i \mid S_i \subseteq [n], i \in [m]\}$ is defined
@@ -522,7 +612,7 @@ defined in \cite{mm96} as a data structure to represent any set system
 $\cF$ with additional information in their $R$-nodes if $\cF$ has no
 \COP.  All three of these data structures are proposed as
 generalizations of \cite{bl76}'s \PQtree and hence produce the
-$\PQtree$ if $\cF$ has \COP. As a whole, all these three data
+\PQtree if $\cF$ has \COP. As a whole, all these three data
 strutures are near-identical with their differences being notional.
 In this section, we will discuss the basic theory that they all hold
 and stick to the name of the data structure as \PQRtree.
@@ -553,7 +643,7 @@ consecutive for any $A, B \in \cF$.
     if $B \nsubseteq A$ and $A \nsubseteq B$ respectively.
 \end{enumerate}
 Also note that trivially, sets in $\cT(U)$ are consecutive in any
-permutation of $U$\endnote{$\emptyset$ is considered consecutive by
+permutation of $U$\footnote{$\emptyset$ is considered consecutive by
   convention.}.
 
 Any set system that is closed under the above operations and contains
@@ -692,17 +782,11 @@ much simplified procedure.
 % induced PQ-tree algorithm can considerably simplify Booth and Lueker’s
 % modification of Lempel, Even and Cederbaum’s planarity test.
 
+% \tnote[FYI]{ The results in cite~{bl76} on COT are based on the
+%    result that interval graphs are AT-free chordal graphs cite~{lb62}?
+%  No they don't seem related. this is the stupid bl lb confusion.}%
 
 
-\tnote[FYI]{ The results in cite~{bl76} on COT are based on the
-   result that interval graphs are AT-free chordal graphs cite~{lb62}?
- No they don't seem related. this is the stupid bl lb confusion.}%
-
-
-%\clearpage      % Print pending floats
-% \section{COP in Relational Database Model}
-% \label{sec:surveyrdbm}
-% \tnote{Expand on sec:apprdbm} \tnote{(set systems theme)}
 \section{Optimization problems in COP}
 \label{sec:surveycopopt}
 \tnote{Expand on ref:sec:optcop}
@@ -814,6 +898,22 @@ Hamiltonian path problem.\tnote{Theorem 2.1 in jkckv} \tnote{(1) A
 The survey from kklv10 conclusion.
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 % \section{Other applications}
 % {\tt If any. \tnote{ where should this go?}: (1) cite|jlm97 (application of PQ
 %   trees in graphics). (2) helly's theorem citation
@@ -822,7 +922,7 @@ The survey from kklv10 conclusion.
 
 
 
-\theendnotes\tnote{remove if none.} 
+%\theendnotes\tnote{remove if none.} 
 
 
 

@@ -1,9 +1,9 @@
 \contentsline {chapter}{ACKNOWLEDGEMENTS}{i}{chapter*.1}
 \contentsline {chapter}{ABSTRACT}{iii}{chapter*.2}
-\contentsline {chapter}{LIST OF TABLES}{vi}{chapter*.4}
-\contentsline {chapter}{LIST OF FIGURES}{vii}{chapter*.5}
-\contentsline {chapter}{ABBREVIATIONS}{viii}{chapter*.6}
-\contentsline {chapter}{NOTATION}{ix}{chapter*.7}
+\contentsline {chapter}{LIST OF TABLES}{vi}{chapter*.2}
+\contentsline {chapter}{LIST OF FIGURES}{vii}{chapter*.3}
+\contentsline {chapter}{ABBREVIATIONS}{vii}{chapter*.6}
+\contentsline {chapter}{NOTATION}{viii}{chapter*.7}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Organization of the document}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Illustration of the problem}{1}{section.1.2}
@@ -18,12 +18,12 @@
 \contentsline {chapter}{\numberline {2}Consecutive-ones Property\xspace \tmspace +\thinmuskip {.1667em}-- A Survey of Important Results}{14}{chapter.2}
 \contentsline {section}{\numberline {2.1}COP\xspace in Graph Theory}{14}{section.2.1}
 \contentsline {section}{\numberline {2.2}Matrices with COP}{17}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Tucker's forbidden submatrices for COP\xspace }{18}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Booth and Lueker's $PQ$ tree -- a linear COT algorithm}{20}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}$PQR$-tree\xspace \ -- COP for set systems}{22}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}$PC$-tree\xspace -- a generalization of $PQ$-tree\xspace }{24}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}Optimization problems in COP}{25}{section.2.3}
-\contentsline {section}{\numberline {2.4}COP in Graph Isomorphism}{26}{section.2.4}
+\contentsline {subsection}{\numberline {2.2.1}Tucker's forbidden submatrices for COP\xspace }{19}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Booth and Lueker's $PQ$ tree -- a linear COT algorithm}{21}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}$PQR$-tree\xspace \ -- COP for set systems}{23}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}$PC$-tree\xspace -- a generalization of $PQ$-tree\xspace }{25}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Optimization problems in COP}{27}{section.2.3}
+\contentsline {section}{\numberline {2.4}COP in Graph Isomorphism}{28}{section.2.4}
 \contentsline {chapter}{\numberline {3}Tree Path Labeling of Path Hypergraphs - the New Results}{28}{chapter.3}
 \contentsline {section}{\numberline {3.1}Summary of Proposed Problems}{28}{section.3.1}
 \contentsline {section}{\numberline {3.2}Preliminaries to new results}{30}{section.3.2}
@@ -39,4 +39,4 @@
 \contentsline {subsection}{\numberline {3.6.1}Consecutive Ones Testing is in Logspace}{52}{subsection.3.6.1}
 \contentsline {chapter}{\numberline {4}Conclusion}{55}{chapter.4}
 \contentsline {chapter}{\numberline {A}More proofs \tnote {remove/modify}}{57}{appendix.A}
-\contentsline {chapter}{REFERENCES \tnote [minor]{(i)make names in bib file uniform style w.r.t. firstname/initials (ii) have back refs - i.e. pages that cite the item.}}{58}{theorem.A.0.4}
+\contentsline {chapter}{REFERENCES \tnote [minor]{(i)make names in bib file uniform style w.r.t. firstname/initials (ii) have back refs - i.e. pages that cite the item.}}{58}{changenumber.28.1}

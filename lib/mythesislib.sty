@@ -8,6 +8,9 @@
 \ProvidesPackage{mythesislib} [2011/12/21]
 
 %\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathreplacing,backgrounds,positioning,fit,petri}
+
 \usepackage{amsmath}           % Easier math formulae, align,
                                %  subequations \ldots .
 \usepackage{amsthm}            % For theorem, lemma etc. (headed list)
@@ -16,6 +19,8 @@
 \usepackage{xspace}            % For smart spaceing in \def strings.
 %\usepackage{array}
 \usepackage{colortbl}
+\usepackage{array,arydshln}
+\usepackage{multirow}
 %\usepackage{fancybox}          % For oval boxes, shadowed etc.
 %\usepackage{picinpar}
 
@@ -117,6 +122,26 @@
   {{\color{blue} \footnotesize #1}} 
 \newcommand{\supt}[1]{supp\left(#1\right)}
 
+\definecolor{gray6}{rgb}{0.6,0.6,0.6}
+\newcommand\matrixbraceright[2]{ % Input is length of brace (in
+                                 %  coordinates), label
+  \color{gray6}{
+  \begin{tikzpicture}[decoration={brace,amplitude=5}]
+    \draw[decorate] (0,#1) -- (0,0)%
+      node[midway,sloped,above]{\footnotesize #2};%
+  \end{tikzpicture}
+  }
+}
+\newcommand\matrixbracetop[2]{ % Input is length of brace (in
+                               %  coordinates), label
+  \color{gray6}{  
+  \begin{tikzpicture}[decoration={brace,amplitude=5}]
+    \draw[decorate] (0,0) -- (#1,0)%
+      node[midway,sloped,above]{\footnotesize #2};%
+  \end{tikzpicture}
+  }
+}
+
 
 \renewcommand\notesname{\hrule width 7cm \large Chapter Notes} % Redefine Endnotes section
                                 % title. 
@@ -139,7 +164,7 @@
     \selectfont
     \normalsize
     \bfseries}{.}%            Heading font and punctuation after.
-  {5pt}%                      Spacing after heading.
+  {0pt}%                      Spacing after heading.
   {\thmname{#1}\thmnumber{ #2}\thmnote{ \textbf{(#3)}}}% Head spec 
 %
 \newtheoremstyle{thmstyle}%   Custom style: Theorem, Lemma, etc.
