@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  16 JAN 2012 12:27
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  17 JAN 2012 17:49
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -1006,64 +1006,38 @@ LaTeX Info: Redefining \pageref on input line 62.
 \openout6 = `thesis.out'.
 
  ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+lasy on input line 73.
-
-(/usr/local/texlive/2007/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 73.
-
-(/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2002/01/19 v2.2g AMS font definitions
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 73.
-
-(/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2002/01/19 v2.2g AMS font definitions
-)
-Overfull \hbox (3.64766pt too wide) in paragraph at lines 73--73
-[]$[]$[]\OT1/cmr/m/it/10 fyi[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/n/6 Syn[][]op[
-][]sis[] 
- []
-
-
-Overfull \hbox (2.32797pt too wide) in paragraph at lines 73--73
-[]\OT1/cmr/m/n/6 ``Gen[][]er[][]al[][]iza[][]tion[] 
- []
-
-<iitm.pdf, id=58, 109.40875pt x 109.40875pt>
+<iitm.pdf, id=57, 109.40875pt x 109.40875pt>
 File: iitm.pdf Graphic file (type pdf)
  <use iitm.pdf> [0
 
 {/usr/local/texlive/2007/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./iitm.
 pdf>]
-(./thesis.toc [4
-
-
-
-
-
-]
-Overfull \hbox (10.66411pt too wide) in paragraph at lines 41--41
-[]$[]$ []\OT1/cmr/m/n/6 re[][]move/[][]mod[][]ify[]  
- []
-
-
-Overfull \hbox (15.69206pt too wide) in paragraph at lines 42--42
-[]$[]$[]\OT1/cmr/m/it/10 mi[][]nor[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/n/6 (i)m
-ake[] 
- []
-
-
-Overfull \hbox (7.53342pt too wide) in paragraph at lines 42--42
-[]\OT1/cmr/m/n/6 first[][]name/ini[][]tials[] 
- []
-
+(./thesis.toc
+LaTeX Font Info:    Try loading font information for U+lasy on input line 8.
+ (/usr/local/texlive/2007/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
+LaTeX Font Info:    Try loading font information for U+msa on input line 8.
+
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 8.
+
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+) [4
+
+
+
+
+
+])
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
- [5] (./thesis.lot)
+ [5]
+(./thesis.lot)
 \tf@lot=\write8
 \openout8 = `thesis.lot'.
 
@@ -1085,12 +1059,6 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string:
 (hyperref)                \kern 1.95872pt
 (hyperref)                removed on input line 5.
 
-
-Overfull \hbox (26.02533pt too wide) in paragraph at lines 14--14
-[]$[]$[]\OT1/cmr/m/it/10 im[][]por[][]tant[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/
-n/6 ADD:[] 
- []
-
 LaTeX Font Info:    Try loading font information for OT1+bch on input line 31.
 (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1bch.fd
 File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
@@ -1102,7 +1070,7 @@ LaTeX Font Info:    Font shape `OT1/bch/bx/n' in size <12> not available
 Package pdftex.def Warning: Option `bb' does not make sense,
 (pdftex.def)                using `viewport' instead on input line 56.
 
-<../img/graphmatrices_g1.png, id=212, 342.27875pt x 283.0575pt>
+<../img/graphmatrices_g1.png, id=205, 342.27875pt x 283.0575pt>
 File: ../img/graphmatrices_g1.png Graphic file (type png)
 
 <use ../img/graphmatrices_g1.png>
@@ -1110,83 +1078,52 @@ File: ../img/graphmatrices_g1.png Graphic file (type png)
 Package pdftex.def Warning: Option `bb' does not make sense,
 (pdftex.def)                using `viewport' instead on input line 56.
 
-<../img/graphmatrices_g2.png, id=213, 350.30875pt x 202.7575pt>
+<../img/graphmatrices_g2.png, id=206, 350.30875pt x 202.7575pt>
 File: ../img/graphmatrices_g2.png Graphic file (type png)
 
 <use ../img/graphmatrices_g2.png>
-<../img/graphmatrices_H.png, id=214, 261.97874pt x 383.4325pt>
+<../img/graphmatrices_H.png, id=207, 261.97874pt x 383.4325pt>
 File: ../img/graphmatrices_H.png Graphic file (type png)
 
-<use ../img/graphmatrices_H.png> [14
-
-
-
-
-
-
-]
+<use ../img/graphmatrices_H.png>
 Underfull \hbox (badness 10000) in paragraph at lines 58--60
 
  []
 
-
-Overfull \hbox (2.97pt too wide) in paragraph at lines 70--70
-[]$[]$[]\OT1/cmr/m/it/10 mi[][]nor[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/n/6 add[
-] 
- []
+[14
 
 
-LaTeX Warning: Marginpar on page 15 moved.
 
 
-Overfull \hbox (12.63101pt too wide) in paragraph at lines 91--91
-[]$[]$[]\OT1/cmr/m/it/10 press[][]ing[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/n/6 h
-ow[] 
- []
 
-[15] [16pdfTeX warning (ext4): destination with the same identifier (name{figur
-e.2.1}) has been already used, duplicate ignored
+
+] [15pdfTeX warning (ext4): destination with the same identifier (name{figure.2
+.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.120 
-       <../img/graphmatrices_g1.png (PNG copy)> <../img/graphmatrices_g2.png (P
-NG copy)> <../img/graphmatrices_H.png (PNG copy)>] [17pdfTeX warning (ext4): de
-stination with the same identifier (name{table.2.1}) has been already used, dup
-licate ignored
+l.60 
+      <../img/graphmatrices_g1.png (PNG copy)> <../img/graphmatrices_g2.png (PN
+G copy)> <../img/graphmatrices_H.png (PNG copy)>] [16] [17pdfTeX warning (ext4)
+: destination with the same identifier (name{table.2.1}) has been already used,
+ duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.179 
-      ]
-
-LaTeX Warning: Marginpar on page 18 moved.
-
-
-Overfull \hbox (22.21423pt too wide) in paragraph at lines 191--191
-[]$[]$[]\OT1/cmr/m/it/10 im[][]por[][]tant[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/
-n/6 1899[] 
- []
-
-
-Overfull \hbox (21.46423pt too wide) in paragraph at lines 275--275
-[]$[]$[]\OT1/cmr/m/it/10 press[][]ing[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/n/6 l
-in[][]ear?[] 
- []
-
-[18pdfTeX warning (ext4): destination with the same identifier (name{table.2.2}
-) has been already used, duplicate ignored
+      ] [18pdfTeX warning (ext4): destination with the same identifier (name{ta
+ble.2.2}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.296 
       ]
-Overfull \hbox (8.17847pt too wide) in paragraph at lines 298--310
+Overfull \hbox (4.40063pt too wide) in paragraph at lines 298--310
 []\OT1/cmr/m/n/12 Theorem []2.2.1[] states that con-vex bi-par-tite graphs can-
 not have \OT1/cmr/m/it/12 as-ter-oidal triples[][][]
  []
 
-<../img/tuckersforbiddensubgraphs.png, id=373, 1113.15875pt x 590.205pt>
+<../img/tuckersforbiddensubgraphs.png, id=357, 1113.15875pt x 590.205pt>
 File: ../img/tuckersforbiddensubgraphs.png Graphic file (type png)
 
 <use ../img/tuckersforbiddensubgraphs.png>
@@ -1225,7 +1162,7 @@ l.489
                                                   
 l.489 
        <../img/tuckersforbiddensubgraphs.png (PNG copy)>]
-<../img/pqtree.png, id=413, 546.04pt x 353.32pt>
+<../img/pqtree.png, id=397, 546.04pt x 353.32pt>
 File: ../img/pqtree.png Graphic file (type png)
  <use ../img/pqtree.png>
 \openout5 = `thesis.ent'.
@@ -1247,120 +1184,49 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 571.
 
-[23]
-Overfull \hbox (21.29103pt too wide) in paragraph at lines 664--668
-\OT1/cmr/m/n/12 gram) of the strong el-e-ments of $\OMS/cmsy/m/n/12 W\OT1/cmr/m
-/n/12 (\OMS/cmsy/m/n/12 F\OT1/cmr/m/n/12 )$ with la-bels \OT1/cmr/m/it/12 prime
-, lin-ear \OT1/cmr/m/n/12 and \OT1/cmr/m/it/12 degenerate\OT1/cmr/m/n/12 .[[]] 
+LaTeX Font Info:    Font shape `OT1/bch/bx/it' in size <12> not available
+(Font)              Font shape `OT1/bch/b/it' tried instead on input line 583.
+[23] [24] [25]
 
- []
+LaTeX Warning: Citation `mm96-ref11' on page 26 undefined on input line 786.
 
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 871--871
 
-Overfull \hbox (6.04776pt too wide) in paragraph at lines 704--704
-[]$[]$[]\OT1/cmr/m/it/10 press[][]ing[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/n/6 i
-n[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 704--704
-
- []
-
-[24]
-
-LaTeX Warning: Marginpar on page 25 moved.
-
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 709.
-
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 709.
-
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 709.
-
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 709.
-
-<../img/pctree_hm03.png, id=502, 738.76pt x 620.3175pt>
-File: ../img/pctree_hm03.png Graphic file (type png)
-
-<use ../img/pctree_hm03.png>
-<../img/pctree_dom.png, id=503, 886.31125pt x 261.97874pt>
-File: ../img/pctree_dom.png Graphic file (type png)
-
-<use ../img/pctree_dom.png> [25] [26pdfTeX warning (ext4): destination with the
- same identifier (name{figure.2.5}) has been already used, duplicate ignored
-
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.770 
-       <../img/pctree_hm03.png (PNG copy)> <../img/pctree_dom.png (PNG copy)>]
-
-LaTeX Warning: Marginpar on page 27 moved.
-
-
-LaTeX Warning: Marginpar on page 27 moved.
-
-
-LaTeX Warning: Marginpar on page 27 moved.
-
-
-LaTeX Warning: Marginpar on page 27 moved.
-
-
-Overfull \hbox (24.08672pt too wide) in paragraph at lines 887--887
-[][]\OT1/cmr/m/n/6 .[] 
- []
-
-
-LaTeX Warning: Marginpar on page 27 moved.
-
-
-LaTeX Warning: Marginpar on page 27 moved.
-
-
-LaTeX Warning: Marginpar on page 27 moved.
-
-
-LaTeX Warning: Marginpar on page 27 moved.
-
-
-LaTeX Warning: Marginpar on page 27 moved.
-
-
-Overfull \hbox (2.36684pt too wide) in paragraph at lines 892--892
-[]\OT1/cmr/m/n/6 sec:appgraphiso[]  
- []
-
-
-Overfull \hbox (9.59476pt too wide) in paragraph at lines 892--892
-[]$[]$ []\OT1/cmr/m/n/6 (can[][]on[][]iza[][]tion[] 
  []
 
 [27]
 
-LaTeX Warning: Marginpar on page 28 moved.
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 876.
 
 
-Overfull \hbox (18.3587pt too wide) in paragraph at lines 895--895
-[]$[]$[]\OT1/cmr/m/it/10 press[][]ing[][]\OT1/cmr/m/n/10 :[] []\OT1/cmr/m/n/6 A
-DD:[] 
- []
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 876.
 
 
-Overfull \hbox (12.35562pt too wide) in paragraph at lines 895--895
-[]\OT1/cmr/m/n/6 [tag:chordalGraph][]  
- []
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 876.
 
 
-LaTeX Warning: Marginpar on page 28 moved.
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 876.
 
-) [28]
+<../img/pctree_hm03.png, id=579, 738.76pt x 620.3175pt>
+File: ../img/pctree_hm03.png Graphic file (type png)
+
+<use ../img/pctree_hm03.png>
+<../img/pctree_dom.png, id=580, 886.31125pt x 261.97874pt>
+File: ../img/pctree_dom.png Graphic file (type png)
+
+<use ../img/pctree_dom.png> [28] [29pdfTeX warning (ext4): destination with the
+ same identifier (name{figure.2.5}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.937 
+       <../img/pctree_hm03.png (PNG copy)> <../img/pctree_dom.png (PNG copy)>]
+[30]) [31]
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `\tnote' on input line 152.
@@ -1390,13 +1256,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 17685 strings out of 94073
- 314940 string characters out of 1162984
- 384027 words of memory out of 1500000
- 20199 multiletter control sequences out of 10000+50000
- 29773 words of font info for 108 fonts, out of 1200000 for 2000
+ 17702 strings out of 94073
+ 314884 string characters out of 1162984
+ 376385 words of memory out of 1500000
+ 20205 multiletter control sequences out of 10000+50000
+ 28833 words of font info for 99 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 63i,25n,71p,1211b,829s stack positions out of 5000i,500n,6000p,200000b,5000s
+ 63i,25n,71p,1211b,828s stack positions out of 5000i,500n,6000p,200000b,5000s
 pdfTeX warning (dest): name{definition.1.3.3} has been referenced but does no
 t exist, replaced by a fixed one
 
@@ -1508,33 +1374,35 @@ pdfTeX warning (dest): name{chapter*.7} has been referenced but does not exist,
 pdfTeX warning (dest): name{chapter*.6} has been referenced but does not exist,
  replaced by a fixed one
 
-{/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{
-/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texl
+{/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/tex
+live/2007/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texl
 ive/2007/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texlive
-/2007/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/2007/tex
-mf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2007/texmf-dist/f
-onts/type1/bluesky/cm/cmbx6.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1
-/bluesky/cm/cmbx8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/c
-m/cmbxti10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmcsc
-10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></
-usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi12.pfb></usr/local
-/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi6.pfb></usr/local/texlive/2
-007/texmf-dist/fonts/type1/bluesky/cm/cmmi8.pfb></usr/local/texlive/2007/texmf-
-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2007/texmf-dist/fonts
-/type1/bluesky/cm/cmr12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blu
-esky/cm/cmr6.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr
-7.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr
-/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmss10.pfb></usr/local/te
-xlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/texlive/200
-7/texmf-dist/fonts/type1/bluesky/cm/cmsy6.pfb></usr/local/texlive/2007/texmf-di
-st/fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/texlive/2007/texmf-dist/fonts/t
-ype1/bluesky/cm/cmsy8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blues
-ky/cm/cmti10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmt
-i12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/msbm10.pfb>
-</usr/local/texlive/2007/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on thesis.pdf (24 pages, 659161 bytes).
+/2007/texmf-dist/fonts/type1/bitstrea/charter/bchbi8a.pfb></usr/local/texlive/2
+007/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/2007/texmf
+-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2007/texmf-dist/fon
+ts/type1/bluesky/cm/cmbx8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/b
+luesky/cm/cmbxti10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/
+cm/cmcsc10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmex1
+0.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></u
+sr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi12.pfb></usr/local/
+texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi6.pfb></usr/local/texlive/20
+07/texmf-dist/fonts/type1/bluesky/cm/cmmi8.pfb></usr/local/texlive/2007/texmf-d
+ist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2007/texmf-dist/fonts/
+type1/bluesky/cm/cmr12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blue
+sky/cm/cmr7.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr8
+.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmss10.pfb></us
+r/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/t
+exlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/texlive/200
+7/texmf-dist/fonts/type1/bluesky/cm/cmsy8.pfb></usr/local/texlive/2007/texmf-di
+st/fonts/type1/bluesky/cm/cmti10.pfb></usr/local/texlive/2007/texmf-dist/fonts/
+type1/bluesky/cm/cmti12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blu
+esky/cm/cmtt10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/c
+mtt12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/msam10.pf
+b></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/msbm10.pfb></usr/
+local/texlive/2007/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on thesis.pdf (27 pages, 679883 bytes).
 PDF statistics:
- 768 PDF objects out of 1000 (max. 8388607)
- 241 named destinations out of 1000 (max. 131072)
+ 833 PDF objects out of 1000 (max. 8388607)
+ 247 named destinations out of 1000 (max. 131072)
  165 words of extra memory for PDF output out of 10000 (max. 10000000)
 

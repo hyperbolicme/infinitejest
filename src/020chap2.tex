@@ -580,95 +580,272 @@ indices of the matrix.  This simple construction is formally described
 in Definition~\ref{def:matrixsetsystem} along with the idea of \cop
 for set systems\footnote{As seen in Section~\ref{sec:courseschedule}}.
 
-\begin{definition}%
-  \label{def:matrixsetsystem}{\emph{\Cop for set systems}}%
+\begin{definition}[{\em \Cop for set systems}]%
+  \label{def:matrixsetsystem}%
   % [\emph{Set system of a binary matrix}.]
-   Let $M$ be a binary matrix of order
-  $n \times m$ % , $r_i, i \in [n]$ be the rows in $M$
-  and $\{c_i \mid i \in [m]\}$ be the columns in $M$. A set system
-  $\cF_{M} = \{S_i \mid S_i \subseteq [n], i \in [m]\}$ is defined
-  such that for every column $c_i$ of $M$, set $S_i = \{j \mid m_{ji}
-  = \un \}$. The collection $\cF_M$ is the {\em set system of binary
-    matrix} $M$.\\
-  A set system $\cF$ from universe $U = \{1, 2, \ldots, n\}$ has the
-  {\em \cop} if it is possible to assign a linear order, \ie a
-  permutation $\sigma = u_1u_2\ldots u_n$ to $U$ \stt each set $S \in
-  \cF$ appears as a consecutive subsequence $u_{i}u_{i+1}\ldots
-  u_{i+k-1}$ (also called an interval) of $\lambda$ in the linear order, where
-  positive integers $k = |S|$ and $i \le n+1-k$.
+  Let $M$ be a binary matrix of order $n \times m$ and $\{c_i \mid i
+  \in [m]\}$ be the columns in $M$.  A set system $\cF_{M} = \{S_i
+  \mid S_i \subseteq [n], i \in [m]\}$ is defined such that for every
+  column $c_i$ of $M$, set $S_i = \{j \mid m_{ji} = \un \}$. The
+  collection $\cF_M$ is the {\em set system of binary matrix} $M$. The
+  {\em binary matrix for set system} $\cF$ is conversely constructed
+  and denoted by $M^\cF$. Thus, $M^{\cF_M} = M$.
+  
+  A set system $\cF$ from universe $U$, $|U| = n$ has the
+  {\em \cop} if there exists a linear order or 
+  permutation $\sigma = w_1w_2\ldots w_n$ that can be applied to $U$ \stt each set $S \in
+  \cF$ becomes a consecutive subsequence\footnote{Also termed an {\em interval}} $w_{i}w_{i+1}\ldots
+  w_{i+k-1}$ on $\sigma$ for some positive integer $i \le n+1-k$ where  $k = |S|$.
+
+  The set $\valid{U,\cF}$ respresents all \COP orders of $\cF$ in $U$.
+  \defnstop
 \end{definition}
 
 It is easy to see the equivalence of this definition to \COP for
 matrices in Definition~\ref{def:copmatrix}.
 
-Generalized \PQtree or \gPQtree is a data structure defined in \cite{n89} to
-represent all orthogonal sets of a set system $\cF$. {\em Orthogonal
-  sets} of $\cF$ are sets that do not overlap with any set in $\cF$. A
+Before proceeding to describe \PQRtree per se, we will see a few more
+terminologies that will make the subsequent discussion in this section
+simpler.
+
+\begin{definition}[\em Orthogonal sets \cite{n89, mm96,
+    mcc04}\footnote{\cite{mcc04} does not use the term ``mutually
+    orthogonal'' but refers to the same idea as ``sets that do not
+    overlap''. This terminology is also used in other literature like
+    \cite{nsnrs09,wlh02}.} ]
+  \label{def:orthosets}%
+  Let $\cF$ be a set system with universe $U$ and sets $A, B \in \cF$.
+  \begin{enumerate}
+  \item $A$ and $B$ are said to have a {\em trivial intersection} if
+    $A \cap B$ is one of the following.
+    \begin{enumerate}[i.]
+    \singlespacing
+    \item $\emptyset$
+    \item $A$
+    \item $B$\footnote{In other words, $A$ and $B$ are either disjoint
+        or one is the subset of the other.}
+    \end{enumerate}
+    % \vspace{-5mm}%
+
+  \item $A$ and $B$ are called {\em mutually orthogonal} or $A$ is {\em
+      orthogonal to} $B$ and vice versa, if they have a trivial
+    intersection.
+
+  \item {\em Trivial subsets} of a universe $U$, denoted by $\cT(U)$,
+    are sets that have trivial intersections with any set in
+    $\power{U}$. These sets are $U$, singleton sets in
+    $\power{U}$ and $\emptyset$ \cite{n89, mm96}.
+    Thus, $\cT(U) = \{U\} \  \bigcup \  \{ \{v\} \mid v \in U \} \  \bigcup \
+    \{\emptyset\}$.
+
+  \item {\em Orthogonal sets of a set system} $\cF$ with universe $U$
+    are subsets of $U$ that are orthogonal to all sets in $\cF$. The
+    set of all orthogonal sets to $\cF$ is denoted by
+    $\cF^{\bot}$\footnote{\cite[Def.~3.1]{mcc04} uses the term {\em non-overlapping
+    family} of $\cF$ and denotes it by $\cN(\cF)$. \label{mcc1}}.
+
+  \item $\cF$ is called {\em complete}\footnote{\cite{mcc04} calls
+      this a {\em weakly partative family}. \label{mcc2}} if the following hold
+    true for every pair of non-orthogonal\footnote{Or overlapping.} sets
+    $A, B$ in $\cF$.
+    \begin{enumerate}[i.]
+    \item $\cT(U) \subset \cF$
+    \item $A \cup B \in \cF$
+    \item $A \cap B \in \cF$
+    \item $A \setminus B \in \cF$
+    \item $B \setminus A \in \cF$
+    \end{enumerate}
+    In other words, $\cF$ contains all the trivial
+    subsets of $U$, $A \cup B$ and the partitions of $A \cup B$
+    defined by intersection and set difference.
+
+  \item $\overline{\cF}$ represents the smallest super set system of
+    $\cF$ that is complete\footnote{\cite[Def.~3.2]{mcc04} calls
+      this the {\em weak closure} of $\cF$ denoted by $\cW(\cF)$. \label{mcc3}}
+
+  \end{enumerate}
+  \defnstop
+\end{definition}
+
+Generalized \PQtree or \gPQtree is a data structure defined in
+\cite{n89} to represent all orthogonal sets of a set system $\cF$. A
 data structure with the same name was later defined in \cite{mcc04} as
-part of a {\em substitution decomposition} for a set system
-$\cF$. \tnote{define substitutio decomp.} This is later used to define
-a certificate if $\cF$ has no \COP. \PQRtree is a data structure
-defined in \cite{mm96} as a data structure to represent any set system
-$\cF$ with additional information in their $R$-nodes if $\cF$ has no
-\COP.  All three of these data structures are proposed as
-generalizations of \cite{bl76}'s \PQtree and hence produce the
-\PQtree if $\cF$ has \COP. As a whole, all these three data
-strutures are near-identical with their differences being notional.
-In this section, we will discuss the basic theory that they all hold
-and stick to the name of the data structure as \PQRtree.
+part of a {\em substitution decomposition} for a set system $\cF$
+\tnote{define substitutio decomp.} and subsequently \cite{mcc04} gives
+a new characterization of $\cF$ using a so-called incompatibility
+graph. \PQRtree is defined in \cite{mm96} as a data
+structure to represent any set system $\cF$ with additional
+information in their $R$-nodes if $\cF$ has no \COP.  All three of
+these data structures are proposed as generalizations of \cite{bl76}'s
+\PQtree and hence produce the \PQtree if $\cF$ has \COP. As a whole,
+all these three data strutures are largely identical with their
+differences being notional.  In this section, we will discuss the
+basic theory that they all hold. We will predominantly use the
+terminology from \cite{mm96} and refer to the data structure as
+\PQRtree.
 
-A \PQRtree of a given set system $\cF$ from universe $U$ represents
-all the sets from $\power{U}$ that have trivial intersections with
-every set in $\cF$.  Two sets $A$ and $B$ are said to have a {\em
-  trivial intersection} if $A \cap B$ is one of the following --
-$\emptyset$, $A$ or $B$. In other words, $A$ and $B$ are either (i)
-disjoint or (ii) one is the subset of the other. Such sets are also
-called {\em orthogonal sets} or said that $A$ is orthogonal to
-$B$. {\em Trivial subsets} of a universe $U$, denoted by $\cT(U)$, are
-sets that have trivial intersections with any set in
-$\power{U}$. Namely, $\cT(U)$ consists of $U$, singleton sets in
-$\power{U}$ and $\emptyset$\cite{n89, mm96}.  In other words, the all
-sets presented in a \PQRtree share the property that they do not
-overlap with any set in $\cF$. We will now see how this helps in
-testing for \COP in $\cF$.
+An important observation made by \cite{mm96} is presented now along
+with a few theorems that help in decomposing the \COP problem on $\cF$
+into subproblems.
 
-An important observation made by \cite{mm96} is that if $\cF$ is a set
-system with \COP then, aside from every set in $\cF$ being consecutive
-(after applying the \COP order) the following sets must also be
-consecutive for any $A, B \in \cF$.
+\begin{observation}[{\cite[Sec.~3]{mm96}}]
+  If $\cF$ is a set system with \COP then, after applying the \COP
+  order, not only must every set in $\cF$ be consecutive but the
+  following sets must also be consecutive for any $A, B \in \cF$.
 \begin{enumerate}
   \item The intersection $A \cap B$ 
   \item The union $A \cup B$ if $A \cap B \ne \emptyset$
   \item The relative complements $A \setminus B$ and $B \setminus A$
     if $B \nsubseteq A$ and $A \nsubseteq B$ respectively.
+  \item Also note that trivially, sets in $\cT(U)$ are consecutive in
+    any permutation of $U$\footnote{$\emptyset$ is considered
+      consecutive by convention.}.
 \end{enumerate}
-Also note that trivially, sets in $\cT(U)$ are consecutive in any
-permutation of $U$\footnote{$\emptyset$ is considered consecutive by
-  convention.}.
-
-Any set system that is closed under the above operations and contains
-$\cT(U)$ is called {\em complete} \cite{mm96} or a {\em weakly partative
-  family} \cite{mcc04}. Such a set system is easier to
-work with for reasons that will become apparent.\tnote{VAGUe!}
-For any set system $\cF$, the smallest super set system that is
-complete/weakly partative is called the {\em weak closure} of $\cF$,
-denoted $\cW(\cF)$ \cite[Def.~3.2]{mcc04}. \cite[Def.~2, smallest {\em
-  complete} supercollection]{mm96}.
-
-What is interesting is that the set of \COP permutations of $\cF$ is
-the same as that of $\cW(\cF)$ \cite[Th.~3]{mm96}. The reason this is
-interesting is because it becomes apparent by this theory that it is
-easier to use $\cW(\cF)$ to create the $\PQRtree$ for $\cF$.
+\end{observation}
 
 
-The generalized \PQtree of $\cF$ is defined as the {\em decomposition
-  tree} of its weak closure $\cW(\cF)$. Decomposition tree is the
-inclusion tree (inclusion p.o. Hasse diagram) of the strong elements
-of $\cW(\cF)$ with labels {\em prime, linear} and {\em degenerate}.\cite{mcc04}
+\begin{theorem}[{\cite[Th.~3,6]{mm96}}]
+  \label{th:validcop}
+  For any set system $\cF$ we have the following. \par
+  \centering
+    $\valid{\cF} = \valid{\overline{\cF}}$ \\
+    $\cF^{\bot} = \overline{\cF^{\bot}} = (\overline{\cF})^{\bot}$
+\end{theorem}
+
+\begin{proposition}
+  \label{pr:validcop}
+  Any set that is consecutive on all the \COP permutations of $\cF$ is
+  present in $\overline{\cF}$.
+\end{proposition}
+
+Proposition~\ref{pr:validcop} is owing to the following theorem by
+which \cite{mm96} describes a way to decompose the problem of finding
+all \COP orders of $\cF$ into two subproblems using sets in
+$\overline{\cF} \cap \cF^{\bot}$.
+
+\begin{theorem}[{\cite[Th.~7]{mm96}}]
+  \label{th:mmdecomp}
+  For any set system $\cF$, and $\emptyset \ne H \in \overline{\cF}
+  \cap \cF^{\bot}$ we have the following.\par
+  \centering
+  $\valid{U,\cF} = \valid{U/H,\cF/H} * \valid{H,\cF \cap 2^H}$
+\end{theorem}
+
+\def \ff {\overline{\cF} \cap \cF^{\bot}}
+
+The idea behind Theorem~\ref{th:mmdecomp} is as follows. A permutation $\alpha$
+of $U$ is a composition of two permutations with respect to $H$ - i) a
+permutation $\gamma$ of $H$ and (ii) a permutation $\beta$ of $U/H$.
+
+For two mutually orthogonal sets $A, B$ such that $A \nsubseteq B$,
+$A/B$ is defined as the set obtained by removing all elements of $B$
+from $A$ and adding a representative element for $B$ in $A$. Being orthogonal,
+results in only the following three possibilities.
+\begin{enumerate}
+\item $A$ and $ B$ are disjoint: $A/B  = A$
+\item $A$ is a subset of $B$: $A/B$ is not defined
+\item $B$ is a subset of $A$: $A/B = A \setminus B \cup \{b\}$, where $b$
+is a new element not in $U$ added to represent $B$.
+\end{enumerate}
+
+We observe that this idea of decomposing the \COP problem into two
+subproblems in \cite{mm96} is very similar to the substitution
+decomposition of a set system given in \cite{mcc04}.\footnote{Using
+  the theory cited in footnotes~\ref{mcc1},\ref{mcc2},\ref{mcc3}.}
+
+The following corollary states how \PQRtree elegantly fits into this
+whole theory and help in computing all \COP orders of $\cF$.
+
+\begin{corollary}[{\cite[Cor.~8]{mm96}}]
+  Let $\cF$ be a set system with universe $U$ and $H$ is a non-empty
+  orthogonal set $H \in
+  \ff$. If there is a \PQRtree $T_1$ that encodes all permutations in
+  $\valid{U/H, \cF/H}$ and also a \PQRtree $T_2'$ that encodes all
+  permutations $\valid{H,\cF \cap \power{H}}$, then a \PQRtree $T$ for
+  $\cF$ can be obtained by replacing the leaf $h$ in $T_1$ by $T_2$.
+\end{corollary}
+
+%Finding elements in $\ff$ is done using \PQRtree.
+
+Thus we have a recursive algorithm that can compute the \PQRtree for
+$\cF$ provided we find an element from $\ff$ in each iteration. The
+non-empty sets in $\ff$ are called {\em node sets} since they form the
+nodes in the \PQRtree. They are calculated as follows.  One is by
+computing the overlap components of $\cF$. The overlap components is
+the partition that results from the {overlap} equivalence relation
+which is nothing but non-orthogonal equivalence relation\footnote{It
+  is easy to verify that this relation is indeed an equivalence
+  relation.}. Overlap components are linearly
+computable\cite{mm95,wlh92}. Once these elements are factored
+out, the rest of the node sets are obtained by identifying {\em twin}
+elements\footnote{\cite[Sec.~3]{kklv10} calls this {indistinguishable}
+  elements. The equivalence class is called a {\em slot}.}. Two
+elements $a, b \in U$ are twins if their membership in every set of
+$\cF$ is in tandem with each other, \ie $\{a,b\} \bot \cF$. This is
+clearly an equivalence relation and their equivalence classes is known
+to be computable in linear time\cite{wlh01,mm96-ref11} and even in
+logspace\cite{kklv10}.
+
+The recursion end condition is when one cannot find any more sets from
+$\ff$ that are non-trivial. This is when $\ff = \cT(U)$. This is the
+point where the parents of the leaves of the \PQRtree are created. The
+following theorem helps the algorithm decide whether a $P$, $Q$ or
+$R$ node must be created.
+
+\begin{theorem}[{\cite[Th.~9]{mm96},\cite[Th.~2.1]{mcc04}}]
+\label{th:pqrfinalmm}
+If $\cF$ is a set system with universe $U$ and $|U| \ge 3$ then one of
+the following statements hold.
+\begin{enumerate}
+\item \label{th::it1} $\overline{\cF} = \cT(U)$ 
+\item \label{th::it2}$\overline{\cF} = consec(\alpha)$\tnote{what is consec?} for
+  some permutation $\alpha$ on $U$ 
+\item \label{th::it3}$\overline{\cF} = \power{U}$ 
+\end{enumerate}
+\end{theorem}
+
+In case (\ref{th::it1}) all elements in $U$ are made children of a
+$P$ node. In case (\ref{th::it2}) all elements in $U$ are made
+children of a $Q$ node in the order given by $\alpha$. Finally case
+(\ref{th::it3}) is the one when no permutation of $U$ gives \COP. All
+elements of $U$ are in this case made children in an $R$ node. 
+
+Theorem~\ref{th:pqrfinalmm} and the theory leading to it is very
+similar to \cite[Th.~2.1, 3.5. Also Th.~3.2, 3.3, 3.4]{mcc04} which categorizes
+the nodes in the above the three cases as {\em prime}, {\em linear}
+and {\em degenerate} respectively. Their generalized \PQtree is
+created in similar ways as \PQRtree above. This tree is in essense the
+Hasse diagram of what they call {\em strong elements} of
+$\overline{\cF}$. Strong elements of a set family are elements that do
+not overlap with any other elements in the family, \ie it is
+orthogonal to all other sets\cite[Def.~3.3]{mcc04}.
+
+
+\begin{theorem}[{\cite{mm96}, \cite[Th.~3.6]{mcc04}}]
+The set system $\cF$ has \COP \iff its \PQRtree has no $R$ nodes.  
+\end{theorem}
 
 
 
-Overlap components are computable in linear time \cite{mm95,wlh92}.
+
+% The generalized \PQtree of $\cF$ is defined as the {\em decomposition
+%   tree} of its weak closure $\cW(\cF)$. Decomposition tree is the
+% inclusion tree (inclusion p.o. Hasse diagram) of the strong elements
+% of $\cW(\cF)$ with labels {\em prime, linear} and {\em degenerate}.\cite{mcc04}
+
+
+
+% Overlap components are computable in linear time \cite{mm95,wlh92}.
+
+----- Cert algo
+
+------ ICPIA 
+
+
+
+
+
+
 
 
 \temptext{ Certifying algorithm (Generalized PQ trees) [McC04] -- 

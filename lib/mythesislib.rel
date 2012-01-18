@@ -1,0 +1,24 @@
+;; RefTeX parse info file
+;; File: /Users/anju/Desktop/thesis + synopsis/github_infinitejest/lib/mythesislib.sty
+;; User: anju (anju)
+
+(set reftex-docstruct-symbol '(
+
+
+(xr nil "\\\\\\\\\\\\")
+
+(index-tags)
+
+(is-multi nil)
+
+(bibview-cache)
+
+(master-dir . "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/lib/")
+
+(label-numbers)
+
+(bof "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/lib/mythesislib.sty")
+
+(eof "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/lib/mythesislib.sty")
+))
+

@@ -121,6 +121,7 @@
 \newcommand{\temptext}[1]           % For public draft notes 
   {{\color{blue} \footnotesize #1}} 
 \newcommand{\supt}[1]{supp\left(#1\right)}
+\newcommand{\valid}[1]{{\tt valid}\left(#1\right)}
 
 \definecolor{gray6}{rgb}{0.6,0.6,0.6}
 \newcommand\matrixbraceright[2]{ % Input is length of brace (in
@@ -164,7 +165,7 @@
     \selectfont
     \normalsize
     \bfseries}{.}%            Heading font and punctuation after.
-  {0pt}%                      Spacing after heading.
+  {5pt}%                      Spacing after heading.
   {\thmname{#1}\thmnumber{ #2}\thmnote{ \textbf{(#3)}}}% Head spec 
 %
 \newtheoremstyle{thmstyle}%   Custom style: Theorem, Lemma, etc.
@@ -178,6 +179,15 @@
     \thesisspacing}{.}%       Heading font and punctuation after.
   {5pt}%\newline%{0pt}%       Spacing after heading.
   {\thmname{#1}\thmnumber{ #2}\thmnote{\textbf{ (#3)}}}% Head spec 
+%
+\newtheoremstyle{obsstyle}%  Custom style: Observation
+  {10pt}{5pt}%                Space above & below
+  {\thesisspacing} %         Body style
+    % \fontfamily{cmss}\selectfont\scriptsize % \sffamily
+  {0pt}%                      Heading indent amount
+  {\normalsize\em}{.}%            Heading font and punctuation after.
+  {5pt}%                      Spacing after heading.
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ \textbf{(#3)}}}% Head spec 
 %
 % \newtheoremstyle{prfstyle}%   Custom style: Proof.
 %   {0pt}{20pt}%                Space above & below
@@ -204,10 +214,9 @@
   {Corollary}                          % Shares counter with theorem. 
 \theoremstyle{defnstyle}               % Apply custom style
 \newtheorem{definition}{Definition}
-  [section] % Section relative 
-                                             %  numbering.
-%\newcommand{\adefnote}[1]{\textbf{ #1. }}
-\newtheorem{observation}{Observation}
+[section]                              % Section relative numbering.
+\theoremstyle{obsstyle}
+\newtheorem{observation}{Observation}[section]
 \newtheorem{proposition}[theorem]{Proposition}
 
 
