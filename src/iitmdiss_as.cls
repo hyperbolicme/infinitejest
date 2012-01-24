@@ -1,5 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Edited by hyperbolicme
+% Edited by hyperbolicme for self.
+% anjuzabil@gmail.com
+% January 2011
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % This is a class for LaTeX2e that should format a report as per
@@ -87,20 +89,20 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
 %% makes all tables and figures have single spacing automatically.
 \RequirePackage{setspace} 
 
-% atbeginend MESSES UP A LOT OF SYNTAX.
+% package atbeginend MESSES UP A LOT OF SYNTAX.
 %\RequirePackage{atbeginend} % To wrap/encapsule an environ 
-
-                            % around/inside another.
-% -EITHER- 1.5 spacing %
+%                            %  around/inside another.
+% --EITHER- 1.5 spacing -EITHER--
 % \def \thesisspace {1.5}
-% \setstretch{\thesisspace} % 1.5 spaces out more than command
-%                             onehalfspacing/environ onehalfspace. 
+% \setstretch{\thesisspace}  % 1.5 spaces out more than command
+%                            %  onehalfspacing/environ onehalfspace. 
 %
-% -OR- onehalfspacing  %
+% --OR- onehalfspacing -OR--
 \def \thesisspacing{\onehalfspacing}
-\thesisspacing             % More appealing.
+\thesisspacing              % More appealing.
 
 
+%% package atbeginend MESSES UP A LOT OF SYNTAX.
 %% hyperbolicme: one half spacing for lists too.  
 % \AfterBegin{itemize}{\begin{onehalfspace}}
 % \BeforeEnd{itemize}{\end{onehalfspace}}
@@ -113,32 +115,10 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
 \RequirePackage[hang]{caption}
 
 
-%% DITCHED THIS WHOLE DAMN THING TO USE ALPHA %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Bibliography
-% 
-% natbib allows easy switching of citation style and using it along
-% with the iitm.bst makes things perfect.
-% hyperbolicme % \RequirePackage[authoryear,round]{natbib} 
-%\RequirePackage[numbers,square]{natbib} 
-% hyperbolicme % \bibliographystyle{iitm}
-
-% hyperbolicme % \newcommand{\bibstyle@iitm}{\bibpunct{(}{)}{;}{a}{,}{,}%
-% hyperbolicme %      \gdef\NAT@biblabel##1{##1. }}
-%
-% hyperbolicme % \setlength{\bibhang}{0pt}
-% hyperbolicme % \citestyle{iitm}
-%\citestyle{unsrt_newen}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Other useful macros.  Many of these are modifications from newdiss.cls
 
-% \department{department name} -- user macro to declare name of department.
 \def\department#1{\gdef\@department{#1}}
-
-%\RequirePackage[dvips]{graphicx}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % The title page
@@ -249,19 +229,22 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
 
 \def\titlepage{\newpage\thispagestyle{empty}\c@page\z@}
 \def\endtitlepage{\newpage}
+%\def\headingstrstyle{\sc} % \centerline
 
 \if@Synopsis
    \renewcommand\refname{REFERENCES}
 \else
    % QUOTATIONS
    %
-   \def\quotations{\chapter*{\centerline{QUOTATIONS}}
+   \def\quotationsheadingstr{Quotations}%{QUOTATIONS}
+   \def\quotations{\chapter*{ \quotationsheadingstr}
    %\addcontentsline{toc}{chapter}{QUOTATIONS}
    }
 
    % DEDICATION
    %
-   \def\dedication{\chapter*{\centerline{DEDICATION}}
+   \def\dedicationheadingstr{Dedication}
+   \def\dedication{\chapter*{\dedicationheadingstr}%{\centerline{DEDICATION}}
    %\addcontentsline{toc}{chapter}{DEDICATION}
    }
 
@@ -270,38 +253,44 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
    %   - this produces a certificate page as per IITM Regulations
    %     comment the following lines out to get it working.
    %
-   \def\certificate{%% A preliminary chapter
-     \clearpage
-     \vspace*{36pt}
-     \centerline{\Large \bf THESIS CERTIFICATE}
-     \vskip 25pt
-     \thispagestyle{empty}
-     \typeout{Certificate}
-     \setcounter{page}{0}
-   }
+   \def\certheadingstr{\sc \centering Thesis Certificate}
+ %   \def\certificate{%% A preliminary chapter
+% %     \clearpage
+% %     \vspace*{36pt}
+%      \chapter*{\certheadingstr}
+% %     \centerline{\Large \bf \certheadingstr}%THESIS CERTIFICATE}
+% %     \vskip 25pt
+%      \thispagestyle{empty}
+% %     \typeout{Certificate}
+%      \setcounter{page}{0}
+%    }
 
    % ACKNOWLEDGEMENTS
    %
-   \def\acknowledgements{\chapter*{\centerline{ACKNOWLEDGEMENTS}}
-     \addcontentsline{toc}{chapter}{ACKNOWLEDGEMENTS}
+   \def\ackheadingstr{Acknowledgements}
+   \def\acknowledgements{\chapter*{\ackheadingstr}%{\centerline{ACKNOWLEDGEMENTS}}
+     \addcontentsline{toc}{chapter}{\ackheadingstr}
    }
 
    % ABSTRACT
    %   - this produces pages suitable for an IITM Abstract
-   \def\abstract{\chapter*{\centerline{ABSTRACT}}
-   \addcontentsline{toc}{chapter}{ABSTRACT}
+   \def\abstractheadingstr{Abstract}
+   \def\abstract{\chapter*{\abstractheadingstr}%{\centerline{ABSTRACT}}
+   \addcontentsline{toc}{chapter}{\abstractheadingstr}
    }
 
    % GLOSSARY
    %
-   \def\glossary{\chapter*{\centerline{GLOSSARY}}
-   \addcontentsline{toc}{chapter}{GLOSSARY}
+   \def\glossaryheadingstr{Glossary}
+   \def\glossary{\chapter*{\glossaryheadingstr}%{\centerline{GLOSSARY}}
+   \addcontentsline{toc}{chapter}{\glossaryheadingstr}
    }
 
    % ABBREVIATIONS
    %
-   \def\abbreviations{\chapter*{\centerline{ABBREVIATIONS}}
-   \addcontentsline{toc}{chapter}{ABBREVIATIONS}
+   \def\abbrvheadingstr{Abbreviations}
+   \def\abbreviations{\chapter*{\abbrvheadingstr}%{\centerline{ABBREVIATIONS}}
+   \addcontentsline{toc}{chapter}{\abbrvheadingstr}
    }
 
    % Use the nomencl package for the NOTATION section.
@@ -339,33 +328,38 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
    %LIST OF PAPERS
    \def\listofpapers{
            \normalbaselines
-           \chapter*{\centerline{LIST OF PAPERS BASED ON THESIS}}
-           \markboth{LIST OF PAPERS BASED ON THESIS}{LIST OF PAPERS BASED ON THESIS}
+           \chapter*{List of Papers }%{\centerline{LIST OF PAPERS
+                                %BASED ON THESIS}}
+           \markboth{List of papers based on thesis}{List of papers based on thesis}
+           %\markboth{LIST OF PAPERS BASED ON THESIS}{LIST OF PAPERS BASED ON THESIS}
            %\addcontentsline{toc}{chapter}{LIST OF PAPERS BASED ON THESIS}
    }
 
    
    % CV
-   \def\CV{\chapter*{\centerline{CURRICULUM VITAE}}}
+   \def\cvheadingstr{Curriculum Vitae}
+   \def\CV{\chapter*{\cvheadingstr}}%{\centerline{CURRICULUM VITAE}}}
 
    % Comittee
    \if@PhD
-       \def\committee{\chapter*{\centerline{DOCTORAL COMMITTEE}}}
+       \def\committee{\chapter*{Doctoral Committee}}%{\centerline{DOCTORAL COMMITTEE}}}
    \else
        \if@MS
-          \def\committee{\chapter*{\centerline{GENERAL TEST COMITTEE}}}
+          \def\committee{\chapter*{General Test Committee}}%{\centerline{GENERAL TEST COMITTEE}}}
         \fi
    \fi
 
 
    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-   % Renewed commands to set the titles of various pages correctly.
-   \renewcommand\contentsname{\centering TABLE OF CONTENTS}
-   \renewcommand\listfigurename{\centering LIST OF FIGURES}
-   \renewcommand\listtablename{\centering LIST OF TABLES}
-   \renewcommand{\chaptername}{CHAPTER}
-   \renewcommand\bibname{\centering REFERENCES}
-   \renewcommand\appendixname{APPENDIX}
+   % Renewed commands to set the titles of various pages --correctly--
+   % in ugly CAPS.
+   % hyperbolicme: owing to 
+%    \renewcommand\contentsname{\centering CONTENTS} % TABLE OF 
+%    \renewcommand\listfigurename{\centering LIST OF FIGURES}
+%    \renewcommand\listtablename{\centering LIST OF TABLES}
+%    \renewcommand{\chaptername}{CHAPTER}
+%    \renewcommand\bibname{\centering REFERENCES}
+%    \renewcommand\appendixname{APPENDIX}
 \fi
 
 %% hyperbolicme: changing overall font to Computer Modern Roman

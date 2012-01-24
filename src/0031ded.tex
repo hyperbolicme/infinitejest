@@ -1,18 +1,66 @@
 \definecolor{dim}{rgb}{0.7,0.7,0.7}
-\def \dimspace {0.125in}
+\def \dimspace {0in} %{0.125in}
+\def \dimspacemore {0.5in} %{0.125in}
+\def \authspace {-0.25in}
+\def \brightspace {0.375in}
+
 
 {%
+  \thispagestyle{empty}
   \fontencoding{T1}%
   \fontfamily{bch} %{put} %{bch} % {pbk} % \fontfamily{cmdh}
   % \fontfamily{pag}
   \selectfont%
  
-  \vglue -0.5in % this makes top margin 2in
+  \vglue -1in % this changes top margin 
 %   \vskip -5ex%
 %   \hspace{5in}\parbox{1in}{\raggedright Hello world}
 
-  \hspace{-1in}%
-  \parbox[c]{4in}{%
+  \hspace{-0.75in}%
+  \parbox[t]{6.5in}{%
+    \Large \noindent \raggedright%
+    \color{dim}{%
+      % One teacher called these moments 'mathematical
+      % experiences'. What I didn't know then was that
+      [...] a mathematical experience was aesthetic in nature, an
+      epiphany in Joyce's original sense. These moments appeared in
+      proof-completions, or maybe algorithms. Or like a gorgeously
+      simple solution you suddenly see after filling half a notebook
+      with gnarly attempted solutions. It was really an experience of
+      what I think Yeats called ``the click of a well made box''.%
+      % The word I always think of is as 'click'.
+      {%
+        \vspace{\authspace}
+        \small \par \hfill%
+        D.\,F.\,W.%
+      }%
+    }%
+  }%
+
+  \vspace{\dimspace}
+    
+ 
+  \hspace{1in}%
+  \parbox{4in}{ }{%
+    \LARGE 
+    \raggedleft \noindent%
+    \color{dim}{%
+      Math Graffiti: Kilroy wasn't Haar.  Free the group.  Nuke the kernel.  Power to
+      the $n$.  $N = 1 \Rightarrow P = NP$ %
+      {%
+%        \vspace{\authspace}%
+        \small \par \hfill%
+        \emph{Concrete Mathematics (margin notes)}%
+      }%
+    }%
+  }%
+
+  \vspace{\dimspace}
+    
+
+  \hspace{-1.25in}%
+%  \ding{125}
+  \parbox[t]{5in}{%
     \large \raggedright \noindent %
     \color{dim}{%
       The process of preparing programs for the digital computer is
@@ -20,90 +68,96 @@
       and scientifically rewarding, but also because it can be an
       aesthetic experience much like composing poetry or music.%
       {%
+%        \vspace{\authspace}%
         \small \par \hfill \emph{The Art of Computer Programming},
         D.\,E.\,K.%
       }%
     }%
   }%
 
-  \vspace{\dimspace}
-    
-  \hspace{1.5in}%
-  \parbox[t]{4in}{%
-    \Large \noindent \raggedleft%
-    \color{dim}{%
-      The rhetoric and mythos of science create the comforting image
-      of linear progression toward truth.%
-      {%
-        \small \par \hfill%
-        \textbf{mythos}; \emph{New Oxford American Dictionary, 2nd
-          Ed.}%
-      }%
-    }%
-  }
-  \\
-  \vspace{\dimspace}
+  
+  \vspace{\brightspace}
 
-  % \hspace{1in}
-  {\centering
-    \parbox{6in}{%
-%      \Huge 
-      \fontsize{27}{1.5}\selectfont
-      \centering \noindent %
-%      \textbf{
-      \emph{L'art c'est la solution au chaos.} \par \noindent
-      \noindent (Art is the solution to chaos.)
-%      }
-%       {%
-%         \small \par \hfill%
-%         \emph{citation needed.}%
-%       }%
+  {%
+      \centering%
+      \hspace{-1.25in}
+      \parbox{8in}{%
+      \fontsize{36}{1.5}\selectfont%
+      \centering \noindent%
+      \emph{L'art c'est la solution au chaos.}%
+      \par \noindent%
+      \normalsize (Art is the solution to chaos.)%
     }%
   }%
   
-  \vspace{\dimspace}
+  \vspace{\brightspace}
     
-  \hspace{-0.25in}%
-  \parbox{2.5in}{%
-    \Large 
-    \raggedright \noindent%
+ \hspace{-0.25in}%
+  \parbox[t]{6.5in}{%
+    \LARGE  \noindent \raggedleft%
     \color{dim}{%
-      Kilroy wasn't Haar.  Free the group.  Nuke the kernel.  Power to
-      the $n$.  $N = 1 \Rightarrow P = NP$ %
+      \textbf{myth\textperiodcentered os} {|{\huge $'$mi $\theta$
+          $\overline{o}$s}|} \\
+      a set of beliefs or assumptions about something
+      \emph{ :\\ 
+      the rhetoric and mythos of science create the comforting image
+      of linear progression toward truth.}%
+      {%
+%        \vspace{\authspace}%
+        \small \par \hfill%
+        \emph{New Oxford American Dictionary, 2nd
+          Ed.}%
+     }%
     }%
-    {%
-      \small \par \hfill%
-      \emph{Concrete Mathematics}%
-    }%
-  }%
+  }
+
+
+
   \vspace{\dimspace}
 
-  \hspace{1in}%
-  \parbox{5in}{%
-    \large \raggedleft \noindent%
+  \hspace{-1in}%
+  \parbox{6in}{%
+    \singlespacing
+    \large \raggedright \noindent%
     \color{dim}{%
       Anything that happens, happens.  Anything that, in happening,
       causes something else to happen, causes something else to
       happen.  Anything that, in happening, causes itself to happen
       again, happens again.  It doesn't necessarily do it in
-      chronological order, though.  }%
-    {%
-      \small \par \hfill%
-      \emph{The Salmon of Doubt}, D.\,N.\,A.%
+      chronological order, though.%
+      {%
+%       \vspace{\authspace}%
+        \small \par \hfill%
+        \emph{The Salmon of Doubt}, D.\,N.\,A.%
+      }%
     }%
   }%
+
   \vspace{\dimspace}
 
-  \hspace{-0.50in}%
+  \hspace{1.5in}%
   \parbox{4in}{%
-    \huge \noindent \raggedright%
+    %\huge 
+    \Large 
+    \noindent \raggedleft%
     \color{dim}{%
       This is water, this is water.%
       {%
+%        \vspace{\authspace}%
         \small \par \hfill%
         D.\,F.\,W.%
       }%
     }%
   }%
+  % xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx
+  % xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx
+  % xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx
+  % xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx
+  % xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx
+  % xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx
+  % xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx
+  % xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx xxxx xx xxx
+
+  \vskip -02.5in % this changes bottom margin 
     
 }

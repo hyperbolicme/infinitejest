@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{DFH{\etalchar{+}}06}
+\begin{thebibliography}{HMPV00}
 
 \bibitem[ABH98]{abh98}
 J.~E. Atkins, E.~G. Boman, and B.~Hendrickson.
@@ -19,7 +19,7 @@ Annexstein and Swaminathan.
 
 \bibitem[Ben59]{sb59}
 S.~Benzer.
-\newblock On the topology of the genetic ﬁne structure.
+\newblock On the topology of the genetic fine structure.
 \newblock {\em Proc. Nat. Acad. Sci. U.S.A.}, 45:1607--1620, 1959.
 
 \bibitem[BL76]{bl76}
@@ -132,6 +132,16 @@ D.~R. Fulkerson and O.~A. Gross.
 \newblock Incidence matrices and interval graphs.
 \newblock {\em Pac.~J. Math.}, 15:835--855, 1965.
 
+\bibitem[Fis85]{fis85}
+Peter~C. Fishburn.
+\newblock {\em Interval Orders and Interval Graphs}.
+\newblock Wiley, 1985.
+
+\bibitem[Gav74]{gav74}
+Fanica Gavril.
+\newblock Algorithms on circular-arc graphs.
+\newblock {\em Networks}, 4:357–369, 1974.
+
 \bibitem[Gav78]{gav78}
 Fanica Gavril.
 \newblock A recognition algorithm for the intersection graphs of paths in
@@ -170,6 +180,12 @@ Dorit~S. Hochbaum and Asaf Levin.
 Wen-Lian Hsu and Ross~M. McConnell.
 \newblock {PC} trees and circular-ones arrangements.
 \newblock {\em Theoretical Computer Science}, 296:99--116, 2003.
+
+\bibitem[HMPV00]{hmpv00}
+Michel Habib, Ross~M. McConnell, Christophe Paul, and Laurent Viennot.
+\newblock Lex-{BFS} and partition refinement, with applications to transitive
+  orientation, interval graph recognition and consecutive ones testing.
+\newblock {\em Theoretical Computer Science}, 234(1--2):59--84, 2000.
 
 \bibitem[Hsu92]{wlh92}
 Wen-Lian Hsu.
@@ -210,6 +226,11 @@ Johnson, Krishnan, Chhugani, Kumar, and Venkatasubramanian.
 Neil~D. Jones, Y.~Edmund Lien, and William~T. Laaser.
 \newblock New problems complete for nondeterministic log space.
 \newblock {\em MST: Mathematical Systems Theory}, 10, 1976.
+
+\bibitem[Ken69]{ken69}
+D.~Kendall.
+\newblock Incidence matrices, interval graphs and seriation in archaeology.
+\newblock {\em Pacific Journal of Mathematics}, 1969.
 
 \bibitem[KKLV10]{kklv10}
 Johannes K{\"o}bler, Sebastian Kuhnert, Bastian Laubner, and Oleg Verbitsky.
@@ -322,6 +343,12 @@ W.~S. Robinson.
 \newblock A method for chronologically ordering archaeological deposits.
 \newblock {\em American Antiquity}, 16(4):293--301, 1951.
 
+\bibitem[Rob69]{rob69}
+Fred.~S. Roberts.
+\newblock Indiﬀerence graphs.
+\newblock In Frank Harary, editor, {\em Proof Techniques in Graph Theory},
+  pages 139--146. Academic Press, 1969.
+
 \bibitem[Sch93]{aas93}
 Alejandro~A. Schaffer.
 \newblock A faster algorithm to recognize undirected path graphs.
@@ -360,10 +387,36 @@ J.~Tan and L.~Zhang.
 \newblock The consecutive ones submatrix problem for sparse matrices.
 \newblock {\em Algorithmica}, 48(3):287--299, 2007.
 
+\bibitem[Vel82]{v82}
+M.~Veldhorst.
+\newblock An analysis of sparse matrix storage schemes.
+\newblock In {\em Mathematical Centre Tract (Vol. 150)}, Mathematical Centre,
+  Amsterdam, the Netherlands, 1982.
+
 \bibitem[Vel85]{v85}
-Marinus Veldhorst.
+M.~Veldhorst.
 \newblock Approximation of the consecutive ones matrix augmentation problem.
 \newblock {\em SIAM Journal on Computing}, 14(3):709--729, August 1985.
+
+\bibitem[Wal96]{wallace96}
+David~Foster Wallace.
+\newblock The string theory.
+\newblock {\em Esquire}, 126(1):56(14), July 1996.
+
+\bibitem[Wal99]{wallace99}
+David~Foster Wallace.
+\newblock {\em Brief Interviews with Hideous Men}.
+\newblock Little, Brown and Company, May 1999.
+
+\bibitem[Wal00]{wallace00}
+David~Foster Wallace.
+\newblock Rhetoric and the math melodrama.
+\newblock {\em Science}, 290(22):2263--2267, December 2000.
+
+\bibitem[Wal10]{wallace10}
+David~Foster Wallace.
+\newblock {\em Fate, Time, and Language: An Essay on Free Will}.
+\newblock Columbia University Press, reprint edition, December 2010.
 
 \bibitem[YC95]{yc95}
 Yu and Chen.

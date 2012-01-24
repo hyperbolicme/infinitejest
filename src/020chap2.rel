@@ -23,17 +23,19 @@
 
 ("ch:copsurvey" "s" "This chapter surveys several results that are significant to this thesis or to \\COP in general. Thes" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
-(toc "toc" "    1.1 \\COP in Graph Theory" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 2 "1.1" "\\section{\\COP in Graph Theory}" 527)
+(toc "toc" "    1.1 \\COP in Graph Theory" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 2 "1.1" "\\section{\\COP in Graph Theory}" 499)
 
 ("def:graphmatrices" "s" "Let $G$ and $H$ be defined as follows. $G = (V,E_G)$ is a graph with vertex set $V = \\{v_i \\mid i \\i" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+
+("def::maxcliquematrix" "i" "\\emph{Maximal clique matrix} or \\emph{vertex-clique incidence matrix} of $G$ is the $n \\times k$ bin" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
 ("def:graphwithcop" "s" "% Let $G$ be a graph and $H$ be a bipartite graph. \\begin{enumerate}[\\ref{def:graphwithcop}--i.] " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
 ("def::concave-round" "i" "$G$ is \\emph{concave-round} if its augmented adjacency matrix has \\CROP. \\tnote{cite BHY00} \\tnote[m" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
-("tab:graphmatrices" "t" "\\figtabsize **** Graph matrices" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+("def::convexbi" "i" "$H$ is \\emph{convex bipartite on columns (rows)} if its half adjacency matrix has \\COP on rows (colu" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
-(toc "toc" "    1.2 Matrices with COP" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 2 "1.2" "\\section{Matrices with COP}" 5911)
+(toc "toc" "    1.2 Matrices with COP" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 2 "1.2" "\\section{Matrices with COP}" 6134)
 
 ("sec:surveycoptest" "s" "The most important questions with respect to a particular property desired in a structure/object are" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
@@ -45,43 +47,75 @@
 
 ("q:nocopcert" "i" "If algorithm for (\\ref{q:testcop}) returns \\textbf{false}, can a certificate for this be computed? " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
-("tab:cophistory" "t" "\\figtabsize A brief history of \\COP research" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
-
-(toc "toc" "      1.2.1 Tucker's forbidden submatrices for \\COP" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 3 "1.2.1" "\\subsection{Tucker's forbidden submatrices for \\COP}" 8476)
+(toc "toc" "      1.2.1 Tucker's forbidden submatrices for \\COP" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 3 "1.2.1" "\\subsection{Tucker's forbidden submatrices for \\COP}" 9343)
 
 ("th:tuckeratfree" "s" " " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
 ("th:tuckerforbidden" "s" " " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
-("fig:forbiddensubgraphs" "f" "\\figtabsize Forbidden subgraphs of a convex bipartite graph" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+("fig:forbiddensubgraphs" "f" "\\figtabsize Tucker's forbidden subgraphs" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
 ("th:tuckercop" "s" " " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
-(toc "toc" "    1.3 Optimization problems in COP" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 2 "1.3" "\\section{Optimization problems in COP}" 12623)
+(toc "toc" "      1.2.2 Booth and Lueker's $PQ$ tree -- a linear COT algorithm" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 3 "1.2.2" "\\subsection{Booth and Lueker's $PQ$ tree -- a linear COT algorithm}" 12808)
 
-("sec:surveycopopt" "s" "\\tnote{Expand on ref:sec:optcop} \\section{********* Certifying Algorithms}  \\tnote{Expand on sec:app" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+("def::nodep" "i" "The children of $P$ nodes are unordered. They can be permuted in any fashion to obtain a new \\COP or" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
-(toc "toc" "    1.4 ********* Certifying Algorithms" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 2 "1.4" "\\section{********* Certifying Algorithms}" 12721)
+("def::nodeq" "i" "The children of $Q$ nodes are linearly ordered. Their order can be reversed to obtain a new \\COP ord" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
-("sec:surveycertalgo" "s" "\\tnote{Expand on sec:appcertalgo} \\tnote{ (certification McC04 theme)} \\section{********* COP in Rel" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+("def:pqtree" "s" " " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
-(toc "toc" "    1.5 ********* COP in Relational Database Model" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 2 "1.5" "\\section{********* COP in Relational Database Model}" 12863)
+(toc "toc" "      1.2.3 \\PQRtree\\ -- COP for set systems" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 3 "1.2.3" "\\subsection{\\PQRtree\\ --  COP for set systems}" 18279)
 
-("sec:surveyrdbm" "s" "\\tnote{Expand on sec:apprdbm} \\tnote{(set systems theme)} \\section{********* COP in Graph Isomorphis" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+("sec:surveycertalgo" "s" "Section~\\ref{sec:motive} mentions how a binary matrix naturally maps to a system of sets. A set can " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
-(toc "toc" "    1.6 ********* COP in Graph Isomorphism" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 2 "1.6" "\\section{********* COP in Graph Isomorphism}" 12998)
+("def:matrixsetsystem" "s" "% % [\\emph{Set system of a binary matrix}.] Let $M$ be a binary matrix of order $n \\times m$ and $\\{" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
-("sec:surveygraphiso" "s" "\\tnote{Expand on sec:appgraphiso} \\tnote{(canonization theme)} \\section*{-- REFERENCE CONTENT --} %%" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+("def:orthosets" "s" "% Let $\\cF$ be a set system with universe $U$ and sets $A, B \\in \\cF$. \\begin{enumerate} " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
-(toc "toc" "      * -- REFERENCE CONTENT --" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 2 "  *" "\\section*{-- REFERENCE CONTENT --}" 13135)
+("mcc1" "n" "\\cite[Def.~3.1]{mcc04} uses the term {\\em non-overlapping family} of $\\cF$ and denotes it by $\\cN(\\c" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
-(toc "toc" "      1.6.1 Matrices with COP" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 3 "1.6.1" "\\subsection{Matrices with COP}" 14109)
+("mcc2" "n" "\\cite{mcc04} calls this a {\\em weakly partative family}. " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
-("sec:copmatrices" "s" "The obvious first questions after being introduced to the consecutive ones property of binary matric" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+("mcc3" "n" "\\cite[Def.~3.2]{mcc04} calls this the {\\em weak closure} of $\\cF$ denoted by $\\cW(\\cF)$. " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
-(toc "toc" "      1.6.2 Optimization problems in COP" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 3 "1.6.2" "\\subsection{Optimization problems in COP}" 17841)
+("th:validcop" "s" "For any set system $\\cF$ we have the following. \\par \\centering $\\valid{\\cF} = \\valid{\\overline{\\cF}" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
-("sec:optcop" "s" "So far we have been concerned about matrices that have the consecutive ones property. However in rea" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+("pr:validcop" "s" "Any set that is consecutive on all the \\COP permutations of $\\cF$ is present in $\\overline{\\cF}$. " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+
+("th:mmdecomp" "s" "For any set system $\\cF$, and $\\emptyset \\ne H \\in \\overline{\\cF} \\cap \\cF^{\\bot}$ we have the follo" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+
+("th:pqrfinalmm" "s" "If $\\cF$ is a set system with universe $U$ and $|U| \\ge 3$ then one of the following statements hold" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+
+("th::it1" "i" "$\\overline{\\cF} = \\cT(U)$ " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+
+("th::it2" "i" "$\\overline{\\cF} = consec(\\alpha)$\\tnote{what is consec?} for some permutation $\\alpha$ on $U$ " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+
+("th::it3" "i" "$\\overline{\\cF} = \\power{U}$ " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+
+("tab:pqrcomparison" "t" "Comparision of \\cite{mm96} \\PQRtree, \\cite{n89} \\gPQtree, \\cite{mcc04} generalized \\PQtree " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+
+(toc "toc" "      1.2.4 \\PCtree -- a generalization of \\PQtree" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 3 "1.2.4" "\\subsection{\\PCtree -- a generalization of \\PQtree}" 32527)
+
+("def:pctree" "s" "[\\emph{\\PCtree} \\cite{wlh01,d08phd}.] A \\PCtree of matrix $M$ with \\CROP on columns (rows), is a tre" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+
+("def::pcmirror" "i" "The tree can be changed by applying the following ``mirroring'' operation to obtain a new \\CROP orde" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+
+("fig:pctree" "f" "\\figtabsize \\PCtree \\temptext{ PLACEHOLDER IMGS \\cite{hm03, d08phd}}" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+
+(toc "toc" "      1.2.5 ICPIA - a set cardinality based \\COP test" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 3 "1.2.5" "\\subsection{ICPIA - a set cardinality based \\COP test}" 36358)
+
+(toc "toc" "      1.2.6 Other \\COP testing algorithms" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 3 "1.2.6" "\\subsection{Other \\COP testing algorithms}" 41752)
+
+(toc "toc" "    1.3 Optimization problems in COP" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 2 "1.3" "\\section{Optimization problems in COP}" 42608)
+
+("sec:surveycopopt" "s" "\\tnote{Expand on ref:sec:optcop} \\temptext{TEXT INTRODUCING SECTION} \\subsection{Incompatibility gra" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
+
+(toc "toc" "      1.3.1 Incompatibility graph - a certificate for no \\COP" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 3 "1.3.1" "\\subsection{Incompatibility graph - a certificate for no \\COP}" 42744)
+
+(toc "toc" "    1.4 COP in Graph Isomorphism" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil 2 "1.4" "\\section{COP in Graph Isomorphism}" 52938)
+
+("sec:surveygraphiso" "s" "\\tnote{Expand on sec:appgraphiso} \\tnote{(canonization theme)} \\tnote[pressing]{ADD: peo exists iff " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex" nil)
 
 (eof "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/020chap2.tex")
 ))

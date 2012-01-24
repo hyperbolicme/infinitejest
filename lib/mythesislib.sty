@@ -8,6 +8,12 @@
 \ProvidesPackage{mythesislib} [2011/12/21]
 
 %\usepackage{color}
+\usepackage[Conny]{fncychap}   % Fancy chapter headings
+                               %  Options: Lenny X, Glenn X, Conny, Rejne X,
+                               %  Bjarne
+
+
+\usepackage[nottoc]{tocbibind} % Adds LoT, LoF, Bib, Index etc to toc
 \usepackage{tikz}
 \usetikzlibrary{arrows,decorations.pathreplacing,backgrounds,positioning,fit,petri}
 
@@ -21,6 +27,9 @@
 \usepackage{colortbl}
 \usepackage{array,arydshln}
 \usepackage{multirow}
+%\usepackage{pifont} % extra font
+
+
 %\usepackage{fancybox}          % For oval boxes, shadowed etc.
 %\usepackage{picinpar}
 
@@ -28,8 +37,9 @@
 %% EASIER WITH ONE FILE EDIT.
 
 %%% Sizes and widths and other relevant formatting numbers %%%
+\def \sanserifstyleon {\fontencoding{OT1}\fontfamily{cmss}\selectfont}
 \def \secfirstparatrim {-5mm}
-\def \figtabsize {\footnotesize}
+\def \figtabsize {\footnotesize \fontencoding{OT1}\fontfamily{cmss}\selectfont}
 \def \probdefwidth {0.85\linewidth}
 \def \ie {i.\,e.\xspace}
 \def \iff {if and only if\xspace}
@@ -117,7 +127,6 @@
 \def\triplemaltinbox{\fbox{\footnotesize\maltese\maltese\maltese}}
 
 \newcommand{\power}[1]{2^{#1}}%{\cP\left(#1\right)}
-\newcommand{\defnstop}{\hfill \singlemaltinbox} 
 \newcommand{\temptext}[1]           % For public draft notes 
   {{\color{blue} \footnotesize #1}} 
 \newcommand{\supt}[1]{supp\left(#1\right)}
@@ -152,21 +161,22 @@
 % \newcommand\botfigrule{\hrule height 1pt \vspace{1pt} \hrule height 0.5pt}  % Command same as topfigrule but for
 %                                 % ones at bottom of page.
 
-
 %%%%%%%%%%%%%%%%
 %% The following are meant to be used with amsthm
 %
 \newtheoremstyle{defnstyle}%  Custom style: Definition
   {20pt}{20pt}%               Space above & below
-  {\thesisspacing \small} %   Body style
+  {\thesisspacing \sanserifstyleon}%\small} %   Body style
     % \fontfamily{cmss}\selectfont\scriptsize % \sffamily
   {0pt}%                      Heading indent amount
-  {\fontfamily{bch}
-    \selectfont
+  {% \fontfamily{bch}
+%     \selectfont
+    \sanserifstyleon
     \normalsize
     \bfseries}{.}%            Heading font and punctuation after.
   {5pt}%                      Spacing after heading.
   {\thmname{#1}\thmnumber{ #2}\thmnote{ \textbf{(#3)}}}% Head spec 
+\newcommand{\dstop}{} %{\hfill \singlemaltinbox} 
 %
 \newtheoremstyle{thmstyle}%   Custom style: Theorem, Lemma, etc.
   {20pt}{0pt}%               Space above & below
@@ -179,6 +189,20 @@
     \thesisspacing}{.}%       Heading font and punctuation after.
   {5pt}%\newline%{0pt}%       Spacing after heading.
   {\thmname{#1}\thmnumber{ #2}\thmnote{\textbf{ (#3)}}}% Head spec 
+%
+\newtheoremstyle{thmsansstyle}%Custom style: Theorems without proof
+                              % environment following it.
+  {20pt}{20pt}%               Space above & below
+  {\thesisspacing \em}    %   Body style             % \sffamily
+  {0pt}%                      Heading indent amount
+  {\fontfamily{bch}
+    \selectfont
+    \normalsize
+    \bfseries 
+    \thesisspacing}{.}%       Heading font and punctuation after.
+  {5pt}%\newline%{0pt}%       Spacing after heading.
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\textbf{ (#3)}}}% Head spec 
+
 %
 \newtheoremstyle{obsstyle}%  Custom style: Observation
   {10pt}{5pt}%                Space above & below
@@ -207,6 +231,8 @@
 %
 \theoremstyle{thmstyle}                % Apply custom style
 \newtheorem{theorem}{Theorem}[section] % Section relative numbering. 
+\theoremstyle{thmsansstyle}                % Apply custom style
+\newtheorem{theoremsansproof}[theorem]{Theorem}     % Shares counter with theorem.
 \theoremstyle{thmstyle}                % Apply custom style
 \newtheorem{lemma}[theorem]{Lemma}     % Shares counter with theorem.
 \theoremstyle{thmstyle}                % Apply custom style

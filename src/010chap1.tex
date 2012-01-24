@@ -14,22 +14,23 @@ namely path graph isomorphism.
 
 \section{Organization of the document}
 \label{sec:orgofdoc}
-This chapter (Chapter~\ref{ch:intro}) introduces the area of research
-and the problems addressed in this thesis.  Section~\ref{sec:problem}
-introduces the main problem of this thesis by way of an
+Chapter~\ref{ch:intro} introduces the area of research and the
+problems addressed in this thesis.  Chapter~\ref{ch:copsurvey} gives a
+more detailed survey briefed in Section~\ref{sec:background}.
+Chapter~\ref{ch:myresearch} details all the results obtained to the
+problems of this thesis and finally the conclusion of the thesis is
+discussed in Chapter~\ref{ch:conclusion}.
+
+
+In this chapter, Section~\ref{sec:problem} introduces the main problem
+of this thesis by way of an
 illustration. Section~\ref{sec:basicprelim} lays out a few general
 definitions that are helpful in understanding the rest of the chapter.
-Section~\ref{sec:background} gives a brief survey of COP
-and optimization problems related to it followed by motivation for the
+Section~\ref{sec:background} gives a brief survey of COP and
+optimization problems related to it followed by motivation for the
 thesis in Section~\ref{sec:motive}.  Section~\ref{sec:results}
 presents a summary of our results on the extension of COP namely, the
 tree path labeling problem.
-
-Chapter~\ref{ch:copsurvey} gives a more detailed survey briefed in
-Section~\ref{sec:background}.  Chapter~\ref{ch:myresearch} details all
-the results obtained to the problems of this thesis and finally the
-conclusion of the thesis is discussed in Chapter~\ref{ch:conclusion}.
-
 
 % \tnote{testing 1 2 3...}%
 % \tnote[bogus1]{testing 1 2 3...}%
@@ -45,8 +46,9 @@ conclusion of the thesis is discussed in Chapter~\ref{ch:conclusion}.
 A group of students, \Pa, \Pig, \Sn, \Wo, \Vi, \Li, \Ch, \Sa, \Fr,
 \Sc\ and \Lu\ enroll at the {\WSI} for a liberal arts programme.  As
 part of their semester thesis, they pick a body of work to study and
-form the namesake study groups, {\LLL}, {\GGG}, {\BBB} and
-{\TTT}\tnote[minor]{put bib entries for these works!}. A student will be
+form the namesake study groups, {\LLL} \cite{wallace99}, {\GGG} \cite{wallace96}, {\BBB}
+\cite{wallace00} and
+{\TTT} \cite{wallace10}. A student will be
 in at least one study group and may be in more than one. For instance,
 as will be seen later, {\Fr} studies both {\LLL} and {\TTT} while \Wo\
 studies only \BBB.
@@ -84,7 +86,7 @@ the street map for {\residenceblock}. It may be noted that as a graph,
 it classifies as a tree.
 
 
-\begin{table}[t] %[htbp]
+\begin{table}[b] %[htbp]
   \centering
   {\footnotesize    
     \begin{tabular}{l||l}
@@ -147,59 +149,38 @@ shown in Figure~\ref{fig:streetmappathpeople}. Table~\ref{tab:iltree}
 shows the same solution set theoretically.  How this is
 algorithmically computed is the focus of this thesis.
 
-%D<debug> figures inside tables
-% \begin{tabular}{cc}
-%  \begin{figure} %[t]%
-% %    \centering
-%     \includegraphics[scale=0.2]{../img/1_infinite_loop.png}
-% %    \label{fig:streetmap}
-%     \caption{--placeholder--}
-%   \end{figure}
-%     &
-%   \begin{figure} %[t]%
-% %    \centering
-%     \includegraphics[scale=0.2]{../img/2_infinite_loop_BTWF.png}
-% %    \label{fig:streetmappath}
-%     \caption{--placeholder--}
-%   \end{figure}
-% \end{tabular}
-
+% <debug> figures inside tables -- doesn't work. see git history to
+% know what was tried.
 
 \begin{figure}[htbp] %[t]%
   \centering
-  \includegraphics[scale=0.2]{../img/1_infinite_loop.png}
+  \vspace{-10mm}
+  \includegraphics[scale=0.45]{../img/1_infinite_loop__cropped.pdf}
   \caption{\figtabsize {\residenceblock} street map.}
   \label{fig:streetmap}
 
-  \includegraphics[scale=0.2]{../img/2_infinite_loop_BTWF.png}
+  \includegraphics[scale=0.45]{../img/2_infinite_loop_BTWF__cropped.pdf}
   \caption[\figtabsize \residenceblock street map with study group
     routes allocated.]{\figtabsize {\residenceblock} street map with study group
-    routes allocated. Routes are color coded as follows: red for
-    \textcolor{red}{$\xLLL$} group, blue for \textcolor{blue}{$\xGGG$}
-    group, orange for \textcolor{yellow}{$\xBBB$} group, green for
-    \textcolor{green}{$\xTTT$} group}
-  \label{fig:streetmappath}
-%   \caption{\figtabsize (a) {\residenceblock} street map (b)
-%     {\residenceblock} street map with study group routes
-%     allocated. Routes are color coded as follows: red for
+    routes allocated. % Routes are color coded as follows: red for
 %     \textcolor{red}{$\xLLL$} group, blue for \textcolor{blue}{$\xGGG$}
 %     group, orange for \textcolor{yellow}{$\xBBB$} group, green for
-%     \textcolor{green}{$\xTTT$} group}
-%  \label{fig:streetmap}
+%     \textcolor{green}{$\xTTT$} group
+  }
+  \label{fig:streetmappath}
 
-  \includegraphics[scale=0.5]{../img/3_infinite_loop.png}
+  \includegraphics[scale=0.5]{../img/3_infinite_loop.pdf}
   \caption[\figtabsize Solution to the student accommodation
   problem.]{\figtabsize Individual allocation of apartments to
     students in {\residenceblock} that meets the requirements stated
-    before.  The routes are color coded as follows: red for
-    \textcolor{red}{$\xLLL$} group, blue for \textcolor{blue}{$\xGGG$}
-    group, orange for \textcolor{yellow}{$\xBBB$} group, green for
-    \textcolor{green}{$\xTTT$} group.\\ {\tiny {\em Peanuts images
+    before.  % The routes are color coded as follows: red for
+%     \textcolor{red}{$\xLLL$} group, blue for \textcolor{blue}{$\xGGG$}
+%     group, orange for \textcolor{yellow}{$\xBBB$} group, green for
+%     \textcolor{green}{$\xTTT$} group.
+    \\ {\tiny {\em Peanuts images
         {\copyright} Charles Schulz}}}% YellowOrange
   \label{fig:streetmappathpeople}
-\end{figure} \tnote{[i] UPDATE IMAGE (b) 2-infinite-loop-BTWF.png. REMOVE
-  TITLES. ADD {$\xLLL$} {$\xGGG$} {$\xBBB$} {$\xTTT$} [ii]make
-  dashed/textured lines for routes. make it color agnostic.}
+\end{figure}
 
 \subsection{Special case}
 \label{sec:courseschedule}
@@ -598,7 +579,7 @@ of the target tree being a path, is the interval assignment problem.
 We focus on generalizing the notion of an ICPIA \cite{nsnrs09} to
 characterize feasible path assignments.  We show that for a given set
 system $\cF$, a tree $T$, and an assignment of paths from $T$ to the
-sets, there is a feasible\endnote{The notion of {\em feasibility} is
+sets, there is a feasible\footnote{The notion of {\em feasibility} is
   formally defined in Section~\ref{ch:prelims}.}  bijection between
 $U$ and $V(T)$ if and only if the intersection cardinalities among any
 three sets (not necessarily distinct) is equal to that of the
@@ -610,7 +591,7 @@ reduces the search space for the solution considerably from the
 universe of all possible bijections between $U$ and $V(T)$ to only
 those bijections that maintain the characterization.  Further, the
 filtering algorithm is also an efficient algorithm to test if a tree
-path labeling\endnote{The terms {\em tree path labeling} and {\em
+path labeling\footnote{The terms {\em tree path labeling} and {\em
     tree path assignment} are, in informal language,
   synonyms. Formally, the former refers to the bijection $\cl: \cF
   \rightarrow \cP$. The latter refers to the set of ordered pairs
@@ -623,16 +604,16 @@ path labeling\endnote{The terms {\em tree path labeling} and {\em
 
 We see in Section~\ref{sec:motive} that pairwise intersection
 cardinality preservation is necessary and sufficient for an interval
-assignment to be feasible for a given hypergraph\endnote{A {\em
+assignment to be feasible for a given hypergraph\footnote{A {\em
     hypergraph} is an alternate representation of a set system and
-  will be used in this thesis.}~\endnote{See Section~\ref{ch:prelims} for the
+  will be used in this thesis.}~\footnote{See Section~\ref{ch:prelims} for the
   formal definition.} and thus is a characterization for COP
 \cite{nsnrs09}. \tnote{Refer to the survey section that will list the
   theorems and/or lemma?} In our work we extend this characterization
 and find that trio-wise intersection cardinality preservation makes a
-tree path labeling\endnote{A {\em tree path labeling} $\cl$ is a
+tree path labeling\footnote{A {\em tree path labeling} $\cl$ is a
   bijection of paths from the target tree $T$ to the hyperedges in
-  given hypergraph $\cF$.}~\endnotemark[4]  (TPL) feasible, which is a generalization of the COP
+  given hypergraph $\cF$.}~\footnotemark[4]  (TPL) feasible, which is a generalization of the COP
 problem. This problem is defined as follows.
 
 {\small
@@ -666,7 +647,7 @@ We give a necessary and sufficient condition by way of {\em
   Intersection Cardinality Preservation Path Labeling} (ICPPL) and a
 filtering algorithm for {\FTPL} to output in affirmative. ICPPL
 captures the trio-wise cardinality property described
-earlier\endnote{See Section~\ref{sec:feasible} for the definition of
+earlier\footnote{See Section~\ref{sec:feasible} for the definition of
   ICPPL.}. This characterization can be checked in polynomial time.  A
 relevant consequence of this constructive procedure is that it is
 sufficient to iteratively check if three-way intersection
@@ -752,10 +733,10 @@ of significant interest in understanding the nature of {\sc Graph
   Isomorphism} which is polynomial time solvable in interval graphs
 while being hard on path graphs\cite{kklv10}. {\kstars} are a class
 of trees which are in many ways very close to intervals or paths. Each
-ray\endnote{The path from a leaf to the root, the vertex with highest
-  degree, is called a {\em ray} of the \kstar.}~\endnotemark[4] are independent except for the
-root\endnote{The vertex with maximum degree in a {\kstar} is called
-  {\em root}.}~\endnotemark[4] and hence can be
+ray\footnote{The path from a leaf to the root, the vertex with highest
+  degree, is called a {\em ray} of the \kstar.}~\footnotemark[4] are independent except for the
+root\footnote{The vertex with maximum degree in a {\kstar} is called
+  {\em root}.}~\footnotemark[4] and hence can be
 considered as an independent interval till the root. Our algorithm
 builds on this fact and uses the interval assignment
 algorithm\cite{nsnrs09} up until ``reaching'' the root and then uses
@@ -779,7 +760,7 @@ $\cF$ quite naturally partitions into equivalence classes known as
 \cite{wlh02} and \cite{kklv10}. Moreover, \cite{nsnrs09} discovered
 that these equivalence classes form a total order \tnote{Give informal
   definition of ``total order'' in footnote?}. We extend this to TPL
-and find that when $\cF$ is a path hypergraph\endnote{If there exists
+and find that when $\cF$ is a path hypergraph\footnote{If there exists
   an FTPL for a hypergraph $\cF$, it is called a path hypergraph.},
 the classes can be partially ordered as an in-tree in polynomial
 time. Once $\cF$ is ``broken'' into overlap components, one must
@@ -790,4 +771,4 @@ hard part which is currently open to be solved in polynomial time.
   later in the document}
 
 
-\theendnotes
+%\theendnotes

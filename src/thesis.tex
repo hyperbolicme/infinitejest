@@ -51,11 +51,12 @@
                              
 
 % \usepackage{comment}         % DEBUG ONLY
-\includeonly{020chap2}         % DEBUG ONLY 
+%\includeonly{010chap1}         % DEBUG ONLY 
+%\includeonly{020chap2}         % DEBUG ONLY 
 %\includeonly{030chap3,050appa}         % DEBUG ONLY 
 %\includeonly{0031ded}         % DEBUG ONLY
 
-\def \mythesissubmissiondate {13 January 2012}
+\def \mythesissubmissiondate {31 January 2012}
 \def \mythesissubmissionmonth {\MakeUppercase {January 2012}}
 
 
@@ -101,8 +102,8 @@
 \begin{singlespace}
   \tableofcontents
   \thispagestyle{empty}
-  \listoftables \addcontentsline{toc}{chapter}{LIST OF TABLES}
-  \listoffigures \addcontentsline{toc}{chapter}{LIST OF FIGURES}
+  \listoftables %\addcontentsline{toc}{chapter}{LIST OF TABLES}
+  \listoffigures %\addcontentsline{toc}{chapter}{LIST OF FIGURES}
 \end{singlespace}
 
 
@@ -123,7 +124,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Main body Chapters
 %
-\include{figuresandtables} % Load floats. No rendering.
+%\include{figuresandtables} % Load floats. No rendering.
+
 
 \include{010chap1}
 % turning counter reset. perhaps universal endnote counter is good?
@@ -147,10 +149,11 @@
 % Bibliography.
 %
 \begin{singlespace}
-  \addcontentsline{toc}{chapter}{REFERENCES \tnote[minor]{(i)make names
-    in bib file uniform style w.r.t. firstname/initials (ii) have back
-  refs - i.e. pages that cite the item.}}
+%  \addcontentsline{toc}{chapter}{REFERENCES }
 
+  \tnote[minor]{(i)make names
+    in bib file uniform style w.r.t. firstname/initials (ii) have back
+  refs - i.e. pages that cite the item.}
   {\footnotesize%
     \bibliographystyle{alpha}%
     \bibliography{../lib/cop-variants__thesis} %

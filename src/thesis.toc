@@ -1,42 +1,45 @@
-\contentsline {chapter}{ACKNOWLEDGEMENTS}{i}{chapter*.1}
-\contentsline {chapter}{ABSTRACT}{iii}{chapter*.2}
-\contentsline {chapter}{LIST OF TABLES}{vi}{chapter*.2}
-\contentsline {chapter}{LIST OF FIGURES}{vii}{chapter*.3}
-\contentsline {chapter}{ABBREVIATIONS}{vii}{chapter*.6}
-\contentsline {chapter}{NOTATION}{viii}{chapter*.7}
+\contentsline {chapter}{Acknowledgements}{ii}{section*.1}
+\contentsline {chapter}{Abstract}{iv}{section*.1}
+\contentsline {chapter}{List of Tables}{vii}{section*.2}
+\contentsline {chapter}{List of Figures}{viii}{section*.3}
+\contentsline {chapter}{Abbreviations}{ix}{section*.3}
+\contentsline {chapter}{Notation}{x}{section*.3}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Organization of the document}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Illustration of the problem}{1}{section.1.2}
+\contentsline {section}{\numberline {1.2}Illustration of the problem}{2}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Special case}{3}{subsection.1.2.1}
 \contentsline {section}{\numberline {1.3}Basic preliminaries - general definitions and nomenclature}{5}{section.1.3}
 \contentsline {section}{\numberline {1.4}Consecutive-ones Property Testing - a Brief Survey}{6}{section.1.4}
 \contentsline {subsection}{\numberline {1.4.1}Matrices with COP}{6}{subsection.1.4.1}
 \contentsline {subsection}{\numberline {1.4.2}Optimization problems in COP}{8}{subsection.1.4.2}
-\contentsline {section}{\numberline {1.5}Application of COP in Areas of Graph Theory and Algorithms}{9}{section.1.5}
-\contentsline {section}{\numberline {1.6}Generalization of COP - the Motivation}{9}{section.1.6}
+\contentsline {section}{\numberline {1.5}Application of COP in Areas of Graph Theory and Algorithms}{10}{section.1.5}
+\contentsline {section}{\numberline {1.6}Generalization of COP - the Motivation}{10}{section.1.6}
 \contentsline {section}{\numberline {1.7}Summary of New Results in this Thesis}{11}{section.1.7}
-\contentsline {chapter}{\numberline {2}Consecutive-ones Property\xspace \tmspace +\thinmuskip {.1667em}-- A Survey of Important Results}{14}{chapter.2}
-\contentsline {section}{\numberline {2.1}COP\xspace in Graph Theory}{14}{section.2.1}
-\contentsline {section}{\numberline {2.2}Matrices with COP}{17}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Tucker's forbidden submatrices for COP\xspace }{19}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Booth and Lueker's $PQ$ tree -- a linear COT algorithm}{21}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}$PQR$-tree\xspace \ -- COP for set systems}{23}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}$PC$-tree\xspace -- a generalization of $PQ$-tree\xspace }{28}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}Optimization problems in COP}{30}{section.2.3}
-\contentsline {section}{\numberline {2.4}COP in Graph Isomorphism}{31}{section.2.4}
-\contentsline {chapter}{\numberline {3}Tree Path Labeling of Path Hypergraphs - the New Results}{28}{chapter.3}
-\contentsline {section}{\numberline {3.1}Summary of Proposed Problems}{28}{section.3.1}
-\contentsline {section}{\numberline {3.2}Preliminaries to new results}{30}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Hypergraph Preliminaries}{30}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}Characterization of Feasible Tree Path Labeling}{33}{section.3.3}
-\contentsline {section}{\numberline {3.4} Computing feasible TPL with special target trees}{40}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Target tree is a Path}{40}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Target tree is a $k$-subdivided Star}{41}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Description of the Algorithm}{43}{subsection.3.4.3}
-\contentsline {section}{\numberline {3.5} TPL with no restrictions}{47}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Finding an assignment of tree paths to a set system}{48}{subsection.3.5.1}
-\contentsline {section}{\numberline {3.6}Complexity of Tree Path Assignment-A Discussion}{52}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Consecutive Ones Testing is in Logspace}{52}{subsection.3.6.1}
-\contentsline {chapter}{\numberline {4}Conclusion}{55}{chapter.4}
-\contentsline {chapter}{\numberline {A}More proofs \tnote {remove/modify}}{57}{appendix.A}
-\contentsline {chapter}{REFERENCES \tnote [minor]{(i)make names in bib file uniform style w.r.t. firstname/initials (ii) have back refs - i.e. pages that cite the item.}}{58}{section.2.4}
+\contentsline {chapter}{\numberline {2}Consecutive-ones Property -- A Survey of Important Results}{15}{chapter.2}
+\contentsline {section}{\numberline {2.1}COP\xspace in Graph Theory}{15}{section.2.1}
+\contentsline {section}{\numberline {2.2}Matrices with COP}{18}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Tucker's forbidden submatrices for COP\xspace }{21}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Booth and Lueker's $PQ$ tree -- a linear COT algorithm}{22}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}$PQR$-tree\xspace \ -- COP for set systems}{25}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}$PC$-tree\xspace -- a generalization of $PQ$-tree\xspace }{30}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}ICPIA - a set cardinality based COP\xspace test}{33}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}Other COP\xspace testing algorithms}{35}{subsection.2.2.6}
+\contentsline {section}{\numberline {2.3}Optimization problems in COP}{35}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Incompatibility graph - a certificate for no COP\xspace }{36}{subsection.2.3.1}
+\contentsline {section}{\numberline {2.4}COP in Graph Isomorphism}{38}{section.2.4}
+\contentsline {chapter}{\numberline {3}Tree Path Labeling of Path Hypergraphs - New Results}{39}{chapter.3}
+\contentsline {section}{\numberline {3.1}Summary of Proposed Problems}{39}{section.3.1}
+\contentsline {section}{\numberline {3.2}Preliminaries to new results}{42}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Hypergraph Preliminaries}{42}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Characterization of Feasible Tree Path Labeling}{45}{section.3.3}
+\contentsline {section}{\numberline {3.4} Computing feasible TPL with special target trees}{52}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Target tree is a Path}{52}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Target tree is a $k$-subdivided Star}{53}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Description of the Algorithm}{55}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5} TPL with no restrictions}{59}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Finding an assignment of tree paths to a set system}{60}{subsection.3.5.1}
+\contentsline {section}{\numberline {3.6}Complexity of Tree Path Assignment-A Discussion}{64}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Consecutive Ones Testing is in Logspace}{64}{subsection.3.6.1}
+\contentsline {chapter}{\numberline {4}Conclusion}{67}{chapter.4}
+\contentsline {chapter}{\numberline {A}More proofs \tnote {remove/modify}}{69}{chapter.1}
+\contentsline {chapter}{Bibliography}{70}{section*.4}

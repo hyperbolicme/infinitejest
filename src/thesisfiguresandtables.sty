@@ -8,7 +8,7 @@
 \ProvidesPackage{thesisfiguresandtables} [2012/01/05]
 
 
-\def\figcopmatrix{
+\def\figcopmatrix{%
   \begin{figure}[htbp] %[t] %
     \centering {\figtabsize
       \begin{tabular}[h]{l|lcccl}
@@ -50,10 +50,10 @@
 
     \label{fig:cop-matrix}
   \end{figure}
-}
+}%
 
 
-\def\figgraphmatrices{
+\def\figgraphmatrices{%
   \begin{figure}[htbp]% [t] % [p]%
     \centering
 
@@ -153,11 +153,11 @@
     IMAGES --}}
   \label{fig:graphmatrices}
   \end{figure}
-}
+}%
 
 
 
-\def\figpqtree{
+\def\figpqtree{%
   \begin{figure}[htbp]
     \centering
     \begin{tabular}[h]{lr}
@@ -193,4 +193,269 @@
         example matrix has been transposed. }]{mcc04}}
     \label{fig:pqtree}
   \end{figure}
+}%
+
+
+\def\tabgraphmatrices{%
+  \begin{table}[htbp]
+    \def\hcolwidth {3cm}% 
+    \def\colwidth {2.25cm}% 
+    \def\supset{\ \ \ $\bigcap$ \\\par}
+    \def\subset{\ \ \ $\bigcup$ \\\par}
+    \centering
+    {
+      \fontencoding{OT1}\fontfamily{cmss}\selectfont%
+      \footnotesize%
+      \setlength\extrarowheight{0.3in}
+
+      \begin{tabular}
+        {|>{\columncolor{\tblhcolor}}  lllll|} % Header column colored
+        \hline
+
+        \rowcolor[gray]{0.8} %                 Header row colored
+        \parbox[b]{\hcolwidth}{\sc Graph class} & 
+        \parbox[b]{\colwidth}{ \sc Adjacency matrix} & 
+        \parbox[b]{\colwidth}{ \sc Augmented adjacency matrix}& 
+        \parbox[b]{\colwidth}{ \sc Half\\ adjacency matrix} & 
+        \parbox[b]{\colwidth}{ \sc Maximal clique \\matrix}\\ 
+      
+
+        \parbox[b]{\hcolwidth}{Convex-round} & 
+        \parbox[c]{\colwidth}{ $\Leftrightarrow$ \CROP \\ (by defn.)} & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ }\\ 
+
+      
+        \parbox[b]{\hcolwidth}{Concave-round} & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ $\Leftrightarrow$ \CROP\\ (by defn.)} & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ }\\
+
+       % \parbox[t]{\hcolwidth}{ $\bigcap$}\\
+
+        \parbox[b]{\hcolwidth}{{\supset} {Circular-arc}} & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ $\Leftarrow$ \CROP \\ \cite{at72}} & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ $\Leftarrow$ \CROP}\\
+
+        \parbox[b]{\hcolwidth}{{\subset} Helly circular-arc} & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ $\Leftarrow$ \COP} & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ $\Leftrightarrow$ \CROP \\ \cite{gav74}}\\
+
+
+        \parbox[b]{\hcolwidth}{{\subset} Interval} & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ $\Leftarrow$ \COP} & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ $\Leftrightarrow$ \COP \\ \cite{fg65} }\\
+
+        \parbox[b]{\hcolwidth}{{\subset} Proper/unit interval} & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ $\Leftrightarrow$ \COP \\ \cite{rob69}} & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ $\Leftrightarrow$ \COP$r+c$ \\ \cite{fis85} }\\
+
+        % \hline
+        \rowcolor[gray]{0.8}&\multicolumn{4}{c|}{\sc Bipartite graphs}\\
+        % \hline
+
+        \parbox[b]{\hcolwidth}{Circular convex} & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ $\Leftrightarrow$ \CROP \\ (by defn.)} & 
+        \parbox[c]{\colwidth}{ }\\
+
+        \parbox[b]{\hcolwidth}{{\subset} Convex} & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ $\Leftrightarrow$ \COP \\ (by defn.)} & 
+        \parbox[c]{\colwidth}{ }\\
+
+
+        \parbox[b]{\hcolwidth}{{\subset} Biconvex} & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ } & 
+        \parbox[c]{\colwidth}{ $\Leftrightarrow$ \COP $r+c$ \\ (by defn.)} & 
+        \parbox[c]{\colwidth}{ }\\
+
+        \hline
+      \end{tabular}
+    }
+    \caption[\figtabsize Relationship between graph classes and graph
+    matrices with \COP or \CROP.]{\figtabsize Relationship between graph classes and graph
+      matrices in termes of their \COP or \CROP. The arrows indicate the
+      implication of the statement. $\Leftrightarrow$ indicates that the
+      membership in the graph class and the matrix propery are
+      equivalent. $\Leftarrow$ indicates that the matrix property implies
+      the membership in the graph class. $r+c$ indicates that the property
+      holds on rows and columns of the matrix. $\bigcup$ and $\bigcap$
+      indicate that the graph class above is a superset or subset, respectively, of
+      the graph class below.   \cite[Tab.~2.1]{d08phd}}
+    \label{tab:graphmatrices}
+  \end{table}
+}%
+
+
+\def\tabparboxw{10cm}% 
+\def\tabcophistory{%
+  \begin{table}[htbp]
+    \centering
+    {
+      \fontencoding{OT1}\fontfamily{cmss}\selectfont%
+      \footnotesize%
+
+      \begin{tabular}{lll}
+        \hline
+        \hline
+
+        1899 & \parbox[t]{\tabparboxw}{ First mention of \COP
+          (archaeology)} &   \cite{ken69} \\
+
+        \rowcolor[gray]{0.8} %
+        1951 & \parbox[t]{\tabparboxw}{ Heuristics for COT} & \cite{wsr51} \\
+
+        1965 & \parbox[t]{\tabparboxw}{ First polynomial time algorithm
+          for \COP testing} & \cite{fg65} \\ 
+
+        \rowcolor[gray]{0.8} %
+        1972 & \parbox[t]{\tabparboxw}{ Characterization for \COP -- forbidden
+          submatrices} &
+        \cite{at72} \\
+
+        1976 & \parbox[t]{\tabparboxw}{ First linear time algorithm for COT --
+          \PQtree} &
+        \cite{bl76} \\
+
+        \rowcolor[gray]{0.8} %
+        1992 & \parbox[t]{\tabparboxw}{ Linear
+          time algorithm COT without \PQtree} & \cite{wlh02}%\footnote{First
+        % published in \cite{wlh02isaac92}}
+        \\
+
+        2001 & \parbox[t]{\tabparboxw}{\PCtree\ -- a simplification of
+          \PQtree} & \cite{wlh01,hm03} \\  
+
+        \rowcolor[gray]{0.8} %     
+        1996 & \parbox[t]{\tabparboxw}{\PQRtree\ -- generalization of
+          \PQtree for any binary matrix regardless of its \COP status} &
+        \cite{mm96} \\ 
+
+        1998 & \parbox[t]{\tabparboxw}{ Almost linear time to construct
+          \PQRtree} & \cite{mpt98} \\ 
+
+        \rowcolor[gray]{0.8} %
+        2004 & \parbox[t]{\tabparboxw}{ A certifying algorithm for no
+          \COP.\\ Generalized \PQtree.} & \cite{mcc04} \\ 
+
+        2009 & \parbox[t]{\tabparboxw}{ Set theoretic, cardinality based
+          characterization of \COP\ -- ICPIA} & \cite{nsnrs09} \\ 
+
+        \rowcolor[gray]{0.8} %
+        2010 & \parbox[t]{\tabparboxw}{ Logspace \COP testing} &
+        \cite{kklv10}\\ 
+        \hline
+        \hline
+      \end{tabular}
+    }
+    \caption[\figtabsize A brief history of \COP research]{\figtabsize A
+      brief history of \COP research }
+    \label{tab:cophistory}
+  \end{table}
+}%
+
+
+
+\def\figforbiddensubmatrices{
+  \begin{figure}[htbp]
+    \centering
+    % \includegraphics[scale=0.35]{../img/tuckersforbiddensubmatrices.png}
+    \setlength\dashlinedash{1pt} %
+    \setlength\dashlinegap{0pt} % Make non zero if cline can be done
+    % with dashed lines.
+    \singlespacing
+    \begin{tabular}[h]{ll}
+      % \small
+      \begin{tabular}[t]{|lll ll l|l} %                   MATRIX 1
+        \multicolumn{7}{l}{\normalsize \hspace{-0.5in} $M_{I_k}, k \ge 1$}\\   
+        \multicolumn{6}{c}{\matrixbracetop{3.25}{$k+2$}}   \\
+        \cline{1-6} % \firsthline %      Begin matrix  %%%%%%
+        \un & \un & 0   & \multicolumn{2}{c}{\dots}  & 0    &
+        \hspace{-0.1in}\multirow{5}{*}{\matrixbraceright{2.5}{$k+2$}}   \\    
+        0   & \un & \un & 0 & ...& 0   \\
+        \multicolumn{6}{|c|}{\dots}                        \\
+        0   & \multicolumn{2}{c}{\dots}  & 0   & \un & \un \\
+        \cline{1-6} % \hdashline %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \un & 0   & \multicolumn{2}{c}{\dots}  & 0   & \un \\
+        \cline{1-6} % \lasthline %      End matrix  %%%%%%%%%
+      \end{tabular}
+      &%
+      % \small
+      \begin{tabular}[t]{|lll ll ll|l} %                   MATRIX 2
+        \multicolumn{8}{l}{\normalsize \hspace{-0.5in}$M_{II_k}, k \ge 1$}\\
+        \multicolumn{7}{c}{\matrixbracetop{3.8}{$k+3$}}            \\ 
+        \cline{1-7}%  \firsthline %      Begin matrix  %%%%%%%%%%%%
+        \un & \un & 0   & \multicolumn{3}{c:}{\dots}       & 0    &
+        \hspace{-0.1in}\multirow{6}{*}{\matrixbraceright{3}{$k+3$}}     \\
+        0   & \un & \un & 0 & \multicolumn{2}{c:}{\dots}   & 0   \\ 
+        \multicolumn{6}{|c:}{\dots}                        &     \\
+        0   & \multicolumn{2}{c}{\dots}  & 0   & \un              &
+        \multicolumn{1}{l:}{\un} & 0                           \\
+        \cline{1-6}    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        0   & \un & \multicolumn{4}{c}{\dots}              & \un \\
+        \un & \multicolumn{3}{c}{\dots}        & \un & 0   & \un \\
+        \cline{1-7}% \lasthline %      End matrix  %%%%%%%%%%%%%%%%
+      \end{tabular}
+      \\\\%
+      % \small
+      \begin{tabular}[t]{|lll ll l l|l} %                  MATRIX 3 
+        \multicolumn{8}{l}{\normalsize \hspace{-0.5in}$M_{III_k}, k \ge 1$}\\
+        \multicolumn{7}{c}{\matrixbracetop{3.8}{$k+3$}}            \\
+        \cline{1-7}%      \firsthline %      Begin matrix %%%%%%%%%
+        \un & \un & 0   & \multicolumn{3}{c:}{\dots}       & 0    &
+        \hspace{-0.1in}\multirow{5}{*}{\matrixbraceright{2.5}{$k+2$}}   \\
+        0   & \un & \un & 0 & \multicolumn{2}{c:}{\dots}   & 0   \\ 
+        \multicolumn{6}{|c:}{\dots}                        &     \\
+        0   & \multicolumn{2}{c}{\dots}  & 0   & \un              &
+        \multicolumn{1}{l:}{\un}                         & 0   \\
+        \cline{1-6}    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        0   & \un & \multicolumn{2}{c}{\dots}  & \un & 0   & \un \\
+        \cline{1-7}%      \lasthline %      End matrix %%%%%%%%%%%%
+      \end{tabular}
+      &%
+      % \small
+      \begin{tabular}[t]{|llllll|}  %                     MATRIX 4
+        \multicolumn{6}{l}{\normalsize \hspace{-0.5in}$M_{IV}$} \\
+        \multicolumn{6}{l}{} \\
+        \firsthline
+        \un & \un & 0 & 0 & 0 & 0   \\
+        0 & 0 & \un & \un & 0 & 0   \\
+        0 & 0 & 0 & 0 & \un & \un   \\
+        \un & 0 & \un & 0 & \un & 0 \\
+        \lasthline
+      \end{tabular}
+      \\\\%
+      % \small
+      \begin{tabular}[t]{|lllll|}  %                     MATRIX 5
+        \multicolumn{5}{l}{\normalsize \hspace{-0.5in}$M_{V}$} \\
+        \multicolumn{5}{l}{} \\
+        \firsthline
+        \un & \un & 0   & 0   & 0   \\
+        0   & 0   & \un & \un & 0   \\
+        \un & \un & \un & \un & 0   \\
+        \un & 0   & \un & 0   & \un \\
+        \lasthline
+      \end{tabular}
+    \end{tabular}
+
+    \caption[\figtabsize Tucker's forbidden submatrices]{\figtabsize
+      Tucker's forbidden submatrices for convex bipartite
+      graphs. \cite{at72}}
+    \label{fig:forbiddensubmatrices}
+  \end{figure}
 }
+

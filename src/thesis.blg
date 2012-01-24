@@ -6,7 +6,6 @@ A level-1 auxiliary file: 0031ded.aux
 A level-1 auxiliary file: 003abstract.aux
 A level-1 auxiliary file: 004abbrv.aux
 A level-1 auxiliary file: 005notation.aux
-A level-1 auxiliary file: figuresandtables.aux
 A level-1 auxiliary file: 010chap1.aux
 A level-1 auxiliary file: 020chap2.aux
 A level-1 auxiliary file: 030chap3.aux
@@ -15,46 +14,46 @@ A level-1 auxiliary file: 050appa.aux
 The style file: alpha.bst
 Database file #1: ../lib/cop-variants__thesis.bib
 Warning--I didn't find a database entry for "lec67"
-Warning--I didn't find a database entry for "wlh02isaac92"
-You've used 67 entries,
+Warning--I didn't find a database entry for "mm96-ref11"
+You've used 77 entries,
             2543 wiz_defined-function locations,
-            966 strings with 13315 characters,
-and the built_in function-call counts, 26131 in all, are:
-= -- 2679
-> -- 1175
-< -- 39
-+ -- 406
-- -- 382
-* -- 1851
-:= -- 4303
-add.period$ -- 207
-call.type$ -- 67
-change.case$ -- 401
-chr.to.int$ -- 66
-cite$ -- 67
-duplicate$ -- 1037
-empty$ -- 1879
-format.name$ -- 472
-if$ -- 5303
+            1017 strings with 14281 characters,
+and the built_in function-call counts, 29566 in all, are:
+= -- 3017
+> -- 1282
+< -- 49
++ -- 439
+- -- 413
+* -- 2078
+:= -- 4854
+add.period$ -- 238
+call.type$ -- 77
+change.case$ -- 452
+chr.to.int$ -- 76
+cite$ -- 77
+duplicate$ -- 1203
+empty$ -- 2168
+format.name$ -- 522
+if$ -- 6012
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 63
-newline$ -- 340
-num.names$ -- 203
-pop$ -- 322
+missing$ -- 76
+newline$ -- 390
+num.names$ -- 235
+pop$ -- 383
 preamble$ -- 1
-purify$ -- 473
+purify$ -- 536
 quote$ -- 0
-skip$ -- 902
+skip$ -- 1021
 stack$ -- 0
-substring$ -- 1536
-swap$ -- 159
-text.length$ -- 39
-text.prefix$ -- 25
+substring$ -- 1735
+swap$ -- 179
+text.length$ -- 49
+text.prefix$ -- 34
 top$ -- 0
-type$ -- 516
+type$ -- 584
 warning$ -- 0
-while$ -- 265
-width$ -- 74
-write$ -- 877
+while$ -- 296
+width$ -- 83
+write$ -- 1005
 (There were 2 warnings)

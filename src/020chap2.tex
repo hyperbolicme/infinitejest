@@ -2,7 +2,8 @@
 \def\tblhcolor {gray}
 
 
-\chapter{\CoP\,-- A Survey of Important Results}
+%\chapter{\CoP\,-- A Survey of Important Results}
+\chapter{Consecutive-ones Property -- A Survey of Important Results}
 \label{ch:copsurvey}
 
 This chapter surveys several results that are significant to this
@@ -122,24 +123,10 @@ Table~\ref{tab:graphmatrices} summarises the way these graphs are
 characterized by their matrices having \COP or \CROP.
 Our focus in this chapter (and thesis) is mainly \COP and 
 having seen how useful \COP is in identifying or characterizing many
-types of graphs\footnote{\COP has several other applications
-  \temptext{fill up.}}, we will now see results that study recognition of \COP
+types of graphs, we will now see results that study recognition of \COP
 in matrices in the following section.
 
-\temptext{ tab~\ref{tab:graphmatrices} -  have an abridged version
-  of table 2.1 in dom. see notes for the possibility of a
-  ``circle diagram''.} 
-\begin{table}[htbp]
-  \centering
-% \includegraphics[scale=0.1]{../img/circlediagram_domtab2.1__2.png} %
- \caption{\figtabsize Graph matrices \temptext{PLACEHOLDER}}
-  \label{tab:graphmatrices}
-\end{table}
-
-
-
-
-
+\tabgraphmatrices  
 
 \section{Matrices with COP}
 \label{sec:surveycoptest}
@@ -178,83 +165,16 @@ Section~\ref{sec:surveycopopt} and question~(\ref{q:nocopcert}) is discussed
 in Section~\ref{sec:surveycertalgo}.
 
 It may be noted that one way to design an algorithm to test for \COP
-is by deriving one from any interval graph recognition algorithm using the
-result {\sc hmpv00}\tnote{cite hmpv00} \tnote{in footnote put the theorem 2.7 - dom
-  pg 43} \cite{d08phd} which demonstrates how such a derivation can be
-done. However, this does not necessarily yield an efficient
-algorithm. We will see results that directly solve the problem on
-matrices since it is known that questions~(\ref{q:testcop}) and
-(\ref{q:copperm}) stated above for \COP are efficiently solvable.
+is by deriving one from any interval graph recognition algorithm using
+the result {\sc hmpv00}\tnote{cite hmpv00} \tnote{in footnote put the
+  theorem 2.7 - dom pg 43} \cite{d08phd} which demonstrates how such a
+derivation can be done. However, this does not necessarily yield an
+efficient algorithm. We will see results that directly solve the
+problem on matrices since it is known that questions~(\ref{q:testcop})
+and (\ref{q:copperm}) stated above for \COP are efficiently solvable.
 Table~\ref{tab:cophistory} gives a snapshot of these results.
 
-\tnote[important]{1899 by petrie -- cite
-         kendall 69 pacific journal of mathematics 1969 }
-
-\def\tabparboxw{10cm}
-\begin{table}[htbp]
-  \centering
-  {
-    \fontencoding{OT1}\fontfamily{cmss}\selectfont%
-    \footnotesize%
-
-    \begin{tabular}{lll}
-      \hline
-      \hline
-
-      1899 & \parbox[t]{\tabparboxw}{ First mention of \COP
-        (archaeology)} &                  \\
-
-      \rowcolor[gray]{0.8} %
-      1951 & \parbox[t]{\tabparboxw}{ Heuristics for COT} & \cite{wsr51} \\
-
-      1965 & \parbox[t]{\tabparboxw}{ First polynomial time algorithm
-        for \COP testing} & \cite{fg65} \\ 
-
-      \rowcolor[gray]{0.8} %
-      1972 & \parbox[t]{\tabparboxw}{ Characterization for \COP -- forbidden
-        submatrices} &
-      \cite{at72} \\
-
-      1976 & \parbox[t]{\tabparboxw}{ First linear time algorithm for COT --
-        \PQtree} &
-      \cite{bl76} \\
-
-      \rowcolor[gray]{0.8} %
-      1992 & \parbox[t]{\tabparboxw}{ Linear
-        time algorithm COT without \PQtree} & \cite{wlh02}%\footnote{First
-      % published in \cite{wlh02isaac92}}
-      \\
-
-      2001 & \parbox[t]{\tabparboxw}{\PCtree\ -- a simplification of
-        \PQtree} & \cite{wlh01,hm03} \\  
-
-      \rowcolor[gray]{0.8} %     
-      1996 & \parbox[t]{\tabparboxw}{\PQRtree\ -- generalization of
-        \PQtree for any binary matrix regardless of its \COP status} &
-      \cite{mm96} \\ 
-
-      1998 & \parbox[t]{\tabparboxw}{ Almost linear time to construct
-        \PQRtree} & \cite{mpt98} \\ 
-
-      \rowcolor[gray]{0.8} %
-      2004 & \parbox[t]{\tabparboxw}{ A certifying algorithm for no
-        \COP.\\ Generalized \PQtree.} & \cite{mcc04} \\ 
-
-      2009 & \parbox[t]{\tabparboxw}{ Set theoretic, cardinality based
-        characterization of \COP\ -- ICPIA} & \cite{nsnrs09} \\ 
-
-      \rowcolor[gray]{0.8} %
-      2010 & \parbox[t]{\tabparboxw}{ Logspace \COP testing} &
-      \cite{kklv10}\\ 
-      \hline
-      \hline
-    \end{tabular}
-  }
-\caption[\figtabsize A brief history of \COP research]{\figtabsize A
-  brief history of \COP research }
-\label{tab:cophistory}
-\end{table}
-
+\tabcophistory
 
 The first polynomial time algorithm for \COP testing was by
 \cite{fg65} which uses overlapping properties of columns with \un
@@ -277,7 +197,7 @@ recognition.
 
 
 \subsection{Tucker's forbidden submatrices for \COP}
-
+\label{sec:tucker}
 % \change{While it is remarkable that the first polynomial time
 %   algorithm for \COP testing came in }{The first polynomial time
 %   algorithm for \COP testing came in }\cite{fg65} \change{,}{.}
@@ -309,23 +229,23 @@ asteriodal triples -- in other words, it identifies the subgraphs that
 prevent the graph from being convex bipartite.
 
 
-\begin{theorem}
-  (\cite[Th.~6]{at72}, \cite[Th.~2.3]{d08phd})\\
+\begin{theoremsansproof}
+  [{\cite[Th.~6]{at72}, \cite[Th.~2.3]{d08phd}}]%\\
   A bipartite graph $G = (V_1, V_2, E)$ is convex bipartite on
   columns\footnote{Abridged to match terminology adopted in this
     document. See previous note.} \iff $V_1$ contains no asteroidal
   triple of $G$.
   \label{th:tuckeratfree}
-\end{theorem}
+\end{theoremsansproof}
 
-\begin{theorem}
-  (\cite[Th.~7]{at72}, \cite[Th.~2.4]{d08phd})\\
+\begin{theoremsansproof}
+  [{\cite[Th.~7]{at72}, \cite[Th.~2.4]{d08phd}}]%\\
   In a bipartite graph $G = (V_1, V_2, E)$ the vertex set $V_1$
   contains no asteroidal triple \iff $G$ contains none of the graphs
   $G_{I_k}$, $G_{II_k}$, $G_{III_k}$ (with $k \ge 1$), $G_{IV}$,
   $G_{V}$ as shown in Figure~\ref{fig:forbiddensubgraphs} as subgraphs.
   \label{th:tuckerforbidden}
-\end{theorem}
+\end{theoremsansproof}
 
 
 \begin{figure}[htbp]
@@ -341,115 +261,15 @@ Theorem~\ref{th:tuckeratfree} and Theorem~\ref{th:tuckerforbidden}
 result in the following Theorem~\ref{th:tuckercop} which characterizes
 matrices with \COP.
 
-\begin{theorem}
-  (\cite[Th.~9]{at72}, \cite[Th.~2.5]{d08phd})\\
+\begin{theoremsansproof}
+  [{\cite[Th.~9]{at72}, \cite[Th.~2.5]{d08phd}}]%\\
   A matrix $M$ has \COP \iff it contains none of the matrices 
 $M_{I_k}$, $M_{II_k}$, $M_{III_k}$ (with $k \ge 1$), $M_{IV}$,
   $M_{V}$ as shown in Figure~\ref{fig:forbiddensubmatrices} as submatrices.
   \label{th:tuckercop}
-\end{theorem}
+\end{theoremsansproof}
 
-\begin{figure}[htbp]
-  \centering
-%  \includegraphics[scale=0.35]{../img/tuckersforbiddensubmatrices.png}  
-  \setlength\dashlinedash{1pt} %
-  \setlength\dashlinegap{0pt}  %  Make non zero if cline can be done
-                               %   with dashed lines.
-  \singlespacing
-  \begin{tabular}[h]{ll}
-%   \small 
-   \begin{tabular}[t]{|lll ll l|l} %                   MATRIX 1
-      \multicolumn{7}{l}{\normalsize \hspace{-0.5in} $M_{I_k}, k \ge 1$}              \\   
-      \multicolumn{6}{c}{\matrixbracetop{3.25}{$k+2$}}   \\
-      \cline{1-6} % \firsthline %      Begin matrix  %%%%%%
-      \un & \un & 0   & \multicolumn{2}{c}{\dots}  & 0    &
-        \hspace{-0.1in}\multirow{5}{*}{\matrixbraceright{2.5}{$k+2$}}   \\    
-      0   & \un & \un & 0 & ...& 0   \\
-      \multicolumn{6}{|c|}{\dots}                        \\
-      0   & \multicolumn{2}{c}{\dots}  & 0   & \un & \un \\
-      \cline{1-6} % \hdashline %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-      \un & 0   & \multicolumn{2}{c}{\dots}  & 0   & \un \\
-      \cline{1-6} % \lasthline %      End matrix  %%%%%%%%%
-    \end{tabular}
-    &%
-%    \small
-    \begin{tabular}[t]{|lll ll ll|l} %                   MATRIX 2
-      \multicolumn{8}{l}{\normalsize \hspace{-0.5in}$M_{II_k}, k \ge 1$}                   \\
-      \multicolumn{7}{c}{\matrixbracetop{3.8}{$k+3$}}            \\ 
-      \cline{1-7}%  \firsthline %      Begin matrix  %%%%%%%%%%%%
-      \un & \un & 0   & \multicolumn{3}{c:}{\dots}       & 0    &
-        \hspace{-0.1in}\multirow{6}{*}{\matrixbraceright{3}{$k+3$}}         \\
-      0   & \un & \un & 0 & \multicolumn{2}{c:}{\dots}   & 0   \\ 
-      \multicolumn{6}{|c:}{\dots}                        &     \\
-      0   & \multicolumn{2}{c}{\dots}  & 0   & \un              &
-        \multicolumn{1}{l:}{\un} & 0                           \\
-      \cline{1-6}    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-      0   & \un & \multicolumn{4}{c}{\dots}              & \un \\
-      \un & \multicolumn{3}{c}{\dots}        & \un & 0   & \un \\
-      \cline{1-7}% \lasthline %      End matrix  %%%%%%%%%%%%%%%%
-    \end{tabular}
-    \\\\%
-%    \small
-    \begin{tabular}[t]{|lll ll l l|l} %                  MATRIX 3 
-      \multicolumn{8}{l}{\normalsize \hspace{-0.5in}$M_{III_k}, k \ge 1$}                  \\
-      \multicolumn{7}{c}{\matrixbracetop{3.8}{$k+3$}}            \\
-      \cline{1-7}%      \firsthline %      Begin matrix %%%%%%%%%
-      \un & \un & 0   & \multicolumn{3}{c:}{\dots}       & 0    &
-        \hspace{-0.1in}\multirow{5}{*}{\matrixbraceright{2.5}{$k+2$}}         \\
-      0   & \un & \un & 0 & \multicolumn{2}{c:}{\dots}   & 0   \\ 
-      \multicolumn{6}{|c:}{\dots}                        &     \\
-      0   & \multicolumn{2}{c}{\dots}  & 0   & \un              &
-        \multicolumn{1}{l:}{\un}                         & 0   \\
-      \cline{1-6}    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-      0   & \un & \multicolumn{2}{c}{\dots}  & \un & 0   & \un \\
-      \cline{1-7}%      \lasthline %      End matrix %%%%%%%%%%%%
-    \end{tabular}
-    &%
-%    \small
-    \begin{tabular}[t]{|llllll|}  %                     MATRIX 4
-      \multicolumn{6}{l}{\normalsize \hspace{-0.5in}$M_{IV}$} \\
-      \multicolumn{6}{l}{} \\
-      \firsthline
-      \un & \un & 0 & 0 & 0 & 0   \\
-      0 & 0 & \un & \un & 0 & 0   \\
-      0 & 0 & 0 & 0 & \un & \un   \\
-      \un & 0 & \un & 0 & \un & 0 \\
-      \lasthline
-    \end{tabular}
-    \\\\%
-%    \small
-    \begin{tabular}[t]{|lllll|}  %                     MATRIX 5
-      \multicolumn{5}{l}{\normalsize \hspace{-0.5in}$M_{V}$} \\
-      \multicolumn{5}{l}{} \\
-      \firsthline
-      \un & \un & 0   & 0   & 0   \\
-      0   & 0   & \un & \un & 0   \\
-      \un & \un & \un & \un & 0   \\
-      \un & 0   & \un & 0   & \un \\
-      \lasthline
-    \end{tabular}
-  \end{tabular}
-
-    
-
-
-
-  \caption[\figtabsize Tucker's forbidden submatrices]{\figtabsize Tucker's
-    forbidden submatrices for convex bipartite graphs. \cite{at72}} 
-  \label{fig:forbiddensubmatrices}
-\end{figure}
- 
-
-
-
-
-
-
-
-
-
-
-
+\figforbiddensubmatrices
 
 It can be verified that the matrices in
 Figure~\ref{fig:forbiddensubmatrices} are the half adjacency matrices
@@ -589,16 +409,16 @@ for set systems\footnote{As seen in Section~\ref{sec:courseschedule}}.
   column $c_i$ of $M$, set $S_i = \{j \mid m_{ji} = \un \}$. The
   collection $\cF_M$ is the {\em set system of binary matrix} $M$. The
   {\em binary matrix for set system} $\cF$ is conversely constructed
-  and denoted by $M^\cF$. Thus, $M^{\cF_M} = M$.
-  
+  and denoted by $M^\cF$. Thus, $M^{\cF_M} = M$.%
+  \par\noindent%
   A set system $\cF$ from universe $U$, $|U| = n$ has the
   {\em \cop} if there exists a linear order or 
   permutation $\sigma = w_1w_2\ldots w_n$ that can be applied to $U$ \stt each set $S \in
   \cF$ becomes a consecutive subsequence\footnote{Also termed an {\em interval}} $w_{i}w_{i+1}\ldots
   w_{i+k-1}$ on $\sigma$ for some positive integer $i \le n+1-k$ where  $k = |S|$.
-
+  \par\noindent%
   The set $\valid{U,\cF}$ respresents all \COP orders of $\cF$ in $U$.
-  \defnstop
+  \dstop
 \end{definition}
 
 It is easy to see the equivalence of this definition to \COP for
@@ -662,9 +482,8 @@ simpler.
   \item $\overline{\cF}$ represents the smallest super set system of
     $\cF$ that is complete\footnote{\cite[Def.~3.2]{mcc04} calls
       this the {\em weak closure} of $\cF$ denoted by $\cW(\cF)$. \label{mcc3}}
-
   \end{enumerate}
-  \defnstop
+  \dstop
 \end{definition}
 
 Generalized \PQtree or \gPQtree is a data structure defined in
@@ -704,13 +523,13 @@ into subproblems.
 \end{observation}
 
 
-\begin{theorem}[{\cite[Th.~3,6]{mm96}}]
+\begin{theoremsansproof}[{\cite[Th.~3,6]{mm96}}]
   \label{th:validcop}
   For any set system $\cF$ we have the following. \par
   \centering
     $\valid{\cF} = \valid{\overline{\cF}}$ \\
     $\cF^{\bot} = \overline{\cF^{\bot}} = (\overline{\cF})^{\bot}$
-\end{theorem}
+\end{theoremsansproof}
 
 \begin{proposition}
   \label{pr:validcop}
@@ -723,13 +542,13 @@ which \cite{mm96} describes a way to decompose the problem of finding
 all \COP orders of $\cF$ into two subproblems using sets in
 $\overline{\cF} \cap \cF^{\bot}$.
 
-\begin{theorem}[{\cite[Th.~7]{mm96}}]
+\begin{theoremsansproof}[{\cite[Th.~7]{mm96}}]
   \label{th:mmdecomp}
   For any set system $\cF$, and $\emptyset \ne H \in \overline{\cF}
   \cap \cF^{\bot}$ we have the following.\par
   \centering
   $\valid{U,\cF} = \valid{U/H,\cF/H} * \valid{H,\cF \cap 2^H}$
-\end{theorem}
+\end{theoremsansproof}
 
 \def \ff {\overline{\cF} \cap \cF^{\bot}}
 
@@ -750,7 +569,7 @@ is a new element not in $U$ added to represent $B$.
 
 We observe that this idea of decomposing the \COP problem into two
 subproblems in \cite{mm96} is very similar to the substitution
-decomposition of a set system given in \cite{mcc04}.\footnote{Using
+decomposition of a set system given in \cite[Sec.~4]{mcc04}.\footnote{Using
   the theory cited in footnotes~\ref{mcc1},\ref{mcc2},\ref{mcc3}.}
 
 The following corollary states how \PQRtree elegantly fits into this
@@ -792,7 +611,7 @@ point where the parents of the leaves of the \PQRtree are created. The
 following theorem helps the algorithm decide whether a $P$, $Q$ or
 $R$ node must be created.
 
-\begin{theorem}[{\cite[Th.~9]{mm96},\cite[Th.~2.1]{mcc04}}]
+\begin{theoremsansproof}[{\cite[Th.~9]{mm96},\cite[Th.~2.1]{mcc04}}]
 \label{th:pqrfinalmm}
 If $\cF$ is a set system with universe $U$ and $|U| \ge 3$ then one of
 the following statements hold.
@@ -802,7 +621,7 @@ the following statements hold.
   some permutation $\alpha$ on $U$ 
 \item \label{th::it3}$\overline{\cF} = \power{U}$ 
 \end{enumerate}
-\end{theorem}
+\end{theoremsansproof}
 
 In case (\ref{th::it1}) all elements in $U$ are made children of a
 $P$ node. In case (\ref{th::it2}) all elements in $U$ are made
@@ -821,71 +640,107 @@ not overlap with any other elements in the family, \ie it is
 orthogonal to all other sets\cite[Def.~3.3]{mcc04}.
 
 
-\begin{theorem}[{\cite{mm96}, \cite[Th.~3.6]{mcc04}}]
+\begin{theoremsansproof}[{\cite{mm96}, \cite[Th.~3.6]{mcc04}}]
 The set system $\cF$ has \COP \iff its \PQRtree has no $R$ nodes.  
-\end{theorem}
+\end{theoremsansproof}
 
+Thus \PQRtree gives a data structure that encodes possible linear
+orderings of a set that demonstrates the \COP property in it or
+narrows it down to parts of the universe in $R$ nodes that prevent the
+set system from having \COP.
 
+As mentioned before, we observe the three data strutures of \PQRtree,
+\gPQtree and generalized \PQtree to be equivalentand the theory of all
+these data structures is summarised in Table~\ref{tab:pqrcomparison}.
 
+We will now see one more generalization of \PQtree before seeing other
+approaches to solving \COP testing including ICPIA which is a set
+theoretic characterization of \COP.
 
-% The generalized \PQtree of $\cF$ is defined as the {\em decomposition
-%   tree} of its weak closure $\cW(\cF)$. Decomposition tree is the
-% inclusion tree (inclusion p.o. Hasse diagram) of the strong elements
-% of $\cW(\cF)$ with labels {\em prime, linear} and {\em degenerate}.\cite{mcc04}
+\begin{table}[t]
+  \def\colwidth{4cm}
+  \centering
+  \fontencoding{OT1}\fontfamily{cmss}\selectfont%
+  \footnotesize%
+  \setlength\extrarowheight{0.1in}
+  
+  \begin{tabular}{l >{\columncolor{\tblhcolor}}l l}
+    
+    \rowcolor[gray]{0.8} %                 Header row colored
+    \normalsize \gPQtree \cite{n89} & 
+    \normalsize \PQRtree \cite{mm96} & 
+    \normalsize generalized \PQtree \cite{mcc04}
+    \\
+    
+    Trivial intersections &
+    Trivial sets $\cT(U)$ & 
+    \\\hline
+    
+    Trivially intersecting sets &
+    Mutually orthogonal sets, $A \bot B$ &
+    Non-overlapping sets
+    \\\hline
+    
+      &
+    Complete collection &
+    Weakly partative family
+    \\\hline
+    
+    &
+    $\overline{\cF}$&
+    Weak closure, $\cW(\cF)$
+    \\\hline
 
+    &
+    $\cF^{\bot}$&
+    Non-overlapping family, $\cN(\cF)$
+    \\\hline
+    
+    &
+    \parbox[t]{\colwidth}
+    { 
+      Sets in $\cF$ orthogonal to all other sets in $\cF$ 
+    }&
+    Strong elements
+    \\\hline
 
+    &
+%     \parbox[t]{\colwidth}
+%       {}
+    \temptext{PQR tree def. }
+    &
+    \parbox[t]{\colwidth}
+    {
+      Decomposition tree of $\cW(\cF)$, $T(\cW(\cF))$
+      \temptext{PQR tree def. }\tnote[pressing]{in terms of theory}
+    }
+    \\\hline
 
-% Overlap components are computable in linear time \cite{mm95,wlh92}.
+    &
+    Node sets, $(\cF \cap \cF^\bot) \setminus \{\emptyset\}$
+    \\\hline
 
------ Cert algo
+    &
+    \parbox[t]{\colwidth}
+    {
+      $P$-node $\Leftrightarrow \cF = \cT(\cF)$\\
+      $Q$-node $\Leftrightarrow \cF = consec(\alpha)$\\
+      $R$-node $\Leftrightarrow \cF = \power{U}$\\
+    }&
+    \temptext{give def of P Q R nodes}
+    \\\lasthline
 
------- ICPIA 
-
-
-
-
-
-
-
-
-\temptext{ Certifying algorithm (Generalized PQ trees) [McC04] -- 
-
-Set theoretic characterizations [Hsu02, NS09]\\
-    \cite{wlh02} describes the simpler algorithm for
-    COT.\tnote[pressing]{in terms of what?}\\
-    \cite{nsnrs09} describes a characterization of consecutive-ones
-    property solely based on the cardinality properties of the set
-    representations of the columns (rows); every column (row) is
-    equivalent to a set that has the row (column) indices of the rows
-    (columns) that have one entries in this column (row). This is
-    interesting and relevant, especially to this thesis because it
-    simplifies COT to a great degree by reducing the solution search
-    space owing to the a simple set theoretic characterization.\\
-
-
-\cite{mcc04} describes a different approach to COT. While all previous
-COT algorithms gave the COP order if the matrix has the property but
-exited stating negative if otherwise, this algorithm gives an evidence
-by way of a certificate of matrix even when it has no COP. This
-enables a user to verify the algorithm's result even when the answer
-is negative. This is significant from an implementation perspective
-because automated program verification is hard and manual verification
-is more viable. Hence having a certificate reinforces an
-implementation's credibility. Note that when the matrix {\em has} COP,
-the COP order is the certificate.  The internal machinery of this
-algorithm is related to the weighted betweenness problem
-addressed\tnote{in what way??} in \cite{co98}.  \tnote{expand
-  on the COP order graph creation and it having to be bipartite for M
-  to have COP. and thus an odd cycle being an evidence of no COP.}
-
-}
-
-
+  \end{tabular}
+  \caption[\figtabsize Comparison of theory of \PQRtree, \gPQtree, generalized
+  \PQtree]{\figtabsize Comparison of theory of \cite{mm96} \PQRtree, \cite{n89} \gPQtree,
+    \cite{mcc04} generalized \PQtree}
+  \label{tab:pqrcomparison}
+\end{table}
 
     
 \subsection{\PCtree -- a generalization of \PQtree}
 
-\PCtree is a generalization of \PQtree. It is a data structure that is
+\PCtree is another generalization of \PQtree. It is a data structure that is
 analogous to \PQtree but for matrices with \crop. \PCtree was
 introduced by \cite{sh99} for the purpose of planarity testing where
 this data structure represents partial embeddings of planar
@@ -964,9 +819,279 @@ much simplified procedure.
 %  No they don't seem related. this is the stupid bl lb confusion.}%
 
 
+
+\subsection{ICPIA - a set cardinality based \COP test}
+
+\cite{nsnrs09} describes a characterization of consecutive-ones
+property solely based on the cardinality properties of the sets in the
+set system and does not use any variants of \PQtrees. 
+
+\begin{definition}[Intersection Cardinality Preserving Interval
+  Assignment (ICPIA)]
+  \label{def:icpia}
+  Let $\cF = \{A_i \mid A_i \subseteq U, i \in [m]\}$ be a set system
+  from universe $U$ and the set of ordered pairs $\Pi = \{(A_i, B_i)
+  \mid B_i  \text{ is an interval from } [n], i \in [m]\}$ be an {\em interval
+    assigment} of $\cF$, then it is called an {\em ICPIA} if it has
+  the following properties.
+  \begin{enumerate}[i.]
+  \item $|A_i| = |B_i|$ for all $i \in [m]$
+  \item $|A_i \cap A_j| = |B_i \cap B_j|$ for all $i, j \in [m]$
+  \end{enumerate}
+\end{definition}
+
+\begin{theoremsansproof}[{\cite[Th.~1]{nsnrs09}}]
+  \label{th:icpia1}
+  If an interval assignment $\Pi$ is feasible, then it is an ICPIA.
+\end{theoremsansproof}
+
+The necessity of ICPIA for a set system to have \COP given in
+Theorem~\ref{th:inpia1} is fairly obvious. It turns out that it is
+sufficient too.  This is demostrated by two algorithms which work as
+follows. The first one iterates over the assignment
+$\Pi$ %set system $\cF$
+and changes it in each iteration till the altered
+assignment %set system
+has no more overlapping intervals\footnote{Intervals are the second
+  element in each ordered pair of $\Pi$. Def.~\ref{def:icpia}} %sets
+\cite[Alg.~1]{nsnrs09}. This is acheived by replacing two overlapping
+assignment pairs $(A_i, B_i)$ and $(A_j, B_j)$ with the partitions of
+$(A_i \cup A_j,B_i \cup B_j)$ induced by their overlaps -- $(A_i
+\setminus A_j, B_i \setminus B_j)$, $(A_i \cap A_j, B_i \cap B_j)$ and
+$(A_j \setminus A_i, B_j \setminus B_i)$.
+
+To see it in terms of the theory explained in
+Section~\ref{sec:surveycertalgo}, this results in the weak closure of
+$\cF$. Let $\cF$, $\cI$ be the set system and interval
+system\footnote{A set system where all the sets are intervals.},
+respectively, involved in the assignment $\Pi$ and $\cF'$, $\cI'$ be
+the same for the output of the algorithm $\Pi'$.  It can be observed
+that $\cF' \cup \cF$ is $\overline{\cF}$ or the weak closure of
+$\cF$. The analog is true for $\cI \cup \cI'$.  Moreover, this output
+$\cF'$, $\cI'$ contains the strong elements of $\overline{\cF}$,
+$\overline{\cI}$ respectively. It turns out that $\cI'$ is also an
+interval system and that $\Pi'$ is an ICPIA \cite[Lem.~2]{nsnrs09}.
+
+The next algorithm \cite[Alg.~2]{nsnrs09} further refines $\Pi'$ to
+$\Pi''$ which represents the family of permutations that yield the
+\COP orders represented by $\Pi$ of $\cF$. The subset relation Hasse
+diagram of $I'$ is created with each node representing the
+corresponding assignment pair of the interval from $\Pi'$. Since all intervals in
+$\Pi'$ are non-overlapping, this is a tree. Notice that this means any
+two intervals are now either disjoint or one is contained in the
+other. Hence this tree is called a {\em containment tree}.  The
+algorithm traverses this tree in post order fashion where the post
+order function is to replace an assignment pair $(X,Y)$  in $\Pi'$ by their child
+assignment pairs in the containment tree, say $(X_1, Y_1),(X_2, Y_2)
+\ldots (X_k,Y_k)$. The result $\Pi''$ gives the
+\COP order for $\Pi$. These two algorithms prove that ICPIA is a
+sufficient condition for the feasibility of the interval assignment.
+
+\begin{theoremsansproof}[{\cite[Th.~2]{nsnrs09}}]
+  \label{th:icpia2}
+  Let  $\cF = \{A_i \mid A_i \subseteq U, i \in [m]\}$ be a set system
+  from universe $U$, $|U| = n$
+  and $\Pi = \{(A_i,B_i) \mid B_i \text{ is an interval from } [n], i
+  \in [m]\}$ be an ICPIA. Then there exists a permutation $\sigma: [n]
+  \rightarrow [n]$ \stt $\sigma(A_i) = B_i$.
+\end{theoremsansproof}
+
+What we saw so far in this section is checking for the feasibility of
+a given interval assignment. ICPIA can also be used to find an
+interval assignment when only the set system $\cF$ is given. Part of
+the approach is similar to the overlap component idea in \cite{fg65,
+  wlh02}. Once the overlap components are factored out, they can be
+independently assigned a subinterval from to which the sets in the
+component need to be mapped. This is simple because the overlap
+components are disjoint from each other. Now the subproblem is finding
+\COP order for each overlap component. In each component, the set
+whose intersections with the rest of the sets in that component forms
+a single inclusion chain is chosen first and assigned the
+leftmost\footnote{By convention. Rightmost can also be chosen
+  analogously to get a different \COP order.} interval. The next
+candidate set is chosen from this set's overlapping sets. The interval
+assigned is calculated by simple intersection cardinality
+means\footnote{Assume that the next set overlaps on one of the
+  ``ends'' of the current set and calculate the interval by shifting
+  left or right of the current interval and adjusting its size to
+  match the next set's cardinality.}. Once the next set is assigned an
+interval, the current assigned sets are all checked for ICPIA. This is
+a backtracking algorithm -- if at any point ICPIA fails, another
+overlapping set is chosen. If all overlapping set attempts fail ICPIA,
+a different ``first set'' is chosen. This is a remarkably simple
+algorithm due to its obvious simplicity in implementation.
+
+\subsection{Other \COP testing algorithms}
+There are more \COP test algorithms in the literature. We make a
+mention of one of them here.  A simple linear time algorithm was
+presented by \cite{hmpv00}. They use something called {\em Lex-BFS
+  ordering} of the vertices of a graph to decide in linear time
+whether the graph is an interval graph. They also show how any
+interval graph recognition algorithm can be used to recognize matrices
+with \COP. This is shown in Theorem~\ref{th:intgraphcop}.
+
+\begin{theoremsansproof}[{\cite[Th.~2]{hmpv00}}]
+  \label{th:intgraphcop}
+  For a binary matrix $M$ the following statements are equivalent.
+  \begin{enumerate}
+  \item The row adjacency graph $G_r(M)$ is an interval graph and $M$
+    is its maximal clique matrix.
+  \item The columns of $M$ are maximal and $M$ has the \COP for rows.
+  \end{enumerate}
+\end{theoremsansproof}
+
 \section{Optimization problems in COP}
 \label{sec:surveycopopt}
-\tnote{Expand on ref:sec:optcop}
+
+\COP is a very beneficial property since it simplifies the structure
+of the input\footnote{Binary matrix or set system.} leading to
+efficient algorithms to otherwise hard problems.  While
+Section~\ref{sec:surveycoptest} discusses matrices with \COP and how
+to compute \COP orders, this section describes the problems that are
+of interest when a matrix does not have this property.  The central
+questions in this area are (i) how close is the matrix to having \COP,
+mainly in terms of Tucker's forbidden submatrices, and (ii) how
+optimally can one alter the matrix to attain \COP.  With regard to the
+latter question, recent literature indicate that there has been a lot
+of interest in matrix modification problems to make a matrix have \COP
+\cite{hg02, tz07}. However, to tackle this problem it is more than
+insightful to solve question (i).
+
+To study the smallest hamming distance \temptext{(?)} between the
+input matrix and one with \COP, identifying the Tucker's forbidden
+substructures\footnote{See Section~\ref{sec:tucker} for detailed
+  discussion on Tucker's forbidden substructures for matrices with
+  \COP.} is of prime importance. 
+
+\subsection{Finding forbidden submatrices}
+It is known from Theorem~\ref{th:tuckercop}
+that when a matrix does not have \COP, it must have one of Tucker's
+forbidden submatrices. However, none of the \COP test algorithms discussed in
+Section~\ref{sec:surveycoptest} outputs the forbidden submatrix when
+the test is negative. This certainly gives a hint to how hard it is to find
+these substructures in the input. \temptext{Fill neg results on
+  finding forbidden submartrices -- boo75, some highlighted stuff from v85}
+
+
+\temptext{TEXT INTRODUCING SECTION}
+
+
+
+
+\subsection{Incompatibility graph - a certificate for no \COP}
+
+When a \COP test algorithm reports negative, it is hard to verify
+this. While \cite{at72} gives forbidden substructures for \COP, there
+are no efficient algorithms to find these strutures in a matrix. In
+fact, \cite{v82} shows that even finding a forbidden submatrix with at
+least $k$ rows in an input matrix is NP-complete. This was proven by
+polynomially reducing the longest path problem for graphs to this
+problem.
+
+\cite{mcc04} describes another characterization for matrices without
+\COP which is efficiently computable. This is done by way of an {\em
+  incompatibility graph} of a set system\footnote{Since \COP in
+  matrices and set systems are equivalent problems as seen in
+  Section~\ref{sec:surveycertalgo} we will use the term set system
+  here.}. The construction of this graph is based on the following
+observation. 
+
+\begin{observation} 
+  Consider elements $a, b, c \in U$ and a set system $\cF$ with
+  universe $U$. If there is at least one set $S \in \cF$ such that $a,
+  c \in \cF$ but $b \notin S$, then it is impossible to have a \COP
+  order that will place $b$ in between $a$ and $c$. \tnote{also cite
+    the inbetweenness problem}
+\end{observation}
+
+For the sake of argument, suppose there exists such a \COP
+order. Clearly, it will not succeed in mapping $S$ to an interval
+since $b \notin S$ which is a contradiction to the assumption that
+this is a \COP order.  The ordered pair $(x,y)$ denotes that in the
+\COP order $y$ comes after $x$. Based on above observations, this
+means $(a,b)$ and $(b,c)$ are not compatible in any \COP order. So are
+$(c,b)$ and $(b,a)$.  Thus a binary relation {\em is incompatible
+  with} on $U \times U \setminus \{(a,a) \mid a \in U\}$ can be
+defined based on the membership of elements of $U$ in the sets in
+$\cF$.  \cite{mcc04} creates an incompatiblity graph with vertices
+denoting ordered pairs and edges denoting the incompatibility
+relation.
+
+\begin{definition}[{\em Incompatibility graph \cite[Def.~6.1]{mcc04}}]
+  Let $\cF$ be a set system with universe $U$. Let $A_{\cF} = \{(a,b)
+  \mid a, b \in U, a \ne b\}$. The {\em incompatibility graph}
+  $G_I^\cF$ of $\cF$ is an undirected graph defined as follows.
+%  \singlespacing
+  \begin{enumerate}
+  \item   The vertex set of $G_I^\cF$ is $ A_{\cF}$
+  \item  The edge set of $G_I^\cF$ are pairs of the following forms
+    \begin{itemize}
+    \item $\{(a,b),(b,a)\}$ for all $a, b \in U$
+    \item $\{(a,b),(b,c)\}$ if there exists $S \in \cF$ \stt $a, c
+      \in S$ and $b \notin S$, for all $a, b, c \in U$
+    \end{itemize}
+  \end{enumerate}
+  \dstop
+\end{definition}
+
+Thus an edge between two vertices $(a,b), (b,c)$ in $G_I^{\cF}$ means
+that there exists no linear order on $U$ that can place $b$ after $a$
+and place $c$ after $b$.  For any \COP order, there must not be any
+incompatible pairs. Thus it must consist of an independent set $I$ of
+the incompatibility graph. Moreover the independent set must have
+exactly half the vertex set of $G_I^\cF$ since the \COP order must
+involve all elements in $U$. Secondly, the reverse of a \COP order is
+also a \COP order. Thus $A_\cF \setminus I$ must also be an
+independent set. In other words, $G_I^\cF$ must be bipartite with
+partitions being of equal size if $\cF$ has \COP. An odd cycle is a
+forbidden structure in a bipartite graph, hence the same is forbidden
+in the incompatibility graph of a set system with \COP. In other
+words, if the set system has no \COP, its incompatibility graph must
+have an odd cycle.  There is also a requirement on the length of this
+odd cycle which is formally stated in the following
+theorem. \tnote{all refrences to ``following''/abov theorem must be
+  chagned to slashrefs. }
+
+\begin{theoremsansproof}[{\cite[Th.~6.1]{mcc04}, \cite[Corrected by
+    Th.~2.6, Proof p. 44--47]{d08phd}}] 
+  Let $\cF$ be a set family with universe $U$. Then $\cF$ has \COP
+  \iff its incompatibility graph is bipartite and if it does not have
+  the \COP, the incompatibility graph has an odd cycle of length at
+  most $n+3$.
+\end{theoremsansproof}
+
+
+Each edge of the cycle is labeled with a set from $\cF$ that documents
+the incompatibility.
+
+
+\temptext{how does it give clues
+  about the $R$ node? See dom.}
+
+
+
+
+%     \cite{mcc04} describes a different approach to COT. While all
+%     previous COT algorithms gave the COP order if the matrix has the
+%     property but exited stating negative if otherwise, this algorithm
+%     gives an evidence by way of a certificate of matrix even when it
+%     has no COP. This enables a user to verify the algorithm's result
+%     even when the answer is negative. This is significant from an
+%     implementation perspective because automated program verification
+%     is hard and manual verification is more viable. Hence having a
+%     certificate reinforces an implementation's credibility. Note that
+%     when the matrix {\em has} COP, the COP order is the certificate.
+%     The internal machinery of this algorithm is related to the
+%     weighted betweenness problem addressed\tnote{in what way??} in
+%     \cite{co98}.  \tnote{expand on the COP order graph creation and it
+%       having to be bipartite for M to have COP. and thus an odd cycle
+%       being an evidence of no COP.}
+
+
+
+
+
+\temptext{\textbf{REST OF THE SUBSECTIONS}}
 
 \temptext{ So far we have been concerned about matrices that have the
   consecutive ones property. However in real life applications, it is
