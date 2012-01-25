@@ -12,8 +12,10 @@
                                %  Options: Lenny X, Glenn X, Conny, Rejne X,
                                %  Bjarne
 
-
-\usepackage[nottoc]{tocbibind} % Adds LoT, LoF, Bib, Index etc to toc
+\usepackage{tocbibind}         % Adds LoT, LoF, Bib, Index etc to toc
+                               %  [nottoc] to avoid Contents listed
+                               %  under Contents. But recursion is
+                               %  nice. 
 \usepackage{tikz}
 \usetikzlibrary{arrows,decorations.pathreplacing,backgrounds,positioning,fit,petri}
 
@@ -110,6 +112,8 @@
 \def \CFTPLKTREE {\textsc{Compute $k$-subdivided Star Path
     Labeling}\xspace} 
 
+\def \Tuckerset {\mathbb{T}}
+
 %%% Thesis title %%%
 \def \mythesistitle {Generalization of Consecutive Ones Property of
   Binary Matrices\xspace}  
@@ -125,6 +129,7 @@
 
 \def\singlemaltinbox{\fbox{\footnotesize\maltese}}
 \def\triplemaltinbox{\fbox{\footnotesize\maltese\maltese\maltese}}
+
 
 \newcommand{\power}[1]{2^{#1}}%{\cP\left(#1\right)}
 \newcommand{\temptext}[1]           % For public draft notes 
@@ -190,7 +195,7 @@
   {5pt}%\newline%{0pt}%       Spacing after heading.
   {\thmname{#1}\thmnumber{ #2}\thmnote{\textbf{ (#3)}}}% Head spec 
 %
-\newtheoremstyle{thmsansstyle}%Custom style: Theorems without proof
+\newtheoremstyle{thmsansstyle}%Custom style: Theorems without proof, Corollary
                               % environment following it.
   {20pt}{20pt}%               Space above & below
   {\thesisspacing \em}    %   Body style             % \sffamily
@@ -235,7 +240,7 @@
 \newtheorem{theoremsansproof}[theorem]{Theorem}     % Shares counter with theorem.
 \theoremstyle{thmstyle}                % Apply custom style
 \newtheorem{lemma}[theorem]{Lemma}     % Shares counter with theorem.
-\theoremstyle{thmstyle}                % Apply custom style
+\theoremstyle{thmsansstyle}                % Apply custom style
 \newtheorem{corollary}[theorem]
   {Corollary}                          % Shares counter with theorem. 
 \theoremstyle{defnstyle}               % Apply custom style

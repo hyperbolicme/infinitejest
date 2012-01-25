@@ -1,9 +1,10 @@
 \BOOKMARK [0][-]{section*.1}{Acknowledgements}{}
 \BOOKMARK [0][-]{section*.1}{Abstract}{}
-\BOOKMARK [0][-]{section*.2}{List of Tables}{}
-\BOOKMARK [0][-]{section*.3}{List of Figures}{}
-\BOOKMARK [0][-]{section*.3}{Abbreviations}{}
-\BOOKMARK [0][-]{section*.3}{Notation}{}
+\BOOKMARK [0][-]{section*.2}{Contents}{}
+\BOOKMARK [0][-]{section*.3}{List of Tables}{}
+\BOOKMARK [0][-]{section*.4}{List of Figures}{}
+\BOOKMARK [0][-]{section*.4}{Abbreviations}{}
+\BOOKMARK [0][-]{section*.4}{Notation}{}
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}
 \BOOKMARK [1][-]{section.1.1}{Organization of the document}{chapter.1}
 \BOOKMARK [1][-]{section.1.2}{Illustration of the problem}{chapter.1}
@@ -15,7 +16,7 @@
 \BOOKMARK [1][-]{section.1.5}{Application of COP in Areas of Graph Theory and Algorithms}{chapter.1}
 \BOOKMARK [1][-]{section.1.6}{Generalization of COP - the Motivation}{chapter.1}
 \BOOKMARK [1][-]{section.1.7}{Summary of New Results in this Thesis}{chapter.1}
-\BOOKMARK [0][-]{chapter.2}{Consecutive-ones Property -- A Survey of Important Results}{}
+\BOOKMARK [0][-]{chapter.2}{Consecutive-ones Property -- A Survey}{}
 \BOOKMARK [1][-]{section.2.1}{COP in Graph Theory}{chapter.2}
 \BOOKMARK [1][-]{section.2.2}{Matrices with COP}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.2.1}{Tucker's forbidden submatrices for COP}{section.2.2}
@@ -25,7 +26,8 @@
 \BOOKMARK [2][-]{subsection.2.2.5}{ICPIA - a set cardinality based COP test}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.6}{Other COP testing algorithms}{section.2.2}
 \BOOKMARK [1][-]{section.2.3}{Optimization problems in COP}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.3.1}{Incompatibility graph - a certificate for no COP}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.1}{Finding forbidden submatrices}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.2}{Incompatibility graph - a certificate for no COP}{section.2.3}
 \BOOKMARK [1][-]{section.2.4}{COP in Graph Isomorphism}{chapter.2}
 \BOOKMARK [0][-]{chapter.3}{Tree Path Labeling of Path Hypergraphs - New Results}{}
 \BOOKMARK [1][-]{section.3.1}{Summary of Proposed Problems}{chapter.3}
@@ -42,4 +44,4 @@
 \BOOKMARK [2][-]{subsection.3.6.1}{Consecutive Ones Testing is in Logspace}{section.3.6}
 \BOOKMARK [0][-]{chapter.4}{Conclusion}{}
 \BOOKMARK [0][-]{chapter.1}{More proofs remove/modify}{}
-\BOOKMARK [0][-]{section*.4}{Bibliography}{}
+\BOOKMARK [0][-]{section*.5}{Bibliography}{}

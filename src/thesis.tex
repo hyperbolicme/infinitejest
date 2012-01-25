@@ -12,6 +12,16 @@
 \usepackage{thesisfiguresandtables} % Code for tables are in this
                                 % package if it is too long to inline
                                 % in .tex file.
+
+%% Drafting libraries %%
+%
+\usepackage[color,final]{showkeys}   % To show keys used - useful in
+                               % drafts. 
+                               % Options: color, notref, notcite,
+                               % draft(default), final
+
+\newcommand{\xclearpage}{\cleardoublepage} % cleardoublepage for
+                                % twoside. keep empty for one side.
 %\usepackage[inline] 
 %\usepackage[margins] 
 \usepackage[finalnew]
@@ -77,32 +87,39 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Certificate
 %
+\xclearpage% \cleardoublepage
 \include{001certificate}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Acknowledgements
 %
+\xclearpage
 \include{002ack}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Dedication?
 %
-\include{0031ded}%{0021ded}
+\xclearpage
+\include{0031ded}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Abstract
 %
+\xclearpage
 \include{003abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Table of contents etc.
 %
 \begin{singlespace}
+  \xclearpage
   \tableofcontents
   \thispagestyle{empty}
+  \xclearpage
   \listoftables %\addcontentsline{toc}{chapter}{LIST OF TABLES}
+  \xclearpage
   \listoffigures %\addcontentsline{toc}{chapter}{LIST OF FIGURES}
 \end{singlespace}
 
@@ -110,11 +127,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Abbreviations
 %
+\xclearpage
 \include{004abbrv}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Notation
 %
+\xclearpage
 \include{005notation}
 %\pagebreak \clearpage
 
@@ -124,17 +143,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Main body Chapters
 %
-%\include{figuresandtables} % Load floats. No rendering.
-
-
+\xclearpage
 \include{010chap1}
 % turning counter reset. perhaps universal endnote counter is good?
 % being schizo about it now. DECIDE! ENDNOTEMARKS DEPEND ON IT.
 %\setcounter{endnote}{0} % need to empty the file too. how?! -
                         % FIXED. turns out, just having notes is
                         % enough. or maybe it was fluke.
+\xclearpage
 \include{020chap2}
+\xclearpage
 \include{030chap3}
+\xclearpage
 \include{040chap4}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

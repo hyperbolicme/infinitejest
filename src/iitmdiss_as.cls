@@ -71,13 +71,20 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
 \if@Synopsis
     \LoadClass[12pt,a4paper]{article}
 \else
-    \LoadClass[12pt,a4paper]{report}
+   \LoadClass[12pt,a4paper,twoside]{report}
+%    \LoadClass[12pt,a4paper]{report}
 \fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Geometry and page layout
-\RequirePackage[compat2,a4paper,left=1.5in,right=1in,top=1in,bottom=0.667in,
-                nohead]{geometry}[2002/07/08]
+%
+% \RequirePackage[compat2,a4paper,left=1.5in,right=1in,top=1in,bottom=0.667in,
+%                 nohead]{geometry}[2002/07/08]    % For no headers
+\RequirePackage[compat2,a4paper,left=1in,right=1in,top=1in,bottom=0.667in,
+                ]{geometry}[2002/07/08] % With space for header. Changed
+                                % margins to accommodate twopage.
+\pagestyle{headings}  % For headers.
+
 \parskip 8pt
 
 \renewcommand{\@pnumwidth}{2.5em}
@@ -102,16 +109,8 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
 \thesisspacing              % More appealing.
 
 
-%% package atbeginend MESSES UP A LOT OF SYNTAX.
-%% hyperbolicme: one half spacing for lists too.  
-% \AfterBegin{itemize}{\begin{onehalfspace}}
-% \BeforeEnd{itemize}{\end{onehalfspace}}
-% \AfterBegin{enumerate}{\begin{onehalfspace}}
-% \BeforeEnd{enumerate}{\end{onehalfspace}}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The figure captioning is done correctly via the hang option.
-%%\RequirePackage[hang]{caption2}  -> TeX generates error
 \RequirePackage[hang]{caption}
 
 
@@ -137,7 +136,6 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
   \if@Synopsis
     {\large \em SYNOPSIS OF \par}
   \fi
-%hyperbolicme %    {\Large \bf \expandafter{\@title} \par}%
     \begin{singlespacing} %hyperbolicme %
       {\huge \bf \expandafter{\@title} \par} %hyperbolicme %    
     \end{singlespacing} %hyperbolicme %
@@ -161,29 +159,16 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
          {\bf \large \MakeUppercase{Doctor of Philosophy}} \par
        \else
          \if@MS % MS THESIS
-%            \vskip 5ex %hyperbolicme
-%            \vskip 5ex %hyperbolicme
-%hyperbolicme %            {\em A THESIS }\par
-            {\large {\em A THESIS} }\par
+           {\large {\em A THESIS} }\par
             \vskip 5ex%
-%hyperbolicme %            {\normalsize \em submitted by \par}
-%hyperbolicme %            \vskip 5ex%
-            {\normalsize \em submitted by \par} %hyperbolicme
+           {\normalsize \em submitted by \par} %hyperbolicme
             {\bf \large\MakeUppercase{\@author}\par\par}
-%hyperbolicme %            {\bf \MakeUppercase{\@author}\par\par} %hyperbolicme
-%hyperbolicme %            \vskip 5ex%
-            \vskip 5ex%
-%hyperbolicme %            {\em for the award of the degree }\par
-%hyperbolicme %            \vskip 5ex%
-%hyperbolicme %            {\em of} \par
-%hyperbolicme %            \vskip 5ex%
-            {\em for the award of the degree of}\par 
-%hyperbolicme %            {\bf \large \MakeUppercase{Master Of Science}} \par
-%hyperbolicme %            {\em (by Research)} \par
-            {\large \bf {\MakeUppercase{Master Of Science}} {\em by
+           \vskip 5ex%
+           {\em for the award of the degree of}\par 
+           {\large \bf {\MakeUppercase{Master Of Science}} {\em by
                 Research}}\par
             \vskip 5ex %hyperbolicme
-         \else %%% A PROJECT REPORT
+          \else %%% A PROJECT REPORT
            {\em A Project Report }\par
            \vskip 5ex%
            {\normalsize \em submitted by \par}
@@ -206,30 +191,22 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
 
   \vspace*{-0.15in}
   \begin{center}
-%hyperbolicme %    {\bf \large DEPARTMENT OF \@department\par}
-    {\em from the department of}\par %hyperbolicme
+   {\em from the department of}\par %hyperbolicme
     {\bf \large {\@department}\par} %hyperbolicme
     \vskip 5ex%        
     {\em at}\par %hyperbolicme
     {\bf \large INDIAN INSTITUTE OF TECHNOLOGY MADRAS} \par Guindy, Chennai - 600036
-%hyperbolicme %   {\bf INDIAN INSTITUTE OF TECHNOLOGY MADRAS} %hyperbolicme %
     \vskip 5ex %hyperbolicme
     \vglue 0.50em
     \vspace*{0.75in}
     \includegraphics[scale=1.]{iitm}\par
-%    {\bf \large \@date}\par
     {\bf \@date}\par
   \end{center}
-%   \vspace*{0.75in}
-%   %\centerline{\psfig{figure=emblem.ps}}
-% %  \centerline{\includegraphics{iitm.eps}}
-%   \centerline{\includegraphics[scale=1.]{iitm}} 
  \parskip 8pt
 }
 
 \def\titlepage{\newpage\thispagestyle{empty}\c@page\z@}
 \def\endtitlepage{\newpage}
-%\def\headingstrstyle{\sc} % \centerline
 
 \if@Synopsis
    \renewcommand\refname{REFERENCES}
@@ -253,7 +230,7 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
    %   - this produces a certificate page as per IITM Regulations
    %     comment the following lines out to get it working.
    %
-   \def\certheadingstr{\sc \centering Thesis Certificate}
+%   \def\certheadingstr{\sc \centering Thesis Certificate}
  %   \def\certificate{%% A preliminary chapter
 % %     \clearpage
 % %     \vspace*{36pt}
@@ -282,14 +259,14 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
    % GLOSSARY
    %
    \def\glossaryheadingstr{Glossary}
-   \def\glossary{\chapter*{\glossaryheadingstr}%{\centerline{GLOSSARY}}
+   \def\glossary{\chapter*{\glossaryheadingstr}
    \addcontentsline{toc}{chapter}{\glossaryheadingstr}
    }
 
    % ABBREVIATIONS
    %
    \def\abbrvheadingstr{Abbreviations}
-   \def\abbreviations{\chapter*{\abbrvheadingstr}%{\centerline{ABBREVIATIONS}}
+   \def\abbreviations{\chapter*{\abbrvheadingstr}
    \addcontentsline{toc}{chapter}{\abbrvheadingstr}
    }
 
@@ -326,13 +303,12 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
 
 
    %LIST OF PAPERS
-   \def\listofpapers{
-           \normalbaselines
-           \chapter*{List of Papers }%{\centerline{LIST OF PAPERS
-                                %BASED ON THESIS}}
-           \markboth{List of papers based on thesis}{List of papers based on thesis}
-           %\markboth{LIST OF PAPERS BASED ON THESIS}{LIST OF PAPERS BASED ON THESIS}
-           %\addcontentsline{toc}{chapter}{LIST OF PAPERS BASED ON THESIS}
+   \def\listofpapers{ \normalbaselines
+     \chapter*{List of Papers }%{\centerline{LIST OF PAPERS
+     % BASED ON THESIS}}
+     \markboth{List of papers based on thesis}{List of papers based on
+       thesis}
+     % \addcontentsline{toc}{chapter}{LIST OF PAPERS BASED ON THESIS}
    }
 
    
@@ -342,26 +318,16 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
 
    % Comittee
    \if@PhD
-       \def\committee{\chapter*{Doctoral Committee}}%{\centerline{DOCTORAL COMMITTEE}}}
+       \def\committee{\chapter*{Doctoral
+           Committee}}%{\centerline{DOCTORAL COMMITTEE}}} 
    \else
        \if@MS
-          \def\committee{\chapter*{General Test Committee}}%{\centerline{GENERAL TEST COMITTEE}}}
+          \def\committee{\chapter*{General Test
+              Committee}}%{\centerline{GENERAL TEST COMITTEE}}} 
         \fi
    \fi
 
-
-   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-   % Renewed commands to set the titles of various pages --correctly--
-   % in ugly CAPS.
-   % hyperbolicme: owing to 
-%    \renewcommand\contentsname{\centering CONTENTS} % TABLE OF 
-%    \renewcommand\listfigurename{\centering LIST OF FIGURES}
-%    \renewcommand\listtablename{\centering LIST OF TABLES}
-%    \renewcommand{\chaptername}{CHAPTER}
-%    \renewcommand\bibname{\centering REFERENCES}
-%    \renewcommand\appendixname{APPENDIX}
 \fi
 
 %% hyperbolicme: changing overall font to Computer Modern Roman
 \renewcommand\familydefault{cmr}
-

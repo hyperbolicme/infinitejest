@@ -3,7 +3,7 @@
 
 
 %\chapter{\CoP\,-- A Survey of Important Results}
-\chapter{Consecutive-ones Property -- A Survey of Important Results}
+\chapter[Consecutive-ones Property -- A Survey]{Consecutive-ones Property -- A Survey of Important Results}
 \label{ch:copsurvey}
 
 This chapter surveys several results that are significant to this
@@ -411,11 +411,12 @@ for set systems\footnote{As seen in Section~\ref{sec:courseschedule}}.
   {\em binary matrix for set system} $\cF$ is conversely constructed
   and denoted by $M^\cF$. Thus, $M^{\cF_M} = M$.%
   \par\noindent%
-  A set system $\cF$ from universe $U$, $|U| = n$ has the
-  {\em \cop} if there exists a linear order or 
-  permutation $\sigma = w_1w_2\ldots w_n$ that can be applied to $U$ \stt each set $S \in
-  \cF$ becomes a consecutive subsequence\footnote{Also termed an {\em interval}} $w_{i}w_{i+1}\ldots
-  w_{i+k-1}$ on $\sigma$ for some positive integer $i \le n+1-k$ where  $k = |S|$.
+  A set system $\cF$ from universe $U$, $|U| = n$ has the {\em \cop}
+  if there exists a linear order or permutation $\sigma = w_1w_2\ldots
+  w_n$ that can be applied to $U$ \stt each set $S \in \cF$ becomes a
+  consecutive subsequence\footnote{Also termed an {\em interval}}
+  $w_{i}w_{i+1}\ldots w_{i+k-1}$ on $\sigma$ for some positive integer
+  $i \le n+1-k$ where $k = |S|$.
   \par\noindent%
   The set $\valid{U,\cF}$ respresents all \COP orders of $\cF$ in $U$.
   \dstop
@@ -432,7 +433,7 @@ simpler.
     mcc04}\footnote{\cite{mcc04} does not use the term ``mutually
     orthogonal'' but refers to the same idea as ``sets that do not
     overlap''. This terminology is also used in other literature like
-    \cite{nsnrs09,wlh02}.} ]
+    \cite{nsnrs09,wlh02}.} etc.]
   \label{def:orthosets}%
   Let $\cF$ be a set system with universe $U$ and sets $A, B \in \cF$.
   \begin{enumerate}
@@ -481,8 +482,17 @@ simpler.
 
   \item $\overline{\cF}$ represents the smallest super set system of
     $\cF$ that is complete\footnote{\cite[Def.~3.2]{mcc04} calls
-      this the {\em weak closure} of $\cF$ denoted by $\cW(\cF)$. \label{mcc3}}
-  \end{enumerate}
+      this the {\em weak closure} of $\cF$ denoted by
+      $\cW(\cF)$. \label{mcc3}}
+
+  \item \label{def::slashop} The binary operator $/$ is defined as
+    follows. Let $A, B$ be two sets from set sysetm $\cF$.
+    \begin{align*}
+      A/B &= A \setminus B \cup \{b\}\\
+      \cF/B &= \{ S/B \mid S \in \cF, S \nsubseteq B \}
+    \end{align*}
+    $b$ is a new element added as a representative for $B$.
+ \end{enumerate}
   \dstop
 \end{definition}
 
@@ -522,6 +532,8 @@ into subproblems.
 \end{enumerate}
 \end{observation}
 
+\temptext{narrative is abrupt from here. add some explanation for the
+  theorem and proposition below?}
 
 \begin{theoremsansproof}[{\cite[Th.~3,6]{mm96}}]
   \label{th:validcop}
@@ -540,7 +552,8 @@ into subproblems.
 Proposition~\ref{pr:validcop} is owing to the following theorem by
 which \cite{mm96} describes a way to decompose the problem of finding
 all \COP orders of $\cF$ into two subproblems using sets in
-$\overline{\cF} \cap \cF^{\bot}$.
+$\overline{\cF} \cap \cF^{\bot}$. The operator $/$ used is defined in
+Definition~\ref{def:orthosets}~(\ref{def::slashop}).
 
 \begin{theoremsansproof}[{\cite[Th.~7]{mm96}}]
   \label{th:mmdecomp}
@@ -550,17 +563,18 @@ $\overline{\cF} \cap \cF^{\bot}$.
   $\valid{U,\cF} = \valid{U/H,\cF/H} * \valid{H,\cF \cap 2^H}$
 \end{theoremsansproof}
 
-\def \ff {\overline{\cF} \cap \cF^{\bot}}
 
+\def \ff {\overline{\cF} \cap \cF^{\bot}}
 The idea behind Theorem~\ref{th:mmdecomp} is as follows. A permutation $\alpha$
-of $U$ is a composition of two permutations with respect to $H$ - i) a
-permutation $\gamma$ of $H$ and (ii) a permutation $\beta$ of $U/H$.
+of $U$ is a composition of two permutations with respect to $H$ - (i) a
+permutation $\gamma$ of $H$ and (ii) a permutation $\beta$ of $U
+\setminus H$.
 
 For two mutually orthogonal sets $A, B$ such that $A \nsubseteq B$,
 $A/B$ is defined as the set obtained by removing all elements of $B$
 from $A$ and adding a representative element for $B$ in $A$. Being orthogonal,
-results in only the following three possibilities.
-\begin{enumerate}
+$A/B$ results in only the following three possibilities.
+\begin{enumerate}[i. ]
 \item $A$ and $ B$ are disjoint: $A/B  = A$
 \item $A$ is a subset of $B$: $A/B$ is not defined
 \item $B$ is a subset of $A$: $A/B = A \setminus B \cup \{b\}$, where $b$
@@ -572,16 +586,18 @@ subproblems in \cite{mm96} is very similar to the substitution
 decomposition of a set system given in \cite[Sec.~4]{mcc04}.\footnote{Using
   the theory cited in footnotes~\ref{mcc1},\ref{mcc2},\ref{mcc3}.}
 
-The following corollary states how \PQRtree elegantly fits into this
-whole theory and help in computing all \COP orders of $\cF$.
+The following corollary, Corollary~\ref{cor:pqrrecursive} states how
+\PQRtree elegantly fits into this whole theory and help in computing
+all \COP orders of $\cF$.
 
 \begin{corollary}[{\cite[Cor.~8]{mm96}}]
+  \label{cor:pqrrecursive}
   Let $\cF$ be a set system with universe $U$ and $H$ is a non-empty
-  orthogonal set $H \in
-  \ff$. If there is a \PQRtree $T_1$ that encodes all permutations in
-  $\valid{U/H, \cF/H}$ and also a \PQRtree $T_2'$ that encodes all
-  permutations $\valid{H,\cF \cap \power{H}}$, then a \PQRtree $T$ for
-  $\cF$ can be obtained by replacing the leaf $h$ in $T_1$ by $T_2$.
+  orthogonal set $H \in \ff$. If there is a \PQRtree $T_1$ that
+  encodes all permutations in $\valid{U/H, \cF/H}$ and also a \PQRtree
+  $T_2$ that encodes all permutations $\valid{H,\cF \cap \power{H}}$,
+  then a \PQRtree $T$ for $\cF$ can be obtained by replacing the leaf
+  $h$ in $T_1$ by $T_2$, where $h$ is the representative element for $H$.
 \end{corollary}
 
 %Finding elements in $\ff$ is done using \PQRtree.
@@ -589,14 +605,16 @@ whole theory and help in computing all \COP orders of $\cF$.
 Thus we have a recursive algorithm that can compute the \PQRtree for
 $\cF$ provided we find an element from $\ff$ in each iteration. The
 non-empty sets in $\ff$ are called {\em node sets} since they form the
-nodes in the \PQRtree. They are calculated as follows.  One is by
-computing the overlap components of $\cF$. The overlap components is
-the partition that results from the {overlap} equivalence relation
-which is nothing but non-orthogonal equivalence relation\footnote{It
-  is easy to verify that this relation is indeed an equivalence
-  relation.}. Overlap components are linearly
-computable\cite{mm95,wlh92}. Once these elements are factored
-out, the rest of the node sets are obtained by identifying {\em twin}
+nodes in the \PQRtree, as alluded to by
+Corollary~\ref{cor:pqrrecursive}. They are calculated as follows.
+First method is by computing the overlap components of $\cF$. The
+overlap components is the partition that results from the {\em
+  overlap} equivalence relation which is nothing but {\em
+  non-orthogonal} equivalence relation\footnote{It is easy to verify
+  that this relation is indeed an equivalence relation.}. Overlap
+components are linearly computable\cite{mm95,wlh92}. Once these
+elements are factored out, the rest of the node sets are obtained by
+the second method which is identifying {\em twin}
 elements\footnote{\cite[Sec.~3]{kklv10} calls this {indistinguishable}
   elements. The equivalence class is called a {\em slot}.}. Two
 elements $a, b \in U$ are twins if their membership in every set of
@@ -607,11 +625,11 @@ logspace\cite{kklv10}.
 
 The recursion end condition is when one cannot find any more sets from
 $\ff$ that are non-trivial. This is when $\ff = \cT(U)$. This is the
-point where the parents of the leaves of the \PQRtree are created. The
+point where the parents of the leaves of the final \PQRtree are created. The
 following theorem helps the algorithm decide whether a $P$, $Q$ or
 $R$ node must be created.
 
-\begin{theoremsansproof}[{\cite[Th.~9]{mm96},\cite[Th.~2.1]{mcc04}}]
+\begin{theoremsansproof}[{\cite[Th.~9]{mm96}}] %,\cite[Th.~2.1]{mcc04}
 \label{th:pqrfinalmm}
 If $\cF$ is a set system with universe $U$ and $|U| \ge 3$ then one of
 the following statements hold.
@@ -623,22 +641,23 @@ the following statements hold.
 \end{enumerate}
 \end{theoremsansproof}
 
-In case (\ref{th::it1}) all elements in $U$ are made children of a
-$P$ node. In case (\ref{th::it2}) all elements in $U$ are made
-children of a $Q$ node in the order given by $\alpha$. Finally case
-(\ref{th::it3}) is the one when no permutation of $U$ gives \COP. All
-elements of $U$ are in this case made children in an $R$ node. 
+In case (\ref{th::it1}) of Theorem~\ref{th:pqrfinalmm} all elements in
+$U$ are made children of a $P$ node. In case (\ref{th::it2}) all
+elements in $U$ are made children of a $Q$ node in the order given by
+$\alpha$. Finally, case (\ref{th::it3}) is the situation where no permutation
+of $U$ gives \COP. All elements of $U$ are in this case made children
+in an $R$ node.
 
 Theorem~\ref{th:pqrfinalmm} and the theory leading to it is very
-similar to \cite[Th.~2.1, 3.5. Also Th.~3.2, 3.3, 3.4]{mcc04} which categorizes
-the nodes in the above the three cases as {\em prime}, {\em linear}
-and {\em degenerate} respectively. Their generalized \PQtree is
-created in similar ways as \PQRtree above. This tree is in essense the
-Hasse diagram of what they call {\em strong elements} of
-$\overline{\cF}$. Strong elements of a set family are elements that do
-not overlap with any other elements in the family, \ie it is
-orthogonal to all other sets\cite[Def.~3.3]{mcc04}.
-
+similar to \cite[esp. Th.~2.1, 3.5. also Th.~3.2, 3.3, 3.4]{mcc04}
+which categorizes the nodes in the above the three cases as {\em
+  prime}, {\em linear} and {\em degenerate}
+respectively. \cite{mcc04}'s generalized \PQtree is created in similar
+ways as \PQRtree above. This tree is, in essence, the Hasse diagram of
+what they call {\em strong elements} of weak closure,
+$\cW(\cF)$\footnote{\ie $\overline{\cF}$}. Strong elements of a set
+family are elements that do not overlap with any other elements in the
+family, \ie it is orthogonal to all other sets\cite[Def.~3.3]{mcc04}.
 
 \begin{theoremsansproof}[{\cite{mm96}, \cite[Th.~3.6]{mcc04}}]
 The set system $\cF$ has \COP \iff its \PQRtree has no $R$ nodes.  
@@ -650,12 +669,13 @@ narrows it down to parts of the universe in $R$ nodes that prevent the
 set system from having \COP.
 
 As mentioned before, we observe the three data strutures of \PQRtree,
-\gPQtree and generalized \PQtree to be equivalentand the theory of all
-these data structures is summarised in Table~\ref{tab:pqrcomparison}.
+\gPQtree and generalized \PQtree to be equivalent. The terminologies
+of the theory of all these data structures is summarised in
+Table~\ref{tab:pqrcomparison}.
 
-We will now see one more generalization of \PQtree before seeing other
-approaches to solving \COP testing including ICPIA which is a set
-theoretic characterization of \COP.
+We will now see, in brief, one more generalization of \PQtree before
+seeing another approaches to solving \COP testing called ICPIA which
+is a set theoretic characterization of \COP.
 
 \begin{table}[t]
   \def\colwidth{4cm}
@@ -822,6 +842,8 @@ much simplified procedure.
 
 \subsection{ICPIA - a set cardinality based \COP test}
 
+\temptext{narrative is abrupt}
+
 \cite{nsnrs09} describes a characterization of consecutive-ones
 property solely based on the cardinality properties of the sets in the
 set system and does not use any variants of \PQtrees. 
@@ -832,7 +854,7 @@ set system and does not use any variants of \PQtrees.
   Let $\cF = \{A_i \mid A_i \subseteq U, i \in [m]\}$ be a set system
   from universe $U$ and the set of ordered pairs $\Pi = \{(A_i, B_i)
   \mid B_i  \text{ is an interval from } [n], i \in [m]\}$ be an {\em interval
-    assigment} of $\cF$, then it is called an {\em ICPIA} if it has
+    assignment} of $\cF$, then $\Pi$ is called an {\em ICPIA} if it has
   the following properties.
   \begin{enumerate}[i.]
   \item $|A_i| = |B_i|$ for all $i \in [m]$
@@ -845,11 +867,10 @@ set system and does not use any variants of \PQtrees.
   If an interval assignment $\Pi$ is feasible, then it is an ICPIA.
 \end{theoremsansproof}
 
-The necessity of ICPIA for a set system to have \COP given in
-Theorem~\ref{th:inpia1} is fairly obvious. It turns out that it is
-sufficient too.  This is demostrated by two algorithms which work as
-follows. The first one iterates over the assignment
-$\Pi$ %set system $\cF$
+The necessity condition of Theorem~\ref{th:icpia1} is fairly
+obvious. It turns out that it is sufficient too.  This is demostrated
+by two algorithms which work as follows. The first one iterates over
+the assignment $\Pi$ %set system $\cF$
 and changes it in each iteration till the altered
 assignment %set system
 has no more overlapping intervals\footnote{Intervals are the second
@@ -901,12 +922,15 @@ a given interval assignment. ICPIA can also be used to find an
 interval assignment when only the set system $\cF$ is given. Part of
 the approach is similar to the overlap component idea in \cite{fg65,
   wlh02}. Once the overlap components are factored out, they can be
-independently assigned a subinterval from to which the sets in the
+independently assigned a subinterval to which the sets in the
 component need to be mapped. This is simple because the overlap
 components are disjoint from each other. Now the subproblem is finding
 \COP order for each overlap component. In each component, the set
-whose intersections with the rest of the sets in that component forms
-a single inclusion chain is chosen first and assigned the
+whose overlaps with the rest of the sets in that component forms
+a single inclusion chain\footnote{A set of sets form a {\em single
+  inclusion chain} when the Hasse diagram of their subset relation
+forms a single chain. In this particular reference, the set of sets is
+the set of overlaps.} is chosen first and assigned the
 leftmost\footnote{By convention. Rightmost can also be chosen
   analogously to get a different \COP order.} interval. The next
 candidate set is chosen from this set's overlapping sets. The interval
@@ -940,6 +964,9 @@ with \COP. This is shown in Theorem~\ref{th:intgraphcop}.
   \end{enumerate}
 \end{theoremsansproof}
 
+\temptext{ abrupt: Add a section closing para. does this method (above)
+  lead to efficient algo? }
+
 \section{Optimization problems in COP}
 \label{sec:surveycopopt}
 
@@ -972,10 +999,45 @@ the test is negative. This certainly gives a hint to how hard it is to find
 these substructures in the input. \temptext{Fill neg results on
   finding forbidden submartrices -- boo75, some highlighted stuff from v85}
 
+In this section we will describe \cite{d08phd}'s approximation
+algorithm for finding forbidden submatrix. We will use $\Tuckerset$ to
+refer to the set of Tucker's forbidden submatrices shown in
+Figure~\ref{fig:forbiddensubmatrices}.
 
-\temptext{TEXT INTRODUCING SECTION}
+
+A corollary to one of Tucker's theorems presented in
+Theorem~\ref{th:tuckeratfree} is given in
+Corollary~\ref{cor:tuckertheorem}. This is central to \cite{d08phd}'s
+algorithm.
+
+\begin{corollary}[{\cite[Cor.~3.1]{d08phd}}]
+  \label{cor:tuckertheorem}
+  A matrix $M$ has \COP \iff its representing bipartite graph
+  $G_M$\footnote{Graph whose half adjacency matrix
+    (Def.~\ref{def:xxxx}) is $M$.} does not contain an asteroidal
+  triple whose three vertices correspond to columns of M.
+\end{corollary}
 
 
+
+
+\temptext{
+\cite[Ch.~3]{d08phd} describes two main algorithms - one is an
+approximation algorithm and the other one is an exact algorithm. 
+
+
+\begin{theoremsansproof}[{\cite[Th.~3.1]{d08phd}}] 
+\label{th:forbiddenalg}
+Let $M$ be a $(*,\Delta)$-matrix of size $m
+\times n$. A forbidden submatrix from $\Tuckerset$ in $M$ that has a minimum
+number of rows can be found in $O(\Delta^3m^2n\dot(m+n^2))$
+time. Within the same time, one can also find a forbidden submatrix
+from $\Tuckerset$ in $M$ that has a minimum number of columns, a minimum number
+of rows and columns, or a minimum number of entries.
+  
+\end{theoremsansproof}
+
+}
 
 
 \subsection{Incompatibility graph - a certificate for no \COP}
@@ -993,15 +1055,15 @@ problem.
   incompatibility graph} of a set system\footnote{Since \COP in
   matrices and set systems are equivalent problems as seen in
   Section~\ref{sec:surveycertalgo} we will use the term set system
-  here.}. The construction of this graph is based on the following
+  in this section, in line with \cite{mcc04}'s convention.}. The construction of this graph is based on the following
 observation. 
 
 \begin{observation} 
   Consider elements $a, b, c \in U$ and a set system $\cF$ with
-  universe $U$. If there is at least one set $S \in \cF$ such that $a,
-  c \in \cF$ but $b \notin S$, then it is impossible to have a \COP
-  order that will place $b$ in between $a$ and $c$. \tnote{also cite
-    the inbetweenness problem}
+  universe $U$. If there is at least one set $S \in \cF$ \stt $a, c
+  \in S$ but $b \notin S$, then it is impossible to have a \COP order
+  that will place $b$ in between $a$ and $c$. \tnote{also cite the
+    inbetweenness problem}
 \end{observation}
 
 For the sake of argument, suppose there exists such a \COP

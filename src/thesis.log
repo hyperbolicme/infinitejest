@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  24 JAN 2012 12:53
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  25 JAN 2012 18:38
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -857,7 +857,11 @@ Package: arydshln 2004/08/31 v1.71
 )
 (./thesisfiguresandtables.sty
 Package: thesisfiguresandtables 2012/01/05
-) (../lib/trackchanges.sty
+)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/tools/showkeys.sty
+Package: showkeys 2006/01/09 v3.13 Show cite and label keys (DPC)
+)
+(../lib/trackchanges.sty
 
 LaTeX Warning: You have requested package `../lib/trackchanges',
                but the package provides `trackchanges'.
@@ -906,34 +910,34 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 (./020chap2.aux) (./030chap3.aux) (./040chap4.aux) (./050appa.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 73.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 73.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    ... okay on input line 73.
 -------------------- Geometry parameters
 paper: a4paper
 landscape: --
 twocolumn: --
-twoside: --
+twoside: true
 asymmetric: --
-h-parts: 108.405pt, 416.83289pt, 72.26999pt
+h-parts: 72.26999pt, 452.9679pt, 72.26999pt
 v-parts: 72.26999pt, 724.57224pt, 48.20462pt
 hmarginratio: --
 vmarginratio: --
@@ -948,22 +952,22 @@ driver: pdftex
 -------------------- Page layout dimensions and switches
 \paperwidth  597.50787pt
 \paperheight 845.04684pt
-\textwidth  416.83289pt
-\textheight 694.57224pt
-\oddsidemargin  36.13501pt
-\evensidemargin 36.13501pt
+\textwidth  452.9679pt
+\textheight 657.57224pt
+\oddsidemargin  20.0pt
+\evensidemargin -20.0pt
 \topmargin  0.0pt
-\headheight 0.0pt
-\headsep    0.0pt
+\headheight 12.0pt
+\headsep    25.0pt
 \footskip   30.0pt
-\marginparwidth 35.0pt
+\marginparwidth 85.0pt
 \marginparsep   10.0pt
 \columnsep  10.0pt
 \skip\footins  10.8pt plus 4.0pt minus 2.0pt
 \hoffset 0.0pt
 \voffset 0.0pt
 \mag 1000
-
+\@twosidetrue \@mparswitchtrue 
 (1in=72.27pt, 1cm=28.45pt)
 -----------------------
 
@@ -989,10 +993,10 @@ LaTeX Info: Redefining \selectfont on input line 125.
 \RaggedRightParindent=\skip77
 \JustifyingParindent=\skip78
 )
-Package caption Info: float package v1.3 (or newer) detected on input line 63.
+Package caption Info: float package v1.3 (or newer) detected on input line 73.
 Package caption Info: hyperref package v6.74m (or newer) detected on input line
- 63.
-Package caption Info: listings package v1.2 (or newer) detected on input line 6
+ 73.
+Package caption Info: listings package v1.2 (or newer) detected on input line 7
 3.
 
 (/usr/local/texlive/2007/texmf-dist/tex/context/base/supp-pdf.tex
@@ -1007,7 +1011,7 @@ Package caption Info: listings package v1.2 (or newer) detected on input line 6
 \MPnumerator=\count172
 \everyMPtoPDFconversion=\toks53
 )
-Package hyperref Info: Link coloring OFF on input line 63.
+Package hyperref Info: Link coloring OFF on input line 73.
  (/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2006/12/27 v2.28 Cross-referencing by name of section
 
@@ -1016,15 +1020,15 @@ Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
 )
 \c@section@level=\count173
 )
-LaTeX Info: Redefining \ref on input line 63.
-LaTeX Info: Redefining \pageref on input line 63.
+LaTeX Info: Redefining \ref on input line 73.
+LaTeX Info: Redefining \pageref on input line 73.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write6
 \openout6 = `thesis.out'.
 
  ABD: EveryShipout initializing macros
-<iitm.pdf, id=186, 109.40875pt x 109.40875pt>
+<iitm.pdf, id=194, 109.40875pt x 109.40875pt>
 File: iitm.pdf Graphic file (type pdf)
  <use iitm.pdf> [0
 
@@ -1056,6 +1060,10 @@ File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 )) [1
 
 
+
+] [2
+
+
 ]
 \openout2 = `002ack.aux'.
 
@@ -1065,8 +1073,10 @@ File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 Package hyperref Warning: No destination for bookmark of \addcontentsline,
 (hyperref)                destination is added on input line 1.
 
-) [2
+) [3
 
+
+] [4
 
 
 ]
@@ -1078,12 +1088,7 @@ LaTeX Font Info:    Try loading font information for T1+bch on input line 13.
 (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 )
-Overfull \hbox (16.34442pt too wide) in paragraph at lines 19--39
-[] [] 
- []
-
-
-Overfull \hbox (73.5216pt too wide) in paragraph at lines 83--92
+Overfull \hbox (37.3866pt too wide) in paragraph at lines 83--92
 []  $[]$ 
  []
 
@@ -1097,28 +1102,34 @@ File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 LaTeX Font Info:    Font shape `TS1/bch/bx/n' in size <20.74> not available
 (Font)              Font shape `TS1/bch/b/n' tried instead on input line 112.
 
-Overfull \hbox (52.47943pt too wide) in paragraph at lines 95--113
+Overfull \hbox (16.34442pt too wide) in paragraph at lines 95--113
 [] [] 
  []
 
-) [3
+) [5
+
+] [6
 
 
 ]
 \openout2 = `003abstract.aux'.
 
- (./003abstract.tex [4
+ (./003abstract.tex [7
 
 
+]) [8
 
-]) (./thesis.toc [5
 
+] (./thesis.toc [9
 
-])
+] [10])
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
- [6] (./thesis.lot
+ [11] [12
+
+]
+(./thesis.lot
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <10> not available
 (Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 2.
@@ -1127,53 +1138,54 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <10> not available
 \tf@lot=\write8
 \openout8 = `thesis.lot'.
 
- [7
+ [13
+
+] [14
 
 ] (./thesis.lof)
 \tf@lof=\write9
 \openout9 = `thesis.lof'.
 
- [8
+ [15
+
+] [16
 
 ]
 \openout2 = `004abbrv.aux'.
 
- (./004abbrv.tex) [9
+ (./004abbrv.tex) [17
+
+
+] [18
 
 
 ]
 \openout2 = `005notation.aux'.
 
- (./005notation.tex) [10
 
+(./005notation.tex) [19
 
 
 ]
 \openout2 = `010chap1.aux'.
 
-
-(./010chap1.tex
+ (./010chap1.tex
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 
-Overfull \hbox (9.5284pt too wide) in paragraph at lines 46--55
-\OT1/cmr/m/n/12 A group of stu-dents, \OT1/cmr/bx/n/12 Pa\OT1/cmr/m/it/12 trici
-a\OT1/cmr/m/n/12 , \OT1/cmr/bx/n/12 Pi\OT1/cmr/m/it/12 gpen\OT1/cmr/m/n/12 , \O
-T1/cmr/bx/n/12 Sn\OT1/cmr/m/it/12 oopy\OT1/cmr/m/n/12 , \OT1/cmr/bx/n/12 Wo\OT1
-/cmr/m/it/12 odstock\OT1/cmr/m/n/12 , \OT1/cmr/bx/n/12 Vi\OT1/cmr/m/it/12 olet\
-OT1/cmr/m/n/12 , \OT1/cmr/bx/n/12 Li\OT1/cmr/m/it/12 nus\OT1/cmr/m/n/12 , \OT1/
-cmr/bx/n/12 Ch\OT1/cmr/m/it/12 arlie\OT1/cmr/m/n/12 ,
- []
+Underfull \vbox (badness 1817) has occurred while \output is active []
 
-[1
+ [1
+
 
 
 
 ]
 LaTeX Font Info:    Try loading font information for OT1+pzc on input line 103.
 
- (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1pzc.fd
+
+(/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1pzc.fd
 File: ot1pzc.fd 2001/06/04 font definitions for OT1/pzc.
 )
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <10> not available
@@ -1192,15 +1204,15 @@ LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <5> not available
                                                   
 l.142 
       ]
-<../img/1_infinite_loop__cropped.pdf, id=374, 517.7539pt x 326.55022pt>
+<../img/1_infinite_loop__cropped.pdf, id=422, 517.7539pt x 326.55022pt>
 File: ../img/1_infinite_loop__cropped.pdf Graphic file (type pdf)
 
 <use ../img/1_infinite_loop__cropped.pdf>
-<../img/2_infinite_loop_BTWF__cropped.pdf, id=375, 522.76677pt x 323.68573pt>
+<../img/2_infinite_loop_BTWF__cropped.pdf, id=423, 522.76677pt x 323.68573pt>
 File: ../img/2_infinite_loop_BTWF__cropped.pdf Graphic file (type pdf)
 
 <use ../img/2_infinite_loop_BTWF__cropped.pdf>
-<../img/3_infinite_loop.pdf, id=376, 599.23875pt x 465.74pt>
+<../img/3_infinite_loop.pdf, id=424, 599.23875pt x 465.74pt>
 File: ../img/3_infinite_loop.pdf Graphic file (type pdf)
 
 <use ../img/3_infinite_loop.pdf>
@@ -1253,9 +1265,9 @@ ped.pdf> <../img/3_infinite_loop.pdf
 pdfTeX warning: pdflatex (file ../img/3_infinite_loop.pdf): PDF inclusion: Page
  Group detected which pdfTeX can't handle. Ignoring it.
 >]
-Overfull \hbox (3.68219pt too wide) in paragraph at lines 221--233
-[]\OT1/cmr/m/n/12 The in-ter-val as-sign-ment prob-lem to a set sys-tem is equi
-v-a-lent to the consecutive-
+Overfull \hbox (21.61588pt too wide) in paragraph at lines 235--235
+[]\OT1/cmr/bx/n/17.28 Basic pre-lim-i-nar-ies - gen-eral def-i-ni-tions and nom
+en-
  []
 
 
@@ -1273,14 +1285,21 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <12> not available
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.308 
-      ] [7] [8] [9] [10]
+      ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+[8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+[10]
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <10.95> not available
 (Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 624.
 
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 626.
 
-
-(/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+ (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 628--631
@@ -1297,7 +1316,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 620--645
 
  []
 
-[11]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
 Underfull \hbox (badness 10000) in paragraph at lines 674--675
 
  []
@@ -1312,10 +1334,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 666--687
 
  []
 
-<../img/star.pdf, id=609, 244.915pt x 283.0575pt>
+<../img/star.pdf, id=658, 244.915pt x 283.0575pt>
 File: ../img/star.pdf Graphic file (type pdf)
  <use ../img/star.pdf>
-<../img/kstar.pdf, id=610, 263.98625pt x 302.12875pt>
+<../img/kstar.pdf, id=659, 263.98625pt x 302.12875pt>
 File: ../img/kstar.pdf Graphic file (type pdf)
  <use ../img/kstar.pdf>
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <14.4> not available
@@ -1359,12 +1381,13 @@ Chapter 2.
 
 
 
+
 ]
 
 Package pdftex.def Warning: Option `bb' does not make sense,
 (pdftex.def)                using `viewport' instead on input line 57.
 
-<../img/graphmatrices_g1.png, id=655, 342.27875pt x 283.0575pt>
+<../img/graphmatrices_g1.png, id=703, 342.27875pt x 283.0575pt>
 File: ../img/graphmatrices_g1.png Graphic file (type png)
 
 <use ../img/graphmatrices_g1.png>
@@ -1372,11 +1395,11 @@ File: ../img/graphmatrices_g1.png Graphic file (type png)
 Package pdftex.def Warning: Option `bb' does not make sense,
 (pdftex.def)                using `viewport' instead on input line 57.
 
-<../img/graphmatrices_g2.png, id=656, 350.30875pt x 202.7575pt>
+<../img/graphmatrices_g2.png, id=704, 350.30875pt x 202.7575pt>
 File: ../img/graphmatrices_g2.png Graphic file (type png)
 
 <use ../img/graphmatrices_g2.png>
-<../img/graphmatrices_H.png, id=657, 261.97874pt x 383.4325pt>
+<../img/graphmatrices_H.png, id=705, 261.97874pt x 383.4325pt>
 File: ../img/graphmatrices_H.png Graphic file (type png)
 
 <use ../img/graphmatrices_H.png>
@@ -1459,22 +1482,23 @@ warning (ext4): destination with the same identifier (name{table.2.2}) has been
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.190 A
-        few years later, a deeply significant result based on very different]
-Overfull \hbox (4.40063pt too wide) in paragraph at lines 218--230
-[]\OT1/cmr/m/n/12 Theorem []2.2.1[] states that con-vex bi-par-tite graphs can-
-not have \OT1/cmr/m/it/12 as-ter-oidal triples[][][]
- []
-
+l.189 
+      ]
 LaTeX Font Info:    Try loading font information for OT1+bch on input line 233.
 
-(/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1bch.fd
+ (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1bch.fd
 File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
 )
 LaTeX Font Info:    Font shape `OT1/bch/bx/n' in size <12> not available
 (Font)              Font shape `OT1/bch/b/n' tried instead on input line 233.
 
-<../img/tuckersforbiddensubgraphs.png, id=795, 1113.15875pt x 590.205pt>
+Overfull \hbox (6.03546pt too wide) in paragraph at lines 243--248
+[] \OT1/bch/b/n/12 The-o-rem 2.2.2 ([[], Th. 7], [[], Th. 2.4]). []\OT1/cmr/m/i
+t/12 In a bi-par-tite graph $\OML/cmm/m/it/12 G \OT1/cmr/m/n/12 = (\OML/cmm/m/i
+t/12 V[]; V[]; E\OT1/cmr/m/n/12 )$
+ []
+
+<../img/tuckersforbiddensubgraphs.png, id=843, 1113.15875pt x 590.205pt>
 File: ../img/tuckersforbiddensubgraphs.png Graphic file (type png)
 
 <use ../img/tuckersforbiddensubgraphs.png> [21]
@@ -1501,32 +1525,30 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 LaTeX Warning: Citation `lec67' on page 22 undefined on input line 307.
 
 
-Overfull \hbox (17.56274pt too wide) in paragraph at lines 282--309
-\OT1/cmr/m/n/12 Booth and Lueker in their pa-per [[]] gave the first lin-ear al
--go-rithm[][][] for consecutive-
- []
+Underfull \vbox (badness 1783) has occurred while \output is active []
 
-[22pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
-}) has been already used, duplicate ignored
+ [22pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+2}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.309 
-       <../img/tuckersforbiddensubgraphs.png (PNG copy)>] [23pdfTeX warning (ex
-t4): destination with the same identifier (name{figure.2.3}) has been already u
-sed, duplicate ignored
+l.314   \begin{enumerate}[i.]
+                              <../img/tuckersforbiddensubgraphs.png (PNG copy)>
+] [23pdfTeX warning (ext4): destination with the same identifier (name{figure.2
+.3}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.309 
-      ] <../img/pqtree.png, id=840, 546.04pt x 353.32pt>
+l.314   \begin{enumerate}[i.]
+                             ]
+<../img/pqtree.png, id=890, 546.04pt x 353.32pt>
 File: ../img/pqtree.png Graphic file (type png)
-
-<use ../img/pqtree.png>
+ <use ../img/pqtree.png>
 \openout5 = `thesis.ent'.
 
- [24pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-4}) has been already used, duplicate ignored
+
+[24pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4
+}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
@@ -1542,76 +1564,88 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 
 [25] [26] [27] [28]
 
-LaTeX Warning: Citation `mm96-ref11' on page 29 undefined on input line 605.
+LaTeX Warning: Citation `mm96-ref11' on page 29 undefined on input line 623.
 
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 716--716
+[29] [30]
+Underfull \hbox (badness 10000) in paragraph at lines 736--736
 []\OT1/cmss/m/n/10 Decomposition tree of
  []
 
 
-Underfull \hbox (badness 7504) in paragraph at lines 716--716
+Underfull \hbox (badness 7504) in paragraph at lines 736--736
 \OMS/cmsy/m/n/10 W\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 F\OT1/cmr/m/n/10 )$\OT1/cms
 s/m/n/10 , $\OML/cmm/m/it/10 T\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 W\OT1/cmr/m/n/1
 0 (\OMS/cmsy/m/n/10 F\OT1/cmr/m/n/10 ))$ []\OT1/cmss/m/n/10 PQR
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 729--729
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 741.
+(hyperref)                removing `math shift' on input line 761.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 741.
+(hyperref)                removing `math shift' on input line 761.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 741.
+(hyperref)                removing `math shift' on input line 761.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 741.
+(hyperref)                removing `math shift' on input line 761.
 
-[30] <../img/pctree_hm03.png, id=1020, 738.76pt x 620.3175pt>
+[31pdfTeX warning (ext4): destination with the same identifier (name{table.2.3}
+) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.784   \item I
+               s unrooted -- thus it has (a) no parent child relationship]
+<../img/pctree_hm03.png, id=1083, 738.76pt x 620.3175pt>
 File: ../img/pctree_hm03.png Graphic file (type png)
 
 <use ../img/pctree_hm03.png>
-<../img/pctree_dom.png, id=1021, 886.31125pt x 261.97874pt>
+<../img/pctree_dom.png, id=1084, 886.31125pt x 261.97874pt>
 File: ../img/pctree_dom.png Graphic file (type png)
 
-<use ../img/pctree_dom.png> [31pdfTeX warning (ext4): destination with the same
- identifier (name{table.2.3}) has been already used, duplicate ignored
+<use ../img/pctree_dom.png> [32] [33pdfTeX warning (ext4): destination with the
+ same identifier (name{figure.2.5}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.802 
-      ] [32pdfTeX warning (ext4): destination with the same identifier (name{fi
-gure.2.5}) has been already used, duplicate ignored
+l.868 \end{theoremsansproof}
+                             <../img/pctree_hm03.png (PNG copy)> <../img/pctree
+_dom.png (PNG copy)>]
+Underfull \vbox (badness 6625) has occurred while \output is active []
 
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.802 
-       <../img/pctree_hm03.png (PNG copy)> <../img/pctree_dom.png (PNG copy)>]
-Overfull \hbox (27.17604pt too wide) in paragraph at lines 832--837
-[]\OT1/cmss/bx/it/12 Definition 2.2.5 (In-ter-sec-tion Car-di-nal-ity Pre-serv-
-ing In-ter-val As-sign-ment (ICPIA)).
+ [34]
+[35]
+
+LaTeX Warning: Reference `def:xxxx' on page 36 undefined on input line 1017.
+
+[36] [37]
+Overfull \hbox (0.56288pt too wide) in paragraph at lines 1119--1123
+[] \OT1/bch/b/n/12 The-o-rem 2.3.3 ([[], Th. 6.1], [[], Cor-rected by Th. 2.6, 
+Proof p. 44--47]).
  []
 
+[38]) [39] [40
 
-LaTeX Warning: Reference `th:inpia1' on page 33 undefined on input line 849.
 
-[33] [34] [35] [36] [37]) [38]
+]
 \openout2 = `030chap3.aux'.
 
  (./030chap3.tex
 Chapter 3.
-[39
 
+Underfull \vbox (badness 1436) has occurred while \output is active []
+
+ [41
 
 
 ]
@@ -1644,7 +1678,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--115
 
  []
 
-[40]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (12.38878pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/n/12 42 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
+PERGRAPHS - NEW RESULTS
+ []
+
+[42]
 Underfull \hbox (badness 10000) in paragraph at lines 135--137
 
  []
@@ -1674,7 +1717,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--172
 
  []
 
-[41] [42] [43]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43]
+Overfull \hbox (12.38878pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/n/12 44 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
+PERGRAPHS - NEW RESULTS
+ []
+
+[44] [45]
 Underfull \hbox (badness 10000) in paragraph at lines 392--400
 
  []
@@ -1684,7 +1736,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 401--405
 
  []
 
-[44]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (12.38878pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/n/12 46 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
+PERGRAPHS - NEW RESULTS
+ []
+
+[46]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 482.
 
@@ -1711,91 +1772,97 @@ Underfull \hbox (badness 10000) in paragraph at lines 500--500
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[45] [46pdfTeX warning (ext4): destination with the same identifier (name{ALC@r
-em.1}) has been already used, duplicate ignored
+[47]
+Overfull \hbox (12.38878pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/n/12 48 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
+PERGRAPHS - NEW RESULTS
+ []
+
+[48pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}
+) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.562 \end{lemma}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{ALC@rem.1}) has been already used, duplicate ignored
+l.575 
+      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
+.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.562 \end{lemma}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{ALC@rem.1}) has been already used, duplicate ignored
+l.575 
+      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
+.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.562 \end{lemma}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{ALC@rem.1}) has been already used, duplicate ignored
+l.575 
+      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
+.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.562 \end{lemma}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{ALC@rem.1}) has been already used, duplicate ignored
+l.575 
+      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
+.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.562 \end{lemma}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{ALC@rem.1}) has been already used, duplicate ignored
+l.575 
+      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
+.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.562 \end{lemma}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{ALC@rem.1}) has been already used, duplicate ignored
+l.575 
+      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
+.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.562 \end{lemma}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{ALC@rem.1}) has been already used, duplicate ignored
+l.575 
+      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
+.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.562 \end{lemma}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{ALC@rem.1}) has been already used, duplicate ignored
+l.575 
+      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
+.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.562 \end{lemma}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{ALC@rem.1}) has been already used, duplicate ignored
+l.575 
+      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
+.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.562 \end{lemma}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{ALC@rem.1}) has been already used, duplicate ignored
+l.575 
+      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
+.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.562 \end{lemma}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{ALC@rem.1}) has been already used, duplicate ignored
+l.575 
+      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
+.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.562 \end{lemma}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{ALC@rem.1}) has been already used, duplicate ignored
+l.575 
+      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
+.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.562 \end{lemma}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{ALC@rem.1}) has been already used, duplicate ignored
+l.575 
+      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
+.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.562 \end{lemma}
-                 ]
+l.575 
+      ]
 
 LaTeX Warning: The counter will not be printed.
              The label is: \xbullet  on input line 576.
@@ -1810,7 +1877,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 603--615
 
  []
 
-[47]pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1
+[49]pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2003,13 +2070,19 @@ l.876     \RETURN
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[48] [49]
-Overfull \hbox (2.45137pt too wide) in paragraph at lines 1088--1097
-[]\OT1/cmr/m/n/12 We have seen two fil-ter-ing al-go-rithms above, namely, Al-g
-o-rithm []1[] for \OT1/pcr/m/n/12 filter[]1
+
+Overfull \hbox (12.38878pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/n/12 50 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
+PERGRAPHS - NEW RESULTS
  []
 
-[50]pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1
+[50] [51]
+Overfull \hbox (12.38878pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/n/12 52 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
+PERGRAPHS - NEW RESULTS
+ []
+
+[52]pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2195,7 +2268,11 @@ ifier (name{ALC@line.16}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1169     \RETURN
-                   $\phi$ [51]
+                   $\phi$ [53]
+Overfull \hbox (4.04375pt too wide) in paragraph at lines 1217--1217
+[] \OT1/cmr/bx/n/17.28 Com-put-ing fea-si-ble TPL with spe-cial tar-get trees 
+ []
+
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 1264.
@@ -2207,31 +2284,56 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 File: cop-tree_thesis.1 Graphic file (type mps)
 [MP to PDF] (./cop-tree_thesis.1)
 File: cop-tree_thesis.2 Graphic file (type mps)
- [MP to PDF] (./cop-tree_thesis.2) [52]
-[53pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
-}) has been already used, duplicate ignored
+ [MP to PDF] (./cop-tree_thesis.2)
+Overfull \hbox (12.38878pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/n/12 54 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
+PERGRAPHS - NEW RESULTS
+ []
+
+[54]
+Underfull \vbox (badness 6775) has occurred while \output is active []
+
+ [55pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.1319 
-       ] [54]
-Overfull \hbox (6.70636pt too wide) in paragraph at lines 1452--1456
-\OMS/cmsy/m/n/12 L[] \OT1/cmr/m/n/12 = []$ 
+       ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (12.38878pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/n/12 56 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
+PERGRAPHS - NEW RESULTS
  []
 
-
-Overfull \hbox (9.23439pt too wide) in paragraph at lines 1456--1463
-\OMS/cmsy/m/n/12 T[] \OT1/cmr/m/n/12 = []$ 
+[56]
+Overfull \hbox (24.5318pt too wide) in paragraph at lines 1430--1441
+\OT1/cmr/m/n/12 For each hy-per-edge $\OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 2 O$\
+OT1/cmr/m/n/12 , we will main-tain a 2-tuple of non-negative num-bers $[]$.
  []
 
-[55] [56] [57] [58]
+[57]
+Overfull \hbox (12.38878pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/n/12 58 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
+PERGRAPHS - NEW RESULTS
+ []
 
-LaTeX Warning: Reference `prelims' on page 59 undefined on input line 1765.
+[58] [59]
+Overfull \hbox (12.38878pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/n/12 60 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
+PERGRAPHS - NEW RESULTS
+ []
+
+[60]
+
+LaTeX Warning: Reference `prelims' on page 61 undefined on input line 1765.
 
 
-LaTeX Warning: Reference `feasible' on page 59 undefined on input line 1766.
+LaTeX Warning: Reference `feasible' on page 61 undefined on input line 1766.
 
-[59]
+[61]
 
 LaTeX Warning: Command \O invalid in math mode on input line 1857.
 
@@ -2240,8 +2342,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 1837--1870
 
  []
 
-[60] [61] [62]pdfTeX warning (ext4): destination with the same identifier (name
-{ALC@rem.1}) has been already used, duplicate ignored
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (12.38878pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/n/12 62 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
+PERGRAPHS - NEW RESULTS
+ []
+
+[62]
+Overfull \hbox (16.46223pt too wide) in paragraph at lines 1904--1907
+[] \OT1/bch/b/n/12 Lemma 3.5.4. []\OT1/cmr/m/it/12 If $\OT1/cmr/m/n/12 (\OML/cm
+m/m/it/12 M[]; M[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2\U/msa/m/n/12 4$ \OT1/cmr
+/m/it/12 and $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M[]; M[]\OT1/cmr/m/n/12 ) \OMS/
+cmsy/m/n/12 2\U/msa/m/n/12 4$\OT1/cmr/m/it/12 , then ei-ther $\OT1/cmr/m/n/12 (
+\OML/cmm/m/it/12 M[]; M[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2\U/msa/m/n/12 4$ \
+OT1/cmr/m/it/12 or $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M[]; M[]\OT1/cmr/m/n/12 )
+ \OMS/cmsy/m/n/12 2\U/msa/m/n/12 4$\OT1/cmr/m/it/12 . 
+ []
+
+[63]
+Overfull \hbox (12.38878pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/n/12 64 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
+PERGRAPHS - NEW RESULTS
+ []
+
+[64]
+Underfull \hbox (badness 4303) in paragraph at lines 2042--2042
+[] \OT1/cmr/bx/n/12 Al-go-rithm 4 \OT1/cmr/m/n/12 Al-go-rithm to find an ICPPA 
+for a ma-trix $\OML/cmm/m/it/12 M$ \OT1/cmr/m/n/12 on tree $\OML/cmm/m/it/12 T$
+\OT1/cmr/m/n/12 :
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
+as been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.2045     \STATE
@@ -2275,27 +2410,40 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.2052 ...se the result in \cite{nsnrs09}.  \STATE
-                                                   Find a partition of [63]
-[64] [65]
+                                                   Find a partition of
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[65]
+Overfull \hbox (12.38878pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/n/12 66 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
+PERGRAPHS - NEW RESULTS
+ []
+
+[66]
 
 LaTeX Warning: Command \l invalid in math mode on input line 2148.
 
 
-Overfull \hbox (2.40175pt too wide) in paragraph at lines 2138--2152
-[]\OT1/cmr/m/n/12 We present the fol-low-ing re-duc-tion to see that COP test-i
-ng is in-deed in logspace.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [67])
+Overfull \hbox (12.38878pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/n/12 68 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
+PERGRAPHS - NEW RESULTS
  []
 
-) [66]
+[68]
 \openout2 = `040chap4.aux'.
 
  (./040chap4.tex
 Chapter 4.
-[67
+[69
 
 
 
-]) [68]
+
+]) [70]
 \openout2 = `050appa.aux'.
 
  (./050appa.texpdfTeX warning (ext4): destination with the same identifier (nam
@@ -2321,30 +2469,25 @@ LaTeX Warning: Command \O invalid in math mode on input line 26.
 
 LaTeX Warning: Command \O invalid in math mode on input line 26.
 
-) [69
+) [71
 
 
 
-] (./thesis.bbl [70
+] (./thesis.bbl [72
 
 
 ]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [71]
-Underfull \hbox (badness 1248) in paragraph at lines 262--266
-[]\OT1/cmr/m/n/10 Bastian Laub-ner.  Cap-tur-ing poly-no-mial time on in-ter-va
-l graphs.  \OT1/cmr/m/it/10 CoRR\OT1/cmr/m/n/10 ,
- []
-
-[72]
+ [73] [74]
 Missing character: There is no ï in font cmr10!
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no € in font cmr10!
-) [73] (./thesis.aux (./001certificate.aux) (./002ack.aux) (./0031ded.aux)
-(./003abstract.aux) (./004abbrv.aux) (./005notation.aux) (./010chap1.aux)
-(./020chap2.aux) (./030chap3.aux) (./040chap4.aux) (./050appa.aux))
+) [75] (./thesis.aux (./001certificate.aux)
+(./002ack.aux) (./0031ded.aux) (./003abstract.aux) (./004abbrv.aux)
+(./005notation.aux) (./010chap1.aux) (./020chap2.aux) (./030chap3.aux)
+(./040chap4.aux) (./050appa.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2353,11 +2496,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 18448 strings out of 94073
- 324830 string characters out of 1162984
- 381129 words of memory out of 1500000
- 20680 multiletter control sequences out of 10000+50000
- 78774 words of font info for 173 fonts, out of 1200000 for 2000
+ 18495 strings out of 94073
+ 325455 string characters out of 1162984
+ 381597 words of memory out of 1500000
+ 20703 multiletter control sequences out of 10000+50000
+ 79720 words of font info for 175 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  63i,25n,71p,1261b,828s stack positions out of 5000i,500n,6000p,200000b,5000s
 {/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
@@ -2380,29 +2523,30 @@ ky/cm/cmr12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr1
 7.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr
 /local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texl
 ive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2007/te
-xmf-dist/fonts/type1/bluesky/cm/cmss10.pfb></usr/local/texlive/2007/texmf-dist/
-fonts/type1/bluesky/cm/cmss12.pfb></usr/local/texlive/2007/texmf-dist/fonts/typ
-e1/bluesky/cm/cmssbx10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blue
-sky/cm/cmssi10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/c
-mssi12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmssi8.pf
-b></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/l
-ocal/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy6.pfb></usr/local/texli
-ve/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/texlive/2007/te
-xmf-dist/fonts/type1/bluesky/cm/cmsy8.pfb></usr/local/texlive/2007/texmf-dist/f
-onts/type1/bluesky/cm/cmti10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type
-1/bluesky/cm/cmti12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky
-/cm/cmtt12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/msam
-10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/msbm10.pfb><
-/usr/local/texlive/2007/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></u
-sr/local/texlive/2007/texmf-dist/fonts/type1/public/cm-super/sfsi0600.pfb></usr
-/local/texlive/2007/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb></usr/l
-ocal/texlive/2007/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/tex
-live/2007/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2007/
-texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2007/texmf-dist
-/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on thesis.pdf (84 pages, 1390166 bytes).
+xmf-dist/fonts/type1/bluesky/cm/cmsl12.pfb></usr/local/texlive/2007/texmf-dist/
+fonts/type1/bluesky/cm/cmss10.pfb></usr/local/texlive/2007/texmf-dist/fonts/typ
+e1/bluesky/cm/cmss12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesk
+y/cm/cmssbx10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cm
+ssi10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmssi12.pf
+b></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmssi8.pfb></usr/l
+ocal/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/texl
+ive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy6.pfb></usr/local/texlive/2007/t
+exmf-dist/fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/texlive/2007/texmf-dist/
+fonts/type1/bluesky/cm/cmsy8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type
+1/bluesky/cm/cmti10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky
+/cm/cmti12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmtt1
+2.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/msam10.pfb></
+usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/msbm10.pfb></usr/loca
+l/texlive/2007/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/
+texlive/2007/texmf-dist/fonts/type1/public/cm-super/sfsi0600.pfb></usr/local/te
+xlive/2007/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb></usr/local/texl
+ive/2007/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2007
+/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2007/texmf-dis
+t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/ty
+pe1/urw/zapfchan/uzcmi8a.pfb>
+Output written on thesis.pdf (95 pages, 1422393 bytes).
 PDF statistics:
- 1768 PDF objects out of 2073 (max. 8388607)
- 435 named destinations out of 1000 (max. 131072)
- 454 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1860 PDF objects out of 2073 (max. 8388607)
+ 455 named destinations out of 1000 (max. 131072)
+ 470 words of extra memory for PDF output out of 10000 (max. 10000000)
 
