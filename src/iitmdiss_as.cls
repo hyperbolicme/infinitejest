@@ -83,7 +83,8 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
 \RequirePackage[compat2,a4paper,left=1in,right=1in,top=1in,bottom=0.667in,
                 ]{geometry}[2002/07/08] % With space for header. Changed
                                 % margins to accommodate twopage.
-\pagestyle{headings}  % For headers.
+\pagestyle{empty}  % Will be set to {headings} for headers in
+                   % thesis.tex after title and preamble pages.
 
 \parskip 8pt
 
@@ -127,7 +128,7 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
   \thispagestyle{empty}
   \newpage
   \null
-  \setcounter{page}{0}
+%  \setcounter{page}{0}
   \parskip=0pt
   \begin{center}%
   \let \footnote \thanks
@@ -246,7 +247,7 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
    %
    \def\ackheadingstr{Acknowledgements}
    \def\acknowledgements{\chapter*{\ackheadingstr}%{\centerline{ACKNOWLEDGEMENTS}}
-     \addcontentsline{toc}{chapter}{\ackheadingstr}
+     %\addcontentsline{toc}{chapter}{\ackheadingstr}
    }
 
    % ABSTRACT
@@ -256,19 +257,20 @@ Dissertations - hacked by hyperbolicme. Base iitmdiss 2005/03/09]
    \addcontentsline{toc}{chapter}{\abstractheadingstr}
    }
 
-   % GLOSSARY
-   %
-   \def\glossaryheadingstr{Glossary}
-   \def\glossary{\chapter*{\glossaryheadingstr}
-   \addcontentsline{toc}{chapter}{\glossaryheadingstr}
-   }
 
    % ABBREVIATIONS
    %
-   \def\abbrvheadingstr{Abbreviations}
+   \def\abbrvheadingstr{Abbreviations and Notations}
    \def\abbreviations{\chapter*{\abbrvheadingstr}
    \addcontentsline{toc}{chapter}{\abbrvheadingstr}
    }
+
+%    % Notations
+%    %
+%    \def\glossaryheadingstr{Notations}
+%    \def\notations{\chapter*{\glossaryheadingstr}
+%    \addcontentsline{toc}{chapter}{\glossaryheadingstr}
+%    }
 
    % Use the nomencl package for the NOTATION section.
 

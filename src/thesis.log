@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  25 JAN 2012 18:38
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  27 JAN 2012 14:50
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -345,15 +345,26 @@ LaTeX Warning: You have requested package `../lib/mythesislib',
                but the package provides `mythesislib'.
 
 Package: mythesislib 2011/12/21
+(/usr/local/texlive/2007/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip48
+\f@ncyO@elh=\skip49
+\f@ncyO@erh=\skip50
+\f@ncyO@olh=\skip51
+\f@ncyO@orh=\skip52
+\f@ncyO@elf=\skip53
+\f@ncyO@erf=\skip54
+\f@ncyO@olf=\skip55
+\f@ncyO@orf=\skip56
+)
 (/usr/local/texlive/2007/texmf-dist/tex/latex/fncychap/fncychap.sty
 Package: fncychap 2004/09/21 v1.33 LaTeX package (Revised chapters)
-\RW=\skip48
-\mylen=\skip49
-\myhi=\skip50
-\px=\skip51
-\py=\skip52
-\pyy=\skip53
-\pxx=\skip54
+\RW=\skip57
+\mylen=\skip58
+\myhi=\skip59
+\px=\skip60
+\py=\skip61
+\pyy=\skip62
+\pxx=\skip63
 )
 (/usr/local/texlive/2007/texmf-dist/tex/latex/tocbibind/tocbibind.sty
 Package: tocbibind 2003/03/13 v1.5g extra ToC listings
@@ -735,7 +746,7 @@ File: tikzlibrarypetri.code.tex 2008/06/18 v2.10 (rcs-revision 1.2)
 )
 (/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
-\@mathmargin=\skip55
+\@mathmargin=\skip64
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -785,8 +796,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \totwidth@=\dimen186
 \lineht@=\dimen187
 \@envbody=\toks37
-\multlinegap=\skip56
-\multlinetaggap=\skip57
+\multlinegap=\skip65
+\multlinetaggap=\skip66
 \mathdisplay@stack=\toks38
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
@@ -798,9 +809,9 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headfont=\toks41
 \thm@notefont=\toks42
 \thm@headpunct=\toks43
-\thm@preskip=\skip58
-\thm@postskip=\skip59
-\thm@headsep=\skip60
+\thm@preskip=\skip67
+\thm@postskip=\skip68
+\thm@headsep=\skip69
 \dth@everypar=\toks44
 )
 (/usr/local/texlive/2007/texmf-dist/tex/latex/ltxmisc/endnotes.sty
@@ -819,11 +830,11 @@ Package: array 2005/08/23 v2.4b Tabular extension package (FMi)
 \col@sep=\dimen189
 \extrarowheight=\dimen190
 \NC@list=\toks45
-\extratabsurround=\skip61
-\backup@length=\skip62
+\extratabsurround=\skip70
+\backup@length=\skip71
 )
 \everycr=\toks46
-\minrowclearance=\skip63
+\minrowclearance=\skip72
 )
 (/usr/local/texlive/2007/texmf-dist/tex/latex/arydshln/arydshln.sty
 Package: arydshln 2004/08/31 v1.71 
@@ -874,7 +885,7 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@cmds=\toks50
 \SOUL@buffer=\toks51
 \SOUL@token=\toks52
-\SOUL@spaceskip=\skip64
+\SOUL@spaceskip=\skip73
 \SOUL@ttwidth=\dimen200
 \SOUL@uldp=\dimen201
 \SOUL@ulht=\dimen202
@@ -906,31 +917,31 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \c@maxeditors=\count167
 )
 (./thesis.aux (./001certificate.aux) (./002ack.aux) (./0031ded.aux)
-(./003abstract.aux) (./004abbrv.aux) (./005notation.aux) (./010chap1.aux)
-(./020chap2.aux) (./030chap3.aux) (./040chap4.aux) (./050appa.aux))
+(./003abstract.aux) (./004abbrv.aux) (./010chap1.aux) (./020chap2.aux)
+(./030chap3.aux) (./040chap4.aux) (./050appa.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 73.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 73.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 78.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    ... okay on input line 78.
 -------------------- Geometry parameters
 paper: a4paper
 landscape: --
@@ -978,26 +989,26 @@ Package: ragged2e 2003/03/25 v2.04 ragged2e Package (MS)
 Package: everysel 1999/06/08 v1.03 EverySelectfont Package (MS)
 LaTeX Info: Redefining \selectfont on input line 125.
 )
-\CenteringLeftskip=\skip65
-\RaggedLeftLeftskip=\skip66
-\RaggedRightLeftskip=\skip67
-\CenteringRightskip=\skip68
-\RaggedLeftRightskip=\skip69
-\RaggedRightRightskip=\skip70
-\CenteringParfillskip=\skip71
-\RaggedLeftParfillskip=\skip72
-\RaggedRightParfillskip=\skip73
-\JustifyingParfillskip=\skip74
-\CenteringParindent=\skip75
-\RaggedLeftParindent=\skip76
-\RaggedRightParindent=\skip77
-\JustifyingParindent=\skip78
+\CenteringLeftskip=\skip74
+\RaggedLeftLeftskip=\skip75
+\RaggedRightLeftskip=\skip76
+\CenteringRightskip=\skip77
+\RaggedLeftRightskip=\skip78
+\RaggedRightRightskip=\skip79
+\CenteringParfillskip=\skip80
+\RaggedLeftParfillskip=\skip81
+\RaggedRightParfillskip=\skip82
+\JustifyingParfillskip=\skip83
+\CenteringParindent=\skip84
+\RaggedLeftParindent=\skip85
+\RaggedRightParindent=\skip86
+\JustifyingParindent=\skip87
 )
-Package caption Info: float package v1.3 (or newer) detected on input line 73.
+Package caption Info: float package v1.3 (or newer) detected on input line 78.
 Package caption Info: hyperref package v6.74m (or newer) detected on input line
- 73.
+ 78.
 Package caption Info: listings package v1.2 (or newer) detected on input line 7
-3.
+8.
 
 (/usr/local/texlive/2007/texmf-dist/tex/context/base/supp-pdf.tex
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1011,7 +1022,7 @@ Package caption Info: listings package v1.2 (or newer) detected on input line 7
 \MPnumerator=\count172
 \everyMPtoPDFconversion=\toks53
 )
-Package hyperref Info: Link coloring OFF on input line 73.
+Package hyperref Info: Link coloring OFF on input line 78.
  (/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2006/12/27 v2.28 Cross-referencing by name of section
 
@@ -1020,20 +1031,37 @@ Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
 )
 \c@section@level=\count173
 )
-LaTeX Info: Redefining \ref on input line 73.
-LaTeX Info: Redefining \pageref on input line 73.
+LaTeX Info: Redefining \ref on input line 78.
+LaTeX Info: Redefining \pageref on input line 78.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write6
 \openout6 = `thesis.out'.
 
  ABD: EveryShipout initializing macros
-<iitm.pdf, id=194, 109.40875pt x 109.40875pt>
+LaTeX Font Info:    Try loading font information for U+lasy on input line 89.
+
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 89.
+
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 89.
+
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+)
+<iitm.pdf, id=184, 109.40875pt x 109.40875pt>
 File: iitm.pdf Graphic file (type pdf)
- <use iitm.pdf> [0
+ <use iitm.pdf> [1
 
 {/usr/local/texlive/2007/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./iitm.
-pdf>]
+pdf>] [2
+
+]
 \openout2 = `001certificate.aux'.
 
 
@@ -1042,38 +1070,26 @@ LaTeX Font Info:    Try loading font information for OT1+ptm on input line 3.
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
-LaTeX Font Info:    Try loading font information for U+lasy on input line 26.
-
-(/usr/local/texlive/2007/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 26.
-
-(/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2002/01/19 v2.2g AMS font definitions
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 26.
-
-(/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2002/01/19 v2.2g AMS font definitions
-)) [1
+))pdfTeX warning (ext4): destination with the same identifier (name{page.i}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.98 \include{001certificate}
+                              [1
 
 
-
-] [2
+]pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.104 \xclearpage
+                  [2
 
 
 ]
 \openout2 = `002ack.aux'.
 
-
-(./002ack.tex
-
-Package hyperref Warning: No destination for bookmark of \addcontentsline,
-(hyperref)                destination is added on input line 1.
-
-) [3
+ (./002ack.tex) [3
 
 
 ] [4
@@ -1114,22 +1130,31 @@ Overfull \hbox (16.34442pt too wide) in paragraph at lines 95--113
 ]
 \openout2 = `003abstract.aux'.
 
- (./003abstract.tex [7
+ (./003abstract.tex
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 14.
+
+(/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [7
 
 
 ]) [8
 
 
-] (./thesis.toc [9
+]
+(./thesis.toc
+Underfull \vbox (badness 4168) has occurred while \output is active []
 
-] [10])
+ [9
+
+]
+[10])
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
  [11] [12
 
-]
-(./thesis.lot
+] (./thesis.lot
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <10> not available
 (Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 2.
@@ -1160,13 +1185,6 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <10> not available
 
 
 ]
-\openout2 = `005notation.aux'.
-
-
-(./005notation.tex) [19
-
-
-]
 \openout2 = `010chap1.aux'.
 
  (./010chap1.tex
@@ -1179,112 +1197,111 @@ Underfull \vbox (badness 1817) has occurred while \output is active []
  [1
 
 
-
-
 ]
-LaTeX Font Info:    Try loading font information for OT1+pzc on input line 103.
+LaTeX Font Info:    Try loading font information for OT1+pzc on input line 102.
 
 
 (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1pzc.fd
 File: ot1pzc.fd 2001/06/04 font definitions for OT1/pzc.
 )
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <10> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 103.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 102.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <7> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 103.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 102.
 
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <5> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 103.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 102.
 
  [2pdfTeX warning (ext4): destination with the same identifier (name{table.1.1}
 ) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.142 
+l.141 
       ]
-<../img/1_infinite_loop__cropped.pdf, id=422, 517.7539pt x 326.55022pt>
+LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <12> not available
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 145.
+
+LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <8> not available
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 145.
+
+LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <6> not available
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 145.
+
+
+<../img/1_infinite_loop__cropped.pdf, id=412, 517.7539pt x 326.55022pt>
 File: ../img/1_infinite_loop__cropped.pdf Graphic file (type pdf)
 
 <use ../img/1_infinite_loop__cropped.pdf>
-<../img/2_infinite_loop_BTWF__cropped.pdf, id=423, 522.76677pt x 323.68573pt>
+<../img/2_infinite_loop_BTWF__cropped.pdf, id=413, 522.76677pt x 323.68573pt>
 File: ../img/2_infinite_loop_BTWF__cropped.pdf Graphic file (type pdf)
 
 <use ../img/2_infinite_loop_BTWF__cropped.pdf>
-<../img/3_infinite_loop.pdf, id=424, 599.23875pt x 465.74pt>
+<../img/3_infinite_loop.pdf, id=414, 599.23875pt x 465.74pt>
 File: ../img/3_infinite_loop.pdf Graphic file (type pdf)
 
 <use ../img/3_infinite_loop.pdf>
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 181.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 180.
 
 
-LaTeX Font Info:    Try loading font information for TS1+cmss on input line 181
+LaTeX Font Info:    Try loading font information for TS1+cmss on input line 180
 .
 (/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <12> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 204.
-
-LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <8> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 204.
-
-LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <6> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 204.
-
- [3pdfTeX warning (ext4): destination with the same identifier (name{table.1.2}
-) has been already used, duplicate ignored
+) [3pdfTeX warning (ext4): destination with the same identifier (name{table.1.2
+}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.220 
+l.219 
       ] [4pdfTeX warning (ext4): destination with the same identifier (name{fig
 ure.1.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.220 
+l.219 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 1.2}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.220 
+l.219 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 1.3}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.220 
+l.219 
        <../img/1_infinite_loop__cropped.pdf> <../img/2_infinite_loop_BTWF__crop
 ped.pdf> <../img/3_infinite_loop.pdf
 
 pdfTeX warning: pdflatex (file ../img/3_infinite_loop.pdf): PDF inclusion: Page
  Group detected which pdfTeX can't handle. Ignoring it.
 >]
-Overfull \hbox (21.61588pt too wide) in paragraph at lines 235--235
-[]\OT1/cmr/bx/n/17.28 Basic pre-lim-i-nar-ies - gen-eral def-i-ni-tions and nom
-en-
- []
-
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 238.
+(Font)              using `OT1/cmss/bx/n' instead on input line 237.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <12> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 248.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 247.
 
 
-[5] [6pdfTeX warning (ext4): destination with the same identifier (name{figure.
-1.4}) has been already used, duplicate ignored
+[5]
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <7> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 271.
+
+
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4}
+) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.308 
+l.307 
       ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1294,76 +1311,76 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
 [10]
+Underfull \vbox (badness 3302) has occurred while \output is active []
+
+ [11]
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 624.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 623.
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 626.
 
- (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 628--631
+Underfull \hbox (badness 10000) in paragraph at lines 627--630
 
  []
 
 
-Overfull \hbox (22.75963pt too wide) in paragraph at lines 623--643
+Overfull \hbox (22.75963pt too wide) in paragraph at lines 622--642
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 620--645
+Underfull \hbox (badness 10000) in paragraph at lines 619--644
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--674
+
+ []
+
+
+Overfull \hbox (22.75963pt too wide) in paragraph at lines 668--684
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 665--686
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
-Underfull \hbox (badness 10000) in paragraph at lines 674--675
-
- []
-
-
-Overfull \hbox (22.75963pt too wide) in paragraph at lines 669--685
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 666--687
-
- []
-
-<../img/star.pdf, id=658, 244.915pt x 283.0575pt>
+ [12]
+<../img/star.pdf, id=678, 244.915pt x 283.0575pt>
 File: ../img/star.pdf Graphic file (type pdf)
  <use ../img/star.pdf>
-<../img/kstar.pdf, id=659, 263.98625pt x 302.12875pt>
+<../img/kstar.pdf, id=679, 263.98625pt x 302.12875pt>
 File: ../img/kstar.pdf Graphic file (type pdf)
  <use ../img/kstar.pdf>
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <14.4> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 710.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 709.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 715--718
+Underfull \hbox (badness 10000) in paragraph at lines 714--717
 
  []
 
 
-Overfull \hbox (22.75963pt too wide) in paragraph at lines 710--727
+Overfull \hbox (22.75963pt too wide) in paragraph at lines 709--726
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--729
+Underfull \hbox (badness 10000) in paragraph at lines 706--728
 
  []
 
-[12] [13pdfTeX warning (ext4): destination with the same identifier (name{figur
-e.1.5}) has been already used, duplicate ignored
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.1.5
+}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.769 
+l.768 
        <../img/star.pdf
 
 pdfTeX warning: pdflatex (file ../img/star.pdf): PDF inclusion: Page Group dete
@@ -1377,7 +1394,10 @@ ected which pdfTeX can't handle. Ignoring it.
 
  (./020chap2.tex
 Chapter 2.
-[15
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15
 
 
 
@@ -1385,25 +1405,25 @@ Chapter 2.
 ]
 
 Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 57.
+(pdftex.def)                using `viewport' instead on input line 58.
 
-<../img/graphmatrices_g1.png, id=703, 342.27875pt x 283.0575pt>
+<../img/graphmatrices_g1.png, id=723, 342.27875pt x 283.0575pt>
 File: ../img/graphmatrices_g1.png Graphic file (type png)
 
 <use ../img/graphmatrices_g1.png>
 
 Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 57.
+(pdftex.def)                using `viewport' instead on input line 58.
 
-<../img/graphmatrices_g2.png, id=704, 350.30875pt x 202.7575pt>
+<../img/graphmatrices_g2.png, id=724, 350.30875pt x 202.7575pt>
 File: ../img/graphmatrices_g2.png Graphic file (type png)
 
 <use ../img/graphmatrices_g2.png>
-<../img/graphmatrices_H.png, id=705, 261.97874pt x 383.4325pt>
+<../img/graphmatrices_H.png, id=725, 261.97874pt x 383.4325pt>
 File: ../img/graphmatrices_H.png Graphic file (type png)
 
 <use ../img/graphmatrices_H.png>
-Underfull \hbox (badness 10000) in paragraph at lines 59--61
+Underfull \hbox (badness 10000) in paragraph at lines 60--62
 
  []
 
@@ -1412,61 +1432,60 @@ e.2.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.96   \item $
-              H$ is \emph{biconvex bipartite} or \emph{doubly <../img/graphmatr
-ices_g1.png (PNG copy)> <../img/graphmatrices_g2.png (PNG copy)> <../img/graphm
-atrices_H.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+l.89     \end{enumerate}
+                         <../img/graphmatrices_g1.png (PNG copy)> <../img/graph
+matrices_g2.png (PNG copy)> <../img/graphmatrices_H.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 []\OT1/cmr/m/sc/10 Adjacency
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 []\OT1/cmr/m/sc/10 Augmented
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 \OT1/cmr/m/sc/10 ad-ja-cency
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 \OT1/cmr/m/sc/10 adjacency
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 []\OT1/cmr/m/sc/10 Maximal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 
  []
 
@@ -1475,142 +1494,151 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--129
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.151 \item \label
-                  {q:testcop} Does a given binary matrix have \COP?] [20pdfTeX 
-warning (ext4): destination with the same identifier (name{table.2.2}) has been
- already used, duplicate ignored
-
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.189 
-      ]
-LaTeX Font Info:    Try loading font information for OT1+bch on input line 233.
+l.140 \item I
+             f the test is affirmative, what is a certificate of the affirma...
+] [20]
+LaTeX Font Info:    Try loading font information for OT1+bch on input line 234.
 
  (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1bch.fd
 File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
 )
 LaTeX Font Info:    Font shape `OT1/bch/bx/n' in size <12> not available
-(Font)              Font shape `OT1/bch/b/n' tried instead on input line 233.
+(Font)              Font shape `OT1/bch/b/n' tried instead on input line 234.
+ [21pdfTeX warning (ext4): destination with the same identifier (name{table.2.2
+}) has been already used, duplicate ignored
 
-Overfull \hbox (6.03546pt too wide) in paragraph at lines 243--248
-[] \OT1/bch/b/n/12 The-o-rem 2.2.2 ([[], Th. 7], [[], Th. 2.4]). []\OT1/cmr/m/i
-t/12 In a bi-par-tite graph $\OML/cmm/m/it/12 G \OT1/cmr/m/n/12 = (\OML/cmm/m/i
-t/12 V[]; V[]; E\OT1/cmr/m/n/12 )$
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.240 \end{theoremsansproof}
+                            ]
+Overfull \hbox (6.03546pt too wide) in paragraph at lines 244--249
+[] \OT1/bch/b/n/12 The-o-rem 2.2.2 ([][][[], Th. 7], [][][[], Th. 2.4]). []\OT1
+/cmr/m/it/12 In a bi-par-tite graph $\OML/cmm/m/it/12 G \OT1/cmr/m/n/12 = (\OML
+/cmm/m/it/12 V[]; V[]; E\OT1/cmr/m/n/12 )$
  []
 
-<../img/tuckersforbiddensubgraphs.png, id=843, 1113.15875pt x 590.205pt>
+<../img/tuckersforbiddensubgraphs.png, id=882, 1113.15875pt x 590.205pt>
 File: ../img/tuckersforbiddensubgraphs.png Graphic file (type png)
 
-<use ../img/tuckersforbiddensubgraphs.png> [21]
-Overfull \vbox (3.38196pt too high) detected at line 272
+<use ../img/tuckersforbiddensubgraphs.png>
+Overfull \vbox (3.38196pt too high) detected at line 273
  []
 
 
-Overfull \vbox (3.10835pt too high) detected at line 272
+Overfull \vbox (3.10835pt too high) detected at line 273
  []
 
 
-Overfull \vbox (3.38196pt too high) detected at line 272
+Overfull \vbox (3.38196pt too high) detected at line 273
  []
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 280.
+(hyperref)                removing `math shift' on input line 281.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 280.
+(hyperref)                removing `math shift' on input line 281.
 
 
-LaTeX Warning: Citation `lec67' on page 22 undefined on input line 307.
+LaTeX Warning: Citation `lec67' on page 22 undefined on input line 308.
 
 
-Underfull \vbox (badness 1783) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 2}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.314   \begin{enumerate}[i.]
-                              <../img/tuckersforbiddensubgraphs.png (PNG copy)>
-] [23pdfTeX warning (ext4): destination with the same identifier (name{figure.2
-.3}) has been already used, duplicate ignored
+l.310 
+       <../img/tuckersforbiddensubgraphs.png (PNG copy)>] [23pdfTeX warning (ex
+t4): destination with the same identifier (name{figure.2.3}) has been already u
+sed, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.314   \begin{enumerate}[i.]
-                             ]
-<../img/pqtree.png, id=890, 546.04pt x 353.32pt>
+l.310 
+      ] <../img/pqtree.png, id=917, 546.04pt x 353.32pt>
 File: ../img/pqtree.png Graphic file (type png)
- <use ../img/pqtree.png>
+
+<use ../img/pqtree.png>
 \openout5 = `thesis.ent'.
 
+ [24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[24pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4
-}) has been already used, duplicate ignored
+ [25pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+4}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.356 
+l.381 
        <../img/pqtree.png (PNG copy)>]
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 391.
+(hyperref)                removing `math shift' on input line 392.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 391.
+(hyperref)                removing `math shift' on input line 392.
 
-[25] [26] [27] [28]
 
-LaTeX Warning: Citation `mm96-ref11' on page 29 undefined on input line 623.
+Overfull \hbox (4.23653pt too wide) in paragraph at lines 439--441
+[][]\OT1/cmss/m/n/12 Let $\OMS/cmsy/m/n/12 F$ \OT1/cmss/m/n/12 be a set sys-
+ []
+
+[26] [27] [28]
+
+LaTeX Warning: Citation `mm96-ref11' on page 29 undefined on input line 624.
 
 [29] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 736--736
+Underfull \hbox (badness 10000) in paragraph at lines 737--737
 []\OT1/cmss/m/n/10 Decomposition tree of
  []
 
 
-Underfull \hbox (badness 7504) in paragraph at lines 736--736
+Underfull \hbox (badness 7504) in paragraph at lines 737--737
 \OMS/cmsy/m/n/10 W\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 F\OT1/cmr/m/n/10 )$\OT1/cms
 s/m/n/10 , $\OML/cmm/m/it/10 T\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 W\OT1/cmr/m/n/1
 0 (\OMS/cmsy/m/n/10 F\OT1/cmr/m/n/10 ))$ []\OT1/cmss/m/n/10 PQR
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 749--749
+Underfull \hbox (badness 10000) in paragraph at lines 750--750
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 761.
+(hyperref)                removing `math shift' on input line 762.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 761.
+(hyperref)                removing `math shift' on input line 762.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 761.
+(hyperref)                removing `math shift' on input line 762.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 761.
+(hyperref)                removing `math shift' on input line 762.
 
-[31pdfTeX warning (ext4): destination with the same identifier (name{table.2.3}
-) has been already used, duplicate ignored
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31pdfTeX warning (ext4): destination with the same identifier (name{table.2.3
+}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.784   \item I
-               s unrooted -- thus it has (a) no parent child relationship]
-<../img/pctree_hm03.png, id=1083, 738.76pt x 620.3175pt>
+l.778 
+      ] <../img/pctree_hm03.png, id=1115, 738.76pt x 620.3175pt>
 File: ../img/pctree_hm03.png Graphic file (type png)
 
 <use ../img/pctree_hm03.png>
-<../img/pctree_dom.png, id=1084, 886.31125pt x 261.97874pt>
+<../img/pctree_dom.png, id=1116, 886.31125pt x 261.97874pt>
 File: ../img/pctree_dom.png Graphic file (type png)
 
 <use ../img/pctree_dom.png> [32] [33pdfTeX warning (ext4): destination with the
@@ -1618,26 +1646,35 @@ File: ../img/pctree_dom.png Graphic file (type png)
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.868 \end{theoremsansproof}
-                             <../img/pctree_hm03.png (PNG copy)> <../img/pctree
-_dom.png (PNG copy)>]
-Underfull \vbox (badness 6625) has occurred while \output is active []
-
- [34]
-[35]
-
-LaTeX Warning: Reference `def:xxxx' on page 36 undefined on input line 1017.
-
-[36] [37]
-Overfull \hbox (0.56288pt too wide) in paragraph at lines 1119--1123
-[] \OT1/bch/b/n/12 The-o-rem 2.3.3 ([[], Th. 6.1], [[], Cor-rected by Th. 2.6, 
-Proof p. 44--47]).
+l.848 \cite{nsnrs09}
+                     describes a characterization of consecutive-ones <../img/p
+ctree_hm03.png (PNG copy)> <../img/pctree_dom.png (PNG copy)>]
+Overfull \hbox (22.12006pt too wide) in paragraph at lines 855--860
+[][]\OT1/cmss/m/n/12 Let
  []
 
-[38]) [39] [40
+[34]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [35]
+[36]
 
-]
+LaTeX Warning: Reference `def:xxxx' on page 37 undefined on input line 1018.
+
+[37] [38]
+Overfull \hbox (0.56288pt too wide) in paragraph at lines 1120--1124
+[] \OT1/bch/b/n/12 The-o-rem 2.3.3 ([][][[], Th. 6.1], [][][[], Cor-rected by T
+h. 2.6, Proof p. 44--47]).
+ []
+
+[39]
+Overfull \hbox (0.53252pt too wide) in paragraph at lines 1252--1252
+[]\OT1/cmr/m/n/10 Given a ma-trix $\OML/cmm/m/it/10 M$ \OT1/cmr/m/n/10 with no 
+COP, [][][[]] shows that find-ing a sub-ma-trix $\OML/cmm/m/it/10 M[]$ \OT1/cmr
+/m/n/10 with all columns[]$[]$[] [check
+ []
+
+) [40]
 \openout2 = `030chap3.aux'.
 
  (./030chap3.tex
@@ -1648,72 +1685,68 @@ Underfull \vbox (badness 1436) has occurred while \output is active []
  [41
 
 
+
+
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
 
-Overfull \hbox (22.75963pt too wide) in paragraph at lines 64--79
+Overfull \hbox (22.75963pt too wide) in paragraph at lines 65--80
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--81
+Underfull \hbox (badness 10000) in paragraph at lines 63--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--100
+Underfull \hbox (badness 10000) in paragraph at lines 98--101
 
  []
 
 
-Overfull \hbox (22.75963pt too wide) in paragraph at lines 92--112
+Overfull \hbox (22.75963pt too wide) in paragraph at lines 93--113
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--115
+Underfull \hbox (badness 10000) in paragraph at lines 90--116
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Overfull \hbox (12.38878pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/n/12 42 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
-PERGRAPHS - NEW RESULTS
- []
-
-[42]
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
+ [42]
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
 
  []
 
 
-Overfull \hbox (22.75963pt too wide) in paragraph at lines 130--146
+Overfull \hbox (22.75963pt too wide) in paragraph at lines 131--147
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--148
+Underfull \hbox (badness 10000) in paragraph at lines 128--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--161
+Underfull \hbox (badness 10000) in paragraph at lines 159--162
 
  []
 
 
-Overfull \hbox (22.75963pt too wide) in paragraph at lines 153--170
+Overfull \hbox (22.75963pt too wide) in paragraph at lines 154--171
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--172
+Underfull \hbox (badness 10000) in paragraph at lines 151--173
 
  []
 
@@ -1721,175 +1754,171 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--172
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [43]
-Overfull \hbox (12.38878pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/n/12 44 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
-PERGRAPHS - NEW RESULTS
- []
-
 [44] [45]
-Underfull \hbox (badness 10000) in paragraph at lines 392--400
+Underfull \hbox (badness 10000) in paragraph at lines 393--401
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--405
+Underfull \hbox (badness 10000) in paragraph at lines 402--406
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Overfull \hbox (12.38878pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/n/12 46 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
-PERGRAPHS - NEW RESULTS
- []
-
-[46]
+ [46]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 482.
+put line 483.
 
-Underfull \hbox (badness 10000) in paragraph at lines 492--492
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
 []\OT1/pcr/m/n/10.95 Remove $\OML/cmm/m/it/10.95 S[]$\OT1/pcr/m/n/10.95 , $\OML
 /cmm/m/it/10.95 S[]$ \OT1/pcr/m/n/10.95 and add the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 498--498
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
 []\OT1/pcr/m/n/10.95 Carry forward the path
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 498--498
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
 \OT1/pcr/m/n/10.95 labeling for all existing sets
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--500
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
 []\OT1/pcr/m/n/10.95 Define path labeling for new
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[47]
-Overfull \hbox (12.38878pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/n/12 48 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
-PERGRAPHS - NEW RESULTS
- []
-
-[48pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}
-) has been already used, duplicate ignored
+[47] [48pdfTeX warning (ext4): destination with the same identifier (name{ALC@r
+em.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.575 
-      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
-.1}) has been already used, duplicate ignored
+l.555   \item $
+               |R| = |\cl_j(R)|$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \pdfT
+eX warning (ext4): destination with the same identifier (name{ALC@rem.1}) has b
+een already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.575 
-      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
-.1}) has been already used, duplicate ignored
+l.555   \item $
+               |R| = |\cl_j(R)|$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \pdfT
+eX warning (ext4): destination with the same identifier (name{ALC@rem.1}) has b
+een already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.575 
-      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
-.1}) has been already used, duplicate ignored
+l.555   \item $
+               |R| = |\cl_j(R)|$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \pdfT
+eX warning (ext4): destination with the same identifier (name{ALC@rem.1}) has b
+een already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.575 
-      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
-.1}) has been already used, duplicate ignored
+l.555   \item $
+               |R| = |\cl_j(R)|$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \pdfT
+eX warning (ext4): destination with the same identifier (name{ALC@rem.1}) has b
+een already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.575 
-      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
-.1}) has been already used, duplicate ignored
+l.555   \item $
+               |R| = |\cl_j(R)|$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \pdfT
+eX warning (ext4): destination with the same identifier (name{ALC@rem.1}) has b
+een already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.575 
-      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
-.1}) has been already used, duplicate ignored
+l.555   \item $
+               |R| = |\cl_j(R)|$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \pdfT
+eX warning (ext4): destination with the same identifier (name{ALC@rem.1}) has b
+een already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.575 
-      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
-.1}) has been already used, duplicate ignored
+l.555   \item $
+               |R| = |\cl_j(R)|$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \pdfT
+eX warning (ext4): destination with the same identifier (name{ALC@rem.1}) has b
+een already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.575 
-      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
-.1}) has been already used, duplicate ignored
+l.555   \item $
+               |R| = |\cl_j(R)|$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \pdfT
+eX warning (ext4): destination with the same identifier (name{ALC@rem.1}) has b
+een already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.575 
-      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
-.1}) has been already used, duplicate ignored
+l.555   \item $
+               |R| = |\cl_j(R)|$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \pdfT
+eX warning (ext4): destination with the same identifier (name{ALC@rem.1}) has b
+een already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.575 
-      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
-.1}) has been already used, duplicate ignored
+l.555   \item $
+               |R| = |\cl_j(R)|$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \pdfT
+eX warning (ext4): destination with the same identifier (name{ALC@rem.1}) has b
+een already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.575 
-      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
-.1}) has been already used, duplicate ignored
+l.555   \item $
+               |R| = |\cl_j(R)|$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \pdfT
+eX warning (ext4): destination with the same identifier (name{ALC@rem.1}) has b
+een already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.575 
-      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
-.1}) has been already used, duplicate ignored
+l.555   \item $
+               |R| = |\cl_j(R)|$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \pdfT
+eX warning (ext4): destination with the same identifier (name{ALC@rem.1}) has b
+een already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.575 
-      pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem
-.1}) has been already used, duplicate ignored
+l.555   \item $
+               |R| = |\cl_j(R)|$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \pdfT
+eX warning (ext4): destination with the same identifier (name{ALC@rem.1}) has b
+een already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.575 
-      ]
+l.555   \item $
+               |R| = |\cl_j(R)|$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: \xbullet  on input line 576.
+             The label is: \xbullet  on input line 577.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 581--598
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 603--615
+Underfull \hbox (badness 10000) in paragraph at lines 582--599
 
  []
 
-[49]pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1
-}) has been already used, duplicate ignored
+
+Underfull \hbox (badness 10000) in paragraph at lines 604--616
+
+ []
+
+[49] [50]pdfTeX warning (ext4): destination with the same identifier (name{ALC@
+rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.856     \STATE
+l.857     \STATE
                  $\cF_0 \assign \cF$, $\cl_0(S) \assign \cl(S)$ for all $SpdfTe
 X warning (ext4): destination with the same identifier (name{ALC@line.1}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.856     \STATE
+l.857     \STATE
                  $\cF_0 \assign \cF$, $\cl_0(S) \assign \cl(S)$ for all $S
-Underfull \hbox (badness 10000) in paragraph at lines 858--858
+Underfull \hbox (badness 10000) in paragraph at lines 859--859
 []\OT1/pcr/m/n/10.95 Path images are such that no
  []
 
@@ -1897,306 +1926,291 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.859     \STATE
+l.860     \STATE
                  $j \assign 1$\\pdfTeX warning (ext4): destination with the sam
 e identifier (name{ALC@line.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.859     \STATE
+l.860     \STATE
                  $j \assign 1$\\pdfTeX warning (ext4): destination with the sam
 e identifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.861 ...{j-1}$ such that $v \in \cl_{j-1}(S_1)$ }
+l.862 ...{j-1}$ such that $v \in \cl_{j-1}(S_1)$ }
                                                   \label{uniqueleaf}pdfTeX warn
 ing (ext4): destination with the same identifier (name{ALC@line.3}) has been al
 ready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.861 ...{j-1}$ such that $v \in \cl_{j-1}(S_1)$ }
+l.862 ...{j-1}$ such that $v \in \cl_{j-1}(S_1)$ }
                                                   \label{uniqueleaf}pdfTeX warn
 ing (ext4): destination with the same identifier (name{ALC@rem.1}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.862     \STATE
+l.863     \STATE
                  $\cF_j \assign \cF_{j-1} \setminus \{S_1\}$\\pdfTeX warning (e
 xt4): destination with the same identifier (name{ALC@line.4}) has been already 
 used, duplicate ignored
 <to be read again> 
                    \relax 
-l.862     \STATE
+l.863     \STATE
                  $\cF_j \assign \cF_{j-1} \setminus \{S_1\}$\\pdfTeX warning (e
 xt4): destination with the same identifier (name{ALC@rem.1}) has been already u
 sed, duplicate ignored
 <to be read again> 
                    \relax 
-l.863     \STATE
+l.864     \STATE
                  for all $S \in \cF_{j-1}$ such that $S \ne S_1$ setpdfTeX warn
 ing (ext4): destination with the same identifier (name{ALC@line.5}) has been al
 ready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.863     \STATE
+l.864     \STATE
                  for all $S \in \cF_{j-1}$ such that $S \ne S_1$ setpdfTeX warn
 ing (ext4): destination with the same identifier (name{ALC@rem.1}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.866     \STATE
+l.867     \STATE
                  $X \assign S_1 \setminus \bigcup_{S \in \cF_{j-1}, S \ne S_...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.6}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.866     \STATE
+l.867     \STATE
                  $X \assign S_1 \setminus \bigcup_{S \in \cF_{j-1}, S \ne S_...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.867     \IF{$X$ is empty}
+l.868     \IF{$X$ is empty}
                             \label{xempty} \STATE {\bfpdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@line.7}) has been already used, du
 plicate ignored
 <to be read again> 
                    \relax 
-l.867     \IF{$X$ is empty}
+l.868     \IF{$X$ is empty}
                             \label{xempty} \STATE {\bfpdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@rem.1}) has been already used, dup
 licate ignored
 <to be read again> 
                    \relax 
-l.867     \IF{$X$ is empty} \label{xempty} \STATE
+l.868     \IF{$X$ is empty} \label{xempty} \STATE
                                                   {\bfpdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@line.8}) has been already used, du
 plicate ignored
 <to be read again> 
                    \relax 
-l.867     \IF{$X$ is empty} \label{xempty} \STATE
+l.868     \IF{$X$ is empty} \label{xempty} \STATE
                                                   {\bfpdfTeX warning (ext4): de
 stination with the same identifier (name{ALC@rem.1}) has been already used, dup
 licate ignored
 <to be read again> 
                    \relax 
-l.868       exit} \label{ln:exit2} \ENDIF
+l.869       exit} \label{ln:exit2} \ENDIF
                                          pdfTeX warning (ext4): destination wit
 h the same identifier (name{ALC@line.9}) has been already used, duplicate ignor
 ed
 <to be read again> 
                    \relax 
-l.868       exit} \label{ln:exit2} \ENDIF
+l.869       exit} \label{ln:exit2} \ENDIF
                                          pdfTeX warning (ext4): destination wit
 h the same identifier (name{ALC@rem.1}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.869     \STATE
+l.870     \STATE
                  $x \assign $ arbitrary element from $X$\\pdfTeX warning (ext4)
 : destination with the same identifier (name{ALC@line.10}) has been already use
 d, duplicate ignored
 <to be read again> 
                    \relax 
-l.869     \STATE
+l.870     \STATE
                  $x \assign $ arbitrary element from $X$\\pdfTeX warning (ext4)
 : destination with the same identifier (name{ALC@rem.1}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.870     \STATE
+l.871     \STATE
                  $\cF_j \assign \cF_j \cup \{\{x\}, S_1 \setminus \{x\}\} $\\pd
 fTeX warning (ext4): destination with the same identifier (name{ALC@line.11}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.870     \STATE
+l.871     \STATE
                  $\cF_j \assign \cF_j \cup \{\{x\}, S_1 \setminus \{x\}\} $\\pd
 fTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.871     \STATE
+l.872     \STATE
                  $\cl_j(\{x\}) \assign \{v\}$\\pdfTeX warning (ext4): destinati
 on with the same identifier (name{ALC@line.12}) has been already used, duplicat
 e ignored
 <to be read again> 
                    \relax 
-l.871     \STATE
+l.872     \STATE
                  $\cl_j(\{x\}) \assign \{v\}$\\pdfTeX warning (ext4): destinati
 on with the same identifier (name{ALC@rem.1}) has been already used, duplicate 
 ignored
 <to be read again> 
                    \relax 
-l.872     \STATE
+l.873     \STATE
                  $\cl_j(S_1 \setminus \{x\}) \assign \cl_{j-1}(S_1) \setminu...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.13})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.872     \STATE
+l.873     \STATE
                  $\cl_j(S_1 \setminus \{x\}) \assign \cl_{j-1}(S_1) \setminu...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.873     \STATE
+l.874     \STATE
                  $j \assign j+1$\\pdfTeX warning (ext4): destination with the s
 ame identifier (name{ALC@line.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.873     \STATE
+l.874     \STATE
                  $j \assign j+1$\\pdfTeX warning (ext4): destination with the s
 ame identifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.874     \ENDWHILE
+l.875     \ENDWHILE
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{ALC@line.15}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.874     \ENDWHILE
+l.875     \ENDWHILE
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.875     \STATE
+l.876     \STATE
                  $\cF' \assign \cF_j$, $\cl' \assign \cl_j$\\pdfTeX warning (ex
 t4): destination with the same identifier (name{ALC@rem.1}) has been already us
 ed, duplicate ignored
 <to be read again> 
                    \relax 
-l.876     \RETURN
-                  $(\cF', \cl')$
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (12.38878pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/n/12 50 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
-PERGRAPHS - NEW RESULTS
- []
-
-[50] [51]
-Overfull \hbox (12.38878pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/n/12 52 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
-PERGRAPHS - NEW RESULTS
- []
-
-[52]pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1
-}) has been already used, duplicate ignored
+l.877     \RETURN
+                  $(\cF', \cl')$ [51] [52]pdfTeX warning (ext4): destination wi
+th the same identifier (name{ALC@rem.1}) has been already used, duplicate ignor
+ed
 <to be read again> 
                    \relax 
-l.1145     \IF{$T$ is empty}
+l.1146     \IF{$T$ is empty}
                             pdfTeX warning (ext4): destination with the same id
 entifier (name{ALC@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1145     \IF{$T$ is empty}
+l.1146     \IF{$T$ is empty}
                             pdfTeX warning (ext4): destination with the same id
 entifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1146     \RETURN
+l.1147     \RETURN
                    $\emptyset$\\pdfTeX warning (ext4): destination with the sam
 e identifier (name{ALC@line.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1146     \RETURN
+l.1147     \RETURN
                    $\emptyset$\\pdfTeX warning (ext4): destination with the sam
 e identifier (name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1147     \ENDIF
+l.1148     \ENDIF
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{ALC@line.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1147     \ENDIF
+l.1148     \ENDIF
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1148     \STATE
+l.1149     \STATE
                   $L \assign \{v \mid v \text{ is a leaf in }      T\}$\\pdfTeX
  warning (ext4): destination with the same identifier (name{ALC@line.4}) has be
 en already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1148     \STATE
+l.1149     \STATE
                   $L \assign \{v \mid v \text{ is a leaf in }      T\}$\\pdfTeX
  warning (ext4): destination with the same identifier (name{ALC@rem.1}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1149     \STATE
+l.1150     \STATE
                   $(\cF_1, \cl_1) \assign$ {\tt filter\_1($\cF, \cl,pdfTeX warn
 ing (ext4): destination with the same identifier (name{ALC@line.5}) has been al
 ready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1149     \STATE
+l.1150     \STATE
                   $(\cF_1, \cl_1) \assign$ {\tt filter\_1($\cF, \cl,pdfTeX warn
 ing (ext4): destination with the same identifier (name{ALC@rem.1}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1151     \STATE
+l.1152     \STATE
                   $(\cF_2, \cl_2) \assign$ {\tt filter\_2($\cF_1,pdfTeX warning
  (ext4): destination with the same identifier (name{ALC@line.6}) has been alrea
 dy used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1151     \STATE
+l.1152     \STATE
                   $(\cF_2, \cl_2) \assign$ {\tt filter\_2($\cF_1,pdfTeX warning
  (ext4): destination with the same identifier (name{ALC@rem.1}) has been alread
 y used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1154     \STATE
+l.1155     \STATE
                   $(\cF', \cl') \assign (\cF_2, \cl_2)$\\pdfTeX warning (ext4):
  destination with the same identifier (name{ALC@line.7}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.1154     \STATE
+l.1155     \STATE
                   $(\cF', \cl') \assign (\cF_2, \cl_2)$\\pdfTeX warning (ext4):
  destination with the same identifier (name{ALC@rem.1}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1155     \STATE
+l.1156     \STATE
                   $\phi' \leftarrow \emptyset$pdfTeX warning (ext4): destinatio
 n with the same identifier (name{ALC@line.8}) has been already used, duplicate 
 ignored
 <to be read again> 
                    \relax 
-l.1155     \STATE
+l.1156     \STATE
                   $\phi' \leftarrow \emptyset$pdfTeX warning (ext4): destinatio
 n with the same identifier (name{ALC@rem.1}) has been already used, duplicate i
 gnored
 <to be read again> 
                    \relax 
-l.1157     \FOR {every $v \in L$}
+l.1158     \FOR {every $v \in L$}
                                   \STATE $\phi'(x) \assign v$ where $x \inpdfTe
 X warning (ext4): destination with the same identifier (name{ALC@line.9}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1157     \FOR {every $v \in L$}
+l.1158     \FOR {every $v \in L$}
                                   \STATE $\phi'(x) \assign v$ where $x \inpdfTe
 X warning (ext4): destination with the same identifier (name{ALC@rem.1}) has be
 en already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1157     \FOR {every $v \in L$} \STATE
+l.1158     \FOR {every $v \in L$} \STATE
                                          $\phi'(x) \assign v$ where $x \inpdfTe
 X warning (ext4): destination with the same identifier (name{ALC@line.10}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1157     \FOR {every $v \in L$} \STATE
+l.1158     \FOR {every $v \in L$} \STATE
                                          $\phi'(x) \assign v$ where $x \in
-Underfull \hbox (badness 10000) in paragraph at lines 1160--1160
+Underfull \hbox (badness 10000) in paragraph at lines 1161--1161
 []\OT1/pcr/m/n/10.95 Copy the leaf labels to a one
  []
 
@@ -2204,155 +2218,129 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1161     \STATE
+l.1162     \STATE
                   Remove $\{x\}$ and $\{v\}$ from $\cF'$, $\cl'$  appropriat...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.11})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1161     \STATE
+l.1162     \STATE
                   Remove $\{x\}$ and $\{v\}$ from $\cF'$, $\cl'$  appropriat...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1162     \ENDFOR
+l.1163     \ENDFOR
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@line.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1162     \ENDFOR
+l.1163     \ENDFOR
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1164     \STATE
+l.1165     \STATE
                   $T' \assign T \setminus L$pdfTeX warning (ext4): destination 
 with the same identifier (name{ALC@line.13}) has been already used, duplicate i
 gnored
 <to be read again> 
                    \relax 
-l.1164     \STATE
+l.1165     \STATE
                   $T' \assign T \setminus L$pdfTeX warning (ext4): destination 
 with the same identifier (name{ALC@rem.1}) has been already used, duplicate ign
 ored
 <to be read again> 
                    \relax 
-l.1166     \STATE
+l.1167     \STATE
                   $\phi'' \assign$ {\tt get-hypergraph-isomorphism($\cF',pdfTeX
  warning (ext4): destination with the same identifier (name{ALC@line.14}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1166     \STATE
+l.1167     \STATE
                   $\phi'' \assign$ {\tt get-hypergraph-isomorphism($\cF',pdfTeX
  warning (ext4): destination with the same identifier (name{ALC@rem.1}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1168     \STATE
+l.1169     \STATE
                   $\phi \assign \phi'' \cup \phi'$ \\pdfTeX warning (ext4): des
 tination with the same identifier (name{ALC@line.15}) has been already used, du
 plicate ignored
 <to be read again> 
                    \relax 
-l.1168     \STATE
+l.1169     \STATE
                   $\phi \assign \phi'' \cup \phi'$ \\pdfTeX warning (ext4): des
 tination with the same identifier (name{ALC@rem.1}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.1169     \RETURN
+l.1170     \RETURN
                    $\phi$pdfTeX warning (ext4): destination with the same ident
 ifier (name{ALC@line.16}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1169     \RETURN
+l.1170     \RETURN
                    $\phi$ [53]
-Overfull \hbox (4.04375pt too wide) in paragraph at lines 1217--1217
+Overfull \hbox (4.04375pt too wide) in paragraph at lines 1218--1218
 [] \OT1/cmr/bx/n/17.28 Com-put-ing fea-si-ble TPL with spe-cial tar-get trees 
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 1264.
+(hyperref)                removing `math shift' on input line 1265.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 1264.
+(hyperref)                removing `math shift' on input line 1265.
 
 File: cop-tree_thesis.1 Graphic file (type mps)
 [MP to PDF] (./cop-tree_thesis.1)
 File: cop-tree_thesis.2 Graphic file (type mps)
- [MP to PDF] (./cop-tree_thesis.2)
-Overfull \hbox (12.38878pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/n/12 54 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
-PERGRAPHS - NEW RESULTS
- []
-
-[54]
-Underfull \vbox (badness 6775) has occurred while \output is active []
-
- [55pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
-1}) has been already used, duplicate ignored
+ [MP to PDF] (./cop-tree_thesis.2) [55pdfTeX warning (ext4): destination with t
+he same identifier (name{figure.3.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.1319 
+l.1309 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Overfull \hbox (12.38878pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/n/12 56 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
-PERGRAPHS - NEW RESULTS
- []
-
-[56]
-Overfull \hbox (24.5318pt too wide) in paragraph at lines 1430--1441
+ [56]
+Overfull \hbox (24.5318pt too wide) in paragraph at lines 1431--1442
 \OT1/cmr/m/n/12 For each hy-per-edge $\OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 2 O$\
 OT1/cmr/m/n/12 , we will main-tain a 2-tuple of non-negative num-bers $[]$.
  []
 
-[57]
-Overfull \hbox (12.38878pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/n/12 58 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
-PERGRAPHS - NEW RESULTS
- []
+[57] [58] [59] [60]
 
-[58] [59]
-Overfull \hbox (12.38878pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/n/12 60 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
-PERGRAPHS - NEW RESULTS
- []
-
-[60]
-
-LaTeX Warning: Reference `prelims' on page 61 undefined on input line 1765.
+LaTeX Warning: Reference `prelims' on page 61 undefined on input line 1766.
 
 
-LaTeX Warning: Reference `feasible' on page 61 undefined on input line 1766.
+LaTeX Warning: Reference `feasible' on page 61 undefined on input line 1767.
 
 [61]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Command \O invalid in math mode on input line 1857.
+ [62]
+
+LaTeX Warning: Command \O invalid in math mode on input line 1858.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1837--1870
+Underfull \hbox (badness 10000) in paragraph at lines 1838--1871
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Overfull \hbox (12.38878pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/n/12 62 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
-PERGRAPHS - NEW RESULTS
- []
-
-[62]
-Overfull \hbox (16.46223pt too wide) in paragraph at lines 1904--1907
+ [63]
+Overfull \hbox (16.46223pt too wide) in paragraph at lines 1905--1908
 [] \OT1/bch/b/n/12 Lemma 3.5.4. []\OT1/cmr/m/it/12 If $\OT1/cmr/m/n/12 (\OML/cm
 m/m/it/12 M[]; M[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2\U/msa/m/n/12 4$ \OT1/cmr
 /m/it/12 and $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M[]; M[]\OT1/cmr/m/n/12 ) \OMS/
@@ -2362,14 +2350,8 @@ OT1/cmr/m/it/12 or $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M[]; M[]\OT1/cmr/m/n/12 )
  \OMS/cmsy/m/n/12 2\U/msa/m/n/12 4$\OT1/cmr/m/it/12 . 
  []
 
-[63]
-Overfull \hbox (12.38878pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/n/12 64 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
-PERGRAPHS - NEW RESULTS
- []
-
-[64]
-Underfull \hbox (badness 4303) in paragraph at lines 2042--2042
+[64] [65]
+Underfull \hbox (badness 4303) in paragraph at lines 2043--2043
 [] \OT1/cmr/bx/n/12 Al-go-rithm 4 \OT1/cmr/m/n/12 Al-go-rithm to find an ICPPA 
 for a ma-trix $\OML/cmm/m/it/12 M$ \OT1/cmr/m/n/12 on tree $\OML/cmm/m/it/12 T$
 \OT1/cmr/m/n/12 :
@@ -2379,71 +2361,65 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2045     \STATE
+l.2046     \STATE
                   Identify the prime sub-matrices. This is done by construct...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.1}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2045     \STATE
+l.2046     \STATE
                   Identify the prime sub-matrices. This is done by construct...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.2}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2046     \STATE
+l.2047     \STATE
                   Construct the partial order $\preccurlyeq$ on the set of p...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.3}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2047     \STATE
+l.2048     \STATE
                   Construct the partition $X_1,\ldots,X_r$ of the primepdfTeX w
 arning (ext4): destination with the same identifier (name{ALC@line.4}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2049     \STATE
+l.2050     \STATE
                   For each $1 \leq i \leq r$, Check if all matrices exceptpdfTe
 X warning (ext4): destination with the same identifier (name{ALC@line.5}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2052 ...se the result in \cite{nsnrs09}.  \STATE
+l.2053 ...se the result in \cite{nsnrs09}.  \STATE
                                                    Find a partition of
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[65]
-Overfull \hbox (12.38878pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/n/12 66 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
-PERGRAPHS - NEW RESULTS
- []
 
-[66]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Command \l invalid in math mode on input line 2148.
+ [66]
+[67]
+
+LaTeX Warning: Command \l invalid in math mode on input line 2149.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [67])
-Overfull \hbox (12.38878pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/n/12 68 \OT1/cmr/m/sl/12 CHAPTER 3.  TREE PATH LABELING OF PATH HY
-PERGRAPHS - NEW RESULTS
- []
+ [68])
+[69] [70
 
-[68]
+
+]
 \openout2 = `040chap4.aux'.
 
  (./040chap4.tex
 Chapter 4.
-[69
+[71
 
 
-
-
-]) [70]
+] [72]) [73]
 \openout2 = `050appa.aux'.
 
  (./050appa.texpdfTeX warning (ext4): destination with the same identifier (nam
@@ -2458,6 +2434,12 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `\tnote' on input line 1.
 
 
+Overfull \hbox (0.8371pt too wide) in paragraph at lines 3--8
+[][]\OT1/cmr/m/it/12 Consider four paths in a tree $\OML/cmm/m/it/12 Q[]; Q[]; 
+Q[]; Q[]$ \OT1/cmr/m/it/12 such that they have nonempty
+ []
+
+
 LaTeX Warning: Command \O invalid in math mode on input line 16.
 
 
@@ -2469,24 +2451,25 @@ LaTeX Warning: Command \O invalid in math mode on input line 26.
 
 LaTeX Warning: Command \O invalid in math mode on input line 26.
 
-) [71
+) [74
 
 
 
-] (./thesis.bbl [72
+] (./thesis.bbl [75
 
+] [76
 
 ]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [73] [74]
+ [77] [78]
 Missing character: There is no ï in font cmr10!
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no € in font cmr10!
-) [75] (./thesis.aux (./001certificate.aux)
-(./002ack.aux) (./0031ded.aux) (./003abstract.aux) (./004abbrv.aux)
-(./005notation.aux) (./010chap1.aux) (./020chap2.aux) (./030chap3.aux)
+) [79] (./thesis.aux
+(./001certificate.aux) (./002ack.aux) (./0031ded.aux) (./003abstract.aux)
+(./004abbrv.aux) (./010chap1.aux) (./020chap2.aux) (./030chap3.aux)
 (./040chap4.aux) (./050appa.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2494,59 +2477,68 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 18495 strings out of 94073
- 325455 string characters out of 1162984
- 381597 words of memory out of 1500000
- 20703 multiletter control sequences out of 10000+50000
- 79720 words of font info for 175 fonts, out of 1200000 for 2000
+ 18757 strings out of 94073
+ 328600 string characters out of 1162984
+ 404961 words of memory out of 1500000
+ 20875 multiletter control sequences out of 10000+50000
+ 84042 words of font info for 185 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 63i,25n,71p,1261b,828s stack positions out of 5000i,500n,6000p,200000b,5000s
-{/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}{/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/te
-xlive/2007/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texli
-ve/2007/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive/
-2007/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texlive/20
-07/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/2007/texmf-
-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2007/texmf-dist/font
-s/type1/bluesky/cm/cmbx8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bl
-uesky/cm/cmbxti10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/c
-m/cmcsc10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmex10
-.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></us
-r/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi12.pfb></usr/local/t
-exlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi6.pfb></usr/local/texlive/200
-7/texmf-dist/fonts/type1/bluesky/cm/cmmi7.pfb></usr/local/texlive/2007/texmf-di
-st/fonts/type1/bluesky/cm/cmmi8.pfb></usr/local/texlive/2007/texmf-dist/fonts/t
-ype1/bluesky/cm/cmr10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blues
-ky/cm/cmr12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr1
-7.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr
-/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texl
-ive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2007/te
-xmf-dist/fonts/type1/bluesky/cm/cmsl12.pfb></usr/local/texlive/2007/texmf-dist/
-fonts/type1/bluesky/cm/cmss10.pfb></usr/local/texlive/2007/texmf-dist/fonts/typ
-e1/bluesky/cm/cmss12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesk
-y/cm/cmssbx10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cm
-ssi10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmssi12.pf
-b></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmssi8.pfb></usr/l
-ocal/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/texl
-ive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy6.pfb></usr/local/texlive/2007/t
-exmf-dist/fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/texlive/2007/texmf-dist/
-fonts/type1/bluesky/cm/cmsy8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type
-1/bluesky/cm/cmti10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky
-/cm/cmti12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmtt1
-2.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/msam10.pfb></
-usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/msbm10.pfb></usr/loca
-l/texlive/2007/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/
-texlive/2007/texmf-dist/fonts/type1/public/cm-super/sfsi0600.pfb></usr/local/te
-xlive/2007/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb></usr/local/texl
-ive/2007/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2007
-/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2007/texmf-dis
-t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/ty
-pe1/urw/zapfchan/uzcmi8a.pfb>
-Output written on thesis.pdf (95 pages, 1422393 bytes).
+ 63i,25n,71p,1261b,1424s stack positions out of 5000i,500n,6000p,200000b,5000s
+pdfTeX warning (dest): name{Hfootnote.22} has been referenced but does not ex
+ist, replaced by a fixed one
+
+{/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{
+/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texl
+ive/2007/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texlive
+/2007/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive/20
+07/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texlive/2007
+/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/2007/texmf-di
+st/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2007/texmf-dist/fonts/
+type1/bluesky/cm/cmbx7.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blue
+sky/cm/cmbx8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmb
+xti10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmcsc10.pf
+b></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmex10.pfb></usr/l
+ocal/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/texl
+ive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi12.pfb></usr/local/texlive/2007/
+texmf-dist/fonts/type1/bluesky/cm/cmmi6.pfb></usr/local/texlive/2007/texmf-dist
+/fonts/type1/bluesky/cm/cmmi7.pfb></usr/local/texlive/2007/texmf-dist/fonts/typ
+e1/bluesky/cm/cmmi8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky
+/cm/cmr10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr12.
+pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr17.pfb></usr/
+local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/texli
+ve/2007/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2007/tex
+mf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2007/texmf-dist/fon
+ts/type1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/
+bluesky/cm/cmsl8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm
+/cmss10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmss12.p
+fb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmss8.pfb></usr/l
+ocal/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmssbx10.pfb></usr/local/te
+xlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmssi10.pfb></usr/local/texlive/20
+07/texmf-dist/fonts/type1/bluesky/cm/cmssi12.pfb></usr/local/texlive/2007/texmf
+-dist/fonts/type1/bluesky/cm/cmssi8.pfb></usr/local/texlive/2007/texmf-dist/fon
+ts/type1/bluesky/cm/cmsy10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/
+bluesky/cm/cmsy6.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm
+/cmsy7.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy8.pfb
+></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmti10.pfb></usr/lo
+cal/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmti12.pfb></usr/local/texli
+ve/2007/texmf-dist/fonts/type1/bluesky/cm/cmti7.pfb></usr/local/texlive/2007/te
+xmf-dist/fonts/type1/bluesky/cm/cmtt12.pfb></usr/local/texlive/2007/texmf-dist/
+fonts/type1/bluesky/ams/msam10.pfb></usr/local/texlive/2007/texmf-dist/fonts/ty
+pe1/bluesky/ams/msbm10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/publ
+ic/cm-super/sfrm1200.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/public
+/cm-super/sfsi0600.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/public/c
+m-super/sfss1200.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/courie
+r/ucrr8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/times/utmb8a.p
+fb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/l
+ocal/texlive/2007/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on thesis.pdf (99 pages, 1526510 bytes).
 PDF statistics:
- 1860 PDF objects out of 2073 (max. 8388607)
- 455 named destinations out of 1000 (max. 131072)
- 470 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1985 PDF objects out of 2073 (max. 8388607)
+ 545 named destinations out of 1000 (max. 131072)
+ 446 words of extra memory for PDF output out of 10000 (max. 10000000)
 

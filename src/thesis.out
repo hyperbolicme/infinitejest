@@ -1,26 +1,23 @@
-\BOOKMARK [0][-]{section*.1}{Acknowledgements}{}
-\BOOKMARK [0][-]{section*.1}{Abstract}{}
-\BOOKMARK [0][-]{section*.2}{Contents}{}
-\BOOKMARK [0][-]{section*.3}{List of Tables}{}
-\BOOKMARK [0][-]{section*.4}{List of Figures}{}
-\BOOKMARK [0][-]{section*.4}{Abbreviations}{}
-\BOOKMARK [0][-]{section*.4}{Notation}{}
+\BOOKMARK [0][-]{changenumber.iii.1}{Abstract}{}
+\BOOKMARK [0][-]{section*.1}{Contents}{}
+\BOOKMARK [0][-]{section*.2}{List of Tables}{}
+\BOOKMARK [0][-]{section*.3}{List of Figures}{}
+\BOOKMARK [0][-]{section*.3}{Abbreviations and Notations}{}
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}
 \BOOKMARK [1][-]{section.1.1}{Organization of the document}{chapter.1}
 \BOOKMARK [1][-]{section.1.2}{Illustration of the problem}{chapter.1}
 \BOOKMARK [2][-]{subsection.1.2.1}{Special case}{section.1.2}
-\BOOKMARK [1][-]{section.1.3}{Basic preliminaries - general definitions and nomenclature}{chapter.1}
-\BOOKMARK [1][-]{section.1.4}{Consecutive-ones Property Testing - a Brief Survey}{chapter.1}
+\BOOKMARK [1][-]{section.1.3}{Basic preliminaries}{chapter.1}
+\BOOKMARK [1][-]{section.1.4}{Brief Survey}{chapter.1}
 \BOOKMARK [2][-]{subsection.1.4.1}{Matrices with COP}{section.1.4}
 \BOOKMARK [2][-]{subsection.1.4.2}{Optimization problems in COP}{section.1.4}
-\BOOKMARK [1][-]{section.1.5}{Application of COP in Areas of Graph Theory and Algorithms}{chapter.1}
-\BOOKMARK [1][-]{section.1.6}{Generalization of COP - the Motivation}{chapter.1}
-\BOOKMARK [1][-]{section.1.7}{Summary of New Results in this Thesis}{chapter.1}
-\BOOKMARK [0][-]{chapter.2}{Consecutive-ones Property -- A Survey}{}
+\BOOKMARK [1][-]{section.1.5}{Generalization of COP}{chapter.1}
+\BOOKMARK [1][-]{section.1.6}{Summary of new results}{chapter.1}
+\BOOKMARK [0][-]{chapter.2}{COP -- A Survey}{}
 \BOOKMARK [1][-]{section.2.1}{COP in Graph Theory}{chapter.2}
 \BOOKMARK [1][-]{section.2.2}{Matrices with COP}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.2.1}{Tucker's forbidden submatrices for COP}{section.2.2}
-\BOOKMARK [2][-]{subsection.2.2.2}{Booth and Lueker's PQ tree -- a linear COT algorithm}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.2}{Booth and Lueker's PQ-tree -- a linear COT algorithm}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.3}{PQR-tree -- COP for set systems}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.4}{PC-tree-- a generalization of PQ-tree}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.5}{ICPIA - a set cardinality based COP test}{section.2.2}
@@ -29,19 +26,19 @@
 \BOOKMARK [2][-]{subsection.2.3.1}{Finding forbidden submatrices}{section.2.3}
 \BOOKMARK [2][-]{subsection.2.3.2}{Incompatibility graph - a certificate for no COP}{section.2.3}
 \BOOKMARK [1][-]{section.2.4}{COP in Graph Isomorphism}{chapter.2}
-\BOOKMARK [0][-]{chapter.3}{Tree Path Labeling of Path Hypergraphs - New Results}{}
-\BOOKMARK [1][-]{section.3.1}{Summary of Proposed Problems}{chapter.3}
-\BOOKMARK [1][-]{section.3.2}{Preliminaries to new results}{chapter.3}
+\BOOKMARK [0][-]{chapter.3}{Tree Path Labeling}{}
+\BOOKMARK [1][-]{section.3.1}{Summary of problems}{chapter.3}
+\BOOKMARK [1][-]{section.3.2}{Preliminaries}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.2.1}{Hypergraph Preliminaries}{section.3.2}
-\BOOKMARK [1][-]{section.3.3}{Characterization of Feasible Tree Path Labeling}{chapter.3}
-\BOOKMARK [1][-]{section.3.4}{ Computing feasible TPL with special target trees}{chapter.3}
+\BOOKMARK [1][-]{section.3.3}{Characterization of FTPL}{chapter.3}
+\BOOKMARK [1][-]{section.3.4}{Special target trees}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.4.1}{Target tree is a Path}{section.3.4}
 \BOOKMARK [2][-]{subsection.3.4.2}{Target tree is a k-subdivided Star}{section.3.4}
 \BOOKMARK [2][-]{subsection.3.4.3}{Description of the Algorithm}{section.3.4}
 \BOOKMARK [1][-]{section.3.5}{ TPL with no restrictions}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.5.1}{Finding an assignment of tree paths to a set system}{section.3.5}
-\BOOKMARK [1][-]{section.3.6}{Complexity of Tree Path Assignment-A Discussion}{chapter.3}
+\BOOKMARK [1][-]{section.3.6}{Complexity}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.6.1}{Consecutive Ones Testing is in Logspace}{section.3.6}
 \BOOKMARK [0][-]{chapter.4}{Conclusion}{}
 \BOOKMARK [0][-]{chapter.1}{More proofs remove/modify}{}
-\BOOKMARK [0][-]{section*.5}{Bibliography}{}
+\BOOKMARK [0][-]{section*.4}{Bibliography}{}

@@ -7,6 +7,7 @@
 \usepackage[T1,OT1]{fontenc}
 \usepackage{listings}
 
+
 \usepackage{../lib/mylatexlib}
 \usepackage{../lib/mythesislib}
 \usepackage{thesisfiguresandtables} % Code for tables are in this
@@ -15,16 +16,16 @@
 
 %% Drafting libraries %%
 %
-\usepackage[color,final]{showkeys}   % To show keys used - useful in
+\usepackage[color]{showkeys}   % To show keys used - useful in
                                % drafts. 
                                % Options: color, notref, notcite,
                                % draft(default), final
 
 \newcommand{\xclearpage}{\cleardoublepage} % cleardoublepage for
                                 % twoside. keep empty for one side.
-%\usepackage[inline] 
+\usepackage[inline] 
 %\usepackage[margins] 
-\usepackage[finalnew]
+%\usepackage[finalnew]
          {../lib/trackchanges} % For tracking changes.
                                % :Package options:
                                % [finalold]
@@ -69,6 +70,10 @@
 \def \mythesissubmissiondate {31 January 2012}
 \def \mythesissubmissionmonth {\MakeUppercase {January 2012}}
 
+%\renewcommand\sectionmark[1]{\markright{\thesection. #1}}
+\renewcommand\chaptermark[1]{\markboth{\chaptername\ \thesection. #1}{}}
+\renewcommand\sectionmark[1]{\markright{\thesection. #1}}
+
 
 \begin{document}
 
@@ -87,7 +92,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Certificate
 %
+
 \xclearpage% \cleardoublepage
+\setcounter{page}{1}
 \include{001certificate}
 
 
@@ -130,20 +137,23 @@
 \xclearpage
 \include{004abbrv}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Notation
-%
-\xclearpage
-\include{005notation}
-%\pagebreak \clearpage
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Notation
+% %
+% \xclearpage
+% \include{005notation}
 
+\xclearpage
+\pagestyle{fancy}%headings}   % For running headers.
+\fancyhf{}%            % Clears headers
+\fancyhead[LE,RO]{\scriptsize \slshape \rightmark} %{\slshape \rightmark}
+\fancyhead[LO,RE]{\scriptsize \slshape \leftmark} %{\slshape \leftmark}
 \pagenumbering{arabic} % The main text will follow from this point so
                        %  set the page numbering to arabic from here on.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Main body Chapters
 %
-\xclearpage
 \include{010chap1}
 % turning counter reset. perhaps universal endnote counter is good?
 % being schizo about it now. DECIDE! ENDNOTEMARKS DEPEND ON IT.
