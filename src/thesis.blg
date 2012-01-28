@@ -5,7 +5,6 @@ A level-1 auxiliary file: 002ack.aux
 A level-1 auxiliary file: 0031ded.aux
 A level-1 auxiliary file: 003abstract.aux
 A level-1 auxiliary file: 004abbrv.aux
-A level-1 auxiliary file: 005notation.aux
 A level-1 auxiliary file: 010chap1.aux
 A level-1 auxiliary file: 020chap2.aux
 A level-1 auxiliary file: 030chap3.aux
@@ -17,7 +16,7 @@ Warning--I didn't find a database entry for "lec67"
 Warning--I didn't find a database entry for "mm96-ref11"
 You've used 77 entries,
             2543 wiz_defined-function locations,
-            1017 strings with 14281 characters,
+            1016 strings with 14266 characters,
 and the built_in function-call counts, 29566 in all, are:
 = -- 3017
 > -- 1282

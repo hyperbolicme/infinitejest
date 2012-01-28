@@ -13,8 +13,7 @@ characterizations of \COP, algorithmic tests to check for \COP (COT),
 optimization problems on binary matrices that do not have \COP and
 some applications of \COP.
 
-\tnote[important]{ADD: have a few lines about organization of chapter}
-
+\temptext{ADD: have a few lines about organization of chapter}
 
 
 \section{\COP in Graph Theory}
@@ -68,15 +67,14 @@ classes that is related to \COP or \CROP.\\
   \item $G$ is \emph{convex-round} if its adjacency matrix has the
     \CROP.
   \item \label{def::concave-round} $G$ is \emph{concave-round} if its
-    augmented adjacency matrix has \CROP. \tnote{cite BHY00}
-    \tnote[minor]{add CROP to glossary}
+    augmented adjacency matrix has \CROP. \tnote[pressing]{cite BHY00}
   \item $G$ is an \emph{interval graph} if its vertices can be mapped
     to intervals on the real line \stt two vertices are adjacent \iff
-    their corresponding intervals overlap \tnote{cite Ben59, Haj57}.
-    $G$ is an interval graph \iff its maximal clique matrix has COP
-    \cite{fg65}\footnote{This follows \cite{gh64} which states that the
-      maximal cliques of interval graph $G$ can be linearly ordered
-      \stt for all $v \in V(G)$, cliques containing $v$ are
+    their corresponding intervals overlap \tnote[pressing]{cite Ben59,
+      Haj57}.  $G$ is an interval graph \iff its maximal clique matrix
+    has COP \cite{fg65}\footnote{This follows \cite{gh64} which states
+      that the maximal cliques of interval graph $G$ can be linearly
+      ordered \stt for all $v \in V(G)$, cliques containing $v$ are
       consecutive in the ordering \cite[Th. 8.1]{mcg04}.}
     \begin{enumerate}[a.]
     \item $G$ is a \emph{unit interval graph} if it is an interval
@@ -84,8 +82,8 @@ classes that is related to \COP or \CROP.\\
     \item $G$ is a \emph{proper interval graph} if it is an interval
       graph \stt no interval properly contains another.\footnote{The
         set of unit interval graphs and the set of proper interval
-        graphs are the same} \tnote{cite {rob69,gar07} in footnote. pg
-        33 dom}
+        graphs are the same} \tnote[pressing]{cite {rob69,gar07} in
+        footnote. pg 33 dom}
     \end{enumerate}
  \item $G$ is a \emph{circular-arc graph} if its vertices can be
     mapped to a set of arcs on a circle \stt two vertices are adjacent
@@ -113,12 +111,12 @@ Interval graphs\footnote{\cite{mcc04} cites that the problem of
   be true from the discovery of linear structure of DNA.}and
 circular-arc graphs have a long history in research.  The interest
 around them is due to their very desirable property that several
-problems that are NP-hard \tnote[minor]{all NPC problems are NPH yes?}
-on general graphs, like finding a maximum clique or minimum coloring
-or independent set, are polynomial time solvable in these graph
-classes \cite{clrs01}.  In a similar fashion, a lot of problems that
-are hard on general matrices have efficient solutions on matrices with
-\COP or \CROP \cite[more citations pg.\,33]{d08phd}.
+problems that are NP-complete on general graphs, like finding a
+maximum clique or minimum coloring or independent set, are polynomial
+time solvable in these graph classes \cite{clrs01}.  In a similar
+fashion, a lot of problems that are hard on general matrices have
+efficient solutions on matrices with \COP or \CROP \cite[more
+citations pg.\,33]{d08phd}.
 
 Table~\ref{tab:graphmatrices} summarises the way these graphs are
 characterized by their matrices having \COP or \CROP.
@@ -167,13 +165,13 @@ in Section~\ref{sec:surveycertalgo}.
 
 It may be noted that one way to design an algorithm to test for \COP
 is by deriving one from any interval graph recognition algorithm using
-the result {\sc hmpv00}\tnote{cite hmpv00} \tnote{in footnote put the
-  theorem 2.7 - dom pg 43} \cite{d08phd} which demonstrates how such a
-derivation can be done. However, this does not necessarily yield an
-efficient algorithm. We will see results that directly solve the
-problem on matrices since it is known that questions~(\ref{q:testcop})
-and (\ref{q:copperm}) stated above for \COP are efficiently solvable.
-Table~\ref{tab:cophistory} gives a snapshot of these results.
+the result \cite{hmpv00} \cite[Th~2.7]{d08phd} which demonstrates how
+such a derivation can be done. However, this does not necessarily
+yield an efficient algorithm. We will see results that directly solve
+the problem on matrices since it is known that
+questions~(\ref{q:testcop}) and (\ref{q:copperm}) stated above for
+\COP are efficiently solvable.  Table~\ref{tab:cophistory} gives a
+snapshot of these results.
 
 \tabcophistory
 
@@ -199,13 +197,6 @@ recognition.
 
 \subsection{Tucker's forbidden submatrices for \COP}
 \label{sec:tucker}
-% \change{While it is remarkable that the first polynomial time
-%   algorithm for \COP testing came in }{The first polynomial time
-%   algorithm for \COP testing came in }\cite{fg65} \change{,}{.}
-% \change{it is safe to say that the most}{A few years later, a very}
-% significant result in understanding \COP came \remove{a few years
-%   later} from Tucker which gave a combinatorial (negative)
-% characterization of matrices with COP \cite{at72}.
 
 \cite{at72} discovered certain forbidden structures for convex
 bipartite graphs\footnote{The terminology in \cite{at72} differs. It
@@ -284,7 +275,7 @@ Booth and Lueker in their paper \cite{bl76} gave the first linear
 algorithm\footnote{Time complexity is $O\left(m+n+f\right)$ where $m
   \times n$ is the order of the input matrix and $f$ is the number of
   $\un$s in it.} for \cop testing while given a linear time interval
-graph recognition algorithm by a simplification of \tnote{cite -
+graph recognition algorithm by a simplification of \tnote[important]{cite -
   A. Lempel, S. Even and I. Cederbaum, An Algorithm for Planarity
   Testing of Graphs, Theory of Graphs, ed., P. Rosenstiehl, Gordon and
   Breach, New York, (1967), 215-232.  }'s planarity test algorithm.
@@ -501,7 +492,7 @@ Generalized \PQtree or \gPQtree is a data structure defined in
 \cite{n89} to represent all orthogonal sets of a set system $\cF$. A
 data structure with the same name was later defined in \cite{mcc04} as
 part of a {\em substitution decomposition} for a set system $\cF$
-\tnote{define substitutio decomp.} and subsequently \cite{mcc04} gives
+\tnote[pressing]{define substitutio decomp.} and subsequently \cite{mcc04} gives
 a new characterization of $\cF$ using a so-called incompatibility
 graph. \PQRtree is defined in \cite{mm96} as a data
 structure to represent any set system $\cF$ with additional
@@ -636,7 +627,7 @@ If $\cF$ is a set system with universe $U$ and $|U| \ge 3$ then one of
 the following statements hold.
 \begin{enumerate}
 \item \label{th::it1} $\overline{\cF} = \cT(U)$ 
-\item \label{th::it2}$\overline{\cF} = consec(\alpha)$\tnote{what is consec?} for
+\item \label{th::it2}$\overline{\cF} = consec(\alpha)$\tnote[pressing]{what is consec?} for
   some permutation $\alpha$ on $U$ 
 \item \label{th::it3}$\overline{\cF} = \power{U}$ 
 \end{enumerate}
@@ -733,7 +724,7 @@ is a set theoretic characterization of \COP.
     \parbox[t]{\colwidth}
     {
       Decomposition tree of $\cW(\cF)$, $T(\cW(\cF))$
-      \temptext{PQR tree def. }\tnote[pressing]{in terms of theory}
+      \temptext{PQR tree def. }
     }
     \\\hline
 
@@ -1063,7 +1054,7 @@ observation.
   Consider elements $a, b, c \in U$ and a set system $\cF$ with
   universe $U$. If there is at least one set $S \in \cF$ \stt $a, c
   \in S$ but $b \notin S$, then it is impossible to have a \COP order
-  that will place $b$ in between $a$ and $c$. \tnote{also cite the
+  that will place $b$ in between $a$ and $c$. \tnote[important]{also cite the
     inbetweenness problem}
 \end{observation}
 
@@ -1112,7 +1103,7 @@ in the incompatibility graph of a set system with \COP. In other
 words, if the set system has no \COP, its incompatibility graph must
 have an odd cycle.  There is also a requirement on the length of this
 odd cycle which is formally stated in the following
-theorem. \tnote{all refrences to ``following''/abov theorem must be
+theorem. \tnote[pressing]{all refrences to ``following''/abov theorem must be
   chagned to slashrefs. }
 
 \begin{theoremsansproof}[{\cite[Th.~6.1]{mcc04}, \cite[Corrected by
@@ -1156,99 +1147,46 @@ the incompatibility.
 
 \temptext{\textbf{REST OF THE SUBSECTIONS}}
 
-\temptext{ So far we have been concerned about matrices that have the
-  consecutive ones property. However in real life applications, it is
-  rare that data sets represented by binary matrices have COP,
-  primarily due to the noisy nature of data available. At the same
-  time, COP is not arbitrary and is a desirable property in practical
-  data representation \cite{co98,jkckv04,k77}. In this context, there
-  are several interesting problems when a matrix does not have COP but
-  is ``close'' to having COP or is allowed to be altered to have
-  COP. These are the optimization problems related to a matrix which
-  does not have COP. Some of the significant problems are surveyed in
-  this section.
-
-\tnote{ -- sect 4.1 in cite:d08phd has many results surveyed. hardness
+\temptext{ -- sect 4.1 in cite:d08phd has many results surveyed. hardness
   results, approx. results. results are usually for a class of
   matrices $(a,b)$ where number {\un}s in columns and rows are
   restriced to $a$ and $b$ . -- problem of flipping at most $k$
   entries of $M$ to make it attain COP. this is NP complete
-  cite:b75-phd}%
-\tnote{(1) scite:lb62 showed that interval graphs are chordal and
-  AT-free.} %
-\temptext{couple of lines refering to tucker's submatrices. refer
-  earlier section.}
+  cite:b75-phd%
+\\(1) scite:lb62 showed that interval graphs are chordal and
+  AT-free. %
+\\couple of lines refering to tucker's submatrices. refer
+  earlier section.
 
-Once a matrix has been detected to not have COP (using any of the COT
-algorithms mentioned earlier), it is naturally of interest 
 
-\begin{enumerate}
-\item  to find out
-the smallest forbidden substructure (in terms of number of rows and/or
-columns and/or number of entries that are {\un}s). \cite{d08phd}
-discusses a couple of algorithms which are efficient if the number of
-{\un}s in a row is small. This is of significance in the case of
-sparse matrices where this number is much lesser than the number of
-columns. 
-
-\item $(*,\Delta)${\em -matrices} are matrices with no restriction
-on number of {\un}s in any column but has at most $\Delta$ {\un}s in
-any row. 
-{\sc Min COS-R (Min COS-C), Max COS-R (Max COS-C)} are
-similar problems which deals with {\em inducing COP} on a matrix.
-
-\begin{enumerate}
-\item In the dual problem {\sc Max COS-R (Max COS-C)} the search is for the
-maximum number of rows (columns) that induces a submatrix with
-COP.
-\item In {\sc
-  Min COS-R (Min COS-C)} the question is to find the minimum number of
-rows (columns) that must be deleted to result in a matrix with COP.
-\end{enumerate}
-
-Given a matrix $M$ with no COP, \cite{b75-phd} shows that finding
-a submatrix $M'$ with all columns\tnote{check if b75 deals with
-  COP col or COP row. also is it any submatrix with k less than r rows
-  or submatrix must have all columns?} but a maximum cardinality
-subset of rows such that $M'$ has COP is NP complete. \cite{hg02}
-corrects an error of the abridged proof of this reduction as given in
-\cite{gj79}.  \cite{d08phd} discusses all these problems in detail
-giving an extensive survey of the previously existing results which
-are almost exhaustively all approximation results and hardness
-results. Taking this further, \cite{d08phd} presents new results in
-the area of parameterized algorithms for this
-problem\tnote{elaborate - what are the results?}.
-
-\item Another problem is to find the minimum number of entries in the matrix
+Another problem is to find the minimum number of entries in the matrix
 that can be toggled to result in a matrix with COP.  \cite{v85}
 discusses approximation of {\sc COP Augmentation} which is the problem
 of changing of the minimum number of zero entries to {\un}s so that
 the resulting matrix has COP. As mentioned earlier, this problem is
 known to be NP complete due to \cite{b75-phd}. \cite{v85} also proves,
-using a reduction to the longest path problem, \tnote{or is it a
+using a reduction to the longest path problem, \tnote[pressing]{or is it a
   survey of another result?  check.} that finding a Tucker's forbidden
-submatrix of at least $k$ rows is NP complete. \tnote{how is this
-  different from booth's 75 result??}  \tnote{where should this go?
+submatrix of at least $k$ rows is NP complete. \tnote[pressing]{how is this
+  different from booth's 75 result??}  \tnote[pressing]{where should this go?
   cite|tz04 (approx submatrix with COP sparse matrices)}
 
-\item \cite{jkckv04} discusses the use of matrices with almost-COP (instead
+\cite{jkckv04} discusses the use of matrices with almost-COP (instead
 of one block of consecutive {\un}s, they have $x$ blocks, or {\em
   runs}, of consecutive {\un}s and $x$ is not too large) in the
 storage of very large databases.  The problem is that of reordering of
 a binary matrix such that the resulting matrix has at most $k$ runs of
 {\un}s. This is proved to be NP hard using a reduction from the
-Hamiltonian path problem.\tnote{Theorem 2.1 in jkckv} \tnote{(1) A
-  connection of COP problem to the travelling salesman problem is also
-  introduced. what does this mean? -- COP can be used as a tool to
-  reorder $0.5T \le runs(M) \le T$. (2) The optimization version of
-  the $k$-run problem, i.e. minimization of number of blocks of ones
-  is proven to be NP complete by cite:k77}\tnote{are these two the
-  same?} \tnote{what is the reduction?} \tnote{other problems similar
-  to COP -- cite:ckl96 (ILP, circ ones, one drop) -- cite:th98
-  (generalization of COP - minimax, biotonic column) Tucker} 
-
-\end{enumerate}
-
+Hamiltonian path problem.\tnote[pressing]{Theorem 2.1 in jkckv}
+\tnote[pressing]{(1) A connection of COP problem to the travelling
+  salesman problem is also introduced. what does this mean? -- COP can
+  be used as a tool to reorder $0.5T \le runs(M) \le T$. (2) The
+  optimization version of the $k$-run problem, i.e. minimization of
+  number of blocks of ones is proven to be NP complete by
+  cite:k77}\tnote{are these two the same?} \tnote{what is the
+  reduction?} \tnote{other problems similar to COP -- cite:ckl96 (ILP,
+  circ ones, one drop) -- cite:th98 (generalization of COP - minimax,
+  biotonic column) Tucker}
 }
 
 
@@ -1263,33 +1201,6 @@ Hamiltonian path problem.\tnote{Theorem 2.1 in jkckv} \tnote{(1) A
 \temptext{
 The survey from kklv10 conclusion.
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-% \section{Other applications}
-% {\tt If any. \tnote{ where should this go?}: (1) cite|jlm97 (application of PQ
-%   trees in graphics). (2) helly's theorem citation
-%   19XXdgk-Hellystheorem-Danzer-Gruenbaum-Klee}}
-
-
-
-
-%\theendnotes\tnote{remove if none.} 
-
 
 
 

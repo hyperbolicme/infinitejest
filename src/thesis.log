@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  27 JAN 2012 14:50
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  27 JAN 2012 19:47
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -1130,19 +1130,13 @@ Overfull \hbox (16.34442pt too wide) in paragraph at lines 95--113
 ]
 \openout2 = `003abstract.aux'.
 
- (./003abstract.tex
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 14.
-
-(/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [7
+ (./003abstract.tex [7
 
 
 ]) [8
 
 
-]
-(./thesis.toc
+] (./thesis.toc
 Underfull \vbox (badness 4168) has occurred while \output is active []
 
  [9
@@ -1191,7 +1185,10 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <10> not available
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 2.
+(/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
 Underfull \vbox (badness 1817) has occurred while \output is active []
 
  [1
@@ -1220,16 +1217,6 @@ LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <5> not available
                                                   
 l.141 
       ]
-LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <12> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 145.
-
-LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <8> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 145.
-
-LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <6> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 145.
-
-
 <../img/1_infinite_loop__cropped.pdf, id=412, 517.7539pt x 326.55022pt>
 File: ../img/1_infinite_loop__cropped.pdf Graphic file (type pdf)
 
@@ -1251,30 +1238,40 @@ LaTeX Font Info:    Try loading font information for TS1+cmss on input line 180
 .
 (/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [3pdfTeX warning (ext4): destination with the same identifier (name{table.1.2
-}) has been already used, duplicate ignored
+)
+LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <12> not available
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 203.
+
+LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <8> not available
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 203.
+
+LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <6> not available
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 203.
+
+ [3pdfTeX warning (ext4): destination with the same identifier (name{table.1.2}
+) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.219 
+l.216 
       ] [4pdfTeX warning (ext4): destination with the same identifier (name{fig
 ure.1.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.219 
+l.216 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 1.2}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.219 
+l.216 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 1.3}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.219 
+l.216 
        <../img/1_infinite_loop__cropped.pdf> <../img/2_infinite_loop_BTWF__crop
 ped.pdf> <../img/3_infinite_loop.pdf
 
@@ -1283,25 +1280,19 @@ pdfTeX warning: pdflatex (file ../img/3_infinite_loop.pdf): PDF inclusion: Page
 >]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 237.
+(Font)              using `OT1/cmss/bx/n' instead on input line 234.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <12> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 247.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 244.
 
 
-[5]
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <7> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 271.
-
-
-[6pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4}
-) has been already used, duplicate ignored
+[5] [6pdfTeX warning (ext4): destination with the same identifier (name{figure.
+1.4}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.307 
+l.301 
       ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1310,77 +1301,75 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
-[10]
-Underfull \vbox (badness 3302) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
+ [10]
 LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 623.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 596.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 627--630
+Underfull \hbox (badness 10000) in paragraph at lines 600--603
 
  []
 
 
-Overfull \hbox (22.75963pt too wide) in paragraph at lines 622--642
+Overfull \hbox (22.75963pt too wide) in paragraph at lines 595--615
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 619--644
+Underfull \hbox (badness 10000) in paragraph at lines 592--617
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 646--647
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 673--674
-
- []
-
-
-Overfull \hbox (22.75963pt too wide) in paragraph at lines 668--684
+Overfull \hbox (22.75963pt too wide) in paragraph at lines 641--657
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--686
+Underfull \hbox (badness 10000) in paragraph at lines 638--659
+
+ []
+
+<../img/star.pdf, id=650, 244.915pt x 283.0575pt>
+File: ../img/star.pdf Graphic file (type pdf)
+ <use ../img/star.pdf>
+<../img/kstar.pdf, id=651, 263.98625pt x 302.12875pt>
+File: ../img/kstar.pdf Graphic file (type pdf)
+ <use ../img/kstar.pdf>
+LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <14.4> not available
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 682.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 687--690
+
+ []
+
+
+Overfull \hbox (22.75963pt too wide) in paragraph at lines 682--699
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 679--701
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
-<../img/star.pdf, id=678, 244.915pt x 283.0575pt>
-File: ../img/star.pdf Graphic file (type pdf)
- <use ../img/star.pdf>
-<../img/kstar.pdf, id=679, 263.98625pt x 302.12875pt>
-File: ../img/kstar.pdf Graphic file (type pdf)
- <use ../img/kstar.pdf>
-LaTeX Font Info:    Font shape `OT1/pzc/m/it' in size <14.4> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 709.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 714--717
-
- []
-
-
-Overfull \hbox (22.75963pt too wide) in paragraph at lines 709--726
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 706--728
-
- []
-
-[13pdfTeX warning (ext4): destination with the same identifier (name{figure.1.5
-}) has been already used, duplicate ignored
+ [12pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+5}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.768 
+l.701 
        <../img/star.pdf
 
 pdfTeX warning: pdflatex (file ../img/star.pdf): PDF inclusion: Page Group dete
@@ -1389,7 +1378,10 @@ cted which pdfTeX can't handle. Ignoring it.
 
 pdfTeX warning: pdflatex (file ../img/kstar.pdf): PDF inclusion: Page Group det
 ected which pdfTeX can't handle. Ignoring it.
->]) [14]
+>]) [13] [14
+
+
+]
 \openout2 = `020chap2.aux'.
 
  (./020chap2.tex
@@ -1400,92 +1392,94 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [15
 
 
-
-
 ]
 
 Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 58.
+(pdftex.def)                using `viewport' instead on input line 57.
 
-<../img/graphmatrices_g1.png, id=723, 342.27875pt x 283.0575pt>
+<../img/graphmatrices_g1.png, id=694, 342.27875pt x 283.0575pt>
 File: ../img/graphmatrices_g1.png Graphic file (type png)
 
 <use ../img/graphmatrices_g1.png>
 
 Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 58.
+(pdftex.def)                using `viewport' instead on input line 57.
 
-<../img/graphmatrices_g2.png, id=724, 350.30875pt x 202.7575pt>
+<../img/graphmatrices_g2.png, id=695, 350.30875pt x 202.7575pt>
 File: ../img/graphmatrices_g2.png Graphic file (type png)
 
 <use ../img/graphmatrices_g2.png>
-<../img/graphmatrices_H.png, id=725, 261.97874pt x 383.4325pt>
+<../img/graphmatrices_H.png, id=696, 261.97874pt x 383.4325pt>
 File: ../img/graphmatrices_H.png Graphic file (type png)
 
 <use ../img/graphmatrices_H.png>
-Underfull \hbox (badness 10000) in paragraph at lines 60--62
+Underfull \hbox (badness 10000) in paragraph at lines 59--61
 
  []
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <7> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 70.
 
 [16] [17pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.2.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.89     \end{enumerate}
+l.87     \end{enumerate}
                          <../img/graphmatrices_g1.png (PNG copy)> <../img/graph
 matrices_g2.png (PNG copy)> <../img/graphmatrices_H.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
 []\OT1/cmr/m/sc/10 Adjacency
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
 []\OT1/cmr/m/sc/10 Augmented
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
 \OT1/cmr/m/sc/10 ad-ja-cency
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
 \OT1/cmr/m/sc/10 adjacency
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
 []\OT1/cmr/m/sc/10 Maximal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
 
  []
 
@@ -1494,16 +1488,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 130--130
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.140 \item I
-             f the test is affirmative, what is a certificate of the affirma...
-] [20]
-LaTeX Font Info:    Try loading font information for OT1+bch on input line 234.
+l.139 \item I
+             f the test is negative, what are the optimization possibilities]
+[20]
+LaTeX Font Info:    Try loading font information for OT1+bch on input line 225.
 
  (/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ot1bch.fd
 File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
 )
 LaTeX Font Info:    Font shape `OT1/bch/bx/n' in size <12> not available
-(Font)              Font shape `OT1/bch/b/n' tried instead on input line 234.
+(Font)              Font shape `OT1/bch/b/n' tried instead on input line 225.
+
+Overfull \hbox (6.03546pt too wide) in paragraph at lines 235--240
+[] \OT1/bch/b/n/12 The-o-rem 2.2.2 ([[], Th. 7], [[], Th. 2.4]). []\OT1/cmr/m/i
+t/12 In a bi-par-tite graph $\OML/cmm/m/it/12 G \OT1/cmr/m/n/12 = (\OML/cmm/m/i
+t/12 V[]; V[]; E\OT1/cmr/m/n/12 )$
+ []
+
+
+Underfull \vbox (badness 1824) has occurred while \output is active []
+
  [21pdfTeX warning (ext4): destination with the same identifier (name{table.2.2
 }) has been already used, duplicate ignored
 
@@ -1511,61 +1515,61 @@ LaTeX Font Info:    Font shape `OT1/bch/bx/n' in size <12> not available
                                                   
 l.240 \end{theoremsansproof}
                             ]
-Overfull \hbox (6.03546pt too wide) in paragraph at lines 244--249
-[] \OT1/bch/b/n/12 The-o-rem 2.2.2 ([][][[], Th. 7], [][][[], Th. 2.4]). []\OT1
-/cmr/m/it/12 In a bi-par-tite graph $\OML/cmm/m/it/12 G \OT1/cmr/m/n/12 = (\OML
-/cmm/m/it/12 V[]; V[]; E\OT1/cmr/m/n/12 )$
- []
-
-<../img/tuckersforbiddensubgraphs.png, id=882, 1113.15875pt x 590.205pt>
+<../img/tuckersforbiddensubgraphs.png, id=853, 1113.15875pt x 590.205pt>
 File: ../img/tuckersforbiddensubgraphs.png Graphic file (type png)
 
 <use ../img/tuckersforbiddensubgraphs.png>
-Overfull \vbox (3.38196pt too high) detected at line 273
+Overfull \vbox (3.38196pt too high) detected at line 264
  []
 
 
-Overfull \vbox (3.10835pt too high) detected at line 273
+Overfull \vbox (3.10835pt too high) detected at line 264
  []
 
 
-Overfull \vbox (3.38196pt too high) detected at line 273
+Overfull \vbox (3.38196pt too high) detected at line 264
  []
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 281.
+(hyperref)                removing `math shift' on input line 272.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 281.
+(hyperref)                removing `math shift' on input line 272.
 
 
-LaTeX Warning: Citation `lec67' on page 22 undefined on input line 308.
+LaTeX Warning: Citation `lec67' on page 22 undefined on input line 299.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-2}) has been already used, duplicate ignored
+[22pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.310 
+l.301 
        <../img/tuckersforbiddensubgraphs.png (PNG copy)>] [23pdfTeX warning (ex
 t4): destination with the same identifier (name{figure.2.3}) has been already u
 sed, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.310 
-      ] <../img/pqtree.png, id=917, 546.04pt x 353.32pt>
+l.301 
+      ] <../img/pqtree.png, id=889, 546.04pt x 353.32pt>
 File: ../img/pqtree.png Graphic file (type png)
 
 <use ../img/pqtree.png>
 \openout5 = `thesis.ent'.
 
  [24]
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 383.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 383.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
@@ -1573,108 +1577,88 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.381 
+l.394 
        <../img/pqtree.png (PNG copy)>]
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 392.
-
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 392.
-
-
-Overfull \hbox (4.23653pt too wide) in paragraph at lines 439--441
+Overfull \hbox (4.23653pt too wide) in paragraph at lines 430--432
 [][]\OT1/cmss/m/n/12 Let $\OMS/cmsy/m/n/12 F$ \OT1/cmss/m/n/12 be a set sys-
  []
 
 [26] [27] [28]
 
-LaTeX Warning: Citation `mm96-ref11' on page 29 undefined on input line 624.
+LaTeX Warning: Citation `mm96-ref11' on page 29 undefined on input line 615.
 
 [29] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 737--737
+Underfull \hbox (badness 10000) in paragraph at lines 728--728
 []\OT1/cmss/m/n/10 Decomposition tree of
  []
 
 
-Underfull \hbox (badness 7504) in paragraph at lines 737--737
+Underfull \hbox (badness 7504) in paragraph at lines 728--728
 \OMS/cmsy/m/n/10 W\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 F\OT1/cmr/m/n/10 )$\OT1/cms
 s/m/n/10 , $\OML/cmm/m/it/10 T\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 W\OT1/cmr/m/n/1
 0 (\OMS/cmsy/m/n/10 F\OT1/cmr/m/n/10 ))$ []\OT1/cmss/m/n/10 PQR
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 750--750
+Underfull \hbox (badness 10000) in paragraph at lines 741--741
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 762.
+(hyperref)                removing `math shift' on input line 753.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 762.
+(hyperref)                removing `math shift' on input line 753.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 762.
+(hyperref)                removing `math shift' on input line 753.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 762.
+(hyperref)                removing `math shift' on input line 753.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31pdfTeX warning (ext4): destination with the same identifier (name{table.2.3
-}) has been already used, duplicate ignored
+[31pdfTeX warning (ext4): destination with the same identifier (name{table.2.3}
+) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.778 
-      ] <../img/pctree_hm03.png, id=1115, 738.76pt x 620.3175pt>
+l.769 
+      ] <../img/pctree_hm03.png, id=1084, 738.76pt x 620.3175pt>
 File: ../img/pctree_hm03.png Graphic file (type png)
 
 <use ../img/pctree_hm03.png>
-<../img/pctree_dom.png, id=1116, 886.31125pt x 261.97874pt>
+<../img/pctree_dom.png, id=1085, 886.31125pt x 261.97874pt>
 File: ../img/pctree_dom.png Graphic file (type png)
 
-<use ../img/pctree_dom.png> [32] [33pdfTeX warning (ext4): destination with the
- same identifier (name{figure.2.5}) has been already used, duplicate ignored
-
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.848 \cite{nsnrs09}
-                     describes a characterization of consecutive-ones <../img/p
-ctree_hm03.png (PNG copy)> <../img/pctree_dom.png (PNG copy)>]
-Overfull \hbox (22.12006pt too wide) in paragraph at lines 855--860
+<use ../img/pctree_dom.png>
+Overfull \hbox (22.12006pt too wide) in paragraph at lines 846--851
 [][]\OT1/cmss/m/n/12 Let
  []
 
-[34]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[32] [33pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.2.5}) has been already used, duplicate ignored
 
- [35]
-[36]
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.851   \begin{enumerate}[i.]
+                              <../img/pctree_hm03.png (PNG copy)> <../img/pctre
+e_dom.png (PNG copy)>] [34] [35] [36]
 
-LaTeX Warning: Reference `def:xxxx' on page 37 undefined on input line 1018.
+LaTeX Warning: Reference `def:xxxx' on page 37 undefined on input line 1009.
 
-[37] [38]
-Overfull \hbox (0.56288pt too wide) in paragraph at lines 1120--1124
-[] \OT1/bch/b/n/12 The-o-rem 2.3.3 ([][][[], Th. 6.1], [][][[], Cor-rected by T
-h. 2.6, Proof p. 44--47]).
+[37]
+Overfull \hbox (0.56288pt too wide) in paragraph at lines 1111--1115
+[] \OT1/bch/b/n/12 The-o-rem 2.3.3 ([[], Th. 6.1], [[], Cor-rected by Th. 2.6, 
+Proof p. 44--47]).
  []
 
-[39]
-Overfull \hbox (0.53252pt too wide) in paragraph at lines 1252--1252
-[]\OT1/cmr/m/n/10 Given a ma-trix $\OML/cmm/m/it/10 M$ \OT1/cmr/m/n/10 with no 
-COP, [][][[]] shows that find-ing a sub-ma-trix $\OML/cmm/m/it/10 M[]$ \OT1/cmr
-/m/n/10 with all columns[]$[]$[] [check
- []
+[38]) [39] [40
 
-) [40]
+
+]
 \openout2 = `030chap3.aux'.
 
  (./030chap3.tex
@@ -1683,8 +1667,6 @@ Chapter 3.
 Underfull \vbox (badness 1436) has occurred while \output is active []
 
  [41
-
-
 
 
 ]
@@ -2477,16 +2459,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 18757 strings out of 94073
- 328600 string characters out of 1162984
- 404961 words of memory out of 1500000
- 20875 multiletter control sequences out of 10000+50000
- 84042 words of font info for 185 fonts, out of 1200000 for 2000
+ 18698 strings out of 94073
+ 327890 string characters out of 1162984
+ 403779 words of memory out of 1500000
+ 20860 multiletter control sequences out of 10000+50000
+ 83527 words of font info for 183 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  63i,25n,71p,1261b,1424s stack positions out of 5000i,500n,6000p,200000b,5000s
 pdfTeX warning (dest): name{Hfootnote.22} has been referenced but does not ex
@@ -2536,9 +2515,9 @@ m-super/sfss1200.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/courie
 r/ucrr8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/times/utmb8a.p
 fb></usr/local/texlive/2007/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/l
 ocal/texlive/2007/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on thesis.pdf (99 pages, 1526510 bytes).
+Output written on thesis.pdf (99 pages, 1489368 bytes).
 PDF statistics:
- 1985 PDF objects out of 2073 (max. 8388607)
- 545 named destinations out of 1000 (max. 131072)
+ 1925 PDF objects out of 2073 (max. 8388607)
+ 502 named destinations out of 1000 (max. 131072)
  446 words of extra memory for PDF output out of 10000 (max. 10000000)
 

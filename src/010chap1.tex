@@ -211,10 +211,7 @@ only the $\xLLL$ group) and so on. The sequence of class slots for the
 day (or week or any time period) is analogous to the street map in the
 accommodation problem. It is quite obvious now why this version of the
 problem (where the ``target graph'' is a path and not any
-tree\tnote[minor]{Allowing any tree in this example could be seen as a
-  scenario where there are parallel classes. A node falling in the
-  path between two other nodes would mean that the corresponding is
-  scheduled between the other two.}) is called an interval assignment
+tree) is called an interval assignment
 problem.
 
 The interval assignment problem to a set system is equivalent to the
@@ -258,7 +255,6 @@ illustrated by the study group accommodation problem).
   \item \Cop
   \item Strong \cop
   \item \Cop order or \cop permutation
-  \item \Cop for set systems\tnote{see mcc04}
   \end{enumerate}
 \end{definition}
 
@@ -267,8 +263,6 @@ illustrated by the study group accommodation problem).
 
 \begin{definition}[\emph{\Crop}]
   \label{def:cropmatrix}
-  \tnote[important]{define circ1 here. refer to it in chap 2 or
-    duplicate it using slash def }
 \end{definition}
 
 \begin{definition}[\emph{set system}]
@@ -385,21 +379,18 @@ relationship of matrices with \COP to interval graphs. A PQ tree of a
 matrix is one that stores all row (column) permutations of the matrix
 that give the COP orders (there could be multiple orders of rows or
 columns) of the matrix. This is constructed using an elaborate linear
-time procedure and is also a test for planarity\tnote{check check
-  check. both interval graph and planarity in this paper?}.  PQR trees
-is a generalized data structure based on PQ trees \cite{mm96,mpt98}.
+time procedure and is also a test for planarity.  PQR trees is a
+generalized data structure based on PQ trees \cite{mm96,mpt98}.
 \cite{tm05} describes an improved algorithm to build PQR
-trees. \tnote{improv in terms of what?}\cite{wlh02} describes the
-simpler algorithm for COT. Hsu also invented PC trees
-\cite{wlh01}\tnote{This result first appeared inproc ISAAC92}
-which is claimed to be much easier to implement. \cite{nsnrs09}
-describes a characterization of consecutive-ones property solely based
-on the cardinality properties of the set representations of the
-columns (rows); every column (row) is equivalent to a set that has the
-row (column) indices of the rows (columns) that have one entries in
-this column (row). This is interesting and relevant, especially to
-this thesis because it simplifies COT to a great degree. \tnote{it
-  reduces the solution search space. fill in the blanks.}
+trees. \cite{wlh02} describes the simpler algorithm for COT. Hsu also
+invented PC trees \cite{wlh01} which is claimed to be much easier to
+implement. \cite{nsnrs09} describes a characterization of
+consecutive-ones property solely based on the cardinality properties
+of the set representations of the columns (rows); every column (row)
+is equivalent to a set that has the row (column) indices of the rows
+(columns) that have one entries in this column (row). This is
+interesting and relevant, especially to this thesis because it
+simplifies COT to a great degree.
 
 \cite{mcc04} describes a different approach to COT. While all previous
 COT algorithms gave the COP order if the matrix has the property but
@@ -412,13 +403,7 @@ is more viable. Hence having a certificate reinforces an
 implementation's credibility. Note that when the matrix {\em has} COP,
 the COP order is the certificate.  The internal machinery of this
 algorithm is related to the weighted betweenness problem
-addressed\tnote{in what way??} in \cite{co98}.  \tnote{expand
-  on the COP order graph creation and it having to be bipartite for M
-  to have COP. and thus an odd cycle being an evidence of no COP.}
-\tnote{ where should this go?: (1) cite|jlm97 (application of PQ
-  trees in graphics). (2) helly's theorem citation
-  19XXdgk-Hellystheorem-Danzer-Gruenbaum-Klee}
-
+addressed in \cite{co98}.  
 
 \subsection{Optimization problems in COP}
 \label{sec:optcop}
@@ -467,9 +452,9 @@ rows (columns) that must be deleted to result in a matrix with COP.
 In the dual problem {\sc Max COS-R (Max COS-C)} the search is for the
 maximum number of rows (columns) that induces a submatrix with
 COP. Given a matrix $M$ with no COP, \cite{b75-phd} shows that finding
-a submatrix $M'$ with all columns\tnote{check if b75 deals with
+a submatrix $M'$ with all columns\temptext{ check if b75 deals with
   COP col or COP row. also is it any submatrix with k less than r rows
-  or submatrix must have all columns?} but a maximum cardinality
+  or submatrix must have all columns? } but a maximum cardinality
 subset of rows such that $M'$ has COP is NP complete. \cite{hg02}
 corrects an error of the abridged proof of this reduction as given in
 \cite{gj79}.  \cite{d08phd} discusses all these problems in detail
@@ -477,7 +462,7 @@ giving an extensive survey of the previously existing results which
 are almost exhaustively all approximation results and hardness
 results. Taking this further, \cite{d08phd} presents new results in
 the area of parameterized algorithms for this
-problem\tnote{elaborate - what are the results?}.
+problem.
 
 Another problem is to find the minimum number of entries in the matrix
 that can be toggled to result in a matrix with COP.  \cite{v85}
@@ -485,11 +470,10 @@ discusses approximation of {\sc COP Augmentation} which is the problem
 of changing of the minimum number of zero entries to {\un}s so that
 the resulting matrix has COP. As mentioned earlier, this problem is
 known to be NP complete due to \cite{b75-phd}. \cite{v85} also proves,
-using a reduction to the longest path problem, \tnote{or is it a
+using a reduction to the longest path problem, \temptext{ or is it a
   survey of another result?  check.} that finding a Tucker's forbidden
-submatrix of at least $k$ rows is NP complete. \tnote{how is this
-  different from booth's 75 result??}  \tnote{where should this
-  go? cite|tz04 (approx submatrix with COP sparse matrices)}
+submatrix of at least $k$ rows is NP complete. \temptext{ how is this
+  different from booth's 75 result??}  
 
 \cite{jkckv04} discusses the use of matrices with almost-COP (instead
 of one block of consecutive {\un}s, they have $x$ blocks, or {\em
@@ -497,17 +481,7 @@ of one block of consecutive {\un}s, they have $x$ blocks, or {\em
 storage of very large databases.  The problem is that of reordering of
 a binary matrix such that the resulting matrix has at most $k$ runs of
 {\un}s. This is proved to be NP hard using a reduction from the
-Hamiltonian path problem.\tnote{Theorem 2.1 in jkckv}
-\tnote{(1) A connection of COP problem to the travelling salesman
-  problem is also introduced. what does this mean? -- COP can be used
-  as a tool to reorder $0.5T \le runs(M) \le T$. (2) The optimization
-  version of the $k$-run problem, i.e. minimization of number of
-  blocks of ones is proven to be NP complete by
-  cite:k77}\tnote{are these two the same?} \tnote{what is the
-  reduction?} \tnote{other problems similar to COP -- cite:ckl96
-  (ILP, circ ones, one drop) -- cite:th98 (generalization of COP -
-  minimax, biotonic column) Tucker}
-
+Hamiltonian path problem.
 
 
 % \section[Some applications of \COP]{Application of COP in Areas of Graph Theory and
@@ -605,15 +579,14 @@ We see in Section~\ref{sec:motive} that pairwise intersection
 cardinality preservation is necessary and sufficient for an interval
 assignment to be feasible for a given hypergraph\footnote{A {\em
     hypergraph} is an alternate representation of a set system and
-  will be used in this thesis.}~\footnote{See Section~\ref{ch:prelims} for the
-  formal definition.} and thus is a characterization for COP
-\cite{nsnrs09}. \tnote{Refer to the survey section that will list the
-  theorems and/or lemma?} In our work we extend this characterization
-and find that trio-wise intersection cardinality preservation makes a
-tree path labeling\footnote{A {\em tree path labeling} $\cl$ is a
-  bijection of paths from the target tree $T$ to the hyperedges in
-  given hypergraph $\cF$.}~\footnotemark[4]  (TPL) feasible, which is a generalization of the COP
-problem. This problem is defined as follows.
+  will be used in this thesis.}~\footnote{See Section~\ref{ch:prelims}
+  for the formal definition.} and thus is a characterization for COP
+\cite{nsnrs09}. In our work we extend this characterization and find
+that trio-wise intersection cardinality preservation makes a tree path
+labeling\footnote{A {\em tree path labeling} $\cl$ is a bijection of
+  paths from the target tree $T$ to the hyperedges in given hypergraph
+  $\cF$.}~\footnotemark[4] (TPL) feasible, which is a generalization
+of the COP problem. This problem is defined as follows.
 
 {\small
   \begin{minipage}[h]{5in}
@@ -726,7 +699,7 @@ Figure~\ref{fig:ksubstar}.
   \end{minipage}\\
 }
 
-\tnote{The following sentence seems out of place in this para} In
+\temptext{The following sentence seems out of place in this para} In
 spite of this being a restricted case, we believe that our results are
 of significant interest in understanding the nature of {\sc Graph
   Isomorphism} which is polynomial time solvable in interval graphs
@@ -749,25 +722,15 @@ algorithm finds a path labeling from $T$ by decomposing the problem
 into subproblems of finding path labeling of subsets of $\cF$ from
 subtrees of $T$. Given the fact that binary matrices naturally
 represent a set system (see Section~\ref{sec:motive}) and that the
-{\em overlap}\tnote{Give informal definition of ``overlap''
-  in footnote/endnote and link to sec:prelims. ADD the definition in prelim.}
-relation between the sets involved is an obvious equivalence relation,
-$\cF$ quite naturally partitions into equivalence classes known as
-{\em overlap components}\tnote{Give informal definition of ``overlap
-  components'' in footnote and link to sec:prelims. ADD the definition
-  in prelim.}. In the context of COP, overlap components were used in
-\cite{wlh02} and \cite{kklv10}. Moreover, \cite{nsnrs09} discovered
-that these equivalence classes form a total order \tnote{Give informal
-  definition of ``total order'' in footnote?}. We extend this to TPL
-and find that when $\cF$ is a path hypergraph\footnote{If there exists
-  an FTPL for a hypergraph $\cF$, it is called a path hypergraph.},
-the classes can be partially ordered as an in-tree in polynomial
+{\em overlap} relation between the sets involved is an obvious
+equivalence relation, $\cF$ quite naturally partitions into
+equivalence classes known as {\em overlap components}. In the context
+of COP, overlap components were used in \cite{wlh02} and
+\cite{kklv10}. Moreover, \cite{nsnrs09} discovered that these
+equivalence classes form a total order. We extend this to TPL and find
+that when $\cF$ is a path hypergraph\footnote{If there exists an FTPL
+  for a hypergraph $\cF$, it is called a path hypergraph.}, the
+classes can be partially ordered as an in-tree in polynomial
 time. Once $\cF$ is ``broken'' into overlap components, one must
 identify the subtree of $T$ that it needs to map to and this is the
 hard part which is currently open to be solved in polynomial time.
-
-\tnote{The connection of TPL to graph isomorphism will be made
-  later in the document}
-
-
-%\theendnotes
