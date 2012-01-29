@@ -1,24 +1,28 @@
+\xclearpage
+
+
 \chapter[Tree Path Labeling]{Tree Path Labeling of Path
   Hypergraphs -- New Results}
 \label{ch:myresearch}
 
-This chapter documents all the new results obtained by us
-in the area of tree path labeling of path hypergraphs which is the
-parent problem addressed in this thesis.
+This chapter documents all the new results obtained by us in the area
+of tree path labeling of path hypergraphs which is the problem
+addressed in this thesis. The organization of the chapter is as
+follows.
 
 Section~\ref{sec:myresearchintro} recalls the idea of tree path
 labeling. The necessary preliminaries with definitions etc. are
 presented in Section~\ref{ch:prelims}. Section~\ref{sec:feasible}
-documents the characterization of a feasible path labeling for any
-path labeling from any target trees. Section~\ref{sec:spltargettree}
-describes two special cases where the target tree is of a particular
-family of trees. The first one is shown to be equivalent to COP
-testing in Section~\ref{sec:icpplicpia}. Section~\ref{sec:ksubdivstar}
-discusses the second special case and presents a polynomial time
-algorithm to find the tree path labeling of a given set system from a
-given \kstar. Section~\ref{sec:norestraint} discusses the plain
-vanilla version where the target tree has no restrictions and the
-algorithm to find a feasible TPL, if any, in this case.
+documents the characterization of a feasible path labeling from any
+target trees. Section~\ref{sec:spltargettree} describes two special
+cases where the target tree is of a particular family of trees. The
+first one is shown to be equivalent to COP testing in
+Section~\ref{sec:icpplicpia}. Section~\ref{sec:ksubdivstar} discusses
+the second special case and presents a polynomial time algorithm to
+find the tree path labeling of a given set system from a given
+\kstar. Section~\ref{sec:norestraint} discusses the plain vanilla
+version where the target tree has no restrictions and the algorithm to
+find a feasible TPL, if any, in this case.
 
 
 \section[Summary of problems]{Summary of Proposed Problems}
@@ -26,193 +30,116 @@ algorithm to find a feasible TPL, if any, in this case.
 In Section~\ref{sec:motive} we see that consecutive-ones property and
 its equivalent problem of interval labeling of a hypergraph is a
 special case of the general problem of tree path labeling of path
-hypergraphs.  The problem of consecutive-ones property testing can be
-easily seen as a simple constraint satisfaction problem involving a
-hypergraph or a system of sets from a universe. Every column (row) of
-the binary matrix can be converted into a set of non-negative integers
-which are the indices of the rows (columns) with {\un}s in that column
+hypergraphs. Moreover, Section~\ref{sec:icpiasurvey} describes how the
+problem of consecutive-ones property testing can be easily seen as a
+simple constraint satisfaction problem involving a hypergraph or a
+system of sets from a universe. Every column (row) of the binary
+matrix can be converted into a set of non-negative integers which are
+the indices of the rows (columns) with {\un}s in that column
 (row). When observed in this context, if the matrix has the COP on
 columns (rows), a reordering of its rows (columns) will result in sets
 that have only consecutive integers. In other words, the sets after
 applying the COP row (column) permutation are intervals.  In this
 form, one can see that this is indeed the problem of finding interval
-assignments to the given set system \cite{nsnrs09} with a single
-permutation of the universe (set of row or column indices for COP of
-columns or rows, respectively) which permutes each set to an
-interval. The result in \cite{nsnrs09} characterizes interval
-assignments to the sets which can be obtained from a single
-permutation of the universe. The cardinality of the interval
-assigned to it must be same as the cardinality of the set, and the
-intersection cardinality of any two sets must be same as the
+assignments to the given set system with a single permutation of the
+universe (set of row or column indices for COP of columns or rows,
+respectively) which permutes each set to an interval. The result in
+\cite{nsnrs09} (see Theorems~\ref{th:icpia2} and \ref{th:icpia1})
+characterizes interval assignments to the sets which can be obtained
+from a single permutation of the universe. The cardinality of the
+interval assigned to it must be same as the cardinality of the set,
+and the intersection cardinality of any two sets must be same as the
 intersection cardinality of the corresponding intervals. This is a
-necessary and sufficient condition. \tnote{(ICPIA) put reference to
-  survey chapter}
+necessary and sufficient condition. 
 
-Naturally, intervals are paths from a tree with maximum degree
-two. Thus the interval assignment problem can be generalized into path
+Intervals are paths from a tree with maximum degree two. Thus the
+interval assignment problem can be naturally generalized into path
 assignment problem from any tree. We refer to this as the {\em tree
   path labeling problem of path hypergraphs}. This is analogous to the
 interval labeling problem in literature \cite{kklv10} to interval
-hypergraphs. To elaborate, the problem is defined as follows -- given
-a hypergraph $\cF$ from universe (hypergraph vertex set) $U$ and a target tree
-$T$, does there exist a bijection $\phi$ from $U$ to the vertices of $T$ such
-that for each hyperedge when applied to its elements, $\phi$ gives a path on
-$T$.  More formally, the problem definition is as defined by \CFTPL.
+hypergraphs. In brief, the problem is defined as follows -- given a
+hypergraph $\cF$ from universe $U$ (\ie hypergraph vertex set) and a
+target tree $T$, does there exist a bijection $\phi$ from $U$ to the
+vertices of $T$ such that for each hyperedge when $\phi$ is applied to
+its elements it gives a path on $T$.  More formally, the problem
+definition is given by \CFTPL.
 
-{\small
-  \begin{minipage}[h]{5in}
-    \vspace{2mm}
-    {\large \CFTPL}\\
-    \begin{tabular}[t]{l|l}
-      \hline\\
-      {\tt Input} & 
-      \begin{minipage}[t]{\probdefwidth}
-        A hypergraph $\cF$ with vertex set $U$ and a tree $T$.\\
-      \end{minipage}\\
-
-      {\tt Question} &
-      \begin{minipage}[t]{\probdefwidth}
-        Does there exist a set of paths $\cP$ from $T$ and a bijection
-        $\cl$~$:$~$\cF \rightarrow \cP$, such that {\FTPL} returns
-        {\bf true} on $(\cF, T, \cl)$.
-      \end{minipage}\\
-    \end{tabular}
-  \end{minipage}\\
-}
-
+\begin{problemdef}{\CFTPL}{A hypergraph $\cF$ with vertex set $U$ and
+    a tree $T$.}
+  Does there exist a set of paths $\cP$ from $T$ and a bijection
+  $\cl$~$:$~$\cF \rightarrow \cP$, such that {\FTPL} returns {\bf
+    true} on $(\cF, T, \cl)$.
+\end{problemdef}
 
 To characterize a feasible TPL, we consider the case where a tree path
 labeling is also given as input and we are required to test if the
 given labeling is feasible. This is defined by the \FTPL problem.
 
-%\begin{tabular}[t]{c}
-{\small
-\begin{minipage}[h]{5in}
- % \begin{singlespace}
- \vspace{2mm}
- {\large \FTPL}\\
- \begin{tabular}[t]{l|l}
- \hline\\
-    {\tt Input} & 
-    \begin{minipage}[t]{\probdefwidth}
-      A hypergraph $\cF$ with vertex set $U$, a tree $T$, a set of
-      paths $\cP$ from $T$ and a
-      bijection $\cl$~$:$~$\cF \rightarrow \cP$.\\
-    \end{minipage}\\
-    {\tt Question} &
-    \begin{minipage}[t]{\probdefwidth}
-      Does there exist a bijection $\phi$~$:$~$U \rightarrow V(T)$
-      such that $\phi$ when applied on any hyperedge in $\cF$ will
-      give
-      the path mapped to it by the given tree path labeling $\cl$.\\
-      { i.e., $\cl(S) = \{\phi(x) \mid x \in S\}$, for every hyperedge
-        $S \in \cF$.}
-    \end{minipage}\\
-  \end{tabular}
-  % \end{singlespace}
-\end{minipage}\\
-}
-% \end{tabular}
+\begin{problemdef}{\FTPL}{A hypergraph $\cF$ with vertex set $U$, a
+    tree $T$, a set of paths $\cP$ from $T$ and a bijection
+    $\cl$~$:$~$\cF \rightarrow \cP$.}
+
+  Does there exist a bijection $\phi$~$:$~$U \rightarrow V(T)$ such
+  that $\phi$ when applied on any hyperedge in $\cF$ will give
+  the path mapped to it by the given tree path labeling $\cl$.\\
+  { i.e., $\cl(S) = \{\phi(x) \mid x \in S\}$, for every hyperedge $S
+    \in \cF$.}
+\end{problemdef}
 
 Section~\ref{sec:feasible} discusses \FTPL and presents an algorithmic
 characterization for a feasible TPL.
 
 With respect to computing a feasible TPL, as suggested by \CFTPL
 problem, we were unable to discover an efficient algorithm for
-it. Hence we consider two special cases of the same -- namely, \CFTPLINT
-and \CFTPLKTREE on special target trees, namely, intervals and \kstars,
-respectively.  Section~\ref{sec:spltargettree} discusses these
-problems.
+it. However, we consider two special cases of the same on special
+target trees -- namely, \CFTPLINT and \CFTPLKTREE on intervals and
+\kstars, respectively.  Section~\ref{sec:spltargettree} discusses
+these problems and their polynomial time solutions.  \CFTPLINT is a
+demonstrated to be the known problem of \COP testing. The polynomial
+time solution to \CFTPLKTREE is a new result by us.
 
-{\small
-  \begin{minipage}[h]{5in}
-    % \begin{singlespace}
-    \vspace{2mm}
-    {\large \CFTPLINT}\\
-    \begin{tabular}[t]{l|l}
-      \hline\\
-      {\tt Input} & 
-      \begin{minipage}[t]{\probdefwidth}
-        A hypergraph $\cF$ with vertex set $U$ and a tree $T$ with
-        maximum degree 2.\\
-      \end{minipage}\\
-      {\tt Question} &
-      \begin{minipage}[t]{\probdefwidth}
-        Does there exist a set of paths $\cP$ from $T$ and a bijection
-        $\cl$~$:$~$\cF \rightarrow \cP$, such that {\FTPL} returns
-        {\bf true} on $(\cF, T, \cl)$.
-      \end{minipage}\\
-    \end{tabular}
-    % \end{singlespace}
-  \end{minipage}\\
-}
+\begin{problemdef}{\CFTPLINT}{ A hypergraph $\cF$ with vertex set $U$
+    and a tree $T$ with maximum degree 2.}
 
-{\small
-  \begin{minipage}[h]{5in}
-    % \begin{singlespace}
-    \vspace{2mm}
-    {\large \CFTPLKTREE}\\
-    \begin{tabular}[t]{l|l}
-      \hline\\
-      {\tt Input} & 
-      \begin{minipage}[t]{\probdefwidth}
-        A hypergraph $\cF$ with vertex set $U$ such that every
-        hyperedge
-        $S \in \cF$ is of cardinality at most $k+2$ and a {\kstar} $T$.\\
-      \end{minipage}\\
-      {\tt Question} &
-      \begin{minipage}[t]{\probdefwidth}
-        Does there exist a set of paths $\cP$ from $T$ and a bijection
-        $\cl$~$:$~$\cF \rightarrow \cP$, such that {\FTPL} returns
-        {\bf true} on $(\cF, T, \cl)$.
-      \end{minipage}\\
-    \end{tabular}
-    % \end{singlespace}
-  \end{minipage}\\
-}
+  Does there exist a set of paths $\cP$ from $T$ and a bijection
+  $\cl$~$:$~$\cF \rightarrow \cP$, such that {\FTPL} returns {\bf
+    true} on $(\cF, T, \cl)$.  
+\end{problemdef}
 
-\CFTPLINT is nothing but the consecutive-ones property testing
-problem.
+\begin{problemdef}{\CFTPLKTREE}{A hypergraph $\cF$ with vertex set $U$
+    such that every hyperedge $S \in \cF$ is of cardinality at most
+    $k+2$ and a {\kstar} $T$.}
+
+  Does there exist a set of paths $\cP$ from $T$ and a bijection
+  $\cl$~$:$~$\cF \rightarrow \cP$, such that {\FTPL} returns {\bf
+    true} on $(\cF, T, \cl)$.
+\end{problemdef}
+
+% \CFTPLINT is nothing but the consecutive-ones property testing
+% problem.
 
 An algorithm for \CFTPL on general trees which is less efficient than
 polynomial time is presented in
-Section~\ref{sec:norestraint}. \tnote[minor]{put some more description
-  here. refer WG11.}
-
-\remove[minor]{We focus on the question of generalizing the notion of an
-  ICPIA cite-nsnrs09 to characterize feasible path assignments.  We
-  show that for a given set system $\cF$, a tree $T$, and an
-  assignment of paths from $T$ to the sets, there is a feasible
-  bijection between $U$ and $V(T)$ if and only if all intersection
-  cardinalities among any three sets (not necessarily distinct) is
-  same as the intersection cardinality of the paths assigned to them
-  and the input runs a filtering algorithm (described in this paper)
-  successfully.  This characterization is proved constructively and it
-  gives a natural data structure that stores all the relevant feasible
-  bijections between $U$ and $V(T)$.  Further, the filtering algorithm
-  is also an efficient algorithm to test if a tree path labeling to
-  the set system is feasible.  This generalizes the result in
-  cite-nsnrs09.}
-
+Section~\ref{sec:norestraint}. 
 
 \section[Preliminaries]{Preliminaries to new results}
 \label{ch:prelims}
 
-This section states definitions and basic facts necessary in the scope
-of this document.
+This section describes ideas and terminologies necessary in this
+chapter. Some of these may have been seen earlier in this document,
+but is recalled for the sake of completeness of the chapter.
 
-\subsection{Hypergraph Preliminaries}
-
-\begin{definition}[Set systems and hypergraphs] 
-  \noindent 
+\subsection{Set systems and hypergraphs}
+%\begin{definition}[Set systems and hypergraphs] 
+ 
   The set $\F \subseteq (2^{U} \setminus \emptyset)$ is a {\em set
     system} of a universe $U$ with $|U| = n$.  The {\em support} of a
-  set system $\F$ denoted by $\supt{\cF}$\tnote[minor]{change all supp
-    references to supt command} is the union of all the sets in $\F$;
-  $supp(\F) = \bigcup_{S \in \F}S$. For the purposes of this paper, a
-  set system is required to ``cover'' the universe; $ supp(\cF) = U$.
- 
-  \noindent
+  set system $\F$ denoted by $\supt{\cF}$ is the union of all the sets
+  in $\F$; $supp(\F) = \bigcup_{S \in \F}S$. For the purposes of this
+  paper, a set system is required to ``cover'' the universe; $
+  supp(\cF) = U$.
+  \par
+%  \noindent
   A set system $\cF$ can also be visualized as a {\em hypergraph}
   whose vertex set is $supp(\cF)$ and hyperedges are the sets in
   $\cF$. This is a known representation for
@@ -221,14 +148,14 @@ of this document.
   system and hypergraph in the scope of this paper, we drop the
   subscript $_H$ in the notation and refer to both the structures by
   $\cF$.
-
-  \noindent
+  \par
+%  \noindent
   The {\em intersection graph}\, $\bI(\cF)$ of a hypergraph
   $\cF$ is a graph such that its vertex set has a bijection to $\cF$
   and there exists an edge between two vertices \iff their
   corresponding hyperedges have a non-empty intersection \cite{mcg04}.
-
-  \noindent 
+  \par
+%  \noindent 
   Two hypergraphs $\cF'$, $\cF''$ are said to be {\em isomorphic} to
   each other, denoted by $\cF' \cong \cF''$, \iff there exists a
   bijection $\phi: supp(\cF') \rightarrow supp(\cF'')$ such that for
@@ -236,9 +163,10 @@ of this document.
   $B$ is a hyperedge in $\cF''$ where $B = \{\phi(x) \mid x \in A\}$
   \cite{kklv10}, written as $B=\phi(A)$.  This is called {\em
     hypergraph isomorphism}.  
-\end{definition}
+%\end{definition}
 
-\begin{definition}[Path Hypergraph from a Tree]
+\subsection{Path Hypergraph from a Tree}
+%\begin{definition}[Path Hypergraph from a Tree]
   The graph $T$ represents a {\em target tree} with same number of
   vertices as elements in $U$; $|V(T)|=|U|=n$.  A {\em path system}\,
   $\cP$ is a set system of paths from $T$; $\cP \subseteq \{P \mid P
@@ -246,7 +174,7 @@ of this document.
   the fact, from the literature \cite{bls99,kklv10}, that intervals
   can be viewed as sub-paths of a path.
 
-  \noindent
+%  \noindent
   If the intersection graphs of $\cF$ and $\cP$ (a path system) are
   isomorphic, $\bI(\cF) \cong \bI(\cP)$, then the associated bijection
   $\cl: \cF \rightarrow \cP$ due to this isomorphism is called a {\em
@@ -271,7 +199,7 @@ of this document.
 %   where $k$ is the number of leaves in $T$
   
 
-  \noindent
+%  \noindent
   \add{To illustrate further, let $\cg: V(\cF) \rightarrow V(\cP)$ be
     the above mentioned isomorphism where $V(\cF)$ and $V(\cP)$ are
     the vertex sets that represent the hyperedges for each hypergraph
@@ -285,7 +213,7 @@ of this document.
     pair $(\cF, \cl)$ and the target tree $T$; hence this notation
     will be used more often.}
 
-  \noindent
+%  \noindent
   If $\cF \cong \cP$ where $\cP$ is a path system, then $\cF$ is
   called a {\em path hypergraph} and $\cP$ is called {\em path
     representation} of $\cF$. If this isomorphism is $\phi: supp(\cF)
@@ -294,7 +222,7 @@ of this document.
   $\cl_\phi(S) = \set{y \mid y = \phi(x), x \in S}$ for all $S \in
   \cF$. Recall that $supp(\cP) = V(T)$.
 
-  \noindent
+%  \noindent
   \add{A graph} $G$ is a {\em path graph} if it is isomorphic to the
   intersection graph $\bI(\cP)$ of a path system $\cP$.  This
   isomorphism gives a bijection $\cl': V(G) \rightarrow
@@ -307,7 +235,7 @@ of this document.
     labeling} of the hypergraph $\cF$ and the path system $\cP$ may be
   alternatively denoted as $\cF^\cl$.
 
-  \noindent
+%  \noindent
   A path labeling $(\cF, \cl)$ is defined to be {\em feasible} if $\cF
   \cong \cF^\cl$ and this hypergraph isomorphism $\phi: supp(\cF)
   \rightarrow supp(\cF^\cl)$ induces a path labeling $\cl_\phi: \cF
@@ -320,10 +248,11 @@ of this document.
   there is a hypergraph isomorphism $\phi: supp(\cF) \rightarrow
   supp(\cF^\cl)=V(T)$ induces a path labeling $\cl_\phi: \cF
   \rightarrow \cF^\cl$ such that $\cl_\phi = \cl$.
-\end{definition}
+%\end{definition}
 
 
-\begin{definition}[Overlap Graphs and Marginal Hyperedges]
+\subsection{Overlap Graphs and Marginal Hyperedges}
+%\begin{definition}[Overlap Graphs and Marginal Hyperedges]
   An {\em overlap graph}\, $\bO(\cF)$ of a hypergraph $\cF$ is a graph
   such that its vertex set has a bijection to $\cF$ and there exists
   an edge between two of its vertices \iff their corresponding
@@ -335,15 +264,17 @@ of this document.
   and not necessarily connected. Each connected component of
   $\bO(\cF)$ is called an {\em overlap component}.
 
-  \noindent
+%  \noindent
   A hyperedge $S \in \cF$ is called {\em marginal} if for all $S'
   \overlap S$, the overlaps $S \cap S'$ form a single inclusion chain
   \cite{kklv10}. Additionally, if $S$ is such that it is contained in
   no other marginal hyperedge in $\cF$, then it is called {\em
     super-marginal}.
-\end{definition}
+%\end{definition}
 
-\begin{definition}[$k$-subdivided star] 
+
+\subsection{Miscellaneous}
+%\begin{definition}[$k$-subdivided star] 
   A {\em star} graph is a
   complete bipartite graph $K_{1,p}$ which is clearly a tree and $p$
   is the number of leaves. The vertex with maximum degree is called
@@ -352,13 +283,10 @@ of this document.
   subdivided exactly $k$ times. The definition of a {\em ray of a
     $k$-subdivided star} is extended to the path from the center to a
   leaf. It is clear that all rays are of length $k+2$.
-\end{definition}
+%\end{definition}
 
 
-\temptext{ --- WG11 begin --- }
-
-\remove[dire]{
-A path assignment }% $\A$ to $\F$ is defined as a set assignment
+% A path assignment $\A$ to $\F$ is defined as a set assignment
 % where second universe is the vertex set $V$ of a given tree $T$ and
 % every second subset in the ordered pairs is a path in this
 % tree. Formally, the definition is as follows. 
@@ -380,42 +308,47 @@ A path assignment }% $\A$ to $\F$ is defined as a set assignment
 % \end{align}
 
 
-\begin{definition}[Partially ordered sets]
+%\begin{definition}[Partially ordered sets]
   
-Let $X$ be a partially ordered set with $\preccurlyeq$ being the
-partial order on $X$.  $mub(X)$ represents an element in $X$ which is
-a maximal upper bound on $X$.  $X_m \in X$ is a maximal upper bound of
-$X$ if $\nexists X_q \in X$ such that $X_m
-\preccurlyeq X_q$. 
-\end{definition}
+  Let $X$ be a partially ordered set with $\preccurlyeq$ being the
+  partial order on $X$.  $X_m \in X$ is a maximal upper bound of $X$
+  if $\nexists X_q \in X$ such that $X_m \preccurlyeq X_q$.  A maximal
+  upper bound on $X$ is denoted by $mub(X)$.
+  %represents an element in $X$ which is a maximal upper bound on $X$.
+%\end{definition}
 
 
-\noindent
-The set $I$ represents the index set $[m]$. If index $i$ is used
-without further qualification, it is meant to be $i \in I$. Any
-function, if not defined on a domain of sets, when applied on a set is
-understood as the function applied to each of its elements. i.e. for
-any function $f$ defined with domain $U$, the abuse of notation is as
-follows; $f(S)$ is used instead of $\hat f(S)$ where
-$\hat f(S) = \{y \mid y = f(x), x \in S\}$. \\
-
-\noindent
-When refering to a tree as $T$ it could be a reference to the tree
-itself, or the vertices of the tree. This will be clear from the
-context.\\
-
-\noindent
-Finally, an in-tree is a directed rooted tree in which all edges are
+An {\em in-tree} is a directed rooted tree in which all edges are
 directed toward to the root.
 
-\temptext{ --- WG11 end --- }
+The set $I$ represents the index set $[m]$. If index $i$ is used
+without further qualification, it is intended that $i \in I$. 
 
-\section[Characterization of FTPL]{Characterization of Feasible Tree Path Labeling}
+\section[Characterization of FTPL]{Characterization of Feasible Tree
+  Path Labeling}
 \label{sec:feasible}
 
 \tnote{\sc refer to Problem Defs here}
 In this section we give an algorithmic characterization of the
-feasibility of a tree path labeling.  Consider a path labeling $(\cF,
+feasibility of a tree path labeling.  
+We focus on the question of generalizing the notion of an
+  ICPIA cite-nsnrs09 to characterize feasible path assignments.  We
+  show that for a given set system $\cF$, a tree $T$, and an
+  assignment of paths from $T$ to the sets, there is a feasible
+  bijection between $U$ and $V(T)$ if and only if all intersection
+  cardinalities among any three sets (not necessarily distinct) is
+  same as the intersection cardinality of the paths assigned to them
+  and the input runs a filtering algorithm (described in this paper)
+  successfully.  This characterization is proved constructively and it
+  gives a natural data structure that stores all the relevant feasible
+  bijections between $U$ and $V(T)$.  Further, the filtering algorithm
+  is also an efficient algorithm to test if a tree path labeling to
+  the set system is feasible.  This generalizes the result in
+  cite-nsnrs09.
+
+
+
+Consider a path labeling $(\cF,
 \cl)$ on the given tree $T$. We call $(\cF, \cl)$ an {\em Intersection
   Cardinality Preserving Path Labeling (ICPPL)} if it has the
 following properties.

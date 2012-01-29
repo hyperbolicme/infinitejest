@@ -196,10 +196,11 @@ shared by two or more study groups. It is mandatory that a student who
 is a member of a study group takes all the courses associated with
 that group. There are slots during the day for classes to be held and
 the problem is to allocate class slots to courses such that all the
-classes of a study group are consecutive. It is debatable if this will
-not hamper the attention span and memory retention rate of the
-students but that is, regrettably, out of the scope of this
-thesis. The parallels between this class allocation problem and the
+classes of a study group are consecutive. % \footnote{It is debatable if this will
+% not hamper the attention span and memory retention rate of the
+% students but that is undoubtedly out of the scope of this
+% thesis.}
+The parallels between this class allocation problem and the
 accommodation problem can be seen as follows. The set $U$ here, are
 the courses offered (say Course 101 {\coneohone}, Course 102
 {\coneohtwo} and so on). In this variation of the problem, the
@@ -231,21 +232,21 @@ illustrated by the study group accommodation problem).
 \section[Basic preliminaries]{Basic preliminaries} 
 \label{sec:basicprelim}
 
+If $n$ is a positive integer, $[n]$ denotes the set $\{1,2,... n\}$.
+
 \begin{definition}[\emph{Binary matrix}.]
   \label{def:binmatrix}
   Let $M$ be an $n \times m$ matrix. $m_{i,j}$ denotes its $(i,j)$th
   element, i.e. element at $i$th row and $j$th column. $M$ is a binary
-  matrix if each of its element is 0 or \un.
-  In other words, for all $i \in [n]$ and $j \in [m]$, $m_{i,j} \in
-  \{0, \un\}$ 
+  matrix if each of its element is 0 or \un.  In other words, for all
+  $i \in [n]$ and $j \in [m]$, $m_{i,j} \in \{0, \un\}$
 \end{definition}
 
 \begin{definition}
   A {\em permutation} $\lambda$ of a set $X = \{x_1, x_2, \ldots
   x_n\}$ is a bijection $\lambda: X \rightarrow X$.  For simplicity,
-  sometimes, $\lambda$ is written as a sequence $x_{i_1}x_{i_2}\ldots
-  x_{i_n}$, where $i_j \in \{1, 2 \ldots n\}$ to mean that
-  $\lambda(x_j)= x_{i_j}$.\\
+  $\lambda$ may be written as a sequence $x_{i_1}x_{i_2}\ldots x_{i_n}$,
+  where $i_j \in [n]$ to mean that $\lambda(x_j)= x_{i_j}$.
   This document uses both notations as convenient in context.
 \end{definition}
 
@@ -273,13 +274,17 @@ illustrated by the study group accommodation problem).
 
 \begin{definition}[\emph{Graph, Tree}]
   \label{def:graphtree}  
+
 \end{definition}
+When refering to a tree as $T$ it could be a reference to the tree
+itself, or the vertices of the tree. This will be clear from the
+context.
+
 
 \begin{definition}[\emph{Maximal clique}]
   \label{def:maxclique}    
 \end{definition}
 
-If $n$ is a positive integer, $[n]$ denotes the set $\{1,2,... n\}$.
 
 \section[Brief Survey]{Consecutive-ones Property - a Brief Survey}
 \label{sec:background}
@@ -586,34 +591,35 @@ that trio-wise intersection cardinality preservation makes a tree path
 labeling\footnote{A {\em tree path labeling} $\cl$ is a bijection of
   paths from the target tree $T$ to the hyperedges in given hypergraph
   $\cF$.}~\footnotemark[4] (TPL) feasible, which is a generalization
-of the COP problem. This problem is defined as follows.
+of the COP problem. This problem is defined by \FTPL (See
+Section~\ref{sec:myresearchintro} for problem definition). %as follows.
 
-{\small
-  \begin{minipage}[h]{5in}
-    % \begin{singlespace}
-    \vspace{2mm}
-    {\large \FTPL}\\
-    \begin{tabular}[t]{l|l}
-      \hline\\
-      {\tt Input} & 
-      \begin{minipage}[t]{\probdefwidth}
-        A hypergraph $\cF$ with vertex set $U$, a tree $T$, a set of
-        paths $\cP$ from $T$ and a
-        bijection $\cl$~$:$~$\cF \rightarrow \cP$.\\
-      \end{minipage}\\
-      {\tt Question} &
-      \begin{minipage}[t]{\probdefwidth}
-        Does there exist a bijection $\phi$~$:$~$U \rightarrow V(T)$
-        such that $\phi$ when applied on any hyperedge in $\cF$ will
-        give
-        the path mapped to it by the given tree path labeling $\cl$.\\
-        { i.e., $\cl(S) = \{\phi(x) \mid x \in S\}$, for every
-          hyperedge $S \in \cF$.}
-      \end{minipage}\\
-    \end{tabular}
-    % \end{singlespace}
-  \end{minipage}\\
-}
+% {\small
+%   \begin{minipage}[h]{5in}
+%     % \begin{singlespace}
+%     \vspace{2mm}
+%     {\large \FTPL}\\
+%     \begin{tabular}[t]{l|l}
+%       \hline\\
+%       {\tt Input} & 
+%       \begin{minipage}[t]{\probdefwidth}
+%         A hypergraph $\cF$ with vertex set $U$, a tree $T$, a set of
+%         paths $\cP$ from $T$ and a
+%         bijection $\cl$~$:$~$\cF \rightarrow \cP$.\\
+%       \end{minipage}\\
+%       {\tt Question} &
+%       \begin{minipage}[t]{\probdefwidth}
+%         Does there exist a bijection $\phi$~$:$~$U \rightarrow V(T)$
+%         such that $\phi$ when applied on any hyperedge in $\cF$ will
+%         give
+%         the path mapped to it by the given tree path labeling $\cl$.\\
+%         { i.e., $\cl(S) = \{\phi(x) \mid x \in S\}$, for every
+%           hyperedge $S \in \cF$.}
+%       \end{minipage}\\
+%     \end{tabular}
+%     % \end{singlespace}
+%   \end{minipage}\\
+% }
 
 We give a necessary and sufficient condition by way of {\em
   Intersection Cardinality Preservation Path Labeling} (ICPPL) and a
@@ -632,36 +638,39 @@ tree $T$ is simply a path \cite{wlh02,nsnrs09}.
 
 Aside from checking if a given TPL is feasible, we also solve the
 problem of computing a feasible TPL for a given hypergraph and target
-tree, if one exists. This problem, {\CFTPL}, is defined as follows.
+tree, if one exists. This problem is the {\CFTPL} problem (See
+Section~\ref{sec:myresearchintro} for problem definition). %, is defined as follows.
 
-{\small
-  \begin{minipage}[h]{5in}
-    % \begin{singlespace}
-    \vspace{2mm}
-    {\large \CFTPL}\\
-    \begin{tabular}[t]{l|l}
-      \hline\\
-      {\tt Input} & 
-      \begin{minipage}[t]{\probdefwidth}
-        A hypergraph $\cF$ with vertex set $U$ and a tree $T$.\\
-      \end{minipage}\\
+% {\small
+%   \begin{minipage}[h]{5in}
+%     % \begin{singlespace}
+%     \vspace{2mm}
+%     {\large \CFTPL}\\
+%     \begin{tabular}[t]{l|l}
+%       \hline\\
+%       {\tt Input} & 
+%       \begin{minipage}[t]{\probdefwidth}
+%         A hypergraph $\cF$ with vertex set $U$ and a tree $T$.\\
+%       \end{minipage}\\
 
-      {\tt Question} &
-      \begin{minipage}[t]{\probdefwidth}
-        Does there exist a set of paths $\cP$ from $T$ and a bijection
-        $\cl$~$:$~$\cF \rightarrow \cP$, such that {\FTPL} returns
-        {\bf true} on $(\cF, T, \cl)$.
-      \end{minipage}\\
-    \end{tabular}
-    % \end{singlespace}
-  \end{minipage}\\
-}
+%       {\tt Question} &
+%       \begin{minipage}[t]{\probdefwidth}
+%         Does there exist a set of paths $\cP$ from $T$ and a bijection
+%         $\cl$~$:$~$\cF \rightarrow \cP$, such that {\FTPL} returns
+%         {\bf true} on $(\cF, T, \cl)$.
+%       \end{minipage}\\
+%     \end{tabular}
+%     % \end{singlespace}
+%   \end{minipage}\\
+% }
 
 We present a polynomial time algorithm for {\CFTPL} when the target
 tree $T$ belongs to a special class of trees called {\em \kstars} and
 when the hyperedges in the hypergraph $\cF$ have at most $k+2$
-vertices. A couple of examples of {\kstars} are given in
+vertices (\CFTPLKTREE -- See Section~\ref{sec:myresearchintro} for
+problem definition). A couple of examples of {\kstars} are given in
 Figure~\ref{fig:ksubstar}.
+
 
 \begin{figure}[t]
   \centering
@@ -675,42 +684,41 @@ Figure~\ref{fig:ksubstar}.
   \label{fig:ksubstar}
 \end{figure}
 
-{\small
-  \begin{minipage}[h]{5in}
-    % \begin{singlespace}
-    \vspace{2mm}
-    {\large \CFTPLKTREE}\\
-    \begin{tabular}[t]{l|l}
-      \hline\\
-      {\tt Input} & 
-      \begin{minipage}[t]{\probdefwidth}
-        A hypergraph $\cF$ with vertex set $U$ such that every
-        hyperedge
-        $S \in \cF$ is of cardinality at most $k+2$ and a {\kstar} $T$.\\
-      \end{minipage}\\
-      {\tt Question} &
-      \begin{minipage}[t]{\probdefwidth}
-        Does there exist a set of paths $\cP$ from $T$ and a bijection
-        $\cl$~$:$~$\cF \rightarrow \cP$, such that {\FTPL} returns
-        {\bf true} on $(\cF, T, \cl)$.
-      \end{minipage}\\
-    \end{tabular}
-    % \end{singlespace}
-  \end{minipage}\\
-}
+% {\small
+%   \begin{minipage}[h]{5in}
+%     % \begin{singlespace}
+%     \vspace{2mm}
+%     {\large \CFTPLKTREE}\\
+%     \begin{tabular}[t]{l|l}
+%       \hline\\
+%       {\tt Input} & 
+%       \begin{minipage}[t]{\probdefwidth}
+%         A hypergraph $\cF$ with vertex set $U$ such that every
+%         hyperedge
+%         $S \in \cF$ is of cardinality at most $k+2$ and a {\kstar} $T$.\\
+%       \end{minipage}\\
+%       {\tt Question} &
+%       \begin{minipage}[t]{\probdefwidth}
+%         Does there exist a set of paths $\cP$ from $T$ and a bijection
+%         $\cl$~$:$~$\cF \rightarrow \cP$, such that {\FTPL} returns
+%         {\bf true} on $(\cF, T, \cl)$.
+%       \end{minipage}\\
+%     \end{tabular}
+%     % \end{singlespace}
+%   \end{minipage}\\
+% }
 
-\temptext{The following sentence seems out of place in this para} In
-spite of this being a restricted case, we believe that our results are
-of significant interest in understanding the nature of {\sc Graph
+In spite of this being a restricted case, we believe that our results
+are of significant interest in understanding the nature of {\sc Graph
   Isomorphism} which is polynomial time solvable in interval graphs
-while being hard on path graphs\cite{kklv10}. {\kstars} are a class
-of trees which are in many ways very close to intervals or paths. Each
+while being hard on path graphs\cite{kklv10}. {\kstars} are a class of
+trees which are in many ways very close to intervals or paths. Each
 ray\footnote{The path from a leaf to the root, the vertex with highest
-  degree, is called a {\em ray} of the \kstar.}~\footnotemark[4] are independent except for the
-root\footnote{The vertex with maximum degree in a {\kstar} is called
-  {\em root}.}~\footnotemark[4] and hence can be
-considered as an independent interval till the root. Our algorithm
-builds on this fact and uses the interval assignment
+  degree, is called a {\em ray} of the \kstar.}~\footnotemark[4] are
+independent except for the root\footnote{The vertex with maximum
+  degree in a {\kstar} is called {\em root}.}~\footnotemark[4] and
+hence can be considered as an independent interval till the root. Our
+algorithm builds on this fact and uses the interval assignment
 algorithm\cite{nsnrs09} up until ``reaching'' the root and then uses
 the trio-wise intersection cardinality (the extra condition in ICPPL
 that generalizes ICPIA) check to resolve the ambiguity about which ray

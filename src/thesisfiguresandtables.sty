@@ -7,6 +7,34 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{thesisfiguresandtables} [2012/01/05]
 
+\newcommand\matrixbraceright[2]{ % Input is length of brace (in
+                                 %  coordinates), label
+  \color{gray6}{
+  \begin{tikzpicture}[decoration={brace,amplitude=5}]
+    \draw[decorate] (0,#1) -- (0,0)%
+      node[midway,sloped,above]{\footnotesize #2};%
+  \end{tikzpicture}
+  }
+}
+\newcommand\matrixbracetop[2]{ % Input is length of brace (in
+                               %  coordinates), label
+  \color{gray6}{  
+  \begin{tikzpicture}[decoration={brace,amplitude=5}]
+    \draw[decorate] (0,0) -- (#1,0)%
+      node[midway,sloped,above]{\footnotesize #2};%
+  \end{tikzpicture}
+  }
+}
+\newcommand\matrixbracebottom[2]{ % Input is length of brace (in
+                               %  coordinates), label
+  \color{gray6}{  
+  \begin{tikzpicture}[decoration={brace,amplitude=5}]
+    \draw[decorate] (0,0) -- (#1,0)%
+      node[midway,sloped,above]{\footnotesize #2};%
+  \end{tikzpicture}
+  }
+}
+
 
 \def\figcopmatrix{%
   \begin{figure}[htbp] %[t] %
@@ -52,17 +80,145 @@
   \end{figure}
 }%
 
+\def\graphici{%
+  $G_1$:\\ 
+  \begin{tikzpicture}[every node/.style={circle,inner
+      sep=1pt,fill=gray!80}] %
+    % Using tree mode of drawing to avoid coordinate coding
+    \node{$v_5$}%
+      child{node (v3){$v_3$}%
+        child{node (v4){$v_4$}}%
+        child{node {}}% DUMMY to make alignment work
+      }%
+      child{node (v1){$v_1$}%
+        child{node (v2){$v_2$}}%
+        child{node (v6){$v_6$}}%
+      }%
+      ;%
+
+      \draw (v3)--(v1);%
+      \draw (v2)--(v4);%     
+      \draw (v2)--(v6);%
+  \end{tikzpicture}
+}%
+
+\def\graphiciixxxxxxxx{%
+  $G_2$:\\
+  \begin{tikzpicture}[every node/.style={circle,inner
+      sep=1pt,fill=gray!80}] % 
+    % Using tree mode of drawing to avoid coordinate coding
+    \node(v1){$v_1$}%
+      child{node (v2){$v_2$}}%
+      child{node (v3){$v_3$}}%
+      child{node (v4){$v_4$}%
+        child{node[right] (v5){$v_5$}}%
+        child{node (v6){$v_6$}}%
+      }%
+      ;%
+
+      \draw (v3)--(v5);%
+      \draw (v1)--(v5);%   
+  \end{tikzpicture}
+}%
+
+\def\graphicii{%
+  $G_2$:\\
+  \begin{tikzpicture}[every node/.style={circle,inner
+      sep=1pt,fill=gray!80}] %
+
+    \draw% Only declare nodes without real labels but with dummy
+         % labels to get the "bounding box" size right.
+      (1    ,1)      node(v5){xx}%
+      (2.5  ,0.5)    node(v4){xx}%
+      (3.75 ,0.00)   node(v6){xx}%
+      (-1   ,2.75)   node(v2){xx}%
+      (0    ,1)      node(v3){xx}%
+      (1    ,2.5)    node(v1){xx}%
+      ;%
+      
+    % Declare cliques without labels.
+    \node[rectangle, rounded corners=10pt, inner sep=3pt,%
+      fill=red!30, opacity=0.5, fit = (v1) (v2)](c1){}; %%
+    \node[rectangle, rounded corners=10pt, inner sep=1pt,%
+      fill=blue!30, opacity=0.5, fit = (v1) (v3) (v5)](c2){}; %%
+    \node[rectangle, rounded corners=10pt, inner sep=5pt,%
+      fill=green!30, opacity=0.5, fit = (v1) (v4) (v5)](c3){}; %%
+    \node[rectangle, rounded corners=10pt, inner sep=3pt,%
+      fill=orange!30, opacity=0.5, fit = (v4) (v6),sloped](c4){}; %%
+
+    \draw% Draw edges before node labels.
+      (v1) -- (v2)%
+      (v1) -- (v3) -- (v5)%
+      (v1) -- (v4) -- (v5)% 
+      (v1) -- (v5)% 
+      (v4) -- (v6)% 
+      ;%
+    \draw% Label nodes.
+      (v5) node{$v_5$}%
+      (v4) node{$v_4$}%
+      (v6) node{$v_6$}%
+      (v2) node{$v_2$}%
+      (v3) node{$v_3$}%
+      (v1) node{$v_1$}%
+      ;%
+          
+    % Label cliques
+    \draw (c1) node[fill=none,color=red,above=3pt]{$c_1$}; %
+    \draw (c2) node[fill=none,color=blue,left=7pt]{$c_2$}; %
+    \draw (c3) node[fill=none,color=green,right=18pt]{$c_3$}; %
+    \draw (c4) node[fill=none,color=orange,below=3pt]{$c_4$};%
+  \end{tikzpicture}
+}%
+
+
+
+
+\def\graphiciii{%
+  $H$:\\\\
+  \begin{tikzpicture}[every node/.style={circle,inner sep=1pt}] %
+    \draw%
+      (0,4) node[fill=gray!50](u1){$u_1$}
+      (0,3) node[fill=gray!50](u2){$u_2$}
+      (0,2) node[fill=gray!50](u3){$u_3$}
+      (0,1) node[fill=gray!50](u4){$u_4$}
+      (0,0) node[fill=gray!50](u5){$u_5$}
+
+      (2,3.5) node[fill=gray!25](w1){$w_1$}
+      (2,2.5) node[fill=gray!25](w2){$w_2$}
+      (2,1.5) node[fill=gray!25](w3){$w_3$}
+      (2,0.5) node[fill=gray!25](w4){$w_4$};
+    
+      \draw (u1)--(w1);%
+      \draw (u1)--(w2);%
+      \draw (u2)--(w1);%
+      \draw (u2)--(w2);%
+      \draw (u2)--(w3);%
+      \draw (u2)--(w4);%
+      \draw (u3)--(w3);%
+      \draw (u3)--(w4);%
+      \draw (u4)--(w2);%
+      \draw (u4)--(w3);%
+      \draw (u5)--(w1);%
+      \draw (u5)--(w2);%
+      \draw (u5)--(w3);%
+
+     \fill[color=red] (u1) (w2) (w1); %[color=red!30]
+
+
+   \end{tikzpicture}
+}%
 
 \def\figgraphmatrices{%
   \begin{figure}[htbp]% [t] % [p]%
     \centering
-
+%    \figtabsize
   \begin{tabular}{ll}
-    \figtabsize
-%    ${\bf G_1}$:  % height=30mm,keepaspectratio=true
-    \includegraphics[bb=120 120 150 180 ,scale=0.4]{../img/graphmatrices_g1.png} 
+    
+    %\includegraphics[bb=120 120 150 180
+    %,scale=0.4]{../img/graphmatrices_g1.png} 
+    \graphici
    &                 % COL BREAK
-   \begin{tabular}[htbp]
+   \begin{tabular}[b]
       {>{\columncolor{\tblhcolor}}  l llllll}                       % Shade header col..
       \rowcolor[gray]{0.8}                                          % ..and row
       ${\bf A_2}$&$v_1$ &$v_2$ &$v_3$ &$v_4$ &$v_5$ &$v_6$\\
@@ -76,7 +232,7 @@
     \end{tabular}    
     \\
     & \\
-    \begin{tabular}[htbp]%{l|lll lll}
+    \begin{tabular}[b]%{l|lll lll}
       {>{\columncolor{\tblhcolor}}  l llllll}                       % Shade header col..
       \rowcolor[gray]{0.8}                                          % ..and row
       ${\bf A_1}$ &$v_1$ &$v_2$ &$v_3$ &$v_4$ &$v_5$ &$v_6$\\
@@ -89,7 +245,7 @@
       $v_6$     &\un   &\un   &0    &0     &0     &0   
     \end{tabular}
    &                 % COL BREAK
-    \begin{tabular}[htbp]
+    \begin{tabular}[b]
       {>{\columncolor{\tblhcolor}}  l llllll}                       % Shade header col..
       \rowcolor[gray]{0.8}                                          % ..and row
       ${\bf A_2'}$ &$v_1$ &$v_6$ &$v_2$ &$v_4$ &$v_3$ &$v_5$\\
@@ -103,10 +259,12 @@
     \end{tabular}
     \\    
     & \\
-%    ${\bf G_2}$: 
-    \includegraphics[bb=120 120 150 180, scale=0.5,keepaspectratio=true]{../img/graphmatrices_g2.png} 
+
+    %\includegraphics[bb=120 120 150 180,
+    %scale=0.5,keepaspectratio=true]{../img/graphmatrices_g2.png} 
+    \graphicii
     &                 % COL BREAK
-    \begin{tabular}[htbp]
+    \begin{tabular}[b]
       {>{\columncolor{\tblhcolor}}  l llll}                         % Shade header col..
       \rowcolor[gray]{0.8}                                          % ..and row
       ${\bf B}$&$c_1$ &$c_2$ &$c_3$ &$c_4$\\
@@ -120,10 +278,10 @@
     \end{tabular}
     \\
     & \\
-%    ${\bf H}$: % bb=120 120 150 180, keepaspectratio=true , angle=90,
-    \includegraphics[scale=0.4]{../img/graphmatrices_H.png}
+    %\includegraphics[scale=0.4]{../img/graphmatrices_H.png} 
+    \graphiciii
     &                 % COL BREAK
-    \begin{tabular}[htbp]
+    \begin{tabular}[b]
       {>{\columncolor{\tblhcolor}}  l llll}                       % Shade header col..
       \rowcolor[gray]{0.8}                                        % ..and row
       ${\bf C}$ &$w_1$ &$w_2$ &$w_3$ &$w_4$\\                      
@@ -149,8 +307,7 @@
     {\em interval
       graph}(Def.~\ref{def:graphwithcop}~\ref{def::concave-round}). $C$
     is the half adjacency matrix of bipartite graph $H$ and has \COP
-    on rows -- thus $H$ is {a convex bipartite graph}. \temptext{-- PLACEHOLDER
-    IMAGES --}}
+    on rows -- thus $H$ is {a convex bipartite graph}.}
   \label{fig:graphmatrices}
   \end{figure}
 }%
@@ -369,19 +526,15 @@
 }%
 
 
+\def\forbiddenMIstr{$M_{I_k}, k \ge 1$}%
+\def\forbiddenMIIstr{$M_{II_k}, k \ge 1$}%
+\def\forbiddenMIIIstr{$M_{III_k}, k \ge 1$}%
+\def\forbiddenMIVstr{$M_{IV}$}%
+\def\forbiddenMVstr{$M_{V}$}%
 
-\def\figforbiddensubmatrices{
-  \begin{figure}[htbp]
-    \centering
-    % \includegraphics[scale=0.35]{../img/tuckersforbiddensubmatrices.png}
-    \setlength\dashlinedash{1pt} %
-    \setlength\dashlinegap{0pt} % Make non zero if cline can be done
-    % with dashed lines.
-    \singlespacing
-    \begin{tabular}[h]{ll}
-      % \small
-      \begin{tabular}[t]{|lll ll l|l} %                   MATRIX 1
-        \multicolumn{7}{l}{\normalsize \hspace{-0.5in} $M_{I_k}, k \ge 1$}\\   
+\def\forbiddenMI{%
+     \begin{tabular}[b]{|lll ll l|l} %                   MATRIX 1
+%        \multicolumn{7}{l}{\normalsize \hspace{\mindent} $M_{I_k}, k \ge 1$}\\   
         \multicolumn{6}{c}{\matrixbracetop{3.25}{$k+2$}}   \\
         \cline{1-6} % \firsthline %      Begin matrix  %%%%%%
         \un & \un & 0   & \multicolumn{2}{c}{\dots}  & 0    &
@@ -393,10 +546,10 @@
         \un & 0   & \multicolumn{2}{c}{\dots}  & 0   & \un \\
         \cline{1-6} % \lasthline %      End matrix  %%%%%%%%%
       \end{tabular}
-      &%
-      % \small
-      \begin{tabular}[t]{|lll ll ll|l} %                   MATRIX 2
-        \multicolumn{8}{l}{\normalsize \hspace{-0.5in}$M_{II_k}, k \ge 1$}\\
+}%
+\def\forbiddenMII{%
+      \begin{tabular}[b]{|lll ll ll|l} %                   MATRIX 2
+%        \multicolumn{8}{l}{\normalsize \hspace{\mindent}$M_{II_k}, k \ge 1$}\\
         \multicolumn{7}{c}{\matrixbracetop{3.8}{$k+3$}}            \\ 
         \cline{1-7}%  \firsthline %      Begin matrix  %%%%%%%%%%%%
         \un & \un & 0   & \multicolumn{3}{c:}{\dots}       & 0    &
@@ -410,10 +563,10 @@
         \un & \multicolumn{3}{c}{\dots}        & \un & 0   & \un \\
         \cline{1-7}% \lasthline %      End matrix  %%%%%%%%%%%%%%%%
       \end{tabular}
-      \\\\%
-      % \small
-      \begin{tabular}[t]{|lll ll l l|l} %                  MATRIX 3 
-        \multicolumn{8}{l}{\normalsize \hspace{-0.5in}$M_{III_k}, k \ge 1$}\\
+}%
+\def\forbiddenMIII{%
+      \begin{tabular}[b]{|lll ll l l|l} %                  MATRIX 3 
+%        \multicolumn{8}{l}{\normalsize \hspace{\mindent}$M_{III_k}, k \ge 1$}\\
         \multicolumn{7}{c}{\matrixbracetop{3.8}{$k+3$}}            \\
         \cline{1-7}%      \firsthline %      Begin matrix %%%%%%%%%
         \un & \un & 0   & \multicolumn{3}{c:}{\dots}       & 0    &
@@ -426,10 +579,10 @@
         0   & \un & \multicolumn{2}{c}{\dots}  & \un & 0   & \un \\
         \cline{1-7}%      \lasthline %      End matrix %%%%%%%%%%%%
       \end{tabular}
-      &%
-      % \small
-      \begin{tabular}[t]{|llllll|}  %                     MATRIX 4
-        \multicolumn{6}{l}{\normalsize \hspace{-0.5in}$M_{IV}$} \\
+}%
+\def\forbiddenMIV{%
+      \begin{tabular}[b]{|llllll|}  %                     MATRIX 4
+%        \multicolumn{6}{l}{\normalsize \hspace{\mindent}$M_{IV}$} \\
         \multicolumn{6}{l}{} \\
         \firsthline
         \un & \un & 0 & 0 & 0 & 0   \\
@@ -438,10 +591,10 @@
         \un & 0 & \un & 0 & \un & 0 \\
         \lasthline
       \end{tabular}
-      \\\\%
-      % \small
-      \begin{tabular}[t]{|lllll|}  %                     MATRIX 5
-        \multicolumn{5}{l}{\normalsize \hspace{-0.5in}$M_{V}$} \\
+}%
+\def\forbiddenMV{%
+      \begin{tabular}[b]{|lllll|}  %                     MATRIX 5
+%        \multicolumn{5}{l}{\normalsize \hspace{\mindent}$M_{V}$} \\
         \multicolumn{5}{l}{} \\
         \firsthline
         \un & \un & 0   & 0   & 0   \\
@@ -450,6 +603,28 @@
         \un & 0   & \un & 0   & \un \\
         \lasthline
       \end{tabular}
+}%
+
+
+\def\figforbiddensubmatrices{
+  \begin{figure}[htbp]
+    \centering
+    % \includegraphics[scale=0.35]{../img/tuckersforbiddensubmatrices.png}
+    \setlength\dashlinedash{1pt} %
+    \setlength\dashlinegap{0pt} % Make non zero if cline can be done
+    % with dashed lines.
+    \def\mindent{0in}
+    \singlespacing
+    \begin{tabular}[h]{lll}
+      \forbiddenMIstr   &         \forbiddenMIVstr & \forbiddenMVstr  \\
+      \forbiddenMI      &         \forbiddenMIV    & \forbiddenMV  \\
+      \\
+    \end{tabular}
+    \begin{tabular}[h]{ll}
+      \forbiddenMIIstr  &  \forbiddenMIIIstr \\
+      \forbiddenMII     &  \forbiddenMIII    \\
+
+
     \end{tabular}
 
     \caption[\figtabsize Tucker's forbidden submatrices]{\figtabsize
@@ -459,3 +634,266 @@
   \end{figure}
 }
 
+\def\graphgik{%
+  %$G_{I_k}$:
+  \begin{tikzpicture}[every node/.style={circle,inner
+      sep=2pt},decoration={brace,amplitude=6}] %,inner sep=1pt 
+    
+%    \draw[help lines] (-3,-1) grid (3,3); 
+    
+    \draw%
+      (0,2.6) node[draw](root){}
+      ;%
+    \draw
+      (-1.2,1.8) node[fill](left){}%
+      (1.2,1.8) node[fill](right){}% 
+      ;%
+    \draw%
+      (-2.4,1) node[draw](wl1){}%
+      (-1.6,1) node[draw](wl2){}%
+      (-0.8,1) node[draw](wl3){}%
+      (0.8,1) node[draw](wr3){}%
+      (1.6,1) node[draw](wr2){}%
+      (2.4,1) node[draw](wr1){}%
+      ;%
+    \draw%
+      (-2.0,0) node[fill](bl1){}%
+      (-1.2,0) node[fill](bl2){}%
+      (1.2,0) node[fill](br2){}%
+      (2.0,0) node[fill](br1){}%
+      ;%
+    \node (xbl) at (-0.4,0) {};
+    \node (xbr) at (0.4,0) {};
+    \node (braceleft) at (-2,-0.3) {};
+    \node (braceright) at (2,-0.3) {};
+      
+    \draw 
+      (root)--(left)      (root)--(right)%
+
+      (left)--(wl1)       (wl1)--(bl1)      (bl1)--(wl2)%
+      (wl2)--(bl2)        (bl2)--(wl3)%
+
+      (right)--(wr1)      (wr1)--(br1)      (br1)--(wr2)
+      (wr2)--(br2)        (br2)--(wr3)%
+    ;%
+    \draw[dashed]% -OR- loosely/densely dotted -OR- dashed -OR-
+                 % loosely/densely dashed 
+      (wl3)--(xbl)      (wr3)--(xbr)%
+      ;%
+    \draw%
+      (braceright) (braceleft)%
+      node[midway,above=0.5]{$\ldots$}%
+      ;% 
+    \draw[gray6,decorate]%
+      (braceright) -- (braceleft)%
+      node[midway,sloped,below=0.2]{$k$}
+      ;%
+  \end{tikzpicture}
+}%
+
+\def\graphgiik{%
+  %$G_{II_k}$:\\\\
+  \begin{tikzpicture}[every node/.style={circle,inner
+      sep=2pt},decoration={brace,amplitude=6}] %,inner sep=1pt 
+    
+%    \draw[help lines] (-3,-1) grid (3,3); 
+    
+    \draw%
+      (0,2.6) node[draw](root){}
+      ;%
+    \draw
+      (-1.2,1.8) node[fill](left){}%
+      (1.2,1.8) node[fill](right){}% 
+      ;%
+    \draw%
+      (-2.4,1) node[draw](wl1){}%
+      (-1.6,1) node[draw](wl2){}%
+      (-0.8,1) node[draw](wl3){}%
+      (0.8,1) node[draw](wr3){}%
+      (1.6,1) node[draw](wr2){}%
+      (2.4,1) node[draw](wr1){}%
+      ;%
+    \draw%
+      (-2.0,0) node[fill](bl1){}%
+      (-1.2,0) node[fill](bl2){}%
+      (1.2,0) node[fill](br2){}%
+      (2.0,0) node[fill](br1){}%
+      ;%
+    \node (xbl) at (-0.4,0) {};
+    \node (xbr) at (0.4,0) {};
+    \node (braceleft) at (-2,-0.3) {};
+    \node (braceright) at (2,-0.3) {};
+      
+    \draw 
+      (root)--(left)      (root)--(right)%
+      (left)--(wl1)       (wl1)--(bl1)      (bl1)--(wl2)%
+      (wl2)--(bl2)        (bl2)--(wl3)%
+      (right)--(wr1)      (wr1)--(br1)      (br1)--(wr2)
+      (wr2)--(br2)        (br2)--(wr3)%
+
+      % G_IIk specific edges
+      (left)--(wr2)       (left)--(wr3)     (left)--(wl3)%
+      (left)--(wl2)%
+      (right)--(wr2)      (right)--(wr3)    (right)--(wl3)%
+      (right)--(wl2)%
+    ;%
+
+    \draw[dashed]
+      (wl3)--(xbl)      (wr3)--(xbr)%
+      ;%
+
+    \draw%
+      (braceright) (braceleft)%
+      node[midway,above=0.5]{$\ldots$}%
+      ;% 
+  
+    \draw[gray6,decorate]%
+      (braceright) -- (braceleft)%
+      node[midway,sloped,below=-0.2]{$k+1$} % The + sign seems to push
+                                            %  it too far below. 
+      ;%
+
+  \end{tikzpicture}
+}%
+
+\def\graphgiiik{%
+  %$G_{III_k}$:\\\\
+  \begin{tikzpicture}[every node/.style={circle,inner
+      sep=2pt},decoration={brace,amplitude=6}] %,inner sep=1pt 
+    
+%    \draw[help lines] (-3,-1) grid (3,3); 
+    
+    \draw%
+      (0,2.6) node[draw](root){}
+      % G_IIIk specific node      
+      (0,1.8) node[fill](black){}
+      ;%
+    \draw%
+      (-2.4,1) node[draw](wl1){}%
+      (-1.6,1) node[draw](wl2){}%
+      (-0.8,1) node[draw](wl3){}%
+      (0.8,1) node[draw](wr3){}%
+      (1.6,1) node[draw](wr2){}%
+      (2.4,1) node[draw](wr1){}%
+      ;%
+    \draw%
+      (-2.0,0) node[fill](bl1){}%
+      (-1.2,0) node[fill](bl2){}%
+      (1.2,0) node[fill](br2){}%
+      (2.0,0) node[fill](br1){}%
+      ;%
+    \node (xbl) at (-0.4,0) {};
+    \node (xbr) at (0.4,0) {};
+    \node (braceleft) at (-2,-0.3) {};
+    \node (braceright) at (2,-0.3) {};
+      
+    \draw 
+      (root)--(black)%
+      (wl1)--(bl1)        (bl1)--(wl2)%
+      (wl2)--(bl2)        (bl2)--(wl3)%
+      (wr1)--(br1)        (br1)--(wr2)
+      (wr2)--(br2)        (br2)--(wr3)%
+
+      % G_IIIk specific edges
+      (black)--(wr2)       (black)--(wr3)     (black)--(wl3)%
+      (black)--(wl2)%
+    ;%
+
+    \draw[dashed]
+      (wl3)--(xbl)      (wr3)--(xbr)%
+      ;%
+
+    \draw%
+      (braceright) (braceleft)%
+      node[midway,above=0.5]{$\ldots$}%
+      ;% 
+  
+    \draw[gray6,decorate]%
+      (braceright) -- (braceleft)%
+      node[midway,sloped,below=-0.2]{$k+1$} % The + sign seems to push
+                                            %  it too far below.
+      ;%
+  \end{tikzpicture}
+}%
+
+\def\graphgiv{%
+  %$G_{IV}$:\\\\
+  \begin{tikzpicture}[every node/.style={circle,inner sep=2pt}] 
+
+%   \draw[help lines] (-3,-3) grid (3,3); 
+    
+    \draw%
+      (0,0)   node[fill](center){}
+
+      (0,0.5) node[draw](wtop){}
+      (0,1)   node[fill](btop){}
+      (0,1.5) node[draw](wtopmost){}
+
+      (-0.433,-0.25) node[draw](wleft){}
+      (-0.866,-0.5)   node[fill](bleft){}
+      (-1.299,-0.75) node[draw](wleftmost){}
+
+      (0.433,-0.25) node[draw](wright){}
+      (0.866,-0.5)   node[fill](bright){}
+      (1.299,-0.75) node[draw](wrightmost){}      
+     ;%
+     
+    \draw 
+      (center)--(wtop)    (wtop)--(btop)      (btop)--(wtopmost)%
+      (center)--(wleft)   (wleft)--(bleft)    (bleft)--(wleftmost)%
+      (center)--(wright)  (wright)--(bright)  (bright)--(wrightmost)%
+      ;%
+  \end{tikzpicture}
+}%
+
+\def\graphgv{%
+  %$G_{V}$:\\\\
+  \begin{tikzpicture}[every node/.style={circle,inner sep=2pt}] 
+
+%   \draw[help lines] (-3,-3) grid (3,3); 
+    
+    \draw%
+      (0,1.5)   node[draw]  (wtop){}
+      (0,1)     node[fill]  (btop){}
+      (-2,0)    node[fill]  (bleft){}
+      (-1,0.5)  node[draw]  (wlefttop){}
+      (-1,-0.5) node[draw]  (wleftbottom){}
+      (2,0)     node[fill]  (bright){}
+      (1,0.5)   node[draw]  (wrighttop){}
+      (1,-0.5)  node[draw]  (wrightbottom){}
+      (0,0)     node[fill]  (centerblack){}
+      ;%
+     
+    \draw 
+      (wtop)--(btop)  (btop)--(wlefttop)  (btop)--(wrighttop)%
+      (wrighttop)--(centerblack)--(wrightbottom)--(bright)--(wrighttop)%
+      (wlefttop)--(centerblack)--(wleftbottom)--(bleft)--(wlefttop)%
+      ;
+     
+  \end{tikzpicture}
+}%
+
+\setlength\intextsep{5pt}
+\setlength\textfloatsep{5pt}
+
+
+\def\figforbiddensubgraphs{%
+  \begin{figure}[htbp]
+    \centering
+    %\includegraphics[scale=0.35]{../img/tuckersforbiddensubgraphs.png}
+    \begin{tabular}[h]{lll}
+      $G_{I_k}:$ & $G_{II_k}:$ & $G_{III_k}:$\\
+      \graphgik & \graphgiik & \graphgiiik
+    \end{tabular}
+
+    \begin{tabular}[h]{ll}
+      $G_{IV}:$ & $G_{V}:$\\
+      \graphgiv & \graphgv 
+    \end{tabular}
+
+    \caption[\figtabsize Tucker's forbidden subgraphs]{\figtabsize
+      Tucker's forbidden subgraphs for convex bipartite
+      graphs.}
+    \label{fig:forbiddensubgraphs}
+  \end{figure}
+}%

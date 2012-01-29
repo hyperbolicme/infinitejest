@@ -7,7 +7,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{mythesislib} [2011/12/21]
 
-%\usepackage{color}
+\usepackage[french,english]{babel}
 \usepackage{fancyhdr}
 \usepackage[Conny]{fncychap}   % Fancy chapter headings
                                %  Options: Lenny X, Glenn X, Conny, Rejne X,
@@ -18,7 +18,8 @@
                                %  under Contents. But recursion is
                                %  nice. 
 \usepackage{tikz}
-\usetikzlibrary{arrows,decorations.pathreplacing,backgrounds,positioning,fit,petri}
+%\usepackage{pgflibraryshapes}
+\usetikzlibrary{arrows,decorations.pathreplacing,backgrounds,positioning,fit,petri,shapes.geometric}
 
 \usepackage{amsmath}           % Easier math formulae, align,
                                %  subequations \ldots .
@@ -30,14 +31,13 @@
 \usepackage{colortbl}
 \usepackage{array,arydshln}
 \usepackage{multirow}
-%\usepackage{pifont} % extra font
-
-
+%\usepackage{pifont}            % extra font
 %\usepackage{fancybox}          % For oval boxes, shadowed etc.
 %\usepackage{picinpar}
 
-%% MOVED TRACK CHANGES TO THESIS.TEX TO MAKE COMPILING REVIEW VERSIONS
-%% EASIER WITH ONE FILE EDIT.
+\definecolor{grey}{rgb}{0.8,0.8,0.8} % (Renamed to grey to not clash
+                                     %  with latex color gray)
+\def\tblhcolor {grey}           % Table header columns/rows background
 
 %%% Sizes and widths and other relevant formatting numbers %%%
 \def \sanserifstyleon {\fontencoding{OT1}\fontfamily{cmss}\selectfont}
@@ -139,25 +139,8 @@
 \newcommand{\valid}[1]{{\tt valid}\left(#1\right)}
 
 \definecolor{gray6}{rgb}{0.6,0.6,0.6}
-\newcommand\matrixbraceright[2]{ % Input is length of brace (in
-                                 %  coordinates), label
-  \color{gray6}{
-  \begin{tikzpicture}[decoration={brace,amplitude=5}]
-    \draw[decorate] (0,#1) -- (0,0)%
-      node[midway,sloped,above]{\footnotesize #2};%
-  \end{tikzpicture}
-  }
-}
-\newcommand\matrixbracetop[2]{ % Input is length of brace (in
-                               %  coordinates), label
-  \color{gray6}{  
-  \begin{tikzpicture}[decoration={brace,amplitude=5}]
-    \draw[decorate] (0,0) -- (#1,0)%
-      node[midway,sloped,above]{\footnotesize #2};%
-  \end{tikzpicture}
-  }
-}
 
+\renewcommand\floatpagefraction{0.8} % To avoid too much whitespace
 
 \renewcommand\notesname{\hrule width 7cm \large Chapter Notes} % Redefine Endnotes section
                                 % title. 
@@ -171,8 +154,8 @@
 %% The following are meant to be used with amsthm
 %
 \newtheoremstyle{defnstyle}%  Custom style: Definition
-  {20pt}{20pt}%               Space above & below
-  {\thesisspacing \sanserifstyleon}%\small} %   Body style
+  {10pt}{0pt}%               Space above & below
+  {\thesisspacing \sanserifstyleon \parindent 40pt \hangindent 40pt}%\small} %   Body style
     % \fontfamily{cmss}\selectfont\scriptsize % \sffamily
   {0pt}%                      Heading indent amount
   {% \fontfamily{bch}
@@ -185,7 +168,7 @@
 \newcommand{\dstop}{} %{\hfill \singlemaltinbox} 
 %
 \newtheoremstyle{thmstyle}%   Custom style: Theorem, Lemma, etc.
-  {20pt}{0pt}%               Space above & below
+  {10pt}{0pt}%               Space above & below
   {\thesisspacing \em}    %   Body style             % \sffamily
   {0pt}%                      Heading indent amount
   {\fontfamily{bch}
@@ -198,7 +181,7 @@
 %
 \newtheoremstyle{thmsansstyle}%Custom style: Theorems without proof, Corollary
                               % environment following it.
-  {20pt}{20pt}%               Space above & below
+  {10pt}{5pt}%               Space above & below
   {\thesisspacing \em}    %   Body style             % \sffamily
   {0pt}%                      Heading indent amount
   {\fontfamily{bch}
@@ -246,11 +229,42 @@
   {Corollary}                          % Shares counter with theorem. 
 \theoremstyle{defnstyle}               % Apply custom style
 \newtheorem{definition}{Definition}
-[section]                              % Section relative numbering.
+  [section]                            % Section relative numbering.
 \theoremstyle{obsstyle}
 \newtheorem{observation}{Observation}[section]
 \newtheorem{proposition}[theorem]{Proposition}
 
+
+\FrenchLayout                % Lists are more densely packed
+\AddThinSpaceBeforeFootnotes % Adds a thin space before footnote mark
+\FrenchFootnotes             % Different layout of footnote text.                    
+
+
+%params: title, input. body: question.
+\newenvironment{problemdef}[2]%
+{% Begin def.
+  \small%
+    \par
+    \begin{minipage}[b]{\probdefwidth}%{5in}%
+%      \vspace{2mm}%
+      {\large #1}\\%     Title
+%      \hrule
+      \begin{tabular}[t]{l|l}%
+%        \hline\\
+        {\tt Input} & 
+        \begin{minipage}[t]{\probdefwidth}%
+          #2\\%          Input
+        \end{minipage}\\
+
+        {\tt Question} &
+        \begin{minipage}[t]{\probdefwidth}%
+        %                Type out question
+}%
+{% End def.
+        \end{minipage}\\
+      \end{tabular}%
+    \end{minipage}\\  
+}
 
 %%%%%
 %%% Package atbeginend commands to space theorem environs

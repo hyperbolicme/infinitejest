@@ -1,5 +1,4 @@
-\definecolor{gray}{rgb}{0.8,0.8,0.8}
-\def\tblhcolor {gray}
+\xclearpage
 
 
 %\chapter{\CoP\,-- A Survey of Important Results}
@@ -13,7 +12,7 @@ characterizations of \COP, algorithmic tests to check for \COP (COT),
 optimization problems on binary matrices that do not have \COP and
 some applications of \COP.
 
-\temptext{ADD: have a few lines about organization of chapter}
+\tnote[dire]{ADD: have a few lines about organization of chapter}
 
 
 \section{\COP in Graph Theory}
@@ -21,7 +20,7 @@ some applications of \COP.
 \COP is closely connected to several types of graphs by way of
 describing certain combinatorial graph properties. There are also
 certain graphs, like convex bipartite graphs, that are defined solely
-by some of its associated matrix having \COP.  In this section we will
+by one of its associated matrix having \COP.  In this section we will
 see the relevance of \cop to graphs.  To see this we introduce certain
 binary matrices that are used to define graphs in different
 ways. While adjacency matrix is perhaps the most commonly used such
@@ -240,14 +239,8 @@ prevent the graph from being convex bipartite.
 \end{theoremsansproof}
 
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[scale=0.35]{../img/tuckersforbiddensubgraphs.png}  
-  \caption[\figtabsize Tucker's forbidden subgraphs]{\figtabsize Tucker's
-    forbidden subgraphs for convex bipartite graphs. \temptext{ PLACEHOLDER
-    IMG }} 
-  \label{fig:forbiddensubgraphs}
-\end{figure}
+\figforbiddensubgraphs
+
 
 Theorem~\ref{th:tuckeratfree} and Theorem~\ref{th:tuckerforbidden}
 result in the following Theorem~\ref{th:tuckercop} which characterizes
@@ -362,15 +355,15 @@ After the invention of \PQtrees, presumably due to the implementation
 challenge it posed, there has been several variants of the same in the
 literature, like \PCtree \cite{sh99,wlh01,hm03}, generalized \PQtree
 \cite{km89,mcc04}, \PQRtree \cite{mm96,mpt98} etc. Most of these are
-generalizations of \PQtree -- for instance, \PCtree is generalized to
+generalizations of \PQtree\ -- for instance, \PCtree is generalized to
 matrices with \CROP, \PQRtree and generalized \PQtree are generalized
 to matrices and set systems with or without \COP. \cite{km89} invented
 a modified form of \PQtree a simpler incremental update of the tree
 only for recognizing interval graphs.  \cite{kr88} constructed
-efficient parallel algorithms for manipulating PQ trees. \temptext{dom
+efficient parallel algorithms for manipulating \PQtrees. \temptext{dom
   chapter 2 pg 40 Variations of PQTrees first para - summarize.}
 
-In the next few following sections we will see some of these
+In the next few sections we will see some of these
 variations.
 %Their algorithm was improved by \cite{tm05}
 %\tnote{improved in terms of what?}. 
@@ -767,9 +760,9 @@ same in both results. The property of being unrooted is necessary in
 order to use \PCtree as a data structure for encoding circular
 ordering. Definition~\ref{def:pctree} defines \PCtree.
 
-\begin{definition}
+\begin{definition}[\PCtree \cite{wlh01,d08phd}]
   \label{def:pctree}
-  [\emph{\PCtree} \cite{wlh01,d08phd}.]  A \PCtree of matrix $M$ with
+   A \PCtree of matrix $M$ with
   \CROP on columns (rows), is a tree with the following properties.
   \begin{enumerate}[i.]
     \singlespacing
@@ -833,7 +826,7 @@ much simplified procedure.
 
 
 \subsection{ICPIA - a set cardinality based \COP test}
-
+\label{sec:icpiasurvey}
 \temptext{narrative is abrupt}
 
 \cite{nsnrs09} describes a characterization of consecutive-ones

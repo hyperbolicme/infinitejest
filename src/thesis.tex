@@ -64,8 +64,11 @@
 % \usepackage{comment}         % DEBUG ONLY
 %\includeonly{010chap1}         % DEBUG ONLY 
 %\includeonly{020chap2}         % DEBUG ONLY 
-%\includeonly{030chap3,050appa}         % DEBUG ONLY 
+\includeonly{030chap3,050appa}         % DEBUG ONLY 
 %\includeonly{0031ded}         % DEBUG ONLY
+%\includeonly{020chap2}         % DEBUG ONLY 
+%\includeonly{020chap2,_tempscrap}         % DEBUG ONLY 
+%\figforbiddensubgraphs
 
 \def \mythesissubmissiondate {31 January 2012}
 \def \mythesissubmissionmonth {\MakeUppercase {January 2012}}
@@ -92,29 +95,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Certificate
 %
-
-\xclearpage% \cleardoublepage
-\setcounter{page}{1}
 \include{001certificate}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Acknowledgements
 %
-\xclearpage
 \include{002ack}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Dedication?
 %
-\xclearpage
 \include{0031ded}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Abstract
 %
-\xclearpage
 \include{003abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -125,16 +122,15 @@
   \tableofcontents
   \thispagestyle{empty}
   \xclearpage
-  \listoftables %\addcontentsline{toc}{chapter}{LIST OF TABLES}
+  \listoftables 
   \xclearpage
-  \listoffigures %\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+  \listoffigures
 \end{singlespace}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Abbreviations
 %
-\xclearpage
 \include{004abbrv}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -143,28 +139,25 @@
 % \xclearpage
 % \include{005notation}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main body Chapters
+%
 \xclearpage
 \pagestyle{fancy}%headings}   % For running headers.
-\fancyhf{}%            % Clears headers
+%\fancyhf{}%            % Clears headers -- ALSO REMOVES PAGE
+                        % NUMBERS. IF USED, PUT PG# IN FOOTER.
 \fancyhead[LE,RO]{\scriptsize \slshape \rightmark} %{\slshape \rightmark}
 \fancyhead[LO,RE]{\scriptsize \slshape \leftmark} %{\slshape \leftmark}
 \pagenumbering{arabic} % The main text will follow from this point so
                        %  set the page numbering to arabic from here on.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Main body Chapters
-%
 \include{010chap1}
-% turning counter reset. perhaps universal endnote counter is good?
-% being schizo about it now. DECIDE! ENDNOTEMARKS DEPEND ON IT.
-%\setcounter{endnote}{0} % need to empty the file too. how?! -
-                        % FIXED. turns out, just having notes is
-                        % enough. or maybe it was fluke.
-\xclearpage
+
 \include{020chap2}
-\xclearpage
+
 \include{030chap3}
-\xclearpage
+
 \include{040chap4}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -173,23 +166,12 @@
 \appendix %%% NON NEIN NAHI ILLA NONE. But maybe.
 \include{050appa}
 
-%\newpage
+\include{_tempscrap}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography.
 %
-\begin{singlespace}
-%  \addcontentsline{toc}{chapter}{REFERENCES }
-
-  \tnote[minor]{(i)make names
-    in bib file uniform style w.r.t. firstname/initials (ii) have back
-  refs - i.e. pages that cite the item.}
-  {\footnotesize%
-    \bibliographystyle{alpha}%
-    \bibliography{../lib/cop-variants__thesis} %
-  }
-\end{singlespace}
-
+\include{biblio}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % List of papers
