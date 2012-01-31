@@ -207,18 +207,26 @@ acheived this characterization.
 
 
 Theorem~\ref{th:tuckeratfree} states that convex bipartite graphs
-cannot have {\em asteroidal triples}\footnote{If $G = (V,E)$ is a
-  graph, a set of three vertices from $V$ form an {\em asteroidal
-    triple} if between any two of them there exists a path in $G$ that
-  does not contain any vertex from the closed neighborhood of the
-  third vertex.} contained in the corresponding vertex
-partition\footnote{The partition corresponds to columns (rows) if its
-  half adjacency matrix has \COP columns (rows).}.
-Theorem~\ref{th:tuckerforbidden} lists the structures in a
-bipartite graph that force one of its vertex partitions to have
-asteriodal triples -- in other words, it identifies the subgraphs that
-prevent the graph from being convex bipartite.
+cannot have {\em asteroidal triples} (see
+Definition~\ref{def:asteroidal}) contained in the corresponding vertex
+partition. This partition of the bipartite graph corresponds to
+columns (rows) if its half adjacency matrix has \COP columns (rows).
+Theorem~\ref{th:tuckerforbidden} lists the structures in a bipartite
+graph that force one of its vertex partitions to have asteriodal
+triples -- in other words, it identifies the subgraphs that prevent
+the graph from being convex bipartite.
 
+\begin{definition}[Asteroidal triple]
+  \label{def:asteroidal}
+  % If $G = (V,E)$ is a graph, a set of three vertices from $V$ form
+  % an {\em asteroidal triple} if between any two of them there exists
+  % a path in $G$ that does not contain any vertex from the closed
+  % neighborhood of the third vertex.
+  An {\em asteroidal triple} in a graph $G$ is a tuple of vertices
+  $\{v_1,v_2,v_3\} \subset V$ such that between every pair of vertices
+  from this tuple there exists a path that avoids the closed
+  neighbourbood of the third vertex.
+\end{definition}
 
 \begin{theoremsansproof}
   [{\cite[Th.~6]{at72}, \cite[Th.~2.3]{d08phd}}]%\\
@@ -911,24 +919,23 @@ independently assigned a subinterval to which the sets in the
 component need to be mapped. This is simple because the overlap
 components are disjoint from each other. Now the subproblem is finding
 \COP order for each overlap component. In each component, the set
-whose overlaps with the rest of the sets in that component forms
-a single inclusion chain\footnote{A set of sets form a {\em single
-  inclusion chain} when the Hasse diagram of their subset relation
-forms a single chain. In this particular reference, the set of sets is
-the set of overlaps.} is chosen first and assigned the
-leftmost\footnote{By convention. Rightmost can also be chosen
-  analogously to get a different \COP order.} interval. The next
-candidate set is chosen from this set's overlapping sets. The interval
-assigned is calculated by simple intersection cardinality
-means\footnote{Assume that the next set overlaps on one of the
-  ``ends'' of the current set and calculate the interval by shifting
-  left or right of the current interval and adjusting its size to
-  match the next set's cardinality.}. Once the next set is assigned an
-interval, the current assigned sets are all checked for ICPIA. This is
-a backtracking algorithm -- if at any point ICPIA fails, another
-overlapping set is chosen. If all overlapping set attempts fail ICPIA,
-a different ``first set'' is chosen. This is a remarkably simple
-algorithm due to its obvious simplicity in implementation.
+whose overlaps with the rest of the sets in that component forms a
+single inclusion chain (see Definition~\ref{def:poset}. In this
+particular reference, the set of sets is the set of overlaps.)  is
+chosen first and assigned the leftmost\footnote{By
+  convention. Rightmost can also be chosen analogously to get a
+  different \COP order.} interval. The next candidate set is chosen
+from this set's overlapping sets. The interval assigned is calculated
+by simple intersection cardinality means\footnote{Assume that the next
+  set overlaps on one of the ``ends'' of the current set and calculate
+  the interval by shifting left or right of the current interval and
+  adjusting its size to match the next set's cardinality.}. Once the
+next set is assigned an interval, the current assigned sets are all
+checked for ICPIA. This is a backtracking algorithm -- if at any point
+ICPIA fails, another overlapping set is chosen. If all overlapping set
+attempts fail ICPIA, a different ``first set'' is chosen. This is a
+remarkably simple algorithm due to its obvious simplicity in
+implementation.
 
 \subsection{Other \COP testing algorithms}
 There are more \COP test algorithms in the literature. We make a

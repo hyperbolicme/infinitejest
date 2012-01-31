@@ -19,7 +19,13 @@
                                %  nice. 
 \usepackage{tikz}
 %\usepackage{pgflibraryshapes}
-\usetikzlibrary{arrows,decorations.pathreplacing,backgrounds,positioning,fit,petri,shapes.geometric}
+\usetikzlibrary{arrows,%
+                decorations.pathreplacing,%
+                backgrounds,positioning,%
+                fit,%
+                petri,%
+                shapes.geometric,%
+                calc}
 
 \usepackage{amsmath}           % Easier math formulae, align,
                                %  subequations \ldots .
@@ -141,6 +147,11 @@
 \definecolor{gray6}{rgb}{0.6,0.6,0.6}
 
 \renewcommand\floatpagefraction{0.8} % To avoid too much whitespace
+                                     %  due to single float placements
+                                     %  in a page. 
+%\setlength\textfloatsep{70pt}        % Separation between floats and
+%                                     %  text at top or bottom of page.
+%                                     %  DOESN'T SEEM TO BE WORKING.
 
 \renewcommand\notesname{\hrule width 7cm \large Chapter Notes} % Redefine Endnotes section
                                 % title. 
@@ -150,12 +161,14 @@
 % \newcommand\botfigrule{\hrule height 1pt \vspace{1pt} \hrule height 0.5pt}  % Command same as topfigrule but for
 %                                 % ones at bottom of page.
 
+\def\defindent{40pt}
+
 %%%%%%%%%%%%%%%%
 %% The following are meant to be used with amsthm
 %
 \newtheoremstyle{defnstyle}%  Custom style: Definition
   {10pt}{0pt}%               Space above & below
-  {\thesisspacing \sanserifstyleon \parindent 40pt \hangindent 40pt}%\small} %   Body style
+  {\thesisspacing \sanserifstyleon \parindent \defindent \hangindent \defindent}%\small} %   Body style
     % \fontfamily{cmss}\selectfont\scriptsize % \sffamily
   {0pt}%                      Heading indent amount
   {% \fontfamily{bch}

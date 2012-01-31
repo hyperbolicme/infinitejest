@@ -4,17 +4,18 @@
 \BOOKMARK [0][-]{chapter.3}{Tree Path Labeling}{}
 \BOOKMARK [1][-]{section.3.1}{Summary of problems}{chapter.3}
 \BOOKMARK [1][-]{section.3.2}{Preliminaries}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.2.1}{Set systems and hypergraphs}{section.3.2}
-\BOOKMARK [2][-]{subsection.3.2.2}{Path Hypergraph from a Tree}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.1}{Set systems and Hypergraphs}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.2}{Path Labeling and Path Hypergraphs}{section.3.2}
 \BOOKMARK [2][-]{subsection.3.2.3}{Overlap Graphs and Marginal Hyperedges}{section.3.2}
 \BOOKMARK [2][-]{subsection.3.2.4}{Miscellaneous}{section.3.2}
 \BOOKMARK [1][-]{section.3.3}{Characterization of FTPL}{chapter.3}
-\BOOKMARK [1][-]{section.3.4}{Special target trees}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.4.1}{Target tree is a Path}{section.3.4}
-\BOOKMARK [2][-]{subsection.3.4.2}{Target tree is a k-subdivided Star}{section.3.4}
-\BOOKMARK [2][-]{subsection.3.4.3}{Description of the Algorithm}{section.3.4}
-\BOOKMARK [1][-]{section.3.5}{ TPL with no restrictions}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.5.1}{Finding an assignment of tree paths to a set system}{section.3.5}
-\BOOKMARK [1][-]{section.3.6}{Complexity}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.6.1}{Consecutive Ones Testing is in Logspace}{section.3.6}
+\BOOKMARK [1][-]{section.3.4}{Solution to study group accomodation problem}{chapter.3}
+\BOOKMARK [1][-]{section.3.5}{Special target trees}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.5.1}{Target tree is a Path}{section.3.5}
+\BOOKMARK [2][-]{subsection.3.5.2}{Target tree is a k-subdivided Star}{section.3.5}
+\BOOKMARK [2][-]{subsection.3.5.3}{Description of the Algorithm}{section.3.5}
+\BOOKMARK [1][-]{section.3.6}{ TPL with no restrictions}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.6.1}{Finding an assignment of tree paths to a set system}{section.3.6}
+\BOOKMARK [1][-]{section.3.7}{Complexity}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.7.1}{Consecutive Ones Testing is in Logspace}{section.3.7}
 \BOOKMARK [0][-]{chapter.1}{More proofs remove/modify}{}

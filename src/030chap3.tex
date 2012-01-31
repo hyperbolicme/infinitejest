@@ -1,6 +1,5 @@
 \xclearpage
 
-
 \chapter[Tree Path Labeling]{Tree Path Labeling of Path
   Hypergraphs -- New Results}
 \label{ch:myresearch}
@@ -127,63 +126,213 @@ Section~\ref{sec:norestraint}.
 
 This section describes ideas and terminologies necessary in this
 chapter. Some of these may have been seen earlier in this document,
-but is recalled for the sake of completeness of the chapter.
+but is recalled for the sake of completeness of the chapter.  
 
-\subsection{Set systems and hypergraphs}
-%\begin{definition}[Set systems and hypergraphs] 
- 
-  The set $\F \subseteq (2^{U} \setminus \emptyset)$ is a {\em set
-    system} of a universe $U$ with $|U| = n$.  The {\em support} of a
-  set system $\F$ denoted by $\supt{\cF}$ is the union of all the sets
-  in $\F$; $supp(\F) = \bigcup_{S \in \F}S$. For the purposes of this
-  paper, a set system is required to ``cover'' the universe; $
-  supp(\cF) = U$.
-  \par
-%  \noindent
-  A set system $\cF$ can also be visualized as a {\em hypergraph}
-  whose vertex set is $supp(\cF)$ and hyperedges are the sets in
-  $\cF$. This is a known representation for
-  interval systems in literature \cite{bls99,kklv10}.  We extend this
-  definition here to path systems. Due to the equivalence of set
-  system and hypergraph in the scope of this paper, we drop the
-  subscript $_H$ in the notation and refer to both the structures by
-  $\cF$.
-  \par
-%  \noindent
-  The {\em intersection graph}\, $\bI(\cF)$ of a hypergraph
-  $\cF$ is a graph such that its vertex set has a bijection to $\cF$
-  and there exists an edge between two vertices \iff their
-  corresponding hyperedges have a non-empty intersection \cite{mcg04}.
-  \par
-%  \noindent 
-  Two hypergraphs $\cF'$, $\cF''$ are said to be {\em isomorphic} to
-  each other, denoted by $\cF' \cong \cF''$, \iff there exists a
-  bijection $\phi: supp(\cF') \rightarrow supp(\cF'')$ such that for
-  all sets $A \subseteq supp(\cF')$, $A$ is a hyperedge in $\cF'$ \iff
-  $B$ is a hyperedge in $\cF''$ where $B = \{\phi(x) \mid x \in A\}$
-  \cite{kklv10}, written as $B=\phi(A)$.  This is called {\em
-    hypergraph isomorphism}.  
-%\end{definition}
+A note on attribution -- the machinery for labeling of hypergraphs
+has been adopted from \cite{kklv10} and adapted to the needs of our
+work. Some classic graph definitions are from \cite{mcg04}.
 
-\subsection{Path Hypergraph from a Tree}
-%\begin{definition}[Path Hypergraph from a Tree]
-  The graph $T$ represents a {\em target tree} with same number of
-  vertices as elements in $U$; $|V(T)|=|U|=n$.  A {\em path system}\,
-  $\cP$ is a set system of paths from $T$; $\cP \subseteq \{P \mid P
-  \subseteq V, \text{ } T[P] \text{ is a path} \}$.  This generalizes
-  the fact, from the literature \cite{bls99,kklv10}, that intervals
-  can be viewed as sub-paths of a path.
+\subsection{Set systems and Hypergraphs}
+\label{sec:setsyshypergraph}
 
-%  \noindent
-  If the intersection graphs of $\cF$ and $\cP$ (a path system) are
-  isomorphic, $\bI(\cF) \cong \bI(\cP)$, then the associated bijection
-  $\cl: \cF \rightarrow \cP$ due to this isomorphism is called a {\em
-    path labeling} of the hypergraph $\cF$.\footnote{Note that there
-    are two kinds of isomorphisms here.  One is the isomorphism of
-    intersection graphs on $\cF$ and $\cP$, i.e. $\bI(\cF)$ and
-    $\bI(\cP)$ respectively. Second is the isomorphism between the
-    hypergraphs $\cF$ and $\cP$.} 
+Consider a universe $U$ with $|U| = n$.  The set $\F \subseteq (2^{U}
+\setminus \emptyset)$ is a {\em set system} with universe $U$.  The
+{\em support of set system} $\F$ denoted by $\supt{\cF}$, is the union
+of all the sets in $\F$.
+\[supp(\F) = \bigcup_{S \in \F}S\]%
+By convention, the set system $\cF$ ``covers'' its universe:
+$supp(\cF) = U$. If the sets in $\cF$ are intervals or paths of a
+tree, then it is called an interval system or a path system,
+respectively.
+\par
+A set system $\cF$ can also be visualized as a {\em hypergraph}
+$\cF_H$ whose vertex set is $U$ and hyperedges are the sets in
+$\cF$. This is a known representation for interval systems in
+literature \cite{bls99,kklv10}.  We extend this definition here to
+path systems. Due to the equivalence of set system and hypergraph as
+far as this thesis is concerned, we drop the subscript $_H$ in the
+notation and refer to both the structures by $\cF$. Thus hypergraphs
+and set systems are synonyms. So are hyperedges and sets.
+\par
+The notion of {\em hypergraph isomorphism} is central to the work of
+this thesis. This is defined by Definition~\ref{def:hisomorph}.
 
+\begin{definition}[Hypergraph isomorphism]
+  \label{def:hisomorph}
+  Let $\cF'$, $\cF''$ be two hypergraphs.  They are said to be {\em
+    isomorphic} to each other, denoted by $\cF' \cong \cF''$, \iff
+  there exists a bijection $\phi: supp(\cF') \rightarrow supp(\cF'')$
+  such that for all sets $A \subseteq supp(\cF')$, $A$ is a hyperedge
+  in $\cF'$ \iff $B$ is a hyperedge in $\cF''$ where $B = \{\phi(x)
+  \mid x \in A\}$ (this is also written as $B=\phi(A)$).
+\end{definition}
+
+Figure~\ref{fig:hypergraphs} shows an example of hypergraphs and
+hypergraph isomorphism.
+
+Recall intersection graph and path graph from
+Definition~\ref{def:intersectiongraph} and \ref{def:pathgraph}. The
+{\em intersection graph} $\bI(\cF)$ of a hypergraph or set system
+$\cF$ is a graph such that its vertex set has a bijection to $\cF$ and
+there exists an edge between two vertices \iff their corresponding
+hyperedges have a non-empty intersection. A graph $G$ is a path graph
+if it is isomorphic to the intersection graph of a path system.
+
+\begin{figure}[htb]
+  \centering
+
+  \begin{tabular}[h]{l}
+
+    \begin{tabular}[h]{ll}
+      \begin{tabular}[t]{l}
+        $\cF_1:$ \\
+        \hypergraphi%
+      \end{tabular} 
+      &     
+      \begin{tabular}[t]{l}
+        $\cF_2:$\\
+        \hypergraphii %        
+      \end{tabular}
+    \end{tabular}
+    \\
+    \begin{tabular}[h]{ll}
+      \begin{tabular}[t]{l}
+        \\ \\
+        $\cP$:\\
+        \pathhypergraphi %       
+      \end{tabular}    
+      &     
+      \begin{tabular}[t]{l}
+        $\cF_3:$\\
+        \hypergraphiii %        
+      \end{tabular}
+    \end{tabular}
+    \\  
+    \begin{tabular}[h]{l}
+      $\cI$:\\
+      \intervalhypergraphi %
+    \end{tabular}
+  \end{tabular}
+
+  \caption[\figtabsize Hypergraphs and set systems]{\figtabsize
+    Hypergraphs and set systems. $\cF_1$ and $\cF_2$ are isomorphic
+    hypergraphs. The subscript of each element is such that if $\phi$
+    is the hypergraph isomorphism, $\phi(x_i)=y_i$. $\cI$ and $\cP$
+    are an interval system and a path system respectively which are both
+    isomorphic to $\cF_1$ (and by transitivity, isomorphic to $\cF_2$). Here too the
+    subscript of elements indicate the isomorphism bijection. $\cF_3$
+    is a hypergraph that is not isomorphic to any of the other
+    hypergraphs -- moreover, it is one that cannot have a feasible
+    path labeling to any tree since it does not have the Helly's
+    property anymore due to the addition of hyperedge $\{x_1,
+    x_4\}$. }
+  \label{fig:hypergraphs}
+\end{figure}
+
+
+\subsection{Path Labeling and Path Hypergraphs}
+\label{sec:pathhypergraph}
+The graph $T$ represents a {\em target tree} with same number of
+vertices as elements in $U$; $|V(T)|=|U|=n$.  A {\em path system}
+$\cP$ is a set system of paths from $T$. 
+\[\cP \subseteq \{P \mid P \subseteq V, \text{ } T[P] \text{ is a
+  path} \}\] 
+
+A special mapping of paths from target tree $T$ to hyperedges in $\cF$
+is called a {\em path labeling}. Definition~\ref{def:pathlabel} gives
+details. Note that the term ``tree path labeling'' is synonymous
+with ``path labeling'' in this document since we only consider trees and
+not general graphs as source of paths.
+
+\begin{definition}[Path labeling of a hypergraph]
+  \label{def:pathlabel}
+  Consider a hypergraph $\cF$ % with universe $U$
+  and a path system $\cP$ from tree $T$ such that $\bI(\cF) \cong
+  \bI(\cP)$.  Then the associated bijection $\cl: \cF
+  \rightarrow \cP$ due to this isomorphism is called a {\em path
+    labeling} of $\cF$ from $T$. The path system $\cP$ is
+  alternatively denoted as $\cF^\cl$. The path labeling may also be
+  denoted by ordered pairs $(\cF,\cl)$ or $(\cF,\cl,T)$.
+\end{definition}
+% If the intersection graphs of $\cF$ and $\cP$ are isomorphic,
+% $\bI(\cF) \cong \bI(\cP)$, then the associated bijection $\cl: \cF
+% \rightarrow \cP$ due to this isomorphism is called a {\em path
+%   labeling} of the hypergraph $\cF$.
+To elaborate on the phrase ``associated bijection'' in
+Definition~\ref{def:pathlabel}, let $\cg: V(\bI(\cF)) \rightarrow
+V(\bI(\cP))$ be the given intersection graph isomorphism, where
+$V(\bI(\cF)) = \{ v_S \mid S \in \cF\}$ and $V(\bI(\cP)) = \{v_P \mid
+P \in \cP\}$. Then the associated bijection $\cl: \cF \rightarrow \cP$
+is defined as follows. For all $S' \in \cF$ and $P' \in \cP$, $\cl(S')
+= P'$ \iff $\cg(v_{S'}) = v_{P'}$.  Thus, it can be seen that a path
+labeling preserves the non-empty intersection property between every
+pair of hyperedges in $\cF$.
+
+At this point, it is worth comparing Definition~\ref{def:pathlabel}
+with Definition~\ref{def:hisomorph} seen in the previous section.  It
+may be noted that there are two kinds of isomorphisms here. One is the
+isomorphism of intersection graphs of $\cF$ and $\cP$, i.e. $\bI(\cF)$
+and $\bI(\cP)$ and second is the isomorphism between the hypergraphs
+$\cF$ and $\cP$ themselves. It is easy to verify that given a path
+labeling of hypergraph $\cF$, there need not be a hypergraph
+isomorphism involved. In fact, checking if an induced hypergraph
+isomorphism results from a given path labeling is the problem of
+\CFTPL.  However, a hypergraph isomorphism always induces a path
+labeling as shown by the following Definition~\ref{def:inducedpl}.  
+
+\begin{definition}[Hypergraph isomorphism induced path labeling]
+  \label{def:inducedpl}
+  Let $\cF$ be a hypergraph and $\cP$ be a path system \stt $\cF \cong
+  \cP$. Let  $\phi: \supt{\cF} \rightarrow \supt{\cP}$ be this hypergraph
+  isomorphism function. % described in
+  % Definition~\ref{def:pathhypergraph}.
+  Then there is an {\em induced path labeling} % denoted by $\cl_\phi:
+%   \cF \rightarrow \cP$ 
+  denoted by $\cp_\phi: \cF \rightarrow \cP$
+  of the hypergraph \stt % $\cl_\phi(S) = \phi(S)$
+  $\cp_\phi(S) = \phi(S)$
+  (see Definition~\ref{def:hisomorph}) for all $S \in \cF$.  
+\end{definition}
+
+Combining the ideas of path labeling, hypergraph isomorphism and its
+induced path labeling we now define {\em feasiblity} of a path
+labeling in Definition~\ref{def:feasibletpl}.
+
+\begin{definition}[Feasible path labeling]
+  \label{def:feasibletpl}
+  Let $\cF$ be a hypergraph and $(\cF, \cl)$ be a path
+  labeling. $(\cF, \cl)$ is called a {\em feasible path labeling} if
+  the following conditions hold.
+  \begin{itemize}
+  \item $\cF \cong \cF^\cl$
+  \item if the above hypergraph isomorphism is $\phi: supp(\cF)
+    \rightarrow supp(\cF^\cl)$, then $\cp_\phi = \cl$
+  \end{itemize}
+
+
+  This isomorphism $\phi$ is called the \textbf{feasibility hypergraph
+  isomorphism} or feasibility isomorphism.
+\end{definition}
+
+One of the problems solved in this thesis \FTPL characterizes
+feasibile tree path labeling.
+
+Now we will see the definition of a {\em path hypergraph} which is a
+simple idea extended from interval hypergraphs in \cite{kklv10}. 
+
+\begin{definition}[Path hypergraph]
+  \label{def:pathhypergraph}
+  Let $\cF$ be a set system. $\cF$ is called a {\em path hypergraph}
+  if there exists a target tree $T$ and a path system $\cP$ from $T$
+  \stt $\cF \cong \cP$. If $\cF$ is thus a path hypergraph, $\cP$ is
+  called {\em path representation} of $\cF$.
+\end{definition}
+
+In other words, if there exists a feasible tree path labeling for a
+given hypergraph, it is a path hypergraph.
+
+
+%% XXXXXX
 % The subset of the path labeling that
 %   maps elements of the universe to paths that contain only a leaf the
 %   target tree is  known as a {\em leaf labeling}.
@@ -191,99 +340,45 @@ but is recalled for the sake of completeness of the chapter.
 %   [k]\}$, then 
 % $\cl': \rightarrow U' \rightarrow L$ is a leaf labeling where $U'
 % \subseteq U$, $|U'| = k$.
-
-  
-
 %   $\cL_0 = \{ (x_i,v_i) \mid x_i \in
 %   U, v_i \in T, x_i \ne x_j, v_i \ne v_j, i \ne j, i,j \in [k] \}$
 %   where $k$ is the number of leaves in $T$
-  
-
-%  \noindent
-  \add{To illustrate further, let $\cg: V(\cF) \rightarrow V(\cP)$ be
-    the above mentioned isomorphism where $V(\cF)$ and $V(\cP)$ are
-    the vertex sets that represent the hyperedges for each hypergraph
-    respectively, $V(\cF) = \{ v_S \mid S \in \cF\}$ and $V(\cP) = \{
-    v_P \mid P \in \cP\}$. Then the path labeling $\cl$ is defined as
-    follows: $\cl(S_1) = P_1$ iff $\cg (v_{S_1}) = v_{P_1}$.  Just to
-    emphasize, for a path labeling $\cl$ of $\cF$ with $\cP$ as the
-    path system, $\cF^\cl$ is same as $\cP$.  The path system $\cP$
-    may be alternatively denoted in terms of $\cF$ and $\cl$ as
-    $\cF^\cl$. In most scenarios in this paper, what is given are the
-    pair $(\cF, \cl)$ and the target tree $T$; hence this notation
-    will be used more often.}
-
-%  \noindent
-  If $\cF \cong \cP$ where $\cP$ is a path system, then $\cF$ is
-  called a {\em path hypergraph} and $\cP$ is called {\em path
-    representation} of $\cF$. If this isomorphism is $\phi: supp(\cF)
-  \rightarrow V(T)$, then it is clear that there is an {\em induced
-    path labeling} $\cl_\phi: \cF \rightarrow \cP$ to the set system;
-  $\cl_\phi(S) = \set{y \mid y = \phi(x), x \in S}$ for all $S \in
-  \cF$. Recall that $supp(\cP) = V(T)$.
-
-%  \noindent
-  \add{A graph} $G$ is a {\em path graph} if it is isomorphic to the
-  intersection graph $\bI(\cP)$ of a path system $\cP$.  This
-  isomorphism gives a bijection $\cl': V(G) \rightarrow
-  \cP$. Moreover, for the purposes of this paper, we require that in a
-  path labeling, $supp(\cP) = V(T)$.  If graph $G$ is also isomorphic
-  to $\bI(\cF)$ for some hypergraph $\cF$, then clearly there is a
-  bijection $\cl: \cF \rightarrow \cP$ such that $\cl(S) = \cl'(v_S)$
-  where $v_S$ is the vertex corresponding to set $S$ in $\bI(\cF)$ for
-  any $S \in \cF$. This bijection $\cl$ is called the {\em path
-    labeling} of the hypergraph $\cF$ and the path system $\cP$ may be
-  alternatively denoted as $\cF^\cl$.
-
-%  \noindent
-  A path labeling $(\cF, \cl)$ is defined to be {\em feasible} if $\cF
-  \cong \cF^\cl$ and this hypergraph isomorphism $\phi: supp(\cF)
-  \rightarrow supp(\cF^\cl)$ induces a path labeling $\cl_\phi: \cF
-  \rightarrow \cF^\cl$ such that $\cl_\phi = \cl$.  \add{In this
-    work}, we are given as input $\cF$ and a tree $T$, and the
-  question is whether there is a path labeling $\cl$ to a set of paths
-  in $T$.  We refer to such a solution path system by $\cF^\cl$.  A
-  path labeling $(\cF, \cl)$ is defined to be {\em feasible} if
-  % $\cF \cong \cF^\cl$ and this
-  there is a hypergraph isomorphism $\phi: supp(\cF) \rightarrow
-  supp(\cF^\cl)=V(T)$ induces a path labeling $\cl_\phi: \cF
-  \rightarrow \cF^\cl$ such that $\cl_\phi = \cl$.
-%\end{definition}
-
 
 \subsection{Overlap Graphs and Marginal Hyperedges}
-%\begin{definition}[Overlap Graphs and Marginal Hyperedges]
-  An {\em overlap graph}\, $\bO(\cF)$ of a hypergraph $\cF$ is a graph
-  such that its vertex set has a bijection to $\cF$ and there exists
-  an edge between two of its vertices \iff their corresponding
-  hyperedges overlap. Two hyperedges $S$ and $S'$ are said to {\em
-    overlap}, denoted by $S \overlap S'$, if they have a non-empty
-  intersection and neither is contained in the other; $S \overlap S'
-  \text{ \iff } S \cap S' \ne \emptyset, S \nsubseteq S', S'
-  \nsubseteq S$. Thus $\bO(\cF)$ is a spanning subgraph of $\bI(\cF)$
-  and not necessarily connected. Each connected component of
-  $\bO(\cF)$ is called an {\em overlap component}.
+\label{sec:overlapmarginal}
+Recall the notion of {\em overlap} from
+Definition~\ref{def:setsystem}.  Two hyperedges $S$ and $S'$ are said
+to overlap, denoted by $S \overlap S'$, if they have a non-empty
+intersection and neither is contained in the other.
 
-%  \noindent
-  A hyperedge $S \in \cF$ is called {\em marginal} if for all $S'
-  \overlap S$, the overlaps $S \cap S'$ form a single inclusion chain
-  \cite{kklv10}. Additionally, if $S$ is such that it is contained in
-  no other marginal hyperedge in $\cF$, then it is called {\em
-    super-marginal}.
-%\end{definition}
+An {\em overlap graph}  $\bO(\cF)$ of a hypergraph $\cF$ is a graph
+such that its vertex set has a bijection to $\cF$ and there exists an
+edge between two of its vertices \iff their corresponding hyperedges
+overlap.  Thus $\bO(\cF)$ is a spanning subgraph of $\bI(\cF)$ and not
+necessarily connected. Each connected component of $\bO(\cF)$ is
+called an {\em overlap component}.
 
+A hyperedge $S \in \cF$ is called {\em marginal} if for all $S'
+\overlap S$, the overlaps $S \cap S'$ form a single inclusion chain
+\cite{kklv10} (see Definition\ref{def:poset}). Additionally, if $S$ is
+such that it is contained in no other marginal hyperedge in $\cF$,
+then it is called {\em super-marginal}.
 
 \subsection{Miscellaneous}
-%\begin{definition}[$k$-subdivided star] 
-  A {\em star} graph is a
-  complete bipartite graph $K_{1,p}$ which is clearly a tree and $p$
-  is the number of leaves. The vertex with maximum degree is called
-  the {\em center} of the star and the edges are called {\em rays} of
-  the star. A {\em $k$-subdivided star} is a star with all its rays
-  subdivided exactly $k$ times. The definition of a {\em ray of a
-    $k$-subdivided star} is extended to the path from the center to a
-  leaf. It is clear that all rays are of length $k+2$.
-%\end{definition}
+\label{sec:miscprelim}
+A {\em star} graph is a complete bipartite graph $K_{1,\,p}$ (which is
+clearly a tree with $p$ leaves). The vertex with maximum degree in a
+star is called its {\em center} and the edges are called {\em
+  rays}. This thesis is interested in a star-like graph which is
+defined in Definition~\ref{def:ksubstar}
+
+\begin{definition}[$k$-subdivided star]
+  \label{def:ksubstar}
+  A {\em $k$-subdivided star} is a star with all its rays subdivided
+  exactly $k$ times. A {\em ray} of a $k$-subdivided star is the path
+  from the center vertex to a leaf. It is clear that all rays of a
+  $k$-subdivided star are of length $k+2$.
+\end{definition}
 
 
 % A path assignment $\A$ to $\F$ is defined as a set assignment
@@ -307,88 +402,72 @@ but is recalled for the sake of completeness of the chapter.
 %   \label{eq:stf}
 % \end{align}
 
-
-%\begin{definition}[Partially ordered sets]
-  
-  Let $X$ be a partially ordered set with $\preccurlyeq$ being the
-  partial order on $X$.  $X_m \in X$ is a maximal upper bound of $X$
-  if $\nexists X_q \in X$ such that $X_m \preccurlyeq X_q$.  A maximal
-  upper bound on $X$ is denoted by $mub(X)$.
-  %represents an element in $X$ which is a maximal upper bound on $X$.
-%\end{definition}
-
-
+\begin{definition}[In-tree]
 An {\em in-tree} is a directed rooted tree in which all edges are
-directed toward to the root.
+directed toward to the root.  
+\end{definition}
+In-trees are used in Section~\ref{sec:decompos} which describes our
+solution to \CFTPL problem.
 
-The set $I$ represents the index set $[m]$. If index $i$ is used
-without further qualification, it is intended that $i \in I$. 
+Finally, note that as a convention in this thesis, the set $I$
+represents the index set $[m]$ or $[n]$. If index $i$ is used without further
+qualification, it is intended that $i \in I$.
 
 \section[Characterization of FTPL]{Characterization of Feasible Tree
   Path Labeling}
 \label{sec:feasible}
 
-\tnote{\sc refer to Problem Defs here}
-In this section we give an algorithmic characterization of the
-feasibility of a tree path labeling.  
-We focus on the question of generalizing the notion of an
-  ICPIA cite-nsnrs09 to characterize feasible path assignments.  We
-  show that for a given set system $\cF$, a tree $T$, and an
-  assignment of paths from $T$ to the sets, there is a feasible
-  bijection between $U$ and $V(T)$ if and only if all intersection
-  cardinalities among any three sets (not necessarily distinct) is
-  same as the intersection cardinality of the paths assigned to them
-  and the input runs a filtering algorithm (described in this paper)
-  successfully.  This characterization is proved constructively and it
-  gives a natural data structure that stores all the relevant feasible
-  bijections between $U$ and $V(T)$.  Further, the filtering algorithm
-  is also an efficient algorithm to test if a tree path labeling to
-  the set system is feasible.  This generalizes the result in
-  cite-nsnrs09.
+In this section we discuss the \FTPL problem introduced in
+Section~\ref{sec:myresearchintro} and give a set cardinality based
+characterization for it.
 
 
+For this characterization, we generalize the notion of the ICPIA
+\cite{nsnrs09}.  We show that for a given hypergraph $\cF$ with
+universe $U$, a target tree $T$, and path labeling from $T$ to $\cF$, there
+is a feasible bijection between $U$ and $V(T)$ \iff all intersection
+cardinalities among any three sets (not necessarily distinct) is same
+as the intersection cardinality of the paths assigned to them.  This
+characterization is proved constructively and the algorithm outputs a
+feasible bijection between $U$ and $V(T)$.
 
-Consider a path labeling $(\cF,
-\cl)$ on the given tree $T$. We call $(\cF, \cl)$ an {\em Intersection
-  Cardinality Preserving Path Labeling (ICPPL)} if it has the
-following properties.
+We now introduce a special kind of path labeling called {\em
+  Intersection Cardinality Preserving Path Labeling (ICPPL)} in
+Definition~\ref{def:icppl}.
 
-\begin{enumerate}[{(\icpplpr\ }i)]
-\item \label{pr:i} $|S| = |\cl(S)|$ for all $S \in \cF$
-  % \vspace{\topshrink}
-\item \label{pr:ii}$|S_1 \cap S_2| = |\cl(S_1) \cap \cl(S_2)|$ for all
-  distinct $S_1, S_2 \in \cF$
-  % \vspace{\topshrink}
-\item \label{pr:iii}$|S_1 \cap S_2 \cap S_3| = |\cl(S_1) \cap \cl(S_2)
-  \cap \cl(S_3)|$ for all distinct $S_1, S_2, S_3 \in \cF$
-\end{enumerate}
-
-
-The following lemma is useful in subsequent arguments.
-\begin{lemma}
-  \label{lem:setminuscard}
-  If $\cl$ is an ICPPL, and $S_1, S_2, S_3 \in \cF$, then $|S_1 \cap
-  (S_2 \setminus S_3)| = |\cl(S_1) \cap (\cl(S_2) \setminus
-  \cl(S_3))|$.
-\end{lemma}
-\begin{proof}\thesisspacing%[Proof of Lemma~\ref{lem:setminuscard}]
-  Let $P_i = \cl(S_i)$, for all $1 \le i \le 3$.  $|S_1 \cap (S_2
-  \setminus S_3)| = |(S_1 \cap S_2) \setminus S_3| = |S_1 \cap S_2| -
-  |S_1 \cap S_2 \cap S_3|$. Due to properties (ii) and (iii) of ICPPL,
-  $|S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3| = |P_1 \cap P_2| - |P_1
-  \cap P_2 \cap P_3| = |(P_1 \cap P_2) \setminus P_3| = |P_1 \cap (P_2
-  \setminus P_3)|$. %\qed
-\end{proof}
+\begin{definition}
+  \label{def:icppl}
+  Consider a path labeling $(\cF, \cl)$ on the given tree $T$. We call
+  $(\cF, \cl)$ an {\em Intersection Cardinality Preserving Path
+    Labeling (ICPPL)} if it has the following properties.
+  \par
+  \parbox{\linewidth}{%
+    \hangindent \defindent%
+    \begin{enumerate}[i. ] %{(\icpplpr\ }
+      \singlespacing
+    \item \label{pr:i} $|S| = |\cl(S)|$ for all $S \in \cF$
+    \item \label{pr:ii}$|S_1 \cap S_2| = |\cl(S_1) \cap \cl(S_2)|$ for
+    all distinct $S_1, S_2 \in \cF$
+    \item \label{pr:iii}$|S_1 \cap S_2 \cap S_3| = |\cl(S_1) \cap
+    \cl(S_2) \cap \cl(S_3)|$ for all distinct $S_1, S_2, S_3 \in \cF$
+    \end{enumerate}
+  }
+\end{definition}
 
 
 In the remaining part of this section we show that $(\cF, \cl)$ is
-feasible if and only if it is an ICPPL and
-Algorithm~\ref{al:icppl-find-isomorph} returns a non-empty path
-hypergraph isomorphism
-function. Algorithm~\ref{al:icppl-find-isomorph} recursively does two
-levels of filtering of $(\cF, \cl)$ to make it simpler in terms of set
-intersections while retaining the set of isomorphisms, if any, between
-$\cF$ and $\cF^\cl$.
+feasible if and only if it is an ICPPL%  and
+% Algorithm~\ref{al:icppl-find-isomorph} returns a non-empty path
+% hypergraph isomorphism
+% function
+.  Algorithm~\ref{al:icppl-find-isomorph} takes $(\cF, \cl)$ as input
+and computes the feasibility bijection if it is feasible or else
+reports failure. This algorithm recursively does two levels of
+filtering of $(\cF, \cl)$ to make it simpler in terms of set
+intersections while retaining a non-empty subset of isomorphisms, if
+any, between $\cF$ and $\cF^\cl$. These two filters are {\tt
+  filter\_1} in Algorithm~\ref{al:filterone} and {\tt filter\_2} in
+Algorithm~\ref{al:filtertwo}.
 % One direction of this claim isclear: that if a path labeling is
 % feasible, then all intersection cardinalities are preserved,
 % i.e. the path labeling is an ICPPL. Algorithm~\ref{al:filterone}
@@ -407,6 +486,7 @@ $\cF$ and $\cF^\cl$.
 % iteration we have a ``filtered'' path labeling, and finally we have
 % a path labeling that defines a family of bijections from $supp(\cF)$
 % to $V(T)$\remove{ i.e. $supp(\cF^{\cl})$}.
+
 First, we present Algorithm~\ref{al:filterone} which describes {\tt
   filter\_1}, and prove its correctness.  This algorithm refines the
 path labeling by processing pairs of paths in $\cF^\cl$ that share a
@@ -434,11 +514,11 @@ leaf until no two paths in the new path labeling share any leaf.
     \COMMENT {Define path labeling for new sets} \STATE $\cl_j(S_2
     \setminus S_1) \assign \cl_{j-1}(S_2) \setminus \cl_{j-1}(S_1)$
 
-    \IF{$(\cF_j, \cl_j)$ does not satisfy (\icpplpr~\ref{pr:iii}) of
-      ICPPL}
-    \label{ln:3waycheck}
-    \STATE {\bf exit} \label{ln:exit1} \\
-    \ENDIF
+%     \IF{$(\cF_j, \cl_j)$ does not satisfy (\icpplpr~\ref{pr:iii}) of
+%       ICPPL}
+%     \label{ln:3waycheck}
+%     \STATE {\bf exit} \label{ln:exit1} \\
+%     \ENDIF
 
     \STATE $j \assign j+1$\\
     \ENDWHILE
@@ -447,42 +527,71 @@ leaf until no two paths in the new path labeling share any leaf.
   \end{algorithmic}
 \end{algorithm}
 
+
+The following lemma is useful in subsequent arguments.
+\begin{lemma}
+  \label{lem:setminuscard}
+  If $\cl$ is an ICPPL, and $S_1, S_2, S_3 \in \cF$, then $|S_1 \cap
+  (S_2 \setminus S_3)| = |\cl(S_1) \cap (\cl(S_2) \setminus
+  \cl(S_3))|$.
+\end{lemma}
+\begin{proof}\thesisspacing%[Proof of Lemma~\ref{lem:setminuscard}]
+  Let $P_i = \cl(S_i)$, for all $1 \le i \le 3$.  $|S_1 \cap (S_2
+  \setminus S_3)| = |(S_1 \cap S_2) \setminus S_3| = |S_1 \cap S_2| -
+  |S_1 \cap S_2 \cap S_3|$. Due to properties (ii) and (iii) of ICPPL,
+  $|S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3| = |P_1 \cap P_2| - |P_1
+  \cap P_2 \cap P_3| = |(P_1 \cap P_2) \setminus P_3| = |P_1 \cap (P_2
+  \setminus P_3)|$. %\qed
+\end{proof}
+
+Now we will prove the effectiveness of Algorithm~\ref{al:filterone}.
+Lemma~\ref{lem:feasible} proves that {\tt filter\_1} does not destroy
+the feasibility of the input, if it is indeed feasible. Following
+this, Lemma~\ref{lem:invar1} and Lemma~\ref{lem:noexit1} show that if
+the input is an ICPPL the result of {\tt filter\_1} is also an ICPPL
+and they both have the same set of feasibility hypergraph
+isomorphisms.
+
 \begin{lemma}
   \label{lem:feasible}
   In Algorithm~\ref{al:filterone}, if input $(\cF, \cl)$ is a feasible path
-  assignment then at the end of $j$th iteration of the {\bf while}
-  loop, $j \ge 0$, $(\cF_j, \cl_j)$ is a feasible path assignment.
+  labeling then at the end of $j$th iteration of the {\bf while}
+  loop, $j \ge 0$, $(\cF_j, \cl_j)$ is a feasible path labeling.
 \end{lemma}
 \begin{proof}\thesisspacing%[Proof of Lemma~\ref{lem:feasible}]
   We will prove this by mathematical induction on the number of
   iterations. The base case $(\cF_0, \cl_0)$ is feasible since it is
   the input itself which is given to be feasible. Assume the lemma is
-  true till $j-1$th iteration. \ie every hypergraph isomorphism $\phi:
+  true till $j-1$th iteration \ie every hypergraph isomorphism $\phi:
   supp\left(\cF_{j-1}\right) \rightarrow V\left(T \right)$ that
   defines $(\cF, \cl)$'s feasibility, is such that the induced path
-  labeling on $\cF_{j-1}$, say denoted by $\cl_{\phi[{\cF_{j-1}}]}$, is equal to
-  $\cl_{j-1}$. We will prove that $\phi$ is also the bijection that
-  makes $(\cF_j, \cl_j)$ feasible. Note that $supp(\cF_{j-1}) =
-  supp(\cF_{j})$ since the new sets in $\cF_j$ are created from basic
-  set operations to the sets in $\cF_{j-1}$ adding or removing no
-  elements. For the same reason and $\phi$ being a bijection, it is
-  clear that when applying the $\phi$-induced path labeling on
-  $\cF_j$, $ \cl_{\phi[{\cF_{j}}]}(S_1 \setminus S_2) =
-  \cl_{\phi[{\cF_{j-1}}]}(S_1) \setminus
-  \cl_{\phi[{\cF_{j-1}}]}(S_2)$. Now observe that $ \cl_j(S_1
+  labeling on $\cF_{j-1}$, say denoted by $\cp_{\phi[{\cF_{j-1}}]}$,
+  is equal to $\cl_{j-1}$.
+% Note that any hypergraph isomorphism of
+% $\cF$ (say, one that defines the feasibility of $(\cF,\cl)$) can be
+% ``projected'' to $\cF_{j-1}$ since their supports are equal. If $\phi$
+% is a hypergraph isomorphism of to $(\cF, \cl)$, then 
+  We will prove that $\phi$ is also the bijection that makes $(\cF_j,
+  \cl_j)$ feasible. Note that $supp(\cF_{j-1}) = supp(\cF_{j})$ since
+  the new sets in $\cF_j$ are created from basic set operations to the
+  sets in $\cF_{j-1}$ adding or removing no elements. For the same
+  reason and $\phi$ being a bijection, it is clear that when applying
+  the $\phi$-induced path labeling on $\cF_j$, $
+  \cp_{\phi[{\cF_{j}}]}(S_1 \setminus S_2) =
+  \cp_{\phi[{\cF_{j-1}}]}(S_1) \setminus
+  \cp_{\phi[{\cF_{j-1}}]}(S_2)$. Now observe that $ \cl_j(S_1
   \setminus S_2) = \cl_{j-1}(S_1) \setminus \cl_{j-1}(S_2) =
-  \cl_{\phi[{\cF_{j-1}}]}(S_1) \setminus
-  \cl_{\phi[{\cF_{j-1}}]}(S_2)$. Thus the induced path labeling
-  $\cl_{\phi[{\cF_{j}}]} = \cl_{j}$.  %\qed
+  \cp_{\phi[{\cF_{j-1}}]}(S_1) \setminus
+  \cp_{\phi[{\cF_{j-1}}]}(S_2)$. Thus the induced path labeling
+  $\cp_{\phi[{\cF_{j}}]} = \cl_{j}$.  %\qed
 \end{proof}
 
-
-
 \begin{lemma}
-  \label{lem:invar1} In Algorithm~\ref{al:filterone}, at the end of $j$th
-  iteration, $j \ge 0$, of the {\bf while} loop, the following
-  invariants are maintained.
+  \label{lem:invar1} Given that the input to Algorithm~\ref{al:filterone} is
+  an ICPPL, at the end of $j$th iteration, $j \ge 0$, of the {\bf
+    while} loop, the following invariants are maintained.
   \begin{enumerate}[I {\ }] %\vspace{\topshrink}
+    \singlespacing
   \item $\cl_j(R)$ is a path in $T$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
     \ \ \ \ \ \ \ \ \ \ for all $R \in \cF_j$%\vspace{\topshrink}
   \item $|R| = |\cl_j(R)|$, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
@@ -494,14 +603,13 @@ leaf until no two paths in the new path labeling share any leaf.
     \cl_j(R'')|$, \ \ \ for all $R, R', R'' \in \cF_j$
   \end{enumerate}
 \end{lemma}
-
 \begin{proof}\thesisspacing
   Proof is by induction on the number of iterations, $j$. In this
   proof, the term ``new sets'' will refer to the sets added to $\cF_j$
   in $j$th iteration in line~\ref{setbreak} of Algorithm~\ref{al:filterone},
   $S_1 \cap S_2, S_1 \setminus S_2, S_2 \setminus S_1$ and its images
   in $\cl_j$ where $\cl_{j-1}(S_1)$
-  and $\cl_{j-1}(S_2)$ intersect and share a leaf.\\
+  and $\cl_{j-1}(S_2)$ intersect and share a leaf.
   The invariants are true in the base case $(\cF_0, \cl_0)$, since it
   is the input ICPPL.  Assume the lemma is true till the $j-1$th
   iteration. Let us consider the possible cases for each of the above
@@ -553,8 +661,8 @@ leaf until no two paths in the new path labeling share any leaf.
     \end{enumerate}
   \item {\em Invariant} IV
     
-    Due to the condition in line~\ref{ln:3waycheck}, this invariant is
-    ensured at the end of every iteration.
+    \tnote[dire]{Due to the condition in line~\ref{ln:3waycheck}, this invariant is
+    ensured at the end of every iteration.}
     % \begin{enumerate} [{Case 3.}1:]
     % \item {\em $R$, $R'$ and $R''$ are not new sets.} Trivially true
     %   by induction hypothesis.
@@ -575,9 +683,9 @@ leaf until no two paths in the new path labeling share any leaf.
   If the input ICPPL $(\cF, \cl)$ to Algorithm~\ref{al:filterone} is
   feasible, then the set of hypergraph isomorphism functions that
   defines $(\cF, \cl)$'s feasibility is the same as the set that
-  defines $(\cF_j, \cl_j)$'s feasibility, if any.  Secondly, for any
-  iteration $j > 0$ of the {\em \bf while} loop, the {\em \bf exit}
-  statement in line~\ref{ln:exit1} will not execute.
+  defines $(\cF_j, \cl_j)$'s feasibility, if any.%   Secondly, for any
+%   iteration $j > 0$ of the {\em \bf while} loop, the {\em \bf exit}
+%   statement in line~\ref{ln:exit1} will not execute.
 \end{lemma}
 \begin{proof}\thesisspacing
   Since $(\cF,\cl)$ is feasible, by Lemma~\ref{lem:feasible}
@@ -602,28 +710,25 @@ leaf until no two paths in the new path labeling share any leaf.
   % \item If $(x,v) \in \phi$ then $v \in \cl_{j}(S)$ for all $S \in
   %   \cF_{j}$ such that $x \in S$
   % \end{enumerate}
-  In other words, filter 1 outputs a filtered path labeling that
+  In other words, {\tt filter\_1} outputs a filtered path labeling that
   ``preserves''
-  hypergraph isomorphisms of the original path labeling.\\
-  Secondly, line~\ref{ln:exit1} will execute \iff the exit condition in
-  line~\ref{ln:3waycheck}, i.e. failure of three way intersection
-  preservation, becomes true in any iteration of the {\em \bf while}
-  loop.  Due to Lemma~\ref{lem:invar1} Invariant IV, the exit
-  condition does not occur if the input is a feasible ICPPL.%\qed
-
+  hypergraph isomorphisms of the original path labeling.
+%   Secondly, line~\ref{ln:exit1} will execute \iff the exit condition in
+%   line~\ref{ln:3waycheck}, i.e. failure of three way intersection
+%   preservation, becomes true in any iteration of the {\em \bf while}
+%   loop.  Due to Lemma~\ref{lem:invar1} Invariant IV, the exit
+%   condition does not occur if the input is a feasible ICPPL.%\qed
   % such that $\phi(x) = v$ where $v$ is the leaf considered in the
   % first iterations of while. Clearly, $\phi$ is a renaming of
   % vertices in hypergraph $\cF$ to those in hypergraph
   % $\cF^\cl$. Thus the following facts can be observed in every
   % iteration of the loop.
-
   % \begin{enumerate}[\hspace{2mm}i. ] \vspace{\topshrink}
   % \item all intersection cardinalities are preserved in this path
   %   labeling \vspace{\topshrink}
   % \item element $x$ is exclusive in a hyperedge in $\cF$ since $v$
   %   is exclusive in a hyperedge in $\cF^\cl$.
   % \end{enumerate}
-
   % Thus the exit condition is never rendered true after $x$ and $v$
   % are removed from their respective hyperedges. %\qed
 
@@ -673,18 +778,18 @@ leaf until no two paths in the new path labeling share any leaf.
   %   cardinalities don't change thus all invariants are still true}
 \end{proof}
 
-As a result of Algorithm~\ref{al:filterone} each leaf $v$ in $T$ is such that
-there is exactly one set in $\cF$ with $v$ as a vertex in the path
-assigned to it.  In Algorithm~\ref{al:filtertwo} we identify elements in
-$supp(\cF)$ whose images are leaves in a hypergraph isomorphism if one
-exists.  Let $S \in \cF$ be such that $\cl(S)$ is a path with leaf and
-$v \in V(T)$ is the unique leaf incident on it.  We define a new path
-labeling $\cl_{new}$ such that $\cl_{new}(\set{x}) = \set{v}$ where
-$x$ an arbitrary element from $S \setminus \bigcup_{\hS \ne S}
-\hS$. In other words, $x$ is an element present in no other set in
-$\cF$ except $S$. This is intuitive since $v$ is present in no other
-path image under $\cl$ other than $\cl(S)$.  The element $x$ and leaf
-$v$ are then removed from the set $S$ and path $\cl(S)$
+As a result of {\tt filter\_1} each leaf $v$ in $T$ is such that there
+is exactly one set in $\cF$ with $v$ as a vertex in the path assigned
+to it.  {\tt filter\_2}, in Algorithm~\ref{al:filtertwo}, identifies
+elements in $supp(\cF)$ whose images are leaves in a hypergraph
+isomorphism if one exists.  Let $S \in \cF$ be such that $\cl(S)$ is a
+path with leaf and $v \in V(T)$ is the unique leaf incident on it.  We
+define a new path labeling $\cl_{new}$ such that $\cl_{new}(\set{x}) =
+\set{v}$ where $x$ an arbitrary element from $S \setminus \bigcup_{\hS
+  \ne S} \hS$. In other words, $x$ is an element present in no other
+set in $\cF$ except $S$. This is intuitive since $v$ is present in no
+other path image under $\cl$ other than $\cl(S)$.  The element $x$ and
+leaf $v$ are then removed from the set $S$ and path $\cl(S)$
 respectively. After doing this for all leaves in $T$, all path images
 in the new path labeling $\cl_{new}$ except leaf labels (a path that
 has only a leaf is called the {\em leaf label} for the corresponding
@@ -798,9 +903,9 @@ T\}$. Algorithm~\ref{al:filtertwo} is now presented with details.
     $\cl_j(S) \assign
     \cl_{j-1}(S)$\\
     \STATE $X \assign S_1 \setminus \bigcup_{S \in \cF_{j-1}, S \ne S_1}S$\\
-    \IF{$X$ is empty} \label{xempty} \STATE {\bf
-      exit} \label{ln:exit2} \ENDIF
-    \STATE $x \assign $ arbitrary element from $X$\\
+%     \IF{$X$ is empty} \label{xempty} \STATE {\bf
+%       exit} \label{ln:exit2} \ENDIF
+    \STATE \label{xassign} $x \assign $ arbitrary element from $X$\\
     \STATE $\cF_j \assign \cF_j \cup \{\{x\}, S_1 \setminus \{x\}\} $\\
     \STATE $\cl_j(\{x\}) \assign \{v\}$\\
     \STATE $\cl_j(S_1 \setminus \{x\}) \assign \cl_{j-1}(S_1) \setminus \{v\}$\\
@@ -812,10 +917,15 @@ T\}$. Algorithm~\ref{al:filtertwo} is now presented with details.
 \end{algorithm}
 
 
-Suppose the input ICPPL $(\cF, \cl)$ is feasible, yet set $X$ in
-Algorithm~\ref{al:filtertwo} is empty in some iteration of the {\bf while}
-loop. This will abort our procedure of finding the hypergraph
-isomorphism. The following lemma shows that this will not happen.
+Suppose the input $(\cF, \cl)$ is feasible, yet set $X$ in
+Algorithm~\ref{al:filtertwo} is empty in some iteration of the {\bf
+  while} loop. Then clearly, the algorithm will have a problem in line~\ref{xassign}.
+% This will abort our procedure of finding the hypergraph
+% isomorphism. 
+The following Lemma~\ref{lem:xnotempty} shows that this cannot
+happen. Following that Lemma~\ref{lem:invar3} shows that given an
+ICPPL input, the filtered output path labeling after {\tt filter\_2}
+is also an ICPPL.
 
 %\temptext{ --- WG11 begin --- }%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \begin{lemma}
@@ -978,8 +1088,9 @@ isomorphism. The following lemma shows that this will not happen.
   \label{lem:xnotempty}
   If the input ICPPL $(\cF, \cl)$ to Algorithm~\ref{al:filtertwo} is
   feasible, then for all iterations $j > 0$ of the {\em \bf while}
-  loop, the {\em \bf exit} statement in line~\ref{ln:exit2} does not
-  execute.
+  loop, the set $X$ will be non-empty.
+% the {\em \bf exit} statement in line~\ref{ln:exit2} does not
+%   execute.
 \end{lemma}
 \begin{proof}\thesisspacing
   Assume $X$ is empty for some iteration $j > 0$. We know that $v$ is
@@ -1024,21 +1135,21 @@ Algorithm~\ref{al:filterone} for {\tt filter\_1} and
 Algorithm~\ref{al:filtertwo} for {\tt filter\_2} which when executed
 in that order result in a new ICPPL on the same universe $U$ and
 target tree $T$. We also proved that if the input is indeed feasible,
-these algorithms executed in sequence give an ICPPL that preserves \change{the
-  same set}{a subset} of hypergraph isomorphisms as that of the input
-ICPPL. Now we present the algorithmic characterization of a feasible
-tree path labeling by way of Algorithm~\ref{al:icppl-find-isomorph}.
+these algorithms executed in sequence give an ICPPL that preserves a
+non-empty subset of set of feasibility hypergraph isomorphisms of the
+original input. % Now we present the algorithmic characterization of a feasible
+% tree path labeling by way of Algorithm~\ref{al:icppl-find-isomorph}.
+Now we present Algorithm~\ref{al:icppl-find-isomorph} which uses these
+two filters to compute one such isomorphism.
 
-\temptext{Prove that the same set of hypergraph isomorphisms are in
-  the filtered ICPPL? -- NOPE. we are only interested in testing
-  feasibility. not necessarily giving ALL bijections.}
-\begin{lemma}{\temptext{PROOF TBD.}}
-  Let $(\cF_2, \cl_2)$ be the output of {\tt filter\_2} and the ICPPL
-  input to {\tt filter\_1} preceeding its call is $(\cF, \cl)$ with
-  target tree $T$. If a bijection $\phi:\supt{\cF_2} \rightarrow V(T)$
-  is a hypergraph isomorphism of $(\cF_2, \cl_2)$, then it is a
-  hypergraph isomorphism of $(\cF, \cl)$.
-\end{lemma}
+%% IS THIS LEMMA NECESSARY? 31 JAN 2012 %%
+% \begin{lemma}{\temptext{PROOF TBD.}}
+%   Let $(\cF_2, \cl_2)$ be the output of {\tt filter\_2} and the ICPPL
+%   input to {\tt filter\_1} preceeding its call is $(\cF, \cl)$ with
+%   target tree $T$. If a bijection $\phi:\supt{\cF_2} \rightarrow V(T)$
+%   is a hypergraph isomorphism of $(\cF_2, \cl_2)$, then it is a
+%   hypergraph isomorphism of $(\cF, \cl)$.
+% \end{lemma}
 
 
 Algorithm~\ref{al:icppl-find-isomorph} computes a hypergraph
@@ -1068,8 +1179,8 @@ and target tree $T'$.  The tree pruning algorithm is recursively
 called on $\cF', \cl', T'$. The recursive call returns the bijection
 $\phi''$ for the rest of the elements in $supp(\cF)$ which along with
 the leaf labels $\phi'$ computed earlier gives us a hypergraph
-isomorphism $\phi$ for the input $\cF,\cl,T$.  The following lemma formalizes the
-characterization of feasible path labeling.
+isomorphism $\phi$ for the input $\cF,\cl,T$.  
+Lemma~\ref{lem:hyperiso} proves the correctness of this computation.
 
 \begin{algorithm}[h]
   \caption{{\tt get-hypergraph-isomorphism ($\cF, \cl, T$)}}
@@ -1106,11 +1217,17 @@ characterization of feasible path labeling.
 
 \begin{lemma}
   \label{lem:hyperiso} %{lem:perm}
+%   If $(\cF, \cl)$ is an ICPPL from a tree $T$ and
+%   Algorithm~\ref{al:icppl-find-isomorph}, on input $\cF, \cl, T$
+%   returns a non-empty function, then there exists a hypergraph
+%   isomorphism $\phi : supp(\cF) \rightarrow V(T)$ such that the
+%   $\phi$-induced tree path labeling is equal to $\cl$ or $\cl_\phi =
+%   \cl$.
   If $(\cF, \cl)$ is an ICPPL from a tree $T$ and
-  Algorithm~\ref{al:icppl-find-isomorph}, on input $\cF, \cl, T$
-  returns a non-empty function, then there exists a hypergraph
+  Algorithm~\ref{al:icppl-find-isomorph}, on input $(\cF, \cl, T)$
+  returns a non-empty function $\phi$, then $\phi$ is a hypergraph
   isomorphism $\phi : supp(\cF) \rightarrow V(T)$ such that the
-  $\phi$-induced tree path labeling is equal to $\cl$ or $\cl_\phi =
+  $\phi$-induced tree path labeling is equal to $\cl$; $\cp_\phi =
   \cl$.
 \end{lemma}
 \begin{proof}\thesisspacing
@@ -1128,6 +1245,9 @@ characterization of feasible path labeling.
   given path labeling $\cl$ and thus a hypergraph isomorphism. %\qed
 \end{proof}
 
+Finally we have Theorem~\ref{th:charac} which puts together all that
+we saw so far in this section to prove that ICPPL is indeed a
+characterization of a feasible path labeling.
 \begin{theorem}
   \label{th:charac}
   A path labeling $(\cF, \cl)$ on tree $T$ is feasible \iff it is an
@@ -1147,6 +1267,10 @@ characterization of feasible path labeling.
   function.%\qed
 \end{proof}
 
+\section{Solution to \illustrationproblem}
+
+\tnote[dire]{ inthis section we run through the algorithm in the
+  problem introduced in chapter 1.}
 
 \section[Special target trees]{ Computing feasible TPL with special target trees}
 \label{sec:spltargettree}
@@ -1201,8 +1325,9 @@ graph's close relationship with intervals.
 \begin{figure}[t] %[htbp] 
   \centering
   \begin{tabular}{lr}
-    (a) \includegraphics{cop-tree_thesis.1}&
-    (b) \includegraphics{cop-tree_thesis.2}
+%     (a) \includegraphics{cop-tree_thesis.1}&
+%     (b) \includegraphics{cop-tree_thesis.2}
+    (a) \ksubstari & (b) \ksubstarii
   \end{tabular}
   \caption{\figtabsize (a) $8$-subdivided star with 7 rays (b)
     3-subdivided star with 3 rays}
@@ -1355,6 +1480,7 @@ all $R_i$.
 
 
 \subsection{Description of the Algorithm}
+\label{sec:ksubstaralgo}
 In this section the given hypergraph $\cF$, the $k$-subdivided star
 and the root of the star are denoted by $\cO$, $T$ and vertex $r$,
 respectively.  In particular, note that the vertices of $\cO$
@@ -1529,7 +1655,7 @@ These properties are formalized as follows:
   least one vertex farther away from the leaf in $R_i$ than any vertex
   in $X$. Clearly $Y_1 \cap X$ and $Y_2 \cap X$ cannot be part of same
   inclusion chain which contradicts that assumption $X$ is
-  super-marginal. Thus the claim is proved.\qed
+  super-marginal. Thus the claim is proved.
 \end{proof}
 \begin{lemma}
   If $\cO$ does not have any super-marginal edges, then in any
@@ -1544,7 +1670,7 @@ These properties are formalized as follows:
   the overlap regions with $\cl(X)$, will form a single inclusion
   chain. This shows that $X$ is a marginal hyperedge which
   contradicts the assumption that $\cO$ does not have super-marginal
-  hyperedges. \qed
+  hyperedges. 
 \end{proof}
 This lemma is used to prove the next lemma for the case when for all
 $X \in \cO$, $|X| \leq k+2$.  The proof is left out as it just uses
@@ -1604,7 +1730,7 @@ These lemmas now are used to prove the following theorem.
   In the reverse direction if there is a feasible path labeling $\cl$,
   then we know that $\cl$ is unique up to isomorphism.  Therefore,
   again by induction on $k$ it follows that the algorithm finds $\cl$.
-  \qed
+  
 \end{proof}
 
 
@@ -1698,10 +1824,10 @@ that it can actually be done in logspace. \tnote{[TRUE?]}  {\tt
 
 In Section \ref{prelims} we present the necessary preliminaries, in
 Section \ref{feasible} we present our characterization of feasible
-tree path assignments, and in Section \ref{decompos} we present the
+tree path assignments, and in Section \ref{sec:decompos} we present the
 characterizing subproblems for finding a bijection between $U$ and
 $V(T)$ such that sets map to tree paths. Finally, in Section
-\ref{complexity} we conclude by showing that Tree Path Assignment is
+\ref{sec:tplcomplexity} we conclude by showing that Tree Path Assignment is
 GI-Complete, and also observe that Consecutive Ones Testing is in
 Logspace.
 
@@ -1759,7 +1885,9 @@ of our knowledge this observation has not been made earlier.
 
 
 \subsection{Finding an assignment of tree paths to a set
-  system} \label{decompos} In the previous section we have shown that
+  system}% 
+\label{sec:decompos}% 
+In the previous section we have shown that
 the problem of finding a Tree Path Asssignment to an input $(\cF,T)$
 is equivalent to finding an ICPPA to $\cF$ in tree $T$.  In this
 section we characterize those set systems that have an ICPPA in a
@@ -1991,7 +2119,7 @@ $X_i$.
 
 
 \section[Complexity]{Complexity of Tree Path Assignment-A Discussion}
-\label{complexity}
+\label{sec:tplcomplexity}
 Recall that the input to the Tree Path Assignment question is an order
 pair $(\cF,T)$ where $\cF$ is a family of subsets of an universe $U$,
 and $T$ is a tree such that $|V(T)| = |U|$.  The question is to come
@@ -2000,6 +2128,7 @@ in $\cF$ is a path in $T$.
 
 
 \subsection{Consecutive Ones Testing is in Logspace}
+\label{sec:cotlogspace}
 While Tree Path Assignment is isomorphism-complete, it is polynomial
 time solvable when the given tree is a path.  Indeed, in this case we
 encounter a restatement of matrices with the COP.  The known
