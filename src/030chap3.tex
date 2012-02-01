@@ -1269,9 +1269,167 @@ characterization of a feasible path labeling.
 
 \section{Solution to \illustrationproblem}
 
-\tnote[dire]{ inthis section we run through the algorithm in the
-  problem introduced in chapter 1.}
 
+In this section we run through the filtering and tree pruning
+algorithm seen in Section~\ref{sec:feasible} on an example. The
+example problem is the \illustrationproblem posed in
+Section~\ref{sec:problem}.  % Chapter~\ref{ch:intro}
+The solution is depicted in Figure~\ref{fig:solpartI},
+Figure~\ref{fig:solpartIII}, Figure~\ref{fig:solpartIVa},
+Figure~\ref{fig:solpartIVb}, Figure~\ref{fig:solpartVI},
+Figure~\ref{fig:solpartVII}, Figure~\ref{fig:solpartVIII} and the
+figures along with their captions are self-explanatory.
+
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}[h]{c|cc}
+    $T:$ \infiniteloopI & $\cF:$ \studygroupsI
+  \end{tabular}
+   
+  \caption[\figtabsize Problem solution part 1]{\figtabsize The
+    problem is shown again here using the input described in
+    Section~\ref{sec:problem}. The target tree is $T$ with vertex set
+    $\{1,2,\ldots,11\}$ on the left hand side along with the path
+    system (hypergraph) -- $\{7,2,6,5\}, \{8,2,4\}, \{10,6,5,3\},
+    \{9,1,5,3,11\}$. The hypergraph is $\cF$ with hyperedges $\{\xPa,
+    \xPi, \xVi, \xCh\}, \{\xSn, \xWo, \xPi\}, \{\xCh, \xFr, \xVi,
+    \xLi\}, \{\xLu, \xSa, \xSc, \xCh, \xFr\}$ shown in the right hand
+    side. In subsequent illustrations, the gray boxes which contain
+    the elements of universe $U$, will be assigned to nodes and
+    removed from the right hand side figure and placed next to the
+    vertex of $T$ in the left hand side figure.  The path labeling is
+    implicitly given by the color-coded Venn diagrams (the order of
+    listing of the hyperedges in this caption is also done respective
+    to the input path labeling).}
+  \label{fig:solpartI}  
+\end{figure}
+
+
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}[h]{c|cc}
+    \infiniteloopIII 
+    & 
+    \studygroupsIII 
+    &
+    \studygroupsIIItable
+  \end{tabular}
+  \caption[\figtabsize Problem solution part 2]{\figtabsize It can be observed in
+    Figure~\ref{fig:solpartI}, that none of the leaves are shared by
+    more than one path. Hence, \filteri does not alter the
+    hypergraphs. \filterii finds the leaf assignments as shown --
+    elements \xPa, \xSn, \xLu, \xSc, \xLi, \xWo are assigned to
+    vertices 7, 8, 9, 11, 10, 4 respectively. Computation of these
+    leaf labels are deterministic except for $\xLu, \xSc$ where the
+    algorithm arbritarily choses them from $X = \{\xLu, \xSa, \xSc\}$
+    and for $\xSn, \xWo$ arbitrarily choses from $X = \{\xSn,
+    \xWo\}$. Here we show only one such choice and clearly one could
+    have chosen another leaf label (\eg $\xSa$ on 9 or $\xWo$ on 8) to
+    get a different feasible hypergraph isomorphism.  After
+    this, the leaves of $T$ are pruned and the hypergraph updated
+    accordingly by \algoiii subroutine -- the pruned leaves are shown
+    with dotted edges and the corresponding Venn diagrams show the
+    updated hypergraphs. $\phi_0$ is this leaf assignment and the
+    algorithm proceeds to solve the subproblem with the new
+    hypergraphs and path labeling which is: $\{2,6,5\}, \{2\},
+    \{6,5,3\}, \{1,5,3\}$ labeled with $\{\xPi, \xVi, \xCh\},
+    \{\xPi\}, \{\xCh, \xFr, \xVi\}, \{\xSa, \xCh, \xFr\}$
+    respectively.}
+  \label{fig:solpartIII}  
+\end{figure}
+
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}[h]{c|cc}
+    \infiniteloopIVa
+    & 
+    \studygroupsIVa
+  \end{tabular}
+  \caption[\figtabsize Problem solution part 3]{\figtabsize In the subproblem shown in
+    Figure~\ref{fig:solpartIII}, it can be noted that there are two
+    leaves which are shared by more than one paths -- 2 and 3. Hence
+    \filteri filters this out one by one. Here we show the handling of
+    leaf 2 which was shared by paths $\{2,6,5\}$ ($=P_1$, say) and
+    $\{2\}$($=P_2$, say). \filteri removes $P_1$ and adds
+    $\{6,5\}$. Note that only one set is added and removed since $P_2
+    \subset P_1$. Accordingly, \filteri alters the hypergraph on the
+  right hand side by removing and adding $\{\xPi, \xVi, \xCh\}$ and $\{\xVi, \xCh\}$ respectively.}
+  \label{fig:solpartIVa}  
+\end{figure}
+
+
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}[h]{c|cc}
+    \infiniteloopIVb
+    & 
+    \studygroupsIVb
+  \end{tabular}
+  \caption[\figtabsize Problem solution part 4]{\figtabsize After handling leaf 2, \filteri proceeds to
+    handle leaf 3 which is shared by paths $\{1,5,3\}$ and
+    $\{6,5,3\}$. \filteri removes these two paths and adds their
+    intersection and set differences -- $\{5,3\}$, $\{1\}$ and
+    $\{6\}$. Correspondingly, hyperedges $\{\xSa, \xCh, \xFr\}$ and $\{\xVi,
+    \xCh, \xFr\}$ are removed and new hyperedges $\{\xCh, \xFr\}$, $\{\xSa\}$
+    and $\{\xVi\}$ respectively are added. There are no more leaves
+    shared and the algorithm proceeds to \filterii.}
+  \label{fig:solpartIVb}  
+\end{figure}
+
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}[h]{c|cc}
+    \infiniteloopVI
+    & 
+    \studygroupsVI
+    &
+    \studygroupsVItable
+  \end{tabular}
+  \caption[\figtabsize Problem solution part 5]{\figtabsize \filterii computes the leaf assignment $\phi_1$ -- $\xPi,
+    \xSa, \xFr$ on 2,1,3 respectively. These assignments are
+    deterministic since $X$ consisted of only single elements for each
+  of these leaves. After this the rest of the labeling is fairly
+  obvious but we present it in Figure~\ref{fig:solpartVII} for the
+  sake of completeness.}
+  \label{fig:solpartVI}  
+\end{figure}
+\clearpage
+
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}[h]{c|cc}
+
+    \infiniteloopVII 
+    &
+    &
+    \studygroupsVIItable
+  \end{tabular}
+  \caption[\figtabsize Problem solution part 6]{\figtabsize The last part of the isomorphism is computed as
+  the leaf label $\phi_2$ which maps $\xCh, \xVi$ to 5, 6
+  respectively. Figure~\ref{fig:solpartVIII} shows the final
+  feasibility isomorphism which is the union of all the leaf labels.}
+  \label{fig:solpartVII}  
+\end{figure}
+
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}[h]{c|cc}
+    \infiniteloopVIII
+    &
+    &
+    \studygroupsVIIItable
+  \end{tabular}
+  \caption[\figtabsize Problem solution part 7]{\figtabsize The solution to the problem presented in
+    Figure~\ref{fig:solpartI}. The feasibility hypergraph isomorphism
+    $\phi$ is computed as the union of the leaf labels
+    $\phi_0,\phi_1,\phi_2$. One can easily verify that this
+    isomorphism does indeed induce the path labeling given in the
+    original input.}
+  \label{fig:solpartVIII}
+\end{figure}
+
+
+%\clearpage
 \section[Special target trees]{ Computing feasible TPL with special target trees}
 \label{sec:spltargettree}
 

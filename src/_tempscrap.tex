@@ -1,0 +1,650 @@
+
+\def\studygroupsI{%
+  \begin{tikzpicture}
+
+
+%    \draw[help lines] (0,0) grid (3,4);%
+
+    \draw[scale=1.5,
+          every node/.style={draw = none,%
+                             rectangle,rounded corners,%
+                             fill=gray!60,%
+                             inner sep=3pt}]%
+
+      (0,0) node(sn){\xSn}%
+      (0,1) node(wo){\xWo}%
+      (2,3) node(sa){\xSa}%
+      (1,1) node(pi){\xPi}%
+      (3,2) node(fr){\xFr}%
+      (2,2) node(ch){\xCh}%
+      (2,1) node(vi){\xVi}%
+      (1,2) node(pa){\xPa}%
+
+      (2,4) node(lu){\xLu}%
+      (3,1) node(li){\xLi}%
+      (3,3) node(sc){\xSc}%
+      ;%
+
+    \begin{pgfonlayer}{background}
+      \begin{scope}[every node/.style={ellipse,%
+%                                       rounded corners=5pt,%
+                                       inner sep=2pt,%
+                                       draw,%=black,%
+                                       opacity=0.5%
+                                     }]%
+
+      \node[fill=orange!30, fit = (sn) (wo) (pi)]{}; %%
+      \node[fill=blue!30, fit = (pi) (vi) (pa) (ch)]{}; %%
+      \node[fill=green!30, fit = (fr) (vi) (li) (ch)]{}; %%      
+      \node[fill=red!30, fit = (fr) (sc) (sa) (lu) (ch)]{}; %%
+      \end{scope}
+    \end{pgfonlayer}
+
+  \end{tikzpicture}
+}%
+
+\def\studygroupsIII{%
+  \begin{tikzpicture}
+%    \draw[help lines] (0,0) grid (3,4);%
+
+    \draw[scale=1.5,
+          every node/.style={draw = none,%
+                             rectangle,rounded corners,%
+                             fill=gray!60,%
+                             inner sep=3pt}]%
+
+      (2,3) node(sa){\xSa}%
+      (1,1) node(pi){\xPi}%
+      (3,2) node(fr){\xFr}%
+      (2,2) node(ch){\xCh}%
+      (2,1) node(vi){\xVi}%
+
+      ;%
+
+    \begin{pgfonlayer}{background}
+      \begin{scope}[every node/.style={ellipse,%
+%                                       rounded corners=5pt,%
+                                       inner sep=2pt,%
+                                       draw,%=black,%
+                                       opacity=0.5%
+                                     }]%
+
+      \node[fill=blue!30, fit = (pi) (vi) (ch)]{}; %%
+      \node[fill=green!30, fit = (fr) (vi) (ch)]{}; %%      
+      \node[fill=red!30, fit = (fr) (sa) (ch)]{}; %%
+      \node[fill=orange!30, fit = (pi)]{}; %%
+      \end{scope}
+    \end{pgfonlayer}
+
+  \end{tikzpicture}
+}%
+
+\def\studygroupsIVa{%
+  \begin{tikzpicture}
+%    \draw[help lines] (0,0) grid (3,4);%
+
+    \draw[scale=1.5,
+          every node/.style={draw = none,%
+                             rectangle,rounded corners,%
+                             fill=gray!60,%
+                             inner sep=3pt}]%
+
+      (2,3) node(sa){\xSa}%
+      (1,1) node(pi){\xPi}%
+      (3,2) node(fr){\xFr}%
+      (2,2) node(ch){\xCh}%
+      (2,1) node(vi){\xVi}%
+
+      ;%
+
+    \begin{pgfonlayer}{background}
+      \begin{scope}[every node/.style={ellipse,%
+%                                       rounded corners=5pt,%
+                                       inner sep=2pt,%
+                                       draw,%=black,%
+                                       opacity=0.5%
+                                     }]%
+
+      \node[fill=green!30, fit = (fr) (vi) (ch)]{}; %%      
+      \node[fill=red!30, fit = (fr) (sa) (ch)]{}; %%
+      \node[fill=orange!30, fit = (pi)]{}; %%
+      \node[fill=blue!30, fit = (vi) (ch)]{}; %%
+      \end{scope}
+    \end{pgfonlayer}
+
+  \end{tikzpicture}
+}%
+
+\def\studygroupsIVb{%
+  \begin{tikzpicture}
+%    \draw[help lines] (0,0) grid (3,4);%
+
+    \draw[scale=1.5,
+          every node/.style={draw = none,%
+                             rectangle,rounded corners,%
+                             fill=gray!60,%
+                             inner sep=3pt}]%
+
+      (2,3) node(sa){\xSa}%
+      (1,1) node(pi){\xPi}%
+      (3,2) node(fr){\xFr}%
+      (2,2) node(ch){\xCh}%
+      (2,1) node(vi){\xVi}%
+
+      ;%
+
+    \begin{pgfonlayer}{background}
+      \begin{scope}[every node/.style={ellipse,%
+%                                       rounded corners=5pt,%
+                                       inner sep=2pt,%
+                                       draw,%=black,%
+                                       opacity=0.5%
+                                     }]%
+
+     \node[fill=green!80, fit = (fr) (ch)]{}; %%
+
+      \node[fill=red!30, fit = (sa)]{}; %%
+
+      \node[fill=orange!30, fit = (pi)]{}; %%
+      \node[fill=blue!30, fit = (vi) (ch)]{}; %%
+      \node[fill=green!30, fit = (vi)]{}; %%      
+      \end{scope}
+    \end{pgfonlayer}
+
+  \end{tikzpicture}
+}%
+
+\def\studygroupsVI{%
+  \begin{tikzpicture}
+%    \draw[help lines] (0,0) grid (3,4);%
+
+    \draw[scale=1.5,
+          every node/.style={draw = none,%
+                             rectangle,rounded corners,%
+                             fill=gray!60,%
+                             inner sep=3pt}]%
+
+      (2,2) node(ch){\xCh}%
+      (2,1) node(vi){\xVi}%
+
+      ;%
+
+    \begin{pgfonlayer}{background}
+      \begin{scope}[every node/.style={ellipse,%
+%                                       rounded corners=5pt,%
+                                       inner sep=2pt,%
+                                       draw,%=black,%
+                                       opacity=0.5%
+                                     }]%
+
+     \node[fill=green!80, fit = (ch)]{}; %%
+      \node[fill=blue!30, fit = (vi) (ch)]{}; %%
+      \node[fill=green!30, fit = (vi)]{}; %%      
+      \end{scope}
+    \end{pgfonlayer}
+
+  \end{tikzpicture}
+}%
+
+
+
+\def\infiniteloopI{%
+  \begin{tikzpicture}[every node/.style={circle,inner sep=2pt,draw=gray!90}]%
+
+%    \draw[help lines] (-1,0) grid (6,5);%
+
+    \draw%
+      (0,2) node(a7){7} %
+      (1,2) node(a2){2} %
+      (2,2) node(a6){6} %
+      (3,2) node(a5){5} %
+      (4,2) node(a3){3} %
+      (5,2) node(a11){11} %
+      (1,1) node(a4){4} %
+      (1,3) node(a8){8} %
+      (2,1) node(a10){10} %      
+      (3,3) node(a1){1} %
+      (3,4) node(a9){9} %
+     ;%
+
+    \draw[very thick]%
+      (a2) -- (a4)%
+      (a2) -- (a8)%
+      (a5) -- (a1) -- (a9)
+      (a6) -- (a10)
+      (a7) --
+      (a2) --%
+      (a6) --%
+      (a5) --%
+      (a3) --%
+      (a11) %
+      ;%
+
+    \begin{pgfonlayer}{background}
+    \node[rectangle, rounded corners=5pt, inner sep=6pt,%
+      fill=green!30,  opacity=0.5, fit = (a10) (a6) (a5) (a3)]{}; %%
+    \node[rectangle, rounded corners=5pt, %
+      fill=orange!30, opacity=0.5, fit = (a4) (a2) (a8)]{}; %%
+    \node[rectangle, rounded corners=5pt, %
+      fill=red!30,    opacity=0.5, fit = (a9) (a1) (a5) (a3) (a11)]{}; %%
+    \node[rectangle, rounded corners=5pt, %
+      fill=blue!30,   opacity=0.5, fit = (a7) (a2) (a6) (a5)]{}; %%
+
+   \end{pgfonlayer}
+  \end{tikzpicture}
+}%
+
+\def\infiniteloopIII{%
+  \begin{tikzpicture}[every node/.style={circle,inner sep=2pt,draw=gray!90}]%
+
+    % \draw[help lines] (-1,0) grid (6,5);%
+    
+    % Tree nodes/apartments
+    \draw%
+      (0,2) node(a7){7} %
+      (1,2) node(a2){2} %
+      (2,2) node(a6){6} %
+      (3,2) node(a5){5} %
+      (4,2) node(a3){3} %
+      (5,2) node(a11){11} %
+      (1,1) node(a4){4} %
+      (1,3) node(a8){8} %
+      (2,1) node(a10){10} %      
+      (3,3) node(a1){1} %
+      (3,4) node(a9){9} %
+     ;%
+
+    % Tree
+    \draw[very thick]%
+      (a5) -- (a1)
+      (a2) --%
+      (a6) --%
+      (a5) --%
+      (a3) %
+      ;%
+
+    % Pruned leaves
+    \draw [thin,densely dotted]% 
+      (a7) -- (a2)%
+      (a2) -- (a8)%
+      (a2) -- (a4)%
+      (a6) -- (a10)%
+      (a3) -- (a11)%
+      (a1) -- (a9)%
+      ;%
+
+    % Routes
+    \begin{pgfonlayer}{background}
+      \begin{scope}[every node/.style={rectangle,%
+                                       rounded corners=5pt,%
+                                       inner sep=2pt,%
+                                       draw=black,%
+                                       opacity=0.5%
+                                     }]%
+
+      \node[fill=green!30, fit = (a6) (a5) (a3), inner sep=6pt]{}; %%
+      \node[fill=red!30,   fit = (a1) (a5) (a3) ,inner sep=4pt]{}; %%
+      \node[fill=orange!30,fit = (a2) ,inner sep=4pt]{}; %%
+      \node[fill=blue!30,  fit = (a2) (a6) (a5)]{}; %%
+     \end{scope}
+    \end{pgfonlayer}
+
+   % Assigned leaf nodes/ allocated apartments
+    \draw[every node/.style={draw = none,%
+                             rectangle,rounded corners,%
+                             fill=gray!50,%
+                             inner sep=3pt}]%
+
+      (a7)  node[left=10pt=10pt] {\xPa} %
+      (a11) node[right=10pt] {\xSc} %
+      (a4)  node[below=10pt] {\xWo} %
+      (a8)  node[above=10pt] {\xSn} %
+      (a10) node[below=10pt] {\xLi} %      
+      (a9)  node[above=10pt] {\xLu} %
+     ;%
+
+  \end{tikzpicture}
+}%
+
+\def\infiniteloopIVa{%
+  \begin{tikzpicture}[every node/.style={circle,inner sep=2pt,draw=gray!90}]%
+
+    % \draw[help lines] (-1,0) grid (6,5);%
+    
+    % Tree nodes/apartments
+    \draw%
+      (1,2) node(a2){2} %
+      (2,2) node(a6){6} %
+      (3,2) node(a5){5} %
+      (4,2) node(a3){3} %
+      (3,3) node(a1){1} %
+     ;%
+
+    % Tree
+    \draw[very thick]%
+      (a5) -- (a1)
+      (a2) --%
+      (a6) --%
+      (a5) --%
+      (a3) %
+      ;%
+
+    % Pruned leaves
+    \draw [thin,densely dotted]% 
+     ;%
+
+    % Routes
+    \begin{pgfonlayer}{background}
+      \begin{scope}[every node/.style={rectangle,%
+                                       rounded corners=5pt,%
+                                       inner sep=2pt,%
+                                       draw=black,%
+                                       opacity=0.5%
+                                     }]%
+
+      \node[fill=green!30, fit = (a6) (a5) (a3), inner sep=6pt]{}; %%
+      \node[fill=red!30,   fit = (a1) (a5) (a3) ,inner sep=4pt]{}; %%
+      \node[fill=blue!30,  fit = (a6) (a5)]{}; %%
+      \node[fill=orange!30,fit = (a2) ,inner sep=4pt]{}; %%
+      \end{scope}
+    \end{pgfonlayer}
+
+   % Assigned leaf nodes/ allocated apartments
+    \draw[every node/.style={draw = none,%
+                             rectangle,rounded corners,%
+                             fill=gray!50,%
+                             inner sep=3pt}]%
+
+    ;%
+
+  \end{tikzpicture}
+}%
+
+\def\infiniteloopIVb{%
+  \begin{tikzpicture}[every node/.style={circle,inner sep=2pt,draw=gray!90}]%
+
+    % \draw[help lines] (-1,0) grid (6,5);%
+    
+    % Tree nodes/apartments
+    \draw%
+      (1,2) node(a2){2} %
+      (2,2) node(a6){6} %
+      (3,2) node(a5){5} %
+      (4,2) node(a3){3} %
+      (3,3) node(a1){1} %
+     ;%
+
+    % Tree
+    \draw[very thick]%
+      (a5) -- (a1)
+      (a2) --%
+      (a6) --%
+      (a5) --%
+      (a3) %
+      ;%
+
+    % Pruned leaves
+    \draw [thin,densely dotted]% 
+     ;%
+
+    % Routes
+    \begin{pgfonlayer}{background}
+      \begin{scope}[every node/.style={rectangle,%
+                                       rounded corners=5pt,%
+                                       inner sep=2pt,%
+                                       draw=black,%
+                                       opacity=0.5%
+                                     }]%
+
+      \node[fill=green!30, fit = (a6)     , inner sep=6pt]{}; %%
+      \node[fill=green!80, fit = (a5) (a3), inner sep=4pt]{}; %%
+      \node[fill=red!30,   fit = (a1)     , inner sep=4pt]{}; %%
+      \node[fill=blue!30,  fit = (a6) (a5)]{}; %%
+      \node[fill=orange!30,fit = (a2)     ,inner sep=4pt]{}; %%
+      \end{scope}
+    \end{pgfonlayer}
+
+   % Assigned leaf nodes/ allocated apartments
+    \draw[every node/.style={draw = none,%
+                             rectangle,rounded corners,%
+                             fill=gray!50,%
+                             inner sep=3pt}]%
+
+    ;%
+
+  \end{tikzpicture}
+}%
+
+\def\infiniteloopVI{%
+  \begin{tikzpicture}[every node/.style={circle,inner sep=2pt,draw=gray!90}]%
+
+    % \draw[help lines] (-1,0) grid (6,5);%
+    
+    % Tree nodes/apartments
+    \draw%
+      (1,2) node(a2){2} %
+      (2,2) node(a6){6} %
+      (3,2) node(a5){5} %
+      (4,2) node(a3){3} %
+      (3,3) node(a1){1} %
+     ;%
+
+    % Tree
+    \draw[very thick]%
+      (a6) -- (a5)
+      ;%
+
+    % Pruned leaves
+    \draw [thin,densely dotted]% 
+      (a5) -- (a1)%
+      (a2) -- (a6)%
+      (a5) -- (a3)%
+     ;%
+
+    % Routes
+    \begin{pgfonlayer}{background}
+      \begin{scope}[every node/.style={rectangle,%
+                                       rounded corners=5pt,%
+                                       inner sep=2pt,%
+                                       draw=black,%
+                                       opacity=0.5%
+                                     }]%
+
+      \node[fill=blue!30,  fit = (a6) (a5) , inner sep=6pt]{}; %%
+      \node[fill=green!30, fit = (a6)     ]{}; %%
+      \node[fill=green!80, fit = (a5)]{}; %%
+     \end{scope}
+    \end{pgfonlayer}
+
+   % Assigned leaf nodes/ allocated apartments
+    \draw[every node/.style={draw = none,%
+                             rectangle,rounded corners,%
+                             fill=gray!50,%
+                             inner sep=3pt}]%
+
+      (a1)  node[above=10pt] {\xSa} %
+      (a2) node[left=10pt] {\xPi} %
+      (a3)  node[right=10pt] {\xFr} %
+    ;%
+
+  \end{tikzpicture}
+}%
+
+\def\infiniteloopVII{%
+  \begin{tikzpicture}[every node/.style={circle,inner sep=2pt,draw=gray!90}]%
+
+    % \draw[help lines] (-1,0) grid (6,5);%
+    
+    % Tree nodes/apartments
+    \draw%
+      (2,2) node(a6){6} %
+      (3,2) node(a5){5} %
+     ;%
+
+    % Tree
+    \draw[very thick]%
+      (a6) -- (a5)
+      ;%
+
+    % Pruned leaves
+    \draw [thin,densely dotted]% 
+     ;%
+
+    % Routes
+    \begin{pgfonlayer}{background}
+      \begin{scope}[every node/.style={rectangle,%
+                                       rounded corners=5pt,%
+                                       inner sep=2pt,%
+                                       draw=black,%
+                                       opacity=0.5%
+                                     }]%
+
+%      \node[fill=blue!30,  fit = (a6) (a5) , inner sep=6pt]{}; %%
+      \node[fill=green!30, fit = (a6)     ]{}; %%
+      \node[fill=green!80, fit = (a5)]{}; %%
+      \end{scope}
+    \end{pgfonlayer}
+
+   % Assigned leaf nodes/ allocated apartments
+    \draw[every node/.style={draw = none,%
+                             rectangle,rounded corners,%
+                             fill=gray!50,%
+                             inner sep=3pt}]%
+
+
+      (a6) node[left=13pt] {\xVi} %
+      (a5)  node[right=13pt] {\xCh} %
+     ;%
+
+  \end{tikzpicture}
+}%
+
+\def\infiniteloopVIII{%
+  \begin{tikzpicture}[every node/.style={circle,inner sep=2pt,draw=gray!90}]%
+
+%   \draw[help lines] (-1,0) grid (6,5);%
+
+    \draw[scale=1.5]%
+      (0,2) node(a7){7} %
+      (1,2) node(a2){2} %
+      (2,2) node(a6){6} %
+      (3,2) node(a5){5} %
+      (4,2) node(a3){3} %
+      (5,2) node(a11){11} %
+      (1,1) node(a4){4} %
+      (1,3) node(a8){8} %
+      (2,1) node(a10){10} %      
+      (3,3) node(a1){1} %
+      (3,4) node(a9){9} %
+     ;%
+
+    \draw[very thick]%
+      (a2) -- (a4)%
+      (a2) -- (a8)%
+      (a5) -- (a1) -- (a9)
+      (a6) -- (a10)
+      (a7) --
+      (a2) --%
+      (a6) --%
+      (a5) --%
+      (a3) --%
+      (a11) %
+      ;%
+
+    \begin{pgfonlayer}{background}
+    \node[rectangle, rounded corners=5pt, %
+      fill=blue!30,   opacity=0.5, fit = (a7) (a2) (a6) (a5)]{}; %%
+    \node[rectangle, rounded corners=5pt, inner sep=6pt,%
+      fill=green!30,  opacity=0.5, fit = (a10) (a6) (a5) (a3)]{}; %%
+    \node[rectangle, rounded corners=5pt, %
+      fill=orange!30, opacity=0.5, fit = (a4) (a2) (a8)]{}; %%
+    \node[rectangle, rounded corners=5pt, %
+      fill=red!30,    opacity=0.5, fit = (a9) (a1) (a5) (a3) (a11)]{}; %%
+   \end{pgfonlayer}
+
+   % Assigned leaf nodes/ allocated apartments
+    \draw[every node/.style={draw = none,%
+                             rectangle,rounded corners,%
+                             fill=gray!50,%
+                             inner sep=3pt}]%
+
+
+     (a1) node[right=13pt] {\xSa} %
+     (a2) node[above left=15pt] {\xPi} %
+     (a3) node[above=13pt] {\xFr} %
+     (a4) node[left=13pt] {\xWo} %
+     (a5) node[below=13pt] {\xCh} %
+     (a6) node[above=13pt] {\xVi} %
+     (a7) node[left=13pt] {\xPa} %
+     (a8) node[above=13pt] {\xSn} %
+     (a9) node[right=13pt] {\xLu} %
+     (a10) node[right=13pt] {\xLi} %
+     (a11) node[right=13pt] {\xSc} %
+     ;%
+
+  \end{tikzpicture}
+}%
+
+
+\infiniteloopI
+\studygroupsI
+
+
+\infiniteloopIII\hfill
+\begin{tabular}[h]{r|l}
+  \multicolumn{2}{c}{$\phi_0$}\\
+  \hline
+  4 & \xWo\\
+  7 & \xPa\\
+  8 & \xSn\\
+  9 & \xLu\\
+  10 & \xLi\\
+  11 & \xSc\\
+\end{tabular}
+\studygroupsIII
+
+
+\infiniteloopIVa
+\studygroupsIVa
+
+
+\infiniteloopIVb
+\studygroupsIVb
+
+
+\infiniteloopVI\hfill
+\begin{tabular}[h]{r|l}
+  \multicolumn{2}{c}{$\phi_1$}\\
+  \hline
+  1 & \xSa\\
+  2 & \xPi\\
+  3 & \xFr\\
+\end{tabular}
+\studygroupsVI
+
+\infiniteloopVII\hfill
+\begin{tabular}[h]{r|l}
+  \multicolumn{2}{c}{$\phi_2$}\\
+  \hline
+  5 & \xCh\\
+  6 & \xVi\\
+\end{tabular}
+
+\infiniteloopVIII\hfill
+\begin{tabular}[h]{r|l}
+%  \multicolumn{2}{c}{\parbox[c]{2cm}{$\phi = \phi_0 \cup \phi_1 \cup
+%  \phi_2$}}\\
+    \multicolumn{2}{c}{$\phi = \phi_0 \cup \phi_1 \cup \phi_2$}\\
+  \hline
+  1 & \xSa\\
+  2 & \xPi\\
+  3 & \xFr\\
+  4 & \xWo\\
+  5 & \xCh\\
+  6 & \xVi\\
+  7 & \xPa\\
+  8 & \xSn\\
+  9 & \xLu\\
+  10 & \xLi\\
+  11 & \xSc\\
+\end{tabular}

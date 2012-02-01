@@ -228,49 +228,91 @@ extensions of COP, more specifically, the extension of interval
 assignment problem to tree path assignment problem (which is
 illustrated by the study group accommodation problem).
 
-\tnote[dire]{
+
 \section[Basic preliminaries]{Basic preliminaries} 
 \label{sec:basicprelim}
 
+Here we see some basic definitions and conventions necessary for the contents
+of this thesis.
+
+\subsection{Matrices}
 If $n$ is a positive integer, $[n]$ denotes the set $\{1,2,... n\}$.
 
 \begin{definition}[Binary matrix]
   \label{def:binmatrix}
   Let $M$ be an $n \times m$ matrix. $m_{i,j}$ denotes its $(i,j)$th
-  element, i.e. element at $i$th row and $j$th column. $M$ is a \textbf{binary
-  matrix} if each of its element is 0 or \un.  In other words, for all
+  element, i.e. element at $i$th row and $j$th column. $M$ is a
+  \textbf{binary matrix} if each of its element is 0 or \un; for all
   $i \in [n]$ and $j \in [m]$, $m_{i,j} \in \{0, \un\}$
 \end{definition}
 
 \begin{definition}[Permutation]
   A \textbf{permutation} $\lambda$ of a set $X = \{x_1, x_2, \ldots
-  x_n\}$ is a bijection $\lambda: X \rightarrow X$.  For simplicity,
-  $\lambda$ may be written as a sequence $x_{i_1}x_{i_2}\ldots x_{i_n}$,
-  where $i_j \in [n]$ to mean that $\lambda(x_j)= x_{i_j}$.
-  This document uses both notations as convenient in context.
+  x_n\}$ is a bijection $\lambda: X \rightarrow X$.  $\lambda$ may be
+  written as a sequence $x_{i_1}x_{i_2}\ldots x_{i_n}$, where $i_j \in
+  [n]$ to mean that $\lambda(x_j)= x_{i_j}$.  This document uses both
+  notations as convenient in context.
 \end{definition}
 
-\begin{definition}[\Cop]
+The idea of \cop of binary matrices was mentioned a few times in
+earlier sections. Now we will see the formal definition of \COP in
+Definition~\ref{{def:copmatrix}}.
+
+\begin{definition}[\Cop (on columns)]
   \label{def:copmatrix}
   Let $M$ be a binary matrix.
-  \begin{itemize}
-  \item \textbf{\Cop}
-  \item \textbf{Strong \cop}
-  \item \textbf{\Cop order} or \cop permutation
-  \end{itemize}
+  \begin{enumerate}
+  \hangindent \defindent
+  \item A \textbf{block of \un s (block of 0s)} in a column of $M$ is a maximal set of
+    consecutive \un-entries (0-entries) in this column.
+  \item $M$ has the \textbf{strong \cop
+      (strong \COP)} if in every column the \un s appear consecutively,
+    \ie if every column contains at most one block of \un s.
+  \item $M$ has the \textbf{\cop} if its rows can be
+    permuted in such a way that the resulting matrix has the strong \COP.
+  \item If an ordering for the rows of $M$ gives the strong \COP, it
+    is called a \textbf{\COP order} or \textbf{\COP permutation}.
+  \end{enumerate}
 \end{definition}
+
+When the roles of rows and columns are exchanged in
+Definition~\ref{def:copmatrix}, it defines \COP on rows. Both
+are equivalent properties (for the purposes of this thesis) and both
+conventions are seen the literature.
+Figure~\ref{fig:cop-matrix} gives an example of \COP on columns.
 
 \figcopmatrix
 
-\begin{definition}[\Crop]
+A less restrictive property of binary matrices that is a
+generalization of the \COP is \crop (\CROP). The matrix can be
+visualized to be wrapped around a horizontal cylinder and demands that
+after some row permutations, if required, in every column the \un s
+appear consecutively on the cylinder -- note that this implies the 0s
+also appear consecutively.
+
+\begin{definition}[\Crop (on columns)]
   \label{def:cropmatrix}
+  Let $M$ be a binary matrix.
+  \begin{enumerate}
+  \hangindent \defindent
+  \item $M$ has the \textbf{strong \crop (strong \CROP)} if in every
+    column the \un s appear consecutively or the 0s appear
+    consecutively or both.
+  \item $M$ has the \textbf{\crop (\CROP)} if its rows can be permuted
+    in such a way that the resulting matrix has the strong \CROP.
+  \item If an ordering for the rows of $M$ gives the strong \CROP,
+    then it is called the \textbf{\CROP ordering} or \textbf{\CROP
+      permutation}.
+  \end{enumerate}
 \end{definition}
+
+\subsection{Sets}
 
 \begin{definition}[Set system]
   \label{def:setsystem}
-
   Let $U$ be a universe with $|U| = n$.  
-  \begin{itemize}
+  \begin{enumerate}
+  \hangindent \defindent
   \item The set $\F \subseteq (2^{U} \setminus \emptyset)$ is called a
     \textbf{set system} with universe $U$.
   \item Two sets $S, S' \in \cF$ are said to \textbf{overlap}, denoted
@@ -278,40 +320,63 @@ If $n$ is a positive integer, $[n]$ denotes the set $\{1,2,... n\}$.
     neither is contained in the other.
     \[S \overlap S' \text{ \iff\ } S \cap S' \ne \emptyset, S
     \nsubseteq S', S' \nsubseteq S\]
-  \end{itemize}
+  \end{enumerate}
 \end{definition}
 
 
-\begin{definition}[Partial order]
+\begin{definition}
   \label{def:poset}    
-  Let $A$ be a set and $R$ be a binary relation $R \subseteq A \times
-  A$.
+%   Let $A$ be a set and $R$ be a binary relation $R \subseteq A \times
+%   A$.
 
-  \textbf{poset}
-
+%   \textbf{poset}
   Let $X$ be a partially ordered set with $\preccurlyeq$ being the
   partial order on $X$.
 
-  \begin{itemize}
-  \item \textbf{hasse diagram}
-  \item \textbf{maximal upper bound}  $X_m \in X$ is a \textbf{maximal upper bound} of $X$
-  if $\nexists X_q \in X$ such that $X_m \preccurlyeq X_q$.  A maximal
-  upper bound on $X$ is denoted by $mub(X)$.
+  \begin{enumerate}
+  \hangindent \defindent
+%  \item \textbf{hasse diagram}
+  \item An element $X_m \in X$ is a
+    \textbf{maximal upper bound} of $X$ if $\nexists X_q \in X$ such
+    that $X_m \preccurlyeq X_q$.  A maximal upper bound on $X$ is
+    denoted by $mub(X)$.
 
   \item A set of sets form a \textbf{single
       inclusion chain} when the Hasse diagram of their subset relation
     forms a single chain.
-  \end{itemize}
+  \end{enumerate}
 \end{definition}
 
-\begin{definition}[Graph, Tree]
-  \label{def:graphtree}  
-  \tnote[dire]{take from doms}
+\subsection{Graphs}
+
+\begin{definition}[Graph, Tree, Path]
+  \label{def:graphtree}
+  \begin{enumerate}
+    \hangindent \defindent
+  \item An \textbf{(undirected) graph} is $G = (V,E)$ is \stt $V$ is a
+    finite set and $E$ is a set of ordered pairs, $E \subseteq V
+    \times V$. An element in $V$ is called a \textbf{vertex
+      (\emph{pl.} vertices)} and an element from $E$ is called an
+    \textbf{edge}. $V$ and $E$ may be written as $V(G)$ and $E(G)$
+    respectively. If $u,v \in V$ and $(u,v) \in E$ then $v$ is said to
+    be \textbf{adjacent} to $u$ and vice versa. A \textbf{subgraph} of
+    $G$ is a graph $G' = (V',E')$ \stt $V' \subseteq V$ and $E'
+    \subseteq E$.
+
+  \item A \textbf{path} is a graph $P = (V,E)$ with vertex set $V =
+    \{v_1,\ldots,v_n\}$ and edge set $E= \{ (v_1,v_2),(v_2,v_3),
+    \ldots,(v_{n-2},v_{n-1}),(v_{n-1},v_{n})\}$. The vertices $v_1,
+    v_n$ are called the \textbf{endpoints} of $P$. The graph $P$ is
+    called a \textbf{cycle} if it has an additional edge $(v_n,v_1)$.
+
+  \item A \textbf{tree} is a graph $T$ that has no subgraph that is a
+    cycle.
+  \end{enumerate}
 \end{definition}
 
-When refering to a tree as $T$ it could be a reference to the tree
-itself, or the vertices of the tree. This will be clear from the
-context.
+% When refering to a tree as $T$ it could be a reference to the tree
+% itself, or the vertices of the tree. This will be clear from the
+% context.
 
 \begin{definition}[Intersection graph]
   \label{def:intersectiongraph}
@@ -323,24 +388,22 @@ context.
 
 \begin{definition}[Interval graph, Path graph]
   \label{def:pathgraph}
-  
-  \begin{itemize}
-  \item A graph $G$ is an \textbf{interval graph} if there a set of intervals
+  Let $G$ be a graph.
+  \begin{enumerate}
+  \hangindent \defindent
+  \item $G$ is an \textbf{interval graph} if there a set of intervals
     $\cI$ \stt $G$ is isomorphic to the intersection graph of
     $\cI$. \[G \cong \bI(\cI)\]
-  \item A graph $G$ is a \textbf{path graph} if there exists a tree $T$ and a
+  \item $G$ is a \textbf{path graph} if there exists a tree $T$ and a
     set of paths from $T$, $\cP$ \stt $G$ is isomorphic to the
     intersection graph of $\cP$. \[G \cong \bI(\cP)\]
-  \end{itemize}
+  \item $G$ is a \textbf{chordal graph} if it has no induced cycle of
+    length greater than 3. Moreover, a \textbf{chordal graph} is
+    characterized as an intersection graph of subtrees of a tree.
+  \end{enumerate}
 \end{definition}
-Moreover, a \textbf{chordal graph} is characterized as an intersection
-graph of subtrees of a tree.
 
 
-\begin{definition}[Maximal clique]
-  \label{def:maxclique}    
-\end{definition}
-}
 
 \section[Brief Survey]{Consecutive-ones Property - a Brief Survey}
 \label{sec:background}
