@@ -314,41 +314,78 @@
 }%
 
 
+\def\pqtreegraph{%
+  \begin{tikzpicture}
+    [%level 1/.style={level distance=4mm}
+    level 1/.style={sibling distance=24mm},
+    level 2/.style={sibling distance=13mm},
+    level 3/.style={sibling distance=6mm}] 
+    \node[rectangle, draw, grow=down]{\ \ \ \ \ }%
+      child{node[circle, fill]{}%   
+        child{node[rectangle,draw]{\ \ \ \ \ }%
+          child{node(a){$r_1$}}%
+          child{node{$r_2$}}%
+          child{node{$r_3$}}%
+        }%
+        child{node{$r_4$}}%
+        child{node{$r_5$}}%
+      }%
+      child{ node{$r_6$}}%
+      child{node[rectangle, draw]{\ \ \ \ \ }%
+        child{node{$r_7$}}%
+        child{node[circle,fill]{}%
+          child{node{$r_8$}}%
+          child{node{$r_9$}}%
+        }%
+        child{node{$r_{10}$}}%
+        child{node{$r_{11}$}}%
+      }%
+     ;%
+  \end{tikzpicture}
+}%
+
+\def\pqtreematrix{%
+  \begin{tabular}[b]
+    {>{\columncolor{\tblhcolor}} l lllllllllll|}
+    \hline
+    $r_1$   &\un &0   &\un &0   &0   &0    &0   \\
+    $r_2$   &\un &0   &\un &0   &0   &0    &0   \\
+    $r_3$   &\un &0   &0   &\un &0   &0    &0   \\
+    $r_4$   &\un &0   &0   &\un &0   &0    &0   \\
+    $r_5$   &\un &0   &0   &0   &0   &0    &0   \\
+    $r_6$   &\un &\un &0   &0   &0   &0    &0   \\
+    $r_7$   &0   &\un &0   &0   &0   &\un  &0   \\
+    $r_8$   &0   &\un &0   &0   &\un &\un  &0   \\
+    $r_9$   &0   &\un &0   &0   &\un &\un  &0   \\
+    $r_{10}$ &0   &\un &0   &0   &\un &\un  &\un \\
+    $r_{11}$ &0   &\un &0   &0   &\un &0    &\un \\
+    \hline
+  \end{tabular}
+}%
 
 \def\figpqtree{%
-  \begin{figure}[htbp]
+  \begin{figure}[tb]
     \centering
+
     \begin{tabular}[h]{lr}
-      \begin{tabular}[h]
-        {>{\columncolor{\tblhcolor}} l lllllllllll|}
-        \hline
-        $r_1$   &\un &0   &\un &0   &0   &0    &0   \\
-        $r_2$   &\un &0   &\un &0   &0   &0    &0   \\
-        $r_3$   &\un &0   &0   &\un &0   &0    &0   \\
-        $r_4$   &\un &0   &0   &\un &0   &0    &0   \\
-        $r_5$   &\un &0   &0   &0   &0   &0    &0   \\
-        $r_6$   &\un &\un &0   &0   &0   &0    &0   \\
-        $r_7$   &0   &\un &0   &0   &0   &\un  &0   \\
-        $r_8$   &0   &\un &0   &0   &\un &\un  &0   \\
-        $r_9$   &0   &\un &0   &0   &\un &\un  &0   \\
-        $r_{10}$ &0   &\un &0   &0   &\un &\un  &\un \\
-        $r_{11}$ &0   &\un &0   &0   &\un &0    &\un \\
-        \hline
-      \end{tabular}
-      &
-      \includegraphics[scale=0.3]{../img/pqtree.png}
-    
+    \pqtreematrix      &      \pqtreegraph
     \end{tabular}
  
     \caption[\figtabsize An example for \PQtree]{\figtabsize An
-      example for \PQtree.  Permuting the order of the left child of
-      the root, we see that \temptext{(d,a,b,c,e,f,g,h,i,j,k)} is a
-      \COP order. Reversing the order of the right child of the root,
-      we see that \temptext{(a,b,c,d,e,f,k,j,h,i,g) } is yet another
-      \COP order. \temptext{PLACEHOLDER IMG.}
-      \cite[Fig.~1\endnote{\cite{mcc04}illustrates \COP on rows. Our
-        convention in this document is \COP on columns and thus
-        example matrix has been transposed. }]{mcc04}}
+      example for \PQtree with the associated matrix with \COP. The
+      dark circular nodes are $P$-nodes and rectangular nodes are
+      $Q$-nodes. The root is the topmost node which in this case is a
+      $Q$-node.  Permuting the order of the left child of the root,
+      which is a $P$-node, we see that
+      $(r_4,r_1,r_2,r_3,r_5,r_6,r_7,r_8,r_9,r_{10},r_{11})$ is a \COP
+      order. Reversing the order of the right child of the root, which
+      is a $Q$-node, we see that
+      $(r_1,r_2,r_3,r_4,r_5,r_6,r_{11},r_{10},r_8,r_9,r_7)$ is yet
+      another \COP order.
+      \cite[Fig.~1]{mcc04}%  {(\cite{mcc04}illustrates \COP on rows. Our
+%         convention in this document is \COP on columns and thus
+%         example matrix has been transposed.)}
+    }
     \label{fig:pqtree}
   \end{figure}
 }%
@@ -1767,4 +1804,99 @@
     11 & \xSc\\
   \end{tabular}
 }%
+
+
+\def\pctreegraphmatrix{%
+  \begin{tabular}[b]
+    {>{\columncolor{\tblhcolor}} l llllllll|}
+    \hline
+    $r_1$   &\un &0   &\un &0   &0   &0    &0   &0   \\
+    $r_2$   &\un &\un &0   &0   &0   &0    &0   &0   \\
+    $r_3$   &0   &\un &\un &0   &0   &0    &0   &0   \\
+    $r_4$   &0   &0   &\un &\un &0   &0    &0   &0   \\
+    $r_5$   &0   &0   &\un &\un &\un &0    &0   &0   \\
+    $r_6$   &0   &0   &\un &0   &\un &0    &0   &0   \\
+    $r_7$   &0   &0   &\un &0   &0   &\un  &0   &0   \\
+    $r_8$   &0   &0   &\un &0   &0   &\un  &\un &0   \\
+    $r_9$   &0   &0   &\un &0   &0   &0    &\un &0   \\
+    $r_{10}$ &0   &0   &\un &0   &0   &0    &0   &\un \\
+    \hline
+  \end{tabular}
+}%
+
+\def\pctreegraphii{%
+ \begin{tikzpicture}
+    [grow cyclic, 
+     level 1/.style={level distance=7mm,sibling angle=100}, 
+     level 2/.style={level distance=10mm, sibling angle=35}
+     ]
+    \node[circle,inner sep=3pt,fill]{}%
+      child{node[circle,draw,inner sep=0pt,double, double
+        distance=1pt]{\ \ \ }%    
+        child{node{$r_9$}}%
+        child{node{$r_8$}}%
+        child{node{$r_7$}}%
+      }%
+      child{node[circle,draw,inner sep=0pt,double, double
+        distance=1pt](p456){\ \ \ }%
+        child{node(r4){$r_4$}}%
+        child{node(r5){$r_5$}}%
+        child{node(r6){$r_6$}}%
+      }%
+      child{node[circle,draw,inner sep=0pt,double, double
+        distance=1pt]{\ \ \ }%  
+        child{node{$r_3$}}%
+        child{node{$r_2$}}%
+        child{node{$r_1$}}%
+      }%
+      child[level distance=10mm]{ node{$r_{10}$}}%
+     ;%
+
+     \begin{pgfonlayer}{background}
+       \node[rectangle, rounded corners=10pt,%
+            inner sep=2pt, fill=red!30,%
+            opacity=0.5,% 
+            fit = (p456)(r4) (r5) (r6)] (flipped){};%
+     \end{pgfonlayer}    
+  \end{tikzpicture}
+}%
+
+
+\def\pctreegraphi{%
+ \begin{tikzpicture}
+    [grow cyclic, 
+     level 1/.style={level distance=7mm,sibling angle=100}, 
+     level 2/.style={level distance=10mm, sibling angle=35}
+     ]
+    \node[circle,inner sep=3pt,fill]{}%
+      child{node[circle,draw,inner sep=0pt,double, double
+        distance=1pt]{\ \ \ }%    
+        child{node{$r_9$}}%
+        child{node{$r_8$}}%
+        child{node{$r_7$}}%
+      }%
+      child{node[circle,draw,inner sep=0pt,double, double
+        distance=1pt](p456){\ \ \ }%
+        child{node(r6){$r_6$}}%
+        child{node(r5){$r_5$}}%
+        child{node(r4){$r_4$}}%
+      }%
+      child{node[circle,draw,inner sep=0pt,double, double
+        distance=1pt]{\ \ \ }%  
+        child{node{$r_3$}}%
+        child{node{$r_2$}}%
+        child{node{$r_1$}}%
+      }%
+      child[level distance=10mm]{ node{$r_{10}$}}%
+     ;%
+
+     \begin{pgfonlayer}{background}
+       \node[rectangle, rounded corners=10pt,%
+            inner sep=2pt, fill=red!30,%
+            opacity=0.5,% 
+            fit = (p456)(r4) (r5) (r6)] (flipped){};%
+     \end{pgfonlayer}    
+  \end{tikzpicture}
+}%
+
 

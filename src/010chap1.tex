@@ -576,9 +576,7 @@ rows (columns) that must be deleted to result in a matrix with COP.
 In the dual problem {\sc Max COS-R (Max COS-C)} the search is for the
 maximum number of rows (columns) that induces a submatrix with
 COP. Given a matrix $M$ with no COP, \cite{b75-phd} shows that finding
-a submatrix $M'$ with all columns\temptext{ check if b75 deals with
-  COP col or COP row. also is it any submatrix with k less than r rows
-  or submatrix must have all columns? } but a maximum cardinality
+a submatrix $M'$ with all columns but a maximum cardinality
 subset of rows such that $M'$ has COP is NP complete. \cite{hg02}
 corrects an error of the abridged proof of this reduction as given in
 \cite{gj79}.  \cite{d08phd} discusses all these problems in detail
@@ -594,10 +592,8 @@ discusses approximation of {\sc COP Augmentation} which is the problem
 of changing of the minimum number of zero entries to {\un}s so that
 the resulting matrix has COP. As mentioned earlier, this problem is
 known to be NP complete due to \cite{b75-phd}. \cite{v85} also proves,
-using a reduction to the longest path problem, \temptext{ or is it a
-  survey of another result?  check.} that finding a Tucker's forbidden
-submatrix of at least $k$ rows is NP complete. \temptext{ how is this
-  different from booth's 75 result??}  
+using a reduction to the longest path problem, that finding a Tucker's
+forbidden submatrix of at least $k$ rows is NP complete.
 
 \cite{jkckv04} discusses the use of matrices with almost-COP (instead
 of one block of consecutive {\un}s, they have $x$ blocks, or {\em

@@ -1,4 +1,121 @@
+\def\pctreegraphmatrix{%
+  \begin{tabular}[b]
+    {>{\columncolor{\tblhcolor}} l llllllll|}
+    \hline
+    $r_1$   &\un &0   &\un &0   &0   &0    &0   &0   \\
+    $r_2$   &\un &\un &0   &0   &0   &0    &0   &0   \\
+    $r_3$   &0   &\un &\un &0   &0   &0    &0   &0   \\
+    $r_4$   &0   &0   &\un &\un &0   &0    &0   &0   \\
+    $r_5$   &0   &0   &\un &\un &\un &0    &0   &0   \\
+    $r_6$   &0   &0   &\un &0   &\un &0    &0   &0   \\
+    $r_7$   &0   &0   &\un &0   &0   &\un  &0   &0   \\
+    $r_8$   &0   &0   &\un &0   &0   &\un  &\un &0   \\
+    $r_9$   &0   &0   &\un &0   &0   &0    &\un &0   \\
+    $r_{10}$ &0   &0   &\un &0   &0   &0    &0   &\un \\
+    \hline
+  \end{tabular}
+}%
 
+\def\pctreegraphii{%
+ \begin{tikzpicture}
+    [grow cyclic, 
+     level 1/.style={level distance=7mm,sibling angle=100}, 
+     level 2/.style={level distance=10mm, sibling angle=35}
+     ]
+    \node[circle,inner sep=3pt,fill]{}%
+      child{node[circle,draw,inner sep=0pt,double, double
+        distance=1pt]{\ \ \ }%    
+        child{node{$r_9$}}%
+        child{node{$r_8$}}%
+        child{node{$r_7$}}%
+      }%
+      child{node[circle,draw,inner sep=0pt,double, double
+        distance=1pt](p456){\ \ \ }%
+        child{node(r4){$r_4$}}%
+        child{node(r5){$r_5$}}%
+        child{node(r6){$r_6$}}%
+      }%
+      child{node[circle,draw,inner sep=0pt,double, double
+        distance=1pt]{\ \ \ }%  
+        child{node{$r_3$}}%
+        child{node{$r_2$}}%
+        child{node{$r_1$}}%
+      }%
+      child[level distance=10mm]{ node{$r_{10}$}}%
+     ;%
+
+     \begin{pgfonlayer}{background}
+       \node[rectangle, rounded corners=10pt,%
+            inner sep=2pt, fill=red!30,%
+            opacity=0.5,% 
+            fit = (p456)(r4) (r5) (r6)] (flipped){};%
+     \end{pgfonlayer}    
+  \end{tikzpicture}
+}%
+
+
+\def\pctreegraphi{%
+ \begin{tikzpicture}
+    [grow cyclic, 
+     level 1/.style={level distance=7mm,sibling angle=100}, 
+     level 2/.style={level distance=10mm, sibling angle=35}
+     ]
+    \node[circle,inner sep=3pt,fill]{}%
+      child{node[circle,draw,inner sep=0pt,double, double
+        distance=1pt]{\ \ \ }%    
+        child{node{$r_9$}}%
+        child{node{$r_8$}}%
+        child{node{$r_7$}}%
+      }%
+      child{node[circle,draw,inner sep=0pt,double, double
+        distance=1pt](p456){\ \ \ }%
+        child{node(r6){$r_6$}}%
+        child{node(r5){$r_5$}}%
+        child{node(r4){$r_4$}}%
+      }%
+      child{node[circle,draw,inner sep=0pt,double, double
+        distance=1pt]{\ \ \ }%  
+        child{node{$r_3$}}%
+        child{node{$r_2$}}%
+        child{node{$r_1$}}%
+      }%
+      child[level distance=10mm]{ node{$r_{10}$}}%
+     ;%
+
+     \begin{pgfonlayer}{background}
+       \node[rectangle, rounded corners=10pt,%
+            inner sep=2pt, fill=red!30,%
+            opacity=0.5,% 
+            fit = (p456)(r4) (r5) (r6)] (flipped){};%
+     \end{pgfonlayer}    
+  \end{tikzpicture}
+}%
+
+
+
+\def\graphici{%
+  $G_1$:\\ 
+  \begin{tikzpicture}[every node/.style={circle,inner
+      sep=1pt,fill=gray!80}] %
+    % Using tree mode of drawing to avoid coordinate coding
+    \node{$v_5$}%
+      child{node (v3){$v_3$}%
+        child{node (v4){$v_4$}}%
+        child{node {}}% DUMMY to make alignment work
+      }%
+      child{node (v1){$v_1$}%
+        child{node (v2){$v_2$}}%
+        child{node (v6){$v_6$}}%
+      }%
+      ;%
+
+      \draw (v3)--(v1);%
+      \draw (v2)--(v4);%     
+      \draw (v2)--(v6);%
+  \end{tikzpicture}
+}%
+
+%%%%%%%%%% END
 \def\studygroupsI{%
   \begin{tikzpicture}
 
@@ -585,66 +702,24 @@
   \end{tikzpicture}
 }%
 
-
-\infiniteloopI
-\studygroupsI
+%%%%%%%% BEGIN
 
 
-\infiniteloopIII\hfill
-\begin{tabular}[h]{r|l}
-  \multicolumn{2}{c}{$\phi_0$}\\
-  \hline
-  4 & \xWo\\
-  7 & \xPa\\
-  8 & \xSn\\
-  9 & \xLu\\
-  10 & \xLi\\
-  11 & \xSc\\
-\end{tabular}
-\studygroupsIII
+%\includegraphics[scale=0.3]{../img/pqtree.png}
+
+% 1 2 3 4 5 6 7 8 9 10 11
+% a b c d e f g h i j  k
+
+% (d,  a,  b,  c,  e,  f,  g,  h,  i,  j,     k)
+% (r_4,r_1,r_2,r_3,r_5,r_6,r_7,r_8,r_9,r_{10},r_{11})
+
+% (r_1,r_2,r_3,r_4,r_5,r_6,r_{11},r_{10},r_8,r_9,r_7)
 
 
-\infiniteloopIVa
-\studygroupsIVa
+% \pqtreegraph
+% Permuting the order of the left child of the root, we see that
+% $(r_4,r_1,r_2,r_3,r_5,r_6,r_7,r_8,r_9,r_{10},r_{11})$ is a \COP
+% order. Reversing the order of the right child of the root, we see that
+% $(r_1,r_2,r_3,r_4,r_5,r_6,r_{11},r_{10},r_8,r_9,r_7)$ is yet another
+% \COP order.
 
-
-\infiniteloopIVb
-\studygroupsIVb
-
-
-\infiniteloopVI\hfill
-\begin{tabular}[h]{r|l}
-  \multicolumn{2}{c}{$\phi_1$}\\
-  \hline
-  1 & \xSa\\
-  2 & \xPi\\
-  3 & \xFr\\
-\end{tabular}
-\studygroupsVI
-
-\infiniteloopVII\hfill
-\begin{tabular}[h]{r|l}
-  \multicolumn{2}{c}{$\phi_2$}\\
-  \hline
-  5 & \xCh\\
-  6 & \xVi\\
-\end{tabular}
-
-\infiniteloopVIII\hfill
-\begin{tabular}[h]{r|l}
-%  \multicolumn{2}{c}{\parbox[c]{2cm}{$\phi = \phi_0 \cup \phi_1 \cup
-%  \phi_2$}}\\
-    \multicolumn{2}{c}{$\phi = \phi_0 \cup \phi_1 \cup \phi_2$}\\
-  \hline
-  1 & \xSa\\
-  2 & \xPi\\
-  3 & \xFr\\
-  4 & \xWo\\
-  5 & \xCh\\
-  6 & \xVi\\
-  7 & \xPa\\
-  8 & \xSn\\
-  9 & \xLu\\
-  10 & \xLi\\
-  11 & \xSc\\
-\end{tabular}

@@ -11,6 +11,11 @@ Giorgio Ausiello, Alessandro D'Atri, and Marco Protasi.
 \newblock Structure preserving reductions among convex optimization problems.
 \newblock {\em J. Comput. Syst. Sci}, 21(1):136--153, 1980.
 
+\bibitem[ALC67]{lec67}
+S.~Even A.~Lempel and I.~Cederbaum.
+\newblock An algorithm for planarity testing of graphs.
+\newblock {\em Theory of Graphs}, pages 215--232, 1967.
+
 \bibitem[AS95]{as95}
 Annexstein and Swaminathan.
 \newblock On testing consecutive-ones property in parallel.
@@ -136,6 +141,11 @@ D.~R. Fulkerson and O.~A. Gross.
 Peter~C. Fishburn.
 \newblock {\em Interval Orders and Interval Graphs}.
 \newblock Wiley, 1985.
+
+\bibitem[Gar07]{gar07}
+Frederic Gardi.
+\newblock The roberts characterization of proper and unit interval graphs.
+\newblock {\em Discrete Mathematics}, 307(22):2906--2908, 2007.
 
 \bibitem[Gav74]{gav74}
 Fanica Gavril.
