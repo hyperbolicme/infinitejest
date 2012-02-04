@@ -23,9 +23,9 @@
 
 \newcommand{\xclearpage}{\cleardoublepage} % cleardoublepage for
                                 % twoside. keep empty for one side.
-%\usepackage[inline] 
+\usepackage[inline] 
 %\usepackage[margins] 
-\usepackage[finalnew]
+%\usepackage[finalnew]
          {../lib/trackchanges} % For tracking changes.
                                % :Package options:
                                % [finalold]
@@ -62,17 +62,19 @@
                              
 
 % \usepackage{comment}         % DEBUG ONLY
-%\includeonly{010chap1}         % DEBUG ONLY 
 %\includeonly{020chap2}         % DEBUG ONLY 
 %\includeonly{010chap1, 020chap2}         % DEBUG ONLY 
-%\includeonly{030chap3,050appa}         % DEBUG ONLY 
+\includeonly{030chap3,050appa}         % DEBUG ONLY 
 %\includeonly{0031ded,0032quote}         % DEBUG ONLY
 %\includeonly{020chap2}         % DEBUG ONLY 
+%\includeonly{040chap4,biblio}         % DEBUG ONLY 
 %\includeonly{_tempscrap}         % DEBUG ONLY 
-%\figforbiddensubgraphs
+%\includeonly{010chap1}         % DEBUG ONLY 
 
-\def \mythesissubmissiondate {31 January 2012}
-\def \mythesissubmissionmonth {\MakeUppercase {January 2012}}
+%\excludeonly{0032quote,0031ded,002ack}         % DEBUG ONLY 
+
+\def \mythesissubmissiondate {\today}
+\def \mythesissubmissionmonth {\MakeUppercase {February 2012}}
 
 %\renewcommand\sectionmark[1]{\markright{\thesection. #1}}
 \renewcommand\chaptermark[1]{\markboth{\chaptername\ \thesection. #1}{}}

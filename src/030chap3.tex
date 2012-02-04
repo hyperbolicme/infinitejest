@@ -224,7 +224,7 @@ if it is isomorphic to the intersection graph of a path system.
     is a hypergraph that is not isomorphic to any of the other
     hypergraphs -- moreover, it is one that cannot have a feasible
     path labeling to any tree since it does not have the Helly's
-    property anymore due to the addition of hyperedge $\{x_1,
+    property \cite[Pr.~4.7]{mcg04} anymore due to the addition of hyperedge $\{x_1,
     x_4\}$. }
   \label{fig:hypergraphs}
 \end{figure}
@@ -1996,47 +1996,16 @@ Logspace.
   input $(\cF,T)$ pair.}{Add this ``pair'' as a definition in
   ch:prelims}
 
-\remove{It is an interesting fact that for a matrix with the COP, the
-  intersection graph of the corresponding set system is an interval
-  graph.  A similar connection to a subclass of chordal graphs, and
-  this subclass contains interval graphs, exists for the
-  generalization of COP.  In this case, the intersection graph of the
-  corresponding set system must be a path graph. Chordal graphs are of
-  great significance, extensively studied, and have several
-  applications.  One of the well known and interesting properties of a
-  chordal graphs is its connection with intersection graphs
-  cite{mcg04}. For every chordal graph, there exists a tree and a
-  family of subtrees of this tree such that the intersection graph of
-  this family is isomorphic to the chordal graph
-  cite{plr70,gav78,bp93}.  Certain format of these trees are called
-  clique trees cite{apy92} of the graph which is a compact
-  representation of the chordal graph. There has also been work done
-  on the generalization of clique trees to clique hypergraphs
-  cite{km02}.  If the chordal graph can be represented as the
-  intersection graph of paths in a tree, then the graph is called path
-  graph cite{mcg04} or path chordal graph.  Therefore, it is clear
-  that if there is a bijection from $U$ to $V(T)$ such that the sets
-  map to paths, then the intersection graph of the set system is
-  indeed a path chordal graph.  This is, however, only a necessary
-  condition and can be checked efficiently, as path graph recognition
-  is polynomial solvable cite{gav78,aas93}.  Indeed, it is possible to
-  construct a set system and tree, such that the intersection graph is
-  a path chordal graph, but there is no bijection between $U$ and
-  $V(T)$ such that the sets map to paths.  This connection indeed
-  suggests that our problem is indeed as hard as path graph
-  isomorphism.  Further path graph isomorphism is known be
-  isomorphism-complete, see for example cite{kklv10}. } In the second
-part of this paper, we decompose our search for a bijection between
-$U$ and $V(T)$ into subproblems.  Each subproblem is on a set system
-in which for each set, there is another set in the set system with
-which the intersection is {\em strict}- there is a non-empty
-intersection, but neither is contained in the other.  This is in the
-spirit of results in \cite{wlh02,nsnrs09} where to test for COP in a
-given matrix, the COP problem is solved on an equivalent set of prime
-matrices.  \annote{Our decomposition localizes the challenge of path
-  graph isomorphism to two problems.}{HOW?}
+In the second part of this paper, we decompose our search for a
+bijection between $U$ and $V(T)$ into subproblems.  Each subproblem is
+on a set system in which for each set, there is another set in the set
+system with which the intersection is {\em strict}- there is a
+non-empty intersection, but neither is contained in the other.  This
+is in the spirit of results in \cite{wlh02,nsnrs09} where to test for
+COP in a given matrix, the COP problem is solved on an equivalent set
+of prime matrices.
 
-Finally, we show that Tree Path Assignment is isomorphism-complete.
+% Finally, we show that Tree Path Assignment is isomorphism-complete.
 We also point out Consecutive Ones Testing is in Logspace from two
 different results in the literature \cite{kklv10, mcc04}. To the best
 of our knowledge this observation has not been made earlier.

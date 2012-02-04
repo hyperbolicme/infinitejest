@@ -394,16 +394,23 @@ also appear consecutively.
   \item $G$ is an \textbf{interval graph} if there a set of intervals
     $\cI$ \stt $G$ is isomorphic to the intersection graph of
     $\cI$. \[G \cong \bI(\cI)\]
-  \item $G$ is a \textbf{path graph} if there exists a tree $T$ and a
-    set of paths from $T$, $\cP$ \stt $G$ is isomorphic to the
-    intersection graph of $\cP$. \[G \cong \bI(\cP)\]
+  \item $G$ is a \textbf{path graph} if there exists a (undirected
+    unrooted) tree $T$ and a set of paths from $T$, $\cP$ \stt $G$ is
+    isomorphic to the intersection graph of $\cP$. \[G \cong
+    \bI(\cP)\] Path graphs are also known as \uvgraphs (Undirected
+    tree where paths intersect in a Vertex) \cite{mw86}.
   \item $G$ is a \textbf{chordal graph} if it has no induced cycle of
     length greater than 3. Moreover, a \textbf{chordal graph} is
     characterized as an intersection graph of subtrees of a tree.
   \end{enumerate}
 \end{definition}
 
-
+The set of interval graphs is a subset of set of path graphs which is
+a subset of set of chordal graphs. In fact, there is another class
+between chordal graphs and path graphs called RDV-graphs (Rooted
+Directed tree where paths intersect in a Vertex)  \cite{mw86} which is
+defined exactly as a path graph except that the trees are rooted and
+directed. 
 
 \section[Brief Survey]{Consecutive-ones Property - a Brief Survey}
 \label{sec:background}

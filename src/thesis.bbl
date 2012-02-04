@@ -6,6 +6,12 @@ J.~E. Atkins, E.~G. Boman, and B.~Hendrickson.
 \newblock A spectral algorithm for seriation and the consecutive ones problem.
 \newblock {\em SICOMP: SIAM Journal on Computing}, 28, 1998.
 
+\bibitem[ADKK09]{adkk09}
+V.~Arvind, Bireswar Das, Johannes K{\''o}bler, and Sebastian Kuhnert.
+\newblock The isomorphism problem for {k}-trees is complete for logspace.
+\newblock {\em Electronic Colloquium on Computational Complexity}, --TBD--(53),
+  2009.
+
 \bibitem[ADP80]{adp80}
 Giorgio Ausiello, Alessandro D'Atri, and Marco Protasi.
 \newblock Structure preserving reductions among convex optimization problems.
@@ -45,11 +51,17 @@ Kellogg~S. Booth.
 \newblock {\em PQ-tree algorithms}.
 \newblock PhD thesis, Univ. California, Berkeley, 1975.
 
-\bibitem[BP92]{bp93}
+\bibitem[BP92]{bp92}
 J.~R.~S. Blair and B.~Peyton.
 \newblock An introduction to chordal graphs and clique trees.
 \newblock Technical report, Oak Ridge National Laboratory, Oak Ridge, Tennessee
   37831, 1992.
+
+\bibitem[BPT96]{bpt96}
+L.~Babel, I.~N. Ponomarenko, and G.~Tinhofer.
+\newblock The isomorphism problem for directed path graphs and for rooted
+  directed path graphs.
+\newblock {\em J. Algorithms}, 21(3):542--564, 1996.
 
 \bibitem[BS03]{bs03}
 David~A. Bader and Sukanya Sreshta.
@@ -59,6 +71,19 @@ David~A. Bader and Sukanya Sreshta.
 Chris Bourke, Raghunath Tewari, and N.~V. Vinodchandran.
 \newblock Directed planar reachability is in unambiguous log-space.
 \newblock {\em ACM Trans. Comput. Theory}, 1:4:1--4:17, February 2009.
+
+\bibitem[Bun74]{bun74}
+Peter Buneman.
+\newblock A characterization of rigid circuit graphs.
+\newblock {\em Discrete Math.}, 9:205--212, 1974.
+
+\bibitem[Cha11]{cha11}
+Steven Chaplick.
+\newblock Characterizing and recognizing path graphs and directed path graphs
+  using {PR}-trees.
+\newblock {\em Discrete Applied Mathematics (submitted)}, March 2011.
+\newblock Preprint submitted. Revision available at
+  http://www.cs.toronto.edu/~chaplick/PRtrees.pdf.
 
 \bibitem[CKL96]{ckl96}
 R.~Chandrasekaran, S.~N. Kabadi, and S.~Lakshminarayanan.
@@ -82,6 +107,18 @@ Lin Chen and Yaacov Yesha.
   applications.
 \newblock {\em J. Algorithms}, 12(3):375--392, 1991.
 
+\bibitem[CY95]{yc95}
+Gen-Huey Chen and Chang-Wu Yu.
+\newblock Efficient parallel algorithms for doubly convex-bipartite graphs.
+\newblock {\em TCS: Theoretical Computer Science}, 147:249--265, 1995.
+
+\bibitem[DB96]{db95}
+E.~Dahlhaus and G.~Bailey.
+\newblock Recognition of path graphs in linear time.
+\newblock In {\em The Fifth Italian Conference on Theoretical Computer Science
+  (Revello, 1995)}, pages 201--210, River Edge, NJ, 1996. World Sci.
+  Publishing.
+
 \bibitem[DF99]{df99}
 R.~G. Downey and M.~R. Fellows.
 \newblock {\em Parameterized Complexity}.
@@ -101,6 +138,13 @@ Michael Dom, Jiong Guo, and Rolf Niedermeier.
   International Conference, {TAMC} 2007, Shanghai, China, May 22-25, 2007,
   Proceedings}, volume 4484 of {\em Lecture Notes in Computer Science}, pages
   680--691. Springer, 2007.
+
+\bibitem[DLN{\etalchar{+}}09]{dlntw09}
+Samir Datta, Nutan Limaye, Prajakta Nimbhorkar, Thomas Thierauf, and Fabian
+  Wagner.
+\newblock Planar graph isomorphism is in log-space.
+\newblock {\em -- TTBBDD -- Algebraic Methods in Computational Complexity},
+  2009.
 
 \bibitem[Dom08]{d08phd}
 Michael Dom.
@@ -147,10 +191,16 @@ Frederic Gardi.
 \newblock The roberts characterization of proper and unit interval graphs.
 \newblock {\em Discrete Mathematics}, 307(22):2906--2908, 2007.
 
-\bibitem[Gav74]{gav74}
+\bibitem[Gav74a]{gav74}
 Fanica Gavril.
 \newblock Algorithms on circular-arc graphs.
-\newblock {\em Networks}, 4:357–369, 1974.
+\newblock {\em Networks}, 4:357--369, 1974.
+
+\bibitem[Gav74b]{gav74b}
+Fanica Gavril.
+\newblock The intersection graphs of subtrees in trees are exactly the chordal
+  graphs.
+\newblock {\em J. Combin. Theory}, 16:47--56, 1974.
 
 \bibitem[Gav78]{gav78}
 Fanica Gavril.
@@ -163,6 +213,11 @@ P.~C. Gilmore and A.~J. Hoffman.
 \newblock A characterization of comparability graphs and of interval graphs.
 \newblock {\em Can.~J. Math.}, 16:539--548, 1964.
 
+\bibitem[GH02]{hg02}
+Ganjali and Hajiaghayi.
+\newblock A note on the consecutive ones submatrix problem.
+\newblock {\em IPL: Information Processing Letters}, 83, 2002.
+
 \bibitem[GJ79]{gj79}
 M.~R. Garey and D.~S. Johnson.
 \newblock {\em Computers and Intractability}.
@@ -174,11 +229,6 @@ Martin~Charles Golumbic.
   Annals of Discrete Mathematics}.
 \newblock Elsevier Science B.V., 2004.
 \newblock Second Edition.
-
-\bibitem[HG02]{hg02}
-Hajiaghayi and Ganjali.
-\newblock A note on the consecutive ones submatrix problem.
-\newblock {\em IPL: Information Processing Letters}, 83, 2002.
 
 \bibitem[HL06]{hl06}
 Dorit~S. Hochbaum and Asaf Levin.
@@ -220,11 +270,7 @@ T.~C. Hu and P.~A. Tucker.
 \bibitem[HT02]{ht02}
 Hochbaum and Tucker.
 \newblock Minimax problems with bitonic matrices.
-\newblock {\em NETWORKS: Networks: An International Journal}, 40, 2002.
-
-\bibitem[JJLM97]{jlm97}
-Michael J{\"u}nger, Michael Junger, Sebastian Leipert, and Petra Mutzel.
-\newblock Pitfalls of using {PQ}-trees in automatic graph drawing, 1997.
+\newblock {\em Networks: An International Journal}, 40, 2002.
 
 \bibitem[JKC{\etalchar{+}}04]{jkckv04}
 Johnson, Krishnan, Chhugani, Kumar, and Venkatasubramanian.
@@ -315,6 +361,11 @@ Meidanis, Porto, and Telles.
 \newblock {\em DAMATH: Discrete Applied Mathematics and Combinatorial
   Operations Research and Computer Science}, 88, 1998.
 
+\bibitem[MW86]{mw86}
+C.L. Monma and V.K. Wei.
+\newblock Intersection graphs of paths in a tree.
+\newblock {\em J. Combin. Theory Ser. B}, (41):141--181, 1986.
+
 \bibitem[Nov89]{n89}
 Mark~B. Novick.
 \newblock Generalized {PQ}-trees.
@@ -327,7 +378,7 @@ N.~S. Narayanaswamy and R.~Subashini.
   property.
 \newblock {\em Discrete Applied Mathematics}, 157(18):3721--3727, 2009.
 
-\bibitem[PPY94]{apy92}
+\bibitem[PPY94]{ppy92}
 Barry~W. Peyton, Alex Pothen, and Xiaoqing Yuan.
 \newblock A clique tree algorithm for partitioning a chordal graph into
   transitive subgraphs.
@@ -359,6 +410,11 @@ Fred.~S. Roberts.
 \newblock In Frank Harary, editor, {\em Proof Techniques in Graph Theory},
   pages 139--146. Academic Press, 1969.
 
+\bibitem[SB94]{sb94}
+J.L. Szwarcfiter and C.F. Bornstein.
+\newblock Clique graphs of chordal and path graphs.
+\newblock {\em SIAM. J. Disc. Math.}, 7:331--336, 1994.
+
 \bibitem[Sch93]{aas93}
 Alejandro~A. Schaffer.
 \newblock A faster algorithm to recognize undirected path graphs.
@@ -373,7 +429,7 @@ W.K. Shih and W.L. Hsu.
 M.~Suderman and S.~Whitesides.
 \newblock Experiments with the fixed-parameter approach for two-layer
   planarization.
-\newblock {\em jgaa}, 9(1):149--163, 2005.
+\newblock {\em ----jgaa----}, 9(1):149--163, 2005.
 
 \bibitem[TM05]{tm05}
 Guilherme~P. Telles and Jo{\~a}o Meidanis.
@@ -389,13 +445,19 @@ Alan Tucker.
 Jinsong Tan and Louxin Zhang.
 \newblock Approximation algorithms for the consecutive ones submatrix problem
   on sparse matrices.
-\newblock In {\em ---}, volume 3341 of {\em Lecture Notes in Computer Science},
-  pages 835--846, 2004.
+\newblock volume 3341 of {\em Lecture Notes in Computer Science}, pages
+  835--846, 2004.
 
 \bibitem[TZ07]{tz07}
 J.~Tan and L.~Zhang.
 \newblock The consecutive ones submatrix problem for sparse matrices.
 \newblock {\em Algorithmica}, 48(3):287--299, 2007.
+
+\bibitem[Ueh08]{ueh08}
+R.~Uehara.
+\newblock Simple geometrical intersection graphs.
+\newblock In {\em WALCOM}, volume 4921 of {\em LNCS}, pages 25--33. Springer,
+  2008.
 
 \bibitem[Vel82]{v82}
 M.~Veldhorst.
@@ -404,9 +466,14 @@ M.~Veldhorst.
   Amsterdam, the Netherlands, 1982.
 
 \bibitem[Vel85]{v85}
-M.~Veldhorst.
+Marinus Veldhorst.
 \newblock Approximation of the consecutive ones matrix augmentation problem.
 \newblock {\em SIAM Journal on Computing}, 14(3):709--729, August 1985.
+
+\bibitem[Wal72]{jrw72phd}
+J.~R. Walter.
+\newblock {\em Representation of rigid cycle graphs}.
+\newblock PhD thesis, Wayne State University, 1972.
 
 \bibitem[Wal96]{wallace96}
 David~Foster Wallace.
@@ -427,10 +494,5 @@ David~Foster Wallace.
 David~Foster Wallace.
 \newblock {\em Fate, Time, and Language: An Essay on Free Will}.
 \newblock Columbia University Press, reprint edition, December 2010.
-
-\bibitem[YC95]{yc95}
-Yu and Chen.
-\newblock Efficient parallel algorithms for doubly convex-bipartite graphs.
-\newblock {\em TCS: Theoretical Computer Science}, 147:249--265, 1995.
 
 \end{thebibliography}
