@@ -13,9 +13,7 @@
 \BOOKMARK [1][-]{section.3.5}{Special target trees}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.5.1}{Target tree is a Path}{section.3.5}
 \BOOKMARK [2][-]{subsection.3.5.2}{Target tree is a k-subdivided Star}{section.3.5}
-\BOOKMARK [2][-]{subsection.3.5.3}{Description of the Algorithm}{section.3.5}
-\BOOKMARK [1][-]{section.3.6}{ TPL with no restrictions}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.6.1}{Finding an assignment of tree paths to a set system}{section.3.6}
+\BOOKMARK [1][-]{section.3.6}{ TPL on arbitrary trees}{chapter.3}
 \BOOKMARK [1][-]{section.3.7}{Complexity}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.7.1}{Consecutive Ones Testing is in Logspace}{section.3.7}
 \BOOKMARK [0][-]{chapter.1}{More proofs remove/modify}{}

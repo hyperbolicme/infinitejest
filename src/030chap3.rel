@@ -1,0 +1,215 @@
+;; RefTeX parse info file
+;; File: /Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex
+;; User: anju (anju)
+
+(set reftex-docstruct-symbol '(
+
+
+(xr nil "\\\\\\\\\\\\")
+
+(index-tags)
+
+(is-multi nil)
+
+(bibview-cache)
+
+(master-dir . "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/")
+
+(label-numbers)
+
+(bof "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex")
+
+(toc "toc" "  1 Tree Path Labeling of Path Hypergraphs -- New Results" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 1 "1" "\\chapter[Tree Path Labeling]{Tree Path Labeling of Path
+  Hypergraphs -- New Results}" 14)
+
+("ch:myresearch" "s" "This chapter documents all the new results obtained by us in the area of tree path labeling of path " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+(toc "toc" "    1.1 Summary of Proposed Problems" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 2 "1.1" "\\section[Summary of problems]{Summary of Proposed Problems}" 1483)
+
+("sec:myresearchintro" "s" "In Section~\\ref{sec:motive} we see that consecutive-ones property and its equivalent problem of inte" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+(toc "toc" "    1.2 Preliminaries to new results" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 2 "1.2" "\\section[Preliminaries]{Preliminaries to new results}" 6295)
+
+("ch:prelims" "s" "This section describes ideas and terminologies necessary in this chapter. Some of these may have bee" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+(toc "toc" "      1.2.1 Set systems and Hypergraphs" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 3 "1.2.1" "\\subsection{Set systems and Hypergraphs}" 6762)
+
+("sec:setsyshypergraph" "s" "Consider a universe $U$ with $|U| = n$. The set $\\F \\subseteq (2^{U} \\setminus \\emptyset)$ is a {\\em" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("def:hisomorph" "s" "Let $\\cF'$, $\\cF''$ be two hypergraphs. They are said to be {\\em isomorphic} to each other, denoted " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("fig:hypergraphs" "f" "\\figtabsize Hypergraphs and set systems" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+(toc "toc" "      1.2.2 Path Labeling and Path Hypergraphs" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 3 "1.2.2" "\\subsection{Path Labeling and Path Hypergraphs}" 10531)
+
+("sec:pathhypergraph" "s" "The graph $T$ represents a {\\em target tree} with same number of vertices as elements in $U$; $|V(T)" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("def:pathlabel" "s" "Consider a hypergraph $\\cF$ % with universe $U$ and a path system $\\cP$ from tree $T$ such that $\\bI" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("def:inducedpl" "s" "Let $\\cF$ be a hypergraph and $\\cP$ be a path system \\stt $\\cF \\cong \\cP$. Let $\\phi: \\supt{\\cF} \\ri" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("def:feasibletpl" "s" "Let $\\cF$ be a hypergraph and $(\\cF, \\cl)$ be a path labeling. $(\\cF, \\cl)$ is called a {\\em feasibl" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("def:pathhypergraph" "s" "Let $\\cF$ be a set system. $\\cF$ is called a {\\em path hypergraph} if there exists a target tree $T$" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+(toc "toc" "      1.2.3 Overlap Graphs and Marginal Hyperedges" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 3 "1.2.3" "\\subsection{Overlap Graphs and Marginal Hyperedges}" 15753)
+
+("sec:overlapmarginal" "s" "Recall the notion of {\\em overlap} from Definition~\\ref{def:setsystem}. Two hyperedges $S$ and $S'$ " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+(toc "toc" "      1.2.4 Miscellaneous" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 3 "1.2.4" "\\subsection{Miscellaneous}" 16751)
+
+("sec:miscprelim" "s" "A {\\em star} graph is a complete bipartite graph $K_{1,\\,p}$ (which is clearly a tree with $p$ leave" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("def:ksubstar" "s" "A {\\em $k$-subdivided star} is a star with all its rays subdivided exactly $k$ times. A {\\em ray} of" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("eq:stf" "e" "% \\sigma: U \\rightarrow V(T), \\text{ such that }\\sigma(S_i) = P_i % \\text{ for all } i \\in I, \\sigma" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+(toc "toc" "    1.3 Characterization of Feasible Tree Path Labeling" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 2 "1.3" "\\section[Characterization of FTPL]{Characterization of Feasible Tree
+  Path Labeling}" 18846)
+
+("sec:feasible" "s" "In this section we discuss the \\FTPL problem introduced in Section~\\ref{sec:myresearchintro} and giv" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("def:icppl" "s" "Consider a path labeling $(\\cF, \\cl)$ on the given tree $T$. We call $(\\cF, \\cl)$ an {\\em Intersecti" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("pr:i" "i" "$|S| = |\\cl(S)|$ for all $S \\in \\cF$ " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("pr:ii" "i" "$|S_1 \\cap S_2| = |\\cl(S_1) \\cap \\cl(S_2)|$ for all distinct $S_1, S_2 \\in \\cF$ " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("pr:iii" "i" "$|S_1 \\cap S_2 \\cap S_3| = |\\cl(S_1) \\cap \\cl(S_2) \\cap \\cl(S_3)|$ for all distinct $S_1, S_2, S_3 \\" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("al:filterone" "s" "% {perms} \\begin{algorithmic}[\\lndisplay] \\STATE $\\cF_0 \\assign \\cF$, $\\cl_0(S) \\assign \\cl(S)$ for " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("shareleaf" "s" "\\STATE $\\cF_j \\assign (\\cF_{j-1} \\setminus \\{S_1, S_2\\}) \\cup \\{S_1 \\cap S_2, S_1 \\setminus S_2, S_2" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("setbreak" "s" "\\COMMENT {Remove $S_1$, $S_2$ and add the ``filtered'' sets} \\STATE {\\bf for} every $S \\in \\cF_{j-1}" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("ln:3waycheck" "s" "% \\STATE {\\bf exit}  " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("ln:exit1" "s" " " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("lem:setminuscard" "s" "If $\\cl$ is an ICPPL, and $S_1, S_2, S_3 \\in \\cF$, then $|S_1 \\cap (S_2 \\setminus S_3)| = |\\cl(S_1) " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("lem:feasible" "s" "In Algorithm~\\ref{al:filterone}, if input $(\\cF, \\cl)$ is a feasible path labeling then at the end o" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("lem:invar1" "s" "Given that the input to Algorithm~\\ref{al:filterone} is an ICPPL, at the end of $j$th iteration, $j " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("lem:noexit1" "s" "If the input ICPPL $(\\cF, \\cl)$ to Algorithm~\\ref{al:filterone} is feasible, then the set of hypergr" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("lem:setminuscard" "s" "% If $\\cA$ is an ICPPA, and $(S_1, P_1),(S_2, P_2),(S_3, P_3) \\in % \\cA$, then $|S_1 \\cap (S_2 \\setm" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("lem:invar1" "s" "% In Algorithm \\ref{al:filterone}, at the end of $j$th iteration, $j \\ge 0$, % of the while loop of " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("al:filtertwo" "s" "% {leafasgn} \\begin{algorithmic}[\\lndisplay] \\STATE $\\cF_0 \\assign \\cF$, $\\cl_0(S) \\assign \\cl(S)$ f" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("uniqueleaf" "s" "\\STATE $\\cF_j \\assign \\cF_{j-1} \\setminus \\{S_1\\}$" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("xempty" "s" "\\STATE {\\bf % exit}  \\ENDIF \\STATE \\label{xassign} $x \\assign $ arbitrary element from $X$" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("ln:exit2" "s" "\\ENDIF \\STATE  $x \\assign $ arbitrary element from $X$" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("xassign" "s" "$x \\assign $ arbitrary element from $X$" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("lem:invar3" "s" "% In Algorithm \\ref{al:filtertwo},for all $j \\geq 0$, at the end of the % $j$th iteration the four i" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("th:perm" "s" "% If $\\cA$ is an ICPPA, then there exists a bijection $\\sigma : U % \\rightarrow V(T)$ such that $\\si" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("lem:xnotempty" "s" "If the input ICPPL $(\\cF, \\cl)$ to Algorithm~\\ref{al:filtertwo} is feasible, then for all iterations" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("lem:invar3" "s" "In Algorithm~\\ref{al:filtertwo}, for all $j > 0$, at the end of the $j$th iteration of the {\\bf whil" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("al:icppl-find-isomorph" "s" "\\begin{algorithmic}[\\lndisplay] \\IF{$T$ is empty} \\RETURN $\\emptyset$" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("lem:hyperiso" "s" "%{lem:perm} % If $(\\cF, \\cl)$ is an ICPPL from a tree $T$ and % Algorithm~\\ref{al:icppl-find-isomorp" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("th:charac" "s" "A path labeling $(\\cF, \\cl)$ on tree $T$ is feasible \\iff it is an ICPPL and Algorithm~\\ref{al:icppl" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+(toc "toc" "    1.4 Solution to \\illustrationproblem" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 2 "1.4" "\\section{Solution to \\illustrationproblem}" 62512)
+
+("fig:solpartI" "f" "\\figtabsize \\tnote{FILL}" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("fig:solpartIII" "f" "\\figtabsize \\tnote{FILL}" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("fig:x" "f" "TEMP TEMP TEMP" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+(toc "toc" "    1.5 Computing feasible TPL with special target trees" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 2 "1.5" "\\section[Special target trees]{ Computing feasible TPL with special target trees}" 68984)
+
+("sec:spltargettree" "s" "\\tnote{\\sc refer to Problem Defs here} Section~\\ref{sec:feasible} described properties that a TPL mu" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+(toc "toc" "      1.5.1 Target tree is a Path" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 3 "1.5.1" "\\subsection{Target tree is a Path}" 70246)
+
+("sec:icpplicpia" "s" "Let us consider a special case of ICPPL with the following properties. The target tree $T$ is a path" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+(toc "toc" "      1.5.2 Target tree is a $k$-subdivided Star" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 3 "1.5.2" "\\subsection{Target tree is a $k$-subdivided Star}" 71596)
+
+("sec:ksubdivstar" "s" "\\begin{figure}[t] %[htbp] \\centering \\begin{tabular}{lr} % (a) \\includegraphics{cop-tree_thesis.1}& " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("fig:kstar" "f" "\\figtabsize (a) $8$-subdivided star with 7 rays (b) 3-subdivided star with 3 rays" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+(toc "toc" "      1.5.3 Description of the Algorithm" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 3 "1.5.3" "\\subsection{Description of the Algorithm}" 80270)
+
+("sec:ksubstaralgo" "s" "In this section the given hypergraph $\\cF$, the $k$-subdivided star and the root of the star are den" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("iendpoint" "i" "{\\em End point of $\\cl(Y)$ where $\\cl(X)$ overlaps depends on $X \\cap Z$:} If $X \\cap Z \\neq \\emptys" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("lem:sup-mar" "s" "If $X \\in \\cF$ is super-marginal and $\\cl$ is a feasible tree path labeling to tree $T$, then $\\cl(X" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("al:ktree-label" "s" "% \\begin{algorithmic}[\\lndisplay] % \\IF{$X = S_{sm}$} % \\STATE -- TBD --" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("ds-algo" "s" "% ICPIA(Set $S$, Integer $p > 0$) % \\noindent % /* {\\tt $S \\cap S^i \\not = \\phi$ for some $i \\in \\{1" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+(toc "toc" "    1.6 TPL with no restrictions" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 2 "1.6" "\\section{ TPL with no restrictions}" 97683)
+
+("sec:norestraint" "s" "{\\tt abstract begin} it is known that if the given tree is a path a feasible assignment can be found" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+(toc "toc" "      1.6.1 Finding an assignment of tree paths to a set system" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 3 "1.6.1" "\\subsection{Finding an assignment of tree paths to a set
+  system}" 99534)
+
+("sec:decompos" "s" "% In the previous section we have shown that the problem of finding a Tree Path Asssignment to an in" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("lem:containment" "s" "Let $(M_i,M_j) \\in \\preccurlyeq$. Then there is a set $S' \\in M_j$ such that for each $S \\in M_i$, $" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("thm:partitionold" "s" "$\\preccurlyeq$ is a partial order on the set of prime sub-matrices of $M$. Further, it uniquely part" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("thm:partition" "s" "Consider the directed graph $X$ whose vertices correspond to the prime sub-matrices, and the edges a" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("lem:subicppa" "s" "Let $M$ be a matrix and let $X$ be the directed graph whose vertices are in correspondence with the " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("lem:rooticppa" "s" "Let $M$ be a matrix and let $X$ be the directed graph whose vertices are in correspondence with the " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("al:icppa-main" "s" "\\begin{algorithmic} \\STATE Identify the prime sub-matrices. This is done by constructing the strict " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+(toc "toc" "    1.7 Complexity of Tree Path Assignment-A Discussion" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 2 "1.7" "\\section[Complexity]{Complexity of Tree Path Assignment-A Discussion}" 115009)
+
+("sec:tplcomplexity" "s" "Recall that the input to the Tree Path Assignment question is an order pair $(\\cF,T)$ where $\\cF$ is" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+(toc "toc" "      1.7.1 Consecutive Ones Testing is in Logspace" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil 3 "1.7.1" "\\subsection{Consecutive Ones Testing is in Logspace}" 115787)
+
+("sec:cotlogspace" "s" "While Tree Path Assignment is isomorphism-complete, it is polynomial time solvable when the given tr" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("th:canonlabel" "s" "Given an interval hypergraph $\\cH$, a canonical interval labeling $l_H$ for $H$ can be computed in F" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("cor:coplog" "s" "If a binary matrix $M$ has COP then the interval assignments to each of its columns can be calculate" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" nil)
+
+("feasible" "s" "% Consider a path assignment $\\cA = \\{(S_i, P_i) \\mid S_i \\in \\cF, P_i % \\text{ is a path from $T$}," "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("lem:setminuscard" "s" "% If $\\cA$ is an ICPPA, and $(S_1, P_1),(S_2, P_2),(S_3, P_3) \\in % \\cA$, then $|S_1 \\cap (S_2 \\setm" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("lem:fourpaths" "s" "Consider four paths in a tree $Q_1, Q_2, % Q_3, Q_4$ such that they have nonempty pairwise intersect" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("al:filterone" "s" "% \\begin{algorithmic} % \\STATE Let $\\Pi_0=\\{(S_i,P_i)| i \\in I\\}$" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("shareleaf" "s" "\\WHILE {There is $(P_1,Q_1), (P_2,Q_2) \\in % \\Pi_{j-1}$ with $Q_1$ and $Q_2$ having a common leaf} \\" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("setbreak" "s" "\\STATE $\\Pi_j = \\Pi_j \\cup \\{(P_1 \\cap P_2,Q_1 % \\cap Q_2), (P_1 \\setminus P_2,Q_1 \\setminus Q_2), (" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("lem:invar1" "s" "% In Algorithm \\ref{al:filterone}, at the end of $j$th iteration, $j \\ge % 0$, of the while loop of " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("al:filtertwo" "s" "% \\begin{algorithmic} % \\STATE Let $\\Pi_0=\\{(S_i,P_i)| i \\in [m]\\}$. Paths are such that % no % two " "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("lem:invar3" "s" "% In Algorithm \\ref{al:filtertwo},for all $j \\geq 0$, at the end of the % $j$th iteration the four i" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+("th:perm" "s" "% If $\\cA$ is an ICPPA, then there exists a bijection $\\sigma : U % \\rightarrow V(T)$ such that $\\si" "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex" t)
+
+(eof "/Users/anju/Desktop/thesis + synopsis/github_infinitejest/src/030chap3.tex")
+))
+

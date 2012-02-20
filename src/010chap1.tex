@@ -324,12 +324,31 @@ also appear consecutively.
 \end{definition}
 
 
+\def\posetr{\le}
+
+\begin{definition}[Poset]
+  \label{def:posetdef}    
+  Let $\posetr$ be a binary relation on a finite set $X$. $\posetr$ is a \textbf{
+    partial order} and $\left< X,\posetr \right>$  is a \textbf{ poset}
+  if the following hold true for any $a, b, c \in X$.
+ \parindent  \defindent 
+%  \hangindent \defindent
+  \begin{enumerate}
+  \item $a \posetr a$ (reflexivity)
+  \item If $a \posetr b$ and $b \posetr a$ then $a = b$ (antisymmetry)
+  \item If $a \posetr b$ and $b \posetr c$ then $a \posetr c$
+    (transitivity)
+  \end{enumerate}
+
+  An element $b$ \textbf{covers} $a$ provided that there exists no
+  third element $x \in X$ \stt $a \posetr x \posetr b$.  A directed
+  (or undirected, but with direction implied by horizontal positioning
+  of nodes) graph that represents $\posetr$ in terms of its covering
+  relation is called the \textbf{Hasse diagram} of the poset.
+\end{definition}
+
 \begin{definition}
   \label{def:poset}    
-%   Let $A$ be a set and $R$ be a binary relation $R \subseteq A \times
-%   A$.
-
-%   \textbf{poset}
   Let $X$ be a partially ordered set with $\preccurlyeq$ being the
   partial order on $X$.
 
@@ -857,7 +876,7 @@ equivalence relation, $\cF$ quite naturally partitions into
 equivalence classes known as {\em overlap components}. In the context
 of COP, overlap components were used in \cite{wlh02} and
 \cite{kklv10}. Moreover, \cite{nsnrs09} discovered that these
-equivalence classes form a total order. We extend this to TPL and find
+equivalence classes form a total order in the case of \COP. We extend this to TPL and find
 that when $\cF$ is a path hypergraph\footnote{If there exists an FTPL
   for a hypergraph $\cF$, it is called a path hypergraph.}, the
 classes can be partially ordered as an in-tree in polynomial

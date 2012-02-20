@@ -12,17 +12,21 @@ follows.
 Section~\ref{sec:myresearchintro} recalls the idea of tree path
 labeling. The necessary preliminaries with definitions etc. are
 presented in Section~\ref{ch:prelims}. Section~\ref{sec:feasible}
-documents the characterization of a feasible path labeling from any
-target trees. Section~\ref{sec:spltargettree} describes two special
-cases where the target tree is of a particular family of trees. The
-first one is shown to be equivalent to COP testing in
+documents a characterization for feasible path labelings. In
+Section~\ref{sec:wallacesol} we demonstrate the algorithm described in
+Section~\ref{sec:feasible} by working out the solution to an example.
+Section~\ref{sec:spltargettree} describes two special cases where the
+target tree is of a particular family of trees. The first one is shown
+to be equivalent to COP testing in
 Section~\ref{sec:icpplicpia}. Section~\ref{sec:ksubdivstar} discusses
 the second special case and presents a polynomial time algorithm to
 find the tree path labeling of a given set system from a given
 \kstar. Section~\ref{sec:norestraint} discusses the plain vanilla
 version where the target tree has no restrictions and the algorithm to
-find a feasible TPL, if any, in this case.
-
+find a feasible TPL, if any, in this case.  Finally, in Section
+\ref{sec:tplcomplexity} we discuss the complexity of the algorithms
+seen thus far and we conclude by showing that \cop testing, which is a
+special case of \TPL, is in \logspace.
 
 \section[Summary of problems]{Summary of Proposed Problems}
 \label{sec:myresearchintro}
@@ -49,7 +53,7 @@ from a single permutation of the universe. The cardinality of the
 interval assigned to it must be same as the cardinality of the set,
 and the intersection cardinality of any two sets must be same as the
 intersection cardinality of the corresponding intervals. This is a
-necessary and sufficient condition. 
+necessary and sufficient condition.
 
 Intervals are paths from a tree with maximum degree two. Thus the
 interval assignment problem can be naturally generalized into path
@@ -406,8 +410,8 @@ defined in Definition~\ref{def:ksubstar}
 An {\em in-tree} is a directed rooted tree in which all edges are
 directed toward to the root.  
 \end{definition}
-In-trees are used in Section~\ref{sec:decompos} which describes our
-solution to \CFTPL problem.
+In-trees are used in Section~\ref{sec:norestraint} which describes our
+(albeit non-polynomial time) solution to \CFTPL problem.
 
 Finally, note that as a convention in this thesis, the set $I$
 represents the index set $[m]$ or $[n]$. If index $i$ is used without further
@@ -456,17 +460,14 @@ Definition~\ref{def:icppl}.
 
 
 In the remaining part of this section we show that $(\cF, \cl)$ is
-feasible if and only if it is an ICPPL%  and
-% Algorithm~\ref{al:icppl-find-isomorph} returns a non-empty path
-% hypergraph isomorphism
-% function
-.  Algorithm~\ref{al:icppl-find-isomorph} takes $(\cF, \cl)$ as input
-and computes the feasibility bijection if it is feasible or else
-reports failure. This algorithm recursively does two levels of
-filtering of $(\cF, \cl)$ to make it simpler in terms of set
-intersections while retaining a non-empty subset of isomorphisms, if
-any, between $\cF$ and $\cF^\cl$. These two filters are {\tt
-  filter\_1} in Algorithm~\ref{al:filterone} and {\tt filter\_2} in
+feasible if and only if it is an ICPPL.
+Algorithm~\ref{al:icppl-find-isomorph} takes $(\cF, \cl)$ as input and
+computes the feasibility bijection if it is feasible or else reports
+failure. This algorithm recursively does two levels of filtering of
+$(\cF, \cl)$ to make it simpler in terms of set intersections while
+retaining a non-empty subset of isomorphisms, if any, between $\cF$
+and $\cF^\cl$. These two filters are \filteri in
+Algorithm~\ref{al:filterone} and \filterii in
 Algorithm~\ref{al:filtertwo}.
 % One direction of this claim isclear: that if a path labeling is
 % feasible, then all intersection cardinalities are preserved,
@@ -487,13 +488,12 @@ Algorithm~\ref{al:filtertwo}.
 % a path labeling that defines a family of bijections from $supp(\cF)$
 % to $V(T)$\remove{ i.e. $supp(\cF^{\cl})$}.
 
-First, we present Algorithm~\ref{al:filterone} which describes {\tt
-  filter\_1}, and prove its correctness.  This algorithm refines the
+First, we present Algorithm~\ref{al:filterone} which describes \filteri, and prove its correctness.  This algorithm refines the
 path labeling by processing pairs of paths in $\cF^\cl$ that share a
 leaf until no two paths in the new path labeling share any leaf.
 
 \begin{algorithm}[h]
-  \caption{Refine ICPPL {\tt filter\_1($\cF, \cl, T$)}}
+  \caption{Refine ICPPL {\tt \filteri($\cF, \cl, T$)}}
   \label{al:filterone} % {perms}
   \begin{algorithmic}[\lndisplay]
     \STATE $\cF_0 \assign \cF$, $\cl_0(S) \assign \cl(S)$ for all $S \in \cF_0$\\
@@ -527,11 +527,39 @@ leaf until no two paths in the new path labeling share any leaf.
   \end{algorithmic}
 \end{algorithm}
 
+In order to prove the correctness of Algorithm~\ref{al:filterone}, we
+present a few lemma which are useful in subsequent arguments.
 
-The following lemma is useful in subsequent arguments.
+The first two lemma below are from results in \cite{nsnrs09}.  They
+have been reworded to use the terminology adopted in this
+thesis. Lemma~\ref{lem:intersection-cardinality} shows that the
+preservation of pairwise intersection cardinality in an interval
+assignment is sufficient to preserve three way intersection
+cardinality. Lemma~\ref{lem:icpia} shows that if a path labeling (i)
+has target tree as a path \ie it is an interval labeling, and (ii) it
+preserves pairwise intersection cardinalities \ie it is an ICPIA,
+then it is a feasible path labeling.
+
+\begin{lemma}[{\cite[Lem.~1]{nsnrs09}}]
+  \label{lem:intersection-cardinality} 
+  Let $P$ be a path, $S_1, S_2, S_3$ be 3 sets, and $T_1, T_2, T_3$ be
+  paths from $P$, such that $|S_i \cap S_j |=|T_i \cap T_j|, 1 \leq
+  i,j \leq 3$.  Then, $|S_1 \cap S_2 \cap S_3| = |T_1 \cap T_2 \cap
+  T_3|$.
+\end{lemma}
+\begin{lemma}[{\cite[Th.~2]{nsnrs09}}]
+  \label{lem:icpia} 
+  A path labeling $(\cF, \cl)$ with target tree $T$ as a path is
+  feasible iff it is an ICPIA.
+\end{lemma}
+
+Next, we see Lemma~\ref{lem:setminuscard} which is a direct
+consequence of Definition~\ref{def:icppl} and is analogous to
+\cite[Cor.~1]{nsnrs09}.
+
 \begin{lemma}
   \label{lem:setminuscard}
-  If $\cl$ is an ICPPL, and $S_1, S_2, S_3 \in \cF$, then $|S_1 \cap
+  If $\cl$ is an \ICPPL, and $S_1, S_2, S_3 \in \cF$, then $|S_1 \cap
   (S_2 \setminus S_3)| = |\cl(S_1) \cap (\cl(S_2) \setminus
   \cl(S_3))|$.
 \end{lemma}
@@ -544,11 +572,76 @@ The following lemma is useful in subsequent arguments.
   \setminus P_3)|$. %\qed
 \end{proof}
 
+For interval labeling, \cite{nsnrs09} shows that if it is an ICPIA \ie
+pairwise intersection cardinalities are preserved, then $d$-way
+intersection cardinalities are preseved for $2 < d < n$. Thus, in a
+way, pairwise intersections ``capture'' feasibility of an interval
+labeling. In the same vein, the following lemma indicates that
+three-way intersection cardinality ``captures'' $d$-way intersection
+cardinalities for $3 < d < n$ in a tree path labeling.
+
+\begin{lemma}
+  \label{lem:4-way}
+  Let $(\cF, \cl)$ be an \ICPPL and $\cl(S_i)=P_i$, $S_i \in \cF$, $1
+  \leq i \leq 4$.  Then, $|\cap_{i=1}^4 S_i| = |\cap_{i=1}^4 P_i|$.
+\end{lemma}
+\begin{proof}
+  Consider the sets $S_2 \cap S_1$, $S_3 \cap S_1$, and $S_4 \cap
+  S_1$, and their images $P_2 \cap P_1$, $P_3 \cap P_1$, and $P_4 \cap
+  P_1$ respectively.  It is clear that this path labeling preserves
+  pairwise intersection cardinalities.  In this case, it is clear that
+  the 3 sets are assigned paths in the path $P_1$.  Now by applying
+  Lemma~\ref{lem:intersection-cardinality}, it follows that
+  $|\cap_{i=1}^4 S_i| =| \cap_{i=1}^4 P_i|$.
+\end{proof}
+\begin{corollary} 
+  \label{corr:4-way} 
+  Let $(\cF, \cl)$ be an \ICPPL and $\cl(S_i)=P_i$, $S_i \in \cF$, $1
+  \leq i \leq 4$. If $P_i$, $1
+  \leq i \leq 4$ are such that $P_1 \cap P_2$, $P_1
+  \setminus P_2$, $P_2 \setminus P_1$ are also paths, then:
+  \begin{align*}
+   |(S_1 \setminus S_2) \cap S_3 \cap S_4| &= |(P_1 \setminus P_2) \cap P_3 \cap P_4|\\
+   |(S_2 \setminus S_1) \cap S_3 \cap S_4| &= |(P_2 \setminus P_1) \cap P_3 \cap P_4| 
+  \end{align*}
+\end{corollary}
+\begin{proof}
+  It is clear that $|(P_1 \setminus P_2) \cap P_3 \cap P_4| =
+  |\displaystyle \cap_{i=1}^4 P_i| - | P_2 \cap P_3 \cap P_4|$.  Since
+  we have an ICPPL, from Lemma~\ref{lem:4-way}, it follows that the
+  intersection cardinalities are preserved.
+\end{proof}
+\begin{lemma}
+  \label{lem:priv-card}
+  Let $(\cF, \cl)$ be an \ICPPL and $\cl(S) = P$ for some $S \in \cF$.  If sets
+  $S_{priv}$ and $P_{priv}$ contain only those elements of $S$ and $P$
+  that occur in no set other than $S$ and $P$, respectively, then
+  $|S_{priv}|=|P_{priv}|$.
+\end{lemma}
+\begin{proof}
+  Consider the set system $ \cF' = \{S_i \cap S \mid S_i \in \cF, i
+  \in [n]\}$ and path labeling $\cl'(S_i \cap S) = P_i \cap P$.  Since
+  $(\cF, \cl)$ is an \ICPPL, it can be easily verified that $(\cF',
+  \cl')$ is an ICPIA on path (interval) $P$.  Let $S_{two}$ and
+  $P_{two}$ be the elements of $S$ and $P$ which are in one {\em
+    other} set and path, respectively \ie $S_{two} = S \cap (\cup_{S_i
+    \ne S} S_i)$ and $P_{two}$ is defined analogously. It may be noted
+  that $S_{two} = \supt{\cF'}$ and $P_{two} = \supt{\cF'^{\cl'}}$.
+  From Lemma~\ref{lem:icpia} it follows that there is a bijection
+  $\phi$ from $S_{two}$ to $P_{two}$ such that for each $i$, the image
+  of $S_i \cap S$ under $\phi$ is $P_i \cap P$ (definition of
+  feasibility).  Moreover, this means $|S_{two}| = |P_{two}|$. By
+  definition, $S_{priv} = S \setminus S_{two}$ and $P_{priv} = P \setminus P_{two}$.
+  Thus $|S_{priv}| = |S \setminus S_{two}| = |P \setminus
+  P_{two}|=|P_{priv}|$.  
+\end{proof}
+
+
 Now we will prove the effectiveness of Algorithm~\ref{al:filterone}.
-Lemma~\ref{lem:feasible} proves that {\tt filter\_1} does not destroy
+Lemma~\ref{lem:feasible} proves that \filteri does not destroy
 the feasibility of the input, if it is indeed feasible. Following
 this, Lemma~\ref{lem:invar1} and Lemma~\ref{lem:noexit1} show that if
-the input is an ICPPL the result of {\tt filter\_1} is also an ICPPL
+the input is an ICPPL the result of \filteri is also an ICPPL
 and they both have the same set of feasibility hypergraph
 isomorphisms.
 
@@ -558,7 +651,7 @@ isomorphisms.
   labeling then at the end of $j$th iteration of the {\bf while}
   loop, $j \ge 0$, $(\cF_j, \cl_j)$ is a feasible path labeling.
 \end{lemma}
-\begin{proof}\thesisspacing%[Proof of Lemma~\ref{lem:feasible}]
+\begin{proof}\thesisspacing
   We will prove this by mathematical induction on the number of
   iterations. The base case $(\cF_0, \cl_0)$ is feasible since it is
   the input itself which is given to be feasible. Assume the lemma is
@@ -660,10 +753,10 @@ isomorphisms.
       \cap R'| = |\cl_j(R) \cap \cl_j(R)| = 0$. Thus case proven.
     \end{enumerate}
   \item {\em Invariant} IV
-    
-    \tnote[dire]{Due to the condition in line~\ref{ln:3waycheck}, this invariant is
-    ensured at the end of every iteration.}
-    % \begin{enumerate} [{Case 3.}1:]
+
+    This invariant is ensured at the end of every iteration due to
+    Lemma~\ref{lem:4-way} and Corollary~\ref{corr:4-way}.
+   % \begin{enumerate} [{Case 3.}1:]
     % \item {\em $R$, $R'$ and $R''$ are not new sets.} Trivially true
     %   by induction hypothesis.
     % \item {\em Only one, say $R$, is a new set.}  If $R = S_1 \cap
@@ -674,8 +767,7 @@ isomorphisms.
     % \item {\em At least two of $R, R', R''$ are new sets.}  The new
     %   sets are disjoint hence this case is vacuously true.
     % \end{enumerate}
-  \end{enumerate} %\qed
-  % \vspace{-6mm}
+  \end{enumerate} 
 \end{proof}
 
 \begin{lemma}
@@ -710,7 +802,7 @@ isomorphisms.
   % \item If $(x,v) \in \phi$ then $v \in \cl_{j}(S)$ for all $S \in
   %   \cF_{j}$ such that $x \in S$
   % \end{enumerate}
-  In other words, {\tt filter\_1} outputs a filtered path labeling that
+  In other words, \filteri outputs a filtered path labeling that
   ``preserves''
   hypergraph isomorphisms of the original path labeling.
 %   Secondly, line~\ref{ln:exit1} will execute \iff the exit condition in
@@ -778,9 +870,9 @@ isomorphisms.
   %   cardinalities don't change thus all invariants are still true}
 \end{proof}
 
-As a result of {\tt filter\_1} each leaf $v$ in $T$ is such that there
+As a result of \filteri each leaf $v$ in $T$ is such that there
 is exactly one set in $\cF$ with $v$ as a vertex in the path assigned
-to it.  {\tt filter\_2}, in Algorithm~\ref{al:filtertwo}, identifies
+to it.  \filterii, in Algorithm~\ref{al:filtertwo}, identifies
 elements in $supp(\cF)$ whose images are leaves in a hypergraph
 isomorphism if one exists.  Let $S \in \cF$ be such that $\cl(S)$ is a
 path with leaf and $v \in V(T)$ is the unique leaf incident on it.  We
@@ -802,14 +894,14 @@ T\}$. Algorithm~\ref{al:filtertwo} is now presented with details.
 
 % \begin{lemma}
 %   \label{lem:setminuscard}
-%   If $\cA$ is an ICPPA, and $(S_1, P_1),(S_2, P_2),(S_3, P_3) \in
+%   If $\cA$ is an ICPPL, and $(S_1, P_1),(S_2, P_2),(S_3, P_3) \in
 %   \cA$, then $|S_1 \cap (S_2 \setminus S_3)| = |P_1 \cap (P_2
 %   \setminus P_3)|$.
 % \end{lemma}
 % \begin{proof}\thesisspacing
 %   $|S_1 \cap (S_2 \setminus S_3)| = |(S_1 \cap S_2) \setminus S_3| =
 %   |S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3|$. Due to conditions (ii)
-%   and (iii) of ICPPA, $|S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3| = |P_1
+%   and (iii) of ICPPL, $|S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3| = |P_1
 %   \cap P_2| - |P_1 \cap P_2 \cap P_3| = |(P_1 \cap P_2) \setminus P_3|
 %   = |P_1 \cap (P_2 \setminus P_3)|$. Thus lemma is proven. %\qed
 % \end{proof}
@@ -842,7 +934,7 @@ T\}$. Algorithm~\ref{al:filtertwo} is now presented with details.
 %   \setminus Q_1)$.\\
 %   \noindent
 %   The base case, $\Pi_0 = \{(S_i,P_i) \mid i \in [m]\}$, is trivially
-%   true since it is the input which is an ICPPA.  Assume the lemma is
+%   true since it is the input which is an ICPPL.  Assume the lemma is
 %   true till the $j-1$ iteration. Consider $j$th
 %   iteration:\\
 %   \noindent
@@ -889,7 +981,7 @@ T\}$. Algorithm~\ref{al:filtertwo} is now presented with details.
 
 
 \begin{algorithm}[h]
-  \caption{Leaf labeling from an ICPPL {\tt filter\_2($\cF, \cl, T$)}}
+  \caption{Leaf labeling from an ICPPL {\tt \filterii($\cF, \cl, T$)}}
   \label{al:filtertwo} % {leafasgn}
   \begin{algorithmic}[\lndisplay]
     \STATE $\cF_0 \assign \cF$, $\cl_0(S) \assign \cl(S)$ for all $S
@@ -924,7 +1016,7 @@ Algorithm~\ref{al:filtertwo} is empty in some iteration of the {\bf
 % isomorphism. 
 The following Lemma~\ref{lem:xnotempty} shows that this cannot
 happen. Following that Lemma~\ref{lem:invar3} shows that given an
-ICPPL input, the filtered output path labeling after {\tt filter\_2}
+ICPPL input, the filtered output path labeling after \filterii
 is also an ICPPL.
 
 %\temptext{ --- WG11 begin --- }%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -934,19 +1026,19 @@ is also an ICPPL.
 %   $j$th iteration the four invariants given in lemma \ref{lem:invar1}
 %   are valid.
 %   % Moreover, $X$ as defined in the algorithm is non-empty if this is
-%   % an ICPPA.
+%   % an ICPPL.
 % \end{lemma}
 % \begin{proof}\thesisspacing
 %   First we see that $X = S_{i_1} \setminus \bigcup_{i \ne i_1, i \in
-%     I}S_i$ is non empty in every iteration for an ICPPA. Suppose $X$
+%     I}S_i$ is non empty in every iteration for an ICPPL. Suppose $X$
 %   is empty. We know that $v \in P_{i_1} \setminus \bigcup_{i \ne i_1,
 %     i \in I}P_i$ since $v$ is in the unique path $P_{i_1}$. Since this
-%   is an ICPPA $|S_{i_1}| = |P_{i_1}|$. For any $x \in S_{i_1}$ it is
+%   is an ICPPL $|S_{i_1}| = |P_{i_1}|$. For any $x \in S_{i_1}$ it is
 %   contained in at least two sets due to our assumption. Let $S_{i_2}$
 %   be a second set that contains $x$. We know $v \notin
 %   P_{i_2}$. Therefore there cannot exist a permutation that maps
 %   elements of $S_{i_2}$ to $P_{i_2}$. This contradicts our assumption
-%   that this is an ICPPA. Thus $X$ cannot be empty.
+%   that this is an ICPPL. Thus $X$ cannot be empty.
 
 
 %   We use mathematical induction on the number of iterations for this
@@ -956,7 +1048,7 @@ is also an ICPPL.
 %   that $v$ is a leaf and $Q'$ is the unique path
 %   incident on it.\\
 %   For $\Pi_0$ all invariants hold because it is output from algorithm
-%   \ref{al:filterone} which is an ICPPA. Hence base case is proved.  Assume
+%   \ref{al:filterone} which is an ICPPL. Hence base case is proved.  Assume
 %   the lemma holds for $\Pi_{j-1}$. Consider $\Pi_j$ and any $(P,Q) \in
 %   \Pi_j$. If $(P,Q) $ is in $ \Pi_j$ and $\Pi_{j-1}$ invariants I and
 %   II are true because of induction assumption. If it is only in
@@ -1008,13 +1100,13 @@ is also an ICPPL.
 
 % \begin{theorem}
 %   \label{th:perm}
-%   If $\cA$ is an ICPPA, then there exists a bijection $\sigma : U
+%   If $\cA$ is an ICPPL, then there exists a bijection $\sigma : U
 %   \rightarrow V(T)$ such that $\sigma(S_i) = P_i$ for all $i \in I$
 % \end{theorem}
 % \begin{proof}\thesisspacing
-%   This is a contructive proof. First, the given ICPPA $\cA$ and tree
+%   This is a contructive proof. First, the given ICPPL $\cA$ and tree
 %   $T$ are given as input to Algorithm \ref{al:filterone}. This yields a
-%   ``filtered'' ICPPA as the output which is input to Algorithm
+%   ``filtered'' ICPPL as the output which is input to Algorithm
 %   \ref{al:filtertwo}.  It can be observed that the output of Algorithm
 %   \ref{al:filtertwo} is a set of interval assignments to sets and
 %   one-to-one assignment of elements of $U$ to each leaf of $T$. To be
@@ -1040,7 +1132,7 @@ is also an ICPPL.
 %   leaves in tree $T_{i-1}$. This is continued until we get a
 %   subproblem with path assignment $\cA_{d-1}$ and tree $T_{d-1}$ for
 %   some $d \le n$ which is just a path. From the last lemma we know
-%   that $\cA_{d-1}$ is an ICPPA. Another observation is that an ICPPA
+%   that $\cA_{d-1}$ is an ICPPL. Another observation is that an ICPPL
 %   with all its tree paths being intervals (subpaths from a path) is
 %   nothing but an ICPIA\cite{nsnrs09}.  Let $\cA_{d-1}$ be equal to
 %   $\{(S_i'',P_i'') \mid S_i'' \subseteq U_{d-1}, P_i'' \text{ is a
@@ -1093,17 +1185,19 @@ is also an ICPPL.
 %   execute.
 \end{lemma}
 \begin{proof}\thesisspacing
-  Assume $X$ is empty for some iteration $j > 0$. We know that $v$ is
-  an element of $\cl_{j-1}(S_1)$. Since it is uniquely present in
-  $\cl_{j-1}(S_1)$, it is clear that $v \in \cl_{j-1}(S_1) \setminus
-  \bigcup_{(S \in \cF_{j-1}) \wedge (S \ne S_1)}\cl_{j-1}(S)$.  Note
-  that for any $x \in S_1$ it is contained in at least two sets due to
-  our assumption about cardinality of $X$. Let $S_2 \in \cF_{j-1}$ be
-  another set that contains $x$. From the above argument, we know $v
-  \notin \cl_{j-1}(S_2)$. Therefore there cannot exist a hypergraph
-  isomorphism bijection that maps elements in $S_2$ to those in
-  $\cl_{j-1}(S_2)$. This contradicts our assumption that the input is
-  feasible. Thus $X$ cannot be empty if input is ICPPL and feasible.
+This directly follows from Lemma~\ref{lem:priv-card} since $X$ is
+nothing but $S_{1_{priv}}$.
+%   Assume $X$ is empty for some iteration $j > 0$. We know that $v$ is
+%   an element of $\cl_{j-1}(S_1)$. Since it is uniquely present in
+%   $\cl_{j-1}(S_1)$, it is clear that $v \in \cl_{j-1}(S_1) \setminus
+%   \bigcup_{(S \in \cF_{j-1}) \wedge (S \ne S_1)}\cl_{j-1}(S)$.  Note
+%   that for any $x \in S_1$ it is contained in at least two sets due to
+%   our assumption about cardinality of $X$. Let $S_2 \in \cF_{j-1}$ be
+%   another set that contains $x$. From the above argument, we know $v
+%   \notin \cl_{j-1}(S_2)$. Therefore there cannot exist a hypergraph
+%   isomorphism bijection that maps elements in $S_2$ to those in
+%   $\cl_{j-1}(S_2)$. This contradicts our assumption that the input is
+%   feasible. Thus $X$ cannot be empty if input is ICPPL and feasible.
   %\qed
 \end{proof}
 
@@ -1114,25 +1208,25 @@ is also an ICPPL.
   Lemma~\ref{lem:invar1} hold.
 \end{lemma}
 \begin{proof}\thesisspacing
-  By Lemma~\ref{lem:xnotempty} we know that set $X$ will not be empty
-  in any iteration of the {\em \bf while} loop if input ICPPL $(\cF,
-  \cl)$ is feasible and $\cl_j$ is always computed for all $j >
-  0$. Also note that removing a leaf from any path keeps the new path
-  connected. Thus invariant I is obviously true. In every iteration $j
-  > 0$, we remove exactly one element $x$ from one set $S$ in $\cF$
-  and exactly one vertex $v$ which is a leaf from one path
-  $\cl_{j-1}(S)$ in $T$. This is because as seen in
-  Lemma~\ref{lem:xnotempty}, $x$ is exclusive to $S$ and $v$ is
-  exclusive to $\cl_{j-1}(S)$. Due to this fact, it is clear that the
-  intersection cardinality equations do not change, i.e., invariants
-  II, III, IV remain true. On the other hand, if the input ICPPL is
-  not feasible the invariants are vacuously true. %\qed
+  Following Lemma~\ref{lem:xnotempty}, we know that set $X$ will not
+  be empty in any iteration of the {\em \bf while} loop if input ICPPL
+  $(\cF, \cl)$ is feasible and thus $\cl_j$ is always computed for all
+  $j > 0$. Also note that removing a leaf from any path keeps the new
+  path connected. Thus invariant I is obviously true. In every
+  iteration $j > 0$, we remove exactly one element $x$ from one set
+  $S$ in $\cF$ and exactly one vertex $v$ which is a leaf from one
+  path $\cl_{j-1}(S)$ in $T$. This is because $x$ is exclusive to $S$
+  and $v$ is exclusive to $\cl_{j-1}(S)$. Due to this fact, it is
+  clear that the intersection cardinality equations do not change,
+  i.e., invariants II, III, IV remain true. % On the other hand, if the
+%   input ICPPL is not feasible the invariants are vacuously true.
+  % \qed
 \end{proof}
 
 
 We have seen two filtering algorithms above, namely,
-Algorithm~\ref{al:filterone} for {\tt filter\_1} and
-Algorithm~\ref{al:filtertwo} for {\tt filter\_2} which when executed
+Algorithm~\ref{al:filterone} for \filteri and
+Algorithm~\ref{al:filtertwo} for \filterii which when executed
 in that order result in a new ICPPL on the same universe $U$ and
 target tree $T$. We also proved that if the input is indeed feasible,
 these algorithms executed in sequence give an ICPPL that preserves a
@@ -1144,8 +1238,8 @@ two filters to compute one such isomorphism.
 
 %% IS THIS LEMMA NECESSARY? 31 JAN 2012 %%
 % \begin{lemma}{\temptext{PROOF TBD.}}
-%   Let $(\cF_2, \cl_2)$ be the output of {\tt filter\_2} and the ICPPL
-%   input to {\tt filter\_1} preceeding its call is $(\cF, \cl)$ with
+%   Let $(\cF_2, \cl_2)$ be the output of \filterii and the ICPPL
+%   input to \filteri preceeding its call is $(\cF, \cl)$ with
 %   target tree $T$. If a bijection $\phi:\supt{\cF_2} \rightarrow V(T)$
 %   is a hypergraph isomorphism of $(\cF_2, \cl_2)$, then it is a
 %   hypergraph isomorphism of $(\cF, \cl)$.
@@ -1156,9 +1250,9 @@ Algorithm~\ref{al:icppl-find-isomorph} computes a hypergraph
 isomorphism $\phi$ recursively using Algorithm~\ref{al:filterone} and
 Algorithm~\ref{al:filtertwo} and pruning the leaves of the input
 tree. In brief, it is done as follows. If the input is feasible, the
-output of {\tt filter\_1}, say $(\cF_1, \cl_1)$, gives a new ICPPL
+output of \filteri, say $(\cF_1, \cl_1)$, gives a new ICPPL
 which preserves all the original hypergraph isomorphisms.  This ICPPL
-$(\cF_1, \cl_1)$ is then given to {\tt filter\_2} which gives the
+$(\cF_1, \cl_1)$ is then given to \filterii which gives the
 second filtered ICPPL, say $(\cF_2, \cl_2)$ such that a feasible leaf
 labeling is in singleton elements of $\cF_2$. These leaf labels are
 the elements in $supp(\cF)$ that map to leaves in $T$ in at least one
@@ -1191,9 +1285,9 @@ Lemma~\ref{lem:hyperiso} proves the correctness of this computation.
     \RETURN $\emptyset$\\
     \ENDIF
     \STATE $L \assign \{v \mid v \text{ is a leaf in }      T\}$\\
-    \STATE $(\cF_1, \cl_1) \assign$ {\tt filter\_1($\cF, \cl,
+    \STATE $(\cF_1, \cl_1) \assign$ {\tt \filteri($\cF, \cl,
       T$)}\\
-    \STATE $(\cF_2, \cl_2) \assign$ {\tt filter\_2($\cF_1,
+    \STATE $(\cF_2, \cl_2) \assign$ {\tt \filterii($\cF_1,
       \cl_1, T$)}\\
 
     \STATE $(\cF', \cl') \assign (\cF_2, \cl_2)$\\
@@ -1258,17 +1352,16 @@ characterization of a feasible path labeling.
   From Lemma~\ref{lem:hyperiso}, we know that if $(\cF, \cl)$ is an
   ICPPL and if Algorithm~\ref{al:icppl-find-isomorph} with $(\cF, \cl,
   T)$ as input returns a non-empty function, then $(\cF, \cl)$ is
-  feasible.  Now consider the case where $(\cF, \cl)$ is
-  feasible, \ie there exists a hypergraph isomorphism $\phi$ such
-  that $\cl_\phi = \cl$. Lemma~\ref{lem:noexit1} and
-  Lemma~\ref{lem:xnotempty} show us that {\tt filter\_1} and {\tt
-    filter\_2} do not exit if input is feasible. Thus
+  feasible.  Now consider the case where $(\cF, \cl)$ is feasible, \ie
+  there exists a hypergraph isomorphism $\phi$ such that $\cl_\phi =
+  \cl$. Lemma~\ref{lem:noexit1} and Lemma~\ref{lem:xnotempty} show us
+  that \filteri and \filterii do not exit if input is feasible. Thus
   Algorithm~\ref{al:icppl-find-isomorph} returns a non-empty
   function.%\qed
 \end{proof}
 
 \section{Solution to \illustrationproblem}
-
+\label{sec:wallacesol}
 
 In this section we run through the filtering and tree pruning
 algorithm seen in Section~\ref{sec:feasible} on an example. The
@@ -1433,35 +1526,41 @@ figures along with their captions are self-explanatory.
 \section[Special target trees]{ Computing feasible TPL with special target trees}
 \label{sec:spltargettree}
 
-\tnote{\sc refer to Problem Defs here}
 Section~\ref{sec:feasible} described properties that a TPL must have
 for it to be feasible. The next problem of interest is to test if a
 given hypergraph is a path hypergraph with respect to a given target
 tree\footnote{A larger problem would be to find if a given hypergraph
-  is a path graph on any tree. This problem is not addressed in this
-  thesis.}. In other words, the problem is to find out if a feasible
-tree path labeling exists from a given target tree for a given
-hypergraph. In this section we will see two special cases of this
-problem where the target tree is from a particular family of
-trees. The first one, where the tree is a path, is a shown to be
-equivalent to the well studied problem of consecutive-ones in
+  is a path hypergraph with respect to any tree. This problem is not
+  addressed in this thesis.}.  In other words, the problem is to find
+out if a feasible tree path labeling exists from a given target tree
+for a given hypergraph. In this section we will see two special cases
+of this problem where the target tree is from a particular family of
+trees. The first one, where the tree is a path as described by the
+\CFTPLINT problem (see Section~\ref{sec:myresearchintro}) is a shown
+to be equivalent to the well studied problem of consecutive-ones in
 Section~\ref{sec:icpplicpia}. The second one, where the tree is a
-$k$-subdivided tree\footnote{See Section~\ref{ch:prelims} for the
-  formal definition.}, has been solved using a polynomial time
-algorithm. The latter problem enforces some conditions on the
+$k$-subdivided tree as described by \CFTPLKTREE (see
+Section~\ref{sec:myresearchintro}), has been solved using a polynomial
+time algorithm. The latter problem enforces some conditions on the
 hypergraph too which will be seen in Section~\ref{sec:ksubdivstar}.
 
 \subsection{Target tree is a Path}
 \label{sec:icpplicpia}
 
-Let us consider a special case of ICPPL with the following properties.
-The target tree $T$ is a path.  Hence, all path labels are can be viewed as
-intervals assigned to the sets in $\cF$.  It is shown, in
-\cite{nsnrs09}, that the filtering algorithms outlined above need only
-preserve pairwise intersection cardinalities, and higher level
-intersection cardinalities are preserved by the Helly Property of
-intervals.  Consequently, the filter algorithms do not need to ever
-evaluate the additional check to {\em \bf exit}.
+In Section~\ref{sec:motive} it is described how \COP is a
+special case of TPL as described by the \CFTPLINT problem. In this
+section we will dwell on this in more detail.
+
+\annote[dire]{The special case of TPL where the target tree $T$ is a
+path. Hence, all path labels are can be viewed as intervals assigned
+to the sets in $\cF$. }{needs work}
+
+It is shown, in \cite{nsnrs09}, that the
+filtering algorithms outlined above need only preserve pairwise
+intersection cardinalities, and higher level intersection
+cardinalities are preserved by the Helly Property of intervals.
+% Consequently, the filter algorithms do not need to ever evaluate the
+% additional check to {\em \bf exit}.
 %\begin{enumerate}
 %\item Given tree $T$ is a path. Hence, all path labels are interval labels.
 %\item Only pairwise intersection cardinality
@@ -1483,9 +1582,7 @@ graph's close relationship with intervals.
 \begin{figure}[t] %[htbp] 
   \centering
   \begin{tabular}{lr}
-%     (a) \includegraphics{cop-tree_thesis.1}&
-%     (b) \includegraphics{cop-tree_thesis.2}
-    (a) \ksubstari & (b) \ksubstarii
+   (a) \ksubstari & (b) \ksubstarii
   \end{tabular}
   \caption{\figtabsize (a) $8$-subdivided star with 7 rays (b)
     3-subdivided star with 3 rays}
@@ -1493,7 +1590,8 @@ graph's close relationship with intervals.
 \end{figure}
 
 In this section we consider the problem of assigning paths from a
-$k$-subdivided star $T$ to a given set system $\cF$.  We consider
+$k$-subdivided star $T$ to a given set system $\cF$ as described by
+the \CFTPLKTREE problem.  We consider
 $\cF$ for which the overlap graph $\bO(\cF)$ is connected.  The
 overlap graph is well-known from the work of
 \cite{kklv10,nsnrs09,wlh02}.  We use the notation in
@@ -1591,7 +1689,7 @@ the following rules. Also the end of the iteration, $\cL_1^{i+1},
 \cL_2^{i}, \cT_1^{i}, \cT_2^{i}$ respectively, along with some
 case-specific changes mentioned in the rules below.
 
-\temptext{repetition}
+\tnote[dire]{REPEAT!!
 
 In this section we consider the problem of assigning paths from a
 $k$-subdivided star $T$ to a given set system $\cF$ such that each set
@@ -1634,11 +1732,10 @@ vertices in $R_i$, $i \in [p]$ is $k+2$.  Let
 $\seq{v_{i1},\ldots,v_{i(k+2)}=r}$ denote the sequence of vertices in
 $R_i$, where $v_{i1}$ is the leaf. Note that $r$ is a common vertex to
 all $R_i$.
-  
+}  
 
 
-\subsection{Description of the Algorithm}
-\label{sec:ksubstaralgo}
+\noindent {\bf Description of the Algorithm.}
 In this section the given hypergraph $\cF$, the $k$-subdivided star
 and the root of the star are denoted by $\cO$, $T$ and vertex $r$,
 respectively.  In particular, note that the vertices of $\cO$
@@ -1872,23 +1969,22 @@ These lemmas now are used to prove the following theorem.
   Algorithm~\ref{al:icppl-find-isomorph} successfully runs on input
   $(\cO, \cl)$. In base case $k=0$, $T$ is a star. Also every set is
   at most size 2 ($k+2$) size and thus overlaps are at most 1. If two
-  paths share a leaf in {\tt filter\_1} one must be of length 2 and
-  the other of length 1. Thus the exit condition is not met. Further,
-  it is also clear that the exit condition in {\tt filter\_2} is also
-  not met. Thus claim proven for base case.  Now assume the claim to
-  be true when target tree is a $(k-1)$-subdivided star. Consider the
-  case of a $k$-subdivided star.  We can show that after {\tt
-    filter\_1} and one iteration of a modified {\tt filter\_2} {\em
-    all} leaves are assigned pre-images.  Removing the leaves from $T$
-  and the pre-images from support of $\cO$, results in an ICPPL to a
-  $(k-1)$-subdivided star.  Now we apply the induction hypothesis, and
-  we get an isomorphism between the hypergraphs $\cO$ and $\cO^\cl$.
+  paths share a leaf in \filteri one must be of length 2 and the other
+  of length 1. Thus the exit condition is not met. Further, it is also
+  clear that the exit condition in \filterii is also not met. Thus
+  claim proven for base case.  Now assume the claim to be true when
+  target tree is a $(k-1)$-subdivided star. Consider the case of a
+  $k$-subdivided star.  We can show that after \filteri and one
+  iteration of a modified \filterii {\em all} leaves are assigned
+  pre-images.  Removing the leaves from $T$ and the pre-images from
+  support of $\cO$, results in an ICPPL to a $(k-1)$-subdivided star.
+  Now we apply the induction hypothesis, and we get an isomorphism
+  between the hypergraphs $\cO$ and $\cO^\cl$.
 
   \noindent
   In the reverse direction if there is a feasible path labeling $\cl$,
   then we know that $\cl$ is unique up to isomorphism.  Therefore,
   again by induction on $k$ it follows that the algorithm finds $\cl$.
-  
 \end{proof}
 
 
@@ -1968,165 +2064,230 @@ These lemmas now are used to prove the following theorem.
 %   one.
 % \end{proof}
 
-
-
-
-
-\section{ TPL with no restrictions}
+\section{ TPL on arbitrary trees}
 \label{sec:norestraint}
 
-{\tt abstract begin} it is known that if the given tree is a path a
-feasible assignment can be found in polynomial time, and we observe
-that it can actually be done in logspace. \tnote{[TRUE?]}  {\tt
-  abstract end}
+In this section we describe an algorithm for the \CFTPL problem where
+the target tree can be any arbitrary tree. In essence, we provide a
+characterization for path hypergraphs (see
+Section~\ref{sec:pathhypergraph} for definition).  We first study some
+properties of the overlap components of the input hypergraph and
+introduce some theory in that area. This is in the same vein as the
+theory used in \cite{wlh02,nsnrs09} but we extend it to \TPL.  We use
+this theory to decompose \CFTPL into subproblems.  Each subproblem is
+on a sub-hypergraph of the input, in which for each hyperedge there is
+another hyperedge in the sub-hypergraph that overlaps with it. These
+sub-hypergraphs are called overlap components (see
+Section~\ref{sec:overlapmarginal} for definition). As a consequence of
+this characterization, aside from the overlap component subproblems,
+we identify two other subproblems that must be solved to obtain an
+ICPPL.  The inefficiency of our algorithm in terms of polynomial time
+solvability comes from these two subproblems. We leave these subproblems
+open to be solved in \p and only mention the obvious brute force
+method of solution.
 
-In Section \ref{prelims} we present the necessary preliminaries, in
-Section \ref{feasible} we present our characterization of feasible
-tree path assignments, and in Section \ref{sec:decompos} we present the
-characterizing subproblems for finding a bijection between $U$ and
-$V(T)$ such that sets map to tree paths. Finally, in Section
-\ref{sec:tplcomplexity} we conclude by showing that Tree Path Assignment is
-GI-Complete, and also observe that Consecutive Ones Testing is in
-Logspace.
+% with which the intersection is {\em
+%   strict}- there is a non-empty intersection, but neither is contained
+% in the other.  % In
+% \cite{wlh02,nsnrs09} where to test for COP in a given matrix, the COP
+% problem is solved on an equivalent set of prime matrices.
 
+% \annote{ We refer to this as the Tree Path Assignment problem for an
+%   input $(\cF,T)$ pair.}{Add this ``pair'' as a definition in
+%   ch:prelims 0 - or should we?}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DUMMYTOC \subsection{Introduction}
-
-\annote{ We refer to this as the Tree Path Assignment problem for an
-  input $(\cF,T)$ pair.}{Add this ``pair'' as a definition in
-  ch:prelims}
-
-In the second part of this paper, we decompose our search for a
-bijection between $U$ and $V(T)$ into subproblems.  Each subproblem is
-on a set system in which for each set, there is another set in the set
-system with which the intersection is {\em strict}- there is a
-non-empty intersection, but neither is contained in the other.  This
-is in the spirit of results in \cite{wlh02,nsnrs09} where to test for
-COP in a given matrix, the COP problem is solved on an equivalent set
-of prime matrices.
+% In the second part of this paper, we decompose our search for a
+% bijection between $U$ and $V(T)$ into subproblems.  
 
 % Finally, we show that Tree Path Assignment is isomorphism-complete.
-We also point out Consecutive Ones Testing is in Logspace from two
-different results in the literature \cite{kklv10, mcc04}. To the best
-of our knowledge this observation has not been made earlier.
+
+%\noindent {\bf Finding an assignment of tree paths to a set system.} 
+As described by Definition~\ref{def:matrixsetsystem} a set system or
+hypergraph can be concisely represented by a binary matrix
+\stt the row indices of the matrix denote the vertex set of the
+hypergraph and each column bijectively correspond to a hyperedge. And
+thus the ideas of feasible \TPL and \ICPPL are also defined for a
+binary matrix. If a \TPL $(\cF,\cl,T)$ is feasible, \ie it is an ICPPL
+(see Section~\ref{xxxxx} \tnote[dire]{SECTION NUMBER}) and if $M$ is
+the representative matrix for hypergraph $\cF$, then we say that $M$
+has an \ICPPL and vice versa.
 
 
-\subsection{Finding an assignment of tree paths to a set
-  system}% 
-\label{sec:decompos}% 
-In the previous section we have shown that
-the problem of finding a Tree Path Asssignment to an input $(\cF,T)$
-is equivalent to finding an ICPPA to $\cF$ in tree $T$.  In this
-section we characterize those set systems that have an ICPPA in a
-given tree.  As a consequence of this characterization we identify two
-sub-problems that must be solved to obtain an ICPPA.  We do not solve
-the problem and in the next section show that finding an ICPPA in a
-given tree is GI-Complete.
-
-\noindent
-A set system can be concisely represented by a binary matrix where the
-row indices denote the universe of the set system and the column
-indices denote each of the sets. Let the binary matrix be $M$ with
-order $n \times m$, the set system be $\cF = \{S_i \mid i \in [m]\}$,
-universe of set system $U = \{x_1, \dots ,x_n\}$. If $M$ represents
-$\cF$, $|U| = n, |\cF| = m$. Thus $(i,j)$th element of $M$, $M_{ij} =
-1$ \iff $x_i \in S_j$. If $\cF$ has a feasible tree path assignment
-(ICPPA) $\cA = \{(S_i,P_i) \mid i \in [m]\}$, then we say its
-corresponding matrix $M$ has an ICPPA. Conversly we say that a matrix
-$M$ has an ICPPA if there exists an ICPPA $\cA$ as defined
-above.\\
-\noindent
-We now define the strict intersection graph or overlap graph of
-$\cF$. This graph occurs at many places in the literature, see for
-example \cite{kklv10, wlh02, nsnrs09}.  The vertices of the graph
-correspond to the sets in $\cF$.  An edge is present between vertices
-of two sets \iff the corresponding sets have a nonempty intersection
-and none is contained in the other. Formally, intersection graph is
-$G_f = (V_f, E_f)$ such that $V_f = \{v_i \mid S_i \in \cF\}$ and $E_f
-= \{(v_i, v_j) \mid S_i \cap S_j \ne \O \text{ and }S_i \nsubseteq
-S_j, S_j \nsubseteq S_i \}$.  We use this graph to decompose $M$ as
-described in \cite{wlh02,nsnrs09}.  A prime sub-matrix of $M$ is
-defined as the matrix formed by a set of columns of $M$ which
-correspond to a connected component of the graph $G_f$.  Let us denote
-the prime sub-matrices by $M_1,\ldots,M_p$ each corresponding to one
-of the $p$ components of $G_f$. Clearly, two distinct matrices have a
-distinct set of columns.  Let $col(M_i)$ be the set of columns in the
-sub-matrix $M_i$.  The support of a prime sub-matrix $M_i$ is defined
-as $supp(M_i) = \displaystyle \bigcup_{j \in col(M_i)}S_j$.  Note that
-for each $i$, $supp(M_i) \subseteq U$.  For a set of prime
-sub-matrices $X$ we define
-$supp(X) = \displaystyle \bigcup_{M \in X} supp(M)$. \\
-
-
-\noindent
-Consider the relation $\preccurlyeq$ on the prime sub-matrices $M_1,
-\ldots, M_p$ defined as follows:
-\begin{equation}
-  \nonumber \{(M_i,M_j) | \mbox{ A set } S \in
-  M_i \mbox{ is contained in a set } S' \in M_j\} \cup \{(M_i,M_i) | 1
-  \leq i \leq p\} 
-\end{equation}
-
-\noindent
-This relation is the same as that defined in \cite{nsnrs09}. The prime
-submatrices and the above relation can be defined for any set
-system. We will use this structure of prime submatrices to present our
-results on an an ICPPA for a set system $\cF$. Recall the following
-lemmas, and theorem that $\preccurlyeq$ is a partial order, from
-\cite{nsnrs09}.
-
-\begin{lemma} \label{lem:containment} Let $(M_i,M_j) \in
-  \preccurlyeq$.  Then there is a set $S' \in M_j$ such that for each
-  $S \in M_i$, $S \subseteq S'$.
-\end{lemma}
-\begin{lemma}
-  For each pair of prime sub-matrices, either $(M_i,M_j) \not\in
-  \preccurlyeq$ or $(M_j,M_i) \not\in \preccurlyeq$.
-  % If $(M_i,M_j) \in \preccurlyeq$ and $(M_j,M_i) \in \preccurlyeq$,
-  % then $i = j$ and $|M_i| = 1$.
-\end{lemma}
-\begin{lemma}
-  If $(M_i,M_j) \in \preccurlyeq $ and $(M_j,M_k) \in \preccurlyeq$,
-  then $(M_i,M_k) \in \preccurlyeq$.
-\end{lemma}
-\begin{lemma}
-  If $(M_i,M_j) \in \preccurlyeq$ and $(M_i,M_k) \in \preccurlyeq$,
-  then either $(M_j,M_k) \in \preccurlyeq$ or $(M_k,M_j) \in
-  \preccurlyeq$.
-\end{lemma}
-\begin{theorem} \label{thm:partitionold} $\preccurlyeq$ is a partial
-  order on the set of prime sub-matrices of $M$.  Further, it uniquely
-  partitions the prime sub-matrices of $M$ such that on each set in
-  the partition $\preccurlyeq$ induces a total order.
-\end{theorem}
-For the purposes of this paper, we refine the total order mentioned in
-Theorem \ref{thm:partitionold}. We do this by identifying an in-tree
-rooted at each maximal upper bound under $\preccurlyeq$.  Each of
-these in-trees will be on disjoint vertex sets, which in this case
-would be disjoint sets of prime-submatrices.  The in-trees are
-specified by selecting the appropriate edges from the Hasse diagram
-associated with $\preccurlyeq$.  Let $\cI$ be the following set:
+Consider the overlap graph and overlap components of $\bO(\cF)$
+defined in Section~\ref{sec:overlapmarginal}.  We use this to
+decompose $M$ as described in \cite{wlh02,nsnrs09}.  A {\em prime
+  submatrix} of $M$ is defined as the matrix formed by a set of
+columns of $M$ which correspond to an overlap component.  Let us
+denote the prime submatrices of $M$ by $M_1,\ldots,M_p$, each
+corresponding to one of the $p$ overlap components of $\cF$. Clearly,
+two distinct prime submatrices have mutually exclusive sets of columns
+of $M$.  Let $col(M_i)$ be the set of columns in the submatrix $M_i$.
+The support of a prime submatrix $M_i$ and support of a
+set of prime submatrices $X$ are defined as follows. Note that for each $i$,
+$supp(M_i) \subseteq U$ where $U$ is the vertex set of hypergraph $\cF$.
 \begin{align*}
-  \cI = \{ (M_i,M_j) \in \preccurlyeq \mid \nexists M_k s.t. M_i
-  \preccurlyeq M_k, M_k \preccurlyeq M_j \} \cup \{ (M_i,M_i), i \in
-  [p] \}
+supp(M_i) &= \displaystyle \bigcup_{j \in col(M_i)}S_j\\  
+supp(X) &= \displaystyle  \bigcup_{M \in X} supp(M)
 \end{align*}
 
-\begin{theorem} \label{thm:partition} Consider the directed graph $X$
-  whose vertices correspond to the prime sub-matrices, and the edges
-  are given by $\cI$.  Then, $X$ is a vertex disjoint collection of
-  in-trees and the root of each in-tree is a maximal upper bound in
-  $\preccurlyeq$.
+
+% A
+% set system can be concisely represented by a binary matrix where the
+% row indices denote the universe of the set system and the column
+% indices denote each of the sets. Let the binary matrix be $M$ with
+% order $n \times m$, the set system be $\cF = \{S_i \mid i \in [m]\}$,
+% universe of set system $U = \{x_1, \dots ,x_n\}$. If $M$ represents
+% $\cF$, $|U| = n, |\cF| = m$. Thus $(i,j)$th element of $M$, $M_{ij} =
+% 1$ \iff $x_i \in S_j$. 
+
+% If $\cF$ has a feasible tree path assignment
+% (ICPPL) $\cA = \{(S_i,P_i) \mid i \in [m]\}$, then we say its
+% corresponding matrix $M$ has an ICPPL. Conversly we say that a matrix
+% $M$ has an ICPPL if there exists an ICPPL $\cA$ as defined
+% above.\\
+%\noindent
+
+% We now define the strict intersection graph or overlap graph of
+% $\cF$. This graph occurs at many places in the literature, see for
+% example \cite{kklv10, wlh02, nsnrs09}.  The vertices of the graph
+% correspond to the sets in $\cF$.  An edge is present between vertices
+% of two sets \iff the corresponding sets have a nonempty intersection
+% and none is contained in the other. Formally, intersection graph is
+% $G_f = (V_f, E_f)$ such that $V_f = \{v_i \mid S_i \in \cF\}$ and $E_f
+% = \{(v_i, v_j) \mid S_i \cap S_j \ne \O \text{ and }S_i \nsubseteq
+% S_j, S_j \nsubseteq S_i \}$. 
+
+\def \primeless {\preccurlyeq}
+\noindent
+Consider the binary relation $\primeless$ defined on the set of
+prime submatrices $\bP = \{M_i \mid i \in [p]\}$ as follows.
+\begin{align*}
+  \primeless \ = \ &\{(M_i,M_j) \mid \exists S \in
+  M_i \text{ and } \exists S' \in M_j \text{ \stt\ } S \subseteq S'\} \\
+  \cup \  &\{(M_i,M_i) \mid i \in [p]\}
+\end{align*}
+
+% $  \primeless = \{(M_i,M_j) \mid \text{ a set } S \in
+%   M_i \text{ is contained in a set } S' \in M_j\} \cup \{(M_i,M_i) | 1
+%   \leq i \leq p\} $
+
+This relation is the same as that defined in \cite{nsnrs09}. The prime
+submatrices and the above relation can be defined for any hypergraph
+since an overlap graph is defined for any hypergraph. We will use this structure of prime submatrices to present our
+results on an ICPPL for a hypergraph $\cF$. 
+Now we present a few lemma and a theorem that show that $\primeless$ is
+a partial order. An alternate notation for $(M_i,M_j) \in \primeless$
+is $M_i \primeless M_j$.
+
+% Recall the following
+% lemmas, and theorem that $\preccurlyeq$ is a partial order, from
+% \cite{nsnrs09}.
+
+\begin{lemma}[{\cite[Lem.~3]{nsnrs09}}] %
+  \label{lem:containment} If % $(M_i,M_j) \in
+%   \preccurlyeq$
+  $M_i \primeless M_j$, then there is a set $S' \in M_j$ such that for
+  each $S \in M_i$, $S \subseteq S'$.
+\end{lemma}
+\begin{lemma}[{\cite[Lem.~4]{nsnrs09}}] %
+  For each pair of prime submatrices $M_i, M_j$, either $M_i \not\primeless M_j$
+  or $M_j \not\primeless M_i$.
+% $(M_i,M_j) \not\in
+%   \preccurlyeq$ or $(M_j,M_i) \not\in \preccurlyeq$.
+\end{lemma}
+\begin{lemma}[{\cite[Lem.~5]{nsnrs09}}] %
+  If $M_i \primeless M_j$ and $M_i \primeless M_k$,
+  then $M_i \primeless M_k$.
+%   If $(M_i,M_j) \in \preccurlyeq $ and $(M_j,M_k) \in \preccurlyeq$,
+%   then $(M_i,M_k) \in \preccurlyeq$.
+\end{lemma}
+\begin{lemma}[{\cite[Lem.~6]{nsnrs09}}] %
+  If $M_i \primeless M_j$ and $M_i \primeless M_k$,
+  then either $M_j \primeless M_k$ or $M_k \primeless M_j$.
+%   If $(M_i,M_j) \in \preccurlyeq$ and $(M_i,M_k) \in \preccurlyeq$,
+%   then either $(M_j,M_k) \in \preccurlyeq$ or $(M_k,M_j) \in
+%   \preccurlyeq$.
+\end{lemma}
+
+\begin{theorem} [{\cite[Th.~4]{nsnrs09}}] %
+  \label{thm:partitionold} %
+  Let $M$ be a binary matrix and $\bP$ be the set of prime submatrices
+  of $M$. Then the following hold true.
+  \parindent \defindent
+  \begin{enumerate}[i. ]
+  \item $\primeless$ is a partial order on $\bP$.
+  \item $\primeless$ uniquely partitions $\bP$ into $\bP_1, \bP_2
+    \ldots ,\bP_r$ for some $r \ge 1$.
+  \item \label{thm:i:totalorder} If $M$ has \COP, then for each $i \in
+    [r]$, $\primeless$ induces a total order in $\bP_i$.
+  \end{enumerate}
+% $\preccurlyeq$ is a partial
+%   order on the set of prime submatrices of $M$.  Further, it uniquely
+%   partitions the prime submatrices of $M$ such that on each set in
+%   the partition $\preccurlyeq$ induces a total order.
+\end{theorem}
+
+% \begin{theorem} % [{\cite[Th.~4]{nsnrs09}}] %
+%   \label{thm:partitionnew}%
+%   \parindent \defindent
+%   \begin{enumerate}[i. ]
+%   \item $\primeless$ is a partial order on $\bP$.
+%   \item $\primeless$ uniquely partitions $\bP$ into $\bP_1, \bP_2
+%     \ldots ,\bP_k$ for some $k \ge 1$.
+%   \item If $M$ has \COP, then for each $i \in [k]$, $\primeless$
+%     induces a total order in $\bP_i$.
+%   \end{enumerate}
+% \end{theorem}
+
+
+%   Let $M$ be a binary matrix for a hypergraph
+%   with \TPL and $\bP$ be the set of prime submatrices of $M$. Then
+%   Theorem~\ref{thm:partitionold} holds true with (iii) changed as
+%   follows -- for each $i \in [k]$, $\primeless$ induces an in-tree
+%   in $\bP_i$.
+Since we are concerned with the generalization of \COP, we generalize
+the condition~(\ref{thm:i:totalorder}) in
+Theorem~\ref{thm:partitionold} from total order to in-trees as
+follows.  The in-tree is derived from the Hasse diagram of
+$\primeless$. Each of these in-trees will be on disjoint vertex sets,
+which in this case would be disjoint sets of prime-submatrices
+$\bP_i$, $i \in [r]$ for some $r > 0$.  For each $\bP_i$, the in-tree
+is rooted at a maximal upper bound under $\preccurlyeq$.  The in-trees
+are specified by selecting the appropriate edges from the Hasse
+diagram associated with $\preccurlyeq$. This is defined in
+Theorem~\ref{thm:partition} before which we see the covering relation
+for $\primeless$ defined below.
+% %D replace \cI with \primeless_c
+% Let $\primeless_c$ be the following set:
+\begin{align*}
+  \primeless_c \ \  = \ \ &\{ (M_i,M_j) \mid M_i \primeless M_j \text{ \stt\ } \nexists
+  M_k \text{ s.t. } M_i \primeless M_k \text{, } M_k \primeless M_j \} \\
+  \cup \ \ &\{ (M_i,M_i), i \in [p] \}
+\end{align*}
+
+It is easy to see that $\primeless_c$ is the covering relation of the partial
+order $\primeless$.
+
+\begin{theorem}%
+  \label{thm:partition} %
+  Let $M$ be a binary matrix and $\bP$ be the set of prime matrices of
+  $M$. The partial order $\primeless$ and its covering relation
+  $\primeless_c$ are as defined earlier.
+  Then the directed graph $X = (\bP, \primeless_c)$ whose vertex
+  set is the set of prime submatrices and the edges are given
+  by the covering relation $\primeless_c$, is a vertex
+  disjoint collection of in-trees and the root of each in-tree is a
+  maximal upper bound in $\primeless$.
 \end{theorem}
 \begin{proof}\thesisspacing
   To observe that $X$ is a collection of in-trees, we observe that for
-  vertices corresponding to maximal upper bounds, no out-going edge is
-  present in $I$.  Secondly, for each other element, exactly one
-  out-going edge is chosen, and for the minimal lower bound, there is
-  no in-coming edge.  Consequently, $X$ is acyclic, and since each
+  vertices corresponding to maximal upper bounds, no outgoing edge is
+  present in $\primeless_c$.  Secondly, for each other element, exactly one
+  outgoing edge is chosen, and for the minimal lower bound, there is
+  no incoming edge.  Consequently, $X$ is acyclic, and since each
   vertex has at most one edge leaving it, it follows that $X$ is a
   collection of in-trees, and for each in-tree, the root is a maximal
-  upper bound in $\preccurlyeq$.  Hence the theorem.
+  upper bound in $\primeless$.  
 \end{proof}
 Let the partition of $X$ given by Theorem \ref{thm:partition} be
 $\{X_1,\ldots,X_r\}$.  Further, each in-tree itself can be layered
@@ -2139,49 +2300,49 @@ matrices in level $j$ of in-tree $X_i$.
   Let $M$ be a matrix and let $X$ be the directed graph whose vertices
   are in correspondence with the prime submatrices of $M$.  Further
   let $\{X_1,\ldots,X_r\}$ be the partition of $X$ into in-trees as
-  defined above.  Then, matrix $M$ has an ICPPA in tree $T$ \iff $T$
+  defined above.  Then, matrix $M$ has an ICPPL in tree $T$ \iff $T$
   can be partitioned into vertex disjoint subtrees $\{T_1, T_2, \dots
   T_r\}$ such that, for each $1 \leq i \leq r$, the set of prime
-  sub-matrices corresponding to vertices in $X_i$ has an ICPPA in
+  submatrices corresponding to vertices in $X_i$ has an ICPPL in
   $T_i$.
 \end{lemma}
 \begin{proof}\thesisspacing
   Let us consider the reverse direction first.  Let us assume that $T$
   can be partitioned into $T_1, \ldots, T_r$ such that for each $1
-  \leq i \leq r $, the set of prime sub-matrices corresponding to
-  vertices in $X_i$ has an ICPPA in $T_i$.  It is clear from the
-  properties of the partial order $\preccurlyeq$ that these ICPPAs
-  naturally yield an ICPPA of $M$ in $T$.  The main property used in
+  \leq i \leq r $, the set of prime submatrices corresponding to
+  vertices in $X_i$ has an ICPPL in $T_i$.  It is clear from the
+  properties of the partial order $\preccurlyeq$ that these ICPPLs
+  naturally yield an ICPPL of $M$ in $T$.  The main property used in
   this inference is that for each $1 \leq i \neq j \leq r$, $supp(X_i)
   \cap supp(X_j) = \phi$.
 
 \noindent
-To prove the forward direction, we show that if $M$ has an ICPPA, say
+To prove the forward direction, we show that if $M$ has an ICPPL, say
 $\cA$, in $T$, then there exists a partition of $T$ into vertex
 disjoint subtree $T_1, \ldots, T_r$ such that for each $1 \leq i \leq
-r$, the set of prime sub-matrices corresponding to vertices in $X_i$
-has an ICPPA in $T_i$.  For each $1 \leq i \leq r$, we define based on
+r$, the set of prime submatrices corresponding to vertices in $X_i$
+has an ICPPL in $T_i$.  For each $1 \leq i \leq r$, we define based on
 $\cA$ a subtree $T_i$ corresponding to $X_i$.  We then argue that the
 trees thus defined are vertex disjoint, and complete the proof.
-Consider $X_i$ and consider the prime sub-matrix in $X_{i,0}$.
+Consider $X_i$ and consider the prime submatrix in $X_{i,0}$.
 Consider the paths assigned under $\cA$ to the sets in the prime
-sub-matrix in $X_{i,0}$.  Since the component in $G_f$ corresponding
+submatrix in $X_{i,0}$.  Since the component in $G_f$ corresponding
 to this matrix is a connected component, it follows that union of
 paths assigned to this prime-submatrix is a subtree of $T$.  We call
 this sub-tree $T_i$.  All other prime-submatrices in $X_i$ are
-assigned paths in $T_i$ since $\cA$ is an ICPPA, and the support of
-other prime sub-matrices in $X_i$ are contained in the support of the
+assigned paths in $T_i$ since $\cA$ is an ICPPL, and the support of
+other prime submatrices in $X_i$ are contained in the support of the
 matrix in $X_{i,0}$.  Secondly, for each $1 \leq i \neq j \leq r$,
-$supp(X_i) \cap supp(X_j) = \phi$, and since $\cA$ is an ICPPA, it
+$supp(X_i) \cap supp(X_j) = \phi$, and since $\cA$ is an ICPPL, it
 follows that $T_i$ and $T_j$ are vertex disjoint.  Finally, since $|U|
 = |V(T)|$, it follows that $T_1, \ldots, T_r$ is a partition of $T$
 into vertex disjoint sub-trees such that for each $1 \leq i \leq r$,
-the set of matrices corresponding to nodes in $X_i$ has an ICPPA in
+the set of matrices corresponding to nodes in $X_i$ has an ICPPL in
 $T_i$.  Hence the lemma.
 \end{proof}
-The essence of the following lemma is that an ICPPA only needs to be
-assigned to the prime sub-matrix corresponding to the root of each
-in-tree, and all the other prime sub-matrices only need to have an
+The essence of the following lemma is that an ICPPL only needs to be
+assigned to the prime submatrix corresponding to the root of each
+in-tree, and all the other prime submatrices only need to have an
 Intersection Cardinality Preserving Interval Assignments (ICPIA).
 Recall, an ICPIA is an assignment of intervals to sets such that the
 cardinality of an assigned interval is same as the cardinality of the
@@ -2189,7 +2350,7 @@ interval, and the cardinality of intersection of any two sets is same
 as the cardinality of the intersection of the corresponding intervals.
 It is shown in \cite{nsnrs09} that the existence of an ICPIA is a
 necessary and sufficient condition for a matrix to have COP.  We
-present the pseudo-code to test if $M$ has an ICPPA in $T$.
+present the pseudo-code to test if $M$ has an ICPPL in $T$.
 \begin{lemma} \label{lem:rooticppa} Let $M$ be a matrix and let $X$ be
   the directed graph whose vertices are in correspondence with the
   prime submatrices of $M$.  Further let $\{X_1,\ldots,X_r\}$ be the
@@ -2197,49 +2358,53 @@ present the pseudo-code to test if $M$ has an ICPPA in $T$.
   Let $T$ be the given tree and let $\{T_1, \ldots, T_r\}$ be a given
   partition of $T$ into vertex disjoint sub-trees.  Then, for each $1
   \leq i \leq r$, the set of matrices corresponding to vertices of
-  $X_i$ has an ICPPA in $T_i$ if and only if the matrix in $X_{i,0}$
-  has an ICPPA in $T_i$ and all other matrices in $X_i$ have an {\bf
+  $X_i$ has an ICPPL in $T_i$ if and only if the matrix in $X_{i,0}$
+  has an ICPPL in $T_i$ and all other matrices in $X_i$ have an {\bf
     {\em ICPIA}}.
 \end{lemma}
 \begin{proof}\thesisspacing
   The proof is based on the following fact- $\preccurlyeq$ is a
   partial order and $X$ is a digraph which is the disjoint union of
   in-trees.  Each edge in the in-tree is a containment relationship
-  among the supports of the corresonding sub-matrices. Therefore, any
-  ICPPA to a prime sub-matrix that is not the root is contained in a
+  among the supports of the corresonding submatrices. Therefore, any
+  ICPPL to a prime submatrix that is not the root is contained in a
   path assigned to the sets in the parent matrix.  Consequently, any
-  ICPPA to the prime sub-matrix that is not at the root is an ICPIA,
-  and any ICPIA can be used to construct an ICPPA to the matrices
+  ICPPL to the prime submatrix that is not at the root is an ICPIA,
+  and any ICPIA can be used to construct an ICPPL to the matrices
   corresponding to nodes in $X_i$ provided the matrix in the root has
-  an ICPPA in $T_i$.  Hence the lemma.
+  an ICPPL in $T_i$.  Hence the lemma.
 \end{proof}
 Lemma \ref{lem:subicppa} and Lemma \ref{lem:rooticppa} point out two
-algorithmic challenges in finding an ICPPA for a given set system
+algorithmic challenges in finding an ICPPL for a given set system
 $\cF$ in a tree $T$.  Given $\cF$, finding $X$ and its partition
 $\{X_1,\ldots,X_r\}$ into in-trees can be done in polynomial time.  On
 the other hand, as per lemma \ref{lem:subicppa} we need to parition
 $T$ into vertex disjoint sub-trees $\{T_1, \ldots, T_r\}$ such that
 for each $i$, the set of matrices corresponding to nodes in $X_i$ have
-an ICPPA in $T_i$.  This seems to be a challenging step, and it must
+an ICPPL in $T_i$.  This seems to be a challenging step, and it must
 be remarked that this step is easy when $T$ itself is a path, as each
 individual $T_i$ would be sub-paths.  The second algorithmic challenge
-is identified by lemma \ref{lem:rooticppa} which is to assign an ICPPA
+is identified by lemma \ref{lem:rooticppa} which is to assign an ICPPL
 from a given tree to the matrix associated with the root node of
 $X_i$.
 \begin{algorithm}[h]
-  \caption{Algorithm to find an ICPPA for a matrix $M$ on tree $T$:
-    $main\_ICPPA(M, T$)}
+  \caption{Algorithm to find an ICPPL for a matrix $M$ on tree $T$:
+    $main\_ICPPL(M, T$)}
   \label{al:icppa-main}
   \begin{algorithmic}
-    \STATE Identify the prime sub-matrices. This is done by constructing the strict overlap graph and identify connected components.  Each connected component yields a prime sub-matrix.   \\
-    \STATE Construct the partial order $\preccurlyeq$ on the set of prime sub-matrices.  \\
+    \STATE Identify the prime submatrices. This is done by
+    constructing the strict overlap graph and identify connected
+    components.  Each connected component yields a prime submatrix.
+    \\ 
+    \STATE Construct the partial order $\preccurlyeq$ on the set of
+    prime submatrices.  \\ 
     \STATE Construct the partition $X_1,\ldots,X_r$ of the prime
-    sub-matrices induced by $\preccurlyeq$ \\
+    submatrices induced by $\preccurlyeq$ \\
     \STATE For each $1 \leq i \leq r$, Check if all matrices except
     those in $X_{i,0}$ has an ICPIA.  If a matrix does not have ICPIA
     exit with a negative answer.  To check for the existence of ICPIA,
     use the result in \cite{nsnrs09}.  \STATE Find a partition of
-    $T_1, \ldots, T_r$ such that matrices in $X_{i,0}$ has an ICPPA in
+    $T_1, \ldots, T_r$ such that matrices in $X_{i,0}$ has an ICPPL in
     $T_i$.  If not such partition exists, exit with negative answer.
   \end{algorithmic}
 \end{algorithm}
@@ -2252,6 +2417,14 @@ pair $(\cF,T)$ where $\cF$ is a family of subsets of an universe $U$,
 and $T$ is a tree such that $|V(T)| = |U|$.  The question is to come
 up with a bijection from $U$ to $V(T)$ such that the image of each set
 in $\cF$ is a path in $T$.
+
+\tnote[dire]{it is known that if the given tree is a path a
+feasible assignment can be found in polynomial time, and we observe
+that it can actually be done in logspace. }
+
+We also point out Consecutive Ones Testing is in Logspace from two
+different results in the literature \cite{kklv10, mcc04}. To the best
+of our knowledge this observation has not been made earlier.
 
 
 \subsection{Consecutive Ones Testing is in Logspace}
@@ -2291,7 +2464,7 @@ orderings that cannot occur in a consecutive ones ordering of $\cF$.
 \end{theorem}
 This theorem gives a certificate as to why a given matrix does not
 have COP.  Similarly, the approach of testing for an ICPIA in
-\cite{nsnrs09} also gives a different certificate- a prime sub-matrix
+\cite{nsnrs09} also gives a different certificate- a prime submatrix
 that does not have an ICPIA.  Further, the above theorem can be used
 to check if a given matrix has COP in logspace by checking if its
 incompatibility graph is bipartite. \cite{rei84} showed that checking
@@ -2389,7 +2562,7 @@ in general trees.
 % \{S_i \mid S_i \subseteq U, i \in [m]\}$, were $T$ is a given tree,
 % $U$ is the set system's universe and $m$ is the number of sets in
 % $\cF$. We call $\cA$ an {\em Intersection Cardinality Preserving
-%   Path Assignment (ICPPA)} if it has the following properties.
+%   Path Assignment (ICPPL)} if it has the following properties.
 
 % \begin{enumerate}
 % \item [i.]  $|S_i| = |P_i|$ for all $i \in [m]$
@@ -2404,14 +2577,14 @@ in general trees.
 
 % \begin{lemma}
 %   \label{lem:setminuscard}
-%   If $\cA$ is an ICPPA, and $(S_1, P_1),(S_2, P_2),(S_3, P_3) \in
+%   If $\cA$ is an ICPPL, and $(S_1, P_1),(S_2, P_2),(S_3, P_3) \in
 %   \cA$, then $|S_1 \cap (S_2 \setminus S_3)| = |P_1 \cap (P_2
 %   \setminus P_3)|$.
 % \end{lemma}
 % \begin{proof}
 %   $|S_1 \cap (S_2 \setminus S_3)| = |(S_1 \cap S_2) \setminus S_3| =
 %   |S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3|$. Due to conditions (ii)
-%   and (iii) of ICPPA, $|S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3| =
+%   and (iii) of ICPPL, $|S_1 \cap S_2| - |S_1 \cap S_2 \cap S_3| =
 %   |P_1 \cap P_2| - |P_1 \cap P_2 \cap P_3| = |(P_1 \cap P_2)
 %   \setminus P_3| = |P_1 \cap (P_2 \setminus P_3)|$. Thus lemma is
 %   proven. %\qed
@@ -2461,14 +2634,14 @@ in general trees.
 
 % \noindent
 % In the remaining part of this section we show that a path assignment
-% is feasible if and only if it is an ICPPA.  One direction of this
+% is feasible if and only if it is an ICPPL.  One direction of this
 % claim is clear: that is a path assignment is feasible, then all
 % intersection cardinalities are preserved, that is the path
-% assignment is an ICPPA.  The reason is that a feasible path
+% assignment is an ICPPL.  The reason is that a feasible path
 % assignment has an associated bijection between $U$ and $V(T)$ such
 % that the sets map to paths.  The rest of the section is devoted to
 % constructively proving that it is sufficient, for the existence of a
-% bijection, for a path assignment to be an ICPPA.  At a top-level,
+% bijection, for a path assignment to be an ICPPL.  At a top-level,
 % the constructive approaches refine the path assignment iteratively,
 % such that at the end of each iteration we have a path assignment,
 % and finally we have a family of bijections.  First we present and
@@ -2477,7 +2650,7 @@ in general trees.
 % a leaf.
 
 % \begin{algorithm}[h]
-%   \caption{Permutations from an ICPPA $\{(S_i,P_i) | i \in I\}$}
+%   \caption{Permutations from an ICPPL $\{(S_i,P_i) | i \in I\}$}
 %   \label{al:filterone}
 %   \begin{algorithmic}
 %     \STATE Let $\Pi_0=\{(S_i,P_i)| i \in I\}$\\
@@ -2519,7 +2692,7 @@ in general trees.
 %   \setminus Q_1)$.\\
 %   \noindent
 %   The base case, $\Pi_0 = \{(S_i,P_i) \mid i \in [m]\}$, is
-%   trivially true since it is the input which is an ICPPA.  Assume
+%   trivially true since it is the input which is an ICPPL.  Assume
 %   the lemma is true till the $j-1$ iteration. Consider $j$th
 %   iteration:\\
 %   \noindent
@@ -2578,7 +2751,7 @@ in general trees.
 
 
 % \begin{algorithm}[h]
-%   \caption{Leaf assignments from an ICPPA $\{(S_i,P_i) | i \in I\}$}
+%   \caption{Leaf assignments from an ICPPL $\{(S_i,P_i) | i \in I\}$}
 %   \label{al:filtertwo}
 %   \begin{algorithmic}
 %     \STATE Let $\Pi_0=\{(S_i,P_i)| i \in [m]\}$. Paths are such that
@@ -2609,19 +2782,19 @@ in general trees.
 %   \ref{lem:invar1} are valid.
 %   %   Moreover, $X$ as defined in the algorithm is non-empty if this
 %   %   is
-%   %   an ICPPA.
+%   %   an ICPPL.
 % \end{lemma}
 % \begin{proof}
 %   First we see that $X = S_{i_1} \setminus \bigcup_{i \ne i_1, i \in
-%     I}S_i$ is non empty in every iteration for an ICPPA. Suppose $X$
+%     I}S_i$ is non empty in every iteration for an ICPPL. Suppose $X$
 %   is empty. We know that $v \in P_{i_1} \setminus \bigcup_{i \ne
 %     i_1, i \in I}P_i$ since $v$ is in the unique path
-%   $P_{i_1}$. Since this is an ICPPA $|S_{i_1}| = |P_{i_1}|$. For any
+%   $P_{i_1}$. Since this is an ICPPL $|S_{i_1}| = |P_{i_1}|$. For any
 %   $x \in S_{i_1}$ it is contained in at least two sets due to our
 %   assumption. Let $S_{i_2}$ be a second set that contains $x$. We
 %   know $v \notin P_{i_2}$. Therefore there cannot exist a
 %   permutation that maps elements of $S_{i_2}$ to $P_{i_2}$. This
-%   contradicts our assumption that this is an ICPPA. Thus $X$ cannot
+%   contradicts our assumption that this is an ICPPL. Thus $X$ cannot
 %   be empty.
 
 
@@ -2632,7 +2805,7 @@ in general trees.
 %   $\Pi_{j-1}$ such that $v$ is a leaf and $Q'$ is the unique path
 %   incident on it.\\
 %   For $\Pi_0$ all invariants hold because it is output from
-%   algorithm \ref{al:filterone} which is an ICPPA. Hence base case is
+%   algorithm \ref{al:filterone} which is an ICPPL. Hence base case is
 %   proved.  Assume the lemma holds for $\Pi_{j-1}$. Consider $\Pi_j$
 %   and any $(P,Q) \in \Pi_j$. If $(P,Q) $ is in $ \Pi_j$ and
 %   $\Pi_{j-1}$ invariants I and II are true because of induction
@@ -2685,13 +2858,13 @@ in general trees.
 
 % \begin{theorem}
 %   \label{th:perm}
-%   If $\cA$ is an ICPPA, then there exists a bijection $\sigma : U
+%   If $\cA$ is an ICPPL, then there exists a bijection $\sigma : U
 %   \rightarrow V(T)$ such that $\sigma(S_i) = P_i$ for all $i \in I$
 % \end{theorem}
 % \begin{proof}
-%   This is a contructive proof. First, the given ICPPA $\cA$ and tree
+%   This is a contructive proof. First, the given ICPPL $\cA$ and tree
 %   $T$ are given as input to Algorithm \ref{al:filterone}. This yields a
-%   ``filtered'' ICPPA as the output which is input to Algorithm
+%   ``filtered'' ICPPL as the output which is input to Algorithm
 %   \ref{al:filtertwo}.  It can be observed that the output of Algorithm
 %   \ref{al:filtertwo} is a set of interval assignments to sets and
 %   one-to-one assignment of elements of $U$ to each leaf of $T$. To
@@ -2718,7 +2891,7 @@ in general trees.
 %   tree $T_{i-1}$. This is continued until we get a subproblem with
 %   path assignment $\cA_{d-1}$ and tree $T_{d-1}$ for some $d \le n$
 %   which is just a path. From the last lemma we know that $\cA_{d-1}$
-%   is an ICPPA. Another observation is that an ICPPA with all its
+%   is an ICPPL. Another observation is that an ICPPL with all its
 %   tree paths being intervals (subpaths from a path) is nothing but
 %   an ICPIA\cite{nsnrs09}.  Let $\cA_{d-1}$ be equal to
 %   $\{(S_i'',P_i'') \mid S_i'' \subseteq U_{d-1}, P_i'' \text{ is a
