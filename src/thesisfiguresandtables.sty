@@ -1900,3 +1900,187 @@
 }%
 
 
+\def\tpltreepaths{%
+  \begin{tikzpicture}[every node/.style={circle,inner
+      sep=1pt,fill=none}, decoration=ticks]%
+%    \draw[help lines] (-1,-1) grid (8,4);%
+    \draw%
+      (3,3) node[fill,circle=2pt](v1){} 
+      (2,2) node[fill,circle=2pt](v2){} --
+      (3,2) node[fill,circle=2pt](v3){} -- 
+      (4,2) node[fill,circle=2pt](v4){} -- 
+      (5,2) node[fill,circle=2pt](v5){} -- 
+      (6,2) node[fill,circle=2pt](v6){} -- 
+      (7,2) node[fill,circle=2pt](v7){} 
+
+      (0,-1) node[fill,circle=2pt](v8){} -- 
+      (1,-1) node[fill,circle=2pt](v9){} -- 
+      (2,-1) node[fill,circle=2pt](v10){} -- 
+      (3,-1) node[fill,circle=2pt](v11){} -- 
+      (4,-1) node[fill,circle=2pt](v12){} -- 
+      (5,-1) node[fill,circle=2pt](v13){} 
+      (1,-2) node[fill,circle=2pt](v14){} 
+      (3,-2) node[fill,circle=2pt](v15){} 
+      ;%
+
+    \draw%
+      (v1) -- (v3) -- (v11) -- (v15)%
+      (v9) -- (v14)%
+      ;%
+
+      
+    \draw%
+      (v1) node[above](v1){$v_1$} %
+      (v2) node[above](v2){$v_2$} %
+      (v3) node[above right=4pt](v3){$v_3$} %
+      (v4) node[above](v4){$v_4$}%
+      (v5) node[above](v5){$v_5$} %
+      (v6) node[above](v6){$v_6$} %
+      (v7) node[above](v7){$v_7$} %
+      (v8) node[below](v8){$v_8$} %
+      (v9) node[below right=4pt](v9){$v_9$} %
+      (v10) node[below](v10){$v_{10}$} %
+      (v11) node[below right=4pt] (v11){$v_{11}$} %
+      (v12) node[below](v12){$v_{12}$} %
+      (v13) node[below](v13){$v_{13}$} %
+      (v14) node[below](v14){$v_{14}$} %
+      (v15) node[below](v15){$v_{15}$} %
+      ;%
+
+    \begin{pgfonlayer}{background}
+    % P1
+    \node[rectangle, rounded corners=5pt, inner sep=2pt,%
+      fill=blue!30, opacity=0.2, draw, fit = (v3) (v4) (v5) (v6) (v7) ] (s1) {}; %%
+    \node[rectangle, rounded corners=5pt, inner sep=4pt,%
+      fill=blue!30, opacity=0.2, draw, fit = (v2) (v3)] (s2) {}; %%
+    \node[rectangle, rounded corners=5pt, inner sep=0pt,%
+      fill=blue!30, opacity=0.2, draw, fit = (v1) (v3) (v4)] (s3) {}; %%
+%     \node[rectangle, rounded corners=5pt, inner sep=8pt,%
+%       fill=red!40, opacity=0.2, draw, fit = (v5) (v6)] (s5) {}; %%
+%     \node[rectangle, rounded corners=5pt, inner sep=6pt,%
+%       fill=red!40, opacity=0.2, draw, fit = (v6) (v7)] (s6) {}; %%
+%     \node[rectangle, rounded corners=5pt, inner sep=10pt,%
+%       fill=yellow!30, opacity=0.2, draw, fit = (v5) (v6) (v7)] (s4) {}; %%
+
+    % P2
+    \node[rectangle, rounded corners=5pt, inner sep=2pt,%
+      fill=blue!30, opacity=0.2, draw, fit = (v8) (v9) (v10) (v11) (v12) (v13)] (s7) {}; %%
+    \node[rectangle, rounded corners=5pt, inner sep=8pt,%
+      fill=blue!30, opacity=0.2, draw, fit = (v8) (v9)] (s8) {}; %%
+    \node[rectangle, rounded corners=5pt, inner sep=5pt,%
+      fill=blue!30, opacity=0.2, draw, fit = (v9) (v14)] (s9) {}; %%
+    \node[rectangle, rounded corners=5pt, inner sep=6pt,%
+      fill=blue!30, opacity=0.2, draw, fit = (v15) (v11) (v12) (v13)] (s10) {}; %%
+%     \node[rectangle, rounded corners=5pt, inner sep=0pt,%
+%       fill=red!30, opacity=0.2, draw, fit = (v11) (v12) (v13)] (s11) {}; %%
+%     \node[rectangle, rounded corners=5pt, inner sep=4pt,%
+%       fill=red!30, opacity=0.2, draw, fit = (v11) (v12)] (s12) {}; %%
+    \end{pgfonlayer}
+
+    % Label the mub columns
+    \draw%
+      (s1) node[above=10pt] (s1){$S_1$} %
+      (s2) node[above left=20pt] (s2){$S_2$} %
+      (s3) node[above=20pt] (s3){$S_3$} %
+%       (s4) node(s4){$S_4$}%
+%       (s5) node(s5){$S_5$} %
+%       (s6) node(s6){$S_6$} %
+      (s7) node[above =10pt](s7){$S_7$} %
+      (s8) node[left=36pt](s8){$S_8$} %
+      (s9) node[below=30pt](s9){$S_9$} %
+      (s10) node[right=44pt](s10){$S_{10}$} %
+%       (s11) node(s11){$S_{11}$} %
+%       (s12) node(s12){$S_{12}$} %
+    ;
+
+    
+    % Draw intervals as lines and not as "Venn rectangles".
+    % Note: 1 coordinate = 28pt
+    \draw[decorate, segment length = 28]
+      (5,1.75) node(i5){} -- 
+      (6,1.75) node(i6){} -- 
+      (7,1.75) node(i7){} 
+      ;
+    \draw[very thick] (i5) -- (i7) ;
+    \draw (i7) node[right=15pt]{$S_4$} ;
+
+    \draw[decorate, segment length = 28]
+      (5,1.25) node(i5){} -- 
+      (6,1.25) node(i6){}
+      (7,1.25) node(i7){}       
+      ;
+    \draw[very thick] (i5) -- (i6) ;
+    \draw (i7) node[right=15pt]{$S_5$} ;
+
+    \draw[decorate, segment length = 28]
+      (5,0.75) node(i5){}
+      (6,0.75) node(i6){} -- 
+      (7,0.75) node(i7){}
+      ;
+    \draw[very thick] (i6) -- (i7) ;
+    \draw (i7) node[right=15pt]{$S_6$} ;
+
+%       (3,-1) node[fill,circle=2pt](v11){} -- 
+%       (4,-1) node[fill,circle=2pt](v12){} -- 
+%       (5,-1) node[fill,circle=2pt](v13){} 
+    \draw[decorate, segment length = 28]
+      (3,-0.5) node(i11){} -- 
+      (4,-0.5) node(i12){} -- 
+      (5,-0.5) node(i13){} 
+      ;
+    \draw[very thick] (i11) -- (i13) ;
+    \draw (i13) node[right=15pt]{$S_{11}$} ;
+
+    \draw[decorate, segment length = 28]
+      (3,0) node(i11){} -- 
+      (4,0) node(i12){} 
+      (5,0) node(i13){} 
+      ;
+    \draw[very thick] (i11) -- (i12) ;
+    \draw (i13) node[right=15pt]{$S_{12}$} ;
+
+    
+
+  \end{tikzpicture}
+}%
+
+
+
+
+\def\tplmatrix{%  
+  \begin{tabular}[h]{>{\columncolor{\tblhcolor}} l  ccc | cc | c |
+      cccc | c | c |}
+
+    &\multicolumn{12}{c}{$M$}\\
+    &\multicolumn{12}{c}{}\\
+
+    $X: $ &\multicolumn{6}{c|}{$\bP_1$} & \multicolumn{6}{c|}{$\bP_2$} \\
+    &\multicolumn{6}{c|}{} & \multicolumn{6}{c|}{} \\
+
+    $\bP: $ &\multicolumn{3}{c|}{$M_1$} & \multicolumn{2}{c|}{$M_2$} &
+     \multicolumn{1}{c|}{$M_3$} & \multicolumn{4}{c|}{$M_4$} &
+     \multicolumn{1}{c|}{$M_5$} & \multicolumn{1}{c|}{$M_6$} \\
+    &&&&&&&&&&&&\\
+
+    \rowcolor[gray]{0.8}
+    $\cF:$ &$S_1$ & $S_2$ & $S_3$ & $S_4$ & $S_5$ & $S_6$ & $S_7$ & $S_8$ &
+     $S_9$ & $S_{10}$ & $S_{11}$ & $S_{12}$ \\
+
+    $v_1$ & 0   & 0   & \un & 0   & 0   & 0   &&&&&&\\
+    $v_2$ & 0   & \un & 0   & 0   & 0   & 0   &&&&&&\\
+    $v_3$ & \un & \un & \un & 0   & 0   & 0   &&&&&&\\
+    $v_4$ & \un & 0   & \un & 0   & 0   & 0   &&&&&&\\
+    $v_5$ & \un & 0   & 0   & \un & \un & 0   &&&&&&\\
+    $v_6$ & \un & 0   & 0   & \un & \un & \un &&&&&&\\
+    $v_7$ & \un & 0   & 0   & \un & 0   & \un &&&&&&\\
+    $v_8$   & &&&&&& \un & \un & 0   & 0   & 0   & 0   \\
+    $v_9$   & &&&&&& \un & \un & \un & 0   & 0   & 0   \\
+    $v_{10}$ & &&&&&& \un & 0   & 0   & 0   & 0   & 0   \\
+    $v_{11}$ & &&&&&& \un & 0   & 0   & \un & \un & \un \\
+    $v_{12}$ & &&&&&& \un & 0   & 0   & \un & \un & \un \\
+    $v_{13}$ & &&&&&& \un & 0   & 0   & \un & \un & 0   \\
+    $v_{14}$ & &&&&&& 0   & 0   & \un & 0   & 0   & 0   \\
+    $v_{15}$ & &&&&&& 0   & 0   & 0   & \un & 0   & 0   \\    
+  \end{tabular}
+}%
+

@@ -33,6 +33,11 @@ S.~Benzer.
 \newblock On the topology of the genetic fine structure.
 \newblock {\em Proc. Nat. Acad. Sci. U.S.A.}, 45:1607--1620, 1959.
 
+\bibitem[BJHY00]{bhy00}
+Jorgen Bang-Jensen, Jing Huang, and Anders Yeo.
+\newblock Convex-round and concave-round graphs.
+\newblock {\em SIAM Journal on Discrete Mathematics}, 13(2):179--193, 2000.
+
 \bibitem[BL76]{bl76}
 Kellogg~S. Booth and George~S. Lueker.
 \newblock Testing for the consecutive ones property, interval graphs, and graph

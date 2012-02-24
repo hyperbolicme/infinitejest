@@ -15,48 +15,50 @@ A level-1 auxiliary file: _tempscrap.aux
 A level-1 auxiliary file: biblio.aux
 The style file: alpha.bst
 Database file #1: ../lib/cop-variants__thesis.bib
+Warning--I didn't find a database entry for "Ben59"
+Warning--I didn't find a database entry for "Haj57"
 Warning--I didn't find a database entry for "mm96-ref11"
 Warning--there's a number but no volume in mw86
 Warning--empty booktitle in tz04
-You've used 89 entries,
+You've used 90 entries,
             2543 wiz_defined-function locations,
-            1084 strings with 15895 characters,
-and the built_in function-call counts, 34386 in all, are:
-= -- 3533
-> -- 1466
+            1093 strings with 16049 characters,
+and the built_in function-call counts, 34840 in all, are:
+= -- 3580
+> -- 1491
 < -- 59
-+ -- 504
-- -- 471
-* -- 2417
-:= -- 5628
-add.period$ -- 278
-call.type$ -- 89
-change.case$ -- 521
-chr.to.int$ -- 87
-cite$ -- 91
-duplicate$ -- 1408
-empty$ -- 2513
-format.name$ -- 597
-if$ -- 7001
++ -- 513
+- -- 480
+* -- 2456
+:= -- 5704
+add.period$ -- 281
+call.type$ -- 90
+change.case$ -- 528
+chr.to.int$ -- 88
+cite$ -- 92
+duplicate$ -- 1422
+empty$ -- 2543
+format.name$ -- 607
+if$ -- 7090
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 88
-newline$ -- 452
-num.names$ -- 271
-pop$ -- 432
+missing$ -- 89
+newline$ -- 457
+num.names$ -- 274
+pop$ -- 436
 preamble$ -- 1
-purify$ -- 618
+purify$ -- 626
 quote$ -- 0
-skip$ -- 1190
+skip$ -- 1202
 stack$ -- 0
-substring$ -- 2061
-swap$ -- 217
+substring$ -- 2093
+swap$ -- 218
 text.length$ -- 59
 text.prefix$ -- 40
 top$ -- 0
-type$ -- 680
+type$ -- 688
 warning$ -- 2
-while$ -- 348
-width$ -- 94
-write$ -- 1167
-(There were 3 warnings)
+while$ -- 353
+width$ -- 95
+write$ -- 1180
+(There were 5 warnings)

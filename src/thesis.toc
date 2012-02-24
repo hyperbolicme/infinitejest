@@ -1,9 +1,9 @@
 \select@language {english}
-\contentsline {chapter}{Abstract}{ix}{section*.1}
-\contentsline {chapter}{Contents}{xi}{section*.1}
-\contentsline {chapter}{List of Tables}{xv}{section*.2}
-\contentsline {chapter}{List of Figures}{xvii}{section*.3}
-\contentsline {chapter}{Abbreviations and Notations}{xix}{section*.4}
+\contentsline {chapter}{Abstract}{vii}{changenumber.iii.1}
+\contentsline {chapter}{Contents}{ix}{section*.1}
+\contentsline {chapter}{List of Tables}{xiii}{section*.2}
+\contentsline {chapter}{List of Figures}{xv}{section*.3}
+\contentsline {chapter}{Abbreviations and Notations}{xvii}{section*.3}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Organization of the document}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Illustration of the problem}{2}{section.1.2}
@@ -17,33 +17,33 @@
 \contentsline {subsection}{\numberline {1.4.2}Optimization problems in COP}{10}{subsection.1.4.2}
 \contentsline {section}{\numberline {1.5}Generalization of COP}{12}{section.1.5}
 \contentsline {section}{\numberline {1.6}Summary of new results}{13}{section.1.6}
-\contentsline {chapter}{\numberline {2}COP -- A Survey}{15}{chapter.2}
-\contentsline {section}{\numberline {2.1}COP\xspace in Graph Theory}{16}{section.2.1}
-\contentsline {section}{\numberline {2.2}Matrices with COP}{20}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Tucker's forbidden submatrices for COP\xspace }{21}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Booth and Lueker's $PQ$-tree -- a linear COT algorithm}{22}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}$PQR$-tree\xspace \ -- COP for set systems}{25}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}$PC$-tree\xspace -- a generalization of $PQ$-tree\xspace }{29}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}ICPIA - a set cardinality based COP\xspace test}{31}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.2.6}Other COP\xspace testing algorithms}{33}{subsection.2.2.6}
-\contentsline {section}{\numberline {2.3}Matrices without COP\xspace }{33}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Finding forbidden submatrices}{34}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Incompatibility graph - a certificate for no COP\xspace }{34}{subsection.2.3.2}
-\contentsline {chapter}{\numberline {3}Tree Path Labeling}{37}{chapter.3}
-\contentsline {section}{\numberline {3.1}Summary of problems}{38}{section.3.1}
-\contentsline {section}{\numberline {3.2}Preliminaries}{40}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Set systems and Hypergraphs}{40}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Path Labeling and Path Hypergraphs}{42}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Overlap Graphs and Marginal Hyperedges}{43}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Miscellaneous}{44}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Characterization of FTPL}{44}{section.3.3}
-\contentsline {section}{\numberline {3.4}Solution to study group accomodation problem\xspace }{52}{section.3.4}
-\contentsline {section}{\numberline {3.5}Special target trees}{56}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Target tree is a Path}{57}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Target tree is a $k$-subdivided Star}{57}{subsection.3.5.2}
-\contentsline {section}{\numberline {3.6} TPL on arbitrary trees}{63}{section.3.6}
-\contentsline {section}{\numberline {3.7}Complexity}{68}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Consecutive Ones Testing is in Logspace}{68}{subsection.3.7.1}
-\contentsline {chapter}{\numberline {4}Conclusion}{69}{chapter.4}
-\contentsline {chapter}{\numberline {A}More proofs \tnote {remove/modify}}{73}{chapter.1}
-\contentsline {chapter}{Bibliography}{75}{section*.5}
+\contentsline {chapter}{\numberline {2}COP -- A Survey}{17}{chapter.2}
+\contentsline {section}{\numberline {2.1}COP\xspace in Graph Theory}{18}{section.2.1}
+\contentsline {section}{\numberline {2.2}Matrices with COP}{22}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Tucker's forbidden submatrices for COP\xspace }{23}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Booth and Lueker's $PQ$-tree -- a linear COT algorithm}{25}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}$PQR$-tree\xspace \ -- COT for set systems}{27}{subsection.2.2.3}
+\contentsline {subsubsection}{Comparision with generalized $PQ$-tree\xspace }{31}{section*.4}
+\contentsline {subsection}{\numberline {2.2.4}$PC$-tree\xspace -- a generalization of $PQ$-tree\xspace }{32}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}ICPIA - a set cardinality based COP\xspace test}{33}{subsection.2.2.5}
+\contentsline {section}{\numberline {2.3}Matrices without COP\xspace }{35}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Finding forbidden submatrices}{36}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Incompatibility graph - a certificate for no COP\xspace }{38}{subsection.2.3.2}
+\contentsline {chapter}{\numberline {3}Tree Path Labeling}{41}{chapter.3}
+\contentsline {section}{\numberline {3.1}Summary of problems}{42}{section.3.1}
+\contentsline {section}{\numberline {3.2}Preliminaries}{44}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Set systems and Hypergraphs}{44}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Path Labeling and Path Hypergraphs}{46}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Overlap Graphs and Marginal Hyperedges}{47}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Miscellaneous}{48}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Characterization of FTPL}{48}{section.3.3}
+\contentsline {section}{\numberline {3.4}Solution to study group accomodation problem\xspace }{56}{section.3.4}
+\contentsline {section}{\numberline {3.5}Special target trees}{59}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Target tree is a Path}{60}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Target tree is a $k$-subdivided Star}{61}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6} TPL on arbitrary trees}{66}{section.3.6}
+\contentsline {section}{\numberline {3.7}Complexity}{74}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Time complexity of TPL}{74}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Consecutive Ones Testing is in Logspace}{74}{subsection.3.7.2}
+\contentsline {chapter}{\numberline {4}Conclusion}{77}{chapter.4}
+\contentsline {chapter}{Bibliography}{81}{section*.5}

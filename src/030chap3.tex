@@ -299,7 +299,7 @@ labeling as shown by the following Definition~\ref{def:inducedpl}.
 \end{definition}
 
 Combining the ideas of path labeling, hypergraph isomorphism and its
-induced path labeling we now define {\em feasiblity} of a path
+induced path labeling we now define {\em feasibility} of a path
 labeling in Definition~\ref{def:feasibletpl}.
 
 \begin{definition}[Feasible path labeling]
@@ -319,7 +319,7 @@ labeling in Definition~\ref{def:feasibletpl}.
 \end{definition}
 
 One of the problems solved in this thesis \FTPL characterizes
-feasibile tree path labeling.
+feasible tree path labeling.
 
 Now we will see the definition of a {\em path hypergraph} which is a
 simple idea extended from interval hypergraphs in \cite{kklv10}. 
@@ -574,7 +574,7 @@ consequence of Definition~\ref{def:icppl} and is analogous to
 
 For interval labeling, \cite{nsnrs09} shows that if it is an ICPIA \ie
 pairwise intersection cardinalities are preserved, then $d$-way
-intersection cardinalities are preseved for $2 < d < n$. Thus, in a
+intersection cardinalities are preserved for $2 < d < n$. Thus, in a
 way, pairwise intersections ``capture'' feasibility of an interval
 labeling. In the same vein, the following lemma indicates that
 three-way intersection cardinality ``captures'' $d$-way intersection
@@ -1373,6 +1373,20 @@ Figure~\ref{fig:solpartIVb}, Figure~\ref{fig:solpartVI},
 Figure~\ref{fig:solpartVII}, Figure~\ref{fig:solpartVIII} and the
 figures along with their captions are self-explanatory.
 
+In Figure~\ref{fig:solpartI}, the original problem from
+Section~\ref{sec:problem} is restated more formally. The target tree
+is $T$ with vertex set $\{1,2,\ldots,11\}$ on the left hand side along
+with the path system (hypergraph) -- $\{7,2,6,5\}, \{8,2,4\},
+\{10,6,5,3\}, \{9,1,5,3,11\}$. The hypergraph is $\cF$ with hyperedges
+$\{\xPa, \xPi, \xVi, \xCh\}, \{\xSn, \xWo, \xPi\}, \{\xCh, \xFr, \xVi,
+\xLi\}, \{\xLu, \xSa, \xSc, \xCh, \xFr\}$ shown in the right hand
+side. In subsequent illustrations, the gray boxes which contain the
+elements of universe $U$, will be assigned to nodes and removed from
+the right hand side figure and placed next to the vertex of $T$ in the
+left hand side figure.  The path labeling is implicitly given by the
+color-coded Venn diagrams (the order of listing of the hyperedges in
+given above is also done respective to the input path labeling).
+
 \begin{figure}[htb]
   \centering
   \begin{tabular}[h]{c|cc}
@@ -1381,22 +1395,31 @@ figures along with their captions are self-explanatory.
    
   \caption[\figtabsize Problem solution part 1]{\figtabsize The
     problem is shown again here using the input described in
-    Section~\ref{sec:problem}. The target tree is $T$ with vertex set
-    $\{1,2,\ldots,11\}$ on the left hand side along with the path
-    system (hypergraph) -- $\{7,2,6,5\}, \{8,2,4\}, \{10,6,5,3\},
-    \{9,1,5,3,11\}$. The hypergraph is $\cF$ with hyperedges $\{\xPa,
-    \xPi, \xVi, \xCh\}, \{\xSn, \xWo, \xPi\}, \{\xCh, \xFr, \xVi,
-    \xLi\}, \{\xLu, \xSa, \xSc, \xCh, \xFr\}$ shown in the right hand
-    side. In subsequent illustrations, the gray boxes which contain
-    the elements of universe $U$, will be assigned to nodes and
-    removed from the right hand side figure and placed next to the
-    vertex of $T$ in the left hand side figure.  The path labeling is
-    implicitly given by the color-coded Venn diagrams (the order of
-    listing of the hyperedges in this caption is also done respective
-    to the input path labeling).}
+    Section~\ref{sec:problem}.}
   \label{fig:solpartI}  
 \end{figure}
 
+Now see
+Figure~\ref{fig:solpartIII} to see how the algorithm proceeds.
+Before that it can be observed in Figure~\ref{fig:solpartI}, that none of the
+leaves are shared by more than one path.  Hence,
+\filteri does not alter the hypergraphs. \filterii finds the leaf
+assignments as shown -- elements \xPa, \xSn, \xLu, \xSc, \xLi, \xWo
+are assigned to vertices 7, 8, 9, 11, 10, 4 respectively. Computation
+of these leaf labels are deterministic except for $\xLu, \xSc$ where
+the algorithm arbitrarily chooses them from $X = \{\xLu, \xSa, \xSc\}$
+and for $\xSn, \xWo$ arbitrarily chooses from $X = \{\xSn,
+\xWo\}$. Here we show only one such choice and clearly one could have
+chosen another leaf label (\eg $\xSa$ on 9 or $\xWo$ on 8) to get a
+different feasible hypergraph isomorphism.  After this, the leaves of
+$T$ are pruned and the hypergraph updated accordingly by \algoiii
+subroutine -- the pruned leaves are shown with dotted edges and the
+corresponding Venn diagrams show the updated hypergraphs. $\phi_0$ is
+this leaf assignment and the algorithm proceeds to solve the
+subproblem with the new hypergraphs and path labeling which is:
+$\{2,6,5\}, \{2\}, \{6,5,3\}, \{1,5,3\}$ labeled with $\{\xPi, \xVi,
+\xCh\}, \{\xPi\}, \{\xCh, \xFr, \xVi\}, \{\xSa, \xCh, \xFr\}$
+respectively.
 
 \begin{figure}[htb]
   \centering
@@ -1407,29 +1430,24 @@ figures along with their captions are self-explanatory.
     &
     \studygroupsIIItable
   \end{tabular}
-  \caption[\figtabsize Problem solution part 2]{\figtabsize It can be observed in
-    Figure~\ref{fig:solpartI}, that none of the leaves are shared by
-    more than one path. Hence, \filteri does not alter the
-    hypergraphs. \filterii finds the leaf assignments as shown --
-    elements \xPa, \xSn, \xLu, \xSc, \xLi, \xWo are assigned to
-    vertices 7, 8, 9, 11, 10, 4 respectively. Computation of these
-    leaf labels are deterministic except for $\xLu, \xSc$ where the
-    algorithm arbritarily choses them from $X = \{\xLu, \xSa, \xSc\}$
-    and for $\xSn, \xWo$ arbitrarily choses from $X = \{\xSn,
-    \xWo\}$. Here we show only one such choice and clearly one could
-    have chosen another leaf label (\eg $\xSa$ on 9 or $\xWo$ on 8) to
-    get a different feasible hypergraph isomorphism.  After
-    this, the leaves of $T$ are pruned and the hypergraph updated
-    accordingly by \algoiii subroutine -- the pruned leaves are shown
-    with dotted edges and the corresponding Venn diagrams show the
-    updated hypergraphs. $\phi_0$ is this leaf assignment and the
-    algorithm proceeds to solve the subproblem with the new
-    hypergraphs and path labeling which is: $\{2,6,5\}, \{2\},
-    \{6,5,3\}, \{1,5,3\}$ labeled with $\{\xPi, \xVi, \xCh\},
-    \{\xPi\}, \{\xCh, \xFr, \xVi\}, \{\xSa, \xCh, \xFr\}$
-    respectively.}
+  \caption[\figtabsize Problem solution part 2]{\figtabsize \filterii
+    finds leaf assignments as shown.}
   \label{fig:solpartIII}  
 \end{figure}
+
+
+
+In the subproblem shown in Figure~\ref{fig:solpartIII}, it can be
+noted that there are two leaves which are shared by more than one
+paths -- 2 and 3. Hence \filteri filters this out one by one. 
+In Figure~\ref{fig:solpartIVa}, we
+show the handling of leaf 2 which was shared by paths $\{2,6,5\}$
+($=P_1$, say) and $\{2\}$($=P_2$, say). \filteri removes $P_1$ and
+adds $\{6,5\}$. Note that only one set is added and removed since $P_2
+\subset P_1$. Accordingly, \filteri alters the hypergraph on the right
+hand side by removing and adding $\{\xPi, \xVi, \xCh\}$ and $\{\xVi,
+\xCh\}$ respectively.
+
 
 \begin{figure}[htb]
   \centering
@@ -1438,18 +1456,20 @@ figures along with their captions are self-explanatory.
     & 
     \studygroupsIVa
   \end{tabular}
-  \caption[\figtabsize Problem solution part 3]{\figtabsize In the subproblem shown in
-    Figure~\ref{fig:solpartIII}, it can be noted that there are two
-    leaves which are shared by more than one paths -- 2 and 3. Hence
-    \filteri filters this out one by one. Here we show the handling of
-    leaf 2 which was shared by paths $\{2,6,5\}$ ($=P_1$, say) and
-    $\{2\}$($=P_2$, say). \filteri removes $P_1$ and adds
-    $\{6,5\}$. Note that only one set is added and removed since $P_2
-    \subset P_1$. Accordingly, \filteri alters the hypergraph on the
-  right hand side by removing and adding $\{\xPi, \xVi, \xCh\}$ and $\{\xVi, \xCh\}$ respectively.}
+  \caption[\figtabsize Problem solution part 3]{\figtabsize \filteri
+    handling shared leaf 2.}
   \label{fig:solpartIVa}  
 \end{figure}
 
+
+After handling leaf 2, \filteri proceeds to handle leaf 3 which is
+shared by paths $\{1,5,3\}$ and $\{6,5,3\}$. This is illustrated in
+Figure~\ref{fig:solpartIVb}. \filteri removes these two paths and adds
+their intersection and set differences -- $\{5,3\}$, $\{1\}$ and
+$\{6\}$. Correspondingly, hyperedges $\{\xSa, \xCh, \xFr\}$ and
+$\{\xVi, \xCh, \xFr\}$ are removed and new hyperedges $\{\xCh,
+\xFr\}$, $\{\xSa\}$ and $\{\xVi\}$ respectively are added. There are
+no more leaves shared and the algorithm proceeds to \filterii.
 
 \begin{figure}[htb]
   \centering
@@ -1458,16 +1478,18 @@ figures along with their captions are self-explanatory.
     & 
     \studygroupsIVb
   \end{tabular}
-  \caption[\figtabsize Problem solution part 4]{\figtabsize After handling leaf 2, \filteri proceeds to
-    handle leaf 3 which is shared by paths $\{1,5,3\}$ and
-    $\{6,5,3\}$. \filteri removes these two paths and adds their
-    intersection and set differences -- $\{5,3\}$, $\{1\}$ and
-    $\{6\}$. Correspondingly, hyperedges $\{\xSa, \xCh, \xFr\}$ and $\{\xVi,
-    \xCh, \xFr\}$ are removed and new hyperedges $\{\xCh, \xFr\}$, $\{\xSa\}$
-    and $\{\xVi\}$ respectively are added. There are no more leaves
-    shared and the algorithm proceeds to \filterii.}
+  \caption[\figtabsize Problem solution part 4]{\figtabsize \filteri
+    handles shared leaf 3.}
   \label{fig:solpartIVb}  
 \end{figure}
+
+
+Next, Figure~\ref{fig:solpartVI} shows how \filterii computes the leaf
+assignment $\phi_1$ -- $\xPi, \xSa, \xFr$ on 2,1,3 respectively. These
+assignments are deterministic since $X$ consisted of only single
+elements for each of these leaves. After this the rest of the labeling
+is fairly obvious but we present it in Figure~\ref{fig:solpartVII} for
+the sake of completeness.
 
 \begin{figure}[htb]
   \centering
@@ -1478,15 +1500,21 @@ figures along with their captions are self-explanatory.
     &
     \studygroupsVItable
   \end{tabular}
-  \caption[\figtabsize Problem solution part 5]{\figtabsize \filterii computes the leaf assignment $\phi_1$ -- $\xPi,
-    \xSa, \xFr$ on 2,1,3 respectively. These assignments are
-    deterministic since $X$ consisted of only single elements for each
-  of these leaves. After this the rest of the labeling is fairly
-  obvious but we present it in Figure~\ref{fig:solpartVII} for the
-  sake of completeness.}
+  \caption[\figtabsize Problem solution part 5]{\figtabsize \filterii
+    computes the leaf assignment $\phi_1$.}
   \label{fig:solpartVI}  
 \end{figure}
-\clearpage
+%\clearpage
+
+
+In Figure~\ref{fig:solpartVII}, the last part of the isomorphism is
+computed as the leaf label $\phi_2$ which maps $\xCh, \xVi$ to 5, 6
+respectively. Figure~\ref{fig:solpartVIII} shows the final feasibility
+isomorphism which is the union of all the leaf labels. The feasibility
+hypergraph isomorphism $\phi$ is computed as the union of the leaf
+labels $\phi_0,\phi_1,\phi_2$. One can easily verify that this
+isomorphism does indeed induce the path labeling given in the original
+input.
 
 \begin{figure}[htb]
   \centering
@@ -1497,10 +1525,8 @@ figures along with their captions are self-explanatory.
     &
     \studygroupsVIItable
   \end{tabular}
-  \caption[\figtabsize Problem solution part 6]{\figtabsize The last part of the isomorphism is computed as
-  the leaf label $\phi_2$ which maps $\xCh, \xVi$ to 5, 6
-  respectively. Figure~\ref{fig:solpartVIII} shows the final
-  feasibility isomorphism which is the union of all the leaf labels.}
+  \caption[\figtabsize Problem solution part 6]{\figtabsize Last part
+    of solution computed. }
   \label{fig:solpartVII}  
 \end{figure}
 
@@ -1513,11 +1539,7 @@ figures along with their captions are self-explanatory.
     \studygroupsVIIItable
   \end{tabular}
   \caption[\figtabsize Problem solution part 7]{\figtabsize The solution to the problem presented in
-    Figure~\ref{fig:solpartI}. The feasibility hypergraph isomorphism
-    $\phi$ is computed as the union of the leaf labels
-    $\phi_0,\phi_1,\phi_2$. One can easily verify that this
-    isomorphism does indeed induce the path labeling given in the
-    original input.}
+    Figure~\ref{fig:solpartI}. }
   \label{fig:solpartVIII}
 \end{figure}
 
@@ -1547,18 +1569,16 @@ hypergraph too which will be seen in Section~\ref{sec:ksubdivstar}.
 \subsection{Target tree is a Path}
 \label{sec:icpplicpia}
 
-In Section~\ref{sec:motive} it is described how \COP is a
-special case of TPL as described by the \CFTPLINT problem. In this
-section we will dwell on this in more detail.
-
-\annote[dire]{The special case of TPL where the target tree $T$ is a
-path. Hence, all path labels are can be viewed as intervals assigned
-to the sets in $\cF$. }{needs work}
-
-It is shown, in \cite{nsnrs09}, that the
-filtering algorithms outlined above need only preserve pairwise
-intersection cardinalities, and higher level intersection
-cardinalities are preserved by the Helly Property of intervals.
+In Section~\ref{sec:motive} it is described how \COP is a special case
+of TPL as described by the \CFTPLINT problem.  This special case of
+TPL is where the target tree $T$ is a path. All path labels can now be
+viewed as intervals assigned to the hyperedges in input hypergraph
+$\cF$.  It is shown, in \cite{nsnrs09}, that the filtering algorithms
+outlined above need only preserve pairwise intersection cardinalities,
+and higher level intersection cardinalities are preserved by the Helly
+Property of intervals. Thus ICPIA as described in
+Section~\ref{sec:icpiasurvey} is a sufficient and necessary condition
+for \COP and this is solvable in polynomial time.
 % Consequently, the filter algorithms do not need to ever evaluate the
 % additional check to {\em \bf exit}.
 %\begin{enumerate}
@@ -1569,11 +1589,10 @@ cardinalities are preserved by the Helly Property of intervals.
 %\end{enumerate}
 %This is called an Intersection Cardinality Preservation Interval
 %Assignment (ICPIA) \cite{nsnrs09}. 
-This structure and its algorithm is used in the next section for
-finding tree path labeling from a $k$-subdivided star due to this
-graph's close relationship with intervals.
 
-\tnote[dire]{ELABORATE}
+Moreover, this special case structure and its algorithm is used in the
+next section for finding tree path labeling from a $k$-subdivided star
+due to this tree's close relationship with intervals.
 
 
 \subsection{Target tree is a $k$-subdivided Star}
@@ -1689,12 +1708,13 @@ the following rules. Also the end of the iteration, $\cL_1^{i+1},
 \cL_2^{i}, \cT_1^{i}, \cT_2^{i}$ respectively, along with some
 case-specific changes mentioned in the rules below.
 
-\tnote[dire]{REPEAT!!
+% \tnote[dire]{REPEAT!!
 
-In this section we consider the problem of assigning paths from a
-$k$-subdivided star $T$ to a given set system $\cF$ such that each set
-$X \in \cF$ is of cardinality at most $k+2$.  Secondly, we present our
-results only for the case when overlap graph $\bO(\cF)$ is connected.
+% In this section we consider the problem of assigning paths from a
+% $k$-subdivided star $T$ to a given set system $\cF$ such that each set
+% $X \in \cF$ is of cardinality at most $k+2$.  Secondly, we present our
+% results only for the case when overlap graph $\bO(\cF)$ is connected.
+
 %The
 %overlap graph is well-known from the work of
 %\cite{kklv10,nsnrs09,wlh02}.  We use the notation in
@@ -1706,33 +1726,34 @@ results only for the case when overlap graph $\bO(\cF)$ is connected.
 %hyperedges $S$ and $S'$ are adjacent if and only if they overlap.  Note
 %that the intersection graph of $\cF$, $\bI(\cF)$ is different from
 %$\bO(\cF)$ and $\bO(\cF) \subseteq \bI(\cF)$.  
-A connected component of $\bO(\cF)$ is called an overlap component of
-$\cF$.  An interesting property of the overlap components is that any
-two distinct overlap components, say $\cO_1$ and $\cO_2$, are such
-that any two sets $S_1 \in \cO_1$ and $S_2 \in \cO_2$ are disjoint,
-or, w.l.o.g, all the sets in $\cO_1$ are contained within one set in
-$\cO_2$.  This containment relation naturally determines a
-decomposition of the overlap components into rooted containment trees.
-We consider the case when there is only one rooted containment tree,
-and we first present our algorithm when $\bO(\cF)$ is connected.  It
-is easy to see that once the path labeling to the overlap component in
-the root of the containment tree is achieved, the path labeling to the
-other overlap components in the rooted containment tree is essentially
-finding a path labeling when the target tree is a path: each target
-path is a path that is allocated to sets in the root overlap
-component.  Therefore, for the rest of this section, $\bO(\cF)$ is a
-connected graph. Recall that we also consider the special case when
-all hyperedges are of cardinality at most $k+2$.  By definition, a
-$k$-subdivided star has a central vertex which we call the {\em root},
-and each root to leaf path is called a {\em ray}.  First, we observe
-that by removing the root $r$ from $T$, we get a collection of $p$
-vertex disjoint paths of length $k+1$, $p$ being the number of leaves
-in $T$.  We denote the rays by $R_1, \ldots, R_p$, and the number of
-vertices in $R_i$, $i \in [p]$ is $k+2$.  Let
-$\seq{v_{i1},\ldots,v_{i(k+2)}=r}$ denote the sequence of vertices in
-$R_i$, where $v_{i1}$ is the leaf. Note that $r$ is a common vertex to
-all $R_i$.
-}  
+
+% A connected component of $\bO(\cF)$ is called an overlap component of
+% $\cF$.  An interesting property of the overlap components is that any
+% two distinct overlap components, say $\cO_1$ and $\cO_2$, are such
+% that any two sets $S_1 \in \cO_1$ and $S_2 \in \cO_2$ are disjoint,
+% or, w.l.o.g, all the sets in $\cO_1$ are contained within one set in
+% $\cO_2$.  This containment relation naturally determines a
+% decomposition of the overlap components into rooted containment trees.
+% We consider the case when there is only one rooted containment tree,
+% and we first present our algorithm when $\bO(\cF)$ is connected.  It
+% is easy to see that once the path labeling to the overlap component in
+% the root of the containment tree is achieved, the path labeling to the
+% other overlap components in the rooted containment tree is essentially
+% finding a path labeling when the target tree is a path: each target
+% path is a path that is allocated to sets in the root overlap
+% component.  Therefore, for the rest of this section, $\bO(\cF)$ is a
+% connected graph. Recall that we also consider the special case when
+% all hyperedges are of cardinality at most $k+2$.  By definition, a
+% $k$-subdivided star has a central vertex which we call the {\em root},
+% and each root to leaf path is called a {\em ray}.  First, we observe
+% that by removing the root $r$ from $T$, we get a collection of $p$
+% vertex disjoint paths of length $k+1$, $p$ being the number of leaves
+% in $T$.  We denote the rays by $R_1, \ldots, R_p$, and the number of
+% vertices in $R_i$, $i \in [p]$ is $k+2$.  Let
+% $\seq{v_{i1},\ldots,v_{i(k+2)}=r}$ denote the sequence of vertices in
+% $R_i$, where $v_{i1}$ is the leaf. Note that $r$ is a common vertex to
+% all $R_i$.
+%}  
 
 
 \noindent {\bf Description of the Algorithm.}
@@ -1757,7 +1778,7 @@ For each hyperedge $X \in \cO$, we will maintain a 2-tuple of non-negative
  \xnoindent The algorithm proceeds in iterations, and in the $i$-th
  iteration, $i > 1$, a single hyperedge $X$ that overlaps with a
  hyperedge that has been assigned a path is considered.  At the
- beginning of each iteration hyperedges of $\cO$ are classifed into
+ beginning of each iteration hyperedges of $\cO$ are classified into
  the following disjoint sets.
  \begin{enumerate}
  \item [$\cL_1^i$] {\em Labeled without $r$.} Those that have been
@@ -1801,7 +1822,7 @@ case-specific changes mentioned in the rules below.
   super-marginal hyperedges from $\cO_1$.  If $|S|=s \neq p$, then
   exit reporting failure.  Else, assign to each $X_j \in S$, the path
   from $R_j$ such that the path contains the leaf in $R_j$.  This path
-  is refered to as $\cl(X_j)$.  Set $p_1(X_j)=|X|, p_2(X_j)=s(X_j)=0$.
+  is referred to as $\cl(X_j)$.  Set $p_1(X_j)=|X|, p_2(X_j)=s(X_j)=0$.
   Hyperedges in $S$ are not added to $\cO_2$ but are added to
   $\cL_1^2$ and all other hyperedges are added to
   $\cO_2$.
@@ -1860,10 +1881,10 @@ Further, finding super-marginal hyperedges can also be done in
 polynomial time, as it involves considering the overlap regions and
 checking if the inclusion partial order contains a single minimal
 element.  In particular, once the super-marginal edges are identified,
-each iteration involes finding the next hyperedge to consider, and
+each iteration involves finding the next hyperedge to consider, and
 testing for a path to that hyperedge.  To identify the next hyperedge
 to consider, we consider the breadth first layering of the hyperedges
-with the zeroeth layer consisting of the super-marginal hyperedges.
+with the zeroth layer consisting of the super-marginal hyperedges.
 Since $\cO$ is connected, it follows that all hyperedges of $\cO$ will
 be considered by the algorithm.  Once a hyperedge is considered, the
 path to be assigned to it can also be computed in constant time.  In
@@ -2103,14 +2124,14 @@ method of solution.
 
 %\noindent {\bf Finding an assignment of tree paths to a set system.} 
 As described by Definition~\ref{def:matrixsetsystem} a set system or
-hypergraph can be concisely represented by a binary matrix
-\stt the row indices of the matrix denote the vertex set of the
-hypergraph and each column bijectively correspond to a hyperedge. And
-thus the ideas of feasible \TPL and \ICPPL are also defined for a
-binary matrix. If a \TPL $(\cF,\cl,T)$ is feasible, \ie it is an ICPPL
-(see Section~\ref{xxxxx} \tnote[dire]{SECTION NUMBER}) and if $M$ is
-the representative matrix for hypergraph $\cF$, then we say that $M$
-has an \ICPPL and vice versa.
+hypergraph can be concisely represented by a binary matrix \stt the
+row indices of the matrix denote the vertex set of the hypergraph and
+each column bijectively correspond to a hyperedge. And thus the ideas
+of feasible \TPL and \ICPPL are also defined for a binary matrix. If a
+\TPL $(\cF,\cl,T)$ is feasible, \ie it is an ICPPL (see
+Section~\ref{sec:feasible}) and if $M$ is the representative matrix
+for hypergraph $\cF$, then we say that $M$ has an \ICPPL and vice
+versa.
 
 
 Consider the overlap graph and overlap components of $\bO(\cF)$
@@ -2122,9 +2143,10 @@ denote the prime submatrices of $M$ by $M_1,\ldots,M_p$, each
 corresponding to one of the $p$ overlap components of $\cF$. Clearly,
 two distinct prime submatrices have mutually exclusive sets of columns
 of $M$.  Let $col(M_i)$ be the set of columns in the submatrix $M_i$.
-The support of a prime submatrix $M_i$ and support of a
-set of prime submatrices $X$ are defined as follows. Note that for each $i$,
-$supp(M_i) \subseteq U$ where $U$ is the vertex set of hypergraph $\cF$.
+The support of a prime submatrix $M_i$ and support of a set of prime
+submatrices $X$ are defined as follows. Note that for each $i$,
+$supp(M_i) \subseteq U$ where $U$ is the vertex set of hypergraph
+$\cF$.
 \begin{align*}
 supp(M_i) &= \displaystyle \bigcup_{j \in col(M_i)}S_j\\  
 supp(X) &= \displaystyle  \bigcup_{M \in X} supp(M)
@@ -2157,7 +2179,7 @@ supp(X) &= \displaystyle  \bigcup_{M \in X} supp(M)
 % = \{(v_i, v_j) \mid S_i \cap S_j \ne \O \text{ and }S_i \nsubseteq
 % S_j, S_j \nsubseteq S_i \}$. 
 
-\def \primeless {\preccurlyeq}
+
 \noindent
 Consider the binary relation $\primeless$ defined on the set of
 prime submatrices $\bP = \{M_i \mid i \in [p]\}$ as follows.
@@ -2173,11 +2195,15 @@ prime submatrices $\bP = \{M_i \mid i \in [p]\}$ as follows.
 
 This relation is the same as that defined in \cite{nsnrs09}. The prime
 submatrices and the above relation can be defined for any hypergraph
-since an overlap graph is defined for any hypergraph. We will use this structure of prime submatrices to present our
-results on an ICPPL for a hypergraph $\cF$. 
-Now we present a few lemma and a theorem that show that $\primeless$ is
-a partial order. An alternate notation for $(M_i,M_j) \in \primeless$
-is $M_i \primeless M_j$.
+since an overlap graph is defined for any hypergraph. We will use this
+structure of prime submatrices to present our results on an ICPPL for
+a hypergraph $\cF$.  Now we present a few lemma and a theorem that
+show that $\primeless$ is a partial order.  These results are from
+\cite{nsnrs09} but are independent of the \COP property of $M$ and is
+valid for any binary matrix $M$ except Theorem~\ref{thm:partitionold}
+which we subsequently extend in Theorem~\ref{thm:partition} to
+accommodate \ICPPL.  Note that an alternate notation for $(M_i,M_j)
+\in \primeless$ is $M_i \primeless M_j$.
 
 % Recall the following
 % lemmas, and theorem that $\preccurlyeq$ is a partial order, from
@@ -2216,49 +2242,29 @@ is $M_i \primeless M_j$.
   \parindent \defindent
   \begin{enumerate}[i. ]
   \item $\primeless$ is a partial order on $\bP$.
-  \item $\primeless$ uniquely partitions $\bP$ into $\bP_1, \bP_2
-    \ldots ,\bP_r$ for some $r \ge 1$.
+  \item \label{thm:i:chainpartition} $\primeless$ uniquely partitions $\bP$ into $\bP_1, \bP_2
+    \ldots ,\bP_r$ for some $r \ge 1$ as follows. 
   \item \label{thm:i:totalorder} If $M$ has \COP, then for each $i \in
     [r]$, $\primeless$ induces a total order in $\bP_i$.
   \end{enumerate}
-% $\preccurlyeq$ is a partial
-%   order on the set of prime submatrices of $M$.  Further, it uniquely
-%   partitions the prime submatrices of $M$ such that on each set in
-%   the partition $\preccurlyeq$ induces a total order.
 \end{theorem}
 
-% \begin{theorem} % [{\cite[Th.~4]{nsnrs09}}] %
-%   \label{thm:partitionnew}%
-%   \parindent \defindent
-%   \begin{enumerate}[i. ]
-%   \item $\primeless$ is a partial order on $\bP$.
-%   \item $\primeless$ uniquely partitions $\bP$ into $\bP_1, \bP_2
-%     \ldots ,\bP_k$ for some $k \ge 1$.
-%   \item If $M$ has \COP, then for each $i \in [k]$, $\primeless$
-%     induces a total order in $\bP_i$.
-%   \end{enumerate}
-% \end{theorem}
-
-
-%   Let $M$ be a binary matrix for a hypergraph
-%   with \TPL and $\bP$ be the set of prime submatrices of $M$. Then
-%   Theorem~\ref{thm:partitionold} holds true with (iii) changed as
-%   follows -- for each $i \in [k]$, $\primeless$ induces an in-tree
-%   in $\bP_i$.
-Since we are concerned with the generalization of \COP, we generalize
-the condition~(\ref{thm:i:totalorder}) in
-Theorem~\ref{thm:partitionold} from total order to in-trees as
-follows.  The in-tree is derived from the Hasse diagram of
-$\primeless$. Each of these in-trees will be on disjoint vertex sets,
-which in this case would be disjoint sets of prime-submatrices
+\cite{nsnrs09} does not explicitly mention how the partitioning of
+$\bP$ is done in Theorem~\ref{thm:partitionold} and merely mention
+that the total order in (\ref{thm:i:totalorder}) is obvious. We call
+this partitioning in Theorem~\ref{thm:partitionold} point
+(\ref{thm:i:chainpartition}) as {\em chain partitioning}. We explain
+what chain partitioning is in the following text. For that, first we
+construct the Hasse diagram of $\primeless$ which we observe is a
+collection of in-trees in the following Theorem~\ref{thm:partition}.
+Each of these in-trees have disjoint vertex sets,
+which in this case would be disjoint sets of prime submatrices
 $\bP_i$, $i \in [r]$ for some $r > 0$.  For each $\bP_i$, the in-tree
 is rooted at a maximal upper bound under $\preccurlyeq$.  The in-trees
 are specified by selecting the appropriate edges from the Hasse
 diagram associated with $\preccurlyeq$. This is defined in
 Theorem~\ref{thm:partition} before which we see the covering relation
 for $\primeless$ defined below.
-% %D replace \cI with \primeless_c
-% Let $\primeless_c$ be the following set:
 \begin{align*}
   \primeless_c \ \  = \ \ &\{ (M_i,M_j) \mid M_i \primeless M_j \text{ \stt\ } \nexists
   M_k \text{ s.t. } M_i \primeless M_k \text{, } M_k \primeless M_j \} \\
@@ -2267,6 +2273,13 @@ for $\primeless$ defined below.
 
 It is easy to see that $\primeless_c$ is the covering relation of the partial
 order $\primeless$.
+
+
+
+% Since we are concerned with the generalization of \COP, we generalize
+% the condition~(\ref{thm:i:totalorder}) in
+% Theorem~\ref{thm:partitionold} from total order to in-trees as
+% follows.  
 
 \begin{theorem}%
   \label{thm:partition} %
@@ -2282,64 +2295,102 @@ order $\primeless$.
 \begin{proof}\thesisspacing
   To observe that $X$ is a collection of in-trees, we observe that for
   vertices corresponding to maximal upper bounds, no outgoing edge is
-  present in $\primeless_c$.  Secondly, for each other element, exactly one
-  outgoing edge is chosen, and for the minimal lower bound, there is
-  no incoming edge.  Consequently, $X$ is acyclic, and since each
-  vertex has at most one edge leaving it, it follows that $X$ is a
-  collection of in-trees, and for each in-tree, the root is a maximal
-  upper bound in $\primeless$.  
+  present in $\primeless_c$.  Secondly, for each other element,
+  exactly one outgoing edge is chosen, and for the minimal lower
+  bound, there is no incoming edge.  Consequently, $X$ is acyclic, and
+  since each vertex has at most one edge leaving it, it follows that
+  $X$ is a collection of vertex disjoint in-trees, and for each
+  in-tree, the root is a maximal upper bound in $\primeless$.
 \end{proof}
-Let the partition of $X$ given by Theorem \ref{thm:partition} be
-$\{X_1,\ldots,X_r\}$.  Further, each in-tree itself can be layered
-based on the distance from the root.  The root is considered to be at
-level zero. For $j \geq 0$, Let $X_{i,j}$ denote the set of prime
-matrices in level $j$ of in-tree $X_i$.
+
+
+We call the partitioning of set of prime matrices $\bP$ given by
+Theorem~\ref{thm:partition} as {\em containment partitioning}. The term
+signifies the containment property described in
+Lemma~\ref{lem:containment} and the fact that each containment parts
+are disjoint from one another.
+
+Let the containment partition of set of prime matrices $\bP$ be: 
+\[\{\bP_i \mid i \in [r], \bP_i \text{ is the vertex set of an
+  in-tree of } X\}\] 
+
+Further, the vertices of each in-tree can be
+layered based on their distance from the root, the root being the
+maximal upper bound.  The root is considered
+to be at level zero. For $j \geq 0$, let $\bP_{i,j}$ denote the set of
+prime matrices in level $j$ of in-tree $\bP_i$. The set $\bP_{i,0}$
+has only one prime submatrix which is the maximal upper bound in
+$\bP_i$. Hence $\bP_{i,0}$ is denoted by $mub(\bP_i)$.
+
+
+Now we describe how the chain partitioning alluded to in
+Theorem~\ref{thm:partitionold} is obtained. Each in-tree described
+above is decomposed by the following rules into chains. Traverse the
+tree level by level from bottom to top. At each level, if there is a
+node with degree greater than 2, the chain that contains this node and
+all its descendants is one chain part. Remove this chain from the tree
+and recurse till reaching the root. Now it is clear why each of these
+partitions are totally ordered -- it is so because they are chains of
+the Hasse diagram. Now we continue with the description of
+$\primeless$ for TPLs. 
+
+The next Lemma~\ref{lem:subicppa} and Lemma~\ref{lem:rooticppa} show why it
+is necessary to assign a subtree of the target tree only to the $mub$
+of each in-tree and all other matrices reduce to interval assignment
+problems.
+
+% CHAIN PARTITIONS
+% each leaf to a degree >= two vertex...
+% without include the degree >= two vertex
+% that is one chain  
+% do tis for all leaf
+% and remove the chain..
+% iterate
+
+
 
 \begin{lemma}
   \label{lem:subicppa}
   Let $M$ be a matrix and let $X$ be the directed graph whose vertices
   are in correspondence with the prime submatrices of $M$.  Further
-  let $\{X_1,\ldots,X_r\}$ be the partition of $X$ into in-trees as
-  defined above.  Then, matrix $M$ has an ICPPL in tree $T$ \iff $T$
-  can be partitioned into vertex disjoint subtrees $\{T_1, T_2, \dots
-  T_r\}$ such that, for each $1 \leq i \leq r$, the set of prime
-  submatrices corresponding to vertices in $X_i$ has an ICPPL in
-  $T_i$.
+  let $\{\bP_i \mid i \in [r]\}$ be the partition of $X$ into in-trees
+  as defined above.  Then, matrix $M$ has an ICPPL on target tree $T$
+  \iff $T$ can be partitioned into vertex disjoint subtrees $\{T_i
+  \mid i \in [r]\}$ such that, for each $i \in [r]$, the set of prime
+  submatrices $\bP_i$ has an ICPPL on subtree $T_i$.
 \end{lemma}
 \begin{proof}\thesisspacing
   Let us consider the reverse direction first.  Let us assume that $T$
-  can be partitioned into $T_1, \ldots, T_r$ such that for each $1
-  \leq i \leq r $, the set of prime submatrices corresponding to
-  vertices in $X_i$ has an ICPPL in $T_i$.  It is clear from the
-  properties of the partial order $\preccurlyeq$ that these ICPPLs
-  naturally yield an ICPPL of $M$ in $T$.  The main property used in
-  this inference is that for each $1 \leq i \neq j \leq r$, $supp(X_i)
-  \cap supp(X_j) = \phi$.
-
-\noindent
-To prove the forward direction, we show that if $M$ has an ICPPL, say
-$\cA$, in $T$, then there exists a partition of $T$ into vertex
-disjoint subtree $T_1, \ldots, T_r$ such that for each $1 \leq i \leq
-r$, the set of prime submatrices corresponding to vertices in $X_i$
-has an ICPPL in $T_i$.  For each $1 \leq i \leq r$, we define based on
-$\cA$ a subtree $T_i$ corresponding to $X_i$.  We then argue that the
-trees thus defined are vertex disjoint, and complete the proof.
-Consider $X_i$ and consider the prime submatrix in $X_{i,0}$.
-Consider the paths assigned under $\cA$ to the sets in the prime
-submatrix in $X_{i,0}$.  Since the component in $G_f$ corresponding
-to this matrix is a connected component, it follows that union of
-paths assigned to this prime-submatrix is a subtree of $T$.  We call
-this sub-tree $T_i$.  All other prime-submatrices in $X_i$ are
-assigned paths in $T_i$ since $\cA$ is an ICPPL, and the support of
-other prime submatrices in $X_i$ are contained in the support of the
-matrix in $X_{i,0}$.  Secondly, for each $1 \leq i \neq j \leq r$,
-$supp(X_i) \cap supp(X_j) = \phi$, and since $\cA$ is an ICPPL, it
-follows that $T_i$ and $T_j$ are vertex disjoint.  Finally, since $|U|
-= |V(T)|$, it follows that $T_1, \ldots, T_r$ is a partition of $T$
-into vertex disjoint sub-trees such that for each $1 \leq i \leq r$,
-the set of matrices corresponding to nodes in $X_i$ has an ICPPL in
-$T_i$.  Hence the lemma.
+  can be partitioned into $T_1, \ldots, T_r$ such that for each $i \in
+  [r]$, the set of prime submatrices $\bP_i$ has an ICPPL on $T_i$.
+  It is clear from the properties of the partial order $\preccurlyeq$
+  that this naturally yield an ICPPL of $M$ on $T$.  The main property
+  used in this inference is that for each $1 \leq i \neq j \leq r$,
+  $supp(X_i) \cap supp(X_j) = \emptyset$.  To prove the forward
+  direction, we show that if $M$ has an ICPPL, say $\cl$, on $T$ then
+  there exists a partition of $T$ into vertex disjoint subtree $T_1,
+  \ldots, T_r$ such that for each $i \in [r]$, the set of prime
+  submatrices $\bP_i$ has an ICPPL on $T_i$.  For each $i \in [r]$, we
+  define based on $\cl$ a subtree $T_i$ corresponding to $X_i$.  We
+  then argue that the subtrees thus defined are vertex disjoint and
+  prove the claim.  In partition $\bP_i$, consider prime submatrix
+  $mub(\bP_i)$ and the paths labeled under $\cl$ to the hyperedges in
+  the prime submatrix $mub(\bP_i)$.  Since the component in $\bO(M)$
+  corresponding to this matrix (this notation is analogous to overlap
+  graph $\bO(\cF)$ for a hypergraph $\cF$) is a connected component,
+  it follows that the paths labeled to hyperedges in this prime
+  submatrix form a (connected) subtree of $T$.  We call this subtree
+  $T_i$.  All other prime submatrices in $\bP_i$ are assigned merely
+  paths in $T_i$. This follows from Lemma~\ref{lem:containment} along
+  with the facts that $\cl$ is an ICPPL and $M_x \primeless
+  mub(\bP_i)$ for any prime submatrix $M_x \in \bP_i$.  Secondly, for
+  each $1 \leq i \neq j \leq r$, $\supt{\bP_i} \cap \supt{\bP_j} =
+  \emptyset$ and $\cl$ is an ICPPL. Thus it follows that $T_i$ and
+  $T_j$ are vertex disjoint.  Finally, since $|U| = |V(T)|$, it
+  follows that $T_1, \ldots, T_r$ is indeed a partition of $T$. Thus
+  the claim is proven.
 \end{proof}
+
 The essence of the following lemma is that an ICPPL only needs to be
 assigned to the prime submatrix corresponding to the root of each
 in-tree, and all the other prime submatrices only need to have an
@@ -2350,133 +2401,228 @@ interval, and the cardinality of intersection of any two sets is same
 as the cardinality of the intersection of the corresponding intervals.
 It is shown in \cite{nsnrs09} that the existence of an ICPIA is a
 necessary and sufficient condition for a matrix to have COP.  We
-present the pseudo-code to test if $M$ has an ICPPL in $T$.
-\begin{lemma} \label{lem:rooticppa} Let $M$ be a matrix and let $X$ be
-  the directed graph whose vertices are in correspondence with the
-  prime submatrices of $M$.  Further let $\{X_1,\ldots,X_r\}$ be the
-  partition of $X$ into in-trees as defined earlier in this section.
-  Let $T$ be the given tree and let $\{T_1, \ldots, T_r\}$ be a given
-  partition of $T$ into vertex disjoint sub-trees.  Then, for each $1
-  \leq i \leq r$, the set of matrices corresponding to vertices of
-  $X_i$ has an ICPPL in $T_i$ if and only if the matrix in $X_{i,0}$
-  has an ICPPL in $T_i$ and all other matrices in $X_i$ have an {\bf
-    {\em ICPIA}}.
+present the pseudocode to test if $M$ has an ICPPL in $T$.
+
+\begin{lemma} 
+  \label{lem:rooticppa}%
+  Let $M$ be a matrix, $X$ be the directed graph whose vertices are in
+  correspondence with the prime submatrices of $M$ and
+  $\{\bP_1,\ldots,\bP_r\}$ be the partition of $X$ into in-trees by
+  $\primeless$ defined earlier.  Let $T$ be the target tree and let
+  $\{T_1, \ldots, T_r\}$ be a given partition of $T$ into vertex
+  disjoint subtrees.  Then, for each $1 \leq i \leq r$, the set of
+  prime submatrices $\bP_i$ has an ICPPL in $T_i$ if and only if the
+  prime submatrix $mub(\bP_i)$ has an ICPPL on $T_i$ and all other
+  matrices in $\bP_i$ have an ICPIA.
 \end{lemma}
 \begin{proof}\thesisspacing
-  The proof is based on the following fact- $\preccurlyeq$ is a
-  partial order and $X$ is a digraph which is the disjoint union of
+  The proof is based on the fact that $\preccurlyeq$ is a partial
+  order and $X$ is a directed graph which is a disjoint union of
   in-trees.  Each edge in the in-tree is a containment relationship
-  among the supports of the corresonding submatrices. Therefore, any
-  ICPPL to a prime submatrix that is not the root is contained in a
-  path assigned to the sets in the parent matrix.  Consequently, any
-  ICPPL to the prime submatrix that is not at the root is an ICPIA,
-  and any ICPIA can be used to construct an ICPPL to the matrices
-  corresponding to nodes in $X_i$ provided the matrix in the root has
-  an ICPPL in $T_i$.  Hence the lemma.
+  among the supports of the corresponding submatrices. Therefore, any
+  ICPPL to a prime submatrix that is not the $mub$ is contained in a
+  path assigned to the sets in the parent matrix.  This follows from
+  Lemma~\ref{lem:containment} and since $M_x \primeless mub(\bP_i)$
+  for any prime submatrix $M_x \in \bP_i$.  Consequently, any ICPPL to
+  the prime submatrix that is not $mub(\bP_i)$ is an ICPIA, and any
+  ICPIA can be used to construct an ICPPL to the matrices
+  corresponding to nodes in $\bP_i$ provided $mub(\bP_i)$ has
+  an ICPPL in $T_i$. 
 \end{proof}
 Lemma \ref{lem:subicppa} and Lemma \ref{lem:rooticppa} point out two
-algorithmic challenges in finding an ICPPL for a given set system
-$\cF$ in a tree $T$.  Given $\cF$, finding $X$ and its partition
-$\{X_1,\ldots,X_r\}$ into in-trees can be done in polynomial time.  On
-the other hand, as per lemma \ref{lem:subicppa} we need to parition
-$T$ into vertex disjoint sub-trees $\{T_1, \ldots, T_r\}$ such that
-for each $i$, the set of matrices corresponding to nodes in $X_i$ have
-an ICPPL in $T_i$.  This seems to be a challenging step, and it must
-be remarked that this step is easy when $T$ itself is a path, as each
-individual $T_i$ would be sub-paths.  The second algorithmic challenge
-is identified by lemma \ref{lem:rooticppa} which is to assign an ICPPL
-from a given tree to the matrix associated with the root node of
-$X_i$.
+algorithmic challenges in finding an ICPPL for a given hypergraph
+$\cF$ on a target tree $T$.  
+\begin{enumerate}
+\item Finding $X$ and its partition into in-trees
+  $\{\bP_1,\ldots,\bP_r\}$, can be done in polynomial time.  On the
+  other hand, as per Lemma~\ref{lem:subicppa} we need to partition $T$
+  into vertex disjoint subtrees $\{T_1, \ldots, T_r\}$ such that for
+  each $i \in [r]$, the prime submatrices in $\bP_i$ have an ICPPL in
+  $T_i$ (to be accurate, the prime submatrix $mub(\bP_i)$ has an ICPPL
+  in $T_i$ and the rest of the prime submatrices have an ICPIA as
+  claimed in Lemma~\ref{lem:rooticppa}).  This seems to be a
+  challenging step, and it must be remarked that this step is easy
+  when $T$ itself is a path, as each individual $T_i$ would be
+  sub-paths.
+\item The second algorithmic challenge is identified by
+  Lemma~\ref{lem:rooticppa} which is to compute an ICPPL from a given
+  tree to the matrix associated with $mub(\bP_i)$.
+\end{enumerate}
+
+\begin{figure}[h]
+  \centering
+
+  \begin{tabular}[h]{l}
+     \tplmatrix %        
+%      \\     
+%      \tpltreepaths %       
+  \end{tabular}
+
+  \caption[\figtabsize Partial order on prime submatrices -
+  containment partition]{\figtabsize
+    Partial order on prime submatrices. The table on top illustrates
+    the structural properties of prime matrices and partial order
+    $\primeless$. A hypergraph $\cF$ with FTPL has hyperedges $S_1, \ldots,
+    S_{12}$ which are represented by the binary matrix $M$. Empty
+    entries denote zeros.
+%     The graph
+%     below is the target tree with each set $S_i, 1 \le i \le 12$ shown
+%     as tree paths and intervals. Note that the sets that do not belong
+%     to the $mub$s $M_1$ and $M_4$ are shown as intervals.
+  }
+  \label{fig:tplpotheory-matrix}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+
+  \begin{tabular}[h]{l}
+%      \tplmatrix %        
+%      \\     
+     \tpltreepaths %       
+  \end{tabular}
+
+  \caption[\figtabsize Partial order on prime submatrices - target
+  tree]{\figtabsize This graph is the target tree for the matrix in
+    Fig.~\ref{fig:tplpotheory-matrix} with each column $S_i, 1 \le i
+    \le 12$ shown as tree paths and intervals.}
+  \label{fig:tplpotheory-graph}
+\end{figure}
+
+Figure~\ref{fig:tplpotheory-matrix} and
+Figure~\ref{fig:tplpotheory-graph} illustrate the containment
+partitions of a binary matrix and the claim of
+Theorem~\ref{lem:rooticppa}. In Figure~\ref{fig:tplpotheory-matrix},
+the feasibility bijection is explicitly shown by labeling the rows
+(which represents elements in hypergraph's universe) with the vertices
+of the target tree $T$, $v_1, \ldots, v_{12}$.  $M$ decomposed into
+prime submatrices $M_1, \ldots, M_6$ which is collectively represented
+by $\cP$. It can be verified that they correspond to the overlap
+components in $\bO(\cF)$. The containment partitions of $\cP$ are
+$\bP_1, \bP_2$ as shown. Note that the empty cells of the matrix
+represent 0s -- they are left empty to make the containment partitions
+more obvious.  Figure~\ref{fig:tplpotheory-graph} shows the target
+tree of this TPL. The rectangles depict the sets allocated to the
+columns in the $mub$ of $M$'s prime matrices, namely $M_1$ and
+$M_4$. The rest of the columns are shown as intervals illustrating
+Theorem~\ref{lem:rooticppa}.
+
 \begin{algorithm}[h]
   \caption{Algorithm to find an ICPPL for a matrix $M$ on tree $T$:
     $main\_ICPPL(M, T$)}
   \label{al:icppa-main}
-  \begin{algorithmic}
+  \begin{algorithmic}[\lndisplay]
     \STATE Identify the prime submatrices. This is done by
     constructing the strict overlap graph and identify connected
-    components.  Each connected component yields a prime submatrix.
-    \\ 
+    components.  Each connected component yields a prime submatrix.%
     \STATE Construct the partial order $\preccurlyeq$ on the set of
-    prime submatrices.  \\ 
-    \STATE Construct the partition $X_1,\ldots,X_r$ of the prime
-    submatrices induced by $\preccurlyeq$ \\
-    \STATE For each $1 \leq i \leq r$, Check if all matrices except
-    those in $X_{i,0}$ has an ICPIA.  If a matrix does not have ICPIA
-    exit with a negative answer.  To check for the existence of ICPIA,
-    use the result in \cite{nsnrs09}.  \STATE Find a partition of
-    $T_1, \ldots, T_r$ such that matrices in $X_{i,0}$ has an ICPPL in
-    $T_i$.  If not such partition exists, exit with negative answer.
+    prime submatrices.%
+    \STATE Construct the partition $\bP_1, \ldots, \bP_r$ of the prime
+    submatrices induced by $\preccurlyeq$%
+    \STATE For each $1 \leq i \leq r$, check if all matrices except
+    $mub(\bP_i)$ has an ICPIA.  If a matrix does not have ICPIA exit
+    with a negative answer.  To check for the existence of ICPIA, use
+    the result in \cite{nsnrs09}.%
+    \STATE \label{ln:findtreepartition} Find a partition of $T_1, \ldots, T_r$ such that matrices
+    in $mub(\bP_i)$ has an ICPPL in $T_i$.  If not such partition
+    exists, exit with negative answer.%
+
+    \FOR {each $1 \leq i \leq r$}%
+    \STATE \label{ln:findrooticppl} Find the ICPPL for $mub(\bP_i)$ on $T_i$%
+    \FOR {each prime submatrix $M_x$ other than $mub(\bP_i)$ in $\bP_i$}%
+    \STATE Find ICPIA for $M_x$ %     
+    \ENDFOR
+    \ENDFOR
   \end{algorithmic}
 \end{algorithm}
 
+Algorithm~\ref{al:icppa-main} consolidates all that we described above
+and gives the procedure to solve \CFTPL. It may be noted that all operations other than in
+line~\ref{ln:findtreepartition} and line~\ref{ln:findrooticppl} are
+known to be polynomial time solvable.
 
-\section[Complexity]{Complexity of Tree Path Assignment-A Discussion}
+\clearpage % to flush all floats
+
+\section[Complexity]{Complexity of Tree Path Assignment -- A Discussion}
 \label{sec:tplcomplexity}
-Recall that the input to the Tree Path Assignment question is an order
-pair $(\cF,T)$ where $\cF$ is a family of subsets of an universe $U$,
-and $T$ is a tree such that $|V(T)| = |U|$.  The question is to come
-up with a bijection from $U$ to $V(T)$ such that the image of each set
-in $\cF$ is a path in $T$.
 
-\tnote[dire]{it is known that if the given tree is a path a
-feasible assignment can be found in polynomial time, and we observe
-that it can actually be done in logspace. }
+In this section, we briefly make some observations about complexity of
+TPL and \COP. First we present our conclusions on time complexity of
+TPL and then on space complexity of \COP. The latter is a conclusion
+based on existing literature. However to the best of our knowledge
+this particular observation about \COP's space complexity has not been
+made earlier.
 
-We also point out Consecutive Ones Testing is in Logspace from two
-different results in the literature \cite{kklv10, mcc04}. To the best
-of our knowledge this observation has not been made earlier.
+\subsection{Time complexity of TPL}
+\label{sec:tpltime}
+Complexity of \CFTPL for arbitrary trees is in \np. If a solution to
+\CFTPL is given, it can be verified using \ICPPL and computing bounded
+(in this case, up to 3-way) intersection cardinalities is polynomial
+time solvable. Hence the claim. Beyond this, however, we do not have
+conclusive complexity results for \CFTPL. 
+
+Nonetheless, the problems \CFTPLINT and \CFTPLKTREE are polynomially
+solvable as we saw in Section~\ref{sec:spltargettree}.
+
+Further, we observe that \COP testing can in fact be done in
+logspace. We use two different results in the literature \cite{kklv10,
+  mcc04} to conclude that \COP is in logspace. We see this in the next
+section.
 
 
 \subsection{Consecutive Ones Testing is in Logspace}
 \label{sec:cotlogspace}
-While Tree Path Assignment is isomorphism-complete, it is polynomial
-time solvable when the given tree is a path.  Indeed, in this case we
-encounter a restatement of matrices with the COP.  The known
-approaches to testing for COP fall into two categories: those that
-provide a witness when the input matrix does not have COP, and those
-that do not provide a witness.  The first linear time algorithm for
-testing COP for a binary matrix was using a data structure called PQ
-trees, which represent all COP orderings of $M$, invented by
-\cite{bl76}. There is a PQ tree for a matrix \iff the matrix has COP.
-Indeed, this is an algorithmic characterization of the consecutive
-ones property and the absence of the PQ-tree does not yield any
-witness to the reason for failure.  A closely related data structure
-is the generalized PQ tree in \cite{mcc04}.  In generalized PQ tree
-the P and Q nodes are called prime and linear nodes. Aside from that,
+TPL is polynomial time solvable when the given tree is a path. This is
+the case that is equivalent to \COP testing of binary matrices.
+% Indeed, in this case we encounter a restatement of matrices with the
+% COP. 
+The known approaches to testing for COP fall into two categories:
+those that provide a witness when the input matrix does not have COP,
+and those that do not provide a witness.  We mention this aspect of
+\COT in Section~\ref{sec:surveycopopt}.
+Section~\ref{sec:surveycertalgo} described generalized \PQtree where
+$P$ and $Q$ nodes are called prime and linear nodes. Aside from that,
 it has a third type of node called degenerate nodes which is present
-only if the set system does not have COP \cite{mcc04}.  Using the idea
-of generalized PQ tree, \cite{mcc04} proves that checking for
+only if the set system does not have COP.
+Section~\ref{sec:surveycertalgo} further described that using the idea
+of generalized \PQtree, \cite{mcc04} proves that checking for
 bipartiteness in the certain incomparability graph is sufficient to
 check for COP.  \cite{mcc04} invented a certificate to confirm when a
-binary matrix does not have COP.  \cite{mcc04} describes a graph
-called incompatibility graph of a set system $\cF$ which has vertices
-$(a,b), a \ne b$ for every $a, b \in U$, $U$ being the universe of the
-set system. There are edges $((a,b),(b,c))$ and $((b,a),(c,b))$ if
-there is a set $S \in \cF$ such that $a, c \in S$ and $b \notin S$. In
-other words the vertices of an edge in this graph represents two
-orderings that cannot occur in a consecutive ones ordering of $\cF$.
-\begin{theorem}[Theorem 6.1, \cite{mcc04}]
-  Let $\cF$ be an arbitrary set family on domain $V$. Then $\cF$ has
-  the consecutive ones property if and only if its incompatibility
-  graph is bipartite, and if it does not have the consecutive ones
-  property, the incompatibility graph has an odd cycle of length at
-  most $n+3$.
-\end{theorem}
-This theorem gives a certificate as to why a given matrix does not
-have COP.  Similarly, the approach of testing for an ICPIA in
-\cite{nsnrs09} also gives a different certificate- a prime submatrix
-that does not have an ICPIA.  Further, the above theorem can be used
-to check if a given matrix has COP in logspace by checking if its
-incompatibility graph is bipartite. \cite{rei84} showed that checking
-for bipartiteness can be done in logspace. Thus we conclude that
-consecutive ones testing can be done in logspace.
+binary matrix does not have COP.  Recall \cite{mcc04}'s
+incompatibility graph of a set system $\cF$ from
+Definition~\ref{def:incompatibility} -- it has vertices $(a,b), a \ne
+b$ for every $a, b \in U$, $U$ being the universe of the set
+system. There are edges $((a,b),(b,c))$ and $((b,a),(c,b))$ if there
+is a set $S \in \cF$ such that $a, c \in S$ and $b \notin S$. In other
+words the vertices of an edge in this graph represents two orderings
+that cannot occur in a consecutive ones ordering of $\cF$.  In the
+same section, we also discuss Theorem~\ref{th:mccbipartite} which
+describes the linear certificate for no \COP on the incompatibility
+graph.  This is restated below in Theorem~\ref{th:mccbipartiterecall}.
 
-\noindent
-More recently, \cite{kklv10} showed that interval graph isomorphism
-can be done in logspace. Their paper proves that a canon for interval
-graphs can be calculated in logspace using an interval hypergraph
-representation of the interval graph with each hyperedge being a set
-to which an interval shall be assigned by the canonization
+\begin{theoremsansproof}[{\cite[Th.~6.1]{mcc04}, \cite[Corrected by
+    Th.~2.6, Proof p. 44--47]{d08phd}}, Theorem~\ref{th:mccbipartite}] 
+  \label{th:mccbipartiterecall}
+  Let $\cF$ be a set family with universe $U$. Then $\cF$ has \COP
+  \iff its incompatibility graph is bipartite and if it does not have
+  the \COP, the incompatibility graph has an odd cycle of length at
+  most $n+3$.
+\end{theoremsansproof}
+ 
+Thus checking if a set system/hypergraph/binary matrix's
+incompatibility graph is bipartite is sufficient to conclude the
+existence of \COP. The following result makes this possible in
+logspace. \cite{rei84} showed that checking for bipartiteness can be
+done in logspace. Thus we conclude that consecutive ones testing can
+be done in logspace.
+
+
+We also observed logspace complexity of \COP using a more recent and
+independent result -- \cite{kklv10} showed that interval graph
+isomorphism can be done in logspace. Their paper proves that a canon
+for interval graphs can be calculated in logspace using an interval
+hypergraph representation of the interval graph with each hyperedge
+being a set to which an interval shall be assigned by the canonization
 algorithm. An overlap graph (subgraph of intersection graph, edges
 define only strict intersections and no containment) of the hyperedges
 of the hypergraph is created and canons are computed for each overlap
@@ -2486,46 +2632,43 @@ hyperedges of one is disjoint from all in the other, or all of them
 are contained in one hyperedge in the other. This is similar to the
 containment tree defined in \cite{nsnrs09} and in this paper. Finally
 the canon for the whole graph is created using logspace tree
-canonization algorithm from \cite{sl92}. The interval labelling done
-in this process of canonization is exactly the same as the problem of
+canonization algorithm from \cite{sl92}. The interval labeling done in
+this process of canonization is exactly the same as the problem of
 assigning feasible intervals to a set system, and thus the problem of
 finding a COP ordering in a binary matrix \cite{nsnrs09}.
 
-\begin{theorem}[Theorem 4.7, \cite{kklv10}]
+\begin{theorem}[{\cite[Th.~4.7]{kklv10}}]
   \label{th:canonlabel}
   Given an interval hypergraph $\cH$, a canonical interval labeling
-  $l_H$ for $H$ can be computed in FL.
+  $\cl$ for $\cH$ can be computed in {\sc FL}.
 \end{theorem}
 
+We know the equivalence of hypergraphs and set systems (see
+Definition~\ref{def:matrixsetsystem}). Thus interval labeling of
+hypergraphs obviously translates to finding \COP order of a binary
+matrix which leads to the following corollary.
 
-We present the following reduction to see that COP testing is indeed
-in logspace. Given a binary matrix $M$ of order $n \times m$, let $S_i
-= \{j \mid M[j,i]=1 \}$. Let $\cF = \{S_i \mid i \in [m] \}$ be this
-set system. Construct a hypergraph $\cH$ with its vertex set being
-$\{1, 2, \dots n\}$. The edge set of $\cH$ is isomorphic to
-$\cF$. Thus every edge in $\cH$ represents a set in the given set
-system $\cF$. Let this mapping be $\pi: E(\cH) \rightarrow \cF$. It is
-easy to see that if $M$ has COP, then $\cH$ is an interval
-hypergraph. From theorem \ref{th:canonlabel}, it is clear that the
-interval labeling $l_{\cH}: V(\cH) \rightarrow [n]$ can be calculated
-in logspace. Construct sets $I_i = \{ \l_{\cH}(x) \mid x \in E, E \in
-E(\cH), \pi(E) = S_i\}$, for all $i \in [m]$. Since $\cH$ is an
-interval hypergraph, $I_i$ is an interval for all $i \in [m]$, and is
-the interval assigned to $S_i$ if $M$ has COP.
-
-Now we have the following corollary.
+% We present the following reduction to see that COP testing is indeed
+% in logspace. Given a binary matrix $M$ of order $n \times m$, let $S_i
+% = \{j \mid M[j,i]=1 \}$. Let $\cF = \{S_i \mid i \in [m] \}$ be this
+% set system. Construct a hypergraph $\cH$ with its vertex set being
+% $\{1, 2, \dots n\}$. The edge set of $\cH$ is isomorphic to
+% $\cF$. Thus every edge in $\cH$ represents a set in the given set
+% system $\cF$. Let this mapping be $\pi: E(\cH) \rightarrow \cF$. It is
+% easy to see that if $M$ has COP, then $\cH$ is an interval
+% hypergraph. From theorem \ref{th:canonlabel}, it is clear that the
+% interval labeling $l_{\cH}: V(\cH) \rightarrow [n]$ can be calculated
+% in logspace. Construct sets $I_i = \{ \l_{\cH}(x) \mid x \in E, E \in
+% E(\cH), \pi(E) = S_i\}$, for all $i \in [m]$. Since $\cH$ is an
+% interval hypergraph, $I_i$ is an interval for all $i \in [m]$, and is
+% the interval assigned to $S_i$ if $M$ has COP.
 \begin{corollary}
   \label{cor:coplog}
   If a binary matrix $M$ has COP then the interval assignments to each
-  of its columns can be calculated in FL.
+  of its columns can be calculated in {\sc FL}.
 \end{corollary}
 
-\noindent
-Finally, we conclude by asking about the complexity of Tree Path
-Assignment restricted to other subclasses of trees.  In particular, is
-Tree Path Assignment in caterpillars easier than Tree Path assignment
-in general trees.
-
+Thus we again conclude that \COP testing is indeed in logspace.
 
 
 % \noindent
