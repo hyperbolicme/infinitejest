@@ -160,7 +160,7 @@ property desired in a structure/object are perhaps the following.
 \end{itemize}
 
 In this section and the rest of the chapter we see results that shaped the
-correponding areas respectively for \cop in binary matrices.
+corresponding areas respectively for \cop in binary matrices.
 
 \begin{enumerate}[a.]
 \singlespacing
@@ -234,11 +234,11 @@ recognition.
 
 \cite{at72} discovered certain forbidden structures for convex
 bipartite graphs\footnote{The terminology in \cite{at72} differs. It
-  uses the term {\em graphs with $V_1$-consecutive arragement} instead
+  uses the term {\em graphs with $V_1$-consecutive arrangement} instead
   of {\em convex bipartite graphs}.} and by definition of this graph
 class, this translates to a set of forbidden submatrices for matrices
 with \cop.  The following are the theorems from \cite{at72} that
-acheived this characterization.
+achieved this characterization.
 
 
 Theorem~\ref{th:tuckeratfree} states that convex bipartite graphs
@@ -247,7 +247,7 @@ Definition~\ref{def:asteroidal}) contained in the corresponding vertex
 partition. This partition of the bipartite graph corresponds to
 columns (rows) if its half adjacency matrix has \COP columns (rows).
 Theorem~\ref{th:tuckerforbidden} lists the structures in a bipartite
-graph that force one of its vertex partitions to have asteriodal
+graph that force one of its vertex partitions to have asteroidal
 triples -- in other words, it identifies the subgraphs that prevent
 the graph from being convex bipartite.
 
@@ -260,7 +260,7 @@ the graph from being convex bipartite.
   An {\em asteroidal triple} in a graph $G$ is a tuple of vertices
   $\{v_1,v_2,v_3\} \subset V$ such that between every pair of vertices
   from this tuple there exists a path that avoids the closed
-  neighbourbood of the third vertex.
+  neighbourhood of the third vertex.
 \end{definition}
 
 \begin{theoremsansproof}
@@ -436,7 +436,7 @@ for set systems (As seen in Section~\ref{sec:courseschedule}).
   $w_{i}w_{i+1}\ldots w_{i+k-1}$ on $\sigma$ for some positive integer
   $i \le n+1-k$ where $k = |S|$.
   \par\noindent%
-  The set $\valid{U,\cF}$ respresents all \COP orders of $\cF$ in $U$.
+  The set $\valid{U,\cF}$ represents all \COP orders of $\cF$ in $U$.
   \dstop
 \end{definition}
 
@@ -478,7 +478,7 @@ simpler.
     orthogonal sets to $\cF$ is denoted by $\cF^{\bot}$.
 
   \item $\cF$ is called {\em complete}\footnote{\cite{mcc04} calls
-      this a {\em weakly partative family}. \label{mcc2}} if the
+      this a {\em weakly partitive family}. \label{mcc2}} if the
     following hold true for every pair of non-orthogonal (overlapping)
     sets $A, B$ in $\cF$.
 
@@ -504,7 +504,7 @@ simpler.
       $\cW(\cF)$. \label{mcc3}}
 
   \item \label{def::slashop} The binary operator $/$ is defined as
-    follows. Let $A, B$ be two sets from set sysetm $\cF$.
+    follows. Let $A, B$ be two sets from set system $\cF$.
     \begin{align*}
       A/B &= A \setminus B \cup \{b\}\\
       \cF/B &= \{ S/B \mid S \in \cF, S \nsubseteq B \}
@@ -638,7 +638,7 @@ the following statements hold.
 \begin{enumerate}
 \item \label{th::it1} $\overline{\cF} = \cT(U)$ 
 \item \label{th::it2}$\overline{\cF} = consec(\alpha)$ for
-  some permutation $\alpha$ on $U$ ($consect(\alpha)$ is a linear order)
+  some permutation $\alpha$ on $U$ ($consec(\alpha)$ is a linear order)
 \item \label{th::it3}$\overline{\cF} = \power{U}$ 
 \end{enumerate}
 \end{theoremsansproof}
@@ -650,7 +650,7 @@ $\alpha$. Finally, case (\ref{th::it3}) is the situation where no permutation
 of $U$ gives \COP. All elements of $U$ are in this case made children
 in an $R$ node.
 
-\subsubsection{Comparision with generalized \PQtree}
+\subsubsection{Comparison with generalized \PQtree}
 
 Stepping back a little, the reader may have noticed the cross
 references between \PQRtree and other data structures in footnotes
@@ -666,12 +666,12 @@ defined in \cite{mm96} as a data structure to represent any set system
 $\cF$ with additional information in their $R$-nodes if $\cF$ has no
 \COP. All three of these data structures are proposed as
 generalizations of \cite{bl76}'s \PQtree and hence produce the \PQtree
-if $\cF$ has \COP. As a whole, all these three data strutures are
+if $\cF$ has \COP. As a whole, all these three data structures are
 largely identical with their differences being notional. We discussed
 the basic theory that they all hold and predominantly used the
 terminology from \cite{mm96}. To the best of our knowledge this
 comparison study has not been made earlier in the literature.  We
-observe the three data strutures of \PQRtree, \gPQtree and generalized
+observe the three data structures of \PQRtree, \gPQtree and generalized
 \PQtree to be equivalent. The terminologies of the theory of all these
 data structures is summarised in Table~\ref{tab:pqrcomparison}.
 
@@ -726,7 +726,7 @@ is a set theoretic characterization of \COP.
     
       &
     Complete collection &
-    Weakly partative family
+    Weakly partitive family
     \\\hline
     
     &
@@ -907,14 +907,14 @@ does not use any variants of \PQtrees.
 \end{theoremsansproof}
 
 The necessity condition of Theorem~\ref{th:icpia1} is fairly
-obvious. It turns out that it is sufficient too.  This is demostrated
+obvious. It turns out that it is sufficient too.  This is demonstrated
 by two algorithms which work as follows. The first one iterates over
 the assignment $\Pi$ %set system $\cF$
 and changes it in each iteration till the altered
 assignment %set system
 has no more overlapping intervals (intervals are the second
   element in each ordered pair of $\Pi$. Def.~\ref{def:icpia}) %sets
-\cite[Alg.~1]{nsnrs09}. This is acheived by replacing two overlapping
+\cite[Alg.~1]{nsnrs09}. This is achieved by replacing two overlapping
 assignment pairs $(A_i, B_i)$ and $(A_j, B_j)$ with the partitions of
 $(A_i \cup A_j,B_i \cup B_j)$ induced by their overlaps -- $(A_i
 \setminus A_j, B_i \setminus B_j)$, $(A_i \cap A_j, B_i \cap B_j)$ and
@@ -1117,11 +1117,11 @@ The procedure used to prove Theorem~\ref{th:forbiddenalg} is as
 follows. 
 \begin{enumerate}
 \item Run the algorithm mentioned in
-  Propostition~\ref{prop:tuckerdomapprox} to obtain a submatrix $A$
+  Proposition~\ref{prop:tuckerdomapprox} to obtain a submatrix $A$
   which is an approximation of the smallest forbidden submatrix. (If
   the actual solution is $M_{I_k}$ or $M_{II_k}$ this will be an exact
   solution.)
-\item Run the algorithm from Propostition~\ref{cor:miiitime} to find
+\item Run the algorithm from Proposition~\ref{cor:miiitime} to find
   an induced $M_{III_k}$ and let this be $B$.
 \item Run the algorithm from Corollary~\ref{cor:mivmvpolytime} twice
   -- once each for finding $M_{IV}$ and finding $M_{V}$. Let the
@@ -1139,7 +1139,7 @@ In the next section we see yet another forbidden substructure for
 
 When a \COP test algorithm reports negative, it is hard to verify
 this. While \cite{at72} gives forbidden substructures for \COP, there
-are no efficient algorithms to find these strutures in a matrix. In
+are no efficient algorithms to find these structures in a matrix. In
 fact, \cite{v82} shows that even finding a forbidden submatrix with at
 least $k$ rows in an input matrix is NP-complete. This was proven by
 polynomially reducing the longest path problem for graphs to this
@@ -1147,18 +1147,19 @@ problem.
 
 \cite{mcc04} describes another characterization for matrices without
 \COP which is efficiently computable. This is done by way of an {\em
-  incompatibility graph} of a set system (since \COP in
-  matrices and set systems are equivalent problems as seen in
-  Section~\ref{sec:surveycertalgo} we will use the term set system in
-  this section, in line with \cite{mcc04}'s convention). The
-construction of this graph is based on the following observation.
+  incompatibility graph} of a set system (since \COP in matrices and
+set systems are equivalent problems as seen in
+Section~\ref{sec:surveycertalgo} we will use the term set system in
+this section, in line with \cite{mcc04}'s convention). The
+construction of this graph is based on the following observation. A
+similar observation was made in \cite{co98} in relation to the
+betweenness problem in computational biology.
 
 \begin{observation} 
   Consider elements $a, b, c \in U$ and a set system $\cF$ with
   universe $U$. If there is at least one set $S \in \cF$ \stt $a, c
   \in S$ but $b \notin S$, then it is impossible to have a \COP order
-  that will place $b$ in between $a$ and $c$. \tnote[important]{also cite the
-    inbetweenness problem}
+  that will place $b$ in between $a$ and $c$. 
 \end{observation}
 
 For the sake of argument, suppose there exists such a \COP
@@ -1170,7 +1171,7 @@ means $(a,b)$ and $(b,c)$ are not compatible in any \COP order. So are
 $(c,b)$ and $(b,a)$.  Thus a binary relation {\em is incompatible
   with} on $U \times U \setminus \{(a,a) \mid a \in U\}$ can be
 defined based on the membership of elements of $U$ in the sets in
-$\cF$.  \cite{mcc04} creates an incompatiblity graph with vertices
+$\cF$.  \cite{mcc04} creates an incompatibility graph with vertices
 denoting ordered pairs and edges denoting the incompatibility
 relation.
 
