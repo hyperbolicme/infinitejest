@@ -2433,7 +2433,7 @@ Lemma \ref{lem:subicppa} and Lemma \ref{lem:rooticppa} point out two
 algorithmic challenges in finding an ICPPL for a given hypergraph
 $\cF$ on a target tree $T$.  
 \begin{enumerate}
-\item Finding $X$ and its partition into in-trees
+\item \label{it:challenge1} Finding $X$ and its partition into in-trees
   $\{\bP_1,\ldots,\bP_r\}$, can be done in polynomial time.  On the
   other hand, as per Lemma~\ref{lem:subicppa} we need to partition $T$
   into vertex disjoint subtrees $\{T_1, \ldots, T_r\}$ such that for
@@ -2444,10 +2444,62 @@ $\cF$ on a target tree $T$.
   challenging step, and it must be remarked that this step is easy
   when $T$ itself is a path, as each individual $T_i$ would be
   sub-paths.
-\item The second algorithmic challenge is identified by
-  Lemma~\ref{lem:rooticppa} which is to compute an ICPPL from a given
-  tree to the matrix associated with $mub(\bP_i)$.
+\item \label{it:challenge2} The second algorithmic challenge is identified by
+  Lemma~\ref{lem:rooticppa} which is to compute an ICPPL from the
+  chosen subtree $T_i$
+  to the matrix associated with $mub(\bP_i)$.
 \end{enumerate}
+
+
+Figure~\ref{fig:tplpotheory-matrix} and
+Figure~\ref{fig:tplpotheory-graph} illustrate the containment
+partitions of a binary matrix and the claim of
+Lemma~\ref{lem:rooticppa}. In Figure~\ref{fig:tplpotheory-matrix}, the
+feasibility bijection is explicitly shown by labeling the rows (which
+represents elements in hypergraph's universe) with the vertices of the
+target tree $T$, $v_1, \ldots, v_{12}$.  $M$ decomposed into prime
+submatrices $M_1, \ldots, M_6$ which is collectively represented by
+$\bP$. It can be verified that they correspond to the overlap
+components in $\bO(\cF)$. The containment partitions of $\bP$ are
+$\bP_1, \bP_2$ as shown. Note that the empty cells of the matrix
+represent 0s -- they are left empty to make the containment partitions
+more obvious.  Figure~\ref{fig:tplpotheory-graph} shows the target
+tree of this TPL. The rectangles depict the tree paths allocated to
+the columns in the $mub$ of $M$'s prime matrices, namely $M_1$ and
+$M_4$. The rest of the columns are allocated intervals illustrating
+Lemma~\ref{lem:rooticppa}.  
+
+Note that in this example the matrix has been explicitly labeled with
+the vertices of the tree which indicates the solution but arriving at
+this solution poses the above mentioned challenges.
+Challenge~\ref{it:challenge1} in this example can be seen as
+follows. Figure~\ref{fig:tplpotheory-graph} shows that $\bP_1$ has
+been allocated the top subtree and $\bP_2$ has been allocated the
+bottom subtree. Computationally this is not an easy decision. There is
+no obvious indication (as far as we know) that the tree must be
+decomposed at edge $(v_3, v_{11})$. If this was given, then one can
+make the decision based on the difference between the subtrees, namely
+sizes of the containment parts and the subtrees and conclude that
+$\bP_1$ must be allocated the subtree $\{v_1, \ldots, v_7\}$ and
+$\bP_2$ to the rest. What if the subtrees were of the same sizes, say
+vertex $v_{14}$ in $T$, the fourteenth row in $M$ and column $S_9$ in
+$M$ were not present? One has to try to solve
+challenge~\ref{it:challenge2} given above to conclude that the bottom
+(top) subtree indeed does not give an ICPPL to $\bP_1$ ($\bP_2$) and
+thus $\bP_1$ ($\bP_2$) but be allocated the top (bottom) subtree.
+Solving challenge~\ref{it:challenge2} is not easy (as far as we know)
+either. By brute force, one can try all possible path labeling and
+check for ICPPL. If all of them fail, one must backtrack to
+challenge~\ref{it:challenge1} and try another subtree for the
+containment part $\bP_i$.
+
+
+
+Algorithm~\ref{al:icppa-main} consolidates all that we described in
+this section and gives the procedure to solve \CFTPL. It may be noted
+that all operations other than in line~\ref{ln:findtreepartition} and
+line~\ref{ln:findrooticppl} are known to be polynomial time solvable.
+
 
 \begin{figure}[h]
   \centering
@@ -2460,7 +2512,7 @@ $\cF$ on a target tree $T$.
 
   \caption[\figtabsize Partial order on prime submatrices -
   containment partition]{\figtabsize
-    Partial order on prime submatrices. The table on top illustrates
+    Partial order on prime submatrices. The table illustrates
     the structural properties of prime matrices and partial order
     $\primeless$. A hypergraph $\cF$ with FTPL has hyperedges $S_1, \ldots,
     S_{12}$ which are represented by the binary matrix $M$. Empty
@@ -2489,25 +2541,8 @@ $\cF$ on a target tree $T$.
   \label{fig:tplpotheory-graph}
 \end{figure}
 
-Figure~\ref{fig:tplpotheory-matrix} and
-Figure~\ref{fig:tplpotheory-graph} illustrate the containment
-partitions of a binary matrix and the claim of
-Theorem~\ref{lem:rooticppa}. In Figure~\ref{fig:tplpotheory-matrix},
-the feasibility bijection is explicitly shown by labeling the rows
-(which represents elements in hypergraph's universe) with the vertices
-of the target tree $T$, $v_1, \ldots, v_{12}$.  $M$ decomposed into
-prime submatrices $M_1, \ldots, M_6$ which is collectively represented
-by $\cP$. It can be verified that they correspond to the overlap
-components in $\bO(\cF)$. The containment partitions of $\cP$ are
-$\bP_1, \bP_2$ as shown. Note that the empty cells of the matrix
-represent 0s -- they are left empty to make the containment partitions
-more obvious.  Figure~\ref{fig:tplpotheory-graph} shows the target
-tree of this TPL. The rectangles depict the sets allocated to the
-columns in the $mub$ of $M$'s prime matrices, namely $M_1$ and
-$M_4$. The rest of the columns are shown as intervals illustrating
-Theorem~\ref{lem:rooticppa}.
 
-\begin{algorithm}[h]
+\begin{algorithm}[htb]
   \caption{Algorithm to find an ICPPL for a matrix $M$ on tree $T$:
     $main\_ICPPL(M, T$)}
   \label{al:icppa-main}
@@ -2535,11 +2570,6 @@ Theorem~\ref{lem:rooticppa}.
     \ENDFOR
   \end{algorithmic}
 \end{algorithm}
-
-Algorithm~\ref{al:icppa-main} consolidates all that we described above
-and gives the procedure to solve \CFTPL. It may be noted that all operations other than in
-line~\ref{ln:findtreepartition} and line~\ref{ln:findrooticppl} are
-known to be polynomial time solvable.
 
 \clearpage % to flush all floats
 

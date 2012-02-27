@@ -23,7 +23,7 @@
 \contentsline {subsection}{\numberline {2.2.1}Tucker's forbidden submatrices for COP\xspace }{23}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Booth and Lueker's $PQ$-tree -- a linear COT algorithm}{25}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}$PQR$-tree\xspace \ -- COT for set systems}{27}{subsection.2.2.3}
-\contentsline {subsubsection}{Comparision with generalized $PQ$-tree\xspace }{31}{section*.4}
+\contentsline {subsubsection}{Comparison with generalized $PQ$-tree\xspace }{31}{section*.4}
 \contentsline {subsection}{\numberline {2.2.4}$PC$-tree\xspace -- a generalization of $PQ$-tree\xspace }{32}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}ICPIA - a set cardinality based COP\xspace test}{33}{subsection.2.2.5}
 \contentsline {section}{\numberline {2.3}Matrices without COP\xspace }{35}{section.2.3}
@@ -37,7 +37,7 @@
 \contentsline {subsection}{\numberline {3.2.3}Overlap Graphs and Marginal Hyperedges}{47}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Miscellaneous}{48}{subsection.3.2.4}
 \contentsline {section}{\numberline {3.3}Characterization of FTPL}{48}{section.3.3}
-\contentsline {section}{\numberline {3.4}Solution to study group accomodation problem\xspace }{56}{section.3.4}
+\contentsline {section}{\numberline {3.4}Solution to study group accommodation problem\xspace }{56}{section.3.4}
 \contentsline {section}{\numberline {3.5}Special target trees}{59}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Target tree is a Path}{60}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Target tree is a $k$-subdivided Star}{61}{subsection.3.5.2}

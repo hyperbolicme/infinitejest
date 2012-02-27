@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  24 FEB 2012 15:19
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.1.10)  26 FEB 2012 12:09
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -2332,17 +2332,13 @@ OT1/cmr/m/n/12 , we will main-tain a 2-tuple of non-negative num-bers $[]$.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [67]
-[68] [69] [70]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 1708) in paragraph at lines 2482--2482
+[68] [69] [70] [71]
+Underfull \hbox (badness 1708) in paragraph at lines 2534--2534
  [][][][] 
  []
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 2482--2482
+Underfull \hbox (badness 3919) in paragraph at lines 2534--2534
  [][][][] 
  []
 
@@ -2350,7 +2346,7 @@ Underfull \hbox (badness 3919) in paragraph at lines 2482--2482
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 4378) in paragraph at lines 2512--2512
+Underfull \hbox (badness 4378) in paragraph at lines 2547--2547
 [] \OT1/cmr/bx/n/12 Al-go-rithm 4 \OT1/cmr/m/n/12 Al-go-rithm to find an ICPPL 
 for a ma-trix $\OML/cmm/m/it/12 M$ \OT1/cmr/m/n/12 on tree $\OML/cmm/m/it/12 T$
 \OT1/cmr/m/n/12 :
@@ -2360,149 +2356,145 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2515     \STATE
+l.2550     \STATE
                   Identify the prime submatrices. This is done bypdfTeX warning
  (ext4): destination with the same identifier (name{ALC@line.1}) has been alrea
 dy used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2515     \STATE
+l.2550     \STATE
                   Identify the prime submatrices. This is done bypdfTeX warning
  (ext4): destination with the same identifier (name{ALC@rem.1}) has been alread
 y used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2518     \STATE
+l.2553     \STATE
                   Construct the partial order $\preccurlyeq$ on the set ofpdfTe
 X warning (ext4): destination with the same identifier (name{ALC@line.2}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2518     \STATE
+l.2553     \STATE
                   Construct the partial order $\preccurlyeq$ on the set ofpdfTe
 X warning (ext4): destination with the same identifier (name{ALC@rem.1}) has be
 en already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2520     \STATE
+l.2555     \STATE
                   Construct the partition $\bP_1, \ldots, \bP_r$ of the primepd
 fTeX warning (ext4): destination with the same identifier (name{ALC@line.3}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2520     \STATE
+l.2555     \STATE
                   Construct the partition $\bP_1, \ldots, \bP_r$ of the primepd
 fTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2522     \STATE
+l.2557     \STATE
                   For each $1 \leq i \leq r$, check if all matrices exceptpdfTe
 X warning (ext4): destination with the same identifier (name{ALC@line.4}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2522     \STATE
+l.2557     \STATE
                   For each $1 \leq i \leq r$, check if all matrices exceptpdfTe
 X warning (ext4): destination with the same identifier (name{ALC@rem.1}) has be
 en already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2526     \STATE
+l.2561     \STATE
                   \label{ln:findtreepartition} Find a partition of $T_1, \ld...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.5}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2526     \STATE
+l.2561     \STATE
                   \label{ln:findtreepartition} Find a partition of $T_1, \ld...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2530     \FOR {each $1 \leq i \leq r$}
+l.2565     \FOR {each $1 \leq i \leq r$}
                                         %pdfTeX warning (ext4): destination wit
 h the same identifier (name{ALC@line.6}) has been already used, duplicate ignor
 ed
 <to be read again> 
                    \relax 
-l.2530     \FOR {each $1 \leq i \leq r$}
+l.2565     \FOR {each $1 \leq i \leq r$}
                                         %pdfTeX warning (ext4): destination wit
 h the same identifier (name{ALC@rem.1}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.2531     \STATE
+l.2566     \STATE
                   \label{ln:findrooticppl} Find the ICPPL for $mub(\bP_i)$ o...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@line.7}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2531     \STATE
+l.2566     \STATE
                   \label{ln:findrooticppl} Find the ICPPL for $mub(\bP_i)$ o...
 pdfTeX warning (ext4): destination with the same identifier (name{ALC@rem.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2532 ...M_x$ other than $mub(\bP_i)$ in $\bP_i$}
+l.2567 ...M_x$ other than $mub(\bP_i)$ in $\bP_i$}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{ALC@line.8}) has been already used, dupli
 cate ignored
 <to be read again> 
                    \relax 
-l.2532 ...M_x$ other than $mub(\bP_i)$ in $\bP_i$}
+l.2567 ...M_x$ other than $mub(\bP_i)$ in $\bP_i$}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{ALC@rem.1}) has been already used, duplic
 ate ignored
 <to be read again> 
                    \relax 
-l.2533     \STATE
+l.2568     \STATE
                   Find ICPIA for $M_x$ %pdfTeX warning (ext4): destination with
  the same identifier (name{ALC@line.9}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.2533     \STATE
+l.2568     \STATE
                   Find ICPIA for $M_x$ %pdfTeX warning (ext4): destination with
  the same identifier (name{ALC@rem.1}) has been already used, duplicate ignored
 
 <to be read again> 
                    \relax 
-l.2534     \ENDFOR
+l.2569     \ENDFOR
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@line.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2534     \ENDFOR
+l.2569     \ENDFOR
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@rem.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2535     \ENDFOR
+l.2570     \ENDFOR
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALC@line.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2535     \ENDFOR
-                  
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[71] [72pdfTeX warning (ext4): destination with the same identifier (name{figur
-e.3.10}) has been already used, duplicate ignored
+l.2570     \ENDFOR
+                   [72pdfTeX warning (ext4): destination with the same identifi
+er (name{figure.3.10}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.2544 \clearpage
-                  % to flush all floatspdfTeX warning (ext4): destination with 
-the same identifier (name{figure.3.11}) has been already used, duplicate ignore
-d
+l.2574 \clearpage
+                  % to flush all floats] [73pdfTeX warning (ext4): destination 
+with the same identifier (name{figure.3.11}) has been already used, duplicate i
+gnored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.2544 \clearpage
-                  % to flush all floats] [73]
-Overfull \hbox (21.21228pt too wide) in paragraph at lines 2564--2566
+l.2574 \clearpage
+                  % to flush all floats]
+Overfull \hbox (21.21228pt too wide) in paragraph at lines 2594--2596
 []\OT1/cmr/m/n/12 Nonetheless, the prob-lems \OT1/cmr/m/sc/12 Com-pute In-ter-v
 al La-bel-ing \OT1/cmr/m/n/12 and \OT1/cmr/m/sc/12 Com-pute $\OML/cmm/m/it/12 k
 $\OT1/cmr/m/sc/12 -subdivided
@@ -2555,10 +2547,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 21206 strings out of 94073
- 374309 string characters out of 1162984
- 507296 words of memory out of 1500000
- 23344 multiletter control sequences out of 10000+50000
+ 21208 strings out of 94073
+ 374339 string characters out of 1162984
+ 507392 words of memory out of 1500000
+ 23346 multiletter control sequences out of 10000+50000
  82566 words of font info for 178 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  63i,31n,74p,789b,1304s stack positions out of 5000i,500n,6000p,200000b,5000s
@@ -2602,9 +2594,9 @@ live/2007/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/200
 7/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2007/texmf-di
 st/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/t
 ype1/urw/zapfchan/uzcmi8a.pfb>
-Output written on thesis.pdf (105 pages, 1247672 bytes).
+Output written on thesis.pdf (105 pages, 1249550 bytes).
 PDF statistics:
- 2049 PDF objects out of 2073 (max. 8388607)
+ 2054 PDF objects out of 2073 (max. 8388607)
  493 named destinations out of 1000 (max. 131072)
  435 words of extra memory for PDF output out of 10000 (max. 10000000)
 
