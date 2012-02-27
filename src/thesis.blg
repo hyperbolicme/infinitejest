@@ -2,7 +2,6 @@ This is BibTeX, Version 0.99c (Web2C 7.5.6)
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: 001certificate.aux
 A level-1 auxiliary file: 002ack.aux
-A level-1 auxiliary file: 0031ded.aux
 A level-1 auxiliary file: 0032quote.aux
 A level-1 auxiliary file: 003abstract.aux
 A level-1 auxiliary file: 004abbrv.aux
@@ -10,55 +9,50 @@ A level-1 auxiliary file: 010chap1.aux
 A level-1 auxiliary file: 020chap2.aux
 A level-1 auxiliary file: 030chap3.aux
 A level-1 auxiliary file: 040chap4.aux
-A level-1 auxiliary file: 050appa.aux
-A level-1 auxiliary file: _tempscrap.aux
 A level-1 auxiliary file: biblio.aux
 The style file: alpha.bst
 Database file #1: ../lib/cop-variants__thesis.bib
-Warning--I didn't find a database entry for "Ben59"
-Warning--I didn't find a database entry for "Haj57"
-Warning--I didn't find a database entry for "mm96-ref11"
 Warning--there's a number but no volume in mw86
 Warning--empty booktitle in tz04
-You've used 90 entries,
+You've used 91 entries,
             2543 wiz_defined-function locations,
-            1093 strings with 16049 characters,
-and the built_in function-call counts, 34840 in all, are:
-= -- 3580
-> -- 1491
+            1088 strings with 16075 characters,
+and the built_in function-call counts, 35249 in all, are:
+= -- 3624
+> -- 1510
 < -- 59
-+ -- 513
-- -- 480
-* -- 2456
-:= -- 5704
-add.period$ -- 281
-call.type$ -- 90
-change.case$ -- 528
-chr.to.int$ -- 88
-cite$ -- 92
-duplicate$ -- 1422
-empty$ -- 2543
-format.name$ -- 607
-if$ -- 7090
++ -- 519
+- -- 486
+* -- 2486
+:= -- 5772
+add.period$ -- 284
+call.type$ -- 91
+change.case$ -- 534
+chr.to.int$ -- 89
+cite$ -- 93
+duplicate$ -- 1436
+empty$ -- 2572
+format.name$ -- 614
+if$ -- 7172
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 89
-newline$ -- 457
-num.names$ -- 274
-pop$ -- 436
+missing$ -- 90
+newline$ -- 462
+num.names$ -- 277
+pop$ -- 439
 preamble$ -- 1
-purify$ -- 626
+purify$ -- 633
 quote$ -- 0
-skip$ -- 1202
+skip$ -- 1215
 stack$ -- 0
-substring$ -- 2093
-swap$ -- 218
+substring$ -- 2125
+swap$ -- 219
 text.length$ -- 59
 text.prefix$ -- 40
 top$ -- 0
-type$ -- 688
+type$ -- 696
 warning$ -- 2
-while$ -- 353
-width$ -- 95
-write$ -- 1180
-(There were 5 warnings)
+while$ -- 358
+width$ -- 96
+write$ -- 1193
+(There were 2 warnings)

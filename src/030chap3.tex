@@ -24,8 +24,8 @@ find the tree path labeling of a given set system from a given
 \kstar. Section~\ref{sec:norestraint} discusses the plain vanilla
 version where the target tree has no restrictions and the algorithm to
 find a feasible TPL, if any, in this case.  Finally, in Section
-\ref{sec:tplcomplexity} we discuss the complexity of the algorithms
-seen thus far and we conclude by showing that \cop testing, which is a
+\ref{sec:tplcomplexity} we discuss the complexity of \TPL
+and we conclude by showing that \cop testing, which is a
 special case of \TPL, is in \logspace.
 
 \section[Summary of problems]{Summary of Proposed Problems}
@@ -47,7 +47,7 @@ form, one can see that this is indeed the problem of finding interval
 assignments to the given set system with a single permutation of the
 universe (set of row or column indices for COP of columns or rows,
 respectively) which permutes each set to an interval. The result in
-\cite{nsnrs09} (see Theorems~\ref{th:icpia2} and \ref{th:icpia1})
+\cite{nsnrs09} (see Theorems~\ref{th:icpia1} and \ref{th:icpia2})
 characterizes interval assignments to the sets which can be obtained
 from a single permutation of the universe. The cardinality of the
 interval assigned to it must be same as the cardinality of the set,
@@ -97,9 +97,9 @@ problem, we were unable to discover an efficient algorithm for
 it. However, we consider two special cases of the same on special
 target trees -- namely, \CFTPLINT and \CFTPLKTREE on intervals and
 \kstars, respectively.  Section~\ref{sec:spltargettree} discusses
-these problems and their polynomial time solutions.  \CFTPLINT is a
-demonstrated to be the known problem of \COP testing. The polynomial
-time solution to \CFTPLKTREE is a new result by us.
+these problems and their polynomial time solutions.  \CFTPLINT is the
+known problem of \COP testing. The polynomial time solution to
+\CFTPLKTREE is a new result by us.
 
 \begin{problemdef}{\CFTPLINT}{ A hypergraph $\cF$ with vertex set $U$
     and a tree $T$ with maximum degree 2.}
@@ -121,9 +121,9 @@ time solution to \CFTPLKTREE is a new result by us.
 % \CFTPLINT is nothing but the consecutive-ones property testing
 % problem.
 
-An algorithm for \CFTPL on general trees which is less efficient than
-polynomial time is presented in
-Section~\ref{sec:norestraint}. 
+An algorithm for \CFTPL on arbitrary trees is presented in
+Section~\ref{sec:norestraint} which would run in polynomial time if
+two subproblems we identify are polynomial time solvable.
 
 \section[Preliminaries]{Preliminaries to new results}
 \label{ch:prelims}

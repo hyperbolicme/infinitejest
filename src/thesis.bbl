@@ -228,6 +228,11 @@ M.~R. Garey and D.~S. Johnson.
 \newblock {\em Computers and Intractability}.
 \newblock Freeman, San Francisco, 1979.
 
+\bibitem[GM03]{gm03}
+Marisa Gutierrez and Jo{\~a}o Meidanis.
+\newblock Recognizing clique graphs of directed edge path graphs.
+\newblock {\em Discrete Applied Mathematics}, 126:297--304, 2003.
+
 \bibitem[Gol04]{mcg04}
 Martin~Charles Golumbic.
 \newblock {\em Algorithmic graph theory and perfect graphs}, volume~57 of {\em
@@ -465,7 +470,7 @@ R.~Uehara.
   2008.
 
 \bibitem[Vel82]{v82}
-M.~Veldhorst.
+Marinus Veldhorst.
 \newblock An analysis of sparse matrix storage schemes.
 \newblock In {\em Mathematical Centre Tract (Vol. 150)}, Mathematical Centre,
   Amsterdam, the Netherlands, 1982.

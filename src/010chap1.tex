@@ -334,22 +334,22 @@ also appear consecutively.
 
   An element $b$ \textbf{covers} $a$ provided that there exists no
   third element $x \in X$ \stt $a \posetr x \posetr b$.  A directed
-  (or undirected, but with direction implied by horizontal positioning
+  (or undirected, but with direction implied by vertical positioning
   of nodes) graph that represents $\posetr$ in terms of its covering
   relation is called the \textbf{Hasse diagram} of the poset.
 \end{definition}
 
 \begin{definition}
-  \label{def:poset}    
-  Let $X$ be a partially ordered set with $\preccurlyeq$ being the
+  \label{def:poset} 
+  Let $X$ be a partially ordered set with $\posetr$ being the
   partial order on $X$.
 
   \begin{enumerate}
   \hangindent \defindent
 %  \item \textbf{hasse diagram}
-  \item An element $X_m \in X$ is a
-    \textbf{maximal upper bound} of $X$ if $\nexists X_q \in X$ such
-    that $X_m \preccurlyeq X_q$.  A maximal upper bound on $X$ is
+  \item An element $x_m \in X$ is a
+    \textbf{maximal upper bound} of $X$ if $\nexists a \in X$ such
+    that $x_m \posetr a$.  A maximal upper bound on $X$ is
     denoted by $mub(X)$.
 
   \item A set of sets form a \textbf{single
@@ -402,26 +402,37 @@ also appear consecutively.
   Let $G$ be a graph.
   \begin{enumerate}
   \hangindent \defindent
-  \item $G$ is an \textbf{interval graph} if there a set of intervals
-    $\cI$ \stt $G$ is isomorphic to the intersection graph of
-    $\cI$. \[G \cong \bI(\cI)\]
+\item $G$ is an \textbf{interval graph} if there exists a set of
+  intervals $\cI$ \stt $G$ is isomorphic to the intersection graph of
+  $\cI$. \[G \cong \bI(\cI)\]
   \item $G$ is a \textbf{path graph} if there exists a (undirected
-    unrooted) tree $T$ and a set of paths from $T$, $\cP$ \stt $G$ is
+    unrooted) tree $T$ and a set of paths $\cP$ from $T$ \stt $G$ is
     isomorphic to the intersection graph of $\cP$. \[G \cong
     \bI(\cP)\] Path graphs are also known as \uvgraphs (Undirected
     tree where paths intersect in a Vertex) \cite{mw86}.
   \item $G$ is a \textbf{chordal graph} if it has no induced cycle of
-    length greater than 3. Moreover, a \textbf{chordal graph} is
-    characterized as an intersection graph of subtrees of a tree.
+    length greater than 3. Moreover, a chordal graph is characterized
+    as an intersection graph of subtrees of a tree.
   \end{enumerate}
 \end{definition}
 
-The set of interval graphs is a subset of set of path graphs which is
-a subset of set of chordal graphs. In fact, there is another class
-between chordal graphs and path graphs called RDV-graphs (Rooted
-Directed tree where paths intersect in a Vertex)  \cite{mw86} which is
+The set of interval graphs is a subset of the set of path graphs which
+is a subset of the set of chordal graphs. In fact, there is another
+class between chordal graphs and path graphs called RDV-graphs (Rooted
+Directed tree where paths intersect in a Vertex) \cite{mw86} which is
 defined exactly as a path graph except that the trees are rooted and
-directed. 
+directed. There are other variants of path graphs studied in the
+literature with unrooted directed trees or where intersection of paths
+are in edges rather than vertices (DV, UE, DE, RDE) \cite{gm03}.
+% Recognizing clique graphs of directed edge path 
+% graphs
+% UV DuallyChordal Swarcter and Bornstein [10] 
+% DV DuallyDV Prisner and Swarcter [8] 
+% RDV DuallyRDV Prisner and Swarcter [8] 
+% UE 
+% DE DuallyDE This paper 
+% RDE = RDV DuallyRDV Prisner and Swarcter [8] 
+
 
 \section[Brief Survey]{Consecutive-ones Property - a Brief Survey}
 \label{sec:background}
@@ -508,7 +519,7 @@ prevent a matrix from having COP and most, if not all, results that
 came later were based on this discovery which connected COP in binary
 matrices to convex bipartite graphs. In fact, the forbidden
 submatrices came as a corollary to the discovery that convex bipartite
-graphs are AT-free on at least one of the partitions in
+graphs are AT-free on at least one of the vertex partitions in
 \cite{at72}. The first linear time algorithm for COP testing (COT) was
 invented by \cite{bl76} using a data structure called \PQtrees.  Since
 then several COT algorithms have been invented -- some of which
@@ -517,16 +528,16 @@ set theory and ICPIA \cite{wlh02,nsnrs09}, parallel COT
 algorithms\cite{as95,bs03,ly91} and certifying algorithms\cite{mcc04}.
 
 The construction of \PQtrees in \cite{bl76} draws on the close
-relationship of matrices with \COP to interval graphs. A PQ tree of a
+relationship of matrices with \COP to interval graphs. A \PQtree of a
 matrix is one that stores all row (column) permutations of the matrix
 that give the COP orders (there could be multiple orders of rows or
 columns) of the matrix. This is constructed using an elaborate linear
-time procedure and is also a test for planarity.  PQR trees is a
-generalized data structure based on PQ trees \cite{mm96,mpt98}.
-\cite{tm05} describes an improved algorithm to build PQR
-trees. \cite{wlh02} describes the simpler algorithm for COT. Hsu also
-invented PC trees \cite{wlh01} which is claimed to be much easier to
-implement. \cite{nsnrs09} describes a characterization of
+time procedure and is also a test for planarity.  \PQRtree is a
+generalized data structure based on \PQtrees \cite{mm96,mpt98}.
+\cite{tm05} describes an improved algorithm to build
+\PQRtrees. \cite{wlh02} describes the simpler algorithm for COT. Hsu
+also invented \PCtrees \cite{wlh01} which is claimed to be much easier
+to implement. \cite{nsnrs09} describes a characterization of
 consecutive-ones property solely based on the cardinality properties
 of the set representations of the columns (rows); every column (row)
 is equivalent to a set that has the row (column) indices of the rows
@@ -537,15 +548,15 @@ simplifies COT to a great degree.
 \cite{mcc04} describes a different approach to COT. While all previous
 COT algorithms gave the COP order if the matrix has the property but
 exited stating negative if otherwise, this algorithm gives an evidence
-by way of a certificate of matrix even when it has no COP. This
-enables a user to verify the algorithm's result even when the answer
-is negative. This is significant from an implementation perspective
+by way of a certificate even when it has no COP. This enables a user
+to verify the algorithm's result even when the answer is
+negative. This is significant from an implementation perspective
 because automated program verification is hard and manual verification
 is more viable. Hence having a certificate reinforces an
 implementation's credibility. Note that when the matrix {\em has} COP,
 the COP order is the certificate.  The internal machinery of this
-algorithm is related to the weighted betweenness problem
-addressed in \cite{co98}.  
+algorithm is related to the weighted betweenness problem addressed in
+\cite{co98}.
 
 \subsection{Optimization problems in COP}
 \label{sec:optcop}
@@ -608,10 +619,10 @@ Another problem is to find the minimum number of entries in the matrix
 that can be toggled to result in a matrix with COP.  \cite{v85}
 discusses approximation of {\sc COP Augmentation} which is the problem
 of changing of the minimum number of zero entries to {\un}s so that
-the resulting matrix has COP. As mentioned earlier, this problem is
-known to be NP complete due to \cite{b75-phd}. \cite{v85} also proves,
-using a reduction to the longest path problem, that finding a Tucker's
-forbidden submatrix of at least $k$ rows is NP complete.
+the resulting matrix has COP. This problem is known to be NP complete
+due to \cite{b75-phd}. \cite{v82} proves, using a reduction to the
+longest path problem, that finding a Tucker's forbidden submatrix of
+at least $k$ rows is NP complete.
 
 \cite{jkckv04} discusses the use of matrices with almost-COP (instead
 of one block of consecutive {\un}s, they have $x$ blocks, or {\em
@@ -697,17 +708,16 @@ three sets (not necessarily distinct) is equal to that of the
 corresponding paths assigned to them and the input passes a filtering
 algorithm (described in this paper) successfully.  This algorithmic
 characterization gives a natural data structure that stores all the
-\remove{relevant} feasible bijections between $U$ and $V(T)$. This
-reduces the search space for the solution considerably from the
-universe of all possible bijections between $U$ and $V(T)$ to only
-those bijections that maintain the characterization.  Further, the
-filtering algorithm is also an efficient algorithm to test if a tree
-path labeling\footnote{The terms {\em tree path labeling} and {\em
-    tree path assignment} are, in informal language,
-  synonyms. Formally, the former refers to the bijection $\cl: \cF
-  \rightarrow \cP$. The latter refers to the set of ordered pairs
-  $\{(S, P) \mid S \in \cF, P \in \cP\}$. $\cP$ is a set of paths on
-  $T$.} is feasible.
+feasible bijections between $U$ and $V(T)$. This reduces the search
+space for the solution considerably from the universe of all possible
+bijections between $U$ and $V(T)$ to only those bijections that
+maintain the characterization.  Further, the filtering algorithm is
+also an efficient algorithm to test if a tree path
+labeling\footnote{The terms {\em tree path labeling} and {\em tree
+    path assignment} are, in informal language, synonyms. Formally,
+  the former refers to the bijection $\cl: \cF \rightarrow \cP$. The
+  latter refers to the set of ordered pairs $\{(S, P) \mid S \in \cF,
+  P \in \cP\}$. $\cP$ is a set of paths on $T$.} is feasible.
 
 
 \section[Summary of new results]{Summary of New Results in this Thesis}
@@ -717,15 +727,18 @@ We see in Section~\ref{sec:motive} that pairwise intersection
 cardinality preservation is necessary and sufficient for an interval
 assignment to be feasible for a given hypergraph\footnote{A {\em
     hypergraph} is an alternate representation of a set system and
-  will be used in this thesis.}~\footnote{See Section~\ref{ch:prelims}
-  for the formal definition.} and thus is a characterization for COP
-\cite{nsnrs09}. In our work we extend this characterization and find
-that trio-wise intersection cardinality preservation makes a tree path
-labeling\footnote{A {\em tree path labeling} $\cl$ is a bijection of
-  paths from the target tree $T$ to the hyperedges in given hypergraph
-  $\cF$.}~\footnotemark[4] (TPL) feasible, which is a generalization
-of the COP problem. This problem is defined by \FTPL (See
-Section~\ref{sec:myresearchintro} for problem definition). %as follows.
+  will be used in this thesis, in line with \cite{kklv10} (see
+  Section~\ref{ch:prelims} for the formal definition).} and thus is a
+characterization for COP \cite{nsnrs09}. In our work we extend this
+characterization and find that trio-wise intersection cardinality
+preservation makes a tree path labeling\footnote{A {\em tree path
+    labeling} $\cl$ is a bijection of paths from the target tree $T$
+  to the hyperedges in given hypergraph $\cF$ (see
+  Section~\ref{ch:prelims} for the formal
+  definition).}% ~\footnotemark[4]
+(TPL) feasible, which is a generalization of the COP problem. This
+problem is defined by \FTPL (see Section~\ref{sec:myresearchintro} for
+problem definition). %as follows.
 
 % {\small
 %   \begin{minipage}[h]{5in}
@@ -758,8 +771,8 @@ We give a necessary and sufficient condition by way of {\em
   Intersection Cardinality Preservation Path Labeling} (ICPPL) and a
 filtering algorithm for {\FTPL} to output in affirmative. ICPPL
 captures the trio-wise cardinality property described
-earlier\footnote{See Section~\ref{sec:feasible} for the definition of
-  ICPPL.}. This characterization can be checked in polynomial time.  A
+earlier (see Section~\ref{sec:feasible} for the definition of
+  ICPPL.). This characterization can be checked in polynomial time.  A
 relevant consequence of this constructive procedure is that it is
 sufficient to iteratively check if three-way intersection
 cardinalities are preserved.  In other words, in each iteration, it is
@@ -771,7 +784,7 @@ tree $T$ is simply a path \cite{wlh02,nsnrs09}.
 
 Aside from checking if a given TPL is feasible, we also solve the
 problem of computing a feasible TPL for a given hypergraph and target
-tree, if one exists. This problem is the {\CFTPL} problem (See
+tree, if one exists. This problem is the {\CFTPL} problem (see
 Section~\ref{sec:myresearchintro} for problem definition). %, is defined as follows.
 
 % {\small
@@ -800,7 +813,7 @@ Section~\ref{sec:myresearchintro} for problem definition). %, is defined as foll
 We present a polynomial time algorithm for {\CFTPL} when the target
 tree $T$ belongs to a special class of trees called {\em \kstars} and
 when the hyperedges in the hypergraph $\cF$ have at most $k+2$
-vertices (\CFTPLKTREE -- See Section~\ref{sec:myresearchintro} for
+vertices (\CFTPLKTREE -- see Section~\ref{sec:myresearchintro} for
 problem definition). A couple of examples of {\kstars} are given in
 Figure~\ref{fig:ksubstar}.
 
@@ -847,31 +860,36 @@ are of significant interest in understanding the nature of {\sc Graph
 while being hard on path graphs\cite{kklv10}. {\kstars} are a class of
 trees which are in many ways very close to intervals or paths. Each
 ray\footnote{The path from a leaf to the root, the vertex with highest
-  degree, is called a {\em ray} of the \kstar.}~\footnotemark[4] are
+  degree, is called a {\em ray} of the \kstar (see
+  Section~\ref{ch:prelims} for the formal definition).} are
 independent except for the root\footnote{The vertex with maximum
-  degree in a {\kstar} is called {\em root}.}~\footnotemark[4] and
-hence can be considered as an independent interval till the root. Our
-algorithm builds on this fact and uses the interval assignment
+  degree in a {\kstar} is called {\em root} (see
+  Section~\ref{ch:prelims} for the formal definition).} and hence can
+be considered as an independent interval till the root. Our algorithm
+builds on this fact and uses the interval assignment
 algorithm\cite{nsnrs09} up until ``reaching'' the root and then uses
 the trio-wise intersection cardinality (the extra condition in ICPPL
 that generalizes ICPIA) check to resolve the ambiguity about which ray
 the algorithm should ``grow'' the solution into in the next iteration.
 
 We also have an algorithm for solving {\CFTPL} with no restrictions on
-the target tree or set size which runs in exponential time.  This
-algorithm finds a path labeling from $T$ by decomposing the problem
-into subproblems of finding path labeling of subsets of $\cF$ from
-subtrees of $T$. Given the fact that binary matrices naturally
+the target tree or set cardinality which runs in exponential time.
+This algorithm finds a path labeling from $T$ by decomposing the
+problem into subproblems of finding path labeling of subsets of $\cF$
+from subtrees of $T$. Given the fact that binary matrices naturally
 represent a set system (see Section~\ref{sec:motive}) and that the
-{\em overlap} relation between the sets involved is an obvious
-equivalence relation, $\cF$ quite naturally partitions into
-equivalence classes known as {\em overlap components}. In the context
-of COP, overlap components were used in \cite{wlh02} and
-\cite{kklv10}. Moreover, \cite{nsnrs09} discovered that these
-equivalence classes form a total order in the case of \COP. We extend this to TPL and find
-that when $\cF$ is a path hypergraph\footnote{If there exists an FTPL
-  for a hypergraph $\cF$, it is called a path hypergraph.}, the
-classes can be partially ordered as an in-tree in polynomial
-time. Once $\cF$ is ``broken'' into overlap components, one must
-identify the subtree of $T$ that it needs to map to and this is the
-hard part which is currently open to be solved in polynomial time.
+{\em overlap} relation (see Section~\ref{ch:prelims} for the formal
+definition) between the sets involved is an obvious equivalence
+relation, $\cF$ quite naturally partitions into equivalence classes
+known as {\em overlap components} (see Section~\ref{ch:prelims} for
+the formal definition). In the context of COP, overlap components were
+used in \cite{wlh02} and \cite{kklv10}. Moreover, \cite{nsnrs09}
+discovered that these equivalence classes have a certain total order
+in the case of \COP (see Section~\ref{sec:norestraint} for the formal
+definition).  We extend this to TPL and find that when $\cF$ is a path
+hypergraph\footnote{If there exists an FTPL for a hypergraph $\cF$, it
+  is called a {\em path hypergraph}.}, the classes can be partially ordered
+as an in-tree in polynomial time. Once $\cF$ is ``broken'' into
+overlap components, one must identify the subtree of $T$ that it needs
+to map to and this is the hard part which is currently open to be
+solved in polynomial time.

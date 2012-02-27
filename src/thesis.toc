@@ -1,9 +1,9 @@
 \select@language {english}
-\contentsline {chapter}{Abstract}{vii}{changenumber.iii.1}
-\contentsline {chapter}{Contents}{ix}{section*.1}
-\contentsline {chapter}{List of Tables}{xiii}{section*.2}
-\contentsline {chapter}{List of Figures}{xv}{section*.3}
-\contentsline {chapter}{Abbreviations and Notations}{xvii}{section*.3}
+\contentsline {chapter}{Abstract}{vii}{section*.1}
+\contentsline {chapter}{Contents}{ix}{section*.2}
+\contentsline {chapter}{List of Tables}{xiii}{section*.3}
+\contentsline {chapter}{List of Figures}{xv}{section*.4}
+\contentsline {chapter}{Abbreviations and Notations}{xvii}{section*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Organization of the document}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Illustration of the problem}{2}{section.1.2}
@@ -12,7 +12,7 @@
 \contentsline {subsection}{\numberline {1.3.1}Matrices}{5}{subsection.1.3.1}
 \contentsline {subsection}{\numberline {1.3.2}Sets}{7}{subsection.1.3.2}
 \contentsline {subsection}{\numberline {1.3.3}Graphs}{7}{subsection.1.3.3}
-\contentsline {section}{\numberline {1.4}Brief Survey}{8}{section.1.4}
+\contentsline {section}{\numberline {1.4}Brief Survey}{9}{section.1.4}
 \contentsline {subsection}{\numberline {1.4.1}Matrices with COP}{9}{subsection.1.4.1}
 \contentsline {subsection}{\numberline {1.4.2}Optimization problems in COP}{10}{subsection.1.4.2}
 \contentsline {section}{\numberline {1.5}Generalization of COP}{12}{section.1.5}
@@ -23,9 +23,9 @@
 \contentsline {subsection}{\numberline {2.2.1}Tucker's forbidden submatrices for COP\xspace }{23}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Booth and Lueker's $PQ$-tree -- a linear COT algorithm}{25}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}$PQR$-tree\xspace \ -- COT for set systems}{27}{subsection.2.2.3}
-\contentsline {subsubsection}{Comparison with generalized $PQ$-tree\xspace }{31}{section*.4}
+\contentsline {subsubsection}{Comparison with generalized $PQ$-tree\xspace }{31}{section*.5}
 \contentsline {subsection}{\numberline {2.2.4}$PC$-tree\xspace -- a generalization of $PQ$-tree\xspace }{32}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}ICPIA - a set cardinality based COP\xspace test}{33}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.5}ICPIA - a set cardinality based COP\xspace test}{34}{subsection.2.2.5}
 \contentsline {section}{\numberline {2.3}Matrices without COP\xspace }{35}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Finding forbidden submatrices}{36}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Incompatibility graph - a certificate for no COP\xspace }{38}{subsection.2.3.2}
@@ -46,4 +46,4 @@
 \contentsline {subsection}{\numberline {3.7.1}Time complexity of TPL}{74}{subsection.3.7.1}
 \contentsline {subsection}{\numberline {3.7.2}Consecutive Ones Testing is in Logspace}{74}{subsection.3.7.2}
 \contentsline {chapter}{\numberline {4}Conclusion}{77}{chapter.4}
-\contentsline {chapter}{Bibliography}{81}{section*.5}
+\contentsline {chapter}{Bibliography}{81}{section*.6}

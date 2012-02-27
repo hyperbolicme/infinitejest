@@ -8,9 +8,8 @@
 
 This chapter surveys several results that are significant to this
 thesis or to \COP in general. These predominantly pertain to
-characterizations of \COP, algorithmic tests to check for \COP,
-optimization problems on binary matrices that do not have \COP and
-some applications of \COP.
+characterizations of \COP, algorithmic tests to check for \COP
+and certificates for binary matrices that do not have \COP.
 
 
 The chapter is organized as follows. Section~\ref{sec:copgraphtheory}
@@ -41,7 +40,7 @@ presented in this section gives a certificate.
 \COP is closely connected to several types of graphs by way of
 describing certain combinatorial graph properties. There are also
 certain graphs, like convex bipartite graphs, that are defined solely
-by one of its associated matrix having \COP.  In this section we will
+by one of its associated matrices having \COP.  In this section we will
 see the relevance of \cop to graphs.  To see this we introduce certain
 binary matrices that are used to define graphs in different
 ways. While adjacency matrix is perhaps the most commonly used such
@@ -49,7 +48,7 @@ matrix, Definition~\ref{def:graphmatrices} defines this and a few
 more.
 
 \begin{definition}
-  {\em Matrices that define graphs. \cite[Def.~2.4]{d08phd}.}  
+  [Matrices that define graphs {\cite[Def.~2.4]{d08phd}}]  
   \label{def:graphmatrices} 
   Let $G$ and $H$ be defined as follows. $G = (V,E_G)$ is a graph with
   vertex set $V = \{v_i \mid i \in [n]\}$ and edge set $E_G \subseteq
@@ -57,19 +56,19 @@ more.
   E_H)$ is a bipartite graph with partitions $A = \{a_i \mid i \in
   [n_a]\}$ and $B = \{b_i \mid i \in [n_b]\}$.
   \begin{enumerate}[{\ref{def:graphmatrices}}--i.]
-  \item \emph{Adjacency matrix} of $G$ is the symmetric $n \times n$
+  \item \textbf{Adjacency matrix} of $G$ is the symmetric $n \times n$
     binary matrix $M$ with $m_{i,j} = \un$ \iff $(v_i,v_j) \in E_G$
     for all $i,j \in [n]$.
-  \item \emph{Augmented adjacency matrix} of $G$ is obtained from its
+  \item \textbf{Augmented adjacency matrix} of $G$ is obtained from its
     adjacency matrix by setting all main diagonal elements to \un, \ie
     $m_{i,i} = \un$ for all $i \in [n]$.
-  \item \emph{Maximal clique matrix} or \emph{vertex-clique incidence
+  \item \textbf{Maximal clique matrix} or \textbf{vertex-clique incidence
       matrix} of $G$ is the $n \times k$ binary matrix $M$ with
     $m_{i,j} = \un$ \iff $v_i \in C_j$ for all $i \in [n], j \in [k]$
     where $\{C_j \mid j \in [k]\}$ is the set of maximal cliques of
     $G$.
     \label{def::maxcliquematrix}
-  \item \emph{Half adjacency matrix} of $H$ is the $n_a \times n_b$
+  \item \textbf{Half adjacency matrix} of $H$ is the $n_a \times n_b$
     binary matrix $M$ with $m_{i,j} = \un$ \iff $(a_i, b_j) \in E_H$.
   \end{enumerate}
 \end{definition}
@@ -79,16 +78,16 @@ more.
 Now we will see in Definition~\ref{def:graphwithcop} certain graph
 classes that is related to \COP or \CROP.\\
 
-\begin{definition}{\emph{Graphs that relate to
-      COP.\cite[Def.~2.5]{d08phd}}} %
+\begin{definition}[Graphs that relate to
+  COP {\cite[Def.~2.5]{d08phd}}] %
   \label{def:graphwithcop} %
   Let $G$ be a graph and $H$ be a bipartite graph.
   \begin{enumerate}[\ref{def:graphwithcop}--i.]
-  \item $G$ is \emph{convex-round} if its adjacency matrix has the
+  \item $G$ is \textbf{convex-round} if its adjacency matrix has the
     \CROP.
-  \item \label{def::concave-round} $G$ is \emph{concave-round} if its
+  \item \label{def::concave-round} $G$ is \textbf{concave-round} if its
     augmented adjacency matrix has \CROP. \cite{bhy00}
-  \item $G$ is an \emph{interval graph} if its vertices can be mapped
+  \item $G$ is an \textbf{interval graph} if its vertices can be mapped
     to intervals on the real line \stt two vertices are adjacent \iff
     their corresponding intervals overlap \cite{sb59}.  $G$ is an interval graph \iff its maximal clique matrix
     has COP \cite{fg65} (This follows \cite{gh64} which states
@@ -96,23 +95,23 @@ classes that is related to \COP or \CROP.\\
       ordered \stt for all $v \in V(G)$, cliques containing $v$ are
       consecutive in the ordering \cite[Th. 8.1]{mcg04}.)
     \begin{enumerate}[a.]
-    \item $G$ is a \emph{unit interval graph} if it is an interval
+    \item $G$ is a \textbf{unit interval graph} if it is an interval
       graph \stt all intervals have the same length.
-    \item $G$ is a \emph{proper interval graph} if it is an interval
+    \item $G$ is a \textbf{proper interval graph} if it is an interval
       graph \stt no interval properly contains another.
     \end{enumerate}
     The set of unit interval graphs and the set of proper interval
     graphs coincide \cite{rob69, gar07}.
- \item $G$ is a \emph{circular-arc graph} if its vertices can be
+ \item $G$ is a \textbf{circular-arc graph} if its vertices can be
     mapped to a set of arcs on a circle \stt two vertices are adjacent
     \iff their corresponding arcs overlap.
-  \item $H$ is \emph{convex bipartite on columns (rows)} if its half
+  \item $H$ is \textbf{convex bipartite on columns (rows)} if its half
     adjacency matrix has \COP on rows (columns).%
     \label{def::convexbi}
-  \item $H$ is \emph{biconvex bipartite} or \emph{doubly
+  \item $H$ is \textbf{biconvex bipartite} or \textbf{doubly
       convex}\cite{yc95} if its half adjacency matrix has \COP on both
     rows and columns.
-  \item $H$ is \emph{circular convex} if its half adjacency matrix has
+  \item $H$ is \textbf{circular convex} if its half adjacency matrix has
     \CROP.
   \end{enumerate}
 \end{definition}
@@ -176,18 +175,20 @@ Without doubt, besides computing answers to these questions, we are
 interested in the efficiency of these computations in terms of
 computational complexity theory. Results towards
 questions~(\ref{q:testcop}) and (\ref{q:copperm}) are surveyed in this
-section. Those for question~(\ref{q:copopt}) are discussed in
-Section~\ref{sec:surveycopopt} and question~(\ref{q:nocopcert}) is discussed
-in Section~\ref{sec:surveycertalgo}.
+section. Those for question~(\ref{q:nocopcert}) is discussed in
+Section~\ref{sec:surveycopopt}. Question~(\ref{q:copopt}) is discussed
+in brief in Section~\ref{sec:optcop} -- it is not elaborated in this
+chapter since the focus of this thesis is characterization and
+recognition rather than optimization.
 
-It may be noted that one way to design an algorithm to test for \COP
-is by deriving one from any interval graph recognition algorithm using
-the result \cite{hmpv00} \cite[Th~2.7]{d08phd} which demonstrates how
-such a derivation can be done.  They use something called {\em Lex-BFS
-  ordering} of the vertices of a graph to decide in linear time
-whether the graph is an interval graph. They also show how any
-interval graph recognition algorithm can be used to recognize matrices
-with \COP. This is shown in Theorem~\ref{th:intgraphcop}.
+One way to design an algorithm to test for \COP is by deriving one
+from any interval graph recognition algorithm using the result
+\cite{hmpv00} \cite[Th~2.7]{d08phd}, restated below in
+Theorem~\ref{th:intgraphcop}, which demonstrates how such a derivation
+can be done.  They use something called {\em Lex-BFS ordering} of the
+vertices of a graph to decide in linear time whether the graph is an
+interval graph. They also show how any interval graph recognition
+algorithm can be used to recognize matrices with \COP. 
 
 \begin{theoremsansproof}[{\cite[Th.~2]{hmpv00}}]
   \label{th:intgraphcop}
@@ -201,10 +202,10 @@ with \COP. This is shown in Theorem~\ref{th:intgraphcop}.
 
 
 However, this does not necessarily yield an efficient algorithm. We
-will see results that directly solve the problem on matrices since it
-is known that questions~(\ref{q:testcop}) and (\ref{q:copperm}) stated
-above for \COP are efficiently solvable.  Table~\ref{tab:cophistory}
-gives a snapshot of these results.
+will see results that directly solve the problem of \COT on matrices
+since it is known that questions~(\ref{q:testcop}) and
+(\ref{q:copperm}) stated above for \COP are efficiently solvable.
+Table~\ref{tab:cophistory} gives a snapshot of these results.
 
 
 
@@ -257,7 +258,7 @@ the graph from being convex bipartite.
   % an {\em asteroidal triple} if between any two of them there exists
   % a path in $G$ that does not contain any vertex from the closed
   % neighborhood of the third vertex.
-  An {\em asteroidal triple} in a graph $G$ is a tuple of vertices
+  An \textbf{asteroidal triple} in a graph $G$ is a tuple of vertices
   $\{v_1,v_2,v_3\} \subset V$ such that between every pair of vertices
   from this tuple there exists a path that avoids the closed
   neighbourhood of the third vertex.
@@ -335,7 +336,7 @@ finding planar embeddings of planar graphs \cite{lec67,mcc04} and
 recognizing \CROP in a matrix.
 
 %\begin{minipage}[h]{5.5in}
-\begin{definition}[\PQtree \cite{bl76, mcc04}]
+\begin{definition} [\PQtree \cite{bl76, mcc04}]
   A \PQtree of matrix $M$ with \COP on columns (rows), is a tree with
   the following properties.
   \begin{enumerate}[i.]
@@ -384,7 +385,7 @@ have been executed).
 Judging from notes in literature, this algorithm is apparently
 notoriously difficult to program. In the procedure to modify the
 \PQtree at each iteration, nodes are considered from leaves to
-tree. At each node considered, it uses one of nine templates to
+the root. At each node considered, it uses one of nine templates to
 determine how the tree must be altered in the vicinity of this
 node. Recognition of this template poses a difficult challenge in
 terms of implementing it. Each template is actually a representative
@@ -418,21 +419,21 @@ indices of the matrix.  This simple construction is formally described
 in Definition~\ref{def:matrixsetsystem} along with the idea of \cop
 for set systems (As seen in Section~\ref{sec:courseschedule}).
 
-\begin{definition}[{\em \Cop for set systems}]%
+\begin{definition}[\Cop for set systems]%
   \label{def:matrixsetsystem}%
   % [\emph{Set system of a binary matrix}.]
   Let $M$ be a binary matrix of order $n \times m$ and $\{c_i \mid i
   \in [m]\}$ be the columns in $M$.  A set system $\cF_{M} = \{S_i
   \mid S_i \subseteq [n], i \in [m]\}$ is defined such that for every
   column $c_i$ of $M$, set $S_i = \{j \mid m_{ji} = \un \}$. The
-  collection $\cF_M$ is the {\em set system of binary matrix} $M$. The
-  {\em binary matrix for set system} $\cF$ is conversely constructed
+  collection $\cF_M$ is the \textbf{set system of binary matrix} $M$. The
+  \textbf{binary matrix for set system} $\cF$ is conversely constructed
   and denoted by $M^\cF$. Thus, $M^{\cF_M} = M$.%
   \par\noindent%
-  A set system $\cF$ from universe $U$, $|U| = n$ has the {\em \cop}
+  A set system $\cF$ from universe $U$, $|U| = n$ has the \textbf{\cop}
   if there exists a linear order or permutation $\sigma = w_1w_2\ldots
   w_n$ that can be applied to $U$ \stt each set $S \in \cF$ becomes a
-  consecutive subsequence (also termed an {\em interval})
+  consecutive subsequence (also termed an \textbf{interval})
   $w_{i}w_{i+1}\ldots w_{i+k-1}$ on $\sigma$ for some positive integer
   $i \le n+1-k$ where $k = |S|$.
   \par\noindent%
@@ -447,7 +448,7 @@ Before proceeding to describe \PQRtree per se, we will see a few more
 terminologies that will make the subsequent discussion in this section
 simpler.
 
-\begin{definition}[\em Orthogonal sets \cite{n89, mm96,
+\begin{definition}[Orthogonal sets \cite{n89, mm96,
     mcc04}\footnote{\cite{mcc04} does not use the term ``mutually
     orthogonal'' but refers to the same idea as ``sets that do not
     overlap''. This terminology is also used in other literature like
@@ -455,15 +456,15 @@ simpler.
   \label{def:orthosets}%
   Let $\cF$ be a set system with universe $U$ and sets $A, B \in \cF$.
   \begin{enumerate}
-  \item $A$ and $B$ are said to have a {\em trivial intersection} if
+  \item $A$ and $B$ are said to have a \textbf{ trivial intersection} if
     $A \cap B$ is $\emptyset$ or $A$ or $B$.  In other words, $A$ and
     $B$ are either disjoint or one is the subset of the other.
 
-  \item $A$ and $B$ are called {\em mutually orthogonal} or $A$ is {\em
+  \item $A$ and $B$ are called \textbf{ mutually orthogonal} or $A$ is \textbf{
       orthogonal to} $B$ and vice versa, if they have a trivial
     intersection.
 
-  \item {\em Trivial subsets} of a universe $U$, denoted by $\cT(U)$,
+  \item \textbf{ Trivial subsets} of a universe $U$, denoted by $\cT(U)$,
     are sets that have trivial intersections with any set in
     $\power{U}$. These sets are $U$, singleton sets in
     $\power{U}$ and $\emptyset$ \cite{n89, mm96}.
@@ -471,14 +472,14 @@ simpler.
     \{\emptyset\}$.
 
   \item {\em Orthogonal sets of a set
-      system}\footnote{\cite[Def.~3.1]{mcc04} uses the term {\em
+      system}\footnote{\cite[Def.~3.1]{mcc04} uses the term \textbf{
         non-overlapping family} of $\cF$ and denotes it by
       $\cN(\cF)$. \label{mcc1}} $\cF$ with universe $U$ are subsets of
     $U$ that are orthogonal to all sets in $\cF$. The set of all
     orthogonal sets to $\cF$ is denoted by $\cF^{\bot}$.
 
-  \item $\cF$ is called {\em complete}\footnote{\cite{mcc04} calls
-      this a {\em weakly partitive family}. \label{mcc2}} if the
+  \item $\cF$ is called \textbf{ complete}\footnote{\cite{mcc04} calls
+      this a \textbf{ weakly partitive family}. \label{mcc2}} if the
     following hold true for every pair of non-orthogonal (overlapping)
     sets $A, B$ in $\cF$.
 
@@ -500,7 +501,7 @@ simpler.
 
   \item $\overline{\cF}$ represents the smallest super set system of
     $\cF$ that is complete\footnote{\cite[Def.~3.2]{mcc04} calls
-      this the {\em weak closure} of $\cF$ denoted by
+      this the \textbf{ weak closure} of $\cF$ denoted by
       $\cW(\cF)$. \label{mcc3}}
 
   \item \label{def::slashop} The binary operator $/$ is defined as
@@ -529,13 +530,13 @@ into subproblems.
   \item The relative complements $A \setminus B$ and $B \setminus A$
     if $B \nsubseteq A$ and $A \nsubseteq B$ respectively.
   \item Also note that trivially, sets in $\cT(U)$ are consecutive in
-    any permutation of $U$\footnote{$\emptyset$ is considered
-      consecutive by convention.}.
+    any permutation of $U$ ($\emptyset$ is considered
+      consecutive by convention.).
 \end{enumerate}
 \end{observation}
 
 The following theorem gives a very interesting property of orthogonal
-sets and $\overline{\cF}$
+sets and $\overline{\cF}$.
 
 \begin{theoremsansproof}[{\cite[Th.~3,6]{mm96}}]
   \label{th:validcop}
@@ -588,9 +589,9 @@ subproblems in \cite{mm96} is very similar to the substitution
 decomposition of a set system given in \cite[Sec.~4]{mcc04}.\footnote{Using
   the theory cited in footnotes~\ref{mcc1},\ref{mcc2},\ref{mcc3}.}
 
-The following corollary, Corollary~\ref{cor:pqrrecursive} states how
+The following Corollary~\ref{cor:pqrrecursive} states how
 \PQRtree elegantly fits into this whole theory and help in computing
-all \COP orders of $\cF$.
+all \COP orders of $\cF$, if any.
 
 \begin{corollary}[{\cite[Cor.~8]{mm96}}]
   \label{cor:pqrrecursive}
@@ -599,7 +600,8 @@ all \COP orders of $\cF$.
   encodes all permutations in $\valid{U/H, \cF/H}$ and also a \PQRtree
   $T_2$ that encodes all permutations $\valid{H,\cF \cap \power{H}}$,
   then a \PQRtree $T$ for $\cF$ can be obtained by replacing the leaf
-  $h$ in $T_1$ by $T_2$, where $h$ is the representative element for $H$.
+  $h$ in $T_1$ by $T_2$, where $h$ is the representative element for
+  $H$ in $T_i$.
 \end{corollary}
 
 %Finding elements in $\ff$ is done using \PQRtree.
@@ -638,7 +640,7 @@ the following statements hold.
 \begin{enumerate}
 \item \label{th::it1} $\overline{\cF} = \cT(U)$ 
 \item \label{th::it2}$\overline{\cF} = consec(\alpha)$ for
-  some permutation $\alpha$ on $U$ ($consec(\alpha)$ is a linear order)
+  some permutation $\alpha$ on $U$ ($consec(\alpha)$ denotes a linear order)
 \item \label{th::it3}$\overline{\cF} = \power{U}$ 
 \end{enumerate}
 \end{theoremsansproof}
@@ -678,14 +680,14 @@ data structures is summarised in Table~\ref{tab:pqrcomparison}.
 Going back to the theory we were discussing earlier,
 Theorem~\ref{th:pqrfinalmm} and the theory leading to it is very
 similar to \cite[esp. Th.~2.1, 3.5. also Th.~3.2, 3.3, 3.4]{mcc04}
-which categorizes the nodes in the above the three cases as {\em
-  prime}, {\em linear} and {\em degenerate}
-respectively. \cite{mcc04}'s generalized \PQtree is created in similar
-ways as \PQRtree above. This tree is, in essence, the Hasse diagram of
-what they call {\em strong elements} of weak closure, $\cW(\cF)$(\ie
-$\overline{\cF}$). Strong elements of a set family are elements that
-do not overlap with any other elements in the family, \ie it is
-orthogonal to all other sets\cite[Def.~3.3]{mcc04}.
+which categorizes the nodes in the three cases of
+Theorem~\ref{th:pqrfinalmm} as {\em prime}, {\em linear} and {\em
+  degenerate} respectively. \cite{mcc04}'s generalized \PQtree is
+created in similar ways as \PQRtree above. This tree is, in essence,
+the Hasse diagram of what they call {\em strong elements} of weak
+closure, $\cW(\cF)$(\ie $\overline{\cF}$). Strong elements of a set
+family are elements that do not overlap with any other elements in the
+family, \ie it is orthogonal to all other sets\cite[Def.~3.3]{mcc04}.
 
 \begin{theoremsansproof}[{\cite{mm96}, \cite[Th.~3.6]{mcc04}}]
 The set system $\cF$ has \COP \iff its \PQRtree has no $R$ nodes.  
@@ -697,7 +699,7 @@ narrows it down to parts of the universe in $R$ nodes that prevent the
 set system from having \COP.
 
 We will now see, in brief, one more generalization of \PQtree before
-seeing another approaches to solving \COP testing called ICPIA which
+seeing another approach to solving \COP testing called ICPIA which
 is a set theoretic characterization of \COP.
 
 \begin{table}[t]
@@ -772,12 +774,12 @@ is a set theoretic characterization of \COP.
     &
     \parbox[t]{\colwidth}
     {
-      {\em Prime}: For every $I$, $\emptyset \ne I \subset [k],
+      \textbf{Prime}: For every $I$, $\emptyset \ne I \subset [k],
       \cup_{i \in I}S_i \notin \cF$\\
-      {\em Linear}: There exists an ordering of $[k]$
+      \textbf{Linear}: There exists an ordering of $[k]$
       s.t. $\emptyset \ne I \subset [k]$ implies $\cup_{i \in I}S_i
       \in \cF$ only if members of $I$ are consecutive in the ordering\\
-      {\em Degenerate}: For every $I$, $\emptyset \ne I \subset [k],
+      \textbf{Degenerate}: For every $I$, $\emptyset \ne I \subset [k],
       \cup_{i \in I}S_i \in \cF$\\
     }
     
@@ -921,13 +923,14 @@ $(A_i \cup A_j,B_i \cup B_j)$ induced by their overlaps -- $(A_i
 $(A_j \setminus A_i, B_j \setminus B_i)$.
 
 To see it in terms of the theory explained in
-Section~\ref{sec:surveycertalgo}, this results in the weak closure of
+Section~\ref{sec:surveycertalgo}, this results in the set of strong
+elements of the weak closure of
 $\cF$. Let $\cF$, $\cI$ be the set system and interval
-system (A set system where all the sets are intervals.),
+system (a set system where all the sets are intervals),
 respectively, involved in the assignment $\Pi$ and $\cF'$, $\cI'$ be
 the same for the output of the algorithm $\Pi'$.  It can be observed
 that $\cF' \cup \cF$ is $\overline{\cF}$ or the weak closure of
-$\cF$. The analog is true for $\cI \cup \cI'$.  Moreover, this output
+$\cF$ without the set unions. The analog is true for $\cI \cup \cI'$.  Moreover, this output
 $\cF'$, $\cI'$ contains the strong elements of $\overline{\cF}$,
 $\overline{\cI}$ respectively. It turns out that $\cI'$ is also an
 interval system and that $\Pi'$ is an ICPIA \cite[Lem.~2]{nsnrs09}.
@@ -935,7 +938,7 @@ interval system and that $\Pi'$ is an ICPIA \cite[Lem.~2]{nsnrs09}.
 The next algorithm \cite[Alg.~2]{nsnrs09} further refines $\Pi'$ to
 $\Pi''$ which represents the family of permutations that yield the
 \COP orders represented by $\Pi$ of $\cF$. The subset relation Hasse
-diagram of $I'$ is created with each node representing the
+diagram of $\cI'$ is created with each node representing the
 corresponding assignment pair of the interval from $\Pi'$. Since all intervals in
 $\Pi'$ are non-overlapping, this is a tree. Notice that this means any
 two intervals are now either disjoint or one is contained in the
@@ -957,7 +960,7 @@ sufficient condition for the feasibility of the interval assignment.
 \end{theoremsansproof}
 
 What we saw so far in this section is checking for the feasibility of
-a given interval assignment. ICPIA can also be used to find an
+a given interval assignment. ICPIA can also be used to compute an
 interval assignment when only the set system $\cF$ is given. Part of
 the approach is similar to the overlap component idea in \cite{fg65,
   wlh02}. Once the overlap components are factored out, they can be
@@ -966,22 +969,27 @@ component need to be mapped. This is simple because the overlap
 components are disjoint from each other. Now the subproblem is finding
 \COP order for each overlap component. In each component, the set
 whose overlaps with the rest of the sets in that component forms a
-single inclusion chain (see Definition~\ref{def:poset}. In this
-particular reference, the set of sets is the set of overlaps.)  is
-chosen first and assigned the leftmost\footnote{This is by
-  convention. Rightmost can also be chosen analogously to get a
-  different \COP order.} interval. The next candidate set is chosen
-from this set's overlapping sets. The interval assigned is calculated
-by simple intersection cardinality means. Assume that the next set
-overlaps on one of the ``ends'' of the current set and calculate the
-interval by shifting left or right of the current interval and
-adjusting its size to match the next set's cardinality. Once the next
-set is assigned an interval, the current assigned sets are all checked
-for ICPIA. This is a backtracking algorithm -- if at any point ICPIA
-fails, another overlapping set is chosen. If all overlapping set
-attempts fail ICPIA, a different ``first set'' is chosen. This is a
-remarkably simple algorithm due to its obvious simplicity in
-implementation.
+single inclusion chain (see Definition~\ref{def:poset}; in this
+particular reference, the set of sets is the set of overlaps) is
+chosen first and assigned the leftmost interval. Chosing leftmost
+interval is only a convention -- rightmost can also be chosen
+analogously to get a different \COP order. The next candidate set is
+chosen from this set's overlapping sets. The interval assigned is
+calculated by simple intersection cardinality means. Assume that the
+next set overlaps on one of the ``ends'' of the current set and
+calculate the interval by shifting left or right of the current
+interval and adjusting its size to match the next set's
+cardinality. Once the next set is assigned an interval, the current
+assigned sets are all checked for ICPIA. This is a backtracking
+algorithm -- if at any point ICPIA fails, another overlapping set is
+chosen. If all overlapping set attempts fail ICPIA, a different
+``first set'' is chosen. This is a remarkably simple algorithm due to
+its obvious simplicity in implementation.
+
+The work of this thesis described in Chapter~\ref{ch:myresearch} is
+largely an extension of the ICPIA characterization. In the new work,
+we adopt the notation used in \cite{kklv10} (also described in that
+chapter).
 
 \section{Matrices without \COP}
 \label{sec:surveycopopt}
@@ -999,26 +1007,36 @@ substructures that prevents them from having \COP.
 \subsection{Finding forbidden submatrices}
 \label{sec:forbiddensubalgo}
 
+% When a \COP test algorithm reports negative, it is not easy to verify
+% this. We already saw that \cite{at72} gives forbidden substructures
+% for \COP. \cite{v82} shows that the maximization problem of finding a forbidden submatrix with at
+% least $k$ rows in an input matrix is NP-complete. This was proven by
+% polynomially reducing the longest path problem for graphs to this
+% problem. For most cases, the minimization problem is more helpful.
+% Section~\ref{sec:forbiddensubalgo} gave a polynomial
+% algorithm for finding minimum size forbidden submatrix. 
+
 It is known from Theorem~\ref{th:tuckercop} that when a matrix does
 not have \COP, it must have one of Tucker's forbidden submatrices (See
 Section~\ref{sec:tucker} for detailed discussion on Tucker's forbidden
 substructures for matrices with \COP). However, none of the \COP test
 algorithms discussed in Section~\ref{sec:surveycoptest} outputs the
-forbidden submatrix when the test is negative. This perhaps gives a
-hint about how hard it is to find these substructures in the input
-matrix. Using a reduction to the longest path problem, \cite{v85}
-proves that finding a Tucker's forbidden submatrix of at least $k$
-rows is NP complete. An example of an optimization problem for a
+forbidden submatrix when the test is negative.  Using a reduction to
+the longest path problem, \cite{v82} proves that finding a Tucker's
+forbidden submatrix of at least $k$ rows is NP complete. This is a
+maximization problem.  An example of an optimization problem for a
 matrix without \COP is finding if deleting at most $k$ rows from input
 will restore \COP. This is known to be NP complete
 \cite{b75-phd}. There are several such optimization problems that try
 to find ways to get \COP on the input matrix with certain alterations
-and finding smallest forbidden submatrix is at the heart of these problems.
+and finding smallest forbidden submatrix is at the heart of these
+problems. This minimization problem of finding smallest forbidden
+submatrix is polynomial time solvable.
 
 
-In this section we will summarize \cite{d08phd}'s approximation
-algorithm for finding forbidden submatrix. We will use $\Tuckerset$ to
-refer to the set of Tucker's forbidden submatrices shown in
+In this section we will summarize \cite{d08phd}'s algorithm for
+finding forbidden submatrix. We will use $\Tuckerset$ to refer to the
+set of Tucker's forbidden submatrices shown in
 Figure~\ref{fig:forbiddensubmatrices}.
 
 
@@ -1042,7 +1060,7 @@ three shortest paths connecting each pair of these vertices (there are
 three paths exist, then $x, y, z$ indeed form an asteroidal
 triple. Among all such triples, select the triple $u, v, w$ where the
 sum is minimum and return the rows and columns of $M$ that correspond
-to the vertices in the three shortest paths described earlier for this triple. This
+to the vertices in the three shortest paths calculated earlier for this triple. This
 return value forms a submatrix and it obviously must contain a
 submatrix from $\Tuckerset$ because it represents an asteroidal
 triple. It may be noted that this procedure does not always return a
@@ -1064,12 +1082,12 @@ $*$, it denotes that number of {\un}s is unbounded.
 \end{proposition}
 
 In fact, the approximation mentioned in
-Proposition~\ref{prop:tuckerdomapprox} is the worst case when
-the actual solution $M'$ is of type $M_{IV}$. The approximation is
-slightly better for the other types of submatrices from $\Tuckerset$,
-the best case being an exact solution when $M'$ is $M_{I_k}$ or
-$M_{II_k}$. Thus this algorithm works accurately when the solution is of
-type $M_{I_k}$ or $M_{II_k}$.
+Proposition~\ref{prop:tuckerdomapprox} is the worst case which happens
+to be when the actual solution $M'$ is of type $M_{IV}$. The
+approximation is slightly better for the other types of submatrices
+from $\Tuckerset$, the best case being an exact solution when $M'$ is
+$M_{I_k}$ or $M_{II_k}$. Thus this algorithm works accurately when the
+solution is of type $M_{I_k}$ or $M_{II_k}$.
 
 Next, notice that Tucker matrix types $M_{IV}$ and $M_{V}$ are
 constant size -- $4 \times 6$ and $4 \times 5$ respectively. Thus they
@@ -1110,7 +1128,7 @@ submatrix. Theorem~\ref{th:forbiddenalg} gives this result.
   can be found in $O(\Delta^3m^2n\dot(m+n^2))$ time. Within the same
   time, one can also find a forbidden submatrix from $\Tuckerset$ in
   $M$ that has a minimum number of columns, a minimum number of rows
-  and columns, or a minimum number of entries.
+  and columns, or a minimum number of \un entries.
 \end{theoremsansproof}
 
 The procedure used to prove Theorem~\ref{th:forbiddenalg} is as
@@ -1131,22 +1149,23 @@ follows.
   of number of rows and columns, number of {\un} entries).
 \end{enumerate}
 
-In the next section we see yet another forbidden substructure for
-\COP which is easier to compute.
+Note that this algorithm has a factor $\Delta$ in the time complexity
+analysis, $\Delta$ being the maximum number of {\un}s in a row. For
+sparse matrices this is much lesser than the total number of columns
+$m$. When the matrix is not sparse, the worst case is when $\Delta$ is
+almost equal to $m$ (if they are equal quantities, that row can be
+disregarded from input matrix since a row with all {\un}s is trivially
+consecutive). Thus this is a polynomial time algorithm although a more
+efficient term in the running efficiency is desirable.
+
+In the next section we see yet another forbidden substructure for \COP
+which is can be computed in linear time.
 
 \subsection{Incompatibility graph - a certificate for no \COP}
 \label{sec:incompatibilitygr}
 
-When a \COP test algorithm reports negative, it is hard to verify
-this. While \cite{at72} gives forbidden substructures for \COP, there
-are no efficient algorithms to find these structures in a matrix. In
-fact, \cite{v82} shows that even finding a forbidden submatrix with at
-least $k$ rows in an input matrix is NP-complete. This was proven by
-polynomially reducing the longest path problem for graphs to this
-problem.
-
 \cite{mcc04} describes another characterization for matrices without
-\COP which is efficiently computable. This is done by way of an {\em
+\COP which is linearly computable. This is done by way of an {\em
   incompatibility graph} of a set system (since \COP in matrices and
 set systems are equivalent problems as seen in
 Section~\ref{sec:surveycertalgo} we will use the term set system in
@@ -1165,17 +1184,17 @@ betweenness problem in computational biology.
 For the sake of argument, suppose there exists such a \COP
 order. Clearly, it will not succeed in mapping $S$ to an interval
 since $b \notin S$ which is a contradiction to the assumption that
-this is a \COP order.  The ordered pair $(x,y)$ denotes that in the
-\COP order $y$ comes after $x$. Based on above observations, this
-means $(a,b)$ and $(b,c)$ are not compatible in any \COP order. So are
-$(c,b)$ and $(b,a)$.  Thus a binary relation {\em is incompatible
-  with} on $U \times U \setminus \{(a,a) \mid a \in U\}$ can be
-defined based on the membership of elements of $U$ in the sets in
-$\cF$.  \cite{mcc04} creates an incompatibility graph with vertices
-denoting ordered pairs and edges denoting the incompatibility
+this is a \COP order.  Let the ordered pair $(x,y)$ denote the
+condition that in the \COP order $y$ comes after $x$. Based on above
+observations, this means $(a,b)$ and $(b,c)$ are not compatible in any
+\COP order. So are $(c,b)$ and $(b,a)$.  Thus a binary relation {\em
+  is incompatible with} on $U \times U \setminus \{(a,a) \mid a \in
+U\}$ can be defined based on the membership of elements of $U$ in the
+sets in $\cF$.  \cite{mcc04} creates an incompatibility graph with
+vertices denoting ordered pairs and edges denoting the incompatibility
 relation.
 
-\begin{definition}[{\em Incompatibility graph \cite[Def.~6.1]{mcc04}}]
+\begin{definition}[{Incompatibility graph \cite[Def.~6.1]{mcc04}}]
   \label{def:incompatibility}
   Let $\cF$ be a set system with universe $U$. Let $A_{\cF} = \{(a,b)
   \mid a, b \in U, a \ne b\}$. The {\em incompatibility graph}
@@ -1199,7 +1218,7 @@ and place $c$ after $b$.  For any \COP order, there must not be any
 incompatible pairs. Thus it must consist of an independent set $I$ of
 the incompatibility graph. Moreover the independent set must have
 exactly half the vertex set of $G_I^\cF$ since the \COP order must
-involve all elements in $U$. Secondly, the reverse of a \COP order is
+involve all elements in $U$ and each vertex denotes a pair of elements. Secondly, the reverse of a \COP order is
 also a \COP order. Thus $A_\cF \setminus I$ must also be an
 independent set. In other words, $G_I^\cF$ must be bipartite with
 partitions being of equal size if $\cF$ has \COP. An odd cycle is a
