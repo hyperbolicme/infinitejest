@@ -253,7 +253,7 @@ not general graphs as source of paths.
   Consider a hypergraph $\cF$ % with universe $U$
   and a path system $\cP$ from tree $T$ such that $\bI(\cF) \cong
   \bI(\cP)$.  Then the associated bijection $\cl: \cF
-  \rightarrow \cP$ due to this isomorphism is called a {\em path
+  \rightarrow \cP$ due to this isomorphism is called a \textbf{path
     labeling} of $\cF$ from $T$. The path system $\cP$ is
   alternatively denoted as $\cF^\cl$. The path labeling may also be
   denoted by ordered pairs $(\cF,\cl)$ or $(\cF,\cl,T)$.
@@ -290,7 +290,7 @@ labeling as shown by the following Definition~\ref{def:inducedpl}.
   \cP$. Let  $\phi: \supt{\cF} \rightarrow \supt{\cP}$ be this hypergraph
   isomorphism function. % described in
   % Definition~\ref{def:pathhypergraph}.
-  Then there is an {\em induced path labeling} % denoted by $\cl_\phi:
+  Then there is an \textbf{induced path labeling} % denoted by $\cl_\phi:
 %   \cF \rightarrow \cP$ 
   denoted by $\cp_\phi: \cF \rightarrow \cP$
   of the hypergraph \stt % $\cl_\phi(S) = \phi(S)$
@@ -305,7 +305,7 @@ labeling in Definition~\ref{def:feasibletpl}.
 \begin{definition}[Feasible path labeling]
   \label{def:feasibletpl}
   Let $\cF$ be a hypergraph and $(\cF, \cl)$ be a path
-  labeling. $(\cF, \cl)$ is called a {\em feasible path labeling} if
+  labeling. $(\cF, \cl)$ is called a \textbf{ feasible path labeling} if
   the following conditions hold.
   \begin{itemize}
   \item $\cF \cong \cF^\cl$
@@ -321,15 +321,15 @@ labeling in Definition~\ref{def:feasibletpl}.
 One of the problems solved in this thesis \FTPL characterizes
 feasible tree path labeling.
 
-Now we will see the definition of a {\em path hypergraph} which is a
+Now we will see the definition of a \emph{ path hypergraph} which is a
 simple idea extended from interval hypergraphs in \cite{kklv10}. 
 
 \begin{definition}[Path hypergraph]
   \label{def:pathhypergraph}
-  Let $\cF$ be a set system. $\cF$ is called a {\em path hypergraph}
+  Let $\cF$ be a set system. $\cF$ is called a \textbf{path hypergraph}
   if there exists a target tree $T$ and a path system $\cP$ from $T$
   \stt $\cF \cong \cP$. If $\cF$ is thus a path hypergraph, $\cP$ is
-  called {\em path representation} of $\cF$.
+  called \textbf{path representation} of $\cF$.
 \end{definition}
 
 In other words, if there exists a feasible tree path labeling for a
@@ -378,8 +378,8 @@ defined in Definition~\ref{def:ksubstar}
 
 \begin{definition}[$k$-subdivided star]
   \label{def:ksubstar}
-  A {\em $k$-subdivided star} is a star with all its rays subdivided
-  exactly $k$ times. A {\em ray} of a $k$-subdivided star is the path
+  A \textbf{$k$-subdivided star} is a star with all its rays subdivided
+  exactly $k$ times. A \textbf{ray} of a $k$-subdivided star is the path
   from the center vertex to a leaf. It is clear that all rays of a
   $k$-subdivided star are of length $k+2$.
 \end{definition}
@@ -407,11 +407,11 @@ defined in Definition~\ref{def:ksubstar}
 % \end{align}
 
 \begin{definition}[In-tree]
-An {\em in-tree} is a directed rooted tree in which all edges are
+An \textbf{in-tree} is a directed rooted tree in which all edges are
 directed toward to the root.  
 \end{definition}
 In-trees are used in Section~\ref{sec:norestraint} which describes our
-(albeit non-polynomial time) solution to \CFTPL problem.
+solution to \CFTPL problem.
 
 Finally, note that as a convention in this thesis, the set $I$
 represents the index set $[m]$ or $[n]$. If index $i$ is used without further
@@ -442,7 +442,7 @@ Definition~\ref{def:icppl}.
 \begin{definition}
   \label{def:icppl}
   Consider a path labeling $(\cF, \cl)$ on the given tree $T$. We call
-  $(\cF, \cl)$ an {\em Intersection Cardinality Preserving Path
+  $(\cF, \cl)$ an \textbf{Intersection Cardinality Preserving Path
     Labeling (ICPPL)} if it has the following properties.
   \par
   \parbox{\linewidth}{%
@@ -1353,11 +1353,10 @@ characterization of a feasible path labeling.
   ICPPL and if Algorithm~\ref{al:icppl-find-isomorph} with $(\cF, \cl,
   T)$ as input returns a non-empty function, then $(\cF, \cl)$ is
   feasible.  Now consider the case where $(\cF, \cl)$ is feasible, \ie
-  there exists a hypergraph isomorphism $\phi$ such that $\cl_\phi =
-  \cl$. Lemma~\ref{lem:noexit1} and Lemma~\ref{lem:xnotempty} show us
-  that \filteri and \filterii do not exit if input is feasible. Thus
-  Algorithm~\ref{al:icppl-find-isomorph} returns a non-empty
-  function.%\qed
+  there exists a hypergraph isomorphism $\phi$ such that $\cp_\phi =
+  \cl$. 
+  Algorithm~\ref{al:icppl-find-isomorph} then clearly returns a non-empty
+  function because the target tree is non-empty.%\qed
 \end{proof}
 
 \section{Solution to \illustrationproblem}
@@ -1408,7 +1407,7 @@ assignments as shown -- elements \xPa, \xSn, \xLu, \xSc, \xLi, \xWo
 are assigned to vertices 7, 8, 9, 11, 10, 4 respectively. Computation
 of these leaf labels are deterministic except for $\xLu, \xSc$ where
 the algorithm arbitrarily chooses them from $X = \{\xLu, \xSa, \xSc\}$
-and for $\xSn, \xWo$ arbitrarily chooses from $X = \{\xSn,
+and for $\xSn, \xWo$ arbitrarily choosen from $X = \{\xSn,
 \xWo\}$. Here we show only one such choice and clearly one could have
 chosen another leaf label (\eg $\xSa$ on 9 or $\xWo$ on 8) to get a
 different feasible hypergraph isomorphism.  After this, the leaves of
@@ -1551,20 +1550,23 @@ input.
 Section~\ref{sec:feasible} described properties that a TPL must have
 for it to be feasible. The next problem of interest is to test if a
 given hypergraph is a path hypergraph with respect to a given target
-tree\footnote{A larger problem would be to find if a given hypergraph
-  is a path hypergraph with respect to any tree. This problem is not
-  addressed in this thesis.}.  In other words, the problem is to find
-out if a feasible tree path labeling exists from a given target tree
-for a given hypergraph. In this section we will see two special cases
-of this problem where the target tree is from a particular family of
-trees. The first one, where the tree is a path as described by the
-\CFTPLINT problem (see Section~\ref{sec:myresearchintro}) is a shown
-to be equivalent to the well studied problem of consecutive-ones in
-Section~\ref{sec:icpplicpia}. The second one, where the tree is a
-$k$-subdivided tree as described by \CFTPLKTREE (see
-Section~\ref{sec:myresearchintro}), has been solved using a polynomial
-time algorithm. The latter problem enforces some conditions on the
-hypergraph too which will be seen in Section~\ref{sec:ksubdivstar}.
+tree\footnote{A larger problem would be to test if a given hypergraph
+  is a path hypergraph where target tree is not given as input. This
+  problem is not addressed in this thesis and is discussed as further
+  research in Chapter~\ref{ch:conclusion}.}.  In other words, the
+problem is to find out if a feasible tree path labeling exists from a
+given target tree for a given hypergraph. In this section we will see
+two special cases of this problem where the target tree is from a
+particular family of trees. The first one, where the tree is a path as
+described by the \CFTPLINT problem (see
+Section~\ref{sec:myresearchintro} for definition) in
+Section~\ref{sec:icpplicpia} is known to be equivalent to the well
+studied problem of consecutive-ones. The second one, where the tree is
+a $k$-subdivided tree as described by \CFTPLKTREE (see
+Section~\ref{sec:myresearchintro} for definition), has been solved
+using a polynomial time algorithm. The latter problem enforces some
+conditions on the hypergraph too which will be seen in
+Section~\ref{sec:ksubdivstar}.
 
 \subsection{Target tree is a Path}
 \label{sec:icpplicpia}
@@ -1651,9 +1653,6 @@ $R_i$, $i \in [p]$ is $k+2$.  Let $\seq{v_{i1},\ldots,v_{i(k+2)}=r}$
 denote the sequence of vertices in $R_i$, where $v_{i1}$ is the
 leaf. Note that $r$ is a common vertex to all $R_i$.
 
-In this section the given hypergraph, the $k$-subdivided star and the
-root of the star are denoted by $\cO$, $T$ and vertex $r$,
-respectively.
 % For each hyperedge $X \in \cO$, we will maintain a 2-tuple of
 % non-negative numbers $\seq{p_1(X), p_2(X)}$.  The numbers satisfy
 % the property that $p_1(X) + p_2(X) \leq |X|$, and at the end of path
@@ -1700,13 +1699,6 @@ respectively.
 % \end{align*}
 
 
-The set $\cO_i$ refers to the set of hyperedges $\cT_1^i \cup \cT_2^i$
-in the $i$th iteration.  Note that $\cO_1 = \cO$.  In the $i$th
-iteration, hyperedges from $\cO_i$ are assigned paths from $R_i$ using
-the following rules. Also the end of the iteration, $\cL_1^{i+1},
-\cL_2^{i+1}, \cT_1^{i+1}, \cT_2^{i+1}$ are set to $\cL_1^{i},
-\cL_2^{i}, \cT_1^{i}, \cT_2^{i}$ respectively, along with some
-case-specific changes mentioned in the rules below.
 
 % \tnote[dire]{REPEAT!!
 
