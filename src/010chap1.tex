@@ -349,7 +349,7 @@ also appear consecutively.
 %  \item \textbf{hasse diagram}
   \item An element $x_m \in X$ is a
     \textbf{maximal upper bound} of $X$ if $\nexists a \in X$ such
-    that $x_m \posetr a$.  A maximal upper bound on $X$ is
+    that $x_m \ne a$ and $x_m \posetr a$.  A maximal upper bound on $X$ is
     denoted by $mub(X)$.
 
   \item A set of sets form a \textbf{single
@@ -360,12 +360,12 @@ also appear consecutively.
 
 \subsection{Graphs}
 
-\begin{definition}[Graph, Tree, Path]
+\begin{definition}[Graph, Tree, Path, Graph Isomorphism]
   \label{def:graphtree}
   \begin{enumerate}
     \hangindent \defindent
-  \item An \textbf{(undirected) graph} is $G = (V,E)$ is \stt $V$ is a
-    finite set and $E$ is a set of ordered pairs, $E \subseteq V
+  \item An \textbf{(undirected)} \textbf{graph} is $G = (V,E)$ is \stt $V$ is a
+    finite set and $E$ is a set of unordered pairs, $E \subseteq V
     \times V$. An element in $V$ is called a \textbf{vertex
       (\emph{pl.} vertices)} and an element from $E$ is called an
     \textbf{edge}. $V$ and $E$ may be written as $V(G)$ and $E(G)$
@@ -380,8 +380,15 @@ also appear consecutively.
     v_n$ are called the \textbf{endpoints} of $P$. The graph $P$ is
     called a \textbf{cycle} if it has an additional edge $(v_n,v_1)$.
 
-  \item A \textbf{tree} is a graph $T$ that has no subgraph that is a
+  \item A \textbf{tree} is a connected graph $T$ that has no subgraph that is a
     cycle.
+
+  \item A \textbf{graph isomorphism} between two graphs $G_1$ and
+    $G_2$ is a bijection $\phi: V(G_1) \rightarrow V(G_2)$ such that
+    $u, v \in V(G_1)$ are adjacent in $G_1$ if and only if $\phi(u),
+    \phi(v)$ are adjacent in $G_2$. If such a bijection exists, it is
+    said that $G_1$ is \textbf{isomorphic} to $G_2$, denoted by $G_1
+    \cong G_2$.
   \end{enumerate}
 \end{definition}
 
@@ -403,10 +410,10 @@ also appear consecutively.
   \begin{enumerate}
   \hangindent \defindent
 \item $G$ is an \textbf{interval graph} if there exists a set of
-  intervals $\cI$ \stt $G$ is isomorphic to the intersection graph of
+  intervals (of integers) $\cI$ \stt $G$ is isomorphic to the intersection graph of
   $\cI$. \[G \cong \bI(\cI)\]
   \item $G$ is a \textbf{path graph} if there exists a (undirected
-    unrooted) tree $T$ and a set of paths $\cP$ from $T$ \stt $G$ is
+    unrooted) tree $T$ and a set system of paths $\cP$ from $T$ \stt $G$ is
     isomorphic to the intersection graph of $\cP$. \[G \cong
     \bI(\cP)\] Path graphs are also known as \uvgraphs (Undirected
     tree where paths intersect in a Vertex) \cite{mw86}.
@@ -695,29 +702,32 @@ problem or the COT problem. The problem is defined as follows -- given
 a set system $\cF$ from a universe $U$ and a target tree $T$, does
 there exist a bijection from $U$ to the vertices of $T$ such that each
 set in the system maps to a path in $T$.  We refer to this as the
-{\CFTPL} problem or simply {\em tree path labeling} problem for an
-input set system and target tree pair -- $(\cF,T)$. The special case
-of the target tree being a path, is the interval assignment problem.
-We focus on generalizing the notion of an ICPIA \cite{nsnrs09} to
-characterize feasible path assignments.  We show that for a given set
-system $\cF$, a tree $T$, and an assignment of paths from $T$ to the
-sets, there is a feasible\footnote{The notion of {\em feasibility} is
-  formally defined in Section~\ref{ch:prelims}.}  bijection between
-$U$ and $V(T)$ if and only if the intersection cardinalities among any
-three sets (not necessarily distinct) is equal to that of the
-corresponding paths assigned to them and the input passes a filtering
-algorithm (described in this paper) successfully.  This algorithmic
-characterization gives a natural data structure that stores all the
-feasible bijections between $U$ and $V(T)$. This reduces the search
-space for the solution considerably from the universe of all possible
-bijections between $U$ and $V(T)$ to only those bijections that
-maintain the characterization.  Further, the filtering algorithm is
-also an efficient algorithm to test if a tree path
-labeling\footnote{The terms {\em tree path labeling} and {\em tree
-    path assignment} are, in informal language, synonyms. Formally,
-  the former refers to the bijection $\cl: \cF \rightarrow \cP$. The
-  latter refers to the set of ordered pairs $\{(S, P) \mid S \in \cF,
-  P \in \cP\}$. $\cP$ is a set of paths on $T$.} is feasible.
+{\CFTPL} problem \footnote{Problem is formally defined in
+  Section~\ref{sec:myresearchintro}.} or simply {\em tree path
+  labeling} problem for an input set system and target tree pair --
+$(\cF,T)$. The special case of the target tree being a path, is the
+interval assignment problem.  We focus on generalizing the notion of
+an ICPIA \cite{nsnrs09} to characterize feasible path assignments.  We
+show that for a given set system $\cF$, a tree $T$, and an assignment
+of paths from $T$ to the sets, there is a feasible\footnote{The notion
+  of {\em feasibility} is formally defined in
+  Section~\ref{ch:prelims}.}  bijection between $U$ and $V(T)$ if and
+only if the intersection cardinalities among any three sets (not
+necessarily distinct) is equal to that of the corresponding paths
+assigned to them and the input passes a filtering algorithm (described
+in this thesis) successfully\footnote{Formally defined by
+  Theorem~\ref{th:charac}}.  This algorithmic characterization gives a
+natural data structure that stores all the feasible bijections between
+$U$ and $V(T)$. This reduces the search space for the solution
+considerably from the universe of all possible bijections between $U$
+and $V(T)$ to only those bijections that maintain the
+characterization.  Further, the filtering algorithm is also an
+efficient algorithm to test if a tree path labeling\footnote{The terms
+  {\em tree path labeling} and {\em tree path assignment} are, in
+  informal language, synonyms. Formally, the former refers to the
+  bijection $\cl: \cF \rightarrow \cP$. The latter refers to the set
+  of ordered pairs $\{(S, P) \mid S \in \cF, P \in \cP\}$. $\cP$ is a
+  set of paths on $T$.} is feasible.
 
 
 \section[Summary of new results]{Summary of New Results in this Thesis}

@@ -1,0 +1,136 @@
+\documentclass{article}
+\usepackage{../lib/mythesislib}
+\usepackage{../lib/mylatexlib}
+\begin{document}
+
+\title{Response to M.S. Thesis Reviewers\\ 
+ {\em Thesis Title ``Generalization of the Consecutive-ones Property''}}
+\author{Anju Srinivasan}
+\date{25 March 2013}
+
+\maketitle
+
+
+\section{Reviewers}
+
+\begin{enumerate}
+\item  {\bf Dr. C. R. Subramaniam}\\ Institute of Mathematical Sciences, Chennai
+\item  {\bf Dr. Subhas Chandra Nandy}\\ Indian Statistical Institute, Kolkata
+\end{enumerate}
+
+\section{Response to Reviewer 1}
+
+\subsection{Observations}
+The following are a few observations mentioned in the review document
+with my responses/changes.
+
+\begin{enumerate}
+\item Observation: (in Page 1, second last paragraph) {\bf The result on characterization of TPL in
+    the thesis is a variant of the 1978 JCT(B) result due to Fournier
+  who showed that two hypergraphs $H_1 = (V_1, X)$ and $H_2 = V_2, Y$
+such that $|X| = |Y| = m$ are isomorphic iff there is a bijection
+$\phi$ on $I = \{1, ... , m\}$ s.t. for every $L \subset I,
+|\bigcap_{i \in L}X_i| = |\bigcap_{j=\phi(i),i \in L}Y_j|$} \\
+Response: This is an important observation and was not cited in the thesis. Also \cite{f80}
+generalizes \cite{br72} and \cite{fg65} by characterizing the
+isomorphism of two hypergraphs by means of equicardinality of certain
+edge intersections and the exclusion of certain pairs of
+subhypergraphs. TPL characterization is a special case of this with
+one of the hypergraphs having hyperedges that are paths from a tree
+and the characterization only uses edge intersections of at most 3
+hyperedges. This has been added in the Conclusions chapter Page 72
+under {\em Graph isomorphism and logspace canonization}.
+
+\item Observation: (in Page 2, first paragraph) {\bf A $k$-subdivided tree is
+  a tree with a single central vertex with a number of paths each of
+  $k$ edges emanating from it.}\\
+Response: $k$-subdivided as defined in this thesis (Section
+3.2.4, Page 43) is such that each
+of the aforementioned paths are of length ``$k+1$'' edges since each such
+path has $k$ nodes apart from the central node and the leaf node, i.e.
+$k+2$ nodes. No change in the thesis.
+\end{enumerate}
+
+
+\subsection{Comments}
+Responses to the comments in review document Page 2 items 0 to 7.
+
+\begin{enumerate}
+\item[0] Comment: {\bf In thesis Page 7, Definition 1.3.7: After $x_m
+  \le a$, you need to add $x_m \ne a$.}\\ 
+Response: True, earlier definition did not accomodate the fact $x_m
+\le x_m$. Suggested change made in Page 7 to the definiton of Poset.
+
+\item Comment: {\bf In thesis Page 7, Definition
+    1.3.8: $E$ is a set of ``unordered'' pairs. You need to add the
+    word ``unordered''}\\
+Response: Suggested change made in to definition of Undirected Graph Page 7 Definition 1.3.8 (1).
+
+\item Comment: {\bf In thesis Page 8, A tree is a {\em connected} and
+    acyclic graph}\\
+Response: The word ``connected'' has been added to the definition of Tree in
+Page 7 Definition 1.3.8 (3).
+
+\item Comment: {\bf In thesis Page 8, Definition 1.3.10 you need to
+    add that one is looking at intervals of integers. Also define
+    isomorphism between graphs for the sake of completeness}.\\
+Response: Definition of Interval graph has been changed to say ``a set
+of intervals (of integers)'' in Page 8, Definition 1.3.10. Graph
+isomorphism definition has been added in Page 7, Definition 1.3.8(4)
+as follows: A \textbf{graph isomorphism} between two graphs $G_1$ and
+    $G_2$ is a bijection $\phi: V(G_1) \rightarrow V(G_2)$ such that
+    $u, v \in V(G_1)$ are adjacent in $G_1$ if and only if $\phi(u),
+    \phi(v)$ are adjacent in $G_2$. If such a bijection exists, it is
+    said that $G_1$ is \textbf{isomorphic} to $G_2$, denoted by $G_1
+    \cong G_2$.
+
+\item Comment: {\bf In thesis Page 8, Definition 1.3.10 definition of
+path graph: You need to emphasise that $\cP$ forms a set system}\\
+Response: This change has been made - ``a set system of paths $\cP$''
+in Page 8 Definition 1.3.10(2).
+
+\item Comment: {\bf In thesis Page 12, third para of Section 1.5: you
+    need to write it more precisely and carefully conveying the
+    idea. As it is it is not clear what you are saying.}\\
+  Response: The problem {\sc Compute feasible tree path labeling} and
+  its result have been described formally and precisely in Chapter 3
+  (New results). The aforementioned paragraph describes the same
+  informally. These informal sentences have been footnoted with the
+  corresponding definitions and theorems from Chapter 3. This change
+  is in Page 12.
+
+\item Comment: {\bf In thesis Page 28, Definition 7 (of binary
+    operator /): it is not defined precisely. What do you mean by
+    ``$b$ is a new element added..''?}.\\
+Response: This was in thesis Page 26. $A/B$ is created by removing the elements of second operand set $B$ from
+the first operand set $A$ and introducing a new element {\em not} in the
+universe to $A$ to represent set $B$. This is a set operation 
+mentioned in \cite{mm96} (they use ``$B$'' to denote the new element to represent
+set $B$ which is also confusing) which is eventually used to decompose
+permutation of elements in $A$ to permutation of elements in $A/B$ and
+permutation of elements in $B$.
+Perhaps it would be clearer if
+$b$ is replaced by $x_B$. This change has been made in Page 26
+Definition 2.2.4 (7) and other mentions of this operation ``/'' Page
+27 item (iii) and $h$ has been replaced with $x_H$ in Corollary
+2.2.8. There was also a typo in Page 27 paragraph under Corollary
+2.2.8 item (ii) where ``$U \setminus H$'' was written instead of $U / H$.
+This has also been corrected.
+
+\item Comment: {\bf In thesis Page 39 Definition 2.3.1: the definition
+  of $A_\cF$ is not clear. Where is the dependence on $\cF$?}\\
+Response: This was in thesis Page 36. It is true, there is no
+dependence in $\cF$. It is only dependent on the universe $U$ of
+$\cF$. All occurences of $A_\cF$ has been changed to $A_\U$ in Page 36.
+\end{enumerate}
+
+
+
+\section{Response to Reviewer 2}
+
+
+\bibliographystyle{alpha}%
+\bibliography{../lib/cop-variants__thesis} %
+
+
+\end{document}

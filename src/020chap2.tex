@@ -507,10 +507,11 @@ simpler.
   \item \label{def::slashop} The binary operator $/$ is defined as
     follows. Let $A, B$ be two sets from set system $\cF$.
     \begin{align*}
-      A/B &= A \setminus B \cup \{b\}\\
+      A/B &= A \setminus B \cup \{x_B\}\\
       \cF/B &= \{ S/B \mid S \in \cF, S \nsubseteq B \}
     \end{align*}
-    $b$ is a new element added as a representative for $B$.
+    $x_B \notin U$ is a new element introduced as shown above as a
+    representative for $B$ after removing elements of $B$.
  \end{enumerate}
   \dstop
 \end{definition}
@@ -570,8 +571,7 @@ Definition~\ref{def:orthosets}~(\ref{def::slashop}).
 \def \ff {\overline{\cF} \cap \cF^{\bot}}
 The idea behind Theorem~\ref{th:mmdecomp} is as follows. A permutation $\alpha$
 of $U$ is a composition of two permutations with respect to $H$ - (i) a
-permutation $\gamma$ of $H$ and (ii) a permutation $\beta$ of $U
-\setminus H$.
+permutation $\gamma$ of $H$ and (ii) a permutation $\beta$ of $U / H$.
 
 For two mutually orthogonal sets $A, B$ such that $A \nsubseteq B$,
 $A/B$ is defined as the set obtained by removing all elements of $B$
@@ -580,7 +580,7 @@ $A/B$ results in only the following three possibilities.
 \begin{enumerate}[i. ]
 \item $A$ and $ B$ are disjoint: $A/B  = A$
 \item $A$ is a subset of $B$: $A/B$ is not defined
-\item $B$ is a subset of $A$: $A/B = A \setminus B \cup \{b\}$, where $b$
+\item $B$ is a subset of $A$: $A/B = A \setminus B \cup \{x_B\}$, where $x_B$
 is a new element not in $U$ added to represent $B$.
 \end{enumerate}
 
@@ -600,7 +600,7 @@ all \COP orders of $\cF$, if any.
   encodes all permutations in $\valid{U/H, \cF/H}$ and also a \PQRtree
   $T_2$ that encodes all permutations $\valid{H,\cF \cap \power{H}}$,
   then a \PQRtree $T$ for $\cF$ can be obtained by replacing the leaf
-  $h$ in $T_1$ by $T_2$, where $h$ is the representative element for
+  $x_h$ in $T_1$ by $T_2$, where $x_H$ is the representative element for
   $H$ in $T_i$.
 \end{corollary}
 
@@ -988,8 +988,10 @@ its obvious simplicity in implementation.
 
 The work of this thesis described in Chapter~\ref{ch:myresearch} is
 largely an extension of the ICPIA characterization. In the new work,
-we adopt the notation used in \cite{kklv10} (also described in that
-chapter).
+we adopt the notation used in \cite{kklv10} namely, that of hypergraph
+isomorphism (also described in that chapter). 
+
+
 
 \section{Matrices without \COP}
 \label{sec:surveycopopt}
@@ -1196,12 +1198,12 @@ relation.
 
 \begin{definition}[{Incompatibility graph \cite[Def.~6.1]{mcc04}}]
   \label{def:incompatibility}
-  Let $\cF$ be a set system with universe $U$. Let $A_{\cF} = \{(a,b)
+  Let $\cF$ be a set system with universe $U$. Let $A_U = \{(a,b)
   \mid a, b \in U, a \ne b\}$. The {\em incompatibility graph}
   $G_I^\cF$ of $\cF$ is an undirected graph defined as follows.
 %  \singlespacing
   \begin{enumerate}
-  \item   The vertex set of $G_I^\cF$ is $ A_{\cF}$
+  \item   The vertex set of $G_I^\cF$ is $A_U$
   \item  The edge set of $G_I^\cF$ are pairs of the following forms
     \begin{itemize}
     \item $\{(a,b),(b,a)\}$ for all $a, b \in U$
@@ -1219,7 +1221,7 @@ incompatible pairs. Thus it must consist of an independent set $I$ of
 the incompatibility graph. Moreover the independent set must have
 exactly half the vertex set of $G_I^\cF$ since the \COP order must
 involve all elements in $U$ and each vertex denotes a pair of elements. Secondly, the reverse of a \COP order is
-also a \COP order. Thus $A_\cF \setminus I$ must also be an
+also a \COP order. Thus $A_U \setminus I$ must also be an
 independent set. In other words, $G_I^\cF$ must be bipartite with
 partitions being of equal size if $\cF$ has \COP. An odd cycle is a
 forbidden structure in a bipartite graph, hence the same is forbidden
