@@ -68,6 +68,13 @@ L.~Babel, I.~N. Ponomarenko, and G.~Tinhofer.
   directed path graphs.
 \newblock {\em J. Algorithms}, 21(3):542--564, 1996.
 
+\bibitem[BR72]{br72}
+C~Berge and R~Rado.
+\newblock Note on isomorphic hypergraphs and some extensions of whitney's
+  theorem to families of sets.
+\newblock {\em Journal of Combinatorial Theory, Series B}, 13(3):226 -- 241,
+  1972.
+
 \bibitem[BS03]{bs03}
 David~A. Bader and Sukanya Sreshta.
 \newblock A new parallel algorithm for planarity testing, April~11 2003.
@@ -190,6 +197,12 @@ D.~R. Fulkerson and O.~A. Gross.
 Peter~C. Fishburn.
 \newblock {\em Interval Orders and Interval Graphs}.
 \newblock Wiley, 1985.
+
+\bibitem[Fou80]{f80}
+J.-C. Fournier.
+\newblock Isomorphismes d'hypergraphes par intersections {\'e}quicardinales
+  d'ar{\^e}tes et configurations exclues.
+\newblock {\em J. Comb. Theory, Ser. B}, 29(3):321--327, 1980.
 
 \bibitem[Gar07]{gar07}
 Frederic Gardi.

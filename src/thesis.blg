@@ -1,4 +1,5 @@
-This is BibTeX, Version 0.99c (Web2C 7.5.6)
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: 001certificate.aux
 A level-1 auxiliary file: 002ack.aux
@@ -14,45 +15,45 @@ The style file: alpha.bst
 Database file #1: ../lib/cop-variants__thesis.bib
 Warning--there's a number but no volume in mw86
 Warning--empty booktitle in tz04
-You've used 91 entries,
+You've used 93 entries,
             2543 wiz_defined-function locations,
-            1088 strings with 16075 characters,
-and the built_in function-call counts, 35249 in all, are:
-= -- 3624
-> -- 1510
-< -- 59
-+ -- 519
-- -- 486
-* -- 2486
-:= -- 5772
-add.period$ -- 284
-call.type$ -- 91
-change.case$ -- 534
-chr.to.int$ -- 89
-cite$ -- 93
-duplicate$ -- 1436
-empty$ -- 2572
-format.name$ -- 614
-if$ -- 7172
+            1099 strings with 16391 characters,
+and the built_in function-call counts, 36017 in all, are:
+= -- 3702
+> -- 1537
+< -- 60
++ -- 527
+- -- 494
+* -- 2546
+:= -- 5896
+add.period$ -- 290
+call.type$ -- 93
+change.case$ -- 545
+chr.to.int$ -- 91
+cite$ -- 95
+duplicate$ -- 1465
+empty$ -- 2634
+format.name$ -- 625
+if$ -- 7331
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 90
-newline$ -- 462
-num.names$ -- 277
-pop$ -- 439
+missing$ -- 92
+newline$ -- 472
+num.names$ -- 283
+pop$ -- 445
 preamble$ -- 1
-purify$ -- 633
+purify$ -- 646
 quote$ -- 0
-skip$ -- 1215
+skip$ -- 1239
 stack$ -- 0
-substring$ -- 2125
-swap$ -- 219
-text.length$ -- 59
-text.prefix$ -- 40
+substring$ -- 2187
+swap$ -- 221
+text.length$ -- 60
+text.prefix$ -- 41
 top$ -- 0
-type$ -- 696
+type$ -- 712
 warning$ -- 2
-while$ -- 358
-width$ -- 96
-write$ -- 1193
+while$ -- 365
+width$ -- 98
+write$ -- 1219
 (There were 2 warnings)

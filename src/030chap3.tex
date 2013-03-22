@@ -96,7 +96,7 @@ With respect to computing a feasible TPL, as suggested by \CFTPL
 problem, we were unable to discover an efficient algorithm for
 it. However, we consider two special cases of the same on special
 target trees -- namely, \CFTPLINT and \CFTPLKTREE on intervals and
-\kstars, respectively.  Section~\ref{sec:spltargettree} discusses
+\kstars (see Definition~\ref{def:ksubstar}), respectively.  Section~\ref{sec:spltargettree} discusses
 these problems and their polynomial time solutions.  \CFTPLINT is the
 known problem of \COP testing. The polynomial time solution to
 \CFTPLKTREE is a new result by us.
@@ -586,12 +586,16 @@ cardinalities for $3 < d < n$ in a tree path labeling.
   \leq i \leq 4$.  Then, $|\cap_{i=1}^4 S_i| = |\cap_{i=1}^4 P_i|$.
 \end{lemma}
 \begin{proof}
-  Consider the sets $S_2 \cap S_1$, $S_3 \cap S_1$, and $S_4 \cap
-  S_1$, and their images $P_2 \cap P_1$, $P_3 \cap P_1$, and $P_4 \cap
-  P_1$ respectively.  It is clear that this path labeling preserves
-  pairwise intersection cardinalities.  In this case, it is clear that
-  the 3 sets are assigned paths in the path $P_1$.  Now by applying
-  Lemma~\ref{lem:intersection-cardinality}, it follows that
+  Consider the set of set intersections with $S_1$ $\cF' = \{S_2 \cap S_1, S_3
+  \cap S_1, S_4 \cap S_1\}$ and let $\cl'$ be a tree path labeling of
+  $\cF'$ such that $\cl'(S_i \cap S_1) = P_i \cap P_1, 2 \le i \le
+  4$. Clearly, $P_2 \cap P_1$, $P_3 \cap P_1$, and $P_4 \cap P_1$ are
+  subpaths of path $P_1$, thus equivalent to intervals.  Due to the
+  three way intersection cardinality preservation property of the
+  ICPPL $(\cF, \cl)$, this new tree path labeling $(\cF', \cl')$
+  preserves pairwise intersection cardinalities.  Now by applying
+  Lemma~\ref{lem:intersection-cardinality} to the sets in $\cF'$ and
+  their corresponding path images due to $\cl'$, it follows that
   $|\cap_{i=1}^4 S_i| =| \cap_{i=1}^4 P_i|$.
 \end{proof}
 \begin{corollary} 
@@ -1611,8 +1615,8 @@ due to this tree's close relationship with intervals.
 \end{figure}
 
 In this section we consider the problem of assigning paths from a
-$k$-subdivided star $T$ to a given set system $\cF$ as described by
-the \CFTPLKTREE problem.  We consider
+$k$-subdivided star (see Definition~\ref{def:ksubstar}) $T$ to a given
+set system $\cF$ as described by the \CFTPLKTREE problem.  We consider
 $\cF$ for which the overlap graph $\bO(\cF)$ is connected.  The
 overlap graph is well-known from the work of
 \cite{kklv10,nsnrs09,wlh02}.  We use the notation in
