@@ -9,7 +9,7 @@
                     ]{beamer}   
 
 
-%\includeonlyframes{SLIDENOW}    % Use when drafting for fast
+\includeonlyframes{SLIDENOW}    % Use when drafting for fast
                                 % compile turnaround time.
 
 \usepackage[normalem]{ulem}
@@ -177,6 +177,35 @@
 \newcommand{\seq}[1]{\left\langle #1 \right\rangle}
 \newcommand{\set}[1]{\left\{ #1\right\}}
 \newcommand{\supp}[1]{supp\left( #1 \right)}
+
+\def \probdefwidth {0.85\linewidth}
+%params: title, input. body: question.
+\newenvironment{problemdef}[2]%
+{% Begin def.
+  \small%
+    \par
+    \begin{minipage}[b]{\probdefwidth}%{5in}%
+%      \vspace{2mm}%
+      {\large #1}\\%     Title
+%      \hrule
+      \begin{tabular}[t]{l|l}%
+%        \hline\\
+        {\tt Input} & 
+        \begin{minipage}[t]{\probdefwidth}%
+          #2\\%          Input
+        \end{minipage}\\
+
+        {\tt Question} &
+        \begin{minipage}[t]{\probdefwidth}%
+        %                Type out question
+}%
+{% End def.
+        \end{minipage}\\
+      \end{tabular}%
+    \end{minipage}\\  
+}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title slide details
@@ -524,56 +553,155 @@
 
 % % }
 
-\frame<1>[label=intro:q2]{
-%\frame<1-2>[label=intro:q2]{
-  \begin{center}
-    {\Huge {\tt 2}}
-  \end{center}
-  \begin{block}{Computing a feasible TPL}
-    Given hypergraph $\cF$ with certain properties and a
-    \alert<2>{$k$-subdivided star} $T$, \uline{can we find a feasible TPL 
-      $\cl$ to $T$?}
-  \end{block}
-  \note{}
+\def \TPL {TPL }
+\def \ICPPL {ICPPL }
+\def \FTPL {\textsc{Feasible Tree Path Labeling} }
+\def \CFTPL {\textsc{Compute Feasible Tree Path Labeling} } 
+\def \kstar {$k$-subdivided star }
+\def \kstars {$k$-subdivided stars }
+\def \CFTPLINT {\textsc{Compute Interval
+    Labeling} } 
+\def \CFTPLKTREE {\textsc{Compute $k$-subdivided Star Path
+    Labeling} } 
+
+\section{Problems}
+
+\frame<1-2>[label=intro:q1]{
+  \begin{block}{\sc \CFTPL}
+    \begin{overlayarea}{\textwidth}{\overlayht} 
+    \only<1>
+    {
+      \begin{problemdef}{\ }{A hypergraph $\cF$ with vertex set $U$
+          and a tree $T$.}
+        Does there exist a set of paths $\cP$ from $T$ and a bijection
+        $\cl$~$:$~$\cF \rightarrow \cP$, such that {\FTPL} returns
+        {\bf true} on $(\cF, T, \cl)$.
+      \end{problemdef}
+    }
+    \only<2>
+    {
+      \begin{itemize}
+      \item Is the given hypergraph $\cF$ a \alert{path hypergraph} w.r.t. target tree $T$?
+      \item i.e. find at least one feasible tree path labeling $\cl:
+        \cF \rightarrow P$, $P$ is a set of paths on $T$.
+      \item Complexity is inconclusive for arbitrary trees,
+        polynomial time for certain classes of trees.
+      \end{itemize}
+    }
+  \end{overlayarea}
+\end{block}
+  \note{}% 
 }
 
-% \frame {
-% %  \frametitle{$k$-subdivided star}
+\def\overlayht{4.5cm}
+\frame<1-2>[label=intro:q2]{
+  \begin{block}{\sc \FTPL}
+    \begin{overlayarea}{\textwidth}{\overlayht} 
+    \only<1> {
+      \begin{problemdef}{\ }{A hypergraph $\cF$ with vertex set $U$, a
+          tree $T$, a set of paths $\cP$ from $T$ and a bijection
+          $\cl$~$:$~$\cF \rightarrow \cP$.}
 
-%   \begin{definition}[$k$-subdivided star]
-%     A \alert{$k$-subdivided star} is a star with all its edges
-%     subdivided exactly $k$ times.
-%   \end{definition}
+        Does there exist a bijection $\phi$~$:$~$U \rightarrow V(T)$
+        such that $\phi$ when applied on any hyperedge in $\cF$ will
+        give
+        the path mapped to it by the given tree path labeling $\cl$.\\
+        { i.e., $\cl(S) = \{\phi(x) \mid x \in S\}$, for every
+          hyperedge $S \in \cF$.}
+      \end{problemdef}
+    }
+    \only<2>
+    {
+      \begin{itemize}
+      \item Is the given TPL $\cl$ of hypergraph $\cF$ on tree $T$ feasible?
+      \item What is the \alert{hypergraph isomorphism} $\phi: U \rightarrow V(T)$?
+      \item Solvable in polynomial time.
+      \end{itemize}
+      
+    }
+  \end{overlayarea}
+\end{block}
+  \note{}% 
+}
 
-%   \only<2>{ \includegraphics[scale=0.5]{star.pdf} $k = 0$ }
-%   \only<3>{ \includegraphics[scale=0.5]{kstar.pdf}  $k = 2$}
+\def\overlayht{3.5cm}
+\frame<1-2>[label=intro:q3]{
+  \begin{block}{\sc \CFTPLINT}
+    \begin{overlayarea}{\textwidth}{\overlayht} 
+    \only<1>{\CFTPL when target tree is an \alert{interval or path $P_n$}}
+    \only<2> 
+    {
+      \begin{itemize}
+      \item Is the given hypergraph $\cF$ an \alert{interval
+          hypergraph} \cite{kklv10}?
+      \item Equivalent to consecutive ones property checking or ICPIA \cite{nsnrs09}
+      \item Solvable in polynomial time.
+      \end{itemize}      
+    }
+    \end{overlayarea}
+  \end{block}
+  
+  \note{}% 
+}
 
-%   \note{we'll see details later.}
-% }
+\def\overlayht{4cm}
+\frame<1-2>[label=intro:q4]{
+  \begin{block}{\sc \CFTPLKTREE}
+    \begin{overlayarea}{\textwidth}{\overlayht}
+      \only<1>{ \CFTPL when target tree is a \alert{\kstar} and every
+        hyperedge in $\cF$ is of \alert{size at most $k+2$}} \only<2>
+      {
+        \begin{itemize}
+        \item Solvable in polynomial time.
+        \end{itemize}
+      }
+    \end{overlayarea}
+  \end{block}
+  
+  \note{}%
+}
+
+
+\def\overlayht{8cm} 
+\frame { %
+  \frametitle{$k$-subdivided star}%
+  \begin{overlayarea}{\textwidth}{\overlayht}
+    \begin{block}{}
+      A star with all its edges subdivided exactly $k$ times.
+    \end{block}
+
+%  \begin{tabular}[b]{lr}
+    \only<2>{ \includegraphics[scale=0.5]{star.pdf} $k = 0$ }
+    \only<3->{ \includegraphics[scale=0.5]{kstar.pdf} $k = 2$}
+%  \end{tabular}
+  
+ \end{overlayarea}
+}
 
 % %\againframe<1>{intro:q2}
 
 
 \section[Characterization]{Characterization of a feasible TPL}
-
-\frame {
-% \againframe<1>{intro:q1}
-%   \note{recall this problem. we'll see the algorithms.}
-  \begin{center}
-    {\Huge 1}
-  \end{center}
-    \begin{block}{Characterization of feasible TPL}
-    \end{block}
-}
-
+\def\overlayht{4cm}
+%\frame[label=SLIDENOW] {
+\againframe<1>{intro:q1}
+%}
 
 
 \subsection{ICPPL}
-\frame [label=icppl:pr]{ %[label=SLIDENOW]{ % 
-  \frametitle{ICPPL - a TPL with special properties}
-  \framesubtitle{Intersection Cardinality Preserving Path Labeling}
+\frame [label=SLIDENOW] { % [label=icppl:pr]{ %
+  \frametitle{A characterization of feasible TPL}
+  \begin{overlayarea}{\textwidth}{\overlayht}
+    \begin{block}{Intersection Cardinality Preserving Path Labeling (ICPPL)}
+      A path labeling $(\cF, \cl)$ on the given tree $T$ s.t.
+      \[|S_1 \cap S_2 \cap S_3| = |\cl(S_1) \cap \cl(S_2) \cap
+      \cl(S_3)|\]
+      for all not necessarily distinct $S_1, S_2, S_3 \in
+      \cF$
 
-  \tnote[a]{TBD list ICPPL properties}
+    \end{block}
+  \end{overlayarea}
+
   \note{}
 }
 
@@ -653,8 +781,8 @@
 \section[Computation of TPL]{Computing a feasible TPL on
   $k$-subdivided trees} 
 
-\againframe<1>{intro:q2}       % Show q2 again - refresher.
-  \note{}
+% \againframe<1>{intro:q2}       % Show q2 again - refresher.
+%   \note{}
 
 \subsection{Algorithm}
 
@@ -726,11 +854,15 @@
 }
 
 \subsection*{References}
-\begin{frame}[allowframebreaks]{References}% {The foundation}
-\scriptsize  %\footnotesize
-\bibliographystyle{alpha}
-\bibliography{./lib/cop-variants_beamer}
+\begin{frame}[allowframebreaks]{References}
+  \scriptsize %\footnotesize
+  \bibliographystyle{alpha}%
+  \bibliography{../lib/cop-variants__thesis}
+\end{frame}
 
+
+\begin{frame}{Thank you}
+  Questions?
 \end{frame}
 
 % \begin{frame}
