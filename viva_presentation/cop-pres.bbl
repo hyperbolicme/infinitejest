@@ -1,44 +1,21 @@
-\begin{thebibliography}{KKLV10}
+\begin{thebibliography}{McC04}
 
-\bibitem[BL76]{bl76}
-Kellogg~S. Booth and George~S. Lueker.
-\newblock Testing for the consecutive ones property, interval graphs, and graph
-  planarity using {$PQ$}-tree algorithms.
-\newblock {\em Journal of Computer and System Sciences}, 13(3):335--379,
-  December 1976.
+\bibitem[Fou80]{f80}
+J.-C. Fournier.
+\newblock Isomorphismes d'hypergraphes par intersections {\'e}quicardinales
+  d'ar{\^e}tes et configurations exclues.
+\newblock {\em J. Comb. Theory, Ser. B}, 29(3):321--327, 1980.
 
-\bibitem[FG65]{fg65}
-D.~R. Fulkerson and O.~A. Gross.
-\newblock Incidence matrices and interval graphs.
-\newblock {\em Pac.~J. Math.}, 15:835--855, 1965.
+\bibitem[McC04]{mcc04}
+Ross~M. McConnell.
+\newblock A certifying algorithm for the consecutive-ones property.
+\newblock In {\em SODA: ACM-SIAM Symposium on Discrete Algorithms (A Conference
+  on Theoretical and Experimental Analysis of Discrete Algorithms)}, 2004.
 
-\bibitem[Gol04]{mcg04}
-Martin~Charles Golumbic.
-\newblock {\em Algorithmic graph theory and perfect graphs}, volume~57 of {\em
-  Annals of Discrete Mathematics}.
-\newblock Elsevier Science B.V., 2004.
-\newblock Second Edition.
-
-\bibitem[KKLV10]{kklv10}
-Johannes K{\"o}bler, Sebastian Kuhnert, Bastian Laubner, and Oleg Verbitsky.
-\newblock Interval graphs: Canonical representation in logspace.
-\newblock {\em Electronic Colloquium on Computational Complexity (ECCC)},
-  17:43, 2010.
-
-\bibitem[Lin92]{sl92}
-Steven Lindell.
-\newblock A logspace algorithm for tree canonization (extended abstract).
-\newblock In {\em STOC}, pages 400--404. ACM, 1992.
-
-\bibitem[NS09]{nsnrs09}
-N.~S. Narayanaswamy and R.~Subashini.
-\newblock A new characterization of matrices with the consecutive ones
-  property.
-\newblock {\em Discrete Applied Mathematics}, 157(18):3721--3727, 2009.
-
-\bibitem[Tuc72]{at72}
-Alan Tucker.
-\newblock A structure theorem for the consecutive 1's property.
-\newblock {\em J. Comb.~Theory Series B}, 12:153--162, 1972.
+\bibitem[MM96]{mm96}
+J.~Meidanis and E.~G. Munuera.
+\newblock A theory for the consecutive ones property.
+\newblock In {\em Proc. of the III South American Workshop on String
+  Processing}, volume~88, pages 194--202, Recife, Brazil, 1996.
 
 \end{thebibliography}

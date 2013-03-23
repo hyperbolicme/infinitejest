@@ -37,13 +37,13 @@
 \contentsline {subsection}{\numberline {3.2.3}Overlap Graphs and Marginal Hyperedges}{43}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Miscellaneous}{43}{subsection.3.2.4}
 \contentsline {section}{\numberline {3.3}Characterization of FTPL}{44}{section.3.3}
-\contentsline {section}{\numberline {3.4}Solution to study group accommodation problem\xspace }{51}{section.3.4}
+\contentsline {section}{\numberline {3.4}Solution to study group accommodation problem\xspace }{52}{section.3.4}
 \contentsline {section}{\numberline {3.5}Special target trees}{54}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Target tree is a Path}{55}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Target tree is a $k$-subdivided Star}{55}{subsection.3.5.2}
 \contentsline {section}{\numberline {3.6} TPL on arbitrary trees}{60}{section.3.6}
-\contentsline {section}{\numberline {3.7}Complexity}{68}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Time complexity of TPL}{68}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}Consecutive Ones Testing is in Logspace}{68}{subsection.3.7.2}
+\contentsline {section}{\numberline {3.7}Complexity}{69}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Time complexity of TPL}{69}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Consecutive Ones Testing is in Logspace}{69}{subsection.3.7.2}
 \contentsline {chapter}{\numberline {4}Conclusion}{71}{chapter.4}
-\contentsline {chapter}{Bibliography}{75}{Item.108}
+\contentsline {chapter}{Bibliography}{75}{Item.112}

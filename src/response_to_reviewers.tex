@@ -1,8 +1,11 @@
-\documentclass{article}
+\documentclass[12pt,a4paper]{article}
+\usepackage{fullpage}
 \usepackage[normalem]{ulem}
 \usepackage{../lib/mythesislib}
 \usepackage{../lib/mylatexlib}
+\usepackage{setspace}
 %
+
 \begin{document}
 
 \title{Response to M.S. Thesis Review Comments\\ 
@@ -12,12 +15,16 @@
 
 \maketitle
 
+\onehalfspacing
+
 \section{Reviewers}
 
 \begin{enumerate}
 \item  {\bf Dr. C. R. Subramaniam}\\ Institute of Mathematical Sciences, Chennai
 \item  {\bf Dr. Subhas Chandra Nandy}\\ Indian Statistical Institute, Kolkata
 \end{enumerate}
+The reviewers careful comments are acknowledged and
+appreciated. Responses to the same are given in following sections.
 
 \section{Response to Reviewer 1}
 
@@ -107,7 +114,7 @@ with my responses/changes.
 \item Observation: (in Page 1, second last paragraph) {\bf The result
     on characterization of TPL in the thesis is a variant of the 1978
     JCT(B) result due to Fournier who showed that two hypergraphs $H_1
-    = (V_1, X)$ and $H_2 = V_2, Y$ such that $|X| = |Y| = m$ are
+    = (V_1, X)$ and $H_2 = (V_2, Y)$ such that $|X| = |Y| = m$ are
     isomorphic iff there is a bijection $\phi$ on $I = \{1, ... , m\}$
     s.t. for every $L \subset I,
     |\bigcap_{i \in L}X_i| = |\bigcap_{j=\phi(i),i \in L}Y_j|$} \\
@@ -123,9 +130,9 @@ with my responses/changes.
     logspace canonization}.
 
 \item Observation: (in Page 2, first paragraph) {\bf A $k$-subdivided
-    tree is a tree with a single central vertex with a number of paths
+    \sout{tree} [star] is a tree with a single central vertex with a number of paths
     each of $k$ edges emanating from it.}\\
-  Response: $k$-subdivided as defined in this thesis (Section 3.2.4,
+  Response: $k$-subdivided star as defined in this thesis (Section 3.2.4,
   Page 43) is such that each of the aforementioned paths are of length
   ``$k+1$'' edges since each such path has $k$ nodes apart from the
   central node and the leaf node, i.e.  $k+2$ nodes. No change in the
@@ -135,7 +142,6 @@ with my responses/changes.
 
 \section{Response to Reviewer 2}
 
-\section{Other comments}
 \begin{enumerate}
 \item Observation: {\bf The definition of $k$-subdivided star is not
     given in the thesis. What I understood is that it has a root node $v$
@@ -182,7 +188,31 @@ follows:
   given. If possible, state the problem in words. ... Explicitly state
 the roles of these two filters in the algorithm with proper
 figures.}\\
-Response: 
+Response: The problems are described in words but they were part of a
+long narrative. It has been summarised now in Page 44 before going
+into details of the algorithms as follows:
+
+{\em \begin{enumerate}
+\item [Filter 1.] \filteri Refine $\cF$ such that the resulting
+  labeling will not have paths that share a leaf thus each leaf being
+  unique to a path. This is done by breaking the paths into subpaths and their
+  corresponding preimage sets as described in Algorithm 1.
+\item [Filter 2.] \filterii Find the element in universe $U$ that maps to each
+  leaf in $T$ as described in Algorithm 2. 
+\end{enumerate}
+Remove the leaves from $T$ and their corresponding preimages from $U$
+and call the filters again. This is repeated until the resulting
+truncated tree is a path. The remaining mapping can be found using
+ICPIA.
+}
+
+Hopefully this makes the role of the filter algorithms clear.
+I felt that describing details of the pseudocode in words in the narrative would
+be tedious and redundant and the pseudocode has comments that describe what is being
+done whenever it is not obvious. Regarding figures, Section 3.4 in
+page 52 has an example worked out in detail with figures. This was
+added with the intention of illustrating the filter algorithms.
+
 
 \item Comment: {\bf It is shown that TREE PATH LABELING PROBLEM on
     arbitrary trees can be solved polynomial time if the two
@@ -191,13 +221,35 @@ Response:
     subproblems are not given. However, in page 71 item numbers 1 and
     2 the subproblems are described with several notations, where the
     motivation is unclear.}\\
-Response: 
+Response: The prime submatrices partial order theory and notations are
+required for a formal definition.
+The two subproblems are defined now as \FOCPS and \FMFT and motivation is
+given in Page 61 before setting up the theory and formal defintion is
+given in page 66 after setting up the theory required to define it.
+
+{\em
+
+\begin{problemdef}{\FOCPS}{A hypergraph $\cF$ with its in-tree
+    partitions $\{\bP_1,\ldots,\bP_r\}$ and
+    a tree $T$.}
+  Compute a partition of $T$ into subtrees $\{T_1, \ldots, T_r\}$ such
+  that there exists an \ICPPL for $mub(\bP_i)$ from subtree
+  $T_i$ for all $i \in [r]$ and there exists an ICPIA for all other
+  prime submatrices in $\bP_i$ as claimed in Lemma 3.6.8.
+\end{problemdef}
+
+\begin{problemdef}{\FMFT}{An in-tree partition $\bP_i$ of a hypergraph
+    $\cF$ and a subtree $T_i$ of a tree $T$.}
+  Compute a feasible TPL for $mub(\bP_i)$ from subtree $T_i$.
+\end{problemdef}
+}
+
 
 \item Comment: {\bf ... it is shown that consecutive 1s property
-    testing for a \sout {graph} [binary matrix] is solvable in LOGSPACE. {\em This is a very
+    testing for a \sout {graph} [hypergraph] is solvable in LOGSPACE. {\em This is a very
       important contribution.}}\\
 Response: Since this is a conclusion from earlier results, it has not
-been mentioned as a ``new'' result. It is mentioned in the abstract as a
+been mentioned as a completely ``new'' result. It is mentioned in the abstract as a
 derived result.
 \end{enumerate}
 

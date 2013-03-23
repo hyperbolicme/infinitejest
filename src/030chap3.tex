@@ -466,9 +466,21 @@ computes the feasibility bijection if it is feasible or else reports
 failure. This algorithm recursively does two levels of filtering of
 $(\cF, \cl)$ to make it simpler in terms of set intersections while
 retaining a non-empty subset of isomorphisms, if any, between $\cF$
-and $\cF^\cl$. These two filters are \filteri in
-Algorithm~\ref{al:filterone} and \filterii in
-Algorithm~\ref{al:filtertwo}.
+and $\cF^\cl$. These two filters are \filteri and \filterii which in
+summary are as follows:
+\begin{enumerate}
+\item \filteri Refine $\cF$ such that the resulting
+  labeling will not have paths that share a leaf thus each leaf being
+  unique to a path. This is done by breaking the paths into subpaths and their
+  corresponding preimage sets as described in Algorithm~\ref{al:filterone}.
+\item \filterii Find the element in universe $U$ that maps to each
+  leaf in $T$ as described in Algorithm~\ref{al:filtertwo}. 
+\end{enumerate}
+Remove the leaves from $T$ and their corresponding preimages from $U$
+and call the filters again. This is repeated until the resulting
+truncated tree is a path. The remaining mapping can be found using
+ICPIA.
+
 % One direction of this claim isclear: that if a path labeling is
 % feasible, then all intersection cardinalities are preserved,
 % i.e. the path labeling is an ICPPL. Algorithm~\ref{al:filterone}
@@ -2103,6 +2115,30 @@ solvability comes from these two subproblems. We leave these subproblems
 open to be solved in \p and only mention the obvious brute force
 method of solution.
 
+The two subproblems \FOCPS and \FMFT are informally defined as
+follows. The precise definition is given after setting up the theory
+and notations required in the following paragraphs.
+\begin{enumerate}
+\item \FOCPS - {\em Dividing the tree $T$ to subtrees for overlap
+    component partitions: } Using the overlap partial ordering of
+  hyperedges in $\cF$, the hyperedges can be divided into partitions
+  of sub-hypergraphs (called partitions of prime submatrices) that are
+  disjoint from each other. Being disjoint they must be assigned to
+  disjoint subtrees of $T$ such that \FMFT can be solved successfully
+  and the other sub-hypergraphs in the partition will have an ICPIA
+  in accordance with the overlap property. Finding the right partition
+  of $T$ into subtrees is the first subproblem.
+
+\item \FMFT - {\em Finding ICPPL for $mub$ of each sub-hypergraph
+    partition: } In each partition of sub-hypergraph, due to the
+  overlap partial ordering, there will be an $mub$ sub-hypergraph that
+  contains all the other sub-hypergraphs in that partition. If $T_i$
+  is the subgraph assigned to this partition by solving \FOCPS, $T_i$
+  is essentially the tree for the $mub$'s TPL. Computing an \ICPPL for
+  this $mub$ sub-hypergraph from $T_i$ is the second subproblem.
+\end{enumerate}
+
+
 % with which the intersection is {\em
 %   strict}- there is a non-empty intersection, but neither is contained
 % in the other.  % In
@@ -2118,7 +2154,8 @@ method of solution.
 
 % Finally, we show that Tree Path Assignment is isomorphism-complete.
 
-%\noindent {\bf Finding an assignment of tree paths to a set system.} 
+%\noindent {\bf Finding an assignment of tree paths to a set system.}
+
 As described by Definition~\ref{def:matrixsetsystem} a set system or
 hypergraph can be concisely represented by a binary matrix \stt the
 row indices of the matrix denote the vertex set of the hypergraph and
@@ -2128,7 +2165,6 @@ of feasible \TPL and \ICPPL are also defined for a binary matrix. If a
 Section~\ref{sec:feasible}) and if $M$ is the representative matrix
 for hypergraph $\cF$, then we say that $M$ has an \ICPPL and vice
 versa.
-
 
 Consider the overlap graph and overlap components of $\bO(\cF)$
 defined in Section~\ref{sec:overlapmarginal}.  We use this to
@@ -2427,24 +2463,43 @@ present the pseudocode to test if $M$ has an ICPPL in $T$.
 \end{proof}
 Lemma \ref{lem:subicppa} and Lemma \ref{lem:rooticppa} point out two
 algorithmic challenges in finding an ICPPL for a given hypergraph
-$\cF$ on a target tree $T$.  
+$\cF$ on a target tree $T$, namely subproblems \FOCPS and \FMFT respectively.
+
+
 \begin{enumerate}
-\item \label{it:challenge1} Finding $X$ and its partition into in-trees
-  $\{\bP_1,\ldots,\bP_r\}$, can be done in polynomial time.  On the
-  other hand, as per Lemma~\ref{lem:subicppa} we need to partition $T$
-  into vertex disjoint subtrees $\{T_1, \ldots, T_r\}$ such that for
-  each $i \in [r]$, the prime submatrices in $\bP_i$ have an ICPPL in
-  $T_i$ (to be accurate, the prime submatrix $mub(\bP_i)$ has an ICPPL
-  in $T_i$ and the rest of the prime submatrices have an ICPIA as
-  claimed in Lemma~\ref{lem:rooticppa}).  This seems to be a
-  challenging step, and it must be remarked that this step is easy
-  when $T$ itself is a path, as each individual $T_i$ would be
-  sub-paths.
-\item \label{it:challenge2} The second algorithmic challenge is identified by
-  Lemma~\ref{lem:rooticppa} which is to compute an ICPPL from the
-  chosen subtree $T_i$
-  to the matrix associated with $mub(\bP_i)$.
+
+\item \label{it:challenge1} \FOCPS - Finding $X$ and its partition into
+  in-trees $\{\bP_1,\ldots,\bP_r\}$, can be done in polynomial time.
+  On the other hand, as per Lemma~\ref{lem:subicppa} we need to
+  partition $T$ into vertex disjoint subtrees $\{T_1, \ldots, T_r\}$
+  such that for each $i \in [r]$, the prime submatrices in $\bP_i$
+  have an ICPPL in $T_i$ (to be accurate, the prime submatrix
+  $mub(\bP_i)$ has an ICPPL in $T_i$ and the rest of the prime
+  submatrices have an ICPIA as claimed in Lemma~\ref{lem:rooticppa}).
+  This seems to be a challenging step, and it must be remarked that
+  this step is easy when $T$ itself is a path, as each individual
+  $T_i$ would be sub-paths.
+\item \label{it:challenge2} \FMFT - The second algorithmic challenge is
+  identified by Lemma~\ref{lem:rooticppa} which is to compute an ICPPL
+  from the chosen subtree $T_i$ to the matrix associated with
+  $mub(\bP_i)$.
 \end{enumerate}
+
+The formal definitions of the problems are given below.
+
+\begin{problemdef}{\FOCPS}{A hypergraph $\cF$ with its in-tree
+    partitions $\{\bP_1,\ldots,\bP_r\}$ and
+    a tree $T$.}
+  Compute a partition of $T$ into subtrees $\{T_1, \ldots, T_r\}$ such
+  that there exists an \ICPPL for $mub(\bP_i)$ from subtree
+  $T_i$ for all $i \in [r]$ and there exists an ICPIA for all other
+  prime submatrices in $\bP_i$ as claimed in Lemma~\ref{lem:rooticppa}.
+\end{problemdef}
+
+\begin{problemdef}{\FMFT}{An in-tree partition $\bP_i$ of a hypergraph
+    $\cF$ and a subtree $T_i$ of a tree $T$.}
+  Compute a feasible TPL for $mub(\bP_i)$ from subtree $T_i$.
+\end{problemdef}
 
 
 Figure~\ref{fig:tplpotheory-matrix} and
