@@ -1,0 +1,16 @@
+\begin{thebibliography}{Gol04}
+
+\bibitem[Gol04]{mcg04}
+Martin~Charles Golumbic.
+\newblock {\em Algorithmic graph theory and perfect graphs}, volume~57 of {\em
+  Annals of Discrete Mathematics}.
+\newblock Elsevier Science B.V., 2004.
+\newblock Second Edition.
+
+\bibitem[NS09]{nsnrs09}
+N.~S. Narayanaswamy and R.~Subashini.
+\newblock A new characterization of matrices with the consecutive ones
+  property.
+\newblock {\em Discrete Applied Mathematics}, 157(18):3721--3727, 2009.
+
+\end{thebibliography}

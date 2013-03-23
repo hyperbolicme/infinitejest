@@ -1,0 +1,10 @@
+\beamer@endinputifotherversion {3.07pt}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{An Illustration}{3}{0}{1}
+\beamer@sectionintoc {2}{Characterization of a feasible TPL}{16}{0}{2}
+\beamer@subsectionintoc {2}{1}{ICPPL}{17}{0}{2}
+\beamer@subsectionintoc {2}{2}{Filtering algorithm}{18}{0}{2}
+\beamer@sectionintoc {3}{Computing a feasible TPL on $k$-subdivided trees}{19}{0}{3}
+\beamer@subsectionintoc {3}{1}{Algorithm}{19}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{20}{0}{4}
+\beamer@subsectionintoc {4}{1}{Application}{20}{0}{4}
