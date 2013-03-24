@@ -9,7 +9,7 @@
                     ]{beamer}   
 
 
-\includeonlyframes{SLIDENOW}    % Use when drafting for fast
+%\includeonlyframes{SLIDENOW2}    % Use when drafting for fast
                                 % compile turnaround time.
 
 \usepackage[normalem]{ulem}
@@ -88,7 +88,8 @@
 \usepackage{textcomp}
 %\usepackage{pifont}
 %\usepackage{natbib}
-\usepackage[finalnew]{./lib/trackchanges}
+\usepackage[inline] {./lib/trackchanges}
+           %[finalnew]
 \addeditor{x}
 \addeditor{a}
 
@@ -263,13 +264,14 @@
     \textcolor{blue}{B}, \textcolor{orange}{O},
     \textcolor{green}{G}\}$, $m = 4$
   \item A student may be in more than one study group but {\em will} be in
-    at least one, say
-    \begin{itemize}
-    \item $\textcolor{red}{R = \{g, h, i, j, k\}}$
-    \item $\textcolor{blue}{B = \{a, b, e, g\}}$
-    \item $\textcolor{orange}{O = \{c, b, d\}}$
-    \item $\textcolor{green}{G = \{e, f , g, i\}}$
-    \end{itemize}
+    at least one, say\\
+%     \begin{itemize}
+%     \item 
+      $\textcolor{red}{R = \{g, h, i, j, k\}}$,
+      $\textcolor{blue}{B = \{a, b, e, g\}}$, 
+      $\textcolor{orange}{O = \{c, b, d\}}$,
+      $\textcolor{green}{G = \{e, f , g, i\}}$
+%    \end{itemize}
     
   \item There are $n$ single occupancy \textbf{apartments} in the university campus for their accommodation.
   \item All these apartments are placed such that streets connecting
@@ -671,8 +673,8 @@
     \end{block}
 
 %  \begin{tabular}[b]{lr}
-    \only<2>{ \includegraphics[scale=0.5]{star.pdf} $k = 0$ }
-    \only<3->{ \includegraphics[scale=0.5]{kstar.pdf} $k = 2$}
+    \only<2>{ \includegraphics[scale=0.5]{star.pdf} $k = 0$, star }
+    \only<3->{ \includegraphics[scale=0.5]{kstar.pdf} 2-subdivided star}
 %  \end{tabular}
   
  \end{overlayarea}
@@ -691,8 +693,8 @@
 \subsection{ICPPL}
 \frame [label=SLIDENOW] { % [label=icppl:pr]{ %
   \frametitle{A characterization of feasible TPL}
-  \begin{overlayarea}{\textwidth}{\overlayht}
-    \begin{block}{Intersection Cardinality Preserving Path Labeling (ICPPL)}
+%  \begin{overlayarea}{\textwidth}{\overlayht}
+    \begin{block}<1->{Intersection Cardinality Preserving Path Labeling (ICPPL)}
       A path labeling $(\cF, \cl)$ on the given tree $T$ s.t.
       \[|S_1 \cap S_2 \cap S_3| = |\cl(S_1) \cap \cl(S_2) \cap
       \cl(S_3)|\]
@@ -700,113 +702,192 @@
       \cF$
 
     \end{block}
-  \end{overlayarea}
+%\end{overlayarea}
+  
+\begin{theorem}<2->
+  \label{th:charac}
+  A path labeling $(\cF, \cl)$ on tree $T$ is feasible iff it is an
+  ICPPL.
+\end{theorem}
+
 
   \note{}
 }
 
-\frame<1> [label=th:icpplth]{ % [label=SLIDENOW]{ % 
-  \frametitle{The characterization}
-  \framesubtitle{ICPPL + a filtering algorithm}
+\def \filteri {{\tt filter common leaf} }
+\def \filterii {{\tt filter fix leaf} }
 
-  \tnote[a]{TBD Write the theorem}
+
+\frame [label=SLIDENOW]{ % [label=th:icpplth]{ % 
+  \frametitle{Finding path hypergraph isomorphism $\phi$}
+  \framesubtitle{Given an ICPPL $(\cF, \cl)$ on tree $T$}
+  \begin{block}{}
+    \begin{itemize}[<uncover@+->]
+    \item Uses two filters to refine $(\cF,\cl)$
+    \item \alert{\filteri} - ensures that the resulting ICPPL has no two path labels
+      sharing a leaf.
+    \item \alert{\filterii} - finds the pre-image of each leaf in $T$.
+    \item Remove leaves from $T$  and their preimages from $\cF$. Repeat
+      filters until $T$ becomes a path.
+    \item When $T$ is a path, problem becomes interval assignment. Use
+      ICPIA \cite{nsnrs09}
+    \end{itemize}
+  \end{block}
+  
+
   \note{}
 }
 
-\subsection{Filtering algorithm}
-\frame [label=flow:filtering]{ %[label=SLIDENOW]{ %
-  \frametitle{The filtering algorithm}
-  \framesubtitle{{\tt filter\_1}\\ 
-                 {\tt filter\_2}\\ 
-                 Algorithm {\tt get-hypergraph-isomorphism}}
+\frame [label=SLIDENOW]{ % [label=th:icpplth]{ % 
+  \frametitle{Finding path hypergraph isomorphism $\phi$}
+  \framesubtitle{\filteri $(\cF, \cl)$}
+  \begin{block}{}
+    \begin{itemize}[<uncover@+->]
+    \item Pick any two paths $P_1, P_2$ in $(\cF, \cl)$ that share a
+      leaf. Let $\cl(S_i) = P_i$ for all $ S_i \in \cF$.
+    \item Remove $S_1, S_2, P_1, P_2$ from $(\cF, \cl)$
+    \item Add to $(\cF, \cl)$:\\
+      $\cl(S_1 \setminus S_2) = P_1 \setminus P_2$\\
+      $\cl(S_2 \setminus S_1) = P_2 \setminus P_1$\\
+      $\cl(S_1 \cap S_2) = P_1 \cap P_2$
+    \item Repeat till no two paths share a leaf.
+    \end{itemize}
+  \end{block}
 
-  \tnote[a]{TBD flow chart of the filtering algorithm. see notes.}
   \note{}
 }
 
-\frame [label=al:filter1]{ %[label=SLIDENOW]{ %
-  \frametitle{\tt filter\_1}
-  \framesubtitle{Make leaves unique to paths} 
+\frame [label=SLIDENOW]{ % [label=th:icpplth]{ % 
+  \frametitle{Finding path hypergraph isomorphism $\phi$}
+  \framesubtitle{\filteri $(\cF, \cl)$}
+  \begin{lemma}<1->
+    Let $(\cF', \cl')$ be the resulting labeling after applying \filteri to TPL
+    $(\cF, \cl)$.  If $(\cF, \cl)$ is an ICPPL, $(\cF', \cl')$ is also an ICPPL.
+  \end{lemma}
+  \begin{proof}<2->
+    \begin{itemize}
+    \item Induction on iteration of the filter.
+    \item Invariants: $\cl_j(S)$ is a path, $\cl_j$ maintains ICPPL's
+      intersection cardinality equations.
+    \item ICPPL also preserves 4-way intersection cardinalities.
 
-  \tnote[a]{TBD present the algorithm with images? with psuedocode on
-    the side? f yeah. like dessert. apple pie with cream on the side please.}
+    \end{itemize}
+ \end{proof}
   \note{}
 }
 
-\frame [label=al:filter2]{ %[label=SLIDENOW]{ %
-  \frametitle{\tt filter\_2}
-  \framesubtitle{Find elements that map to leaves}
 
-  \tnote[a]{TBD present the algorithm with images? with psuedocode on
-    the side? f yeah. like dessert. apple pie with cream on the side
-    please.} 
+\frame [label=SLIDENOW]{ % [label=th:icpplth]{ % 
+  \frametitle{Finding path hypergraph isomorphism $\phi$}
+  \framesubtitle{\filterii $(\cF, \cl)$}
+  \begin{block}{}
+    \begin{itemize}[<uncover@+->]
+    \item A leaf is unique to a path
+    \item Pick a leaf $v$, let it be on path $P$. Let $\cl(S) = P$
+    \item Pick an element $x$ from $S$ which is not present in
+      any other set. i.e. $x \in S \setminus \cup_{S_i \ne S} S_i$
+    \item Remove $S, P$ from $(\cF, \cl)$
+    \item Add $\cl(S \setminus x) = P \setminus v$. Define $\phi(x) = v$
+    \item Remove leaf $v$ from $T$
+    \item Repeat till there are no more unique paths for leaves. Call \filteri.
+    \item End if $T$ is empty
+    \end{itemize}
+  \end{block}
+
   \note{}
 }
 
-\frame [label=al:treeprune]{ %[label=SLIDENOW]{ %
-  \frametitle{Algorithm {\tt get-hypergraph-isomorphism}}
-  \framesubtitle{Find hypergraph isomorphism $\phi$ - recursively use
-    {\tt filter\_1} {\tt filter\_2}}
-
-  \tnote[a]{TBD present the algorithm with images? with psuedocode on
-    the side? f yeah. like dessert. apple pie with cream on the side
-    please.} 
-  \note{}
+\frame [label=SLIDENOW]{ % [label=th:icpplth]{ % 
+  \frametitle{Finding path hypergraph isomorphism $\phi$}
+  \framesubtitle{\filterii $(\cF, \cl)$}
+  \alert<1->{Critical part is finding $x \in S \setminus \cup_{S_i \ne S} S_i$}
+  \begin{lemma}<2->
+    If $\cl(S)$ uniquely has a leaf, $S_{priv}$ is \alert{non-empty} where $S_{priv} = S \setminus \cup_{S_i \ne S} S_i$.
+  \end{lemma}
+  \begin{proof}<3->
+    \begin{itemize}
+    \item Let $\cF' = S \cap S_i$ and $\cl'(S \cap S_i) = P \cap P_i$ for all $S_i \in \cF$,
+      $\cl(S_i) = P_i$.
+    \item $S_{two} = supp(\cF'), P_{two} = supp(\cl')$
+    \item $(\cF', \cl')$ is an ICPIA. Therefore $|S_{two}| =
+      |P_{two}|$. Hence $|S_{priv}| = |P_{priv}|$. We know $P$ has at least a leaf.
+    \end{itemize}
+  \end{proof}
 }
-
-\againframe<1>{th:icpplth}     % Show theorem again before proof.
-  \note{}
-
-% \subsection{Proof and analysis}
-
-% %\frame [label=SLIDENOW]{
-% \frame [label=char:proof]{ 
-%   \frametitle{Proof}
-%  \framesubtitle{Outline}
-
-%   \tnote[a]{Give outline of the proof.}
-%   \note{}
-% }
-
-% %\frame [label=SLIDENOW]{
-% \frame [label=char:proof]{ 
-%   \frametitle{Brief analysis}
-% %  \framesubtitle{Outline}
-
-%   \tnote[a]{Give brief analysis.}
-%   \note{}
-% }
 
 
 \section[Computation of TPL]{Computing a feasible TPL on
   $k$-subdivided trees} 
 
-% \againframe<1>{intro:q2}       % Show q2 again - refresher.
-%   \note{}
+\def\overlayht{3cm}
+\againframe<1>{intro:q4}       % Show q2 again - refresher.
+\note{}
 
-\subsection{Algorithm}
+\frame [label=SLIDENOW2]{ 
+  \frametitle{Why $k$-subdivided star?}%
+  \begin{block}{}
+    \begin{itemize}[<uncover@+->]
+    \item When the root vertex is removed, we get disjoint paths.
+    \item \alert{Super marginal sets} are assigned an arbitrary ray not
+      considered yet.
+    \item Sets that overlap with the super marginal set are considered
+      just like in ICPIA algorithm \cite{nsnrs09} until a path
+      containing root vertex is assigned.
+    \end{itemize}
+  \end{block}
+}
+
+
+\frame [label=SLIDENOW2]{ 
+  \frametitle{Compute TPL for \kstar}%
+  \begin{block}{}
+    \begin{itemize}[<uncover@+->]
+    \item -- summarize algorithm
+    \item -- complexity
+    \end{itemize}
+  \end{block}
+}
+
+\frame [label=SLIDENOW2]{ 
+  \frametitle{Theory of prime submatrices}%
+  \begin{block}{}
+    \begin{itemize}[<uncover@+->]
+    \item -- Mention the two subproblems
+    \item -- diagrams
+    \end{itemize}
+  \end{block}
+}
+
+
 
 % \frame [label=SLIDENOW]{
-\frame{ \frametitle{Special case} \framesubtitle{Interval assignment
-    problem / COP}
+\frame{ \frametitle{TBD} \framesubtitle{...}
+  -- more slides will come here --
+}
 
-  \begin{enumerate}
-  \item<1-> $T$ is a path $\Longrightarrow$ paths in $T$ are intervals
-    \tnote[a]{quick illustration}
-  \item<1-> Only pairwise intersection cardinality needs to be
-    preserved $\Longrightarrow$ ICPIA \cite{nsnrs09}
-  \item<1-> Higher level intersection cardinalities preserved by {\bf
-      Helly Property} -- \cite{mcg04}
-  \item<1-> {\em filter\_1},{\em filter\_2} do not need the the {\bf
-      exit} conditions. \tnote[a]{is this cryptic?}
-  \end{enumerate}
+% \subsection{Similarity to COP}
+
+% % \frame [label=SLIDENOW]{
+% \frame{ \frametitle{Special case} \framesubtitle{Interval assignment
+%     problem / COP}
+
+%   \begin{enumerate}
+%   \item<1-> $T$ is a path $\Longrightarrow$ paths in $T$ are intervals
+%     \tnote[a]{quick illustration}
+%   \item<1-> Only pairwise intersection cardinality needs to be
+%     preserved $\Longrightarrow$ ICPIA \cite{nsnrs09}
+%   \item<1-> Higher level intersection cardinalities preserved by {\bf
+%       Helly Property} -- \cite{mcg04}
+%   \item<1-> {\em filter\_1},{\em filter\_2} do not need the the {\bf
+%       exit} conditions. \tnote[a]{is this cryptic?}
+%   \end{enumerate}
   
-  \begin{block}{}
-    This problem is equivalent to Consecutive Ones Property of binary
-    matrices \cite{nsnrs09}
-  \end{block}
+%   \begin{block}{}
+%     This problem is equivalent to Consecutive Ones Property of binary
+%     matrices \cite{nsnrs09}
+%   \end{block}
 
-  \note{} }
+%   \note{} }
 
 
 
