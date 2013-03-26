@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.3.1)  23 MAR 2013 18:34
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.3.1)  24 MAR 2013 19:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1100,11 +1100,7 @@ LaTeX Font Info:    Try loading font information for TS1+cmss on input line 248
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-Overfull \vbox (10.50723pt too high) detected at line 248
- []
-
-[5
+) [5
 
 ] [6
 
@@ -1129,11 +1125,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <12> not available
 
 ] [14
 
-]
-Overfull \vbox (15.00714pt too high) detected at line 406
- []
-
-[15
+] [15
 
 ] [16
 
@@ -1152,7 +1144,8 @@ Overfull \vbox (15.00714pt too high) detected at line 406
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 430.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 430.
- (./cop-pres.aux)
+
+(./cop-pres.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 430.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 430.
 Package rerunfilecheck Info: File `cop-pres.out' has not changed.
@@ -1165,10 +1158,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 430.
  ) 
 Here is how much of TeX's memory you used:
- 16999 strings out of 493488
- 317601 string characters out of 3141327
- 395412 words of memory out of 3000000
- 19793 multiletter control sequences out of 15000+200000
+ 17010 strings out of 493488
+ 317920 string characters out of 3141327
+ 397316 words of memory out of 3000000
+ 19804 multiletter control sequences out of 15000+200000
  19515 words of font info for 76 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  49i,19n,56p,404b,745s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1189,10 +1182,10 @@ al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
 /texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/
 texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/te
 xlive/2012/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb>
-Output written on cop-pres.pdf (17 pages, 193286 bytes).
+Output written on cop-pres.pdf (17 pages, 195315 bytes).
 PDF statistics:
- 908 PDF objects out of 1000 (max. 8388607)
- 837 compressed objects within 9 object streams
+ 910 PDF objects out of 1000 (max. 8388607)
+ 838 compressed objects within 9 object streams
  45 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 

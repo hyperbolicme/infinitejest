@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.3.1)  23 MAR 2013 15:58
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.3.1)  25 MAR 2013 17:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1058,27 +1058,27 @@ Package morefloats Info: Maximum number of possible floats asked for: 36.
 (./030chap3.aux) (./040chap4.aux) (./biblio.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 87.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    ... okay on input line 87.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1135,7 +1135,7 @@ Package caption Info: End \AtBeginDocument code.
 \everyMPtoPDFconversion=\toks51
 )
 \AtBeginShipoutBox=\box47
-Package hyperref Info: Link coloring OFF on input line 86.
+Package hyperref Info: Link coloring OFF on input line 87.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
@@ -1144,28 +1144,28 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count181
 )
-LaTeX Info: Redefining \ref on input line 86.
-LaTeX Info: Redefining \pageref on input line 86.
-LaTeX Info: Redefining \nameref on input line 86.
+LaTeX Info: Redefining \ref on input line 87.
+LaTeX Info: Redefining \pageref on input line 87.
+LaTeX Info: Redefining \nameref on input line 87.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write5
 \openout5 = `thesis.out'.
 
-LaTeX Info: Redefining \degres on input line 86.
+LaTeX Info: Redefining \degres on input line 87.
 
 
 Package frenchb.ldf Warning: The definition of \@makecaption has been changed,
 (frenchb.ldf)                frenchb will NOT customise it;
-(frenchb.ldf)                reported on input line 86.
+(frenchb.ldf)                reported on input line 87.
 
-LaTeX Info: Redefining \dots on input line 86.
-LaTeX Info: Redefining \up on input line 86.
+LaTeX Info: Redefining \dots on input line 87.
+LaTeX Info: Redefining \up on input line 87.
 ABD: EveryShipout initializing macros
 <iitm.pdf, id=191, 109.40875pt x 109.40875pt>
 File: iitm.pdf Graphic file (type pdf)
  <use iitm.pdf>
-Package pdftex.def Info: iitm.pdf used on input line 96.
+Package pdftex.def Info: iitm.pdf used on input line 97.
 (pdftex.def)             Requested size: 109.40846pt x 109.40846pt.
  [1
 
@@ -1201,7 +1201,7 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.102 \include{001certificate}
+l.103 \include{001certificate}
                                [1
 
 ]
@@ -1933,26 +1933,26 @@ Missing character: There is no ï in font cmr10!
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no € in font cmr10!
  [78])) [79]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 189.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 189.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 193.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
 
 (./thesis.aux (./001certificate.aux) (./002ack.aux) (./0032quote.aux)
 (./003abstract.aux) (./004abbrv.aux) (./010chap1.aux) (./020chap2.aux)
 (./030chap3.aux) (./040chap4.aux) (./biblio.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 189.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 189.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: C64BD7D214856C660C5DE1A8362B5DB1;3300.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 189.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
  ) 
 Here is how much of TeX's memory you used:
  23914 strings out of 493488
  415935 string characters out of 3141327
- 609591 words of memory out of 3000000
+ 609588 words of memory out of 3000000
  26049 multiletter control sequences out of 15000+200000
  83237 words of font info for 180 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -2014,7 +2014,7 @@ er/sfsi0600.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super
 a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
 r/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/te
 xlive/2012/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on thesis.pdf (97 pages, 1210518 bytes).
+Output written on thesis.pdf (97 pages, 1210506 bytes).
 PDF statistics:
  2097 PDF objects out of 2487 (max. 8388607)
  1883 compressed objects within 19 object streams

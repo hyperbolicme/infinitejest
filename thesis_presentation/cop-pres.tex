@@ -9,7 +9,7 @@
                     ]{beamer}   
 
 
-%\includeonlyframes{SLIDENOW2}    % Use when drafting for fast
+%\includeonlyframes{SLIDENOWTWO}    % Use when drafting for fast
                                 % compile turnaround time.
 
 \usepackage[normalem]{ulem}
@@ -278,7 +278,7 @@
     them do not form loops - \textbf{streets form a tree}
   \end{itemize}
 
-\note{}  
+  \note{}  
 %  \end{centering}
 }
 
@@ -686,7 +686,7 @@
 \section[Characterization]{Characterization of a feasible TPL}
 \def\overlayht{4cm}
 %\frame[label=SLIDENOW] {
-\againframe<1>{intro:q1}
+\againframe<1>{intro:q2}
 %}
 
 
@@ -823,47 +823,59 @@
 \againframe<1>{intro:q4}       % Show q2 again - refresher.
 \note{}
 
-\frame [label=SLIDENOW2]{ 
+\frame [label=SLIDENOWTWO]{ 
   \frametitle{Why $k$-subdivided star?}%
   \begin{block}{}
     \begin{itemize}[<uncover@+->]
     \item When the root vertex is removed, we get disjoint paths.
-    \item \alert{Super marginal sets} are assigned an arbitrary ray not
-      considered yet.
+    \item Super marginal sets are assigned paths that contain leaves.
     \item Sets that overlap with the super marginal set are considered
-      just like in ICPIA algorithm \cite{nsnrs09} until a path
+      using ICPIA \cite{nsnrs09} until a path
       containing root vertex is assigned.
+    \item ICPPL is used when path label must be from two rays.
     \end{itemize}
+  \end{block}
+
+  \begin{block}<2->{Supermarginal set}
+    \alert{Marginal set} is a set whose intersections with all other sets in
+    $\cF$ form a single inclusion chain. \alert{Supermarginal set} is a
+    marginal set that is not contained in any other set. 
   \end{block}
 }
 
 
-\frame [label=SLIDENOW2]{ 
-  \frametitle{Compute TPL for \kstar}%
-  \begin{block}{}
-    \begin{itemize}[<uncover@+->]
-    \item -- summarize algorithm
-    \item -- complexity
-    \end{itemize}
-  \end{block}
-}
+% \frame [label=SLIDENOW2]{ 
+%   \frametitle{Compute TPL for \kstar}%
+%   \begin{block}{}
+%     \begin{itemize}[<uncover@+->]
+%     \item Pick a super marginal set and assign path with leaf from any ray of
+%       $k$-sub star.
+%     \item Overlapping sets are assigned ICPIA until a path with root
+%       is considered. The ICPPL property is used to resolve the second 
+%     \item -- complexity
+%     \end{itemize}
+%   \end{block}
+% }
 
-\frame [label=SLIDENOW2]{ 
-  \frametitle{Theory of prime submatrices}%
-  \begin{block}{}
-    \begin{itemize}[<uncover@+->]
-    \item -- Mention the two subproblems
-    \item -- diagrams
-    \end{itemize}
-  \end{block}
-}
+% \section{TPL for arbitrary trees}
+% \againframe<1>{intro:q1}
+
+% \frame [label=SLIDENOWTWO]{ 
+%   \frametitle{TPL for arbitrary trees}%
+%   \begin{block}{}
+%     \begin{itemize}[<uncover@+->]
+%     \item -- Mention the two subproblems
+%     \item -- diagrams
+%     \end{itemize}
+%   \end{block}
+% }
 
 
 
-% \frame [label=SLIDENOW]{
-\frame{ \frametitle{TBD} \framesubtitle{...}
-  -- more slides will come here --
-}
+% % \frame [label=SLIDENOW]{
+% \frame{ \frametitle{TBD} \framesubtitle{...}
+%   -- more slides will come here --
+% }
 
 % \subsection{Similarity to COP}
 
@@ -897,25 +909,6 @@
 %   \cite{d08phd}\\
 %   \cite{bl76}\\
 %   \cite{fg65}
-% }
-
-
-% \subsection{Proof and analysis}
-
-% \frame [label=SLIDENOW]{ 
-%   \frametitle{Proof}
-%   \framesubtitle{Outline}
-
-%   \tnote[a]{Give outline of the proof.}
-%   \note{}
-% }
-
-% \frame [label=SLIDENOW]{ 
-%   \frametitle{Brief analysis}
-% %  \framesubtitle{Outline}
-
-%   \tnote[a]{Give brief analysis.}
-%   \note{}
 % }
 
 
