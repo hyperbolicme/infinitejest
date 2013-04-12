@@ -637,16 +637,20 @@ cardinalities for $3 < d < n$ in a tree path labeling.
 \begin{proof}
   Consider the set system $ \cF' = \{S_i \cap S \mid S_i \in \cF, i
   \in [n]\}$ and path labeling $\cl'(S_i \cap S) = P_i \cap P$.  Since
-  $(\cF, \cl)$ is an \ICPPL, it can be easily verified that $(\cF',
+  $(\cF, \cl)$ is an ICPPL, it can be easily verified that $(\cF',
   \cl')$ is an ICPIA on path (interval) $P$.  Let $S_{two}$ and
   $P_{two}$ be the elements of $S$ and $P$ which are in one {\em
-    other} set and path, respectively \ie $S_{two} = S \cap (\cup_{S_i
+    other} set and path, respectively i.e. $S_{two} = S \cap (\cup_{S_i
     \ne S} S_i)$ and $P_{two}$ is defined analogously. It may be noted
-  that $S_{two} = \supt{\cF'}$ and $P_{two} = \supt{\cF'^{\cl'}}$.
+  that $S = \supt({\cF'})$ and $P = \supt({\cF'}^{\cl'})$.
   From Lemma~\ref{lem:icpia} it follows that there is a bijection
-  $\phi$ from $S_{two}$ to $P_{two}$ such that for each $i$, the image
+  $\phi$ from $S$ to $P$ such that for each $i$, the image
   of $S_i \cap S$ under $\phi$ is $P_i \cap P$ (definition of
-  feasibility).  Moreover, this means $|S_{two}| = |P_{two}|$. By
+  feasibility).  Moreover, this means that in $\phi$,
+the elements of $S_{two}$ are mapped to the elements of $P_{two}$.  The proof is of this claim is by contradiction. Let us assume that there is an $x \in S_{two}$ is mapped to
+a $v \in P_{priv}$ under $\phi$.  Since $x \in S_{two}$, let $S_i$ be another set that contains $x$, other than $S$.  Then it means that $\phi(S_i \cap S)$ which is same as $\cl'(S_i \cap S) =P_i \cap P$ contains $v$. This implies that $v \in P_i \cap P$, contradiction to the fact that $v \in P_{priv}$.  Therefore, under the bijection $\phi$, the image of the set $S_{two}$ is the set $P_{two}$.
+Conseqently, it follows that $|S_{two}| = |P_{two}|$.  
+By
   definition, $S_{priv} = S \setminus S_{two}$ and $P_{priv} = P \setminus P_{two}$.
   Thus $|S_{priv}| = |S \setminus S_{two}| = |P \setminus
   P_{two}|=|P_{priv}|$.  
